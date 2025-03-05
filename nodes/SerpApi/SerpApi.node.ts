@@ -1,17 +1,27 @@
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
+// import { googleSearchFields, googleSearchOperations } from './descriptions/GoogleSearchDescription';
+// import { googleMapsFields, googleMapsOperations } from './descriptions/GoogleMapsDescription';
+
+import {
+    googleSearchFields,
+    googleSearchOperations,
+    googleMapsFields,
+    googleMapsOperations
+} from './descriptions';
+
 export class SerpApi implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
         displayName: 'SerpApi',
         name: 'SerpApi',
-        icon: 'file:openweather.svg',
+        icon: 'file:serpapi.svg',
         group: ['transform'],
         version: 1,
-        subtitle: 'Scrape Google Search',
-        description: 'Get live Google Search data from SerpApi',
+        subtitle: '={{$parameter["resource"]}}',
+        description: 'Get live Google Search data and more from SerpApi',
         defaults: {
-            name: 'SerpApi Defaults',
+            name: 'SerpApi',
         },
         inputs: [NodeConnectionType.Main],
         outputs: [NodeConnectionType.Main],
@@ -32,22 +42,28 @@ export class SerpApi implements INodeType {
 		properties: [
 		// Resources and operations will go here
             // required
-            {
-                displayName: 'Query',
-                name: 'q',
-                type: 'string',
-                default: '',
-                placeholder: 'Mercedes Benz',
-                required: true,
-                description: 'The name of the city to return the weather of',
-                routing: {
-                    request: {
-                        qs: {
-                            q: '={{$value}}'
-                        }
-                    }
-                }
-            },
+			{
+				displayName: 'Resource',
+				name: 'resource',
+				type: 'options',
+				noDataExpression: true,
+				options: [
+					{
+						name: 'Google Search',
+						value: 'google',
+					},
+					{
+						name: 'Google Maps',
+						value: 'google_maps',
+					},
+				],
+				default: 'google',
+			},
+
+            ...googleSearchOperations,
+            ...googleSearchFields,
+            ...googleMapsOperations,
+            ...googleMapsFields,
 
             // optional/additional
             {
@@ -84,7 +100,6 @@ export class SerpApi implements INodeType {
                             },
                         },
                     },
-
                     {
                         displayName: 'Number of results',
                         name: 'num',
