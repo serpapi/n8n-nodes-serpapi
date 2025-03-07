@@ -1,5 +1,5 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { serpApiFields } from '../SerpApiFields'; // Import generic fields
+import { serpApiFields } from './SerpApiDescription'; // Import generic fields
 
 export const googleMapsOperations: INodeProperties[] = [
     {

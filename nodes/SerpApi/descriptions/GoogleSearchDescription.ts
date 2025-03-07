@@ -1,5 +1,5 @@
 import type { INodeProperties } from 'n8n-workflow';
-import { serpApiFields } from '../SerpApiFields'; // Import generic fields
+import { serpApiFields } from './SerpApiDescription';
 
 export const googleSearchOperations: INodeProperties[] = [
     {
@@ -33,7 +33,7 @@ export const googleSearchOperations: INodeProperties[] = [
 
 export const googleSearchFields: INodeProperties[] = [
 	{
-        displayName: 'Querytest',
+        displayName: 'Query',
         name: 'q',
         type: 'string',
         default: 'Coffee',
@@ -76,31 +76,6 @@ export const googleSearchFields: INodeProperties[] = [
             }
         }
     },
-    {
-        "name": "url",
-        "displayName": "`url` Image URL",
-        "default": "",
-        "description": "Parameter defines the URL of an image to perform the Google Lens search.",
-        "displayOptions": {
-          "show": {
-            "resource": [
-              "google"
-            ],
-            "operation": [
-              "google_search"
-            ]
-          }
-        },
-        "routing": {
-          "request": {
-            "qs": {
-              "fix_this": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": true
-      },
     // Additional Fields
     {
         displayName: 'Additional Fields',
