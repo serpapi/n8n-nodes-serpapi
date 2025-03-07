@@ -1,13 +1,12 @@
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
-// import { googleSearchFields, googleSearchOperations } from './descriptions/GoogleSearchDescription';
-// import { googleMapsFields, googleMapsOperations } from './descriptions/GoogleMapsDescription';
-
 import {
     googleSearchFields,
     googleSearchOperations,
     googleMapsFields,
-    googleMapsOperations
+    googleMapsOperations,
+    googleTrendsFields,
+    googleTrendsOperations
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -56,6 +55,10 @@ export class SerpApi implements INodeType {
 						name: 'Google Maps',
 						value: 'google_maps',
 					},
+                    {
+						name: 'Google Trends',
+						value: 'google_trends',
+					},
 				],
 				default: 'google',
 			},
@@ -64,59 +67,8 @@ export class SerpApi implements INodeType {
             ...googleSearchFields,
             ...googleMapsOperations,
             ...googleMapsFields,
-
-            // optional/additional
-            {
-                displayName: 'Additional Fields',
-                name: 'additionalFields',
-                type: 'collection',
-                default: {},
-                placeholder: 'Add Field',
-                options: [
-                    {
-                        displayName: 'Language',
-                        name: 'hl',
-                        type: 'options',
-                        noDataExpression: true,
-                        options: [
-                            {
-                                name: 'English',
-                                value: 'en',
-                                description: '',
-                            },
-                            {
-                                name: 'Italian',
-                                value: 'it',
-                                description: '',
-                            }
-                        ],
-                        default: 'en',
-                        description: "Parameter defines the language to use for the Google search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French)",
-                        routing: {
-                            request: {
-                                qs: {
-                                    hl: '={{$value}}',
-                                },
-                            },
-                        },
-                    },
-                    {
-                        displayName: 'Number of results',
-                        name: 'num',
-                        type: 'string',
-                        default: '',
-                        placeholder: 'en',
-                        description: 'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).',
-                        routing: {
-                            request: {
-                                qs: {
-                                    num: '={{$value}}',
-                                },
-                            },
-                        },
-                    },
-                ],
-            }
+            ...googleTrendsOperations,
+            ...googleTrendsFields
 		],
 	};
 }

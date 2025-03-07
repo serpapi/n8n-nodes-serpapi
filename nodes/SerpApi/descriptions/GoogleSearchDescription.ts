@@ -5,7 +5,8 @@ export const googleSearchOperations: INodeProperties[] = [
 		displayName: 'Operation',
 		name: 'operation',
 		type: 'options',
-        default: 'google',
+        noDataExpression: true,
+        default: 'google_search',
 		displayOptions: {
 			show: {
 				resource: ['google'],
@@ -14,7 +15,7 @@ export const googleSearchOperations: INodeProperties[] = [
 		options: [
             {
 				name: 'Google Search',
-				value: 'google',
+				value: 'google_search',
 				description: 'Search Google',
 				routing: {
 					request: {
@@ -31,7 +32,7 @@ export const googleSearchOperations: INodeProperties[] = [
 
 export const googleSearchFields: INodeProperties[] = [
 	{
-        displayName: 'Query',
+        displayName: 'Querytest',
         name: 'q',
         type: 'string',
         default: 'Coffee',
@@ -41,7 +42,7 @@ export const googleSearchFields: INodeProperties[] = [
         displayOptions: {
             show: {
                 resource: ['google'],
-                operation: ['google_search', 'google_shopping']
+                operation: ['google_search']
             }
         },
         routing: {
@@ -53,7 +54,7 @@ export const googleSearchFields: INodeProperties[] = [
         }
     },
     {
-        displayName: 'Location',
+        "displayName": 'Location',
         name: 'location',
         type: 'string',
         default: 'Austin, Texas, United States',
@@ -63,7 +64,7 @@ export const googleSearchFields: INodeProperties[] = [
         displayOptions: {
             show: {
                 resource: ['google'],
-                operation: ['google_search', 'google_shopping']
+                operation: ['google_search']
             }
         },
         routing: {
@@ -74,5 +75,61 @@ export const googleSearchFields: INodeProperties[] = [
             }
         }
     },
+    {
+        "name": "url",
+        "displayName": "`url` Image URL",
+        "default": "",
+        "description": "Parameter defines the URL of an image to perform the Google Lens search.",
+        "displayOptions": {
+          "show": {
+            "resource": [
+              "google"
+            ],
+            "operation": [
+              "google_search"
+            ]
+          }
+        },
+        "routing": {
+          "request": {
+            "qs": {
+              "fix_this": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": true
+      },
 
+    // Additional Fields
+    {
+        displayName: 'Additional Fields',
+        name: 'additionalFields',
+        type: 'collection',
+        default: {},
+        placeholder: 'Add Field',
+        displayOptions: {
+            show: {
+                resource: ['google'],
+                operation: ['google_search']
+            }
+        },
+        options: [
+            {
+                displayName: 'Number of results',
+                name: 'num',
+                type: 'string',
+                default: '',
+                placeholder: 'en',
+                description: 'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).',
+                routing: {
+                    request: {
+                        qs: {
+                            num: '={{$value}}',
+                        },
+                    },
+                },
+            },
+        ],
+    }
 ];
