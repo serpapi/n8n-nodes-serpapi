@@ -1,4 +1,5 @@
 import type { INodeProperties } from 'n8n-workflow';
+import { serpApiFields } from '../SerpApiFields'; // Import generic fields
 
 export const googleSearchOperations: INodeProperties[] = [
     {
@@ -100,7 +101,6 @@ export const googleSearchFields: INodeProperties[] = [
         "type": "string",
         "required": true
       },
-
     // Additional Fields
     {
         displayName: 'Additional Fields',
@@ -116,7 +116,7 @@ export const googleSearchFields: INodeProperties[] = [
         },
         options: [
             {
-                displayName: 'Number of results',
+                displayName: 'Number of results SEARCH',
                 name: 'num',
                 type: 'string',
                 default: '',
@@ -130,6 +130,7 @@ export const googleSearchFields: INodeProperties[] = [
                     },
                 },
             },
+            ...serpApiFields
         ],
     }
 ];

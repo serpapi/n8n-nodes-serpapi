@@ -6,7 +6,7 @@ import {
     googleMapsFields,
     googleMapsOperations,
     googleTrendsFields,
-    googleTrendsOperations
+    googleTrendsOperations,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -72,3 +72,4 @@ export class SerpApi implements INodeType {
 		],
 	};
 }
+

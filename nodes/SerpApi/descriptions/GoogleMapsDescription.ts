@@ -1,4 +1,5 @@
 import type { INodeProperties } from 'n8n-workflow';
+import { serpApiFields } from '../SerpApiFields'; // Import generic fields
 
 export const googleMapsOperations: INodeProperties[] = [
     {
@@ -87,5 +88,37 @@ export const googleMapsFields: INodeProperties[] = [
             }
         }
     },
+    // Additional Fields
+    {
+        displayName: 'Additional Fields',
+        name: 'additionalFields',
+        type: 'collection',
+        default: {},
+        placeholder: 'Add Field',
+        displayOptions: {
+            show: {
+                resource: ['google_maps'],
+                operation: ['google_maps']
+            }
+        },
+        options: [
+            {
+                displayName: 'Number of results MAPS',
+                name: 'num',
+                type: 'string',
+                default: '',
+                placeholder: 'en',
+                description: 'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).',
+                routing: {
+                    request: {
+                        qs: {
+                            num: '={{$value}}',
+                        },
+                    },
+                },
+            },
+            ...serpApiFields
+        ],
+    }
 
 ];
