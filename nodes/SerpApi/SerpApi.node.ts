@@ -1,17 +1,23 @@
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
+import {
+    googleSearchFields,
+    googleMapsFields,
+    googleTrendsFields
+} from './descriptions';
+
 export class SerpApi implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
         displayName: 'SerpApi',
         name: 'SerpApi',
-        icon: 'file:openweather.svg',
+        icon: 'file:serpapi.svg',
         group: ['transform'],
         version: 1,
-        subtitle: 'Scrape Google Search',
-        description: 'Get live Google Search data from SerpApi',
+        subtitle: '={{$parameter["resource"]}}',
+        description: 'Get live Google Search data and more from SerpApi',
         defaults: {
-            name: 'SerpApi Defaults',
+            name: 'SerpApi',
         },
         inputs: [NodeConnectionType.Main],
         outputs: [NodeConnectionType.Main],
@@ -31,77 +37,54 @@ export class SerpApi implements INodeType {
 
 		properties: [
 		// Resources and operations will go here
-            // required
-            {
-                displayName: 'Query',
-                name: 'q',
-                type: 'string',
-                default: '',
-                placeholder: 'Mercedes Benz',
-                required: true,
-                description: 'The name of the city to return the weather of',
-                routing: {
-                    request: {
-                        qs: {
-                            q: '={{$value}}'
-                        }
-                    }
-                }
-            },
-
-            // optional/additional
-            {
-                displayName: 'Additional Fields',
-                name: 'additionalFields',
-                type: 'collection',
-                default: {},
-                placeholder: 'Add Field',
-                options: [
-                    {
-                        displayName: 'Language',
-                        name: 'hl',
-                        type: 'options',
-                        noDataExpression: true,
-                        options: [
-                            {
-                                name: 'English',
-                                value: 'en',
-                                description: '',
-                            },
-                            {
-                                name: 'Italian',
-                                value: 'it',
-                                description: '',
-                            }
-                        ],
-                        default: 'en',
-                        description: "Parameter defines the language to use for the Google search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French)",
+			{
+				displayName: 'Resource',
+				name: 'resource',
+				type: 'options',
+				noDataExpression: true,
+				options: [
+					{
+						name: 'Google Search',
+						value: 'google',
                         routing: {
                             request: {
-                                qs: {
-                                    hl: '={{$value}}',
+                                qs: { 
+                                    engine: 'google' 
                                 },
                             },
                         },
-                    },
-
-                    {
-                        displayName: 'Number of results',
-                        name: 'num',
-                        type: 'string',
-                        default: '',
-                        placeholder: 'en',
-                        description: 'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).',
+					},
+					{
+						name: 'Google Maps',
+						value: 'google_maps',
                         routing: {
                             request: {
-                                qs: {
-                                    num: '={{$value}}',
+                                qs: { 
+                                    engine: 'google_maps' 
                                 },
                             },
                         },
-                    },
-                ],
-            }
+					},
+                    {
+						name: 'Google Trends',
+						value: 'google_trends',
+                        action: 'Search Google Trends',
+                        routing: {
+                            request: {
+                                qs: { 
+                                    engine: 'google_trends' 
+                                },
+                            },
+                        },
+					},
+				],
+				default: 'google',
+			},
+
+            ...googleSearchFields,
+            ...googleMapsFields,
+            ...googleTrendsFields
 		],
 	};
 }
+
