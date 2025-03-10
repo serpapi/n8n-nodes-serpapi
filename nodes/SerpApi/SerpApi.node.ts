@@ -2,11 +2,8 @@ import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflo
 
 import {
     googleSearchFields,
-    googleSearchOperations,
     googleMapsFields,
-    googleMapsOperations,
-    googleTrendsFields,
-    googleTrendsOperations,
+    googleTrendsFields
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -40,7 +37,6 @@ export class SerpApi implements INodeType {
 
 		properties: [
 		// Resources and operations will go here
-            // required
 			{
 				displayName: 'Resource',
 				name: 'resource',
@@ -50,24 +46,43 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Search',
 						value: 'google',
+                        routing: {
+                            request: {
+                                qs: { 
+                                    engine: 'google' 
+                                },
+                            },
+                        },
 					},
 					{
 						name: 'Google Maps',
 						value: 'google_maps',
+                        routing: {
+                            request: {
+                                qs: { 
+                                    engine: 'google_maps' 
+                                },
+                            },
+                        },
 					},
                     {
 						name: 'Google Trends',
 						value: 'google_trends',
+                        action: 'Search Google Trends',
+                        routing: {
+                            request: {
+                                qs: { 
+                                    engine: 'google_trends' 
+                                },
+                            },
+                        },
 					},
 				],
 				default: 'google',
 			},
 
-            ...googleSearchOperations,
             ...googleSearchFields,
-            ...googleMapsOperations,
             ...googleMapsFields,
-            ...googleTrendsOperations,
             ...googleTrendsFields
 		],
 	};

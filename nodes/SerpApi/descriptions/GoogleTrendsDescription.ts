@@ -1,37 +1,6 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { serpApiFields } from './SerpApiDescription';
 
-export const googleTrendsOperations: INodeProperties[] = [
-  {
-    displayName: 'Operation',
-    name: 'operation',
-    type: 'options',
-    noDataExpression: true,
-    default: 'google_trends',
-    displayOptions: {
-      show: {
-        resource: ['google_trends'],
-      },
-    },
-    options: [
-      {
-        name: 'Google Trends API',
-        value: 'google_trends',
-        description: 'Search Google Trends',
-        routing: {
-          request: {
-            qs: { 
-              engine: 'google_trends' 
-            },
-          },
-        },
-        action: 'Search Google Trends',
-      }
-    ]
-  }
-]
-
-
 export const googleTrendsFields: INodeProperties[] = [
   {
     "name": "q",
@@ -51,9 +20,6 @@ export const googleTrendsFields: INodeProperties[] = [
       "show": {
         "resource": [
           "google_trends"
-        ],
-        "operation": [
-          "google_trends"
         ]
       }
     }
@@ -68,9 +34,6 @@ export const googleTrendsFields: INodeProperties[] = [
     "displayOptions": {
       "show": {
         "resource": [
-          "google_trends"
-        ],
-        "operation": [
           "google_trends"
         ]
       }
