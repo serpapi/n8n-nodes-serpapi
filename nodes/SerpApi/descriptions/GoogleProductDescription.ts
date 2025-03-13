@@ -1,16 +1,16 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { serpApiFields } from './SerpApiDescription';
 
-export const googleShoppingFields: INodeProperties[] = [
+export const googleProductFields: INodeProperties[] = [
   {
-    "name": "q",
-    "displayName": "`q` Search Query",
-    "description": "Parameter defines the query you want to search. You can use anything that you would use in a regular Google Shopping search.",
-    "default": "Coffee",
+    "name": "product_id",
+    "displayName": "`product_id` Product ID",
+    "description": "Parameter defines the product to get results for. Normally found from shopping results for supported products (e.g., https://www.google.com/shopping/product/{product_id}).",
+    "default": "4887235756540435899",
     "routing": {
       "request": {
         "qs": {
-          "q": "={{$value}}"
+          "product_id": "={{$value}}"
         }
       }
     },
@@ -19,32 +19,10 @@ export const googleShoppingFields: INodeProperties[] = [
     "displayOptions": {
       "show": {
         "resource": [
-          "google_shopping"
+          "google_product"
         ]
       }
     }
-  },
-  {
-    "name": "location",
-    "displayName": "`location` Location",
-    "description": "Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user’s search. If location is omitted, the search may take on the location of the proxy.",
-    "default": "",
-    "routing": {
-      "request": {
-        "qs": {
-          "location": "={{$value}}"
-        }
-      }
-    },
-    "type": "string",
-    "required": false,
-    "displayOptions": {
-        "show": {
-          "resource": [
-            "google_shopping"
-          ]
-        }
-      }
   },
   {
     "displayName": "Additional Fields",
@@ -56,11 +34,26 @@ export const googleShoppingFields: INodeProperties[] = [
     "displayOptions": {
       "show": {
         "resource": [
-          "google_shopping"
+          "google_product"
         ]
       }
     },
     "options": [
+      {
+        "name": "location",
+        "displayName": "`location` Location",
+        "description": "Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user’s search. If location is omitted, the search may take on the location of the proxy.",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "location": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
       {
         "name": "uule",
         "displayName": "`uule` Encoded Location",
@@ -79,7 +72,7 @@ export const googleShoppingFields: INodeProperties[] = [
       {
         "name": "google_domain",
         "displayName": "`google_domain` Domain",
-        "description": "Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains for a full list of supported Google domains.",
+        "description": "Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains page for a full list of supported Google domains.",
         "default": "google.com",
         "routing": {
           "request": {
@@ -836,7 +829,7 @@ export const googleShoppingFields: INodeProperties[] = [
       {
         "name": "gl",
         "displayName": "`gl` Country",
-        "description": "Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries for a full list of supported Google countries.",
+        "description": "Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries page for a full list of supported Google countries.",
         "default": "us",
         "routing": {
           "request": {
@@ -1829,7 +1822,7 @@ export const googleShoppingFields: INodeProperties[] = [
       {
         "name": "hl",
         "displayName": "`hl` Language",
-        "description": "Parameter defines the language to use for the Google Maps search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French) Head to the Google languages for a full list of supported Google languages.",
+        "description": "Parameter defines the language to use for the Google Product search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
         "default": "en",
         "routing": {
           "request": {
@@ -2472,219 +2465,9 @@ export const googleShoppingFields: INodeProperties[] = [
         "required": false
       },
       {
-        "name": "as_dt",
-        "displayName": "as_dt",
-        "description": "Parameter controls whether to include or exclude results from the site named in the as_sitesearch parameter.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_dt": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_epq",
-        "displayName": "as_epq",
-        "description": "Parameter identifies a phrase that all documents in the search results must contain. You can also use the phrase search query term to search for a phrase.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_epq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_eq",
-        "displayName": "as_eq",
-        "description": "Parameter identifies a word or phrase that should not appear in any documents in the search results. You can also use the exclude query term to ensure that a particular word or phrase will not appear in the documents in a set of search results.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_eq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_lq",
-        "displayName": "as_lq",
-        "description": "Parameter specifies that all search results should contain a link to a particular URL. You can also use the link: query term for this type of query.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_lq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_nlo",
-        "displayName": "as_nlo",
-        "description": "Parameter specifies the starting value for a search range. Use as_nlo and as_nhi to append an inclusive search range.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_nlo": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_nhi",
-        "displayName": "as_nhi",
-        "description": "Parameter specifies the ending value for a search range. Use as_nlo and as_nhi to append an inclusive search range.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_nhi": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_oq",
-        "displayName": "as_oq",
-        "description": "Parameter provides additional search terms to check for in a document, where each document in the search results must contain at least one of the additional search terms. You can also use the Boolean OR query term for this type of query.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_oq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_q",
-        "displayName": "as_q",
-        "description": "Parameter provides search terms to check for in a document. This parameter is also commonly used to allow users to specify additional terms to search for within a set of search results.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_q": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_qdr",
-        "displayName": "as_qdr",
-        "description": "Parameter requests search results from a specified time period (quick date range). The following values are supported:d[number]: requests results from the specified number of past days. Example for the past 10 days: as_qdr=d10w[number]: requests results from the specified number of past weeks.m[number]: requests results from the specified number of past months.y[number]: requests results from the specified number of past years. Example for the past year: as_qdr=y",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_qdr": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_rq",
-        "displayName": "as_rq",
-        "description": "Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL. You can also use the related: query term for this type of query.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_rq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_sitesearch",
-        "displayName": "as_sitesearch",
-        "description": "Parameter allows you to specify that all search results should be pages from a given site. By setting the as_dt parameter, you can also use it to exclude pages from a given site from your search resutls.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_sitesearch": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "tbs",
-        "displayName": "`tbs` Advanced Search Parameters",
-        "description": "(to be searched) parameter defines advanced search parameters that aren't possible in the regular query field.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "tbs": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "shoprs",
-        "displayName": "`shoprs` Search Filter ID",
-        "description": "The parameter defines the helper ID for setting search filters. For search filters to be properly applied, the parameter must be used in combination with the updated q parameter, which now contains the name of the filter applied next to your original query.Example:- Original query: Coffee- Query after applying filter \"Sugar Free\": sugar free CoffeeTo apply filters to your search, follow serpapi_link, which you can find in your JSON output at filters[index].options[index].serpapi_link.To apply multiple filters, you have to follow serpapi_link for each filter individualy. Each consecutive request will contain filters that have been previously applied next to the newly added one. To remove a filter, follow its corresponding serpapi_link.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "shoprs": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "direct_link",
-        "displayName": "`direct_link` Include Direct Link",
-        "description": "The parameter determine if the search results should include direct link of each products. By default it is false, if you need direct link, set it to true.This parameter only applies to the new layout (US and few other countries). Most countries have not yet switched to the new layout, so the link will be present without needing this parameter.When using this parameter, it is expected the search will take longer than a normal search request.",
-        "default": false,
-        "routing": {
-          "request": {
-            "qs": {
-              "direct_link": "={{$value}}"
-            }
-          }
-        },
-        "type": "boolean",
-        "required": false
-      },
-      {
         "name": "start",
         "displayName": "`start` Result Offset",
-        "description": "Parameter defines the result offset. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 60 is the 2nd page of results, 120 is the 3rd page of results, etc.).For the new layout, the parameter is not recommended. To easily retrieve paginated results accurately, it is advisable to follow the link provided in serpapi_pagination.next.",
+        "description": "Parameter defines the result offset when offers is enabled. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.) This parameter works only for Online Sellers.This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filterinstead to paginate through reviews.",
         "default": "",
         "routing": {
           "request": {
@@ -2697,14 +2480,14 @@ export const googleShoppingFields: INodeProperties[] = [
         "required": false
       },
       {
-        "name": "num",
-        "displayName": "`num` Number of Results",
-        "description": "Parameter defines the maximum number of results to return. (e.g., 60 (default) returns 60 results, 40 returns 40 results, and 100 (maximum) returns 100 results).  Any number greater than maximum number (100) will default to 100.  Any number lesser than minimum number (1) will default to 60.For the new layout, the parameter is no longer supported.",
+        "name": "page",
+        "displayName": "`page` Start From Page",
+        "description": "Parameter defines the page number for Google Online Sellers. There are 10 results per page. This parameter is equivalent to start (offset) = page * 10.This parameter works only for Online Sellers.This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filterinstead to paginate through reviews.",
         "default": "",
         "routing": {
           "request": {
             "qs": {
-              "num": "={{$value}}"
+              "page": "={{$value}}"
             }
           }
         },
@@ -2712,14 +2495,74 @@ export const googleShoppingFields: INodeProperties[] = [
         "required": false
       },
       {
-        "name": "device",
-        "displayName": "`device` Device",
-        "description": "Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser.",
-        "default": "desktop",
+        "name": "offers",
+        "displayName": "`offers` Offers Results",
+        "description": "Parameter for fetching offers results. Replaces former sellers=online results. It can be set to 1 or true.The offers parameter cannot be used with offer_id parameter.",
+        "default": false,
         "routing": {
           "request": {
             "qs": {
-              "device": "={{$value}}"
+              "offers": "={{$value}}"
+            }
+          }
+        },
+        "type": "boolean",
+        "required": false
+      },
+      {
+        "name": "specs",
+        "displayName": "`specs` Fetch Specs Results",
+        "description": "Parameter for fetching specs results. It can be set to 1 or true.The specs parameter cannot be used with offer_id parameter.",
+        "default": false,
+        "routing": {
+          "request": {
+            "qs": {
+              "specs": "={{$value}}"
+            }
+          }
+        },
+        "type": "boolean",
+        "required": false
+      },
+      {
+        "name": "reviews",
+        "displayName": "`reviews` Fetch Reviews Results",
+        "description": "Parameter for fetching reviews results. It can be set to 1 or true.The reviews parameter cannot be used with offer_id parameter.",
+        "default": false,
+        "routing": {
+          "request": {
+            "qs": {
+              "reviews": "={{$value}}"
+            }
+          }
+        },
+        "type": "boolean",
+        "required": false
+      },
+      {
+        "name": "filter",
+        "displayName": "`filter` Advanced Filter Parameter",
+        "description": "Parameter defines filters, sorting, and pagination for reviews and offers results.Offers filters:freeship:1 Show only products with free shippingucond:1 Show only used productsscoring:p Sort by base pricescoring:tp Sort by total pricescoring:cpd Sort by current promotion deals (special offers)scoring:mrd Sort by sellers ratingReviews filters:rnum:{number} Number of results (100 is max). rpt:{encoded value} Encoded pagination offset. You can get the value of rpt needed for the next page from the serpapi_pagination.next or serpapi_pagination.next_page_filter key in the JSON response to any Google Product API search with reviews enabled. It is recommended to use all filters provided in serpapi_pagination.next or serpapi_pagination.next_page_filter when paginating.Pagination examples: Online Sellers Pagination, Product Reviews Pagination.",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "filter": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "offer_id",
+        "displayName": "`offer_id` Offer ID",
+        "description": "Parameter defines ID used to fetch multiple offers from an online seller, and can be found inside sellers_results.online_sellers .The offer_id parameter can't be used with offers, specs and reviews parameters.",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "offer_id": "={{$value}}"
             }
           }
         },

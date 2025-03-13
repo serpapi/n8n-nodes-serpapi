@@ -1,50 +1,130 @@
 import type { INodeProperties } from 'n8n-workflow';
 import { serpApiFields } from './SerpApiDescription';
 
-export const googleSearchFields: INodeProperties[] = [
+export const googleFlightsFields: INodeProperties[] = [
   {
-    "name": "q",
-    "displayName": "`q` Search Query",
-    "description": "Parameter defines the query you want to search. You can use anything that you would use in a regular Google search. e.g. inurl:, site:, intitle:. We also support advanced search query parameters such as as_dt and as_eq. See the full list of supported advanced search query parameters.",
-    "default": "Coffee",
+    "name": "departure_id",
+    "displayName": "`departure_id` Departure airport code / location kgmid",
+    "description": "Parameter defines the departure airport code or location kgmid.An airport code is an uppercase 3-letter code. You can search for it on Google Flights or IATA.For example, CDG is Paris Charles de Gaulle Airport and AUS is Austin-Bergstrom International Airport.A location kgmid is a string that starts with /m/. You can search for a location on Wikidata and use its \"Freebase ID\" as the location kgmid. For example, /m/0vzm is the location kgmid for Austin, TX.You can specify multiple departure airports by separating them with a comma. For example, CDG,ORY,/m/04jpl.",
+    "default": "AUS",
     "routing": {
       "request": {
         "qs": {
-          "q": "={{$value}}"
-        }
-      }
-    },
-    "type": "string",
-    "required": true,
-    "displayOptions": {
-      "show": {
-        "resource": [
-          "google"
-        ]
-      }
-    }
-  },
-  {
-    "name": "location",
-    "displayName": "`location` Location",
-    "description": "Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user’s search. If location is omitted, the search may take on the location of the proxy.",
-    "default": "",
-    "routing": {
-      "request": {
-        "qs": {
-          "location": "={{$value}}"
+          "departure_id": "={{$value}}"
         }
       }
     },
     "type": "string",
     "required": false,
     "displayOptions": {
-        "show": {
-          "resource": [
-            "google"
-          ]
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
+  },
+  {
+    "name": "arrival_id",
+    "displayName": "`arrival_id` Arrival airport code / location kgmid",
+    "description": "Parameter defines the arrival airport code or location kgmid.An airport code is an uppercase 3-letter code. You can search for it on Google Flights or IATA.For example, CDG is Paris Charles de Gaulle Airport and AUS is Austin-Bergstrom International Airport.A location kgmid is a string that starts with /m/. You can search for a location on Wikidata and use its \"Freebase ID\" as the location kgmid. For example, /m/0vzm is the location kgmid for Austin, TX.You can specify multiple arrival airports by separating them with a comma. For example, CDG,ORY,/m/04jpl.",
+    "default": "CDG",
+    "routing": {
+      "request": {
+        "qs": {
+          "arrival_id": "={{$value}}"
         }
       }
+    },
+    "type": "string",
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
+  },
+  {
+    "name": "outbound_date",
+    "displayName": "`outbound_date` Outbound Date",
+    "description": "Parameter defines the outbound date. The format is YYYY-MM-DD. e.g. 2025-03-14",
+    "default": "",
+    "routing": {
+      "request": {
+        "qs": {
+          "outbound_date": "={{$value}}"
+        }
+      }
+    },
+    "type": "string",
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
+  },
+  {
+    "name": "return_date",
+    "displayName": "`return_date` Return Date",
+    "description": "Parameter defines the return date. The format is YYYY-MM-DD. e.g. 2025-03-20Parameter is required if type parameter is set to: 1 (Round trip)",
+    "default": "",
+    "routing": {
+      "request": {
+        "qs": {
+          "return_date": "={{$value}}"
+        }
+      }
+    },
+    "type": "string",
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
+  },
+  {
+    "name": "type",
+    "displayName": "`type` Flight Type",
+    "description": "Parameter defines the type of the flights.Available options:1 - Round trip (default)2 - One way3 - Multi-cityWhen this parameter is set to 3, use multi_city_json to set the flight information.To obtain the returning flight information for Round Trip (1), you need to make another request using a departure_token.",
+    "default": "1",
+    "routing": {
+      "request": {
+        "qs": {
+          "type": "={{$value}}"
+        }
+      }
+    },
+    "type": "options",
+    "options": [
+      {
+        "name": "Round trip (default) - 1",
+        "value": "1"
+      },
+      {
+        "name": "One way - 2",
+        "value": "2"
+      },
+      {
+        "name": "Multi-city - 3",
+        "value": "3"
+      }
+    ],
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
   },
   {
     "displayName": "Additional Fields",
@@ -56,877 +136,15 @@ export const googleSearchFields: INodeProperties[] = [
     "displayOptions": {
       "show": {
         "resource": [
-          "google"
+          "google_flights"
         ]
       }
     },
     "options": [
       {
-        "name": "uule",
-        "displayName": "`uule` Encoded Location",
-        "description": "Parameter is the Google encoded location you want to use for the search. uule and location parameters can't be used together.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "uule": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "ludocid",
-        "displayName": "`ludocid` Google Place ID",
-        "description": "Parameter defines the id (CID) of the Google My Business listing you want to scrape. Also known as Google Place ID.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "ludocid": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "lsig",
-        "displayName": "`lsig` Additional Google Place ID",
-        "description": "Parameter that you might have to use to force the knowledge graph map view to show up. You can find the lsig ID by using our Local Pack API or Google Local API.lsig ID is also available via a redirect Google uses within Google My Business.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "lsig": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "kgmid",
-        "displayName": "`kgmid` Google Knowledge Graph ID",
-        "description": "Parameter defines the id (KGMID) of the Google Knowledge Graph listing you want to scrape. Also known as Google Knowledge Graph ID. Searches with kgmid parameter will return results for the originally encrypted search parameters. For some searches, kgmid may override all other parameters except start, and num parameters.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "kgmid": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "si",
-        "displayName": "`si` Google Cached Search Parameters ID",
-        "description": "Parameter defines the cached search parameters of the Google Search you want to scrape. Searches with si parameter will return results for the originally encrypted search parameters. For some searches, si may override all other parameters except start, and num parameters. si can be used to scrape Google Knowledge Graph Tabs.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "si": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "ibp",
-        "displayName": "`ibp` Google Element Rendering",
-        "description": "Parameter is responsible for rendering layouts and expansions for some elements (e.g., gwp;0,7 to expand searches with ludocid for expanded knowledge graph).",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "ibp": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "uds",
-        "displayName": "`uds` Google Filter Search",
-        "description": "Parameter enables to filter search. It's a string provided by Google as a filter. uds values are provided under the section: filters with uds, q and serpapi_link values provided for each filter.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "uds": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "google_domain",
-        "displayName": "`google_domain` Domain",
-        "description": "Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains page for a full list of supported Google domains.",
-        "default": "google.com",
-        "routing": {
-          "request": {
-            "qs": {
-              "google_domain": "={{$value}}"
-            }
-          }
-        },
-        "type": "options",
-        "options": [
-          {
-            "name": "google.com",
-            "value": "google.com"
-          },
-          {
-            "name": "google.ad",
-            "value": "google.ad"
-          },
-          {
-            "name": "google.ae",
-            "value": "google.ae"
-          },
-          {
-            "name": "google.com.af",
-            "value": "google.com.af"
-          },
-          {
-            "name": "google.com.ag",
-            "value": "google.com.ag"
-          },
-          {
-            "name": "google.com.ai",
-            "value": "google.com.ai"
-          },
-          {
-            "name": "google.al",
-            "value": "google.al"
-          },
-          {
-            "name": "google.am",
-            "value": "google.am"
-          },
-          {
-            "name": "google.co.ao",
-            "value": "google.co.ao"
-          },
-          {
-            "name": "google.com.ar",
-            "value": "google.com.ar"
-          },
-          {
-            "name": "google.as",
-            "value": "google.as"
-          },
-          {
-            "name": "google.at",
-            "value": "google.at"
-          },
-          {
-            "name": "google.com.au",
-            "value": "google.com.au"
-          },
-          {
-            "name": "google.az",
-            "value": "google.az"
-          },
-          {
-            "name": "google.ba",
-            "value": "google.ba"
-          },
-          {
-            "name": "google.com.bd",
-            "value": "google.com.bd"
-          },
-          {
-            "name": "google.be",
-            "value": "google.be"
-          },
-          {
-            "name": "google.bf",
-            "value": "google.bf"
-          },
-          {
-            "name": "google.bg",
-            "value": "google.bg"
-          },
-          {
-            "name": "google.com.bh",
-            "value": "google.com.bh"
-          },
-          {
-            "name": "google.bi",
-            "value": "google.bi"
-          },
-          {
-            "name": "google.bj",
-            "value": "google.bj"
-          },
-          {
-            "name": "google.com.bn",
-            "value": "google.com.bn"
-          },
-          {
-            "name": "google.com.bo",
-            "value": "google.com.bo"
-          },
-          {
-            "name": "google.com.br",
-            "value": "google.com.br"
-          },
-          {
-            "name": "google.bs",
-            "value": "google.bs"
-          },
-          {
-            "name": "google.bt",
-            "value": "google.bt"
-          },
-          {
-            "name": "google.co.bw",
-            "value": "google.co.bw"
-          },
-          {
-            "name": "google.by",
-            "value": "google.by"
-          },
-          {
-            "name": "google.com.bz",
-            "value": "google.com.bz"
-          },
-          {
-            "name": "google.ca",
-            "value": "google.ca"
-          },
-          {
-            "name": "google.com.kh",
-            "value": "google.com.kh"
-          },
-          {
-            "name": "google.cd",
-            "value": "google.cd"
-          },
-          {
-            "name": "google.cf",
-            "value": "google.cf"
-          },
-          {
-            "name": "google.cg",
-            "value": "google.cg"
-          },
-          {
-            "name": "google.ch",
-            "value": "google.ch"
-          },
-          {
-            "name": "google.ci",
-            "value": "google.ci"
-          },
-          {
-            "name": "google.co.ck",
-            "value": "google.co.ck"
-          },
-          {
-            "name": "google.cl",
-            "value": "google.cl"
-          },
-          {
-            "name": "google.cm",
-            "value": "google.cm"
-          },
-          {
-            "name": "google.com.co",
-            "value": "google.com.co"
-          },
-          {
-            "name": "google.co.cr",
-            "value": "google.co.cr"
-          },
-          {
-            "name": "google.com.cu",
-            "value": "google.com.cu"
-          },
-          {
-            "name": "google.cv",
-            "value": "google.cv"
-          },
-          {
-            "name": "google.com.cy",
-            "value": "google.com.cy"
-          },
-          {
-            "name": "google.cz",
-            "value": "google.cz"
-          },
-          {
-            "name": "google.de",
-            "value": "google.de"
-          },
-          {
-            "name": "google.dj",
-            "value": "google.dj"
-          },
-          {
-            "name": "google.dk",
-            "value": "google.dk"
-          },
-          {
-            "name": "google.dm",
-            "value": "google.dm"
-          },
-          {
-            "name": "google.com.do",
-            "value": "google.com.do"
-          },
-          {
-            "name": "google.dz",
-            "value": "google.dz"
-          },
-          {
-            "name": "google.com.ec",
-            "value": "google.com.ec"
-          },
-          {
-            "name": "google.ee",
-            "value": "google.ee"
-          },
-          {
-            "name": "google.com.eg",
-            "value": "google.com.eg"
-          },
-          {
-            "name": "google.es",
-            "value": "google.es"
-          },
-          {
-            "name": "google.com.et",
-            "value": "google.com.et"
-          },
-          {
-            "name": "google.fi",
-            "value": "google.fi"
-          },
-          {
-            "name": "google.fm",
-            "value": "google.fm"
-          },
-          {
-            "name": "google.com.fj",
-            "value": "google.com.fj"
-          },
-          {
-            "name": "google.fr",
-            "value": "google.fr"
-          },
-          {
-            "name": "google.ga",
-            "value": "google.ga"
-          },
-          {
-            "name": "google.ge",
-            "value": "google.ge"
-          },
-          {
-            "name": "google.com.gh",
-            "value": "google.com.gh"
-          },
-          {
-            "name": "google.com.gi",
-            "value": "google.com.gi"
-          },
-          {
-            "name": "google.gl",
-            "value": "google.gl"
-          },
-          {
-            "name": "google.gm",
-            "value": "google.gm"
-          },
-          {
-            "name": "google.gp",
-            "value": "google.gp"
-          },
-          {
-            "name": "google.gr",
-            "value": "google.gr"
-          },
-          {
-            "name": "google.com.gt",
-            "value": "google.com.gt"
-          },
-          {
-            "name": "google.gy",
-            "value": "google.gy"
-          },
-          {
-            "name": "google.com.hk",
-            "value": "google.com.hk"
-          },
-          {
-            "name": "google.hn",
-            "value": "google.hn"
-          },
-          {
-            "name": "google.hr",
-            "value": "google.hr"
-          },
-          {
-            "name": "google.ht",
-            "value": "google.ht"
-          },
-          {
-            "name": "google.hu",
-            "value": "google.hu"
-          },
-          {
-            "name": "google.co.id",
-            "value": "google.co.id"
-          },
-          {
-            "name": "google.iq",
-            "value": "google.iq"
-          },
-          {
-            "name": "google.ie",
-            "value": "google.ie"
-          },
-          {
-            "name": "google.co.il",
-            "value": "google.co.il"
-          },
-          {
-            "name": "google.co.in",
-            "value": "google.co.in"
-          },
-          {
-            "name": "google.is",
-            "value": "google.is"
-          },
-          {
-            "name": "google.it",
-            "value": "google.it"
-          },
-          {
-            "name": "google.je",
-            "value": "google.je"
-          },
-          {
-            "name": "google.com.jm",
-            "value": "google.com.jm"
-          },
-          {
-            "name": "google.jo",
-            "value": "google.jo"
-          },
-          {
-            "name": "google.co.jp",
-            "value": "google.co.jp"
-          },
-          {
-            "name": "google.co.ke",
-            "value": "google.co.ke"
-          },
-          {
-            "name": "google.ki",
-            "value": "google.ki"
-          },
-          {
-            "name": "google.kg",
-            "value": "google.kg"
-          },
-          {
-            "name": "google.co.kr",
-            "value": "google.co.kr"
-          },
-          {
-            "name": "google.com.kw",
-            "value": "google.com.kw"
-          },
-          {
-            "name": "google.kz",
-            "value": "google.kz"
-          },
-          {
-            "name": "google.la",
-            "value": "google.la"
-          },
-          {
-            "name": "google.com.lb",
-            "value": "google.com.lb"
-          },
-          {
-            "name": "google.li",
-            "value": "google.li"
-          },
-          {
-            "name": "google.lk",
-            "value": "google.lk"
-          },
-          {
-            "name": "google.co.ls",
-            "value": "google.co.ls"
-          },
-          {
-            "name": "google.lt",
-            "value": "google.lt"
-          },
-          {
-            "name": "google.lu",
-            "value": "google.lu"
-          },
-          {
-            "name": "google.lv",
-            "value": "google.lv"
-          },
-          {
-            "name": "google.com.ly",
-            "value": "google.com.ly"
-          },
-          {
-            "name": "google.co.ma",
-            "value": "google.co.ma"
-          },
-          {
-            "name": "google.md",
-            "value": "google.md"
-          },
-          {
-            "name": "google.mg",
-            "value": "google.mg"
-          },
-          {
-            "name": "google.mk",
-            "value": "google.mk"
-          },
-          {
-            "name": "google.ml",
-            "value": "google.ml"
-          },
-          {
-            "name": "google.com.mm",
-            "value": "google.com.mm"
-          },
-          {
-            "name": "google.mn",
-            "value": "google.mn"
-          },
-          {
-            "name": "google.ms",
-            "value": "google.ms"
-          },
-          {
-            "name": "google.com.mt",
-            "value": "google.com.mt"
-          },
-          {
-            "name": "google.mu",
-            "value": "google.mu"
-          },
-          {
-            "name": "google.mv",
-            "value": "google.mv"
-          },
-          {
-            "name": "google.mw",
-            "value": "google.mw"
-          },
-          {
-            "name": "google.com.mx",
-            "value": "google.com.mx"
-          },
-          {
-            "name": "google.com.my",
-            "value": "google.com.my"
-          },
-          {
-            "name": "google.co.mz",
-            "value": "google.co.mz"
-          },
-          {
-            "name": "google.com.na",
-            "value": "google.com.na"
-          },
-          {
-            "name": "google.ne",
-            "value": "google.ne"
-          },
-          {
-            "name": "google.com.ng",
-            "value": "google.com.ng"
-          },
-          {
-            "name": "google.com.ni",
-            "value": "google.com.ni"
-          },
-          {
-            "name": "google.nl",
-            "value": "google.nl"
-          },
-          {
-            "name": "google.no",
-            "value": "google.no"
-          },
-          {
-            "name": "google.com.np",
-            "value": "google.com.np"
-          },
-          {
-            "name": "google.nr",
-            "value": "google.nr"
-          },
-          {
-            "name": "google.nu",
-            "value": "google.nu"
-          },
-          {
-            "name": "google.co.nz",
-            "value": "google.co.nz"
-          },
-          {
-            "name": "google.com.om",
-            "value": "google.com.om"
-          },
-          {
-            "name": "google.com.pk",
-            "value": "google.com.pk"
-          },
-          {
-            "name": "google.com.pa",
-            "value": "google.com.pa"
-          },
-          {
-            "name": "google.com.pe",
-            "value": "google.com.pe"
-          },
-          {
-            "name": "google.com.ph",
-            "value": "google.com.ph"
-          },
-          {
-            "name": "google.pl",
-            "value": "google.pl"
-          },
-          {
-            "name": "google.com.pg",
-            "value": "google.com.pg"
-          },
-          {
-            "name": "google.com.pr",
-            "value": "google.com.pr"
-          },
-          {
-            "name": "google.ps",
-            "value": "google.ps"
-          },
-          {
-            "name": "google.pt",
-            "value": "google.pt"
-          },
-          {
-            "name": "google.com.py",
-            "value": "google.com.py"
-          },
-          {
-            "name": "google.com.qa",
-            "value": "google.com.qa"
-          },
-          {
-            "name": "google.ro",
-            "value": "google.ro"
-          },
-          {
-            "name": "google.rs",
-            "value": "google.rs"
-          },
-          {
-            "name": "google.ru",
-            "value": "google.ru"
-          },
-          {
-            "name": "google.rw",
-            "value": "google.rw"
-          },
-          {
-            "name": "google.com.sa",
-            "value": "google.com.sa"
-          },
-          {
-            "name": "google.com.sb",
-            "value": "google.com.sb"
-          },
-          {
-            "name": "google.sc",
-            "value": "google.sc"
-          },
-          {
-            "name": "google.se",
-            "value": "google.se"
-          },
-          {
-            "name": "google.com.sg",
-            "value": "google.com.sg"
-          },
-          {
-            "name": "google.sh",
-            "value": "google.sh"
-          },
-          {
-            "name": "google.si",
-            "value": "google.si"
-          },
-          {
-            "name": "google.sk",
-            "value": "google.sk"
-          },
-          {
-            "name": "google.com.sl",
-            "value": "google.com.sl"
-          },
-          {
-            "name": "google.sn",
-            "value": "google.sn"
-          },
-          {
-            "name": "google.sm",
-            "value": "google.sm"
-          },
-          {
-            "name": "google.so",
-            "value": "google.so"
-          },
-          {
-            "name": "google.sr",
-            "value": "google.sr"
-          },
-          {
-            "name": "google.com.sv",
-            "value": "google.com.sv"
-          },
-          {
-            "name": "google.td",
-            "value": "google.td"
-          },
-          {
-            "name": "google.tg",
-            "value": "google.tg"
-          },
-          {
-            "name": "google.co.th",
-            "value": "google.co.th"
-          },
-          {
-            "name": "google.com.tj",
-            "value": "google.com.tj"
-          },
-          {
-            "name": "google.tk",
-            "value": "google.tk"
-          },
-          {
-            "name": "google.tl",
-            "value": "google.tl"
-          },
-          {
-            "name": "google.tm",
-            "value": "google.tm"
-          },
-          {
-            "name": "google.to",
-            "value": "google.to"
-          },
-          {
-            "name": "google.tn",
-            "value": "google.tn"
-          },
-          {
-            "name": "google.com.tr",
-            "value": "google.com.tr"
-          },
-          {
-            "name": "google.tt",
-            "value": "google.tt"
-          },
-          {
-            "name": "google.com.tw",
-            "value": "google.com.tw"
-          },
-          {
-            "name": "google.co.tz",
-            "value": "google.co.tz"
-          },
-          {
-            "name": "google.com.ua",
-            "value": "google.com.ua"
-          },
-          {
-            "name": "google.co.ug",
-            "value": "google.co.ug"
-          },
-          {
-            "name": "google.co.uk",
-            "value": "google.co.uk"
-          },
-          {
-            "name": "google.com.uy",
-            "value": "google.com.uy"
-          },
-          {
-            "name": "google.co.uz",
-            "value": "google.co.uz"
-          },
-          {
-            "name": "google.com.vc",
-            "value": "google.com.vc"
-          },
-          {
-            "name": "google.co.ve",
-            "value": "google.co.ve"
-          },
-          {
-            "name": "google.vg",
-            "value": "google.vg"
-          },
-          {
-            "name": "google.co.vi",
-            "value": "google.co.vi"
-          },
-          {
-            "name": "google.com.vn",
-            "value": "google.com.vn"
-          },
-          {
-            "name": "google.vu",
-            "value": "google.vu"
-          },
-          {
-            "name": "google.ws",
-            "value": "google.ws"
-          },
-          {
-            "name": "google.co.za",
-            "value": "google.co.za"
-          },
-          {
-            "name": "google.co.zm",
-            "value": "google.co.zm"
-          },
-          {
-            "name": "google.co.zw",
-            "value": "google.co.zw"
-          }
-        ],
-        "required": false
-      },
-      {
         "name": "gl",
         "displayName": "`gl` Country",
-        "description": "Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google countries.",
+        "description": "Parameter defines the country to use for the Google Flights search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries page for a full list of supported Google countries.",
         "default": "us",
         "routing": {
           "request": {
@@ -1919,7 +1137,7 @@ export const googleSearchFields: INodeProperties[] = [
       {
         "name": "hl",
         "displayName": "`hl` Language",
-        "description": "Parameter defines the language to use for the Google search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
+        "description": "Parameter defines the language to use for the Google Flights search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
         "default": "en",
         "routing": {
           "request": {
@@ -2562,249 +1780,363 @@ export const googleSearchFields: INodeProperties[] = [
         "required": false
       },
       {
-        "name": "cr",
-        "displayName": "`cr` Set Multiple Countries",
-        "description": "Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE will only search French and German pages). Head to the Google cr countries page for a full list of supported countries.",
-        "default": "",
+        "name": "currency",
+        "displayName": "`currency` Currency",
+        "description": "Parameter defines the currency of the returned prices. Default to USD. Head to the Google Travel Currencies page for a full list of supported currency codes.",
+        "default": "USD",
         "routing": {
           "request": {
             "qs": {
-              "cr": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "lr",
-        "displayName": "`lr` Set Multiple Languages",
-        "description": "Parameter defines one or multiple languages to limit the search to. It uses lang_{two-letter language code} to specify languages and | as a delimiter. (e.g., lang_fr|lang_de will only search French and German pages). Head to the Google lr languages page for a full list of supported languages.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "lr": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_dt",
-        "displayName": "as_dt",
-        "description": "Parameter controls whether to include or exclude results from the site named in the as_sitesearch parameter.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_dt": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_epq",
-        "displayName": "as_epq",
-        "description": "Parameter identifies a phrase that all documents in the search results must contain. You can also use the phrase search query term to search for a phrase.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_epq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_eq",
-        "displayName": "as_eq",
-        "description": "Parameter identifies a word or phrase that should not appear in any documents in the search results. You can also use the exclude query term to ensure that a particular word or phrase will not appear in the documents in a set of search results.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_eq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_lq",
-        "displayName": "as_lq",
-        "description": "Parameter specifies that all search results should contain a link to a particular URL. You can also use the link: query term for this type of query.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_lq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_nlo",
-        "displayName": "as_nlo",
-        "description": "Parameter specifies the starting value for a search range. Use as_nlo and as_nhi to append an inclusive search range.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_nlo": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_nhi",
-        "displayName": "as_nhi",
-        "description": "Parameter specifies the ending value for a search range. Use as_nlo and as_nhi to append an inclusive search range.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_nhi": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_oq",
-        "displayName": "as_oq",
-        "description": "Parameter provides additional search terms to check for in a document, where each document in the search results must contain at least one of the additional search terms. You can also use the Boolean OR query term for this type of query.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_oq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_q",
-        "displayName": "as_q",
-        "description": "Parameter provides search terms to check for in a document. This parameter is also commonly used to allow users to specify additional terms to search for within a set of search results.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_q": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_qdr",
-        "displayName": "as_qdr",
-        "description": "Parameter requests search results from a specified time period (quick date range). The following values are supported:d[number]: requests results from the specified number of past days. Example for the past 10 days: as_qdr=d10w[number]: requests results from the specified number of past weeks.m[number]: requests results from the specified number of past months.y[number]: requests results from the specified number of past years. Example for the past year: as_qdr=y",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_qdr": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_rq",
-        "displayName": "as_rq",
-        "description": "Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL. You can also use the related: query term for this type of query.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_rq": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "as_sitesearch",
-        "displayName": "as_sitesearch",
-        "description": "Parameter allows you to specify that all search results should be pages from a given site. By setting the as_dt parameter, you can also use it to exclude pages from a given site from your search resutls.",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "as_sitesearch": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "tbs",
-        "displayName": "`tbs` Advanced Search Parameters",
-        "description": "(to be searched) parameter defines advanced search parameters that aren't possible in the regular query field. (e.g., advanced search for patents, dates, news, videos, images, apps, or text contents).",
-        "default": "",
-        "routing": {
-          "request": {
-            "qs": {
-              "tbs": "={{$value}}"
-            }
-          }
-        },
-        "type": "string",
-        "required": false
-      },
-      {
-        "name": "safe",
-        "displayName": "`safe` Adult Content Filtering",
-        "description": "Parameter defines the level of filtering for adult content. It can be set to active or off, by default Google will blur explicit content.",
-        "default": "active",
-        "routing": {
-          "request": {
-            "qs": {
-              "safe": "={{$value}}"
+              "currency": "={{$value}}"
             }
           }
         },
         "type": "options",
         "options": [
           {
-            "name": "Active",
-            "value": "active"
+            "name": "Albanian Lek - ALL",
+            "value": "ALL"
           },
           {
-            "name": "Off",
-            "value": "off"
+            "name": "Algerian Dinar - DZD",
+            "value": "DZD"
+          },
+          {
+            "name": "Argentine Peso - ARS",
+            "value": "ARS"
+          },
+          {
+            "name": "Armenian Dram - AMD",
+            "value": "AMD"
+          },
+          {
+            "name": "Aruban Florin - AWG",
+            "value": "AWG"
+          },
+          {
+            "name": "Australian Dollar - AUD",
+            "value": "AUD"
+          },
+          {
+            "name": "Azerbaijani Manat - AZN",
+            "value": "AZN"
+          },
+          {
+            "name": "Bahamian Dollar - BSD",
+            "value": "BSD"
+          },
+          {
+            "name": "Bahraini Dinar - BHD",
+            "value": "BHD"
+          },
+          {
+            "name": "Belarusian Ruble - BYN",
+            "value": "BYN"
+          },
+          {
+            "name": "Bermudan Dollar - BMD",
+            "value": "BMD"
+          },
+          {
+            "name": "Bosnia-Herzegovina Convertible Mark - BAM",
+            "value": "BAM"
+          },
+          {
+            "name": "Brazilian Real - BRL",
+            "value": "BRL"
+          },
+          {
+            "name": "British Pound - GBP",
+            "value": "GBP"
+          },
+          {
+            "name": "Bulgarian Lev - BGN",
+            "value": "BGN"
+          },
+          {
+            "name": "CFP Franc - XPF",
+            "value": "XPF"
+          },
+          {
+            "name": "Canadian Dollar - CAD",
+            "value": "CAD"
+          },
+          {
+            "name": "Chilean Peso - CLP",
+            "value": "CLP"
+          },
+          {
+            "name": "Chinese Yuan - CNY",
+            "value": "CNY"
+          },
+          {
+            "name": "Colombian Peso - COP",
+            "value": "COP"
+          },
+          {
+            "name": "Costa Rican Colón - CRC",
+            "value": "CRC"
+          },
+          {
+            "name": "Cuban Peso - CUP",
+            "value": "CUP"
+          },
+          {
+            "name": "Czech Koruna - CZK",
+            "value": "CZK"
+          },
+          {
+            "name": "Danish Krone - DKK",
+            "value": "DKK"
+          },
+          {
+            "name": "Dominican Peso - DOP",
+            "value": "DOP"
+          },
+          {
+            "name": "Egyptian Pound - EGP",
+            "value": "EGP"
+          },
+          {
+            "name": "Euro - EUR",
+            "value": "EUR"
+          },
+          {
+            "name": "Georgian Lari - GEL",
+            "value": "GEL"
+          },
+          {
+            "name": "Hong Kong Dollar - HKD",
+            "value": "HKD"
+          },
+          {
+            "name": "Hungarian Forint - HUF",
+            "value": "HUF"
+          },
+          {
+            "name": "Icelandic Króna - ISK",
+            "value": "ISK"
+          },
+          {
+            "name": "Indian Rupee - INR",
+            "value": "INR"
+          },
+          {
+            "name": "Indonesian Rupiah - IDR",
+            "value": "IDR"
+          },
+          {
+            "name": "Iranian Rial - IRR",
+            "value": "IRR"
+          },
+          {
+            "name": "Israeli New Shekel - ILS",
+            "value": "ILS"
+          },
+          {
+            "name": "Jamaican Dollar - JMD",
+            "value": "JMD"
+          },
+          {
+            "name": "Japanese Yen - JPY",
+            "value": "JPY"
+          },
+          {
+            "name": "Jordanian Dinar - JOD",
+            "value": "JOD"
+          },
+          {
+            "name": "Kazakhstani Tenge - KZT",
+            "value": "KZT"
+          },
+          {
+            "name": "Kuwaiti Dinar - KWD",
+            "value": "KWD"
+          },
+          {
+            "name": "Lebanese Pound - LBP",
+            "value": "LBP"
+          },
+          {
+            "name": "Macedonian Denar - MKD",
+            "value": "MKD"
+          },
+          {
+            "name": "Malaysian Ringgit - MYR",
+            "value": "MYR"
+          },
+          {
+            "name": "Mexican Peso - MXN",
+            "value": "MXN"
+          },
+          {
+            "name": "Moldovan Leu - MDL",
+            "value": "MDL"
+          },
+          {
+            "name": "Moroccan Dirham - MAD",
+            "value": "MAD"
+          },
+          {
+            "name": "New Taiwan Dollar - TWD",
+            "value": "TWD"
+          },
+          {
+            "name": "New Zealand Dollar - NZD",
+            "value": "NZD"
+          },
+          {
+            "name": "Norwegian Krone - NOK",
+            "value": "NOK"
+          },
+          {
+            "name": "Omani Rial - OMR",
+            "value": "OMR"
+          },
+          {
+            "name": "Pakistani Rupee - PKR",
+            "value": "PKR"
+          },
+          {
+            "name": "Panamanian Balboa - PAB",
+            "value": "PAB"
+          },
+          {
+            "name": "Peruvian Sol - PEN",
+            "value": "PEN"
+          },
+          {
+            "name": "Philippine Peso - PHP",
+            "value": "PHP"
+          },
+          {
+            "name": "Polish Zloty - PLN",
+            "value": "PLN"
+          },
+          {
+            "name": "Qatari Riyal - QAR",
+            "value": "QAR"
+          },
+          {
+            "name": "Romanian Leu - RON",
+            "value": "RON"
+          },
+          {
+            "name": "Russian Ruble - RUB",
+            "value": "RUB"
+          },
+          {
+            "name": "Saudi Riyal - SAR",
+            "value": "SAR"
+          },
+          {
+            "name": "Serbian Dinar - RSD",
+            "value": "RSD"
+          },
+          {
+            "name": "Singapore Dollar - SGD",
+            "value": "SGD"
+          },
+          {
+            "name": "South African Rand - ZAR",
+            "value": "ZAR"
+          },
+          {
+            "name": "South Korean Won - KRW",
+            "value": "KRW"
+          },
+          {
+            "name": "Swedish Krona - SEK",
+            "value": "SEK"
+          },
+          {
+            "name": "Swiss Franc - CHF",
+            "value": "CHF"
+          },
+          {
+            "name": "Thai Baht - THB",
+            "value": "THB"
+          },
+          {
+            "name": "Turkish Lira - TRY",
+            "value": "TRY"
+          },
+          {
+            "name": "US Dollar - USD",
+            "value": "USD"
+          },
+          {
+            "name": "Ukrainian Hryvnia - UAH",
+            "value": "UAH"
+          },
+          {
+            "name": "United Arab Emirates Dirham - AED",
+            "value": "AED"
+          },
+          {
+            "name": "Vietnamese Dong - VND",
+            "value": "VND"
           }
         ],
         "required": false
       },
       {
-        "name": "nfpr",
-        "displayName": "`nfpr` Exclude Auto-corrected Results",
-        "description": "Parameter defines the exclusion of results from an auto-corrected query when the original query is spelled wrong. It can be set to 1 to exclude these results, or 0 to include them (default). Note that this parameter may not prevent Google from returning results for an auto-corrected query if no other results are available.",
+        "name": "travel_class",
+        "displayName": "`travel_class` Travel Class",
+        "description": "Parameter defines the travel class.Available options:1 - Economy (default)2 - Premium economy3 - Business4 - First",
+        "default": 1,
+        "routing": {
+          "request": {
+            "qs": {
+              "travel_class": "={{$value}}"
+            }
+          }
+        },
+        "type": "options",
+        "options": [
+          {
+            "name": "Economy (default) - 1",
+            "value": 1
+          },
+          {
+            "name": "Premium economy - 2",
+            "value": 2
+          },
+          {
+            "name": "Business - 3",
+            "value": 3
+          },
+          {
+            "name": "First - 4",
+            "value": 4
+          }
+        ],
+        "required": false
+      },
+      {
+        "name": "multi_city_json",
+        "displayName": "`multi_city_json` Parameters for Multi-city",
+        "description": "Parameter defines the flight information for multi-city flights. It's a JSON string containing multiple flight information objects. Each object should contain the following fields:departure_id - The departure airport code or location kgmid. The format is the same as the main departure_id parameter.arrival_id - The arrival airport code or location kgmid. The format is the same as the main arrival_id parameter.date - Flight date. The format is the same as the outbound_date parameter.times - Time range for the flight. The format is the same as the outbound_times parameter. This parameter is optional.Example:[{\"departure_id\":\"CDG\",\"arrival_id\":\"NRT\",\"date\":\"2025-03-20\"},{\"departure_id\":\"NRT\",\"arrival_id\":\"LAX,SEA\",\"date\":\"2025-03-27\"},{\"departure_id\":\"LAX,SEA\",\"arrival_id\":\"AUS\",\"date\":\"2025-04-03\",\"times\":\"8,18,9,23\"}]The example is a multi-city flight from CDG to NRT on 2025-03-20, then from NRT to LAX or SEA on 2025-03-27, and finally from LAX or SEA to AUS on 2025-04-03. The last flight has a departure time range from 8:00 AM to 7:00 PM and an arrival time range from 9:00 AM to 12:00 AM (Midnight).",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "multi_city_json": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "show_hidden",
+        "displayName": "`show_hidden` Show hidden results",
+        "description": "Set to true to include the hidden flight results. Default to false.",
         "default": false,
         "routing": {
           "request": {
             "qs": {
-              "nfpr": "={{$value}}"
+              "show_hidden": "={{$value}}"
             }
           }
         },
@@ -2812,14 +2144,14 @@ export const googleSearchFields: INodeProperties[] = [
         "required": false
       },
       {
-        "name": "filter",
-        "displayName": "`filter` Results Filtering",
-        "description": "Parameter defines if the filters for 'Similar Results' and 'Omitted Results' are on or off. It can be set to 1 (default) to enable these filters, or 0 to disable these filters.",
-        "default": true,
+        "name": "deep_search",
+        "displayName": "`deep_search` Deep search",
+        "description": "Set to true to enable deep search, which may yield better results but with a longer response time. Deep search results are identical to those found on Google Flights pages in the browser. By default, this option is set to false for performance reasons.",
+        "default": false,
         "routing": {
           "request": {
             "qs": {
-              "filter": "={{$value}}"
+              "deep_search": "={{$value}}"
             }
           }
         },
@@ -2827,55 +2159,148 @@ export const googleSearchFields: INodeProperties[] = [
         "required": false
       },
       {
-        "name": "tbm",
-        "displayName": "`tbm` Search Type",
-        "description": "(to be matched) parameter defines the type of search you want to do.It can be set to:(no tbm parameter): regular Google Search,isch: Google Images API,lcl - Google Local APIvid: Google Videos API,nws: Google News API,shop: Google Shopping API,pts: Google Patents API,or any other Google service.",
-        "default": "",
+        "name": "adults",
+        "displayName": "`adults` Number of Adults",
+        "description": "Parameter defines the number of adults. Default to 1.",
+        "default": 1,
         "routing": {
           "request": {
             "qs": {
-              "tbm": "={{$value}}"
+              "adults": "={{$value}}"
+            }
+          }
+        },
+        "type": "number",
+        "required": false
+      },
+      {
+        "name": "children",
+        "displayName": "`children` Number of Children",
+        "description": "Parameter defines the number of children. Default to 0.",
+        "default": 0,
+        "routing": {
+          "request": {
+            "qs": {
+              "children": "={{$value}}"
+            }
+          }
+        },
+        "type": "number",
+        "required": false
+      },
+      {
+        "name": "infants_in_seat",
+        "displayName": "`infants_in_seat` Number of Infants in seat",
+        "description": "Parameter defines the number of infants in seat. Default to 0.",
+        "default": 0,
+        "routing": {
+          "request": {
+            "qs": {
+              "infants_in_seat": "={{$value}}"
+            }
+          }
+        },
+        "type": "number",
+        "required": false
+      },
+      {
+        "name": "infants_on_lap",
+        "displayName": "`infants_on_lap` Number of Infants on lap",
+        "description": "Parameter defines the number of infants on lap. Default to 0.",
+        "default": 0,
+        "routing": {
+          "request": {
+            "qs": {
+              "infants_on_lap": "={{$value}}"
+            }
+          }
+        },
+        "type": "number",
+        "required": false
+      },
+      {
+        "name": "sort_by",
+        "displayName": "`sort_by` Sort By",
+        "description": "Parameter defines the sorting order of the results.Available options:1 - Top flights (default)2 - Price3 - Departure time4 - Arrival time5 - Duration6 - Emissions",
+        "default": "1",
+        "routing": {
+          "request": {
+            "qs": {
+              "sort_by": "={{$value}}"
             }
           }
         },
         "type": "options",
         "options": [
           {
-            "name": "isch - Google Images",
-            "value": "isch"
+            "name": "Top flights (default) - 1",
+            "value": "1"
           },
           {
-            "name": "lcl - Google Local",
-            "value": "lcl"
+            "name": "Price - 2",
+            "value": "2"
           },
           {
-            "name": "nws - Google News",
-            "value": "nws"
+            "name": "Departure time - 3",
+            "value": "3"
           },
           {
-            "name": "shop - Google Shopping",
-            "value": "shop"
+            "name": "Arrival time - 4",
+            "value": "4"
           },
           {
-            "name": "vid - Google Videos",
-            "value": "vid"
+            "name": "Duration - 5",
+            "value": "5"
           },
           {
-            "name": "pts - Google Patents",
-            "value": "pts"
+            "name": "Emissions - 6",
+            "value": "6"
           }
         ],
         "required": false
       },
       {
-        "name": "start",
-        "displayName": "`start` Result Offset",
-        "description": "Parameter defines the result offset. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.).Google Local Results only accepts multiples of 20(e.g. 20 for the second page results, 40 for the third page results, etc.) as the start value.",
+        "name": "stops",
+        "displayName": "`stops` Stops",
+        "description": "Parameter defines the number of stops during the flight.Available options:0 - Any number of stops (default)1 - Nonstop only2 - 1 stop or fewer3 - 2 stops or fewer",
+        "default": 0,
+        "routing": {
+          "request": {
+            "qs": {
+              "stops": "={{$value}}"
+            }
+          }
+        },
+        "type": "options",
+        "options": [
+          {
+            "name": "Any number of stops (default) - 0",
+            "value": 0
+          },
+          {
+            "name": "Nonstop only - 1",
+            "value": 1
+          },
+          {
+            "name": "1 stop or fewer - 2",
+            "value": 2
+          },
+          {
+            "name": "2 stops or fewer - 3",
+            "value": 3
+          }
+        ],
+        "required": false
+      },
+      {
+        "name": "exclude_airlines",
+        "displayName": "`exclude_airlines` Exclude airlines",
+        "description": "Parameter defines the airline codes to be excluded. Split multiple airlines with comma.It can't be used together with include_airlines.Each airline code should be a 2-character IATA code consisting of either two uppercase letters or one uppercase letter and one digit. You can search for airline codes on IATA.For example, UA is United Airlines.Additionally, alliances can be also included here:STAR_ALLIANCE - Star AllianceSKYTEAM - SkyTeamONEWORLD - Oneworldexclude_airlines and include_airlines parameters can't be used together.",
         "default": "",
         "routing": {
           "request": {
             "qs": {
-              "start": "={{$value}}"
+              "exclude_airlines": "={{$value}}"
             }
           }
         },
@@ -2883,14 +2308,14 @@ export const googleSearchFields: INodeProperties[] = [
         "required": false
       },
       {
-        "name": "num",
-        "displayName": "`num` Number of Results",
-        "description": "Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).The use of num may introduce latency, and/or prevent the inclusion of specialized result types. It is better to omit this parameter unless it is strictly necessary to increase the number of results per page.Results are not guaranteed to have the number of results specified in num.",
+        "name": "include_airlines",
+        "displayName": "`include_airlines` Include airlines",
+        "description": "Parameter defines the airline codes to be included. Split multiple airlines with comma.It can't be used together with exclude_airlines.Each airline code should be a 2-character IATA code consisting of either two uppercase letters or one uppercase letter and one digit. You can search for airline codes on IATA.For example, UA is United Airlines.Additionally, alliances can be also included here:STAR_ALLIANCE - Star AllianceSKYTEAM - SkyTeamONEWORLD - Oneworldexclude_airlines and include_airlines parameters can't be used together.",
         "default": "",
         "routing": {
           "request": {
             "qs": {
-              "num": "={{$value}}"
+              "include_airlines": "={{$value}}"
             }
           }
         },
@@ -2898,14 +2323,155 @@ export const googleSearchFields: INodeProperties[] = [
         "required": false
       },
       {
-        "name": "device",
-        "displayName": "`device` Device",
-        "description": "Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).",
-        "default": "desktop",
+        "name": "bags",
+        "displayName": "`bags` bags",
+        "description": "Parameter defines the number of carry-on bags. Default to 0.",
+        "default": 0,
         "routing": {
           "request": {
             "qs": {
-              "device": "={{$value}}"
+              "bags": "={{$value}}"
+            }
+          }
+        },
+        "type": "number",
+        "required": false
+      },
+      {
+        "name": "max_price",
+        "displayName": "`max_price` Max price",
+        "description": "Parameter defines the maximum ticket price. Default to unlimited.",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "max_price": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "outbound_times",
+        "displayName": "`outbound_times` Outbound times",
+        "description": "Parameter defines the outbound times range. It's a string containing two (for departure only) or four (for departure and arrival) comma-separated numbers. Each number represents the beginning of an hour. For example:4,18: 4:00 AM - 7:00 PM departure0,18: 12:00 AM - 7:00 PM departure19,23: 7:00 PM - 12:00 AM departure4,18,3,19: 4:00 AM - 7:00 PM departure, 3:00 AM - 8:00 PM arrival0,23,3,19: unrestricted departure, 3:00 AM - 8:00 PM arrival",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "outbound_times": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "return_times",
+        "displayName": "`return_times` Return times",
+        "description": "Parameter defines the return times range. It's a string containing two (for departure only) or four (for departure and arrival) comma-separated numbers. Each number represents the beginning of an hour. For example:4,18: 4:00 AM - 7:00 PM departure0,18: 12:00 AM - 7:00 PM departure19,23: 7:00 PM - 12:00 AM departure4,18,3,19: 4:00 AM - 7:00 PM departure, 3:00 AM - 8:00 PM arrival0,23,3,19: unrestricted departure, 3:00 AM - 8:00 PM arrivalParameter should only be used when type parameter is set to: 1 (Round trip)",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "return_times": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "emissions",
+        "displayName": "`emissions` Emissions",
+        "description": "Parameter defines the emission level of the flight.Available options:1 - Less emissions only",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "emissions": "={{$value}}"
+            }
+          }
+        },
+        "type": "options",
+        "options": [
+          {
+            "name": "Less emissions only - 1",
+            "value": 1
+          }
+        ],
+        "required": false
+      },
+      {
+        "name": "layover_duration",
+        "displayName": "`layover_duration` Layover duration",
+        "description": "Parameter defines the layover duration, in minutes. It's a string containing two comma-separated numbers. For example, specify 90,330 for 1 hr 30 min - 5 hr 30 min.",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "layover_duration": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "exclude_conns",
+        "displayName": "`exclude_conns` Exclude connecting airports",
+        "description": "Parameter defines the connecting airport codes to be excluded.An airport ID is an uppercase 3-letter code. You can search for it on Google Flights or IATA.For example, CDG is Paris Charles de Gaulle Airport and AUS is Austin-Bergstrom International Airport.You can also combine multiple Airports by joining them with a comma (value + , + value; eg: CDG,AUS).",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "exclude_conns": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "max_duration",
+        "displayName": "`max_duration` Max duration",
+        "description": "Parameter defines the maximum flight duration, in minutes. For example, specify 1500 for 25 hours.",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "max_duration": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "departure_token",
+        "displayName": "`departure_token` Departure flight token",
+        "description": "Parameter is used to select the flight and get returning flights (for Round trip) or flights for the next leg of itinerary (for Multi-city). Find this token in the departure flight results.It cannot be used together with booking_token.",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "departure_token": "={{$value}}"
+            }
+          }
+        },
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "booking_token",
+        "displayName": "`booking_token` Booking token",
+        "description": "Parameter is used to get booking options for the selected flights. Find this token in the flight results.It cannot be used together with departure_token.When using this token, parameters related to date and parameters inside \"Advanced Filters\" section won't affect the result.",
+        "default": "",
+        "routing": {
+          "request": {
+            "qs": {
+              "booking_token": "={{$value}}"
             }
           }
         },

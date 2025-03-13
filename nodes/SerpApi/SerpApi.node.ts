@@ -2,8 +2,11 @@
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
 import {
-	googleSearchFields,
+	googleFlightsFields,
+	googleJobsFields,
 	googleMapsFields,
+	googleSearchFields,
+	googleProductFields,
 	googleShoppingFields,
 	googleTrendsFields,
 	googleLightFields,
@@ -112,6 +115,9 @@ export class SerpApi implements INodeType {
 			...googleShoppingFields,
 			...googleTrendsFields,
 			...googleLightFields,
+			...googleFlightsFields,
+			...googleJobsFields,
+			...googleProductFields,
 		],
 	};
 }
