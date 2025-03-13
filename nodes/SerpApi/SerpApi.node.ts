@@ -50,6 +50,28 @@ export class SerpApi implements INodeType {
 				noDataExpression: true,
 				options: [
 					{
+						name: 'Google Flights',
+						value: 'google_flights',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_flights',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Jobs',
+						value: 'google_jobs',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_jobs',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Light',
 						value: 'google_light',
 						action: 'Search Google',
@@ -68,6 +90,17 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_maps',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Product',
+						value: 'google_product',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_product',
 								},
 							},
 						},
