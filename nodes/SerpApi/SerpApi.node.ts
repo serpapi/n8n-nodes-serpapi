@@ -1,9 +1,10 @@
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
 import {
-    googleSearchFields,
     googleFlightsFields,
     googleMapsFields,
+    googleSearchFields,
+    googleProductFields,
     googleShoppingFields,
     googleTrendsFields
 } from './descriptions';
@@ -79,6 +80,17 @@ export class SerpApi implements INodeType {
                         },
 					},
 					{
+						name: 'Google Product',
+						value: 'google_product',
+                        routing: {
+                            request: {
+                                qs: { 
+                                    engine: 'google_product' 
+                                },
+                            },
+                        },
+					},
+					{
 						name: 'Google Shopping',
 						value: 'google_shopping',
                         routing: {
@@ -104,10 +116,10 @@ export class SerpApi implements INodeType {
 				],
 				default: 'google',
 			},
-
-            ...googleSearchFields,
             ...googleFlightsFields,
             ...googleMapsFields,
+            ...googleProductFields,
+            ...googleSearchFields,
             ...googleShoppingFields,
             ...googleTrendsFields
 		],
