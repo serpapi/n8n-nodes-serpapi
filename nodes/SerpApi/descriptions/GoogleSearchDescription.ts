@@ -6,7 +6,7 @@ export const googleSearchFields: INodeProperties[] = [
     "name": "q",
     "displayName": "`q` Search Query",
     "description": "Parameter defines the query you want to search. You can use anything that you would use in a regular Google search. e.g. inurl:, site:, intitle:. We also support advanced search query parameters such as as_dt and as_eq. See the full list of supported advanced search query parameters.",
-    "default": "",
+    "default": "Coffee",
     "routing": {
       "request": {
         "qs": {
@@ -170,7 +170,7 @@ export const googleSearchFields: INodeProperties[] = [
         "name": "google_domain",
         "displayName": "`google_domain` Domain",
         "description": "Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains page for a full list of supported Google domains.",
-        "default": "",
+        "default": "google.com",
         "routing": {
           "request": {
             "qs": {
@@ -927,7 +927,7 @@ export const googleSearchFields: INodeProperties[] = [
         "name": "gl",
         "displayName": "`gl` Country",
         "description": "Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google countries.",
-        "default": "",
+        "default": "us",
         "routing": {
           "request": {
             "qs": {
@@ -1920,7 +1920,7 @@ export const googleSearchFields: INodeProperties[] = [
         "name": "hl",
         "displayName": "`hl` Language",
         "description": "Parameter defines the language to use for the Google search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
-        "default": "",
+        "default": "en",
         "routing": {
           "request": {
             "qs": {
@@ -2775,7 +2775,7 @@ export const googleSearchFields: INodeProperties[] = [
         "name": "safe",
         "displayName": "`safe` Adult Content Filtering",
         "description": "Parameter defines the level of filtering for adult content. It can be set to active or off, by default Google will blur explicit content.",
-        "default": "",
+        "default": "active",
         "routing": {
           "request": {
             "qs": {
@@ -2800,7 +2800,7 @@ export const googleSearchFields: INodeProperties[] = [
         "name": "nfpr",
         "displayName": "`nfpr` Exclude Auto-corrected Results",
         "description": "Parameter defines the exclusion of results from an auto-corrected query when the original query is spelled wrong. It can be set to 1 to exclude these results, or 0 to include them (default). Note that this parameter may not prevent Google from returning results for an auto-corrected query if no other results are available.",
-        "default": "",
+        "default": false,
         "routing": {
           "request": {
             "qs": {
@@ -2815,7 +2815,7 @@ export const googleSearchFields: INodeProperties[] = [
         "name": "filter",
         "displayName": "`filter` Results Filtering",
         "description": "Parameter defines if the filters for 'Similar Results' and 'Omitted Results' are on or off. It can be set to 1 (default) to enable these filters, or 0 to disable these filters.",
-        "default": "",
+        "default": true,
         "routing": {
           "request": {
             "qs": {
@@ -2879,7 +2879,7 @@ export const googleSearchFields: INodeProperties[] = [
             }
           }
         },
-        "type": "number",
+        "type": "string",
         "required": false
       },
       {
@@ -2894,14 +2894,14 @@ export const googleSearchFields: INodeProperties[] = [
             }
           }
         },
-        "type": "number",
+        "type": "string",
         "required": false
       },
       {
         "name": "device",
         "displayName": "`device` Device",
         "description": "Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).",
-        "default": "",
+        "default": "desktop",
         "routing": {
           "request": {
             "qs": {

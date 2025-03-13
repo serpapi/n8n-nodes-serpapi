@@ -2,7 +2,7 @@ import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflo
 
 import {
     googleSearchFields,
-    googleFlightsFields
+    googleFlightsFields,
     googleMapsFields,
     googleShoppingFields,
     googleTrendsFields
