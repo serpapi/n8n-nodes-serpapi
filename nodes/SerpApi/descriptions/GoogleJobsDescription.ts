@@ -1,3 +1,4 @@
+/* eslint-disable n8n-nodes-base/node-param-display-name-miscased-id */
 /* eslint-disable n8n-nodes-base/node-param-options-type-unsorted-items */
 /* eslint-disable n8n-nodes-base/node-param-collection-type-unsorted-items */
 /* eslint-disable n8n-nodes-base/node-param-display-name-miscased */
@@ -1240,7 +1241,7 @@ export const googleJobsFields: INodeProperties[] = [
 						value: 'in',
 					},
 					{
-						name: 'Indonesia - ID',
+						name: 'Indonesia - id',
 						value: 'id',
 					},
 					{
@@ -2061,7 +2062,7 @@ export const googleJobsFields: INodeProperties[] = [
 						value: 'ig',
 					},
 					{
-						name: 'Indonesian - ID',
+						name: 'Indonesian - id',
 						value: 'id',
 					},
 					{
