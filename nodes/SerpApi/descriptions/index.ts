@@ -6,3 +6,4 @@ export * from './GoogleProductDescription';
 export * from './GoogleSearchDescription';
 export * from './GoogleShoppingDescription';
 export * from './GoogleTrendsDescription';
+export * from './GoogleLightDescription';
