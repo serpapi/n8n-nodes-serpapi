@@ -2,6 +2,7 @@ import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflo
 
 import {
     googleSearchFields,
+    googleFlightsFields
     googleMapsFields,
     googleShoppingFields,
     googleTrendsFields
@@ -55,6 +56,17 @@ export class SerpApi implements INodeType {
                             },
                         },
 					},
+                    {
+						name: 'Google Flights',
+						value: 'google_flights',
+                        routing: {
+                            request: {
+                                qs: { 
+                                    engine: 'google_flights'
+                                },
+                            },
+                        },
+					},
 					{
 						name: 'Google Maps',
 						value: 'google_maps',
@@ -94,6 +106,7 @@ export class SerpApi implements INodeType {
 			},
 
             ...googleSearchFields,
+            ...googleFlightsFields,
             ...googleMapsFields,
             ...googleShoppingFields,
             ...googleTrendsFields
