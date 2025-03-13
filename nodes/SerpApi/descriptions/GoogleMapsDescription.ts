@@ -90,7 +90,7 @@ export const googleMapsFields: INodeProperties[] = [
         "name": "google_domain",
         "displayName": "`google_domain` Domain",
         "description": "Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains page for a full list of supported Google domains.",
-        "default": "",
+        "default": "google.com",
         "routing": {
           "request": {
             "qs": {
@@ -847,7 +847,7 @@ export const googleMapsFields: INodeProperties[] = [
         "name": "hl",
         "displayName": "`hl` Language",
         "description": "Parameter defines the language to use for the Google Maps search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google Maps languages page for a full list of supported Google Maps languages.",
-        "default": "",
+        "default": "en",
         "routing": {
           "request": {
             "qs": {
@@ -1188,7 +1188,7 @@ export const googleMapsFields: INodeProperties[] = [
         "name": "gl",
         "displayName": "`gl` Country",
         "description": "Parameter defines the country to use for the Google Maps search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google countries.Parameter only affects Place Results API.",
-        "default": "",
+        "default": "us",
         "routing": {
           "request": {
             "qs": {

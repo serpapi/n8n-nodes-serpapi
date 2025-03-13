@@ -15,7 +15,14 @@ export const googleFlightsFields: INodeProperties[] = [
       }
     },
     "type": "string",
-    "required": false
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
   },
   {
     "name": "arrival_id",
@@ -30,7 +37,14 @@ export const googleFlightsFields: INodeProperties[] = [
       }
     },
     "type": "string",
-    "required": false
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
   },
   {
     "name": "outbound_date",
@@ -45,7 +59,14 @@ export const googleFlightsFields: INodeProperties[] = [
       }
     },
     "type": "string",
-    "required": false
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
   },
   {
     "name": "return_date",
@@ -60,7 +81,14 @@ export const googleFlightsFields: INodeProperties[] = [
       }
     },
     "type": "string",
-    "required": false
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
   },
   {
     "name": "type",
@@ -89,7 +117,14 @@ export const googleFlightsFields: INodeProperties[] = [
         "value": "3"
       }
     ],
-    "required": false
+    "required": false,
+    "displayOptions": {
+      "show": {
+        "resource": [
+          "google_flights"
+        ]
+      }
+    }
   },
   {
     "displayName": "Additional Fields",

@@ -6,7 +6,7 @@ export const googleShoppingFields: INodeProperties[] = [
     "name": "q",
     "displayName": "`q` Search Query",
     "description": "Parameter defines the query you want to search. You can use anything that you would use in a regular Google Shopping search.",
-    "default": "",
+    "default": "Coffee",
     "routing": {
       "request": {
         "qs": {
@@ -80,7 +80,7 @@ export const googleShoppingFields: INodeProperties[] = [
         "name": "google_domain",
         "displayName": "`google_domain` Domain",
         "description": "Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains for a full list of supported Google domains.",
-        "default": "",
+        "default": "google.com",
         "routing": {
           "request": {
             "qs": {
@@ -837,7 +837,7 @@ export const googleShoppingFields: INodeProperties[] = [
         "name": "gl",
         "displayName": "`gl` Country",
         "description": "Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries for a full list of supported Google countries.",
-        "default": "",
+        "default": "us",
         "routing": {
           "request": {
             "qs": {
@@ -1830,7 +1830,7 @@ export const googleShoppingFields: INodeProperties[] = [
         "name": "hl",
         "displayName": "`hl` Language",
         "description": "Parameter defines the language to use for the Google Maps search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French) Head to the Google languages for a full list of supported Google languages.",
-        "default": "",
+        "default": "en",
         "routing": {
           "request": {
             "qs": {
@@ -2670,7 +2670,7 @@ export const googleShoppingFields: INodeProperties[] = [
         "name": "direct_link",
         "displayName": "`direct_link` Include Direct Link",
         "description": "The parameter determine if the search results should include direct link of each products. By default it is false, if you need direct link, set it to true.This parameter only applies to the new layout (US and few other countries). Most countries have not yet switched to the new layout, so the link will be present without needing this parameter.When using this parameter, it is expected the search will take longer than a normal search request.",
-        "default": "",
+        "default": false,
         "routing": {
           "request": {
             "qs": {
@@ -2693,7 +2693,7 @@ export const googleShoppingFields: INodeProperties[] = [
             }
           }
         },
-        "type": "number",
+        "type": "string",
         "required": false
       },
       {
@@ -2708,14 +2708,14 @@ export const googleShoppingFields: INodeProperties[] = [
             }
           }
         },
-        "type": "number",
+        "type": "string",
         "required": false
       },
       {
         "name": "device",
         "displayName": "`device` Device",
         "description": "Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser.",
-        "default": "",
+        "default": "desktop",
         "routing": {
           "request": {
             "qs": {
