@@ -10,14 +10,15 @@ import {
 	googleSearchFields,
 	googleProductFields,
 	googleShoppingFields,
-	googleTrendsFields
+	googleTrendsFields,
+	googleAutocompleteFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
 		displayName: 'SerpApi',
-		name: 'SerpApi',
+		name: 'serpApi',
 		icon: 'file:serpapi.svg',
 		group: ['transform'],
 		version: 1,
@@ -50,6 +51,18 @@ export class SerpApi implements INodeType {
 				type: 'options',
 				noDataExpression: true,
 				options: [
+					{
+						name: 'Google Autocomplete',
+						value: 'google_autocomplete',
+						action: 'Search Google Autocomplete',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_autocomplete',
+								},
+							},
+						},
+					},
 					{
 						name: 'Google Flights',
 						value: 'google_flights',
@@ -162,7 +175,8 @@ export class SerpApi implements INodeType {
 			...googleSearchFields,
 			...googleProductFields,
 			...googleShoppingFields,
-			...googleTrendsFields
+			...googleTrendsFields,
+			...googleAutocompleteFields,
 		],
 	};
 }
