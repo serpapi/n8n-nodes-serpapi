@@ -11,7 +11,7 @@ export const googleImagesFields: INodeProperties[] = [
 		name: 'q',
 		description:
 			'Parameter defines the query you want to search. You can use anything that you would use in a regular Google Images search. e.g. inurl:, site:, intitle:.',
-		default: '',
+		default: 'coffee',
 		routing: {
 			request: {
 				qs: {

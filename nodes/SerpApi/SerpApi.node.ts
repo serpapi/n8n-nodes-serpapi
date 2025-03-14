@@ -76,6 +76,17 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Images',
+						value: 'google_images',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_images',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Jobs',
 						value: 'google_jobs',
 						routing: {
