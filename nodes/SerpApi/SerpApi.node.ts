@@ -4,12 +4,13 @@ import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflo
 import {
 	googleFlightsFields,
 	googleJobsFields,
+	googleLightFields,
+	googleLocalFields,
 	googleMapsFields,
 	googleSearchFields,
 	googleProductFields,
 	googleShoppingFields,
-	googleTrendsFields,
-	googleLightFields,
+	googleTrendsFields
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -84,6 +85,17 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Local',
+						value: 'google_local',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_local',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Maps',
 						value: 'google_maps',
 						routing: {
@@ -142,15 +154,15 @@ export class SerpApi implements INodeType {
 				],
 				default: 'google',
 			},
-
-			...googleSearchFields,
-			...googleMapsFields,
-			...googleShoppingFields,
-			...googleTrendsFields,
-			...googleLightFields,
 			...googleFlightsFields,
 			...googleJobsFields,
+			...googleLightFields,
+			...googleLocalFields,
+			...googleMapsFields,
+			...googleSearchFields,
 			...googleProductFields,
+			...googleShoppingFields,
+			...googleTrendsFields
 		],
 	};
 }
