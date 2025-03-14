@@ -10,3 +10,4 @@ export * from './GoogleTrendsDescription';
 export * from './GoogleLightDescription';
 export * from './GoogleAutocompleteDescription';
 export * from './GoogleImagesDescription';
+export * from './GoogleScholarDescription';

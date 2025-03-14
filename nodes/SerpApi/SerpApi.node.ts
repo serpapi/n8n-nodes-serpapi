@@ -13,6 +13,7 @@ import {
 	googleTrendsFields,
 	googleAutocompleteFields,
 	googleImagesFields,
+	googleScholarFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -143,6 +144,18 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Scholar',
+						value: 'google_scholar',
+						action: 'Search Google Scholar',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_scholar',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Search',
 						value: 'google',
 						routing: {
@@ -190,6 +203,7 @@ export class SerpApi implements INodeType {
 			...googleTrendsFields,
 			...googleAutocompleteFields,
 			...googleImagesFields,
+			...googleScholarFields,
 		],
 	};
 }
