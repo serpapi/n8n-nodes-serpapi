@@ -11,7 +11,7 @@ export const googleScholarFields: INodeProperties[] = [
 		name: 'q',
 		description:
 			'Parameter defines the query you want to search. You can also use helpers in your query such as: author:, or source:. Usage of cites parameter makes q optional. Usage of cites together with q triggers search within citing articles. Usage of cluster together with q and cites parameters is prohibited. Use cluster parameter only.',
-		default: '(Coffee)',
+		default: 'Coffee',
 		routing: {
 			request: {
 				qs: {

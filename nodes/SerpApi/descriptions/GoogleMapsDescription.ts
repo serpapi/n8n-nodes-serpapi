@@ -11,7 +11,7 @@ export const googleMapsFields: INodeProperties[] = [
 		name: 'q',
 		description:
 			'Parameter defines the query you want to search. You can use anything that you would use in a regular Google Maps search. The parameter is only required if type is set to search.',
-		default: '',
+		default: 'coffee',
 		routing: {
 			request: {
 				qs: {
