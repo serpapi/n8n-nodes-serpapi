@@ -12,6 +12,7 @@ import {
 	googleShoppingFields,
 	googleTrendsFields,
 	googleAutocompleteFields,
+	googleImagesFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -177,6 +178,7 @@ export class SerpApi implements INodeType {
 			...googleShoppingFields,
 			...googleTrendsFields,
 			...googleAutocompleteFields,
+			...googleImagesFields,
 		],
 	};
 }
