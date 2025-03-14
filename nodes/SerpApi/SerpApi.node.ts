@@ -12,6 +12,7 @@ import {
 	googleShoppingFields,
 	googleTrendsFields,
 	googleAutocompleteFields,
+	googleImagesFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -70,6 +71,17 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_flights',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Images',
+						value: 'google_images',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_images',
 								},
 							},
 						},
@@ -177,6 +189,7 @@ export class SerpApi implements INodeType {
 			...googleShoppingFields,
 			...googleTrendsFields,
 			...googleAutocompleteFields,
+			...googleImagesFields,
 		],
 	};
 }
