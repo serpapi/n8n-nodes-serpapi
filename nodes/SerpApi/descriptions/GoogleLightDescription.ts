@@ -41,6 +41,11 @@ export const googleLightFields: INodeProperties[] = [
 			},
 		},
 		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['google_light'],
+			},
+		},
 	},
 	{
 		displayName: 'Additional Fields',
