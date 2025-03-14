@@ -1,6 +1,7 @@
 export * from './SerpApiDescription';
 export * from './GoogleFlightsDescription';
 export * from './GoogleJobsDescription';
+export * from './GoogleLocalDescription';
 export * from './GoogleMapsDescription';
 export * from './GoogleProductDescription';
 export * from './GoogleSearchDescription';
