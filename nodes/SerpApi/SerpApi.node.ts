@@ -29,6 +29,7 @@ export class SerpApi implements INodeType {
 		defaults: {
 			name: 'SerpApi',
 		},
+		usableAsTool: true,
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
 		credentials: [
