@@ -14,6 +14,7 @@ import {
 	googleAutocompleteFields,
 	googleImagesFields,
 	googleScholarFields,
+	bingSearchFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -53,6 +54,17 @@ export class SerpApi implements INodeType {
 				type: 'options',
 				noDataExpression: true,
 				options: [
+					{
+						name: 'Bing Search',
+						value: 'bing',
+						routing: {
+							request: {
+								qs: {
+									engine: 'bing',
+								},
+							},
+						},
+					},
 					{
 						name: 'Google Autocomplete',
 						value: 'google_autocomplete',
@@ -204,6 +216,7 @@ export class SerpApi implements INodeType {
 			...googleAutocompleteFields,
 			...googleImagesFields,
 			...googleScholarFields,
+			...bingSearchFields,
 		],
 	};
 }
