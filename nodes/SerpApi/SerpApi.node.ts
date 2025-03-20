@@ -14,6 +14,7 @@ import {
 	googleAutocompleteFields,
 	googleImagesFields,
 	googleScholarFields,
+	googleNewsFields,
 	bingSearchFields,
 } from './descriptions';
 
@@ -146,6 +147,17 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google News',
+						value: 'google_news',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_news',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Product',
 						value: 'google_product',
 						routing: {
@@ -210,6 +222,7 @@ export class SerpApi implements INodeType {
 			...googleLightFields,
 			...googleLocalFields,
 			...googleMapsFields,
+			...googleNewsFields,
 			...googleSearchFields,
 			...googleProductFields,
 			...googleShoppingFields,
