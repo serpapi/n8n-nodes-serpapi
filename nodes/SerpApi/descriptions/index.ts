@@ -13,3 +13,4 @@ export * from './GoogleImagesDescription';
 export * from './GoogleScholarDescription';
 export * from './BingSearchDescription';
 export * from './GoogleNewsDescription';
+export * from './GoogleLensDescription';
