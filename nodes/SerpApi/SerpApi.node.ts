@@ -17,6 +17,7 @@ import {
 	googleScholarFields,
 	googleNewsFields,
 	bingSearchFields,
+	ebaySearchFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -65,6 +66,18 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'bing',
+								},
+							},
+						},
+					},
+					{
+						name: 'eBay Search',
+						value: 'ebay',
+						action: 'Search eBay',
+						routing: {
+							request: {
+								qs: {
+									engine: 'ebay',
 								},
 							},
 						},
@@ -255,6 +268,7 @@ export class SerpApi implements INodeType {
 			...googleImagesFields,
 			...googleScholarFields,
 			...bingSearchFields,
+			...ebaySearchFields,
 		],
 	};
 }
