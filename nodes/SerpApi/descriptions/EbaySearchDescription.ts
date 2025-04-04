@@ -12,7 +12,7 @@ export const ebaySearchFields: INodeProperties[] = [
 		name: '_nkw',
 		description:
 			'Parameter defines the search query. You can use anything that you would use in a regular Ebay search._nkw parameter is optional when category_id parameter is specified.',
-		default: '',
+		default: 'coffee',
 		routing: {
 			request: {
 				qs: {
@@ -42,6 +42,11 @@ export const ebaySearchFields: INodeProperties[] = [
 			},
 		},
 		type: 'options',
+		displayOptions: {
+			show: {
+				resource: ['ebay'],
+			},
+		},
 		options: [
 			{
 				name: 'Australia',

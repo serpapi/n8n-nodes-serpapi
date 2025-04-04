@@ -14,4 +14,4 @@ export * from './GoogleScholarDescription';
 export * from './BingSearchDescription';
 export * from './GoogleNewsDescription';
 export * from './GoogleLensDescription';
-export * from './EbaySearctionDescription';
+export * from './EbaySearchDescription';
