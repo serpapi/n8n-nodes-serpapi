@@ -12,6 +12,7 @@ export * from './GoogleAutocompleteDescription';
 export * from './GoogleImagesDescription';
 export * from './GoogleScholarDescription';
 export * from './BingSearchDescription';
+export * from './BingImagesDescription';
 export * from './GoogleNewsDescription';
 export * from './GoogleLensDescription';
 export * from './EbaySearchDescription';
