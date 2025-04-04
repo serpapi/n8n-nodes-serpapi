@@ -16,6 +16,7 @@ import {
 	googleImagesFields,
 	googleScholarFields,
 	googleNewsFields,
+	bingImagesFields,
 	bingSearchFields,
 	ebaySearchFields,
 } from './descriptions';
@@ -58,6 +59,18 @@ export class SerpApi implements INodeType {
 				type: 'options',
 				noDataExpression: true,
 				options: [
+					{
+						name: 'Bing Images',
+						value: 'bing_images',
+						action: 'Search Bing Images',
+						routing: {
+							request: {
+								qs: {
+									engine: 'bing_images',
+								},
+							},
+						},
+					},
 					{
 						name: 'Bing Search',
 						value: 'bing',
@@ -267,6 +280,7 @@ export class SerpApi implements INodeType {
 			...googleAutocompleteFields,
 			...googleImagesFields,
 			...googleScholarFields,
+			...bingImagesFields,
 			...bingSearchFields,
 			...ebaySearchFields,
 		],
