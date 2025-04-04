@@ -4,6 +4,7 @@ import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflo
 import {
 	googleFlightsFields,
 	googleJobsFields,
+	googleLensFields,
 	googleLightFields,
 	googleLocalFields,
 	googleMapsFields,
@@ -16,6 +17,7 @@ import {
 	googleScholarFields,
 	googleNewsFields,
 	bingSearchFields,
+	ebaySearchFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -59,10 +61,23 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Bing Search',
 						value: 'bing',
+						action: 'Search Bing',
 						routing: {
 							request: {
 								qs: {
 									engine: 'bing',
+								},
+							},
+						},
+					},
+					{
+						name: 'eBay Search',
+						value: 'ebay',
+						action: 'Search eBay',
+						routing: {
+							request: {
+								qs: {
+									engine: 'ebay',
 								},
 							},
 						},
@@ -82,6 +97,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Flights',
 						value: 'google_flights',
+						action: 'Search Google Flights',
 						routing: {
 							request: {
 								qs: {
@@ -93,6 +109,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Images',
 						value: 'google_images',
+						action: 'Search Google Images',
 						routing: {
 							request: {
 								qs: {
@@ -104,10 +121,23 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Jobs',
 						value: 'google_jobs',
+						action: 'Search Google Jobs',
 						routing: {
 							request: {
 								qs: {
 									engine: 'google_jobs',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Lens',
+						value: 'google_lens',
+						action: 'Search Google Lens',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_lens',
 								},
 							},
 						},
@@ -127,6 +157,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Local',
 						value: 'google_local',
+						action: 'Search Google Local',
 						routing: {
 							request: {
 								qs: {
@@ -138,6 +169,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Maps',
 						value: 'google_maps',
+						action: 'Search Google Maps',
 						routing: {
 							request: {
 								qs: {
@@ -149,6 +181,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google News',
 						value: 'google_news',
+						action: 'Search Google News',
 						routing: {
 							request: {
 								qs: {
@@ -160,6 +193,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Product',
 						value: 'google_product',
+						action: 'Search Google Product',
 						routing: {
 							request: {
 								qs: {
@@ -183,6 +217,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Search',
 						value: 'google',
+						action: 'Search Google',
 						routing: {
 							request: {
 								qs: {
@@ -194,6 +229,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Shopping',
 						value: 'google_shopping',
+						action: 'Search Google Shopping',
 						routing: {
 							request: {
 								qs: {
@@ -219,6 +255,7 @@ export class SerpApi implements INodeType {
 			},
 			...googleFlightsFields,
 			...googleJobsFields,
+			...googleLensFields,
 			...googleLightFields,
 			...googleLocalFields,
 			...googleMapsFields,
@@ -231,6 +268,7 @@ export class SerpApi implements INodeType {
 			...googleImagesFields,
 			...googleScholarFields,
 			...bingSearchFields,
+			...ebaySearchFields,
 		],
 	};
 }
