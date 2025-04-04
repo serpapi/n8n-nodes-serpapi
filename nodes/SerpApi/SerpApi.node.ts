@@ -12,6 +12,7 @@ import {
 	googleProductFields,
 	googleShoppingFields,
 	googleTrendsFields,
+	googleVideosFields,
 	googleAutocompleteFields,
 	googleImagesFields,
 	googleScholarFields,
@@ -263,6 +264,18 @@ export class SerpApi implements INodeType {
 							},
 						},
 					},
+					{
+						name: 'Google Videos',
+						value: 'google_videos',
+						action: 'Search Google Videos',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_videos',
+								},
+							},
+						},
+					},
 				],
 				default: 'google',
 			},
@@ -280,6 +293,7 @@ export class SerpApi implements INodeType {
 			...googleAutocompleteFields,
 			...googleImagesFields,
 			...googleScholarFields,
+			...googleVideosFields,
 			...bingImagesFields,
 			...bingSearchFields,
 			...ebaySearchFields,
