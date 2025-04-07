@@ -3,6 +3,7 @@ export * from './GoogleFlightsDescription';
 export * from './GoogleJobsDescription';
 export * from './GoogleLocalDescription';
 export * from './GoogleMapsDescription';
+export * from './GoogleMapsReviewsDescription';
 export * from './GoogleProductDescription';
 export * from './GoogleSearchDescription';
 export * from './GoogleShoppingDescription';
