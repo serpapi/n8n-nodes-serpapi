@@ -11,6 +11,7 @@ export * from './GoogleLightDescription';
 export * from './GoogleAutocompleteDescription';
 export * from './GoogleImagesDescription';
 export * from './GoogleScholarDescription';
+export * from './GoogleVideosDescription';
 export * from './BingSearchDescription';
 export * from './BingImagesDescription';
 export * from './GoogleNewsDescription';
