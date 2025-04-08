@@ -20,3 +20,4 @@ export * from './GoogleLensDescription';
 export * from './EbaySearchDescription';
 export * from './DuckDuckGoSearchDescription';
 export * from './GoogleMapsDirectionsDescription';
+export * from './BaiduSearchDescription';

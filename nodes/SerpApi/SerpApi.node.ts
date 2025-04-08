@@ -23,6 +23,7 @@ import {
 	ebaySearchFields,
 	duckDuckGoSearchFields,
 	googleMapsDirectionsFields,
+	baiduSearchFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -63,6 +64,18 @@ export class SerpApi implements INodeType {
 				type: 'options',
 				noDataExpression: true,
 				options: [
+					{
+						name: 'Baidu Search',
+						value: 'baidu',
+						action: 'Search Baidu',
+						routing: {
+							request: {
+								qs: {
+									engine: 'baidu',
+								},
+							},
+						},
+					},
 					{
 						name: 'Bing Images',
 						value: 'bing_images',
@@ -339,6 +352,7 @@ export class SerpApi implements INodeType {
 			...ebaySearchFields,
 			...duckDuckGoSearchFields,
 			...googleMapsDirectionsFields,
+			...baiduSearchFields,
 		],
 	};
 }
