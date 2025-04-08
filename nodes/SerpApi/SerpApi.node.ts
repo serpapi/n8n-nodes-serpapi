@@ -8,6 +8,7 @@ import {
 	googleLightFields,
 	googleLocalFields,
 	googleMapsFields,
+	googleMapsReviewsFields,
 	googleSearchFields,
 	googleProductFields,
 	googleShoppingFields,
@@ -193,6 +194,18 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Maps Reviews',
+						value: 'google_maps_reviews',
+						action: 'Search Google Maps Reviews',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_maps_reviews',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google News',
 						value: 'google_news',
 						action: 'Search Google News',
@@ -285,6 +298,7 @@ export class SerpApi implements INodeType {
 			...googleLightFields,
 			...googleLocalFields,
 			...googleMapsFields,
+			...googleMapsReviewsFields,
 			...googleNewsFields,
 			...googleSearchFields,
 			...googleProductFields,
