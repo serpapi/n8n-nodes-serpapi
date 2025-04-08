@@ -8,10 +8,12 @@ import {
 	googleLightFields,
 	googleLocalFields,
 	googleMapsFields,
+	googleMapsReviewsFields,
 	googleSearchFields,
 	googleProductFields,
 	googleShoppingFields,
 	googleTrendsFields,
+	googleVideosFields,
 	googleAutocompleteFields,
 	googleImagesFields,
 	googleScholarFields,
@@ -205,6 +207,18 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Maps Reviews',
+						value: 'google_maps_reviews',
+						action: 'Search Google Maps Reviews',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_maps_reviews',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google News',
 						value: 'google_news',
 						action: 'Search Google News',
@@ -276,6 +290,18 @@ export class SerpApi implements INodeType {
 							},
 						},
 					},
+					{
+						name: 'Google Videos',
+						value: 'google_videos',
+						action: 'Search Google Videos',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_videos',
+								},
+							},
+						},
+					},
 				],
 				default: 'google',
 			},
@@ -285,6 +311,7 @@ export class SerpApi implements INodeType {
 			...googleLightFields,
 			...googleLocalFields,
 			...googleMapsFields,
+			...googleMapsReviewsFields,
 			...googleNewsFields,
 			...googleSearchFields,
 			...googleProductFields,
@@ -293,6 +320,7 @@ export class SerpApi implements INodeType {
 			...googleAutocompleteFields,
 			...googleImagesFields,
 			...googleScholarFields,
+			...googleVideosFields,
 			...bingImagesFields,
 			...bingSearchFields,
 			...ebaySearchFields,
