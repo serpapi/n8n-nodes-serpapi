@@ -21,6 +21,7 @@ import {
 	bingImagesFields,
 	bingSearchFields,
 	ebaySearchFields,
+	duckDuckGoSearchFields,
 	googleMapsDirectionsFields,
 } from './descriptions';
 
@@ -82,6 +83,18 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'bing',
+								},
+							},
+						},
+					},
+					{
+						name: 'DuckDuckGo Search',
+						value: 'duckduckgo',
+						action: 'Search DuckDuckGo',
+						routing: {
+							request: {
+								qs: {
+									engine: 'duckduckgo',
 								},
 							},
 						},
@@ -324,6 +337,7 @@ export class SerpApi implements INodeType {
 			...bingImagesFields,
 			...bingSearchFields,
 			...ebaySearchFields,
+			...duckDuckGoSearchFields,
 			...googleMapsDirectionsFields,
 		],
 	};
