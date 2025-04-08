@@ -18,3 +18,4 @@ export * from './BingImagesDescription';
 export * from './GoogleNewsDescription';
 export * from './GoogleLensDescription';
 export * from './EbaySearchDescription';
+export * from './GoogleMapsDirectionsDescription';

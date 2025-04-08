@@ -21,6 +21,7 @@ import {
 	bingImagesFields,
 	bingSearchFields,
 	ebaySearchFields,
+	googleMapsDirectionsFields,
 } from './descriptions';
 
 export class SerpApi implements INodeType {
@@ -194,6 +195,18 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Maps Directions',
+						value: 'google_maps_directions',
+						action: 'Search Google Maps Directions',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_maps_directions',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Maps Reviews',
 						value: 'google_maps_reviews',
 						action: 'Search Google Maps Reviews',
@@ -311,6 +324,7 @@ export class SerpApi implements INodeType {
 			...bingImagesFields,
 			...bingSearchFields,
 			...ebaySearchFields,
+			...googleMapsDirectionsFields,
 		],
 	};
 }
