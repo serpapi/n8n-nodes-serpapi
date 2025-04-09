@@ -814,7 +814,7 @@ export const googleScholarFields: INodeProperties[] = [
 				displayName: 'as_sdt',
 				name: 'as_sdt',
 				description:
-					'Parameter can be used either as a search type or a filter.As a Filter (only works when searching articles): 0 - exclude patents (default) 7 - include patents. As a Search Type:4 - Select case law (US courts only). This will select all the State and Federal courts. e.g. as_sdt=4 - Selects case law (all courts). To select specific courts, see the full list of supported Google Scholar courts. e.g. as_sdt=4,33,192 - 4 is the required value and should always be in the first position, 33 selects all New York courts and 192 selects Tax Court. Values have to be separated by comma (,).',
+					'Parameter can be used either as a search type or a filter. As a Filter (only works when searching articles): 0 - exclude patents (default) 7 - include patents. As a Search Type:4 - Select case law (US courts only). This will select all the State and Federal courts. e.g. as_sdt=4 - Selects case law (all courts). To select specific courts, see the full list of supported Google Scholar courts. e.g. as_sdt=4,33,192 - 4 is the required value and should always be in the first position, 33 selects all New York courts and 192 selects Tax Court. Values have to be separated by comma (,).',
 				default: '0',
 				routing: {
 					request: {

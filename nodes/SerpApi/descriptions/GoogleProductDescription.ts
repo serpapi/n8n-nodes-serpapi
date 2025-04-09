@@ -39,7 +39,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: '`location` Location',
 				name: 'location',
 				description:
-					"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.JSON API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+					"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
 				default: '',
 				routing: {
 					request: {
@@ -385,7 +385,7 @@ export const googleProductFields: INodeProperties[] = [
 						value: 'google.hu',
 					},
 					{
-						name: 'google.co.ID',
+						name: 'google.co.id',
 						value: 'google.co.id',
 					},
 					{
@@ -2464,7 +2464,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: '`start` Result Offset',
 				name: 'start',
 				description:
-					"Parameter defines the result offset when offers is enabled. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.) This parameter works only for Online Sellers.This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filterinstead to paginate through reviews.",
+					"Parameter defines the result offset when offers is enabled. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.) This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filterinstead to paginate through reviews.",
 				default: '',
 				routing: {
 					request: {
@@ -2479,7 +2479,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: '`page` Start From Page',
 				name: 'page',
 				description:
-					'Parameter defines the page number for Google Online Sellers. There are 10 results per page. This parameter is equivalent to start (offset) = page * 10.This parameter works only for Online Sellers.This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filterinstead to paginate through reviews.',
+					'Parameter defines the page number for Google Online Sellers. There are 10 results per page. This parameter is equivalent to start (offset) = page * 10. This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filterinstead to paginate through reviews.',
 				default: '',
 				routing: {
 					request: {
@@ -2494,7 +2494,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: '`offers` Offers Results',
 				name: 'offers',
 				description:
-					'Whether to fetch offers results. Replaces former sellers=online results.The offers parameter cannot be used with offer_id parameter.',
+					'Whether to fetch offers results. Replaces former sellers=online results. The offers parameter cannot be used with offer_id parameter.',
 				default: false,
 				routing: {
 					request: {
@@ -2539,7 +2539,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: '`filter` Advanced Filter Parameter',
 				name: 'filter',
 				description:
-					'Parameter defines filters, sorting, and pagination for reviews and offers results.Offers filters:freeship:1 Show only products with free shippingucond:1 Show only used productsscoring:p Sort by base pricescoring:tp Sort by total pricescoring:cpd Sort by current promotion deals (special offers)scoring:mrd Sort by sellers ratingReviews filters:rnum:{number} Number of results (100 is max). rpt:{encoded value} Encoded pagination offset. You can get the value of rpt needed for the next page from the serpapi_pagination.next or serpapi_pagination.next_page_filter key in the JSON response to any Google Product API search with reviews enabled. It is recommended to use all filters provided in serpapi_pagination.next or serpapi_pagination.next_page_filter when paginating.Pagination examples: Online Sellers Pagination, Product Reviews Pagination.',
+					'Parameter defines filters, sorting, and pagination for reviews and offers results. Offers filters:freeship:1 Show only products with free shippingucond:1 Show only used productsscoring:p Sort by base pricescoring:tp Sort by total pricescoring:cpd Sort by current promotion deals (special offers)scoring:mrd Sort by sellers ratingReviews filters:rnum:{number} Number of results (100 is max). rpt:{encoded value} Encoded pagination offset. You can get the value of rpt needed for the next page from the serpapi_pagination.next or serpapi_pagination.next_page_filter key in the JSON response to any Google Product API search with reviews enabled. It is recommended to use all filters provided in serpapi_pagination.next or serpapi_pagination.next_page_filter when paginating. Pagination examples: Online Sellers Pagination, Product Reviews Pagination.',
 				default: '',
 				routing: {
 					request: {

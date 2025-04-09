@@ -69,7 +69,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: '`ll` GPS Coordinates',
 				name: 'll',
 				description:
-					'Parameter defines the GPS coordinates of the location where you want the search to originate from. Its value must match the following format:@ + latitude + , + longitude + , + zoomThis will form a string that looks like this:e.g. @40.7455096,-74.0083012,14z. The zoom attribute ranges from 3z, map completely zoomed out - to 21z, map completely zoomed in.The parameter should only be used when type is set to search.Parameter is required when using pagination.Results are not guaranteed to be within the requested geographic location.',
+					'Parameter defines the GPS coordinates of the location where you want the search to originate from. Its value must match the following format:@ + latitude + , + longitude + , + zoomThis will form a string that looks like this:e.g. @40.7455096,-74.0083012,14z. The zoom attribute ranges from 3z, map completely zoomed out - to 21z, map completely zoomed in. The parameter should only be used when type is set to search. Parameter is required when using pagination. Results are not guaranteed to be within the requested geographic location.',
 				default: '',
 				routing: {
 					request: {
@@ -400,7 +400,7 @@ export const googleMapsFields: INodeProperties[] = [
 						value: 'google.hu',
 					},
 					{
-						name: 'google.co.ID',
+						name: 'google.co.id',
 						value: 'google.co.id',
 					},
 					{
@@ -1182,7 +1182,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: '`gl` Country',
 				name: 'gl',
 				description:
-					"Parameter defines the country to use for the Google Maps search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google countries.Parameter only affects Place Results API.",
+					"Parameter defines the country to use for the Google Maps search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google countries. Parameter only affects Place Results API.",
 				default: 'us',
 				routing: {
 					request: {
@@ -2190,7 +2190,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: '`place_id` Place ID',
 				name: 'place_id',
 				description:
-					'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using our Google Maps API.You can read more about Place IDs here.place_id can be used without any other optional parameter.',
+					'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using our Google Maps API. You can read more about Place IDs here.place_id can be used without any other optional parameter.',
 				default: '',
 				routing: {
 					request: {

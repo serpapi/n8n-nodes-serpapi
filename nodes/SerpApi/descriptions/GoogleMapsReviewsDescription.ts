@@ -26,7 +26,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		displayName: '`place_id` Place ID',
 		name: 'place_id',
 		description:
-			'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using our Google Maps API. You can read more about Place IDs here.Either data_id or place_id should be set.',
+			'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using our Google Maps API. You can read more about Place IDs here. Either data_id or place_id should be set.',
 		default: '',
 		routing: {
 			request: {

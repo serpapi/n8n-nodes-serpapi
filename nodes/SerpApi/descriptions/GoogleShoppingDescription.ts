@@ -27,7 +27,7 @@ export const googleShoppingFields: INodeProperties[] = [
 		displayName: '`location` Location',
 		name: 'location',
 		description:
-			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.JSON API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
 		default: '',
 		routing: {
 			request: {
@@ -390,7 +390,7 @@ export const googleShoppingFields: INodeProperties[] = [
 						value: 'google.hu',
 					},
 					{
-						name: 'google.co.ID',
+						name: 'google.co.id',
 						value: 'google.co.id',
 					},
 					{
@@ -2649,7 +2649,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: '`shoprs` Search Filter ID',
 				name: 'shoprs',
 				description:
-					'The parameter defines the helper ID for setting search filters. For search filters to be properly applied, the parameter must be used in combination with the updated q parameter, which now contains the name of the filter applied next to your original query.Example:- Original query: Coffee- Query after applying filter "Sugar Free": sugar free CoffeeTo apply filters to your search, follow serpapi_link, which you can find in your JSON output at filters[index].options[index].serpapi_link.To apply multiple filters, you have to follow serpapi_link for each filter individualy. Each consecutive request will contain filters that have been previously applied next to the newly added one. To remove a filter, follow its corresponding serpapi_link.',
+					'The parameter defines the helper ID for setting search filters. For search filters to be properly applied, the parameter must be used in combination with the updated q parameter, which now contains the name of the filter applied next to your original query. Example:- Original query: Coffee- Query after applying filter "Sugar Free": sugar free CoffeeTo apply filters to your search, follow serpapi_link, which you can find in your JSON output at filters[index].options[index].serpapi_link. To apply multiple filters, you have to follow serpapi_link for each filter individualy. Each consecutive request will contain filters that have been previously applied next to the newly added one. To remove a filter, follow its corresponding serpapi_link.',
 				default: '',
 				routing: {
 					request: {
@@ -2664,7 +2664,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: '`direct_link` Include Direct Link',
 				name: 'direct_link',
 				description:
-					'Whether the search results should include direct link of each products. By default it is false, if you need direct link, set it to true.This parameter only applies to the new layout (US and few other countries). Most countries have not yet switched to the new layout, so the link will be present without needing this parameter.When using this parameter, it is expected the search will take longer than a normal search request.',
+					'Whether the search results should include direct link of each products. By default it is false, if you need direct link, set it to true. This parameter only applies to the new layout (US and few other countries). Most countries have not yet switched to the new layout, so the link will be present without needing this parameter. When using this parameter, it is expected the search will take longer than a normal search request.',
 				default: false,
 				routing: {
 					request: {
@@ -2694,7 +2694,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: '`num` Number of Results',
 				name: 'num',
 				description:
-					'Parameter defines the maximum number of results to return. (e.g., 60 (default) returns 60 results, 40 returns 40 results, and 100 (maximum) returns 100 results). Any number greater than maximum number (100) will default to 100. Any number lesser than minimum number (1) will default to 60.For the new layout, the parameter is no longer supported.',
+					'Parameter defines the maximum number of results to return. (e.g., 60 (default) returns 60 results, 40 returns 40 results, and 100 (maximum) returns 100 results). Any number greater than maximum number (100) will default to 100. Any number lesser than minimum number (1) will default to 60. For the new layout, the parameter is no longer supported.',
 				default: '',
 				routing: {
 					request: {

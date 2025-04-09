@@ -1856,7 +1856,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				displayName: '`route` Route options',
 				name: 'route',
 				description:
-					'Parameter defines route options.Available options: Fewer transfers - 2, Less walking - 3, Wheelchair accessible - 4. Parameter works only if travel_mode parameter is set to: 3 (Transit).',
+					'Parameter defines route options. Available options: Fewer transfers - 2, Less walking - 3, Wheelchair accessible - 4. Parameter works only if travel_mode parameter is set to: 3 (Transit).',
 				default: '2',
 				routing: {
 					request: {

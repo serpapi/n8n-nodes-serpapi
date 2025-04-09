@@ -39,7 +39,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`location` Location',
 				name: 'location',
 				description:
-					"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.JSON API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+					"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
 				default: '',
 				routing: {
 					request: {
@@ -2644,7 +2644,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`period_unit` Time Period Unit',
 				name: 'period_unit',
 				description:
-					"Parameter defines the time period unit to search for the recent images, e.g. from past minute, hour, day etc. Options: s - Secondn - Minuteh - Hourd - Dayw - Weekm - Monthy - Year. This parameter can't be used with start_date/end_date parameters.This parameter overrides qdr component of tbs parameter.",
+					"Parameter defines the time period unit to search for the recent images, e.g. from past minute, hour, day etc. Options: s - Second, n - Minute, h - Hour, d - Day, w - Week, m - Month, y - Year. This parameter can't be used with start_date/end_date parameters. This parameter overrides qdr component of tbs parameter.",
 				default: 'y',
 				routing: {
 					request: {
@@ -2689,7 +2689,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`period_value` Time Period Value',
 				name: 'period_value',
 				description:
-					'Parameter defines an optional time period value that can be used with period_unit to describe time periods like 15 seconds, 42 hours, 178 days etc.Default value: 1Value range: 1..2147483647',
+					'Parameter defines an optional time period value that can be used with period_unit to describe time periods like 15 seconds, 42 hours, 178 days etc. Default value: 1. Value range: 1..2147483647.',
 				default: '',
 				routing: {
 					request: {
@@ -2704,7 +2704,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`start_date` Start Date',
 				name: 'start_date',
 				description:
-					"Parameter defines the start date of time period you want to limit the image search to. Format: YYYYMMDD Example: 20241201 - This parameter can't be used with period_unit/period_value parameters.start_date with blank end_date produces date range FROM start_date TO today.This parameter overrides cdr and cd_min components of tbs parameter.",
+					"Parameter defines the start date of time period you want to limit the image search to. Format: YYYYMMDD Example: 20241201 - This parameter can't be used with period_unit/period_value parameters.start_date with blank end_date produces date range FROM start_date TO today. This parameter overrides cdr and cd_min components of tbs parameter.",
 				default: '',
 				routing: {
 					request: {
@@ -2719,7 +2719,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`end_date` End Date',
 				name: 'end_date',
 				description:
-					"Parameter defines the end date of time period you want to limit the image search to. Format: YYYYMMDD Example: 20241231 - This parameter can't be used with period_unit/period_value parameters.end_date with blank start_date produces date range BEFORE end_date.This parameter overrides cdr and cd_max components of tbs parameter.",
+					"Parameter defines the end date of time period you want to limit the image search to. Format: YYYYMMDD Example: 20241231 - This parameter can't be used with period_unit/period_value parameters.end_date with blank start_date produces date range BEFORE end_date. This parameter overrides cdr and cd_max components of tbs parameter.",
 				default: '',
 				routing: {
 					request: {
@@ -2764,7 +2764,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`imgar` Aspect Ratio Filtering',
 				name: 'imgar',
 				description:
-					'Parameter defines the set aspect ratio of images.Options: s - Squaret - Tallw - Widexw - Panoramic',
+					'Parameter defines the set aspect ratio of images. Options: s - Square, t - Tall, w - Widex, w - Panoramic.',
 				default: 's',
 				routing: {
 					request: {
@@ -2797,7 +2797,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`imgsz` Image Size Filtering',
 				name: 'imgsz',
 				description:
-					'Parameter defines the size of images.Options: l - Largem - Mediumi - Iconqsvga - Larger than 400×300vga - Larger than 640×480svga - Larger than 800×600xga - Larger than 1024×7682mp - Larger than 2 MP4mp - Larger than 4 MP6mp - Larger than 6 MP8mp - Larger than 8 MP10mp - Larger than 10 MP12mp - Larger than 12 MP15mp - Larger than 15 MP20mp - Larger than 20 MP40mp - Larger than 40 MP70mp - Larger than 70 MP',
+					'Parameter defines the size of images. Options: l - Large, m - Medium, i - Icon, qsvga - Larger than 400x300, vga - Larger than 640x480, svga - Larger than 800x600, xga - Larger than 1024x768, 2mp - Larger than 2 MP, 4mp - Larger than 4 MP, 6mp - Larger than 6 MP, 8mp - Larger than 8 MP, 10mp - Larger than 10 MP, 12mp - Larger than 12 MP, 15mp - Larger than 15 MP, 20mp - Larger than 20 MP, 40mp - Larger than 40 MP, 70mp - Larger than 70 MP.',
 				default: 'l',
 				routing: {
 					request: {
@@ -2882,7 +2882,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`image_color` Image Color Filtering',
 				name: 'image_color',
 				description:
-					'Parameter defines the color of images.Options: bw - Black and whitetrans - Transparentred - Redorange - Orangeyellow - Yellowgreen - Greenteal - Tealblue - Bluepurple - Purplepink - Pinkwhite - Whitegray - Grayblack - Blackbrown - BrownThis parameter overrides ic and isc components of tbs parameter',
+					'Parameter defines the color of images. Options: bw - Black and white, trans - Transparent, red - Red, orange - Orange, yellow - Yellow, green - Green, teal - Teal, blue - Blue, purple - Purple, pink - Pink, white - White, gray - Gray, black - Black, brown - Brown. This parameter overrides ic and isc components of tbs parameter',
 				default: 'bw',
 				routing: {
 					request: {
@@ -2955,7 +2955,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: '`image_type` Image Type Filtering',
 				name: 'image_type',
 				description:
-					'Parameter defines the type of images.Options: face - Facephoto - Photoclipart - Clip artlineart - Line drawinganimated - AnimatedThis parameter overrides itp component of tbs parameter',
+					'Parameter defines the type of images. Options: face - Face, photo - Photo, clipart - Clip art, lineart - Line drawing, animated - Animated. This parameter overrides itp component of tbs parameter',
 				default: 'photo',
 				routing: {
 					request: {

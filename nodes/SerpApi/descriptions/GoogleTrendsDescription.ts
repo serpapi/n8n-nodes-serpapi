@@ -6,7 +6,7 @@ export const googleTrendsFields: INodeProperties[] = [
 		displayName: '`q` Search Query',
 		name: 'q',
 		description:
-			'Parameter defines the query or queries you want to search. You can use anything that you would use in a regular Google Trends search. The maximum number of queries per search is 5 (this only applies to "Interest over time" and "Compared breakdown by region" data_type, other types of data will only accept 1 query per search).When passing multiple queries you need to use a comma (,) to separate them (e.g. coffee,pizza,dark chocolate,/m/027lnzs,bread).Query can be a "Search term" (e.g. World Cup, Eminem, iPhone, etc.) or a "Topic" (e.g. /m/0663v, /m/027lnzs, /g/11mw8j71m4, etc.). Queries that are "Topics" are encoded. To retrieve these values you can use our Google Trends Autocomplete API.Maximum length for each query is 100 characters.',
+			'Parameter defines the query or queries you want to search. You can use anything that you would use in a regular Google Trends search. The maximum number of queries per search is 5 (this only applies to "Interest over time" and "Compared breakdown by region" data_type, other types of data will only accept 1 query per search).When passing multiple queries you need to use a comma (,) to separate them (e.g. coffee,pizza,dark chocolate,/m/027lnzs,bread).Query can be a "Search term" (e.g. World Cup, Eminem, iPhone, etc.) or a "Topic" (e.g. /m/0663v, /m/027lnzs, /g/11mw8j71m4, etc.). Queries that are "Topics" are encoded. To retrieve these values you can use our Google Trends Autocomplete API. Maximum length for each query is 100 characters.',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -15059,7 +15059,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				displayName: '`data_type` Data type',
 				name: 'data_type',
 				description:
-					'Parameter defines the type of search you want to do. Available options:TIMESERIES - Interest over time (default) - Accepts both single and multiple queries per search.GEO_MAP - Compared breakdown by region - Accepts only multiple queries per search.GEO_MAP_0 - Interest by region - Accepts only single query per search.RELATED_TOPICS - Related topics - Accepts only single query per search.RELATED_QUERIES - Related queries - Accepts only single query per search.',
+					'Parameter defines the type of search you want to do. Available options: TIMESERIES - Interest over time (default) - Accepts both single and multiple queries per search. GEO_MAP - Compared breakdown by region - Accepts only multiple queries per search. GEO_MAP_0 - Interest by region - Accepts only single query per search. RELATED_TOPICS - Related topics - Accepts only single query per search. RELATED_QUERIES - Related queries - Accepts only single query per search.',
 				default: 'TIMESERIES',
 				routing: {
 					request: {
@@ -15096,7 +15096,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				displayName: '`tz` Time Zone',
 				name: 'tz',
 				description:
-					'Parameter is used to define a time zone offset. The default value is set to 420 (Pacific Day Time(PDT): -07:00). Value is shown in minutes and can span from -1439 to 1439.tz can be calculated using the time difference between UTC +0 and desired timezone.Examples:420 - PDT600 - Pacific/Tahiti-540 - Asia/Tokyo-480 - Canada/Pacific.To make sure the value is correct, please refer to the time zone database and your programming language UTC offset calculation. You may visit the documentation to get more information.',
+					'Parameter is used to define a time zone offset. The default value is set to 420 (Pacific Day Time(PDT): -07:00). Value is shown in minutes and can span from -1439 to 1439.tz can be calculated using the time difference between UTC +0 and desired timezone. Examples:420 - PDT600 - Pacific/Tahiti-540 - Asia/Tokyo-480 - Canada/Pacific. To make sure the value is correct, please refer to the time zone database and your programming language UTC offset calculation. You may visit the documentation to get more information.',
 				default: 0,
 				routing: {
 					request: {

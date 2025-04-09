@@ -1721,7 +1721,7 @@ export const googleNewsFields: INodeProperties[] = [
 				displayName: '`story_token` Story token',
 				name: 'story_token',
 				description:
-					"Parameter defines the Google News story token. It is used for accessing the news results with full coverage of a specific story.The token can be found in our JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /stories/)Parameter can't be used together with q, topic_token, and publication_token parameters.",
+					"Parameter defines the Google News story token. It is used for accessing the news results with full coverage of a specific story. The token can be found in our JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /stories/)Parameter can't be used together with q, topic_token, and publication_token parameters.",
 				default: '',
 				routing: {
 					request: {

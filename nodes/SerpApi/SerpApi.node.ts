@@ -1,4 +1,3 @@
-/* eslint-disable n8n-nodes-base/node-param-resource-with-plural-option */
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
 import {

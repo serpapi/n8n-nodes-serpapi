@@ -1076,7 +1076,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: '`buying_format` Buying Format',
 				name: 'buying_format',
 				description:
-					'Parameter defines the buying format you can apply to the results.Available options (case-sensitive):Auction - AuctionBIN - Buy It NowBO - Accepts Offers',
+					'Parameter defines the buying format you can apply to the results. Available options (case-sensitive): Auction, Buy It Now, Accepts Offers.',
 				default: 'Auction',
 				routing: {
 					request: {

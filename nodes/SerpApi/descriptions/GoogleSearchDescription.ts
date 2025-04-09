@@ -27,7 +27,7 @@ export const googleSearchFields: INodeProperties[] = [
 		displayName: '`location` Location',
 		name: 'location',
 		description:
-			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.JSON API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
 		default: '',
 		routing: {
 			request: {
@@ -480,7 +480,7 @@ export const googleSearchFields: INodeProperties[] = [
 						value: 'google.hu',
 					},
 					{
-						name: 'google.co.ID',
+						name: 'google.co.id',
 						value: 'google.co.id',
 					},
 					{
@@ -2824,7 +2824,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: '`tbm` Search Type',
 				name: 'tbm',
 				description:
-					'(to be matched) parameter defines the type of search you want to do.It can be set to:(no tbm parameter): regular Google Search,isch: Google Images API,lcl - Google Local APIvid: Google Videos API,nws: Google News API,shop: Google Shopping API,pts: Google Patents API,or any other Google service',
+					'(to be matched) parameter defines the type of search you want to do. It can be set to: (no tbm parameter) - regular Google Search, isch - Google Images API, lcl - Google Local API, vid - Google Videos API, nws - Google News API, shop - Google Shopping API, pts - Google Patents API, or any other Google service.',
 				default: 'isch',
 				routing: {
 					request: {
@@ -2880,7 +2880,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: '`num` Number of Results',
 				name: 'num',
 				description:
-					'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).The use of num may introduce latency, and/or prevent the inclusion of specialized result types. It is better to omit this parameter unless it is strictly necessary to increase the number of results per page.Results are not guaranteed to have the number of results specified in num.',
+					'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).The use of num may introduce latency, and/or prevent the inclusion of specialized result types. It is better to omit this parameter unless it is strictly necessary to increase the number of results per page. Results are not guaranteed to have the number of results specified in num.',
 				default: '',
 				routing: {
 					request: {
