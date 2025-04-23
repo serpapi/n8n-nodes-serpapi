@@ -25,6 +25,9 @@ import {
 	baiduSearchFields,
 } from './descriptions';
 
+const inputs = [NodeConnectionType.Main];
+const outputs = [NodeConnectionType.Main];
+
 export class SerpApi implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
@@ -39,8 +42,8 @@ export class SerpApi implements INodeType {
 			name: 'SerpApi',
 		},
 		usableAsTool: true,
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs,
+		outputs,
 		credentials: [
 			{
 				name: 'SerpApi',

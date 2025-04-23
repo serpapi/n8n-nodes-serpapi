@@ -53,7 +53,6 @@ module.exports = {
 				'n8n-nodes-base/node-param-collection-type-unsorted-items': 'off',
 				'n8n-nodes-base/node-param-display-name-miscased': 'off',
 				'n8n-nodes-base/node-param-description-miscased-id': 'off',
-				'n8n-nodes-base/node-class-description-inputs-wrong-regular-node': 'off',
 				'n8n-nodes-base/node-class-description-outputs-wrong': 'off',
 				'n8n-nodes-base/node-param-resource-with-plural-option': 'off',
 				'n8n-nodes-base/node-param-description-miscased-json': 'off',
