@@ -2,41 +2,51 @@
 
 # n8n-nodes-serpapi
 
-This repo contains SerpApi's node for n8n.
+This repo contains SerpApi's community node for n8n.
 
-## Prerequisites
+## Installation
 
-You need the following installed on your development machine:
+Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
 
-* [git](https://git-scm.com/downloads)
-* Node.js and npm. Minimum version Node 18. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
-* Install n8n with:
-  ```
-  npm install n8n -g
-  ```
-* Recommended: follow n8n's guide to [set up your development environment](https://docs.n8n.io/integrations/creating-nodes/build/node-development-environment/).
+## Credentials
 
-## Local setup
+You must have a SerpApi API key to use this node. You can register for a free account to get an API key here:
 
-These are the basic steps for working with this node locally. For detailed guidance on creating and publishing nodes, refer to the [documentation](https://docs.n8n.io/integrations/creating-nodes/).
+https://serpapi.com/users/sign_up
 
-1. Clone the repo:
-   ```
-   git clone git@github.com:alexbarron/n8n-nodes-serpapi.git
-   ```
-2. Switch to the node's directory.
-   ```
-   cd n8n-nodes-serpapi/nodes/SerpApi
-   ```
-3. Run `npm i` to install dependencies.
-4. Run `npm run build` to build the node.
-5. Run `npm link`.
-6. Navigate to the custom nodes n8n direcotry with `cd ~/.n8n/custom` or create a `custom` directory in your `.n8n` directory. Then `cd` to it.
-7. Run `npm init`.
-8. Run `npm link n8n-nodes-serpapi`
-9. Run `n8n` to start the n8n server.
-10. Create a workflow and search for the SerpApi node.
+Once registered, you can find your API key here:
 
+https://serpapi.com/manage-api-key
+
+Then you'll need to create a credential in n8n for SerpApi.
+
+![Add Credentials](images/add-credentials.png)
+
+## Usage
+
+Add SerpApi to a workflow.
+
+![Add SerpApi to Workflow](images/workflow.png)
+
+Configure a basic query and hit "Test step" to try a search.
+
+![Test a Google Search through SerpApi](images/test-google-search.png)
+
+## API Resources / Search Engines
+
+This node currently only supports the most popular SerpApi APIs. If there's an API missing that you would like to use, please let us know at contact@serpapi.com
+
+In the meantime, you can also use the [generic HTTP Request node](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.httprequest/) to construct your search.
+
+## Related Resources
+
+SerpApi's complete API documentation is available here:
+
+https://serpapi.com/search-api
+
+You can also find n8n related tutorials on our blog here:
+
+https://serpapi.com/blog/tag/n8n/
 
 ## License
 
