@@ -328,7 +328,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 				displayName: '`safe` Adult Content Filtering',
 				name: 'safe',
 				description:
-					'Parameter defines the level of filtering for adult content. It can be set to 1 (Strict), -1 (Moderate - default), or -2 (Off).',
+					'Parameter defines the level of filtering for adult content.',
 				default: '-1',
 				routing: {
 					request: {
