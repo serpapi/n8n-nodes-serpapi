@@ -428,16 +428,16 @@ const CountryOptions = [
 		value: 'it',
 	},
 	{
-		name: 'Jersey - je',
-		value: 'je',
-	},
-	{
 		name: 'Jamaica - jm',
 		value: 'jm',
 	},
 	{
 		name: 'Japan - jp',
 		value: 'jp',
+	},
+	{
+		name: 'Jersey - je',
+		value: 'je',
 	},
 	{
 		name: 'Jordan - jo',
@@ -912,12 +912,12 @@ const CountryOptions = [
 		value: 'ae',
 	},
 	{
-		name: 'United Kingdom - uk',
-		value: 'uk',
-	},
-	{
 		name: 'United Kingdom - gb',
 		value: 'gb',
+	},
+	{
+		name: 'United Kingdom - uk',
+		value: 'uk',
 	},
 	{
 		name: 'United States - us',

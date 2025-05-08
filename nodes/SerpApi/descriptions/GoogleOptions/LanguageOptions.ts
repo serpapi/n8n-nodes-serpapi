@@ -12,10 +12,6 @@ const LanguageOptions = [
 		value: 'sq',
 	},
 	{
-		name: 'Samoa - ws',
-		value: 'ws',
-	},
-	{
 		name: 'Amharic - am',
 		value: 'am',
 	},
@@ -48,6 +44,10 @@ const LanguageOptions = [
 		value: 'bn',
 	},
 	{
+		name: 'Bhutanese - bt',
+		value: 'bt',
+	},
+	{
 		name: 'Bihari - bh',
 		value: 'bh',
 	},
@@ -66,10 +66,6 @@ const LanguageOptions = [
 	{
 		name: 'Bulgarian - bg',
 		value: 'bg',
-	},
-	{
-		name: 'Bhutanese - bt',
-		value: 'bt',
 	},
 	{
 		name: 'Cambodian - km',
@@ -204,12 +200,12 @@ const LanguageOptions = [
 		value: 'haw',
 	},
 	{
-		name: 'Hebrew - iw',
-		value: 'iw',
-	},
-	{
 		name: 'Hebrew - he',
 		value: 'he',
+	},
+	{
+		name: 'Hebrew - iw',
+		value: 'iw',
 	},
 	{
 		name: 'Hindi - hi',
@@ -344,12 +340,12 @@ const LanguageOptions = [
 		value: 'ml',
 	},
 	{
-		name: 'Maltese - mt',
-		value: 'mt',
-	},
-	{
 		name: 'Maldives - mv',
 		value: 'mv',
+	},
+	{
+		name: 'Maltese - mt',
+		value: 'mt',
 	},
 	{
 		name: 'Maori - mi',
@@ -462,6 +458,10 @@ const LanguageOptions = [
 	{
 		name: 'Russian - ru',
 		value: 'ru',
+	},
+	{
+		name: 'Samoa - ws',
+		value: 'ws',
 	},
 	{
 		name: 'Scots Gaelic - gd',
