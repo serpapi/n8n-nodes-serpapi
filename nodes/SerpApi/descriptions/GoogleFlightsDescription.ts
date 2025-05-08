@@ -175,290 +175,77 @@ export const googleFlightsFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Albanian Lek - ALL',
-						value: 'ALL',
-					},
-					{
-						name: 'Algerian Dinar - DZD',
-						value: 'DZD',
-					},
-					{
-						name: 'Argentine Peso - ARS',
-						value: 'ARS',
-					},
-					{
-						name: 'Armenian Dram - AMD',
-						value: 'AMD',
-					},
-					{
-						name: 'Aruban Florin - AWG',
-						value: 'AWG',
-					},
-					{
-						name: 'Australian Dollar - AUD',
-						value: 'AUD',
-					},
-					{
-						name: 'Azerbaijani Manat - AZN',
-						value: 'AZN',
-					},
-					{
-						name: 'Bahamian Dollar - BSD',
-						value: 'BSD',
-					},
-					{
-						name: 'Bahraini Dinar - BHD',
-						value: 'BHD',
-					},
-					{
-						name: 'Belarusian Ruble - BYN',
-						value: 'BYN',
-					},
-					{
-						name: 'Bermudan Dollar - BMD',
-						value: 'BMD',
-					},
-					{
-						name: 'Bosnia-Herzegovina Convertible Mark - BAM',
-						value: 'BAM',
-					},
-					{
-						name: 'Brazilian Real - BRL',
-						value: 'BRL',
-					},
-					{
-						name: 'British Pound - GBP',
-						value: 'GBP',
-					},
-					{
-						name: 'Bulgarian Lev - BGN',
-						value: 'BGN',
-					},
-					{
-						name: 'CFP Franc - XPF',
-						value: 'XPF',
-					},
-					{
-						name: 'Canadian Dollar - CAD',
-						value: 'CAD',
-					},
-					{
-						name: 'Chilean Peso - CLP',
-						value: 'CLP',
-					},
-					{
-						name: 'Chinese Yuan - CNY',
-						value: 'CNY',
-					},
-					{
-						name: 'Colombian Peso - COP',
-						value: 'COP',
-					},
-					{
-						name: 'Costa Rican Colón - CRC',
-						value: 'CRC',
-					},
-					{
-						name: 'Cuban Peso - CUP',
-						value: 'CUP',
-					},
-					{
-						name: 'Czech Koruna - CZK',
-						value: 'CZK',
-					},
-					{
-						name: 'Danish Krone - DKK',
-						value: 'DKK',
-					},
-					{
-						name: 'Dominican Peso - DOP',
-						value: 'DOP',
-					},
-					{
-						name: 'Egyptian Pound - EGP',
-						value: 'EGP',
-					},
-					{
-						name: 'Euro - EUR',
-						value: 'EUR',
-					},
-					{
-						name: 'Georgian Lari - GEL',
-						value: 'GEL',
-					},
-					{
-						name: 'Hong Kong Dollar - HKD',
-						value: 'HKD',
-					},
-					{
-						name: 'Hungarian Forint - HUF',
-						value: 'HUF',
-					},
-					{
-						name: 'Icelandic Króna - ISK',
-						value: 'ISK',
-					},
-					{
-						name: 'Indian Rupee - INR',
-						value: 'INR',
-					},
-					{
-						name: 'Indonesian Rupiah - IDR',
-						value: 'IDR',
-					},
-					{
-						name: 'Iranian Rial - IRR',
-						value: 'IRR',
-					},
-					{
-						name: 'Israeli New Shekel - ILS',
-						value: 'ILS',
-					},
-					{
-						name: 'Jamaican Dollar - JMD',
-						value: 'JMD',
-					},
-					{
-						name: 'Japanese Yen - JPY',
-						value: 'JPY',
-					},
-					{
-						name: 'Jordanian Dinar - JOD',
-						value: 'JOD',
-					},
-					{
-						name: 'Kazakhstani Tenge - KZT',
-						value: 'KZT',
-					},
-					{
-						name: 'Kuwaiti Dinar - KWD',
-						value: 'KWD',
-					},
-					{
-						name: 'Lebanese Pound - LBP',
-						value: 'LBP',
-					},
-					{
-						name: 'Macedonian Denar - MKD',
-						value: 'MKD',
-					},
-					{
-						name: 'Malaysian Ringgit - MYR',
-						value: 'MYR',
-					},
-					{
-						name: 'Mexican Peso - MXN',
-						value: 'MXN',
-					},
-					{
-						name: 'Moldovan Leu - MDL',
-						value: 'MDL',
-					},
-					{
-						name: 'Moroccan Dirham - MAD',
-						value: 'MAD',
-					},
-					{
-						name: 'New Taiwan Dollar - TWD',
-						value: 'TWD',
-					},
-					{
-						name: 'New Zealand Dollar - NZD',
-						value: 'NZD',
-					},
-					{
-						name: 'Norwegian Krone - NOK',
-						value: 'NOK',
-					},
-					{
-						name: 'Omani Rial - OMR',
-						value: 'OMR',
-					},
-					{
-						name: 'Pakistani Rupee - PKR',
-						value: 'PKR',
-					},
-					{
-						name: 'Panamanian Balboa - PAB',
-						value: 'PAB',
-					},
-					{
-						name: 'Peruvian Sol - PEN',
-						value: 'PEN',
-					},
-					{
-						name: 'Philippine Peso - PHP',
-						value: 'PHP',
-					},
-					{
-						name: 'Polish Zloty - PLN',
-						value: 'PLN',
-					},
-					{
-						name: 'Qatari Riyal - QAR',
-						value: 'QAR',
-					},
-					{
-						name: 'Romanian Leu - RON',
-						value: 'RON',
-					},
-					{
-						name: 'Russian Ruble - RUB',
-						value: 'RUB',
-					},
-					{
-						name: 'Saudi Riyal - SAR',
-						value: 'SAR',
-					},
-					{
-						name: 'Serbian Dinar - RSD',
-						value: 'RSD',
-					},
-					{
-						name: 'Singapore Dollar - SGD',
-						value: 'SGD',
-					},
-					{
-						name: 'South African Rand - ZAR',
-						value: 'ZAR',
-					},
-					{
-						name: 'South Korean Won - KRW',
-						value: 'KRW',
-					},
-					{
-						name: 'Swedish Krona - SEK',
-						value: 'SEK',
-					},
-					{
-						name: 'Swiss Franc - CHF',
-						value: 'CHF',
-					},
-					{
-						name: 'Thai Baht - THB',
-						value: 'THB',
-					},
-					{
-						name: 'Turkish Lira - TRY',
-						value: 'TRY',
-					},
-					{
-						name: 'US Dollar - USD',
-						value: 'USD',
-					},
-					{
-						name: 'Ukrainian Hryvnia - UAH',
-						value: 'UAH',
-					},
-					{
-						name: 'United Arab Emirates Dirham - AED',
-						value: 'AED',
-					},
-					{
-						name: 'Vietnamese Dong - VND',
-						value: 'VND',
-					},
+					{ name: 'Albanian Lek - ALL', value: 'ALL' },
+					{ name: 'Algerian Dinar - DZD', value: 'DZD' },
+					{ name: 'Argentine Peso - ARS', value: 'ARS' },
+					{ name: 'Armenian Dram - AMD', value: 'AMD' },
+					{ name: 'Aruban Florin - AWG', value: 'AWG' },
+					{ name: 'Australian Dollar - AUD', value: 'AUD' },
+					{ name: 'Azerbaijani Manat - AZN', value: 'AZN' },
+					{ name: 'Bahamian Dollar - BSD', value: 'BSD' },
+					{ name: 'Bahraini Dinar - BHD', value: 'BHD' },
+					{ name: 'Belarusian Ruble - BYN', value: 'BYN' },
+					{ name: 'Bermudan Dollar - BMD', value: 'BMD' },
+					{ name: 'Bosnia-Herzegovina Convertible Mark - BAM', value: 'BAM' },
+					{ name: 'Brazilian Real - BRL', value: 'BRL' },
+					{ name: 'British Pound - GBP', value: 'GBP' },
+					{ name: 'Bulgarian Lev - BGN', value: 'BGN' },
+					{ name: 'Canadian Dollar - CAD', value: 'CAD' },
+					{ name: 'CFP Franc - XPF', value: 'XPF' },
+					{ name: 'Chilean Peso - CLP', value: 'CLP' },
+					{ name: 'Chinese Yuan - CNY', value: 'CNY' },
+					{ name: 'Colombian Peso - COP', value: 'COP' },
+					{ name: 'Costa Rican Colón - CRC', value: 'CRC' },
+					{ name: 'Cuban Peso - CUP', value: 'CUP' },
+					{ name: 'Czech Koruna - CZK', value: 'CZK' },
+					{ name: 'Danish Krone - DKK', value: 'DKK' },
+					{ name: 'Dominican Peso - DOP', value: 'DOP' },
+					{ name: 'Egyptian Pound - EGP', value: 'EGP' },
+					{ name: 'Euro - EUR', value: 'EUR' },
+					{ name: 'Georgian Lari - GEL', value: 'GEL' },
+					{ name: 'Hong Kong Dollar - HKD', value: 'HKD' },
+					{ name: 'Hungarian Forint - HUF', value: 'HUF' },
+					{ name: 'Icelandic Króna - ISK', value: 'ISK' },
+					{ name: 'Indian Rupee - INR', value: 'INR' },
+					{ name: 'Indonesian Rupiah - IDR', value: 'IDR' },
+					{ name: 'Iranian Rial - IRR', value: 'IRR' },
+					{ name: 'Israeli New Shekel - ILS', value: 'ILS' },
+					{ name: 'Jamaican Dollar - JMD', value: 'JMD' },
+					{ name: 'Japanese Yen - JPY', value: 'JPY' },
+					{ name: 'Jordanian Dinar - JOD', value: 'JOD' },
+					{ name: 'Kazakhstani Tenge - KZT', value: 'KZT' },
+					{ name: 'Kuwaiti Dinar - KWD', value: 'KWD' },
+					{ name: 'Lebanese Pound - LBP', value: 'LBP' },
+					{ name: 'Macedonian Denar - MKD', value: 'MKD' },
+					{ name: 'Malaysian Ringgit - MYR', value: 'MYR' },
+					{ name: 'Mexican Peso - MXN', value: 'MXN' },
+					{ name: 'Moldovan Leu - MDL', value: 'MDL' },
+					{ name: 'Moroccan Dirham - MAD', value: 'MAD' },
+					{ name: 'New Taiwan Dollar - TWD', value: 'TWD' },
+					{ name: 'New Zealand Dollar - NZD', value: 'NZD' },
+					{ name: 'Norwegian Krone - NOK', value: 'NOK' },
+					{ name: 'Omani Rial - OMR', value: 'OMR' },
+					{ name: 'Pakistani Rupee - PKR', value: 'PKR' },
+					{ name: 'Panamanian Balboa - PAB', value: 'PAB' },
+					{ name: 'Peruvian Sol - PEN', value: 'PEN' },
+					{ name: 'Philippine Peso - PHP', value: 'PHP' },
+					{ name: 'Polish Zloty - PLN', value: 'PLN' },
+					{ name: 'Qatari Riyal - QAR', value: 'QAR' },
+					{ name: 'Romanian Leu - RON', value: 'RON' },
+					{ name: 'Russian Ruble - RUB', value: 'RUB' },
+					{ name: 'Saudi Riyal - SAR', value: 'SAR' },
+					{ name: 'Serbian Dinar - RSD', value: 'RSD' },
+					{ name: 'Singapore Dollar - SGD', value: 'SGD' },
+					{ name: 'South African Rand - ZAR', value: 'ZAR' },
+					{ name: 'South Korean Won - KRW', value: 'KRW' },
+					{ name: 'Swedish Krona - SEK', value: 'SEK' },
+					{ name: 'Swiss Franc - CHF', value: 'CHF' },
+					{ name: 'Thai Baht - THB', value: 'THB' },
+					{ name: 'Turkish Lira - TRY', value: 'TRY' },
+					{ name: 'Ukrainian Hryvnia - UAH', value: 'UAH' },
+					{ name: 'United Arab Emirates Dirham - AED', value: 'AED' },
+					{ name: 'US Dollar - USD', value: 'USD' },
+					{ name: 'Vietnamese Dong - VND', value: 'VND' },
 				],
 			},
 			{

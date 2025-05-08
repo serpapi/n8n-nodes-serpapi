@@ -49,11 +49,9 @@ module.exports = {
 				// SerpApi added
 				'n8n-nodes-base/node-param-type-options-password-missing': 'off',
 				'n8n-nodes-base/node-param-display-name-miscased-id': 'off',
-				'n8n-nodes-base/node-param-options-type-unsorted-items': 'off',
 				'n8n-nodes-base/node-param-collection-type-unsorted-items': 'off',
 				'n8n-nodes-base/node-param-display-name-miscased': 'off',
 				'n8n-nodes-base/node-param-description-miscased-id': 'off',
-				'n8n-nodes-base/node-class-description-outputs-wrong': 'off',
 				'n8n-nodes-base/node-param-resource-with-plural-option': 'off',
 				'n8n-nodes-base/node-param-description-miscased-json': 'off',
 			},

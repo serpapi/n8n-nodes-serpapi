@@ -308,6 +308,7 @@ export const googleImagesFields: INodeProperties[] = [
 					},
 				},
 				type: 'options',
+				// eslint-disable-next-line n8n-nodes-base/node-param-options-type-unsorted-items
 				options: [
 					{
 						name: 'Second',
@@ -460,74 +461,23 @@ export const googleImagesFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Large',
-						value: 'l',
-					},
-					{
-						name: 'Medium',
-						value: 'm',
-					},
-					{
-						name: 'Icon',
-						value: 'i',
-					},
-					{
-						name: 'Larger than 400×300',
-						value: 'qsvga',
-					},
-					{
-						name: 'Larger than 640×480',
-						value: 'vga',
-					},
-					{
-						name: 'Larger than 800×600',
-						value: 'svga',
-					},
-					{
-						name: 'Larger than 1024×768',
-						value: 'xga',
-					},
-					{
-						name: 'Larger than 2 MP',
-						value: '2mp',
-					},
-					{
-						name: 'Larger than 4 MP',
-						value: '4mp',
-					},
-					{
-						name: 'Larger than 6 MP',
-						value: '6mp',
-					},
-					{
-						name: 'Larger than 8 MP',
-						value: '8mp',
-					},
-					{
-						name: 'Larger than 10 MP',
-						value: '10mp',
-					},
-					{
-						name: 'Larger than 12 MP',
-						value: '12mp',
-					},
-					{
-						name: 'Larger than 15 MP',
-						value: '15mp',
-					},
-					{
-						name: 'Larger than 20 MP',
-						value: '20mp',
-					},
-					{
-						name: 'Larger than 40 MP',
-						value: '40mp',
-					},
-					{
-						name: 'Larger than 70 MP',
-						value: '70mp',
-					},
+					{ name: 'Icon', value: 'i' },
+					{ name: 'Large', value: 'l' },
+					{ name: 'Larger than 10 MP', value: '10mp' },
+					{ name: 'Larger than 1024×768', value: 'xga' },
+					{ name: 'Larger than 12 MP', value: '12mp' },
+					{ name: 'Larger than 15 MP', value: '15mp' },
+					{ name: 'Larger than 2 MP', value: '2mp' },
+					{ name: 'Larger than 20 MP', value: '20mp' },
+					{ name: 'Larger than 4 MP', value: '4mp' },
+					{ name: 'Larger than 40 MP', value: '40mp' },
+					{ name: 'Larger than 400×300', value: 'qsvga' },
+					{ name: 'Larger than 6 MP', value: '6mp' },
+					{ name: 'Larger than 640×480', value: 'vga' },
+					{ name: 'Larger than 70 MP', value: '70mp' },
+					{ name: 'Larger than 8 MP', value: '8mp' },
+					{ name: 'Larger than 800×600', value: 'svga' },
+					{ name: 'Medium', value: 'm' },
 				],
 			},
 			{
@@ -545,62 +495,20 @@ export const googleImagesFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Black and white',
-						value: 'bw',
-					},
-					{
-						name: 'Transparent',
-						value: 'trans',
-					},
-					{
-						name: 'Red',
-						value: 'red',
-					},
-					{
-						name: 'Orange',
-						value: 'orange',
-					},
-					{
-						name: 'Yellow',
-						value: 'yellow',
-					},
-					{
-						name: 'Green',
-						value: 'green',
-					},
-					{
-						name: 'Teal',
-						value: 'teal',
-					},
-					{
-						name: 'Blue',
-						value: 'blue',
-					},
-					{
-						name: 'Purple',
-						value: 'purple',
-					},
-					{
-						name: 'Pink',
-						value: 'pink',
-					},
-					{
-						name: 'White',
-						value: 'white',
-					},
-					{
-						name: 'Gray',
-						value: 'gray',
-					},
-					{
-						name: 'Black',
-						value: 'black',
-					},
-					{
-						name: 'Brown',
-						value: 'brown',
-					},
+					{ name: 'Black', value: 'black' },
+					{ name: 'Black and white', value: 'bw' },
+					{ name: 'Blue', value: 'blue' },
+					{ name: 'Brown', value: 'brown' },
+					{ name: 'Gray', value: 'gray' },
+					{ name: 'Green', value: 'green' },
+					{ name: 'Orange', value: 'orange' },
+					{ name: 'Pink', value: 'pink' },
+					{ name: 'Purple', value: 'purple' },
+					{ name: 'Red', value: 'red' },
+					{ name: 'Teal', value: 'teal' },
+					{ name: 'Transparent', value: 'trans' },
+					{ name: 'White', value: 'white' },
+					{ name: 'Yellow', value: 'yellow' },
 				],
 			},
 			{
@@ -618,26 +526,11 @@ export const googleImagesFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Face',
-						value: 'face',
-					},
-					{
-						name: 'Photo',
-						value: 'photo',
-					},
-					{
-						name: 'Clip art',
-						value: 'clipart',
-					},
-					{
-						name: 'Line drawing',
-						value: 'lineart',
-					},
-					{
-						name: 'Animated',
-						value: 'animated',
-					},
+					{ name: 'Animated', value: 'animated' },
+					{ name: 'Clip art', value: 'clipart' },
+					{ name: 'Face', value: 'face' },
+					{ name: 'Line drawing', value: 'lineart' },
+					{ name: 'Photo', value: 'photo' },
 				],
 			},
 			{
@@ -655,30 +548,12 @@ export const googleImagesFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Free to use or share',
-						value: 'f',
-					},
-					{
-						name: 'Free to use or share, even commercially',
-						value: 'fc',
-					},
-					{
-						name: 'Free to use, share or modify',
-						value: 'fm',
-					},
-					{
-						name: 'Free to use, share or modify, even commercially',
-						value: 'fmc',
-					},
-					{
-						name: 'Creative Commons licenses',
-						value: 'cl',
-					},
-					{
-						name: 'Commercial and other licenses',
-						value: 'ol',
-					},
+					{ name: 'Commercial and other licenses', value: 'ol' },
+					{ name: 'Creative Commons licenses', value: 'cl' },
+					{ name: 'Free to use or share', value: 'f' },
+					{ name: 'Free to use or share, even commercially', value: 'fc' },
+					{ name: 'Free to use, share or modify', value: 'fm' },
+					{ name: 'Free to use, share or modify, even commercially', value: 'fmc' },
 				],
 			},
 			{

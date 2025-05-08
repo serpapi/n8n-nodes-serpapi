@@ -43,158 +43,44 @@ export const bingImagesFields: INodeProperties[] = [
 		},
 		type: 'options',
 		options: [
-			{
-				name: 'es-ar - Spanish',
-				value: 'es-ar',
-			},
-			{
-				name: 'en-au - English',
-				value: 'en-au',
-			},
-			{
-				name: 'de-at - German',
-				value: 'de-at',
-			},
-			{
-				name: 'nl-be - Dutch',
-				value: 'nl-be',
-			},
-			{
-				name: 'fr-be - French',
-				value: 'fr-be',
-			},
-			{
-				name: 'pt-br - Portuguese',
-				value: 'pt-br',
-			},
-			{
-				name: 'en-ca - English',
-				value: 'en-ca',
-			},
-			{
-				name: 'fr-ca - French',
-				value: 'fr-ca',
-			},
-			{
-				name: 'es-cl - Spanish',
-				value: 'es-cl',
-			},
-			{
-				name: 'da-dk - Danish',
-				value: 'da-dk',
-			},
-			{
-				name: 'fi-fi - Finnish',
-				value: 'fi-fi',
-			},
-			{
-				name: 'fr-fr - French',
-				value: 'fr-fr',
-			},
-			{
-				name: 'de-de - German',
-				value: 'de-de',
-			},
-			{
-				name: 'zh-hk - Traditional Chinese',
-				value: 'zh-hk',
-			},
-			{
-				name: 'en-in - English',
-				value: 'en-in',
-			},
-			{
-				name: 'en-id - English',
-				value: 'en-id',
-			},
-			{
-				name: 'it-it - Italian',
-				value: 'it-it',
-			},
-			{
-				name: 'ja-jp - Japanese',
-				value: 'ja-jp',
-			},
-			{
-				name: 'ko-kr - Korean',
-				value: 'ko-kr',
-			},
-			{
-				name: 'en-my - English',
-				value: 'en-my',
-			},
-			{
-				name: 'es-mx - Spanish',
-				value: 'es-mx',
-			},
-			{
-				name: 'nl-nl - Dutch',
-				value: 'nl-nl',
-			},
-			{
-				name: 'en-nz - English',
-				value: 'en-nz',
-			},
-			{
-				name: 'no-no - Norwegian',
-				value: 'no-no',
-			},
-			{
-				name: 'zh-cn - Chinese',
-				value: 'zh-cn',
-			},
-			{
-				name: 'pl-pl - Polish',
-				value: 'pl-pl',
-			},
-			{
-				name: 'en-ph - English',
-				value: 'en-ph',
-			},
-			{
-				name: 'ru-ru - Russian',
-				value: 'ru-ru',
-			},
-			{
-				name: 'en-za - English',
-				value: 'en-za',
-			},
-			{
-				name: 'es-es - Spanish',
-				value: 'es-es',
-			},
-			{
-				name: 'sv-se - Swedish',
-				value: 'sv-se',
-			},
-			{
-				name: 'fr-ch - French',
-				value: 'fr-ch',
-			},
-			{
-				name: 'de-ch - German',
-				value: 'de-ch',
-			},
-			{
-				name: 'zh-tw - Traditional Chinese',
-				value: 'zh-tw',
-			},
-			{
-				name: 'tr-tr - Turkish',
-				value: 'tr-tr',
-			},
-			{
-				name: 'en-gb - English',
-				value: 'en-gb',
-			},
-			{
-				name: 'en-us - English',
-				value: 'en-us',
-			},
-			{
-				name: 'es-us - Spanish',
-				value: 'es-us',
-			},
+			{ name: 'da-dk - Danish', value: 'da-dk' },
+			{ name: 'de-at - German', value: 'de-at' },
+			{ name: 'de-ch - German', value: 'de-ch' },
+			{ name: 'de-de - German', value: 'de-de' },
+			{ name: 'en-au - English', value: 'en-au' },
+			{ name: 'en-ca - English', value: 'en-ca' },
+			{ name: 'en-gb - English', value: 'en-gb' },
+			{ name: 'en-id - English', value: 'en-id' },
+			{ name: 'en-in - English', value: 'en-in' },
+			{ name: 'en-my - English', value: 'en-my' },
+			{ name: 'en-nz - English', value: 'en-nz' },
+			{ name: 'en-ph - English', value: 'en-ph' },
+			{ name: 'en-us - English', value: 'en-us' },
+			{ name: 'en-za - English', value: 'en-za' },
+			{ name: 'es-ar - Spanish', value: 'es-ar' },
+			{ name: 'es-cl - Spanish', value: 'es-cl' },
+			{ name: 'es-es - Spanish', value: 'es-es' },
+			{ name: 'es-mx - Spanish', value: 'es-mx' },
+			{ name: 'es-us - Spanish', value: 'es-us' },
+			{ name: 'fi-fi - Finnish', value: 'fi-fi' },
+			{ name: 'fr-be - French', value: 'fr-be' },
+			{ name: 'fr-ca - French', value: 'fr-ca' },
+			{ name: 'fr-ch - French', value: 'fr-ch' },
+			{ name: 'fr-fr - French', value: 'fr-fr' },
+			{ name: 'it-it - Italian', value: 'it-it' },
+			{ name: 'ja-jp - Japanese', value: 'ja-jp' },
+			{ name: 'ko-kr - Korean', value: 'ko-kr' },
+			{ name: 'nl-be - Dutch', value: 'nl-be' },
+			{ name: 'nl-nl - Dutch', value: 'nl-nl' },
+			{ name: 'no-no - Norwegian', value: 'no-no' },
+			{ name: 'pl-pl - Polish', value: 'pl-pl' },
+			{ name: 'pt-br - Portuguese', value: 'pt-br' },
+			{ name: 'ru-ru - Russian', value: 'ru-ru' },
+			{ name: 'sv-se - Swedish', value: 'sv-se' },
+			{ name: 'tr-tr - Turkish', value: 'tr-tr' },
+			{ name: 'zh-cn - Chinese', value: 'zh-cn' },
+			{ name: 'zh-hk - Traditional Chinese', value: 'zh-hk' },
+			{ name: 'zh-tw - Traditional Chinese', value: 'zh-tw' },
 		],
 	},
 	{
@@ -224,150 +110,42 @@ export const bingImagesFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'AR - Argentina',
-						value: 'AR',
-					},
-					{
-						name: 'AU - Australia',
-						value: 'AU',
-					},
-					{
-						name: 'AT - Austria',
-						value: 'AT',
-					},
-					{
-						name: 'BE - Belgium',
-						value: 'BE',
-					},
-					{
-						name: 'BR - Brazil',
-						value: 'BR',
-					},
-					{
-						name: 'CA - Canada',
-						value: 'CA',
-					},
-					{
-						name: 'CL - Chile',
-						value: 'CL',
-					},
-					{
-						name: 'DK - Denmark',
-						value: 'DK',
-					},
-					{
-						name: 'FI - Finland',
-						value: 'FI',
-					},
-					{
-						name: 'FR - France',
-						value: 'FR',
-					},
-					{
-						name: 'DE - Germany',
-						value: 'DE',
-					},
-					{
-						name: 'HK - Hong Kong SAR',
-						value: 'HK',
-					},
-					{
-						name: 'IN - India',
-						value: 'IN',
-					},
-					{
-						name: 'ID - Indonesia',
-						value: 'ID',
-					},
-					{
-						name: 'IT - Italy',
-						value: 'IT',
-					},
-					{
-						name: 'JP - Japan',
-						value: 'JP',
-					},
-					{
-						name: 'KR - Korea',
-						value: 'KR',
-					},
-					{
-						name: 'MY - Malaysia',
-						value: 'MY',
-					},
-					{
-						name: 'MX - Mexico',
-						value: 'MX',
-					},
-					{
-						name: 'NL - Netherlands',
-						value: 'NL',
-					},
-					{
-						name: 'NZ - New Zealand',
-						value: 'NZ',
-					},
-					{
-						name: 'NO - Norway',
-						value: 'NO',
-					},
-					{
-						name: "CN - People's Republic of China",
-						value: 'CN',
-					},
-					{
-						name: 'PL - Poland',
-						value: 'PL',
-					},
-					{
-						name: 'PT - Portugal',
-						value: 'PT',
-					},
-					{
-						name: 'PH - Republic of the Philippines',
-						value: 'PH',
-					},
-					{
-						name: 'RU - Russia',
-						value: 'RU',
-					},
-					{
-						name: 'SA - Saudi Arabia',
-						value: 'SA',
-					},
-					{
-						name: 'ZA - South Africa',
-						value: 'ZA',
-					},
-					{
-						name: 'ES - Spain',
-						value: 'ES',
-					},
-					{
-						name: 'SE - Sweden',
-						value: 'SE',
-					},
-					{
-						name: 'CH - Switzerland',
-						value: 'CH',
-					},
-					{
-						name: 'TW - Taiwan',
-						value: 'TW',
-					},
-					{
-						name: 'TR - Turkey',
-						value: 'TR',
-					},
-					{
-						name: 'GB - United Kingdom',
-						value: 'GB',
-					},
-					{
-						name: 'US - United States',
-						value: 'US',
-					},
+					{ name: 'AR - Argentina', value: 'AR' },
+					{ name: 'AT - Austria', value: 'AT' },
+					{ name: 'AU - Australia', value: 'AU' },
+					{ name: 'BE - Belgium', value: 'BE' },
+					{ name: 'BR - Brazil', value: 'BR' },
+					{ name: 'CA - Canada', value: 'CA' },
+					{ name: 'CH - Switzerland', value: 'CH' },
+					{ name: 'CL - Chile', value: 'CL' },
+					{ name: "CN - People's Republic of China", value: 'CN' },
+					{ name: 'DE - Germany', value: 'DE' },
+					{ name: 'DK - Denmark', value: 'DK' },
+					{ name: 'ES - Spain', value: 'ES' },
+					{ name: 'FI - Finland', value: 'FI' },
+					{ name: 'FR - France', value: 'FR' },
+					{ name: 'GB - United Kingdom', value: 'GB' },
+					{ name: 'HK - Hong Kong SAR', value: 'HK' },
+					{ name: 'ID - Indonesia', value: 'ID' },
+					{ name: 'IN - India', value: 'IN' },
+					{ name: 'IT - Italy', value: 'IT' },
+					{ name: 'JP - Japan', value: 'JP' },
+					{ name: 'KR - Korea', value: 'KR' },
+					{ name: 'MX - Mexico', value: 'MX' },
+					{ name: 'MY - Malaysia', value: 'MY' },
+					{ name: 'NL - Netherlands', value: 'NL' },
+					{ name: 'NO - Norway', value: 'NO' },
+					{ name: 'NZ - New Zealand', value: 'NZ' },
+					{ name: 'PH - Republic of the Philippines', value: 'PH' },
+					{ name: 'PL - Poland', value: 'PL' },
+					{ name: 'PT - Portugal', value: 'PT' },
+					{ name: 'RU - Russia', value: 'RU' },
+					{ name: 'SA - Saudi Arabia', value: 'SA' },
+					{ name: 'SE - Sweden', value: 'SE' },
+					{ name: 'TR - Turkey', value: 'TR' },
+					{ name: 'TW - Taiwan', value: 'TW' },
+					{ name: 'US - United States', value: 'US' },
+					{ name: 'ZA - South Africa', value: 'ZA' },
 				],
 			},
 			{
@@ -403,8 +181,7 @@ export const bingImagesFields: INodeProperties[] = [
 			{
 				displayName: '`imagesize` Image Size',
 				name: 'imagesize',
-				description:
-					'Parameter is used for filtering images by size',
+				description: 'Parameter is used for filtering images by size',
 				default: 'medium',
 				routing: {
 					request: {
@@ -436,8 +213,7 @@ export const bingImagesFields: INodeProperties[] = [
 			{
 				displayName: '`color2` Color',
 				name: 'color2',
-				description:
-					'Parameter is used for filtering images by color',
+				description: 'Parameter is used for filtering images by color',
 				default: 'color',
 				routing: {
 					request: {
@@ -449,68 +225,67 @@ export const bingImagesFields: INodeProperties[] = [
 				type: 'options',
 				options: [
 					{
-						name: 'Color Only',
-						value: 'color',
+						name: 'Black',
+						value: 'FGcls_BLACK',
 					},
 					{
 						name: 'Black & white',
 						value: 'bw',
 					},
 					{
-						name: 'Red',
-						value: 'FGcls_RED',
-					},
-					{
-						name: 'Orange',
-						value: 'FGcls_ORGANGE',
-					},
-					{
-						name: 'Yellow',
-						value: 'FGcls_YELLOW',
-					},
-					{
-						name: 'Green',
-						value: 'FGcls_GREEN',
-					},
-					{
-						name: 'Teal',
-						value: 'FGcls_TEAL',
-					},
-					{
 						name: 'Blue',
 						value: 'FGcls_BLUE',
-					},
-					{
-						name: 'Purple',
-						value: 'FGcls_PURPLE',
-					},
-					{
-						name: 'Pink',
-						value: 'FGcls_PINK',
 					},
 					{
 						name: 'Brown',
 						value: 'FGcls_BROWN',
 					},
 					{
-						name: 'Black',
-						value: 'FGcls_BLACK',
+						name: 'Color Only',
+						value: 'color',
 					},
 					{
 						name: 'Gray',
 						value: 'FGcls_GRAY',
 					},
 					{
+						name: 'Green',
+						value: 'FGcls_GREEN',
+					},
+					{
+						name: 'Orange',
+						value: 'FGcls_ORGANGE',
+					},
+					{
+						name: 'Pink',
+						value: 'FGcls_PINK',
+					},
+					{
+						name: 'Purple',
+						value: 'FGcls_PURPLE',
+					},
+					{
+						name: 'Red',
+						value: 'FGcls_RED',
+					},
+					{
+						name: 'Teal',
+						value: 'FGcls_TEAL',
+					},
+					{
 						name: 'White',
 						value: 'FGcls_WHITE',
+					},
+					{
+						name: 'Yellow',
+						value: 'FGcls_YELLOW',
 					},
 				],
 			},
 			{
 				displayName: '`photo` Type',
 				name: 'photo',
-				description:
-					'Parameter is used for filtering images by image type',
+				description: 'Parameter is used for filtering images by image type',
 				default: 'photo',
 				routing: {
 					request: {
@@ -522,8 +297,8 @@ export const bingImagesFields: INodeProperties[] = [
 				type: 'options',
 				options: [
 					{
-						name: 'Photo',
-						value: 'photo',
+						name: 'Animated GIF',
+						value: 'animatedgif',
 					},
 					{
 						name: 'Clipart',
@@ -534,8 +309,8 @@ export const bingImagesFields: INodeProperties[] = [
 						value: 'linedrawing',
 					},
 					{
-						name: 'Animated GIF',
-						value: 'animatedgif',
+						name: 'Photo',
+						value: 'photo',
 					},
 					{
 						name: 'Transparent',
@@ -546,8 +321,7 @@ export const bingImagesFields: INodeProperties[] = [
 			{
 				displayName: '`aspect` Layout',
 				name: 'aspect',
-				description:
-					'Parameter is used for filtering images by layout',
+				description: 'Parameter is used for filtering images by layout',
 				default: 'wide',
 				routing: {
 					request: {
@@ -575,8 +349,7 @@ export const bingImagesFields: INodeProperties[] = [
 			{
 				displayName: '`face` People',
 				name: 'face',
-				description:
-					'Parameter is used for filtering images by people',
+				description: 'Parameter is used for filtering images by people',
 				default: 'portrait',
 				routing: {
 					request: {
@@ -600,8 +373,7 @@ export const bingImagesFields: INodeProperties[] = [
 			{
 				displayName: '`age` Date',
 				name: 'age',
-				description:
-					'Parameter is used for filtering images by date',
+				description: 'Parameter is used for filtering images by date',
 				default: 'lt1440',
 				routing: {
 					request: {
@@ -633,8 +405,7 @@ export const bingImagesFields: INodeProperties[] = [
 			{
 				displayName: '`license` License',
 				name: 'license',
-				description:
-					'Parameter is used for filtering images by license',
+				description: 'Parameter is used for filtering images by license',
 				default: 'Type-Any',
 				routing: {
 					request: {
@@ -650,8 +421,12 @@ export const bingImagesFields: INodeProperties[] = [
 						value: 'Type-Any',
 					},
 					{
-						name: 'Public Domain',
-						value: 'L1',
+						name: 'Free to modify, share and use',
+						value: 'L2_L3_L5_L6',
+					},
+					{
+						name: 'Free to modify, share, and use commercially',
+						value: 'L2_L3',
 					},
 					{
 						name: 'Free to share and use',
@@ -662,12 +437,8 @@ export const bingImagesFields: INodeProperties[] = [
 						value: 'L2_L3_L4',
 					},
 					{
-						name: 'Free to modify, share and use',
-						value: 'L2_L3_L5_L6',
-					},
-					{
-						name: 'Free to modify, share, and use commercially',
-						value: 'L2_L3',
+						name: 'Public Domain',
+						value: 'L1',
 					},
 				],
 			},

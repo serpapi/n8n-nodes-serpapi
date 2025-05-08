@@ -66,6 +66,7 @@ export const googleTrendsFields: INodeProperties[] = [
 					},
 				},
 				type: 'options',
+				// eslint-disable-next-line n8n-nodes-base/node-param-options-type-unsorted-items
 				options: [
 					{
 						name: 'Worldwide',
@@ -14442,26 +14443,11 @@ export const googleTrendsFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Interest over time',
-						value: 'TIMESERIES',
-					},
-					{
-						name: 'Compared breakdown by region',
-						value: 'GEO_MAP',
-					},
-					{
-						name: 'Interest by region',
-						value: 'GEO_MAP_0',
-					},
-					{
-						name: 'Related topics',
-						value: 'RELATED_TOPICS',
-					},
-					{
-						name: 'Related queries',
-						value: 'RELATED_QUERIES',
-					},
+					{ name: 'Compared breakdown by region', value: 'GEO_MAP' },
+					{ name: 'Interest by region', value: 'GEO_MAP_0' },
+					{ name: 'Interest over time', value: 'TIMESERIES' },
+					{ name: 'Related queries', value: 'RELATED_QUERIES' },
+					{ name: 'Related topics', value: 'RELATED_TOPICS' },
 				],
 			},
 			{
@@ -19042,26 +19028,11 @@ export const googleTrendsFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Web Search',
-						value: '',
-					},
-					{
-						name: 'Image Search',
-						value: 'images',
-					},
-					{
-						name: 'News Search',
-						value: 'news',
-					},
-					{
-						name: 'Google Shopping',
-						value: 'froogle',
-					},
-					{
-						name: 'YouTube Search',
-						value: 'youtube',
-					},
+					{ name: 'Google Shopping', value: 'froogle' },
+					{ name: 'Image Search', value: 'images' },
+					{ name: 'News Search', value: 'news' },
+					{ name: 'Web Search', value: '' },
+					{ name: 'YouTube Search', value: 'youtube' },
 				],
 			},
 			{

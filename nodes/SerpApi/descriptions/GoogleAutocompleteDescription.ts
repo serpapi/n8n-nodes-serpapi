@@ -66,7 +66,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 					},
 				},
 				type: 'options',
-				options: LanguageOptions
+				options: LanguageOptions,
 			},
 			{
 				displayName: '`cp` Cursor pointer',
@@ -97,42 +97,15 @@ export const googleAutocompleteFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Chrome',
-						value: 'chrome',
-					},
-					{
-						name: 'Chrome omni',
-						value: 'chrome-omni',
-					},
-					{
-						name: 'Home page',
-						value: 'gws-wiz',
-					},
-					{
-						name: 'Safari',
-						value: 'safari',
-					},
-					{
-						name: 'Firefox',
-						value: 'firefox',
-					},
-					{
-						name: 'psy-ab',
-						value: 'psy-ab',
-					},
-					{
-						name: 'toolbar',
-						value: 'toolbar',
-					},
-					{
-						name: 'youtube',
-						value: 'youtube',
-					},
-					{
-						name: 'Google Local',
-						value: 'gws-wiz-local',
-					},
+					{ name: 'Chrome', value: 'chrome' },
+					{ name: 'Chrome omni', value: 'chrome-omni' },
+					{ name: 'Firefox', value: 'firefox' },
+					{ name: 'Google Local', value: 'gws-wiz-local' },
+					{ name: 'Home page', value: 'gws-wiz' },
+					{ name: 'psy-ab', value: 'psy-ab' },
+					{ name: 'Safari', value: 'safari' },
+					{ name: 'toolbar', value: 'toolbar' },
+					{ name: 'youtube', value: 'youtube' },
 				],
 			},
 			...serpApiFields,
