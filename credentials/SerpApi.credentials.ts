@@ -4,10 +4,7 @@ export class SerpApi implements ICredentialType {
 	name = 'serpApi';
 	displayName = 'SerpApi API';
 	icon: Icon = 'file:serpapi.svg';
-	// Uses the link to this tutorial as an example
-	// Replace with your own docs links when building your own nodes
-	documentationUrl =
-		'https://docs.n8n.io/integrations/creating-nodes/build/declarative-style-node/';
+	documentationUrl = 'https://serpapi.com/search-api';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'API Key',
