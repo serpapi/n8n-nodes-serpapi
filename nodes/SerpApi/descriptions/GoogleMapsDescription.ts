@@ -68,6 +68,11 @@ export const googleMapsFields: INodeProperties[] = [
 			},
 		},
 		type: 'string',
+		displayOptions: {
+			show: {
+				resource: ['google_maps'],
+			},
+		},
 	},
 	{
 		displayName: 'Additional Fields',
