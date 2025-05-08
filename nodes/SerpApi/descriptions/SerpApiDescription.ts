@@ -20,7 +20,7 @@ export const serpApiFields: INodeProperties[] = [
 		displayName: '`async` Async',
 		name: 'async',
 		description:
-			"Whether you want to open an HTTP connection and keep it open until you got your search results, or true to just submit your search to SerpApi and retrieve them later. In this case, you'll need to use our Searches Archive API to retrieve your results. async and no_cache parameters should not be used together. async should not be used on accounts with Ludicrous Speed enabled.",
+			"Parameter defines the way you want to submit your search to SerpApi. It can be set to false (default) to open an HTTP connection and keep it open until you got your search results, or true to just submit your search to SerpApi and retrieve them later. In this case, you'll need to use our Searches Archive API to retrieve your results. async and no_cache parameters should not be used together. async should not be used on accounts with Ludicrous Speed enabled.",
 		default: false,
 		routing: {
 			request: {
@@ -35,7 +35,7 @@ export const serpApiFields: INodeProperties[] = [
 		displayName: '`zero_trace` ZeroTrace Mode',
 		name: 'zero_trace',
 		description:
-			'Whether to enable ZeroTrace mode. It can be set to false (default) or true. Enable this mode to skip storing search parameters, search files, and search metadata on our servers. This may make debugging more difficult. Enterprise only.',
+			'Enterprise only. Parameter enables ZeroTrace mode. It can be set to false (default) or true. Enable this mode to skip storing search parameters, search files, and search metadata on our servers. This may make debugging more difficult.',
 		default: false,
 		routing: {
 			request: {
@@ -50,7 +50,7 @@ export const serpApiFields: INodeProperties[] = [
 		displayName: '`output` Output',
 		name: 'output',
 		description:
-			'Parameter defines the final output you want. It can be set to JSON (default) to get a structured JSON of the results, or html to get the raw html retrieved.',
+			'Parameter defines the final output you want. It can be set to json (default) to get a structured JSON of the results, or html to get the raw html retrieved.',
 		default: 'json',
 		routing: {
 			request: {

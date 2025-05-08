@@ -27,7 +27,7 @@ export const bingSearchFields: INodeProperties[] = [
 		displayName: '`location` Location',
 		name: 'location',
 		description:
-			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.JSON API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
 		default: '',
 		routing: {
 			request: {
@@ -87,7 +87,7 @@ export const bingSearchFields: INodeProperties[] = [
 				displayName: '`mkt` Market codes',
 				name: 'mkt',
 				description:
-					'The market where the results come from (e.g. en-US). Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. The market must be in the form &lt;language code&gt;-&lt;country code&gt;. For example, en-US. The string is case insensitive. For a list of possible market values, see Market Codes.NOTE: If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. If you specify a market that is not listed in Market Codes, Bing uses a best fit market code based on an internal mapping that is subject to change.This parameter and the cc query parameter are mutually exclusive—do not specify both.',
+					'The market where the results come from (e.g. en-US). Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. The market must be in the form &lt;language code&gt;-&lt;country code&gt;. For example, en-US. The string is case insensitive. For a list of possible market values, see Market Codes. NOTE: If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. If you specify a market that is not listed in Market Codes, Bing uses a best fit market code based on an internal mapping that is subject to change. This parameter and the cc query parameter are mutually exclusive—do not specify both.',
 				default: 'en-us',
 				routing: {
 					request: {
@@ -447,7 +447,7 @@ export const bingSearchFields: INodeProperties[] = [
 				displayName: '`safeSearch` Adult Content Filtering',
 				name: 'safeSearch',
 				description:
-					'Parameter defines the level of filtering for adult content. It can be set to:Off to return webpages with adult text, images, or videos.Moderate to return webpages with adult text, but not adult images or videos.Strict to not return webpages with adult text, images, or videos.',
+					'Parameter defines the level of filtering for adult content. It can be set to: Off to return webpages with adult text, images, or videos. Moderate to return webpages with adult text, but not adult images or videos. Strict to not return webpages with adult text, images, or videos.',
 				default: 'moderate',
 				routing: {
 					request: {
