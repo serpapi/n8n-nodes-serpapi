@@ -447,7 +447,7 @@ export const bingSearchFields: INodeProperties[] = [
 				displayName: '`safeSearch` Adult Content Filtering',
 				name: 'safeSearch',
 				description:
-					'Parameter defines the level of filtering for adult content. It can be set to:Off to return webpages with adult text, images, or videos. Moderate to return webpages with adult text, but not adult images or videos. Strict to not return webpages with adult text, images, or videos.',
+					'Parameter defines the level of filtering for adult content. It can be set to: Off to return webpages with adult text, images, or videos. Moderate to return webpages with adult text, but not adult images or videos. Strict to not return webpages with adult text, images, or videos.',
 				default: 'moderate',
 				routing: {
 					request: {

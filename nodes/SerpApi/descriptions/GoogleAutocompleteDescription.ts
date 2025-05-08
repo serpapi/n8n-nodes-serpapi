@@ -86,7 +86,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 			{
 				displayName: '`client` Client',
 				name: 'client',
-				description: 'Parameter used to define client for autocomplete. List of supported clients.',
+				description: 'Parameter used to define client for autocomplete.',
 				default: 'chrome',
 				routing: {
 					request: {

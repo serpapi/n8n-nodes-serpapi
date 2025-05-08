@@ -404,7 +404,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`imagesize` Image Size',
 				name: 'imagesize',
 				description:
-					'Parameter is used for filtering images by size. It can be set to: small, medium, large, wallpaper.',
+					'Parameter is used for filtering images by size.',
 				default: 'medium',
 				routing: {
 					request: {
@@ -437,7 +437,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`color2` Color',
 				name: 'color2',
 				description:
-					'Parameter is used for filtering images by color. It can be set to: Color Only,Black &amp; white, Red, Orange, Yellow, Green, Teal, Blue, Purple, Pink, Brown, Black, Gray, White.',
+					'Parameter is used for filtering images by color.',
 				default: 'color',
 				routing: {
 					request: {
@@ -510,7 +510,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`photo` Type',
 				name: 'photo',
 				description:
-					'Parameter is used for filtering images by image type. It can be set to: Photo, Clipart, Line Drawing, Animated GIF, Transparent.',
+					'Parameter is used for filtering images by image type.',
 				default: 'photo',
 				routing: {
 					request: {
@@ -547,7 +547,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`aspect` Layout',
 				name: 'aspect',
 				description:
-					'Parameter is used for filtering images by layout. It can be set to: Square, Wide, Tall.',
+					'Parameter is used for filtering images by layout.',
 				default: 'wide',
 				routing: {
 					request: {
@@ -576,7 +576,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`face` People',
 				name: 'face',
 				description:
-					'Parameter is used for filtering images by people. It can be set to: Faces Only, Head &amp; Shoulders.',
+					'Parameter is used for filtering images by people.',
 				default: 'portrait',
 				routing: {
 					request: {
@@ -601,7 +601,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`age` Date',
 				name: 'age',
 				description:
-					'Parameter is used for filtering images by date. It can be set to: Past 24, Past week, Past month, Past year.',
+					'Parameter is used for filtering images by date.',
 				default: 'lt1440',
 				routing: {
 					request: {
@@ -634,7 +634,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`license` License',
 				name: 'license',
 				description:
-					'Parameter is used for filtering images by license. It can be set to: All Creative Commons, Free to share and use, Free to share and use commercially, Free to modify share and use, Free to modify share and use commercially.',
+					'Parameter is used for filtering images by license.',
 				default: 'Type-Any',
 				routing: {
 					request: {
