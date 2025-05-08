@@ -404,7 +404,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`imagesize` Image Size',
 				name: 'imagesize',
 				description:
-					'Parameter is used for filtering images by size.',
+					'Parameter is used for filtering images by size',
 				default: 'medium',
 				routing: {
 					request: {
@@ -437,7 +437,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`color2` Color',
 				name: 'color2',
 				description:
-					'Parameter is used for filtering images by color.',
+					'Parameter is used for filtering images by color',
 				default: 'color',
 				routing: {
 					request: {
@@ -510,7 +510,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`photo` Type',
 				name: 'photo',
 				description:
-					'Parameter is used for filtering images by image type.',
+					'Parameter is used for filtering images by image type',
 				default: 'photo',
 				routing: {
 					request: {
@@ -547,7 +547,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`aspect` Layout',
 				name: 'aspect',
 				description:
-					'Parameter is used for filtering images by layout.',
+					'Parameter is used for filtering images by layout',
 				default: 'wide',
 				routing: {
 					request: {
@@ -576,7 +576,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`face` People',
 				name: 'face',
 				description:
-					'Parameter is used for filtering images by people.',
+					'Parameter is used for filtering images by people',
 				default: 'portrait',
 				routing: {
 					request: {
@@ -601,7 +601,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`age` Date',
 				name: 'age',
 				description:
-					'Parameter is used for filtering images by date.',
+					'Parameter is used for filtering images by date',
 				default: 'lt1440',
 				routing: {
 					request: {
@@ -634,7 +634,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: '`license` License',
 				name: 'license',
 				description:
-					'Parameter is used for filtering images by license.',
+					'Parameter is used for filtering images by license',
 				default: 'Type-Any',
 				routing: {
 					request: {

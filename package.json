@@ -1,15 +1,15 @@
 {
   "name": "n8n-nodes-serpapi",
   "version": "0.1.0",
-  "description": "",
+  "description": "Official n8n node for SerpApi",
   "keywords": [
     "n8n-community-node-package"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "SerpApi",
+    "email": "contact@serpapi.com"
   },
   "repository": {
     "type": "git",

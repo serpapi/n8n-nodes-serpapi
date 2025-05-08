@@ -39,7 +39,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				displayName: '`ct` Choose Language',
 				name: 'ct',
 				description:
-					'Parameter defines which language to restrict results.',
+					'Parameter defines which language to restrict results',
 				default: '1',
 				routing: {
 					request: {
