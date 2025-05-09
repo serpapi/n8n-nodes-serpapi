@@ -46,7 +46,7 @@ export class SerpApi implements INodeType {
 		outputs,
 		credentials: [
 			{
-				name: 'serpapi',
+				name: 'serpApi',
 				required: true,
 			},
 		],

@@ -488,30 +488,12 @@ export const googleSearchFields: INodeProperties[] = [
 				},
 				type: 'options',
 				options: [
-					{
-						name: 'Google Images',
-						value: 'isch',
-					},
-					{
-						name: 'Google Local',
-						value: 'lcl',
-					},
-					{
-						name: 'Google News',
-						value: 'nws',
-					},
-					{
-						name: 'Google Shopping',
-						value: 'shop',
-					},
-					{
-						name: 'Google Videos',
-						value: 'vid',
-					},
-					{
-						name: 'Google Patents',
-						value: 'pts',
-					},
+					{ name: 'Google Images', value: 'isch' },
+					{ name: 'Google Local', value: 'lcl' },
+					{ name: 'Google News', value: 'nws' },
+					{ name: 'Google Patents', value: 'pts' },
+					{ name: 'Google Shopping', value: 'shop' },
+					{ name: 'Google Videos', value: 'vid' },
 				],
 			},
 			{
