@@ -31,13 +31,13 @@ const outputs = [NodeConnectionType.Main];
 export class SerpApi implements INodeType {
 	description: INodeTypeDescription = {
 		// Basic node details will go here
-		displayName: 'SerpApi',
+		displayName: 'SerpApi Official',
 		name: 'serpApi',
 		icon: 'file:serpapi.svg',
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{$parameter["resource"]}}',
-		description: 'Get live Google Search data and more from SerpApi',
+		description: "Get live Google Search data and more from SerpApi's official node",
 		defaults: {
 			name: 'SerpApi',
 		},
