@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-serpapi",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Official n8n node for SerpApi",
   "keywords": [
     "n8n-community-node-package"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexbarron/n8n-nodes-trial.git"
+    "url": "https://github.com/alexbarron/n8n-nodes-serpapi.git"
   },
   "main": "index.js",
   "scripts": {
@@ -33,7 +33,7 @@
       "dist/credentials/SerpApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/CityWeather/SerpApi.node.js"
+      "dist/nodes/SerpApi/SerpApi.node.js"
     ]
   },
   "devDependencies": {
