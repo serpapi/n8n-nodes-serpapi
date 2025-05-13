@@ -71,7 +71,7 @@ export const googleNewsFields: INodeProperties[] = [
 				displayName: '`topic_token` Topic token',
 				name: 'topic_token',
 				description:
-					'Parameter defines the Google News topic token. It is used for accessing the news results for a specific topic (e.g., "World", "Business", "Technology").The token can be found in our JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /topics/).Parameter can\'t be used together with q, story_token, and publication_token parameters.',
+					'Parameter defines the Google News topic token. It is used for accessing the news results for a specific topic (e.g., "World", "Business", "Technology").The token can be found in the JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /topics/).Parameter can\'t be used together with q, story_token, and publication_token parameters.',
 				default: '',
 				routing: {
 					request: {
@@ -86,7 +86,7 @@ export const googleNewsFields: INodeProperties[] = [
 				displayName: '`publication_token` Publication token',
 				name: 'publication_token',
 				description:
-					'Parameter defines the Google News publication token. It is used for accessing the news results from a specific publisher (e.g., "CNN", "BBC", "The Guardian").The token can be found in our JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /publications/).Parameter can\'t be used together with q, story_token, and topic_token parameters.',
+					'Parameter defines the Google News publication token. It is used for accessing the news results from a specific publisher (e.g., "CNN", "BBC", "The Guardian").The token can be found in the JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /publications/).Parameter can\'t be used together with q, story_token, and topic_token parameters.',
 				default: '',
 				routing: {
 					request: {
@@ -101,7 +101,7 @@ export const googleNewsFields: INodeProperties[] = [
 				displayName: '`section_token` Section token',
 				name: 'section_token',
 				description:
-					'Parameter defines the Google News section token. It is used for accessing the sub-section of a specific topic. (e.g., "Business -&gt; Economy").The token can be found in our JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /sections/)Parameter can only be used in combination with topic_token or publication_token parameters.',
+					'Parameter defines the Google News section token. It is used for accessing the sub-section of a specific topic. (e.g., "Business -&gt; Economy").The token can be found in the JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /sections/)Parameter can only be used in combination with topic_token or publication_token parameters.',
 				default: '',
 				routing: {
 					request: {
@@ -116,7 +116,7 @@ export const googleNewsFields: INodeProperties[] = [
 				displayName: '`story_token` Story token',
 				name: 'story_token',
 				description:
-					"Parameter defines the Google News story token. It is used for accessing the news results with full coverage of a specific story. The token can be found in our JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /stories/)Parameter can't be used together with q, topic_token, and publication_token parameters.",
+					"Parameter defines the Google News story token. It is used for accessing the news results with full coverage of a specific story. The token can be found in the JSON response or the URL of the Google News page (in the URL, it is a string of characters preceded by /stories/)Parameter can't be used together with q, topic_token, and publication_token parameters.",
 				default: '',
 				routing: {
 					request: {

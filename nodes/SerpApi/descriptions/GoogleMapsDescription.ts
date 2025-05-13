@@ -138,7 +138,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: '`data` Data',
 				name: 'data',
 				description:
-					'Parameter can be used to filter the search results. You can visit Google Maps website, set filters you want and simply copy the data value from their URL to SerpApi URL. One of the uses of the parameter is to search for a specific place; therefore, it is required if the type is set to place. Alternatively, place_id can be used. To use the data parameter to search for a specific place, it needs to be constructed in the following sequence:!4m5!3m4!1s + data_id + !8m2!3d + latitude + !4d + longitude This will form a string that looks like this: !4m5!3m4!1s0x89c259b7abdd4769:0xc385876db174521a!8m2!3d40.750231!4d-74.004019. You can find the data_id using our Google Maps API.',
+					'Parameter can be used to filter the search results. You can visit Google Maps website, set filters you want and simply copy the data value from their URL to SerpApi URL. One of the uses of the parameter is to search for a specific place; therefore, it is required if the type is set to place. Alternatively, place_id can be used. To use the data parameter to search for a specific place, it needs to be constructed in the following sequence:!4m5!3m4!1s + data_id + !8m2!3d + latitude + !4d + longitude This will form a string that looks like this: !4m5!3m4!1s0x89c259b7abdd4769:0xc385876db174521a!8m2!3d40.750231!4d-74.004019. You can find the data_id using the Google Maps API.',
 				default: '',
 				routing: {
 					request: {
@@ -153,7 +153,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: '`place_id` Place ID',
 				name: 'place_id',
 				description:
-					'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using our Google Maps API. You can read more about Place IDs here.place_id can be used without any other optional parameter.',
+					'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using the Google Maps API. You can read more about Place IDs here.place_id can be used without any other optional parameter.',
 				default: '',
 				routing: {
 					request: {

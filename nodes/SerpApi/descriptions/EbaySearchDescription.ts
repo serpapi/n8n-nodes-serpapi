@@ -1217,7 +1217,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: '`category_id` Category ID',
 				name: 'category_id',
 				description:
-					'Parameter defines the ID of a category where you want your search to be concentrated. ID values are accessible inside categories array, located in our JSON output (e.g. categories[1].id).You can search using category_id parameter without specifying _nkw parameter.',
+					'Parameter defines the ID of a category where you want your search to be concentrated. ID values are accessible inside categories array, located in the JSON output (e.g. categories[1].id).You can search using category_id parameter without specifying _nkw parameter.',
 				default: '',
 				routing: {
 					request: {

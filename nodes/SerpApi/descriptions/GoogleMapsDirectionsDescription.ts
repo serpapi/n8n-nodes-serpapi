@@ -135,7 +135,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				displayName: '`start_data_id` Starting point data ID',
 				name: 'start_data_id',
 				description:
-					'Parameter defines the data ID of the starting point for the direction you want to search. Find the data ID of a place using our Google Maps API. Alternatively, you can use start_addr or start_coords.',
+					'Parameter defines the data ID of the starting point for the direction you want to search. Find the data ID of a place using the Google Maps API. Alternatively, you can use start_addr or start_coords.',
 				default: '',
 				routing: {
 					request: {
@@ -150,7 +150,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				displayName: '`end_data_id` Ending point data ID',
 				name: 'end_data_id',
 				description:
-					'Parameter defines the data ID of the ending point for the direction you want to search. Find the data ID of a place using our Google Maps API. Alternatively, you can use end_addr or end_coords.',
+					'Parameter defines the data ID of the ending point for the direction you want to search. Find the data ID of a place using the Google Maps API. Alternatively, you can use end_addr or end_coords.',
 				default: '',
 				routing: {
 					request: {

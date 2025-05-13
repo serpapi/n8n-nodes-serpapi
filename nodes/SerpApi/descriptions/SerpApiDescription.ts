@@ -20,7 +20,7 @@ export const serpApiFields: INodeProperties[] = [
 		displayName: '`async` Async',
 		name: 'async',
 		description:
-			"Whether to perform the search async or not. It can be set to false (default) to open an HTTP connection and keep it open until you got your search results, or true to just submit your search to SerpApi and retrieve them later. In this case, you'll need to use our Searches Archive API to retrieve your results. async and no_cache parameters should not be used together. async should not be used on accounts with Ludicrous Speed enabled.",
+			"Whether to perform the search async or not. It can be set to false (default) to open an HTTP connection and keep it open until you got your search results, or true to just submit your search to SerpApi and retrieve them later. In this case, you'll need to use the Search Archive API to retrieve your results. async and no_cache parameters should not be used together. async should not be used on accounts with Ludicrous Speed enabled.",
 		default: false,
 		routing: {
 			request: {
@@ -35,7 +35,7 @@ export const serpApiFields: INodeProperties[] = [
 		displayName: '`zero_trace` ZeroTrace Mode',
 		name: 'zero_trace',
 		description:
-			'Whether to enable ZeroTrace or not. Enterprise only. It can be set to false (default) or true. Enable this mode to skip storing search parameters, search files, and search metadata on our servers. This may make debugging more difficult.',
+			"Whether to enable ZeroTrace or not. Enterprise only. It can be set to false (default) or true. Enable this mode to skip storing search parameters, search files, and search metadata on SerpApi's servers. This may make debugging more difficult.",
 		default: false,
 		routing: {
 			request: {

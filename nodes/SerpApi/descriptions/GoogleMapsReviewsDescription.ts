@@ -7,7 +7,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		displayName: '`data_id` Data ID',
 		name: 'data_id',
 		description:
-			'Parameter defines the Google Maps data ID. Find the data ID by using our Google Maps API. Either data_id or place_id should be set.',
+			'Parameter defines the Google Maps data ID. Find the data ID by using the Google Maps API. Either data_id or place_id should be set.',
 		default: '',
 		routing: {
 			request: {
@@ -27,7 +27,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		displayName: '`place_id` Place ID',
 		name: 'place_id',
 		description:
-			'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using our Google Maps API. You can read more about Place IDs here. Either data_id or place_id should be set.',
+			'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using the Google Maps API. You can read more about Place IDs here. Either data_id or place_id should be set.',
 		default: '',
 		routing: {
 			request: {
@@ -107,7 +107,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 				displayName: '`topic_id` Topic ID',
 				name: 'topic_id',
 				description:
-					'Parameter defines the ID of the topic you want to use for filtering reviews. You can access IDs inside our structured JSON response.',
+					'Parameter defines the ID of the topic you want to use for filtering reviews. You can access IDs inside the structured JSON response.',
 				default: '',
 				routing: {
 					request: {

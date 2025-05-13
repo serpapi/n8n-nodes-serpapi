@@ -90,7 +90,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: '`lsig` Additional Google Place ID',
 				name: 'lsig',
 				description:
-					'Parameter that you might have to use to force the knowledge graph map view to show up. You can find the lsig ID by using our Local Pack API or Google Local API. lsig ID is also available via a redirect Google uses within Google My Business.',
+					'Parameter that you might have to use to force the knowledge graph map view to show up. You can find the lsig ID by using the Local Pack API or Google Local API. lsig ID is also available via a redirect Google uses within Google My Business.',
 				default: '',
 				routing: {
 					request: {
