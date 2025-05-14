@@ -1046,7 +1046,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: 'Exclude Auto-corrected Results (_blrs)',
 				name: '_blrs',
 				description:
-					'Whether to exclude results from an auto-corrected query when the original query is spelled wrong. The recommended value for this parameter is spell_auto_correct. Omit _blrs if you want the search to include results for an auto-corrected query. Note that this parameter may not prevent eBay from returning results for an auto-corrected query if no other results are available.',
+					'Whether to exclude results from an auto-corrected query when the original query is spelled wrong.',
 				default: false,
 				routing: {
 					request: {
@@ -1061,7 +1061,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: 'Results filter (show_only)',
 				name: 'show_only',
 				description:
-					'Parameter defines the list of filters you can apply to the results. Available options (case-sensitive): Complete - Completed itemsSold - Sold itemsFR - Free returnsRPA - Returns acceptedAS - Authorized sellerSavings - Deals and savingsSaleItems - Sale itemsLots - Listed as lotsCharity - Benefits charityAV - Authenticity GuaranteeFS - Free shippingLPickup - Local pickup You can also combine multiple filter values by joining them with a comma (value + , + value; eg: Sold,FS).',
+					'Parameter defines the list of filters you can apply to the results.',
 				default: '',
 				routing: {
 					request: {
@@ -1217,7 +1217,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: 'Category ID (category_id)',
 				name: 'category_id',
 				description:
-					'Parameter defines the ID of a category where you want your search to be concentrated. ID values are accessible inside categories array, located in the JSON output (e.g. categories[1].id).You can search using category_id parameter without specifying _nkw parameter.',
+					'Parameter defines the ID of a category where you want your search to be concentrated.',
 				default: '',
 				routing: {
 					request: {
@@ -1247,7 +1247,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: 'Condition (LH_ItemCondition)',
 				name: 'LH_ItemCondition',
 				description:
-					'Parameter defines one or multiple product conditions to limit the search to. Condition is represented via numeric ID, e.g. 1000 for New. Multiple IDs should be joined with | delimeter, e.g. 1000|3000. List of supported IDs can be found on eBay documentation page. There is also undocumented ID 10 for Not Specified condition.',
+					'Parameter defines one or multiple product conditions to limit the search to.',
 				default: '',
 				routing: {
 					request: {

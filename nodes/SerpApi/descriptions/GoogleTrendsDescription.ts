@@ -40,7 +40,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
-					"Parameter defines the language to use for the Google Trends search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
+					'Parameter defines the language to use for the search.',
 				default: 'en',
 				routing: {
 					request: {

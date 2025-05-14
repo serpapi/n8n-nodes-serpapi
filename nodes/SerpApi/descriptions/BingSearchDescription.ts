@@ -27,7 +27,7 @@ export const bingSearchFields: INodeProperties[] = [
 		displayName: 'Location (location)',
 		name: 'location',
 		description:
-			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+			'Parameter defines from where you want the search to originate. See docs for supported locations: https://serpapi.com/locations-api',
 		default: '',
 		routing: {
 			request: {
@@ -87,7 +87,7 @@ export const bingSearchFields: INodeProperties[] = [
 				displayName: 'Market codes (mkt)',
 				name: 'mkt',
 				description:
-					'The market where the results come from (e.g. en-US). Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. The market must be in the form <language code>-<country code>. For example, en-US. The string is case insensitive. For a list of possible market values, see Market Codes. NOTE: If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. If you specify a market that is not listed in Market Codes, Bing uses a best fit market code based on an internal mapping that is subject to change. This parameter and the cc query parameter are mutually exclusive—do not specify both.',
+					'The market where the results come from (e.g. en-US). This parameter and the cc query parameter are mutually exclusive.',
 				default: 'en-us',
 				routing: {
 					request: {
@@ -225,7 +225,7 @@ export const bingSearchFields: INodeProperties[] = [
 				displayName: 'Adult Content Filtering (safeSearch)',
 				name: 'safeSearch',
 				description:
-					'Parameter defines the level of filtering for adult content. It can be set to: Off to return webpages with adult text, images, or videos. Moderate to return webpages with adult text, but not adult images or videos. Strict to not return webpages with adult text, images, or videos.',
+					'Parameter defines the level of filtering for adult content. It can be set to: Off, Moderate (default), or Strict.',
 				default: 'moderate',
 				routing: {
 					request: {
@@ -254,7 +254,7 @@ export const bingSearchFields: INodeProperties[] = [
 				displayName: 'Additional Filtering (filters)',
 				name: 'filters',
 				description:
-					'Parameter allows usage of a more complex filtering options such as filtering by date range ex1:"ez5_18169_18230" or using a specific display filters such as ufn:"Wunderman+Thompson"+sid:"5bede9a2-1bda-9887-e6eb-30b1b8b6b513"+catguid:"5bede9a2-1bda-9887-e6eb-30b1b8b6b513_cfb02057"+segment:"generic.carousel"+entitysegment:"Organization". Exact values can be constructed by using Bing search and copying filters query parameter.',
+					'Parameter allows usage of a more complex filtering options such as filtering by date range. Exact values can be constructed by using Bing search and copying filters query parameter.',
 				default: '',
 				routing: {
 					request: {
@@ -269,7 +269,7 @@ export const bingSearchFields: INodeProperties[] = [
 				displayName: 'Device (device)',
 				name: 'device',
 				description:
-					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).',
+					'Parameter defines the device to use to get the results. It can be set to desktop (default), tablet, or mobile.',
 				default: 'desktop',
 				routing: {
 					request: {

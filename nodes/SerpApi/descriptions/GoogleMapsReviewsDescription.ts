@@ -59,7 +59,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
-					"Parameter defines the language to use for the Google Maps Reviews search. It's a two-letter language code, for example, en for English (default), es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
+					'Parameter defines the language to use for the search.',
 				default: 'en',
 				routing: {
 					request: {

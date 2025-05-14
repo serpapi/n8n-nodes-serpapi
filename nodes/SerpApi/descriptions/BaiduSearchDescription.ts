@@ -68,7 +68,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				displayName: 'Result Offset (pn)',
 				name: 'pn',
 				description:
-					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.).",
+					"Parameter defines the result offset for pagination. It skips the given number of results. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, etc.)",
 				default: '',
 				routing: {
 					request: {
@@ -83,7 +83,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				displayName: 'Number of Results (rn)',
 				name: 'rn',
 				description:
-					'Parameter defines the maximum number of results to return, limited to 50. (e.g., 10 (default) returns 10 results, 30 returns 30 results, and 50 returns 50 results). This parameter is only available for desktop and tablet searches.',
+					'Parameter defines the maximum number of results to return, limited to 50. Default is 10. This parameter is only available for desktop and tablet searches.',
 				default: '10',
 				routing: {
 					request: {
@@ -98,7 +98,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				displayName: 'Time Period for Results (gpc)',
 				name: 'gpc',
 				description:
-					'Parameter defines the time period for results (e.g., stf=1743415359,1744020159|stftype=1 only returns results from the past 7 days. First integer within the parameter, 1743415359 is Unix Timestamp for 7 days ago. Second integer,1744020159 is Unix Timestamp for now)',
+					'Parameter accepts Unix timestamps to define the time period for results (e.g., stf=1743415359,1744020159|stftype=1 only returns results from the past 7 days)',
 				default: '',
 				routing: {
 					request: {
@@ -186,7 +186,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				displayName: 'Device (device)',
 				name: 'device',
 				description:
-					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).',
+					'Parameter defines the device to use to get the results. It can be set to desktop (default), tablet, or mobile.',
 				default: 'desktop',
 				routing: {
 					request: {

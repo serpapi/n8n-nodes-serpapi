@@ -27,7 +27,7 @@ export const bingImagesFields: INodeProperties[] = [
 		displayName: 'Market codes (mkt)',
 		name: 'mkt',
 		description:
-			'The market where the results come from (e.g. en-US). Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing Images API delivers results. NOTE: If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. This parameter and the cc query parameter are mutually exclusive—do not specify both.',
+			'The market where the results come from (e.g. en-US). This parameter and the cc query parameter are mutually exclusive.',
 		default: 'en-us',
 		routing: {
 			request: {
@@ -446,7 +446,7 @@ export const bingImagesFields: INodeProperties[] = [
 				displayName: 'Device (device)',
 				name: 'device',
 				description:
-					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).',
+					'Parameter defines the device to use to get the results. It can be set to desktop (default), tablet, or mobile.',
 				default: 'desktop',
 				routing: {
 					request: {

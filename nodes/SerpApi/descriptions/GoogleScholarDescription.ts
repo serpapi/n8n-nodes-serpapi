@@ -7,7 +7,7 @@ export const googleScholarFields: INodeProperties[] = [
 		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
-			'Parameter defines the query you want to search. You can also use helpers in your query such as: author:, or source:. Usage of cites parameter makes q optional. Usage of cites together with q triggers search within citing articles. Usage of cluster together with q and cites parameters is prohibited. Use cluster parameter only.',
+			'Parameter defines the query you want to search.',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -125,8 +125,8 @@ export const googleScholarFields: INodeProperties[] = [
 				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
-					"Parameter defines the language to use for the Google Scholar search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
-				default: 'af',
+					'Parameter defines the language to use for the search.',
+				default: 'en',
 				routing: {
 					request: {
 						qs: {

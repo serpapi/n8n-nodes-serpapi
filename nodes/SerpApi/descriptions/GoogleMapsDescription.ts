@@ -7,7 +7,7 @@ export const googleMapsFields: INodeProperties[] = [
 		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
-			'Parameter defines the query you want to search. You can use anything that you would use in a regular Google Maps search. The parameter is only required if type is set to search.',
+			'Parameter defines the query you want to search.',
 		default: 'coffee',
 		routing: {
 			request: {
@@ -90,7 +90,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
 				description:
-					'Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains page for a full list of supported Google domains.',
+					'Parameter defines the Google domain to use. It defaults to google.com',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -106,7 +106,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
-					"Parameter defines the language to use for the Google Maps search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google Maps languages page for a full list of supported Google Maps languages.",
+					'Parameter defines the language to use for the search.',
 				default: 'en',
 				routing: {
 					request: {

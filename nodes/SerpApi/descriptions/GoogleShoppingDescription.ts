@@ -7,7 +7,7 @@ export const googleShoppingFields: INodeProperties[] = [
 		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
-			'Parameter defines the query you want to search. You can use anything that you would use in a regular Google Shopping search.',
+			'Parameter defines the query you want to search.',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -28,7 +28,7 @@ export const googleShoppingFields: INodeProperties[] = [
 		displayName: 'Location (location)',
 		name: 'location',
 		description:
-			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+			'Parameter defines from where you want the search to originate. See docs for supported locations: https://serpapi.com/locations-api',
 		default: '',
 		routing: {
 			request: {
@@ -75,7 +75,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
 				description:
-					'Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains for a full list of supported Google domains.',
+					'Parameter defines the Google domain to use. It defaults to google.com',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -91,7 +91,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: 'Country (gl)',
 				name: 'gl',
 				description:
-					"Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries for a full list of supported Google countries.",
+					'Parameter defines the country to use for the Google search.',
 				default: 'us',
 				routing: {
 					request: {
@@ -107,7 +107,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
-					"Parameter defines the language to use for the Google Maps search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French) Head to the Google languages for a full list of supported Google languages.",
+					'Parameter defines the language to use for the search.',
 				default: 'en',
 				routing: {
 					request: {
