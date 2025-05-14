@@ -4,7 +4,7 @@ import { CountryOptions, DomainOptions, LanguageOptions } from './GoogleOptions'
 
 export const googleProductFields: INodeProperties[] = [
 	{
-		displayName: '`product_id` Product ID',
+		displayName: 'Product ID (product_id)',
 		name: 'product_id',
 		description:
 			'Parameter defines the product to get results for. Normally found from shopping results for supported products (e.g., https://www.google.com/shopping/product/{product_id}).',
@@ -37,7 +37,7 @@ export const googleProductFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`location` Location',
+				displayName: 'Location (location)',
 				name: 'location',
 				description:
 					"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
@@ -52,7 +52,7 @@ export const googleProductFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`uule` Encoded Location',
+				displayName: 'Encoded Location (uule)',
 				name: 'uule',
 				description:
 					"Parameter is the Google encoded location you want to use for the search. uule and location parameters can't be used together.",
@@ -67,7 +67,7 @@ export const googleProductFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`google_domain` Domain',
+				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
 				description:
 					'Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains page for a full list of supported Google domains.',
@@ -83,7 +83,7 @@ export const googleProductFields: INodeProperties[] = [
 				options: DomainOptions,
 			},
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
 				description:
 					"Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries page for a full list of supported Google countries.",
@@ -99,7 +99,7 @@ export const googleProductFields: INodeProperties[] = [
 				options: CountryOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
 					"Parameter defines the language to use for the Google Product search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
@@ -115,10 +115,10 @@ export const googleProductFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`start` Result Offset',
+				displayName: 'Result Offset (start)',
 				name: 'start',
 				description:
-					"Parameter defines the result offset when offers is enabled. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.) This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filterinstead to paginate through reviews.",
+					"Parameter defines the result offset when offers is enabled. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.) This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filter instead to paginate through reviews.",
 				default: '',
 				routing: {
 					request: {
@@ -130,10 +130,10 @@ export const googleProductFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`page` Start From Page',
+				displayName: 'Start From Page (page)',
 				name: 'page',
 				description:
-					'Parameter defines the page number for Google Online Sellers. There are 10 results per page. This parameter is equivalent to start (offset) = page * 10. This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filterinstead to paginate through reviews.',
+					'Parameter defines the page number for Google Online Sellers. There are 10 results per page. This parameter is equivalent to start (offset) = page * 10. This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filter instead to paginate through reviews.',
 				default: '',
 				routing: {
 					request: {
@@ -145,7 +145,7 @@ export const googleProductFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`offers` Offers Results',
+				displayName: 'Offers Results (offers)',
 				name: 'offers',
 				description:
 					'Whether to fetch offers results. Replaces former sellers=online results. The offers parameter cannot be used with offer_id parameter.',
@@ -160,7 +160,7 @@ export const googleProductFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`specs` Fetch Specs Results',
+				displayName: 'Fetch Specs Results (specs)',
 				name: 'specs',
 				description:
 					'Whether to fetch specs results. The specs parameter cannot be used with offer_id parameter.',
@@ -175,7 +175,7 @@ export const googleProductFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`reviews` Fetch Reviews Results',
+				displayName: 'Fetch Reviews Results (reviews)',
 				name: 'reviews',
 				description:
 					'Whether to fetch reviews results. The reviews parameter cannot be used with offer_id parameter.',
@@ -190,10 +190,10 @@ export const googleProductFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`filter` Advanced Filter Parameter',
+				displayName: 'Advanced Filter Parameter (filter)',
 				name: 'filter',
 				description:
-					'Parameter defines filters, sorting, and pagination for reviews and offers results. Offers filters:freeship:1 Show only products with free shippingucond:1 Show only used productsscoring:p Sort by base pricescoring:tp Sort by total pricescoring:cpd Sort by current promotion deals (special offers)scoring:mrd Sort by sellers ratingReviews filters:rnum:{number} Number of results (100 is max). rpt:{encoded value} Encoded pagination offset. You can get the value of rpt needed for the next page from the serpapi_pagination.next or serpapi_pagination.next_page_filter key in the JSON response to any Google Product API search with reviews enabled. It is recommended to use all filters provided in serpapi_pagination.next or serpapi_pagination.next_page_filter when paginating. Pagination examples: Online Sellers Pagination, Product Reviews Pagination.',
+					'Parameter defines filters, sorting, and pagination for reviews and offers results. Offers filters: freeship:1 Show only products with free shipping, ucond:1 Show only used products, scoring:p Sort by base price, scoring:tp Sort by total price, scoring:cpd Sort by current promotion deals (special offers), scoring:mrd Sort by sellers rating. Reviews filters: rnum:{number} Number of results (100 is max), rpt:{encoded value} Encoded pagination offset. You can get the value of rpt needed for the next page from the serpapi_pagination.next or serpapi_pagination.next_page_filter key in the JSON response to any Google Product API search with reviews enabled. It is recommended to use all filters provided in serpapi_pagination.next or serpapi_pagination.next_page_filter when paginating. Pagination examples: Online Sellers Pagination, Product Reviews Pagination.',
 				default: '',
 				routing: {
 					request: {
@@ -205,10 +205,10 @@ export const googleProductFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`offer_id` Offer ID',
+				displayName: 'Offer ID (offer_id)',
 				name: 'offer_id',
 				description:
-					"Parameter defines ID used to fetch multiple offers from an online seller, and can be found inside sellers_results.online_sellers .The offer_id parameter can't be used with offers, specs and reviews parameters",
+					"Parameter defines ID used to fetch multiple offers from an online seller, and can be found inside sellers_results.online_sellers. The offer_id parameter can't be used with offers, specs and reviews parameters.",
 				default: '',
 				routing: {
 					request: {

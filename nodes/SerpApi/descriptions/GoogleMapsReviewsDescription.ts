@@ -4,7 +4,7 @@ import { LanguageOptions } from './GoogleOptions';
 
 export const googleMapsReviewsFields: INodeProperties[] = [
 	{
-		displayName: '`data_id` Data ID',
+		displayName: 'Data ID (data_id)',
 		name: 'data_id',
 		description:
 			'Parameter defines the Google Maps data ID. Find the data ID by using the Google Maps API. Either data_id or place_id should be set.',
@@ -24,7 +24,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`place_id` Place ID',
+		displayName: 'Place ID (place_id)',
 		name: 'place_id',
 		description:
 			'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using the Google Maps API. You can read more about Place IDs here. Either data_id or place_id should be set.',
@@ -56,7 +56,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
 					"Parameter defines the language to use for the Google Maps Reviews search. It's a two-letter language code, for example, en for English (default), es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
@@ -72,7 +72,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`sort_by` Sort By',
+				displayName: 'Sort By (sort_by)',
 				name: 'sort_by',
 				description: 'Parameter is used for sorting and refining results',
 				default: 'qualityScore',
@@ -86,7 +86,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 				type: 'options',
 				options: [
 					{
-						name: 'Most relevant',
+						name: 'Most Relevant',
 						value: 'qualityScore',
 					},
 					{
@@ -94,17 +94,17 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 						value: 'newestFirst',
 					},
 					{
-						name: 'Highest rating',
+						name: 'Highest Rating',
 						value: 'ratingHigh',
 					},
 					{
-						name: 'Lowest rating',
+						name: 'Lowest Rating',
 						value: 'ratingLow',
 					},
 				],
 			},
 			{
-				displayName: '`topic_id` Topic ID',
+				displayName: 'Topic ID (topic_id)',
 				name: 'topic_id',
 				description:
 					'Parameter defines the ID of the topic you want to use for filtering reviews. You can access IDs inside the structured JSON response.',
@@ -119,7 +119,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`num` Number of results',
+				displayName: 'Number of Results (num)',
 				name: 'num',
 				description:
 					'Parameter defines the maximum number of results to return. It ranges from 1 to 20. It defaults to 10. Parameter cannot be used on the initial page when neither next_page_topic nor topic_id is set. It always returns 8 results.',
@@ -134,7 +134,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`next_page_token` Next Page Token',
+				displayName: 'Next Page Token (next_page_token)',
 				name: 'next_page_token',
 				description:
 					'Parameter defines the next page token. It is used for retrieving the next page results.',

@@ -3,7 +3,7 @@ import { serpApiFields } from './SerpApiDescription';
 
 export const bingImagesFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
 			'Parameter defines the search query. You can use anything that you would use in a regular Bing Images search.',
@@ -24,7 +24,7 @@ export const bingImagesFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`mkt` Market codes',
+		displayName: 'Market codes (mkt)',
 		name: 'mkt',
 		description:
 			'The market where the results come from (e.g. en-US). Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing Images API delivers results. NOTE: If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. This parameter and the cc query parameter are mutually exclusive—do not specify both.',
@@ -96,7 +96,7 @@ export const bingImagesFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`cc` Country',
+				displayName: 'Country (cc)',
 				name: 'cc',
 				description:
 					'Parameter defines the country to search from. This parameter and the mkt query parameter are mutually exclusive—do not specify both.',
@@ -149,7 +149,7 @@ export const bingImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`first` Result Offset',
+				displayName: 'Result Offset (first)',
 				name: 'first',
 				description:
 					'Parameter controls the offset of the organic results. This parameter defaults to 1. (e.g., first=10 will move the 10th organic result to the first position).',
@@ -164,7 +164,7 @@ export const bingImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`count` Number of Results',
+				displayName: 'Number of Results (count)',
 				name: 'count',
 				description:
 					'Parameter controls the number of results per page. This parameter is only a suggestion and might not reflect the returned results.',
@@ -179,7 +179,7 @@ export const bingImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`imagesize` Image Size',
+				displayName: 'Image Size (imagesize)',
 				name: 'imagesize',
 				description: 'Parameter is used for filtering images by size',
 				default: 'medium',
@@ -211,7 +211,7 @@ export const bingImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`color2` Color',
+				displayName: 'Color (color2)',
 				name: 'color2',
 				description: 'Parameter is used for filtering images by color',
 				default: 'color',
@@ -283,7 +283,7 @@ export const bingImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`photo` Type',
+				displayName: 'Type (photo)',
 				name: 'photo',
 				description: 'Parameter is used for filtering images by image type',
 				default: 'photo',
@@ -319,7 +319,7 @@ export const bingImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`aspect` Layout',
+				displayName: 'Layout (aspect)',
 				name: 'aspect',
 				description: 'Parameter is used for filtering images by layout',
 				default: 'wide',
@@ -347,7 +347,7 @@ export const bingImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`face` People',
+				displayName: 'People (face)',
 				name: 'face',
 				description: 'Parameter is used for filtering images by people',
 				default: 'portrait',
@@ -371,7 +371,7 @@ export const bingImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`age` Date',
+				displayName: 'Date (age)',
 				name: 'age',
 				description: 'Parameter is used for filtering images by date',
 				default: 'lt1440',
@@ -403,7 +403,7 @@ export const bingImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`license` License',
+				displayName: 'License (license)',
 				name: 'license',
 				description: 'Parameter is used for filtering images by license',
 				default: 'Type-Any',
@@ -443,7 +443,7 @@ export const bingImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`device` Device',
+				displayName: 'Device (device)',
 				name: 'device',
 				description:
 					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).',

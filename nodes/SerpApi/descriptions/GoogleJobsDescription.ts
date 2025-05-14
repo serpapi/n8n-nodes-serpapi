@@ -4,7 +4,7 @@ import { DomainOptions, LanguageOptions } from './GoogleOptions';
 
 export const googleJobsFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
 		description: 'Parameter defines the query you want to search',
 		default: 'Barista',
@@ -36,7 +36,7 @@ export const googleJobsFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`location` Location',
+				displayName: 'Location (location)',
 				name: 'location',
 				description:
 					"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
@@ -51,7 +51,7 @@ export const googleJobsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`uule` Encoded Location',
+				displayName: 'Encoded Location (uule)',
 				name: 'uule',
 				description:
 					"Parameter is the Google encoded location you want to use for the search. uule and location parameters can't be used together.",
@@ -66,7 +66,7 @@ export const googleJobsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`google_domain` Domain',
+				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
 				description:
 					'Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains page for a full list of supported Google domains.',
@@ -82,7 +82,7 @@ export const googleJobsFields: INodeProperties[] = [
 				options: DomainOptions,
 			},
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
 				description:
 					"Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries page for a full list of supported Google countries.",
@@ -98,7 +98,7 @@ export const googleJobsFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
 					"Parameter defines the language to use for the Google Jobs search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
@@ -114,10 +114,10 @@ export const googleJobsFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`next_page_token` Next Page Token',
+				displayName: 'Next Page Token (next_page_token)',
 				name: 'next_page_token',
 				description:
-					'Parameter defines the next page token. It is used for retrieving the next page of results. Up to 10 results are returned per page. The next page token can be found in the SerpApi JSON response: serpapi_pagination -&gt; next_page_token.',
+					'Parameter defines the next page token. It is used for retrieving the next page of results. Up to 10 results are returned per page. The next page token can be found in the SerpApi JSON response: serpapi_pagination -> next_page_token.',
 				default: '',
 				routing: {
 					request: {
@@ -130,7 +130,7 @@ export const googleJobsFields: INodeProperties[] = [
 				typeOptions: { password: true },
 			},
 			{
-				displayName: '`chips` Chips',
+				displayName: 'Chips (chips)',
 				name: 'chips',
 				description:
 					'This parameter has been deprecated by Google. Parameter defines additional query conditions. Top of a job search page contains elements called chips, its values are extracted in order to be passed to chips parameter. E.g. city:Owg_06VPwoli_nfhBo8LyA== will return results for New York.',
@@ -145,7 +145,7 @@ export const googleJobsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`lrad` Search Radius',
+				displayName: 'Search Radius (lrad)',
 				name: 'lrad',
 				description: 'Defines search radius in kilometers. Does not strictly limit the radius.',
 				default: '',
@@ -159,7 +159,7 @@ export const googleJobsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`ltype` Work From Home',
+				displayName: 'Work From Home (ltype)',
 				name: 'ltype',
 				description: 'Whether to filter the results by work from home',
 				default: false,
@@ -173,7 +173,7 @@ export const googleJobsFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`uds` Filter Search',
+				displayName: 'Filter Search (uds)',
 				name: 'uds',
 				description:
 					"Parameter enables to filter search. It's a string provided by Google as a filter. uds values are provided under the section: filters with uds, q and serpapi_link values provided for each filter.",

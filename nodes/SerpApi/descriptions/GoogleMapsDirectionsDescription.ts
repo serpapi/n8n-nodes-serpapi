@@ -4,7 +4,7 @@ import { CountryOptions, LanguageOptions } from './GoogleOptions';
 
 export const googleMapsDirectionsFields: INodeProperties[] = [
 	{
-		displayName: '`start_addr` Starting point address',
+		displayName: 'Starting Point Address (start_addr)',
 		name: 'start_addr',
 		description:
 			'Parameter defines the address of the starting point for the direction you want to search. You can use anything that you would use in a regular Google Maps Directions search. Alternatively, you can use start_data_id or start_coords.',
@@ -24,7 +24,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`end_addr` Ending point address',
+		displayName: 'Ending Point Address (end_addr)',
 		name: 'end_addr',
 		description:
 			'Parameter defines the address of the ending point for the direction you want to search. You can use anything that you would use in a regular Google Maps Directions search. Alternatively, you can use end_data_id or end_coords.',
@@ -56,7 +56,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
 				description:
 					"Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries page for a full list of supported Google countries.",
@@ -72,7 +72,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				options: CountryOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
 					"Parameter defines the language to use for the Google Maps Directions search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
@@ -88,7 +88,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`travel_mode` Travel mode',
+				displayName: 'Travel Mode (travel_mode)',
 				name: 'travel_mode',
 				description: 'Parameter defines the travel mode',
 				default: '6',
@@ -132,7 +132,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`start_data_id` Starting point data ID',
+				displayName: 'Starting Point Data ID (start_data_id)',
 				name: 'start_data_id',
 				description:
 					'Parameter defines the data ID of the starting point for the direction you want to search. Find the data ID of a place using the Google Maps API. Alternatively, you can use start_addr or start_coords.',
@@ -147,7 +147,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`end_data_id` Ending point data ID',
+				displayName: 'Ending Point Data ID (end_data_id)',
 				name: 'end_data_id',
 				description:
 					'Parameter defines the data ID of the ending point for the direction you want to search. Find the data ID of a place using the Google Maps API. Alternatively, you can use end_addr or end_coords.',
@@ -162,7 +162,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`start_coords` Starting point GPS coordinates',
+				displayName: 'Starting Point GPS Coordinates (start_coords)',
 				name: 'start_coords',
 				description:
 					'Parameter defines the GPS coordinates of the starting point for the direction you want to search. The format is latitude,longitude. E.g. 30.197471099,-97.66635289. Alternatively, you can use start_addr or start_data_id.',
@@ -177,7 +177,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`end_coords` Ending point GPS coordinates',
+				displayName: 'Ending Point GPS Coordinates (end_coords)',
 				name: 'end_coords',
 				description:
 					'Parameter defines the GPS coordinates of the ending point for the direction you want to search. The format is latitude,longitude. E.g. 30.197471099,-97.66635289. Alternatively, you can use end_addr or end_data_id.',
@@ -192,7 +192,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`distance_unit` Distance Unit',
+				displayName: 'Distance Unit (distance_unit)',
 				name: 'distance_unit',
 				description: 'Parameter defines the displayed distance unit',
 				default: '1',
@@ -216,7 +216,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`avoid` Avoid options',
+				displayName: 'Avoid Options (avoid)',
 				name: 'avoid',
 				description:
 					'Parameter defines avoid options. Available options: highways, tolls, ferries. You can also combine multiple options by joining them with a comma (e.g.: highways,tolls).',
@@ -231,7 +231,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`prefer` Perfer options',
+				displayName: 'Preferred Transit Options (prefer)',
 				name: 'prefer',
 				description:
 					'Parameter defines preferred transit options. Available options: bus, subway, train, tram_light_rail. You can also combine multiple options by joining them with a comma (e.g.: subway,train). Parameter works only if travel_mode parameter is set to: 3 (Transit)',
@@ -246,7 +246,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`route` Route options',
+				displayName: 'Route Options (route)',
 				name: 'route',
 				description: 'Parameter defines route options',
 				default: '2',
@@ -274,7 +274,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`time` Travel time',
+				displayName: 'Travel Time (time)',
 				name: 'time',
 				description:
 					'Parameter defines the time to travel. Available options: depart_at:xxxxxx - Specifies the departure time where xxxxxx is the timestamp. E.g. depart_at:1698229538 specifies the departure time to 2023-10-25 10:25:38 GMT+0000. arrive_by:xxxxxx - Specifies the arrival time, where xxxxxx is the timestamp. E.g. arrive_by:1698229538 specifies the arrival time to 2023-10-25 10:25:38 GMT+0000. last_available - Takes the last available transit. This option works only if travel_mode parameter is set to: 3 (Transit)',

@@ -3,7 +3,7 @@ import { serpApiFields } from './SerpApiDescription';
 
 export const bingSearchFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
 			"Parameter defines the search query. You can use anything that you would use in a regular Bing search. (e.g., 'query', NOT, OR, site:, filetype:, near:, ip:, loc:, feed: etc.).",
@@ -24,7 +24,7 @@ export const bingSearchFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`location` Location',
+		displayName: 'Location (location)',
 		name: 'location',
 		description:
 			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
@@ -56,7 +56,7 @@ export const bingSearchFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`lat` Latitude',
+				displayName: 'Latitude (lat)',
 				name: 'lat',
 				description: 'Defines a GPS latitude for the search origin',
 				default: '',
@@ -70,7 +70,7 @@ export const bingSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`lon` Longitude',
+				displayName: 'Longitude (lon)',
 				name: 'lon',
 				description: 'Defines a GPS longitude for the search origin',
 				default: '',
@@ -84,10 +84,10 @@ export const bingSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`mkt` Market codes',
+				displayName: 'Market codes (mkt)',
 				name: 'mkt',
 				description:
-					'The market where the results come from (e.g. en-US). Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. The market must be in the form &lt;language code&gt;-&lt;country code&gt;. For example, en-US. The string is case insensitive. For a list of possible market values, see Market Codes. NOTE: If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. If you specify a market that is not listed in Market Codes, Bing uses a best fit market code based on an internal mapping that is subject to change. This parameter and the cc query parameter are mutually exclusive—do not specify both.',
+					'The market where the results come from (e.g. en-US). Typically, mkt is the country where the user is making the request from. However, it could be a different country if the user is not located in a country where Bing delivers results. The market must be in the form <language code>-<country code>. For example, en-US. The string is case insensitive. For a list of possible market values, see Market Codes. NOTE: If known, you are encouraged to always specify the market. Specifying the market helps Bing route the request and return an appropriate and optimal response. If you specify a market that is not listed in Market Codes, Bing uses a best fit market code based on an internal mapping that is subject to change. This parameter and the cc query parameter are mutually exclusive—do not specify both.',
 				default: 'en-us',
 				routing: {
 					request: {
@@ -139,8 +139,8 @@ export const bingSearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`cc` Country',
-				name: 'cc',
+				displayName: 'Country (cc)',
+				name: 'ccm',
 				description:
 					'Parameter defines the country to search from. It follows the 2-character ISO_3166-1 format. (e.g., us for United States, de for Germany, gb for United Kingdom, etc.).',
 				default: 'US',
@@ -154,7 +154,7 @@ export const bingSearchFields: INodeProperties[] = [
 				type: 'options',
 				options: [
 					{ name: 'AR - Argentina', value: 'AR' },
-					{ name: 'AT - Austria', value: 'AT' },
+					{ name: '-card Austria', value: 'AT' },
 					{ name: 'AU - Australia', value: 'AU' },
 					{ name: 'BE - Belgium', value: 'BE' },
 					{ name: 'BR - Brazil', value: 'BR' },
@@ -192,7 +192,7 @@ export const bingSearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`first` Result Offset',
+				displayName: 'Result Offset (first)',
 				name: 'first',
 				description:
 					'Parameter controls the offset of the organic results. This parameter defaults to 1. (e.g., first=10 will move the 10th organic result to the first position).',
@@ -207,7 +207,7 @@ export const bingSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`count` Number of Results',
+				displayName: 'Number of Results (count)',
 				name: 'count',
 				description:
 					'Parameter controls the number of results per page. Minimum: 1, Maximum: 50. This parameter is only a suggestion and might not reflect actual results returned.',
@@ -222,7 +222,7 @@ export const bingSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`safeSearch` Adult Content Filtering',
+				displayName: 'Adult Content Filtering (safeSearch)',
 				name: 'safeSearch',
 				description:
 					'Parameter defines the level of filtering for adult content. It can be set to: Off to return webpages with adult text, images, or videos. Moderate to return webpages with adult text, but not adult images or videos. Strict to not return webpages with adult text, images, or videos.',
@@ -251,7 +251,7 @@ export const bingSearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`filters` Additional Filtering',
+				displayName: 'Additional Filtering (filters)',
 				name: 'filters',
 				description:
 					'Parameter allows usage of a more complex filtering options such as filtering by date range ex1:"ez5_18169_18230" or using a specific display filters such as ufn:"Wunderman+Thompson"+sid:"5bede9a2-1bda-9887-e6eb-30b1b8b6b513"+catguid:"5bede9a2-1bda-9887-e6eb-30b1b8b6b513_cfb02057"+segment:"generic.carousel"+entitysegment:"Organization". Exact values can be constructed by using Bing search and copying filters query parameter.',
@@ -266,7 +266,7 @@ export const bingSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`device` Device',
+				displayName: 'Device (device)',
 				name: 'device',
 				description:
 					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).',

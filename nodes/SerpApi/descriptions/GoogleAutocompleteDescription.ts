@@ -4,7 +4,7 @@ import { CountryOptions, LanguageOptions } from './GoogleOptions';
 
 export const googleAutocompleteFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
 			'Parameter defines the search query. A query that would be used to provide completion options.',
@@ -37,7 +37,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
 				description:
 					"Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries page for a full list of supported Google countries.",
@@ -53,7 +53,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 				options: CountryOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
 					"Parameter defines the language to use for the Google Autocomplete search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
@@ -69,7 +69,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`cp` Cursor pointer',
+				displayName: 'Cursor pointer (cp)',
 				name: 'cp',
 				description:
 					'Cursor pointer defines the position of cursor for the query provided, position starts from 0 which is a case where cursor is placed before the query |query. If not provided acts as cursor is placed in the end of query query|.',
@@ -84,7 +84,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`client` Client',
+				displayName: 'Client (client)',
 				name: 'client',
 				description: 'Parameter used to define client for autocomplete',
 				default: 'chrome',

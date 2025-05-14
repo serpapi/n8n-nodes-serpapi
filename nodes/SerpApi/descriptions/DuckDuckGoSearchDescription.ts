@@ -3,7 +3,7 @@ import { serpApiFields } from './SerpApiDescription';
 
 export const duckDuckGoSearchFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
 			'Parameter defines the query you want to search. You can use anything that you would use in a regular DuckDuckGo search. (e.g., inurl:, site:, intitle:, etc.)',
@@ -36,7 +36,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`kl` Region',
+				displayName: 'Region (kl)',
 				name: 'kl',
 				description:
 					'Parameter defines the region to use for the DuckDuckGo search. Region code examples: us-en for the United States, uk-en for United Kingdom, or fr-fr for France. Head to the DuckDuckGo regions for a full list of supported regions.',
@@ -121,7 +121,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`safe` Adult Content Filtering',
+				displayName: 'Adult Content Filtering (safe)',
 				name: 'safe',
 				description: 'Parameter defines the level of filtering for adult content',
 				default: '-1',
@@ -149,7 +149,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`df` Filter By Date',
+				displayName: 'Filter By Date (df)',
 				name: 'df',
 				description:
 					'Parameter defines results filtered by date. It can be set to: d - Past day, w - Past week, m - Past month, y - Past year, or you can pass a custom date following the next format: from_date + .. + to_date (e.g. 2021-06-15..2021-06-16).',
@@ -164,7 +164,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`start` Result Offset',
+				displayName: 'Result Offset (start)',
 				name: 'start',
 				description:
 					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. When pagination is not being used (initial search request), number of organic_results can vary between 26 and 30. When pagination is being used (value of start parameter is bigger than 0), organic_results return 50 results.",

@@ -4,7 +4,7 @@ import { LanguageOptions } from './GoogleOptions';
 
 export const googleTrendsFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
 			'Parameter defines the query or queries you want to search. You can use anything that you would use in a regular Google Trends search. The maximum number of queries per search is 5 (this only applies to "Interest over time" and "Compared breakdown by region" data_type, other types of data will only accept 1 query per search).When passing multiple queries you need to use a comma (,) to separate them (e.g. coffee,pizza,dark chocolate,/m/027lnzs,bread).Query can be a "Search term" (e.g. World Cup, Eminem, iPhone, etc.) or a "Topic" (e.g. /m/0663v, /m/027lnzs, /g/11mw8j71m4, etc.). Queries that are "Topics" are encoded. To retrieve these values you can use the Google Trends Autocomplete API. Maximum length for each query is 100 characters.',
@@ -37,7 +37,7 @@ export const googleTrendsFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
 				description:
 					"Parameter defines the language to use for the Google Trends search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
@@ -53,7 +53,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`geo` Location',
+				displayName: 'Location (geo)',
 				name: 'geo',
 				description:
 					'Parameter defines the location from where you want the search to originate. It defaults to Worldwide (activated when the value of geo parameter is not set or empty). Head to the Google Trends Locations for a full list of supported Google Trends locations.',
@@ -14396,7 +14396,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`region` Region',
+				displayName: 'Region (region)',
 				name: 'region',
 				description:
 					'Parameter is used for getting more specific results when using "Compared breakdown by region" and "Interest by region" data_type charts. Other data_type charts do not accept region parameter. The default value depends on the geo location that is set. Not all region options will return results for every geo location.',
@@ -14429,7 +14429,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`data_type` Data type',
+				displayName: 'Data type (data_type)',
 				name: 'data_type',
 				description:
 					'Parameter defines the type of search you want to do. Available options: Interest over time (default) - Accepts both single and multiple queries per search. Compared breakdown by region - Accepts only multiple queries per search. Interest by region - Accepts only single query per search. Related topics - Accepts only single query per search. Related queries - Accepts only single query per search.',
@@ -14451,7 +14451,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`tz` Time Zone',
+				displayName: 'Time Zone (tz)',
 				name: 'tz',
 				description:
 					'Parameter is used to define a time zone offset. The default value is set to 420 (Pacific Day Time(PDT): -07:00). Value is shown in minutes and can span from -1439 to 1439.tz can be calculated using the time difference between UTC +0 and desired timezone. Examples:420 - PDT600 - Pacific/Tahiti-540 - Asia/Tokyo-480 - Canada/Pacific. To make sure the value is correct, please refer to the time zone database and your programming language UTC offset calculation. You may visit the documentation to get more information.',
@@ -14466,7 +14466,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`cat` Category',
+				displayName: 'Category (cat)',
 				name: 'cat',
 				description:
 					'Parameter is used to define a search category. The default value is set to 0 ("All categories"). Head to the Google Trends Categories for a full list of supported Google Trends Categories.',
@@ -19015,7 +19015,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`gprop` Property',
+				displayName: 'Property (gprop)',
 				name: 'gprop',
 				description: 'Parameter is used for sorting results by property',
 				default: '',
@@ -19036,7 +19036,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`date` Date',
+				displayName: 'Date (date)',
 				name: 'date',
 				description:
 					'Parameter is used to define a date. Available options:now 1-H - Past hournow 4-H - Past 4 hoursnow 1-d - Past daynow 7-d - Past 7 daystoday 1-m - Past 30 daystoday 3-m - Past 90 daystoday 12-m - Past 12 monthstoday 5-y - Past 5 yearsall - 2004 - presentYou can also pass custom values:Dates from 2004 to present: yyyy-mm-dd yyyy-mm-dd (e.g. 2021-10-15 2022-05-25)Dates with hours within a week range: yyyy-mm-ddThh yyyy-mm-ddThh (e.g. 2022-05-19T10 2022-05-24T22). Hours will be calculated depending on the tz (time zone) parameter.',
@@ -19051,7 +19051,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`csv` Show CSV',
+				displayName: 'Show CSV (csv)',
 				name: 'csv',
 				description: 'Whether to retrieve the CSV results',
 				default: false,
@@ -19065,7 +19065,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`include_low_search_volume` Include Low Search Volume Regions',
+				displayName: 'Include Low Search Volume Regions (include_low_search_volume)',
 				name: 'include_low_search_volume',
 				description:
 					'Whether to include low search volume regions in the results. Set the parameter to true to include low search volume regions in the results. This parameter is ignored if data_type is not set to GEO_MAP or GEO_MAP_0.',
