@@ -4,10 +4,10 @@ import { CountryOptions, LanguageOptions } from './GoogleOptions';
 
 export const googleFlightsFields: INodeProperties[] = [
 	{
-		displayName: '`departure_id` Departure airport code / location kgmid',
+		displayName: 'Departure airport code / location kgmid (departure_id)',
 		name: 'departure_id',
 		description:
-			'Parameter defines the departure airport code or location kgmid. An airport code is an uppercase 3-letter code. You can search for it on Google Flights or IATA. For example, CDG is Paris Charles de Gaulle Airport and AUS is Austin-Bergstrom International Airport. A location kgmid is a string that starts with /m/. You can search for a location on Wikidata and use its "Freebase ID" as the location kgmid. For example, /m/0vzm is the location kgmid for Austin, TX. You can specify multiple departure airports by separating them with a comma. For example, CDG,ORY,/m/04jpl.',
+			'Defines the departure airport code (3-letter IATA) or location kgmid (starts with /m/). Multiple entries can be comma-separated.',
 		default: 'AUS',
 		routing: {
 			request: {
@@ -24,10 +24,10 @@ export const googleFlightsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`arrival_id` Arrival airport code / location kgmid',
+		displayName: 'Arrival airport code / location kgmid (arrival_id)',
 		name: 'arrival_id',
 		description:
-			'Parameter defines the arrival airport code or location kgmid. An airport code is an uppercase 3-letter code. You can search for it on Google Flights or IATA. For example, CDG is Paris Charles de Gaulle Airport and AUS is Austin-Bergstrom International Airport. A location kgmid is a string that starts with /m/. You can search for a location on Wikidata and use its "Freebase ID" as the location kgmid. For example, /m/0vzm is the location kgmid for Austin, TX. You can specify multiple arrival airports by separating them with a comma. For example, CDG,ORY,/m/04jpl.',
+			'Defines the arrival airport code (3-letter IATA) or location kgmid (starts with /m/). Multiple entries can be comma-separated.',
 		default: 'CDG',
 		routing: {
 			request: {
@@ -44,7 +44,7 @@ export const googleFlightsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`outbound_date` Outbound Date',
+		displayName: 'Outbound Date (outbound_date)',
 		name: 'outbound_date',
 		description: 'Parameter defines the outbound date. The format is YYYY-MM-DD. e.g. 2025-03-14',
 		default: '',
@@ -63,7 +63,7 @@ export const googleFlightsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`return_date` Return Date',
+		displayName: 'Return Date (return_date)',
 		name: 'return_date',
 		description:
 			'Parameter defines the return date. The format is YYYY-MM-DD. e.g. 2025-03-20Parameter is required if type parameter is set to: 1 (Round trip)',
@@ -83,10 +83,10 @@ export const googleFlightsFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`type` Flight Type',
+		displayName: 'Flight Type (type)',
 		name: 'type',
 		description:
-			'Parameter defines the type of the flights. When this parameter is set to Multi-city, use multi_city_json to set the flight information. To obtain the returning flight information for Round Trip (default), you need to make another request using a departure_token',
+			'Parameter defines the type of the flights. When this parameter is set to Multi-city, use multi_city_json to set the flight information.',
 		default: '1',
 		routing: {
 			request: {
@@ -129,10 +129,9 @@ export const googleFlightsFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					"Parameter defines the country to use for the Google Flights search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries page for a full list of supported Google countries.",
+				description: 'Parameter defines the country to use for the Google Flights search',
 				default: 'us',
 				routing: {
 					request: {
@@ -145,10 +144,9 @@ export const googleFlightsFields: INodeProperties[] = [
 				options: CountryOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					"Parameter defines the language to use for the Google Flights search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {
@@ -161,10 +159,9 @@ export const googleFlightsFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`currency` Currency',
+				displayName: 'Currency (currency)',
 				name: 'currency',
-				description:
-					'Parameter defines the currency of the returned prices. Default to USD. Head to the Google Travel Currencies page for a full list of supported currency codes.',
+				description: 'Parameter defines the currency of the returned prices. Default to USD.',
 				default: 'USD',
 				routing: {
 					request: {
@@ -249,7 +246,7 @@ export const googleFlightsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`travel_class` Travel Class',
+				displayName: 'Travel Class (travel_class)',
 				name: 'travel_class',
 				description: 'Parameter defines the travel class',
 				default: 1,
@@ -281,10 +278,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`multi_city_json` Parameters for Multi-city',
+				displayName: 'Parameters for Multi-city (multi_city_json)',
 				name: 'multi_city_json',
 				description:
-					'Parameter defines the flight information for multi-city flights. It\'s a JSON string containing multiple flight information objects. Each object should contain the following fields: "departure_id" - The departure airport code or location kgmid. The format is the same as the main departure_id parameter. "arrival_id" - The arrival airport code or location kgmid. The format is the same as the main arrival_id parameter. "date" - Flight date. The format is the same as the outbound_date parameter. "times" - Time range for the flight. The format is the same as the outbound_times parameter. This parameter is optional. Example: [{"departure_id":"CDG","arrival_id":"NRT","date":"2025-03-20"},{"departure_id":"NRT","arrival_id":"LAX,SEA","date":"2025-03-27"},{"departure_id":"LAX,SEA","arrival_id":"AUS","date":"2025-04-03","times":"8,18,9,23"}]. The example is a multi-city flight from CDG to NRT on 2025-03-20, then from NRT to LAX or SEA on 2025-03-27, and finally from LAX or SEA to AUS on 2025-04-03. The last flight has a departure time range from 8:00 AM to 7:00 PM and an arrival time range from 9:00 AM to 12:00 AM (Midnight).',
+					'Defines multi-city flight info as a JSON string of objects with required fields: departure_id, arrival_id, and date, (optional) times for time ranges',
 				default: '',
 				routing: {
 					request: {
@@ -296,9 +293,9 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`show_hidden` Show hidden results',
+				displayName: 'Show hidden results (show_hidden)',
 				name: 'show_hidden',
-				description: 'Whether to include the hidden flight results. Default to false.',
+				description: 'Whether to include the hidden flight results',
 				default: false,
 				routing: {
 					request: {
@@ -310,10 +307,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`deep_search` Deep search',
+				displayName: 'Deep search (deep_search)',
 				name: 'deep_search',
 				description:
-					'Whether to enable deep search, which may yield better results but with a longer response time. Deep search results are identical to those found on Google Flights pages in the browser. By default, this option is set to false for performance reasons.',
+					'Whether to enable deep search, which may yield better results but with a longer response time. Deep search results are identical to those found on Google Flights pages in the browser.',
 				default: false,
 				routing: {
 					request: {
@@ -325,9 +322,9 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`adults` Number of Adults',
+				displayName: 'Number of Adults (adults)',
 				name: 'adults',
-				description: 'Parameter defines the number of adults. Default to 1.',
+				description: 'Parameter defines the number of adults',
 				default: 1,
 				routing: {
 					request: {
@@ -339,9 +336,9 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`children` Number of Children',
+				displayName: 'Number of Children (children)',
 				name: 'children',
-				description: 'Parameter defines the number of children. Default to 0.',
+				description: 'Parameter defines the number of children',
 				default: 0,
 				routing: {
 					request: {
@@ -353,9 +350,9 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`infants_in_seat` Number of Infants in seat',
+				displayName: 'Number of Infants in seat (infants_in_seat)',
 				name: 'infants_in_seat',
-				description: 'Parameter defines the number of infants in seat. Default to 0.',
+				description: 'Parameter defines the number of infants in seat',
 				default: 0,
 				routing: {
 					request: {
@@ -367,9 +364,9 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`infants_on_lap` Number of Infants on lap',
+				displayName: 'Number of Infants on lap (infants_on_lap)',
 				name: 'infants_on_lap',
-				description: 'Parameter defines the number of infants on lap. Default to 0.',
+				description: 'Parameter defines the number of infants on lap',
 				default: 0,
 				routing: {
 					request: {
@@ -381,7 +378,7 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`sort_by` Sort By',
+				displayName: 'Sort By (sort_by)',
 				name: 'sort_by',
 				description: 'Parameter defines the sorting order of the results',
 				default: '1',
@@ -421,7 +418,7 @@ export const googleFlightsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`stops` Stops',
+				displayName: 'Stops (stops)',
 				name: 'stops',
 				description: 'Parameter defines the number of stops during the flight',
 				default: 0,
@@ -453,10 +450,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`exclude_airlines` Exclude airlines',
+				displayName: 'Exclude airlines (exclude_airlines)',
 				name: 'exclude_airlines',
 				description:
-					"Parameter defines the airline codes to be excluded. Split multiple airlines with comma. It can't be used together with include_airlines. Each airline code should be a 2-character IATA code consisting of either two uppercase letters or one uppercase letter and one digit. You can search for airline codes on IATA. For example, UA is United Airlines. Additionally, alliances can be also included here: STAR_ALLIANCE - Star Alliance, SKYTEAM - SkyTeam, ONEWORLD - Oneworld. exclude_airlines and include_airlines parameters can't be used together.",
+					'Defines airline codes to exclude, using 2-character IATA codes or alliance names (ONEWORLD, SKYTEAM, STAR_ALLIANCE). Comma-separated. Cannot be used with include_airlines.',
 				default: '',
 				routing: {
 					request: {
@@ -468,10 +465,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`include_airlines` Include airlines',
+				displayName: 'Include airlines (include_airlines)',
 				name: 'include_airlines',
 				description:
-					"Parameter defines the airline codes to be included. Split multiple airlines with comma. It can't be used together with exclude_airlines. Each airline code should be a 2-character IATA code consisting of either two uppercase letters or one uppercase letter and one digit. You can search for airline codes on IATA. For example, UA is United Airlines. Additionally, alliances can be also included here: STAR_ALLIANCE - Star Alliance, SKYTEAM - SkyTeam, ONEWORLD - Oneworld. exclude_airlines and include_airlines parameters can't be used together.",
+					'Defines airline codes to include, using 2-character IATA codes or alliance names (ONEWORLD, SKYTEAM, STAR_ALLIANCE). Comma-separated. Cannot be used with exclude_airlines.',
 				default: '',
 				routing: {
 					request: {
@@ -483,9 +480,9 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`bags` bags',
+				displayName: 'Bags (bags)',
 				name: 'bags',
-				description: 'Parameter defines the number of carry-on bags. Default to 0.',
+				description: 'Parameter defines the number of carry-on bags',
 				default: 0,
 				routing: {
 					request: {
@@ -497,10 +494,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`max_price` Max price',
+				displayName: 'Max price (max_price)',
 				name: 'max_price',
-				description: 'Parameter defines the maximum ticket price. Default to unlimited.',
-				default: '',
+				description: 'Parameter defines the maximum ticket price',
+				default: 'unlimited',
 				routing: {
 					request: {
 						qs: {
@@ -511,10 +508,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`outbound_times` Outbound times',
+				displayName: 'Outbound times (outbound_times)',
 				name: 'outbound_times',
 				description:
-					"Parameter defines the outbound times range. It's a string containing two (for departure only) or four (for departure and arrival) comma-separated numbers. Each number represents the beginning of an hour. For example: 4,18: 4:00 AM - 7:00 PM departure 0,18: 12:00 AM - 7:00 PM departure 19,23: 7:00 PM - 12:00 AM departure 4,18,3,19: 4:00 AM - 7:00 PM departure, 3:00 AM - 8:00 PM arrival 0,23,3,19: unrestricted departure, 3:00 AM - 8:00 PM arrival",
+					'Parameter defines the outbound times range. See docs for more information: https://serpapi.com/google-flights-api#api-parameters-advanced-filters-outbound-times.',
 				default: '',
 				routing: {
 					request: {
@@ -526,10 +523,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`return_times` Return times',
+				displayName: 'Return times (return_times)',
 				name: 'return_times',
 				description:
-					"Parameter defines the return times range. It's a string containing two (for departure only) or four (for departure and arrival) comma-separated numbers. Each number represents the beginning of an hour. For example: 4,18: 4:00 AM - 7:00 PM departure 0,18: 12:00 AM - 7:00 PM departure 19,23: 7:00 PM - 12:00 AM departure 4,18,3,19: 4:00 AM - 7:00 PM departure, 3:00 AM - 8:00 PM arrival 0,23,3,19: unrestricted departure, 3:00 AM - 8:00 PM arrival. Parameter should only be used when type parameter is set to Round trip",
+					'Parameter defines the return times range. See docs for more information: https://serpapi.com/google-flights-api#api-parameters-advanced-filters-return-times.',
 				default: '',
 				routing: {
 					request: {
@@ -541,7 +538,7 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`emissions` Emissions',
+				displayName: 'Emissions (emissions)',
 				name: 'emissions',
 				description: 'Parameter defines the emission level of the flight',
 				default: 1,
@@ -561,10 +558,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`layover_duration` Layover duration',
+				displayName: 'Layover duration (layover_duration)',
 				name: 'layover_duration',
 				description:
-					"Parameter defines the layover duration, in minutes. It's a string containing two comma-separated numbers. For example, specify 90,330 for 1 hr 30 min - 5 hr 30 min.",
+					'Parameter defines the layover duration, in minutes. For example, specify 90,330 for 1 hr 30 min - 5 hr 30 min.',
 				default: '',
 				routing: {
 					request: {
@@ -576,10 +573,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`exclude_conns` Exclude connecting airports',
+				displayName: 'Exclude connecting airports (exclude_conns)',
 				name: 'exclude_conns',
 				description:
-					'Parameter defines the connecting airport codes to be excluded. An airport ID is an uppercase 3-letter code. You can search for it on Google Flights or IATA. For example, CDG is Paris Charles de Gaulle Airport and AUS is Austin-Bergstrom International Airport. You can also combine multiple Airports by joining them with a comma (value + , + value; eg: CDG,AUS).',
+					'Parameter defines the connecting airport codes to be excluded. An airport ID is an uppercase 3-letter code. You can search for it on Google Flights or IATA',
 				default: '',
 				routing: {
 					request: {
@@ -591,7 +588,7 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`max_duration` Max duration',
+				displayName: 'Max duration (max_duration)',
 				name: 'max_duration',
 				description:
 					'Parameter defines the maximum flight duration, in minutes. For example, specify 1500 for 25 hours.',
@@ -606,10 +603,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`departure_token` Departure flight token',
+				displayName: 'Departure flight token (departure_token)',
 				name: 'departure_token',
 				description:
-					'Parameter is used to select the flight and get returning flights (for Round trip) or flights for the next leg of itinerary (for Multi-city). Find this token in the departure flight results. It cannot be used together with booking_token.',
+					'Parameter is used to select the flight and get returning flights (for Round trip) or flights for the next leg of itinerary (for Multi-city)',
 				default: '',
 				routing: {
 					request: {
@@ -622,10 +619,10 @@ export const googleFlightsFields: INodeProperties[] = [
 				typeOptions: { password: true },
 			},
 			{
-				displayName: '`booking_token` Booking token',
+				displayName: 'Booking token (booking_token)',
 				name: 'booking_token',
 				description:
-					'Parameter is used to get booking options for the selected flights. Find this token in the flight results. It cannot be used together with departure_token. When using this token, parameters related to date and parameters inside "Advanced Filters" section won\'t affect the result.',
+					'Parameter is used to get booking options for the selected flights. Find this token in the flight results. It cannot be used together with departure_token',
 				default: '',
 				routing: {
 					request: {

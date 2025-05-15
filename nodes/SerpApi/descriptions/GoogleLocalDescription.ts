@@ -4,10 +4,9 @@ import { CountryOptions, DomainOptions, LanguageOptions } from './GoogleOptions'
 
 export const googleLocalFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
-		description:
-			'Parameter defines the query you want to search. You can use anything that you would use in a regular Google Local search.',
+		description: 'Parameter defines the query you want to search',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -25,10 +24,10 @@ export const googleLocalFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`location` Location',
+		displayName: 'Location (location)',
 		name: 'location',
 		description:
-			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+			'Parameter defines from where you want the search to originate. See docs for supported locations: https://serpapi.com/locations-api.',
 		default: '',
 		routing: {
 			request: {
@@ -57,10 +56,10 @@ export const googleLocalFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`uule` Encoded Location',
+				displayName: 'Encoded Location (uule)',
 				name: 'uule',
 				description:
-					"Parameter is the Google encoded location you want to use for the search.uule and location parameters can't be used together",
+					"Parameter is the Google encoded location you want to use for the search. uule and location parameters can't be used together.",
 				default: '',
 				routing: {
 					request: {
@@ -72,10 +71,9 @@ export const googleLocalFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`google_domain` Domain',
+				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description:
-					'Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains for a full list of supported Google domains.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -88,10 +86,9 @@ export const googleLocalFields: INodeProperties[] = [
 				options: DomainOptions,
 			},
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					"Parameter defines the country to use for the Google Local search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries for a full list of supported Google countries.",
+				description: 'Parameter defines the country to use for the Google Local search',
 				default: 'us',
 				routing: {
 					request: {
@@ -104,10 +101,9 @@ export const googleLocalFields: INodeProperties[] = [
 				options: CountryOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					"Parameter defines the language to use for the Google Local search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French) Head to the Google languages for a full list of supported Google languages.",
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {
@@ -120,10 +116,10 @@ export const googleLocalFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`ludocid` Google Place ID',
+				displayName: 'Google Place ID (ludocid)',
 				name: 'ludocid',
 				description:
-					'Parameter defines the ID (CID) of the Google My Business listing you want to scrape. Also known as Google Place ID. To aquire the ludocid you can either use Google\'s CID converter, or data_cid from SerpApi\'s Google Maps API. Example CID for "New York, NY, USA": 14414772292044717666.',
+					'Parameter defines the ID (CID) of the Google My Business listing you want to scrape. Also known as Google Place ID. See docs for more information: https://serpapi.com/google-local-api#api-parameters-advanced-google-local-parameters',
 				default: '',
 				routing: {
 					request: {
@@ -135,7 +131,7 @@ export const googleLocalFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`tbs` Advanced Search Parameters',
+				displayName: 'Advanced Search Parameters (tbs)',
 				name: 'tbs',
 				description:
 					"(to be searched) parameter defines advanced search parameters that aren't possible in the regular query field",
@@ -150,10 +146,9 @@ export const googleLocalFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`start` Result Offset',
+				displayName: 'Result Offset (start)',
 				name: 'start',
-				description:
-					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. On desktop, parameter only accepts multiples of 20 (e.g. 20 for the second page results, 40 for the third page results, etc.). On mobile, parameter only accepts multiples of 10 (e.g. 10 for the second page results, 20 for the third page results, etc.).",
+				description: 'Parameter defines the result offset. It skips the given number of results.',
 				default: '',
 				routing: {
 					request: {
@@ -165,7 +160,7 @@ export const googleLocalFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`device` Device',
+				displayName: 'Device (device)',
 				name: 'device',
 				description:
 					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser.',

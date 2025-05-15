@@ -3,7 +3,7 @@ import { serpApiFields } from './SerpApiDescription';
 
 export const baiduSearchFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
 			'Parameter defines the the search query, including all Baidu search operators. (e.g., inurl:, site:, intitle:, etc.).',
@@ -36,10 +36,9 @@ export const baiduSearchFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`ct` Choose Language',
+				displayName: 'Choose Language (ct)',
 				name: 'ct',
-				description:
-					'Parameter defines which language to restrict results',
+				description: 'Parameter defines which language to restrict results',
 				default: '1',
 				routing: {
 					request: {
@@ -65,10 +64,10 @@ export const baiduSearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`pn` Result Offset',
+				displayName: 'Result Offset (pn)',
 				name: 'pn',
 				description:
-					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.).",
+					'Parameter defines the result offset for pagination. It skips the given number of results. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, etc.)',
 				default: '',
 				routing: {
 					request: {
@@ -80,10 +79,10 @@ export const baiduSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`rn` Number of Results',
+				displayName: 'Number of Results (rn)',
 				name: 'rn',
 				description:
-					'Parameter defines the maximum number of results to return, limited to 50. (e.g., 10 (default) returns 10 results, 30 returns 30 results, and 50 returns 50 results). This parameter is only available for desktop and tablet searches.',
+					'Parameter defines the maximum number of results to return, limited to 50. Default is 10. Only available for desktop and tablet searches.',
 				default: '10',
 				routing: {
 					request: {
@@ -95,10 +94,10 @@ export const baiduSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`gpc` Time Period for Results',
+				displayName: 'Time Period for Results (gpc)',
 				name: 'gpc',
 				description:
-					'Parameter defines the time period for results (e.g., stf=1743415359,1744020159|stftype=1 only returns results from the past 7 days. First integer within the parameter, 1743415359 is Unix Timestamp for 7 days ago. Second integer,1744020159 is Unix Timestamp for now)',
+					'Parameter accepts Unix timestamps to define the time period for results (e.g., stf=1743415359,1744020159|stftype=1 only returns results from the past 7 days)',
 				default: '',
 				routing: {
 					request: {
@@ -110,7 +109,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`q5` Search Type',
+				displayName: 'Search Type (q5)',
 				name: 'q5',
 				description:
 					'Similar to using inurl: or intitle: (e.g., 1 to search by page title, 2 to search by web address)',
@@ -125,7 +124,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`q6` Search Type',
+				displayName: 'Search Type (q6)',
 				name: 'q6',
 				description:
 					'Similar to using site: (e.g., q6=serpapi.com to search for results only from the domain serpapi.com)',
@@ -140,7 +139,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`bs` Previous Search Query',
+				displayName: 'Previous Search Query (bs)',
 				name: 'bs',
 				description: 'Defines the previous search query',
 				default: '',
@@ -154,7 +153,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`oq` Original Search Query',
+				displayName: 'Original Search Query (oq)',
 				name: 'oq',
 				description: 'Defines the original search query when navigated from a related search',
 				default: '',
@@ -168,7 +167,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`f` Originating Search Type',
+				displayName: 'Originating Search Type (f)',
 				name: 'f',
 				description:
 					'Defines the originating search type (e.g., 8 is a normal search, 3 is from the suggestion list, and 1 is a related search)',
@@ -183,10 +182,10 @@ export const baiduSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`device` Device',
+				displayName: 'Device (device)',
 				name: 'device',
 				description:
-					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).',
+					'Parameter defines the device to use to get the results. It can be set to desktop (default), tablet, or mobile.',
 				default: 'desktop',
 				routing: {
 					request: {

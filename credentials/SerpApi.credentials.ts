@@ -1,4 +1,4 @@
-import { IAuthenticateGeneric, ICredentialType, INodeProperties, Icon } from 'n8n-workflow';
+import { IAuthenticateGeneric, ICredentialTestRequest, ICredentialType, INodeProperties, Icon } from 'n8n-workflow';
 
 export class SerpApi implements ICredentialType {
 	name = 'serpApi';
@@ -20,6 +20,13 @@ export class SerpApi implements ICredentialType {
 			qs: {
 				api_key: '={{$credentials.apiKey}}',
 			},
+		},
+	};
+
+	test: ICredentialTestRequest = {
+		request: {
+			baseURL: 'https://serpapi.com',
+			url: '/account',
 		},
 	};
 }

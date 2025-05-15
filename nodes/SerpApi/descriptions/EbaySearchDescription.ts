@@ -3,10 +3,10 @@ import { serpApiFields } from './SerpApiDescription';
 
 export const ebaySearchFields: INodeProperties[] = [
 	{
-		displayName: '`_nkw` Search Query',
+		displayName: 'Search Query (_nkw)',
 		name: '_nkw',
 		description:
-			'Parameter defines the search query. You can use anything that you would use in a regular Ebay search._nkw parameter is optional when category_id parameter is specified.',
+			'Parameter defines the search query. You can use anything that you would use in a regular Ebay search. _nkw parameter is optional when category_id parameter is specified.',
 		default: 'coffee',
 		routing: {
 			request: {
@@ -24,10 +24,9 @@ export const ebaySearchFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`ebay_domain` Domain',
+		displayName: 'Domain (ebay_domain)',
 		name: 'ebay_domain',
-		description:
-			'Parameter defines the Ebay domain to use. It defaults to ebay.com. Head to the Ebay domains for a full list of supported Ebay domains.',
+		description: 'Parameter defines the Ebay domain to use',
 		default: 'ebay.com',
 		routing: {
 			request: {
@@ -126,10 +125,9 @@ export const ebaySearchFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`_salic` Location',
+				displayName: 'Location (_salic)',
 				name: '_salic',
-				description:
-					'Parameter defines the location based on country. Head to the Ebay location options for a full list of supported countries.',
+				description: 'Parameter defines the location based on country',
 				default: '1',
 				routing: {
 					request: {
@@ -995,11 +993,10 @@ export const ebaySearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`_pgn` Page Number',
+				displayName: 'Page Number (_pgn)',
 				name: '_pgn',
-				description:
-					"Parameter defines the page number. It's used for pagination. (e.g., 1 (default) is the first page of results, 2 is the 2nd page of results, 3 is the 3rd page of results, etc.).",
-				default: '',
+				description: 'Parameter defines the page number, used for pagination',
+				default: 1,
 				routing: {
 					request: {
 						qs: {
@@ -1010,10 +1007,9 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`_ipg` Number of Results',
+				displayName: 'Number of Results (_ipg)',
 				name: '_ipg',
-				description:
-					'Parameter defines the maximum number of results to return. There are total of four options: 25, 50 (default), 100 and 200 results.',
+				description: 'Parameter defines the maximum number of results to return',
 				default: 50,
 				routing: {
 					request: {
@@ -1025,28 +1021,28 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'options',
 				options: [
 					{
-						name: '50 - Items Per Page',
+						name: '50 Items Per Page',
 						value: 50,
 					},
 					{
-						name: '25 - Items Per Page',
+						name: '25 Items Per Page',
 						value: 25,
 					},
 					{
-						name: '100 - Items Per Page',
+						name: '100 Items Per Page',
 						value: 100,
 					},
 					{
-						name: '200 - Items Per Page',
+						name: '200 Items Per Page',
 						value: 200,
 					},
 				],
 			},
 			{
-				displayName: '`_blrs` Exclude Auto-corrected Results',
+				displayName: 'Exclude Auto-corrected Results (_blrs)',
 				name: '_blrs',
 				description:
-					'Whether to exclude results from an auto-corrected query when the original query is spelled wrong. The recommended value for this parameter is spell_auto_correct. Omit _blrs if you want the search to include results for an auto-corrected query. Note that this parameter may not prevent eBay from returning results for an auto-corrected query if no other results are available.',
+					'Whether to exclude results from an auto-corrected query when the original query is spelled wrong',
 				default: false,
 				routing: {
 					request: {
@@ -1058,10 +1054,9 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`show_only` Results filter',
+				displayName: 'Results filter (show_only)',
 				name: 'show_only',
-				description:
-					'Parameter defines the list of filters you can apply to the results. Available options (case-sensitive): Complete - Completed itemsSold - Sold itemsFR - Free returnsRPA - Returns acceptedAS - Authorized sellerSavings - Deals and savingsSaleItems - Sale itemsLots - Listed as lotsCharity - Benefits charityAV - Authenticity GuaranteeFS - Free shippingLPickup - Local pickup You can also combine multiple filter values by joining them with a comma (value + , + value; eg: Sold,FS).',
+				description: 'Parameter defines the list of filters you can apply to the results',
 				default: '',
 				routing: {
 					request: {
@@ -1073,10 +1068,9 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`buying_format` Buying Format',
+				displayName: 'Buying Format (buying_format)',
 				name: 'buying_format',
-				description:
-					'Parameter defines the buying format you can apply to the results. Available options (case-sensitive): Auction, Buy It Now, Accepts Offers.',
+				description: 'Parameter defines the buying format you can apply to the results',
 				default: 'Auction',
 				routing: {
 					request: {
@@ -1102,7 +1096,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`_udlo` Price Low',
+				displayName: 'Price Low (_udlo)',
 				name: '_udlo',
 				description:
 					'Parameter defines the lowest price of items that should be included in the results (e.g. 10 will only return items that have higher price than 10)',
@@ -1117,7 +1111,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`_udhi` Price High',
+				displayName: 'Price High (_udhi)',
 				name: '_udhi',
 				description:
 					'Parameter defines the highest price of items that should be included in the results (e.g. 20 will only return items that have lower price than 20)',
@@ -1132,10 +1126,9 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`_sop` Sorting',
+				displayName: 'Sorting (_sop)',
 				name: '_sop',
-				description:
-					"Parameter defines results sorted by different options in the Ebay. The default option is 'Best Match'. Head to the Ebay sort options for a full list of supported sort options.",
+				description: 'Parameter defines results sorted by different options in the Ebay',
 				default: '12',
 				routing: {
 					request: {
@@ -1189,10 +1182,9 @@ export const ebaySearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`_dmd` View Option',
+				displayName: 'View Option (_dmd)',
 				name: '_dmd',
-				description:
-					"Parameter defines the visual layout for displaying results. The available options are 'Grid' and 'List'.",
+				description: 'Parameter defines the visual layout for displaying results',
 				default: '1',
 				routing: {
 					request: {
@@ -1214,10 +1206,10 @@ export const ebaySearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`category_id` Category ID',
+				displayName: 'Category ID (category_id)',
 				name: 'category_id',
 				description:
-					'Parameter defines the ID of a category where you want your search to be concentrated. ID values are accessible inside categories array, located in our JSON output (e.g. categories[1].id).You can search using category_id parameter without specifying _nkw parameter.',
+					'Parameter defines the ID of a category where you want your search to be concentrated. See docs for more information: https://serpapi.com/ebay-search-api#api-parameters-advanced-ebay-parameters-category-id.',
 				default: '',
 				routing: {
 					request: {
@@ -1229,7 +1221,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`_stpos` ZIP Code',
+				displayName: 'ZIP Code (_stpos)',
 				name: '_stpos',
 				description:
 					'Parameter defines the ZIP or Postal code. You can use it to filter the shipping products by a selected area.',
@@ -1244,10 +1236,9 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`LH_ItemCondition` Condition',
+				displayName: 'Condition (LH_ItemCondition)',
 				name: 'LH_ItemCondition',
-				description:
-					'Parameter defines one or multiple product conditions to limit the search to. Condition is represented via numeric ID, e.g. 1000 for New. Multiple IDs should be joined with | delimeter, e.g. 1000|3000. List of supported IDs can be found on eBay documentation page. There is also undocumented ID 10 for Not Specified condition.',
+				description: 'Parameter defines one or multiple product conditions to limit the search to',
 				default: '',
 				routing: {
 					request: {

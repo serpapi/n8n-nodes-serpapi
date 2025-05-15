@@ -4,10 +4,9 @@ import { CountryOptions, DomainOptions, LanguageOptions } from './GoogleOptions'
 
 export const googleImagesFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
-		description:
-			'Parameter defines the query you want to search. You can use anything that you would use in a regular Google Images search. e.g. inurl:, site:, intitle:.',
+		description: 'Parameter defines the query you want to search',
 		default: 'coffee',
 		routing: {
 			request: {
@@ -37,10 +36,10 @@ export const googleImagesFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`location` Location',
+				displayName: 'Location (location)',
 				name: 'location',
 				description:
-					"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+					'Parameter defines from where you want the search to originate. See docs for supported locations: https://serpapi.com/locations-api.',
 				default: '',
 				routing: {
 					request: {
@@ -52,7 +51,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`uule` Encoded Location',
+				displayName: 'Encoded Location (uule)',
 				name: 'uule',
 				description:
 					"Parameter is the Google encoded location you want to use for the search. uule and location parameters can't be used together.",
@@ -67,10 +66,9 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`google_domain` Domain',
+				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description:
-					'Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains for a full list of supported Google domains.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -83,10 +81,9 @@ export const googleImagesFields: INodeProperties[] = [
 				options: DomainOptions,
 			},
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					"Parameter defines the country to use for the Google Images search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries for a full list of supported Google countries.",
+				description: 'Parameter defines the country to use for the Google Images search',
 				default: 'us',
 				routing: {
 					request: {
@@ -99,10 +96,9 @@ export const googleImagesFields: INodeProperties[] = [
 				options: CountryOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					"Parameter defines the language to use for the Google Images search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French) Head to the Google languages for a full list of supported Google languages.",
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {
@@ -115,10 +111,10 @@ export const googleImagesFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`cr` Set Multiple Countries',
+				displayName: 'Set Multiple Countries (cr)',
 				name: 'cr',
 				description:
-					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE will only search French and German pages). Head to the Google cr countries page for a full list of supported countries.',
+					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE).',
 				default: '',
 				routing: {
 					request: {
@@ -130,7 +126,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_dt',
+				displayName: 'Include/Exclude Site (as_dt)',
 				name: 'as_dt',
 				description:
 					'Parameter controls whether to include or exclude results from the site named in the as_sitesearch parameter',
@@ -145,7 +141,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_epq',
+				displayName: 'Required Phrase (as_epq)',
 				name: 'as_epq',
 				description:
 					'Parameter identifies a phrase that all documents in the search results must contain. You can also use the phrase search query term to search for a phrase.',
@@ -160,7 +156,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_eq',
+				displayName: 'Excluded Word/Phrase (as_eq)',
 				name: 'as_eq',
 				description:
 					'Parameter identifies a word or phrase that should not appear in any documents in the search results. You can also use the exclude query term to ensure that a particular word or phrase will not appear in the documents in a set of search results.',
@@ -175,7 +171,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_lq',
+				displayName: 'Link to URL (as_lq)',
 				name: 'as_lq',
 				description:
 					'Parameter specifies that all search results should contain a link to a particular URL. You can also use the link: query term for this type of query.',
@@ -190,7 +186,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_nlo',
+				displayName: 'Search Range Start (as_nlo)',
 				name: 'as_nlo',
 				description:
 					'Parameter specifies the starting value for a search range. Use as_nlo and as_nhi to append an inclusive search range.',
@@ -205,7 +201,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_nhi',
+				displayName: 'Search Range End (as_nhi)',
 				name: 'as_nhi',
 				description:
 					'Parameter specifies the ending value for a search range. Use as_nlo and as_nhi to append an inclusive search range.',
@@ -220,7 +216,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_oq',
+				displayName: 'Additional Search Terms (as_oq)',
 				name: 'as_oq',
 				description:
 					'Parameter provides additional search terms to check for in a document, where each document in the search results must contain at least one of the additional search terms. You can also use the Boolean OR query term for this type of query.',
@@ -235,7 +231,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_q',
+				displayName: 'Search Terms (as_q)',
 				name: 'as_q',
 				description:
 					'Parameter provides search terms to check for in a document. This parameter is also commonly used to allow users to specify additional terms to search for within a set of search results.',
@@ -250,10 +246,10 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_qdr',
+				displayName: 'Time Period (as_qdr)',
 				name: 'as_qdr',
 				description:
-					'Parameter requests search results from a specified time period (quick date range). The following values are supported:d[number]: requests results from the specified number of past days. Example for the past 10 days: as_qdr=d10w[number]: requests results from the specified number of past weeks.m[number]: requests results from the specified number of past months.y[number]: requests results from the specified number of past years. Example for the past year: as_qdr=y',
+					'Parameter requests search results from a specified time period (quick date range). See documentation for supported values: https://serpapi.com/advanced-google-query-parameters#api-parameters-advanced-search-query-parameters-as-qdr.',
 				default: '',
 				routing: {
 					request: {
@@ -265,7 +261,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_rq',
+				displayName: 'Related URL (as_rq)',
 				name: 'as_rq',
 				description:
 					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL. You can also use the related: query term for this type of query.',
@@ -280,7 +276,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_sitesearch',
+				displayName: 'Site Search (as_sitesearch)',
 				name: 'as_sitesearch',
 				description:
 					'Parameter allows you to specify that all search results should be pages from a given site. By setting the as_dt parameter, you can also use it to exclude pages from a given site from your search resutls.',
@@ -295,7 +291,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`period_unit` Time Period Unit',
+				displayName: 'Time Period Unit (period_unit)',
 				name: 'period_unit',
 				description:
 					"Parameter defines the time period unit to search for the recent images, e.g. from past minute, hour, day etc. This parameter can't be used with start_date/end_date parameters. This parameter overrides qdr component of tbs parameter.",
@@ -341,7 +337,7 @@ export const googleImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`period_value` Time Period Value',
+				displayName: 'Time Period Value (period_value)',
 				name: 'period_value',
 				description:
 					'Parameter defines an optional time period value that can be used with period_unit to describe time periods like 15 seconds, 42 hours, 178 days etc. Default value: 1. Value range: 1..2147483647.',
@@ -356,7 +352,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`start_date` Start Date',
+				displayName: 'Start Date (start_date)',
 				name: 'start_date',
 				description:
 					"Parameter defines the start date of time period you want to limit the image search to. Format: YYYYMMDD Example: 20241201 - This parameter can't be used with period_unit/period_value parameters.start_date with blank end_date produces date range FROM start_date TO today. This parameter overrides cdr and cd_min components of tbs parameter.",
@@ -371,7 +367,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`end_date` End Date',
+				displayName: 'End Date (end_date)',
 				name: 'end_date',
 				description:
 					"Parameter defines the end date of time period you want to limit the image search to. Format: YYYYMMDD Example: 20241231 - This parameter can't be used with period_unit/period_value parameters.end_date with blank start_date produces date range BEFORE end_date. This parameter overrides cdr and cd_max components of tbs parameter.",
@@ -386,7 +382,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`chips` Image search filter (alternative)',
+				displayName: 'Image search filter (chips)',
 				name: 'chips',
 				description:
 					"Parameter enables to filter image search. It's a string provided by Google as suggested search, like: red apple. Chips are provided under the section: suggested_searches when ijn = 0. Both chips and serpapi_link values are provided for each suggested search.",
@@ -401,7 +397,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`tbs` Advanced Search Parameter',
+				displayName: 'Advanced Search Parameter (tbs)',
 				name: 'tbs',
 				description:
 					"(to be searched) parameter defines advanced search parameters that aren't possible in the regular query field",
@@ -416,7 +412,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`imgar` Aspect Ratio Filtering',
+				displayName: 'Aspect Ratio Filtering (imgar)',
 				name: 'imgar',
 				description: 'Parameter defines the set aspect ratio of images',
 				default: 's',
@@ -448,7 +444,7 @@ export const googleImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`imgsz` Image Size Filtering',
+				displayName: 'Image Size Filtering (imgsz)',
 				name: 'imgsz',
 				description: 'Parameter defines the size of images',
 				default: 'l',
@@ -481,7 +477,7 @@ export const googleImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`image_color` Image Color Filtering',
+				displayName: 'Image Color Filtering (image_color)',
 				name: 'image_color',
 				description:
 					'Parameter defines the color of images. This parameter overrides ic and isc components of tbs parameter.',
@@ -512,7 +508,7 @@ export const googleImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`image_type` Image Type Filtering',
+				displayName: 'Image Type Filtering (image_type)',
 				name: 'image_type',
 				description:
 					'Parameter defines the type of images. This parameter overrides itp component of tbs parameter.',
@@ -534,7 +530,7 @@ export const googleImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`licenses` Usage Rights Filtering',
+				displayName: 'Usage Rights Filtering (licenses)',
 				name: 'licenses',
 				description:
 					'Parameter defines the scope of licenses of images. This parameter overrides sur component of tbs parameter.',
@@ -557,7 +553,7 @@ export const googleImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`safe` Adult Content Filtering',
+				displayName: 'Adult Content Filtering (safe)',
 				name: 'safe',
 				description:
 					'Parameter defines the level of filtering for adult content. It can be set to active or off, by default Google will blur explicit content.',
@@ -582,7 +578,7 @@ export const googleImagesFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`nfpr` Exclude Auto-corrected Results',
+				displayName: 'Exclude Auto-corrected Results (nfpr)',
 				name: 'nfpr',
 				description:
 					'Whether to exclude of results from an auto-corrected query when the original query is spelled wrong. It can be set to true to exclude these results, or false to include them (default). Note that this parameter may not prevent Google from returning results for an auto-corrected query if no other results are available.',
@@ -597,7 +593,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`filter` Results Filtering',
+				displayName: 'Results Filtering (filter)',
 				name: 'filter',
 				description:
 					"Whether the filters for 'Similar Results' and 'Omitted Results' are on or off. It can be set to true (default) to enable these filters, or false to disable these filters.",
@@ -612,7 +608,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`ijn` Page Number (images)',
+				displayName: 'Page Number (images) (ijn)',
 				name: 'ijn',
 				description:
 					'Parameter defines the page number for Google Images. There are 100 images per page. This parameter is equivalent to start (offset) = ijn * 100.',
@@ -627,7 +623,7 @@ export const googleImagesFields: INodeProperties[] = [
 				type: 'number',
 			},
 			{
-				displayName: '`device` Device',
+				displayName: 'Device (device)',
 				name: 'device',
 				description:
 					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser.',

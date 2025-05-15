@@ -4,10 +4,9 @@ import { CountryOptions, DomainOptions, LanguageOptions } from './GoogleOptions'
 
 export const googleShoppingFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
-		description:
-			'Parameter defines the query you want to search. You can use anything that you would use in a regular Google Shopping search.',
+		description: 'Parameter defines the query you want to search',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -25,10 +24,10 @@ export const googleShoppingFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`location` Location',
+		displayName: 'Location (location)',
 		name: 'location',
 		description:
-			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+			'Parameter defines from where you want the search to originate. See docs for supported locations: https://serpapi.com/locations-api.',
 		default: '',
 		routing: {
 			request: {
@@ -57,7 +56,7 @@ export const googleShoppingFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`uule` Encoded Location',
+				displayName: 'Encoded Location (uule)',
 				name: 'uule',
 				description:
 					"Parameter is the Google encoded location you want to use for the search. uule and location parameters can't be used together.",
@@ -72,10 +71,9 @@ export const googleShoppingFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`google_domain` Domain',
+				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description:
-					'Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains for a full list of supported Google domains.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -88,10 +86,9 @@ export const googleShoppingFields: INodeProperties[] = [
 				options: DomainOptions,
 			},
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					"Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries for a full list of supported Google countries.",
+				description: 'Parameter defines the country to use for the Google search',
 				default: 'us',
 				routing: {
 					request: {
@@ -104,10 +101,9 @@ export const googleShoppingFields: INodeProperties[] = [
 				options: CountryOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					"Parameter defines the language to use for the Google Maps search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French) Head to the Google languages for a full list of supported Google languages.",
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {
@@ -138,7 +134,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: 'as_epq',
 				name: 'as_epq',
 				description:
-					'Parameter identifies a phrase that all documents in the search results must contain. You can also use the phrase search query term to search for a phrase.',
+					'Parameter identifies a phrase that all documents in the search results must contain',
 				default: '',
 				routing: {
 					request: {
@@ -153,7 +149,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: 'as_eq',
 				name: 'as_eq',
 				description:
-					'Parameter identifies a word or phrase that should not appear in any documents in the search results. You can also use the exclude query term to ensure that a particular word or phrase will not appear in the documents in a set of search results.',
+					'Parameter identifies a word or phrase that should not appear in any documents in the search results',
 				default: '',
 				routing: {
 					request: {
@@ -168,7 +164,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: 'as_lq',
 				name: 'as_lq',
 				description:
-					'Parameter specifies that all search results should contain a link to a particular URL. You can also use the link: query term for this type of query.',
+					'Parameter specifies that all search results should contain a link to a particular URL',
 				default: '',
 				routing: {
 					request: {
@@ -243,7 +239,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: 'as_qdr',
 				name: 'as_qdr',
 				description:
-					'Parameter requests search results from a specified time period (quick date range). The following values are supported:d[number]: requests results from the specified number of past days. Example for the past 10 days: as_qdr=d10w[number]: requests results from the specified number of past weeks.m[number]: requests results from the specified number of past months.y[number]: requests results from the specified number of past years. Example for the past year: as_qdr=y',
+					'Parameter requests search results from a specified time period (quick date range). See docs for more information: https://serpapi.com/advanced-google-query-parameters#api-parameters-advanced-search-query-parameters-as-qdr.',
 				default: '',
 				routing: {
 					request: {
@@ -258,7 +254,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				displayName: 'as_rq',
 				name: 'as_rq',
 				description:
-					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL. You can also use the related: query term for this type of query.',
+					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL.',
 				default: '',
 				routing: {
 					request: {
@@ -285,7 +281,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`tbs` Advanced Search Parameters',
+				displayName: 'Advanced Search Parameters (tbs)',
 				name: 'tbs',
 				description:
 					"(to be searched) parameter defines advanced search parameters that aren't possible in the regular query field",
@@ -300,10 +296,10 @@ export const googleShoppingFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`shoprs` Search Filter ID',
+				displayName: 'Search Filter ID (shoprs)',
 				name: 'shoprs',
 				description:
-					'The parameter defines the helper ID for setting search filters. For search filters to be properly applied, the parameter must be used in combination with the updated q parameter, which now contains the name of the filter applied next to your original query. Example:- Original query: Coffee- Query after applying filter "Sugar Free": sugar free CoffeeTo apply filters to your search, follow serpapi_link, which you can find in your JSON output at filters[index].options[index].serpapi_link. To apply multiple filters, you have to follow serpapi_link for each filter individualy. Each consecutive request will contain filters that have been previously applied next to the newly added one. To remove a filter, follow its corresponding serpapi_link.',
+					'The parameter defines the helper ID for setting search filters. See docs for more information: https://serpapi.com/google-shopping-api#api-parameters-advanced-filters-shoprs.',
 				default: '',
 				routing: {
 					request: {
@@ -315,10 +311,10 @@ export const googleShoppingFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`direct_link` Include Direct Link',
+				displayName: 'Include Direct Link (direct_link)',
 				name: 'direct_link',
 				description:
-					'Whether the search results should include direct link of each products. By default it is false, if you need direct link, set it to true. This parameter only applies to the new layout (US and few other countries). Most countries have not yet switched to the new layout, so the link will be present without needing this parameter. When using this parameter, it is expected the search will take longer than a normal search request.',
+					'Whether the search results should include direct link of each products. By default it is false, if you need direct link, set it to true. This parameter only applies to the new layout (US and few other countries).',
 				default: false,
 				routing: {
 					request: {
@@ -330,10 +326,9 @@ export const googleShoppingFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`start` Result Offset',
+				displayName: 'Result Offset (start)',
 				name: 'start',
-				description:
-					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 60 is the 2nd page of results, 120 is the 3rd page of results, etc.).For the new layout, the parameter is not recommended. To easily retrieve paginated results accurately, it is advisable to follow the link provided in serpapi_pagination.next.",
+				description: 'Parameter defines the result offset. It skips the given number of results.',
 				default: '',
 				routing: {
 					request: {
@@ -345,10 +340,9 @@ export const googleShoppingFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`num` Number of Results',
+				displayName: 'Number of Results (num)',
 				name: 'num',
-				description:
-					'Parameter defines the maximum number of results to return. (e.g., 60 (default) returns 60 results, 40 returns 40 results, and 100 (maximum) returns 100 results). Any number greater than maximum number (100) will default to 100. Any number lesser than minimum number (1) will default to 60. For the new layout, the parameter is no longer supported.',
+				description: 'Parameter defines the maximum number of results to return',
 				default: '',
 				routing: {
 					request: {
@@ -360,7 +354,7 @@ export const googleShoppingFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`device` Device',
+				displayName: 'Device (device)',
 				name: 'device',
 				description:
 					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser.',

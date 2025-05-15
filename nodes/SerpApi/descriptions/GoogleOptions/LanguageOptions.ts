@@ -1,630 +1,630 @@
 const LanguageOptions = [
 	{
-		name: 'Afrikaans - af',
+		name: 'Afrikaans (af)',
 		value: 'af',
 	},
 	{
-		name: 'Akan - ak',
+		name: 'Akan (ak)',
 		value: 'ak',
 	},
 	{
-		name: 'Albanian - sq',
+		name: 'Albanian (sq)',
 		value: 'sq',
 	},
 	{
-		name: 'Amharic - am',
+		name: 'Amharic (am)',
 		value: 'am',
 	},
 	{
-		name: 'Arabic - ar',
+		name: 'Arabic (ar)',
 		value: 'ar',
 	},
 	{
-		name: 'Armenian - hy',
+		name: 'Armenian (hy)',
 		value: 'hy',
 	},
 	{
-		name: 'Azerbaijani - az',
+		name: 'Azerbaijani (az)',
 		value: 'az',
 	},
 	{
-		name: 'Basque - eu',
+		name: 'Basque (eu)',
 		value: 'eu',
 	},
 	{
-		name: 'Belarusian - be',
+		name: 'Belarusian (be)',
 		value: 'be',
 	},
 	{
-		name: 'Bemba - bem',
+		name: 'Bemba (bem)',
 		value: 'bem',
 	},
 	{
-		name: 'Bengali - bn',
+		name: 'Bengali (bn)',
 		value: 'bn',
 	},
 	{
-		name: 'Bhutanese - bt',
+		name: 'Bhutanese (bt)',
 		value: 'bt',
 	},
 	{
-		name: 'Bihari - bh',
+		name: 'Bihari (bh)',
 		value: 'bh',
 	},
 	{
-		name: 'Bork, bork, bork! - xx-bork',
+		name: 'Bork, bork, bork! (xx-bork)',
 		value: 'xx-bork',
 	},
 	{
-		name: 'Bosnian - bs',
+		name: 'Bosnian (bs)',
 		value: 'bs',
 	},
 	{
-		name: 'Breton - br',
+		name: 'Breton (br)',
 		value: 'br',
 	},
 	{
-		name: 'Bulgarian - bg',
+		name: 'Bulgarian (bg)',
 		value: 'bg',
 	},
 	{
-		name: 'Cambodian - km',
+		name: 'Cambodian (km)',
 		value: 'km',
 	},
 	{
-		name: 'Catalan - ca',
+		name: 'Catalan (ca)',
 		value: 'ca',
 	},
 	{
-		name: 'Cherokee - chr',
+		name: 'Cherokee (chr)',
 		value: 'chr',
 	},
 	{
-		name: 'Chichewa - ny',
+		name: 'Chichewa (ny)',
 		value: 'ny',
 	},
 	{
-		name: 'Chinese (Simplified) - zh-cn',
+		name: 'Chinese (Simplified) (zh-cn)',
 		value: 'zh-cn',
 	},
 	{
-		name: 'Chinese (Traditional) - zh-tw',
+		name: 'Chinese (Traditional) (zh-tw)',
 		value: 'zh-tw',
 	},
 	{
-		name: 'Corsican - co',
+		name: 'Corsican (co)',
 		value: 'co',
 	},
 	{
-		name: 'Croatian - hr',
+		name: 'Croatian (hr)',
 		value: 'hr',
 	},
 	{
-		name: 'Czech - cs',
+		name: 'Czech (cs)',
 		value: 'cs',
 	},
 	{
-		name: 'Danish - da',
+		name: 'Danish (da)',
 		value: 'da',
 	},
 	{
-		name: 'Dutch - nl',
+		name: 'Dutch (nl)',
 		value: 'nl',
 	},
 	{
-		name: 'Elmer Fudd - xx-elmer',
+		name: 'Elmer Fudd (xx-elmer)',
 		value: 'xx-elmer',
 	},
 	{
-		name: 'English - en',
+		name: 'English (en)',
 		value: 'en',
 	},
 	{
-		name: 'Esperanto - eo',
+		name: 'Esperanto (eo)',
 		value: 'eo',
 	},
 	{
-		name: 'Estonian - et',
+		name: 'Estonian (et)',
 		value: 'et',
 	},
 	{
-		name: 'Ewe - ee',
+		name: 'Ewe (ee)',
 		value: 'ee',
 	},
 	{
-		name: 'Faroese - fo',
+		name: 'Faroese (fo)',
 		value: 'fo',
 	},
 	{
-		name: 'Filipino - tl',
+		name: 'Filipino (tl)',
 		value: 'tl',
 	},
 	{
-		name: 'Finnish - fi',
+		name: 'Finnish (fi)',
 		value: 'fi',
 	},
 	{
-		name: 'French - fr',
+		name: 'French (fr)',
 		value: 'fr',
 	},
 	{
-		name: 'Frisian - fy',
+		name: 'Frisian (fy)',
 		value: 'fy',
 	},
 	{
-		name: 'Ga - gaa',
+		name: 'Ga (gaa)',
 		value: 'gaa',
 	},
 	{
-		name: 'Galician - gl',
+		name: 'Galician (gl)',
 		value: 'gl',
 	},
 	{
-		name: 'Georgian - ka',
+		name: 'Georgian (ka)',
 		value: 'ka',
 	},
 	{
-		name: 'German - de',
+		name: 'German (de)',
 		value: 'de',
 	},
 	{
-		name: 'Greek - el',
+		name: 'Greek (el)',
 		value: 'el',
 	},
 	{
-		name: 'Greenlandic - kl',
+		name: 'Greenlandic (kl)',
 		value: 'kl',
 	},
 	{
-		name: 'Guarani - gn',
+		name: 'Guarani (gn)',
 		value: 'gn',
 	},
 	{
-		name: 'Gujarati - gu',
+		name: 'Gujarati (gu)',
 		value: 'gu',
 	},
 	{
-		name: 'Hacker - xx-hacker',
+		name: 'Hacker (xx-hacker)',
 		value: 'xx-hacker',
 	},
 	{
-		name: 'Haitian Creole - ht',
+		name: 'Haitian Creole (ht)',
 		value: 'ht',
 	},
 	{
-		name: 'Hausa - ha',
+		name: 'Hausa (ha)',
 		value: 'ha',
 	},
 	{
-		name: 'Hawaiian - haw',
+		name: 'Hawaiian (haw)',
 		value: 'haw',
 	},
 	{
-		name: 'Hebrew - he',
+		name: 'Hebrew (he)',
 		value: 'he',
 	},
 	{
-		name: 'Hebrew - iw',
+		name: 'Hebrew (iw)',
 		value: 'iw',
 	},
 	{
-		name: 'Hindi - hi',
+		name: 'Hindi (hi)',
 		value: 'hi',
 	},
 	{
-		name: 'Hungarian - hu',
+		name: 'Hungarian (hu)',
 		value: 'hu',
 	},
 	{
-		name: 'Icelandic - is',
+		name: 'Icelandic (is)',
 		value: 'is',
 	},
 	{
-		name: 'Igbo - ig',
+		name: 'Igbo (ig)',
 		value: 'ig',
 	},
 	{
-		name: 'Indonesian - id',
+		name: 'Indonesian (id)',
 		value: 'id',
 	},
 	{
-		name: 'Interlingua - ia',
+		name: 'Interlingua (ia)',
 		value: 'ia',
 	},
 	{
-		name: 'Irish - ga',
+		name: 'Irish (ga)',
 		value: 'ga',
 	},
 	{
-		name: 'Italian - it',
+		name: 'Italian (it)',
 		value: 'it',
 	},
 	{
-		name: 'Japanese - ja',
+		name: 'Japanese (ja)',
 		value: 'ja',
 	},
 	{
-		name: 'Javanese - jw',
+		name: 'Javanese (jw)',
 		value: 'jw',
 	},
 	{
-		name: 'Kannada - kn',
+		name: 'Kannada (kn)',
 		value: 'kn',
 	},
 	{
-		name: 'Kazakh - kk',
+		name: 'Kazakh (kk)',
 		value: 'kk',
 	},
 	{
-		name: 'Kinyarwanda - rw',
+		name: 'Kinyarwanda (rw)',
 		value: 'rw',
 	},
 	{
-		name: 'Kirundi - rn',
+		name: 'Kirundi (rn)',
 		value: 'rn',
 	},
 	{
-		name: 'Klingon - xx-klingon',
+		name: 'Klingon (xx-klingon)',
 		value: 'xx-klingon',
 	},
 	{
-		name: 'Kongo - kg',
+		name: 'Kongo (kg)',
 		value: 'kg',
 	},
 	{
-		name: 'Korean - ko',
+		name: 'Korean (ko)',
 		value: 'ko',
 	},
 	{
-		name: 'Krio (Sierra Leone) - kri',
+		name: 'Krio (Sierra Leone) (kri)',
 		value: 'kri',
 	},
 	{
-		name: 'Kurdish - ku',
+		name: 'Kurdish (ku)',
 		value: 'ku',
 	},
 	{
-		name: 'Kurdish (Soranî) - ckb',
+		name: 'Kurdish (Soranî) (ckb)',
 		value: 'ckb',
 	},
 	{
-		name: 'Kyrgyz - ky',
+		name: 'Kyrgyz (ky)',
 		value: 'ky',
 	},
 	{
-		name: 'Laothian - lo',
+		name: 'Laothian (lo)',
 		value: 'lo',
 	},
 	{
-		name: 'Latin - la',
+		name: 'Latin (la)',
 		value: 'la',
 	},
 	{
-		name: 'Latvian - lv',
+		name: 'Latvian (lv)',
 		value: 'lv',
 	},
 	{
-		name: 'Lingala - ln',
+		name: 'Lingala (ln)',
 		value: 'ln',
 	},
 	{
-		name: 'Lithuanian - lt',
+		name: 'Lithuanian (lt)',
 		value: 'lt',
 	},
 	{
-		name: 'Lozi - loz',
+		name: 'Lozi (loz)',
 		value: 'loz',
 	},
 	{
-		name: 'Luganda - lg',
+		name: 'Luganda (lg)',
 		value: 'lg',
 	},
 	{
-		name: 'Luo - ach',
+		name: 'Luo (ach)',
 		value: 'ach',
 	},
 	{
-		name: 'Macedonian - mk',
+		name: 'Macedonian (mk)',
 		value: 'mk',
 	},
 	{
-		name: 'Malagasy - mg',
+		name: 'Malagasy (mg)',
 		value: 'mg',
 	},
 	{
-		name: 'Malay - ms',
+		name: 'Malay (ms)',
 		value: 'ms',
 	},
 	{
-		name: 'Malayalam - ml',
+		name: 'Malayalam (ml)',
 		value: 'ml',
 	},
 	{
-		name: 'Maldives - mv',
+		name: 'Maldives (mv)',
 		value: 'mv',
 	},
 	{
-		name: 'Maltese - mt',
+		name: 'Maltese (mt)',
 		value: 'mt',
 	},
 	{
-		name: 'Maori - mi',
+		name: 'Maori (mi)',
 		value: 'mi',
 	},
 	{
-		name: 'Marathi - mr',
+		name: 'Marathi (mr)',
 		value: 'mr',
 	},
 	{
-		name: 'Mauritian Creole - mfe',
+		name: 'Mauritian Creole (mfe)',
 		value: 'mfe',
 	},
 	{
-		name: 'Moldavian - mo',
+		name: 'Moldavian (mo)',
 		value: 'mo',
 	},
 	{
-		name: 'Mongolian - mn',
+		name: 'Mongolian (mn)',
 		value: 'mn',
 	},
 	{
-		name: 'Montenegrin - sr-me',
+		name: 'Montenegrin (sr-me)',
 		value: 'sr-me',
 	},
 	{
-		name: 'Myanmar - my',
+		name: 'Myanmar (my)',
 		value: 'my',
 	},
 	{
-		name: 'Nepali - ne',
+		name: 'Nepali (ne)',
 		value: 'ne',
 	},
 	{
-		name: 'Nigerian Pidgin - pcm',
+		name: 'Nigerian Pidgin (pcm)',
 		value: 'pcm',
 	},
 	{
-		name: 'Northern Sotho - nso',
+		name: 'Northern Sotho (nso)',
 		value: 'nso',
 	},
 	{
-		name: 'Norwegian - no',
+		name: 'Norwegian (no)',
 		value: 'no',
 	},
 	{
-		name: 'Norwegian (Nynorsk) - nn',
+		name: 'Norwegian (Nynorsk) (nn)',
 		value: 'nn',
 	},
 	{
-		name: 'Occitan - oc',
+		name: 'Occitan (oc)',
 		value: 'oc',
 	},
 	{
-		name: 'Oriya - or',
+		name: 'Oriya (or)',
 		value: 'or',
 	},
 	{
-		name: 'Oromo - om',
+		name: 'Oromo (om)',
 		value: 'om',
 	},
 	{
-		name: 'Pashto - ps',
+		name: 'Pashto (ps)',
 		value: 'ps',
 	},
 	{
-		name: 'Persian - fa',
+		name: 'Persian (fa)',
 		value: 'fa',
 	},
 	{
-		name: 'Pirate - xx-pirate',
+		name: 'Pirate (xx-pirate)',
 		value: 'xx-pirate',
 	},
 	{
-		name: 'Polish - pl',
+		name: 'Polish (pl)',
 		value: 'pl',
 	},
 	{
-		name: 'Portuguese - pt',
+		name: 'Portuguese (pt)',
 		value: 'pt',
 	},
 	{
-		name: 'Portuguese (Brazil) - pt-br',
+		name: 'Portuguese (Brazil) (pt-br)',
 		value: 'pt-br',
 	},
 	{
-		name: 'Portuguese (Portugal) - pt-pt',
+		name: 'Portuguese (Portugal) (pt-pt)',
 		value: 'pt-pt',
 	},
 	{
-		name: 'Punjabi - pa',
+		name: 'Punjabi (pa)',
 		value: 'pa',
 	},
 	{
-		name: 'Quechua - qu',
+		name: 'Quechua (qu)',
 		value: 'qu',
 	},
 	{
-		name: 'Romanian - ro',
+		name: 'Romanian (ro)',
 		value: 'ro',
 	},
 	{
-		name: 'Romansh - rm',
+		name: 'Romansh (rm)',
 		value: 'rm',
 	},
 	{
-		name: 'Runyakitara - nyn',
+		name: 'Runyakitara (nyn)',
 		value: 'nyn',
 	},
 	{
-		name: 'Russian - ru',
+		name: 'Russian (ru)',
 		value: 'ru',
 	},
 	{
-		name: 'Samoa - ws',
+		name: 'Samoa (ws)',
 		value: 'ws',
 	},
 	{
-		name: 'Scots Gaelic - gd',
+		name: 'Scots Gaelic (gd)',
 		value: 'gd',
 	},
 	{
-		name: 'Serbian - sr',
+		name: 'Serbian (sr)',
 		value: 'sr',
 	},
 	{
-		name: 'Serbo-Croatian - sh',
+		name: 'Serbo-Croatian (sh)',
 		value: 'sh',
 	},
 	{
-		name: 'Sesotho - st',
+		name: 'Sesotho (st)',
 		value: 'st',
 	},
 	{
-		name: 'Setswana - tn',
+		name: 'Setswana (tn)',
 		value: 'tn',
 	},
 	{
-		name: 'Seychellois Creole - crs',
+		name: 'Seychellois Creole (crs)',
 		value: 'crs',
 	},
 	{
-		name: 'Shona - sn',
+		name: 'Shona (sn)',
 		value: 'sn',
 	},
 	{
-		name: 'Sindhi - sd',
+		name: 'Sindhi (sd)',
 		value: 'sd',
 	},
 	{
-		name: 'Sinhalese - si',
+		name: 'Sinhalese (si)',
 		value: 'si',
 	},
 	{
-		name: 'Slovak - sk',
+		name: 'Slovak (sk)',
 		value: 'sk',
 	},
 	{
-		name: 'Slovenian - sl',
+		name: 'Slovenian (sl)',
 		value: 'sl',
 	},
 	{
-		name: 'Somali - so',
+		name: 'Somali (so)',
 		value: 'so',
 	},
 	{
-		name: 'Spanish - es',
+		name: 'Spanish (es)',
 		value: 'es',
 	},
 	{
-		name: 'Spanish (Latin American) - es-419',
+		name: 'Spanish (Latin American) (es-419)',
 		value: 'es-419',
 	},
 	{
-		name: 'Sundanese - su',
+		name: 'Sundanese (su)',
 		value: 'su',
 	},
 	{
-		name: 'Swahili - sw',
+		name: 'Swahili (sw)',
 		value: 'sw',
 	},
 	{
-		name: 'Swedish - sv',
+		name: 'Swedish (sv)',
 		value: 'sv',
 	},
 	{
-		name: 'Tajik - tg',
+		name: 'Tajik (tg)',
 		value: 'tg',
 	},
 	{
-		name: 'Tamil - ta',
+		name: 'Tamil (ta)',
 		value: 'ta',
 	},
 	{
-		name: 'Tatar - tt',
+		name: 'Tatar (tt)',
 		value: 'tt',
 	},
 	{
-		name: 'Telugu - te',
+		name: 'Telugu (te)',
 		value: 'te',
 	},
 	{
-		name: 'Thai - th',
+		name: 'Thai (th)',
 		value: 'th',
 	},
 	{
-		name: 'Tigrinya - ti',
+		name: 'Tigrinya (ti)',
 		value: 'ti',
 	},
 	{
-		name: 'Tonga - to',
+		name: 'Tonga (to)',
 		value: 'to',
 	},
 	{
-		name: 'Tshiluba - lua',
+		name: 'Tshiluba (lua)',
 		value: 'lua',
 	},
 	{
-		name: 'Tumbuka - tum',
+		name: 'Tumbuka (tum)',
 		value: 'tum',
 	},
 	{
-		name: 'Turkish - tr',
+		name: 'Turkish (tr)',
 		value: 'tr',
 	},
 	{
-		name: 'Turkmen - tk',
+		name: 'Turkmen (tk)',
 		value: 'tk',
 	},
 	{
-		name: 'Twi - tw',
+		name: 'Twi (tw)',
 		value: 'tw',
 	},
 	{
-		name: 'Uighur - ug',
+		name: 'Uighur (ug)',
 		value: 'ug',
 	},
 	{
-		name: 'Ukrainian - uk',
+		name: 'Ukrainian (uk)',
 		value: 'uk',
 	},
 	{
-		name: 'Urdu - ur',
+		name: 'Urdu (ur)',
 		value: 'ur',
 	},
 	{
-		name: 'Uzbek - uz',
+		name: 'Uzbek (uz)',
 		value: 'uz',
 	},
 	{
-		name: 'Vanuatu - vu',
+		name: 'Vanuatu (vu)',
 		value: 'vu',
 	},
 	{
-		name: 'Vietnamese - vi',
+		name: 'Vietnamese (vi)',
 		value: 'vi',
 	},
 	{
-		name: 'Welsh - cy',
+		name: 'Welsh (cy)',
 		value: 'cy',
 	},
 	{
-		name: 'Wolof - wo',
+		name: 'Wolof (wo)',
 		value: 'wo',
 	},
 	{
-		name: 'Xhosa - xh',
+		name: 'Xhosa (xh)',
 		value: 'xh',
 	},
 	{
-		name: 'Yiddish - yi',
+		name: 'Yiddish (yi)',
 		value: 'yi',
 	},
 	{
-		name: 'Yoruba - yo',
+		name: 'Yoruba (yo)',
 		value: 'yo',
 	},
 	{
-		name: 'Zulu - zu',
+		name: 'Zulu (zu)',
 		value: 'zu',
 	},
 ];

@@ -4,10 +4,9 @@ import { CountryOptions, DomainOptions, LanguageOptions } from './GoogleOptions'
 
 export const googleSearchFields: INodeProperties[] = [
 	{
-		displayName: '`q` Search Query',
+		displayName: 'Search Query (q)',
 		name: 'q',
-		description:
-			'Parameter defines the query you want to search. You can use anything that you would use in a regular Google search. e.g. inurl:, site:, intitle:. We also support advanced search query parameters such as as_dt and as_eq. See the full list of supported advanced search query parameters.',
+		description: 'Parameter defines the query you want to search',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -25,10 +24,10 @@ export const googleSearchFields: INodeProperties[] = [
 		},
 	},
 	{
-		displayName: '`location` Location',
+		displayName: 'Location (location)',
 		name: 'location',
 		description:
-			"Parameter defines from where you want the search to originate. If several locations match the location requested, we'll pick the most popular one. Head to the /locations.json API if you need more precise control. The location and uule parameters can't be used together. It is recommended to specify location at the city level in order to simulate a real user's search. If location is omitted, the search may take on the location of the proxy.",
+			'Parameter defines from where you want the search to originate. See docs for supported locations: https://serpapi.com/locations-api.',
 		default: '',
 		routing: {
 			request: {
@@ -57,7 +56,7 @@ export const googleSearchFields: INodeProperties[] = [
 		},
 		options: [
 			{
-				displayName: '`uule` Encoded Location',
+				displayName: 'Encoded Location (uule)',
 				name: 'uule',
 				description:
 					"Parameter is the Google encoded location you want to use for the search. uule and location parameters can't be used together.",
@@ -72,7 +71,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`ludocid` Google Place ID',
+				displayName: 'Google Place ID (ludocid)',
 				name: 'ludocid',
 				description:
 					'Parameter defines the ID (CID) of the Google My Business listing you want to scrape. Also known as Google Place ID.',
@@ -87,10 +86,10 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`lsig` Additional Google Place ID',
+				displayName: 'Additional Google Place ID (lsig)',
 				name: 'lsig',
 				description:
-					'Parameter that you might have to use to force the knowledge graph map view to show up. You can find the lsig ID by using our Local Pack API or Google Local API. lsig ID is also available via a redirect Google uses within Google My Business.',
+					'Parameter that you might have to use to force the knowledge graph map view to show up. You can find the lsig ID by using the Local Pack API or Google Local API. lsig ID is also available via a redirect Google uses within Google My Business.',
 				default: '',
 				routing: {
 					request: {
@@ -102,7 +101,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`kgmid` Google Knowledge Graph ID',
+				displayName: 'Google Knowledge Graph ID (kgmid)',
 				name: 'kgmid',
 				description:
 					'Parameter defines the ID (KGMID) of the Google Knowledge Graph listing you want to scrape. Also known as Google Knowledge Graph ID. Searches with kgmid parameter will return results for the originally encrypted search parameters. For some searches, kgmid may override all other parameters except start, and num parameters.',
@@ -117,7 +116,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`si` Google Cached Search Parameters ID',
+				displayName: 'Google Cached Search Parameters ID (si)',
 				name: 'si',
 				description:
 					'Parameter defines the cached search parameters of the Google Search you want to scrape. Searches with si parameter will return results for the originally encrypted search parameters. For some searches, si may override all other parameters except start, and num parameters. si can be used to scrape Google Knowledge Graph Tabs.',
@@ -132,10 +131,10 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`ibp` Google Element Rendering',
+				displayName: 'Google Element Rendering (ibp)',
 				name: 'ibp',
 				description:
-					'Parameter is responsible for rendering layouts and expansions for some elements (e.g., gwp;0,7 to expand searches with ludocid for expanded knowledge graph)',
+					'Parameter is responsible for rendering layouts and expansions for some elements',
 				default: '',
 				routing: {
 					request: {
@@ -147,7 +146,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`uds` Google Filter Search',
+				displayName: 'Google Filter Search (uds)',
 				name: 'uds',
 				description:
 					"Parameter enables to filter search. It's a string provided by Google as a filter. uds values are provided under the section: filters with uds, q and serpapi_link values provided for each filter.",
@@ -162,10 +161,9 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`google_domain` Domain',
+				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description:
-					'Parameter defines the Google domain to use. It defaults to google.com. Head to the Google domains page for a full list of supported Google domains.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -178,10 +176,9 @@ export const googleSearchFields: INodeProperties[] = [
 				options: DomainOptions,
 			},
 			{
-				displayName: '`gl` Country',
+				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					"Parameter defines the country to use for the Google search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google countries.",
+				description: 'Parameter defines the country to use for the Google search',
 				default: 'us',
 				routing: {
 					request: {
@@ -194,10 +191,9 @@ export const googleSearchFields: INodeProperties[] = [
 				options: CountryOptions,
 			},
 			{
-				displayName: '`hl` Language',
+				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					"Parameter defines the language to use for the Google search. It's a two-letter language code. (e.g., en for English, es for Spanish, or fr for French). Head to the Google languages page for a full list of supported Google languages.",
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {
@@ -210,10 +206,10 @@ export const googleSearchFields: INodeProperties[] = [
 				options: LanguageOptions,
 			},
 			{
-				displayName: '`cr` Set Multiple Countries',
+				displayName: 'Set Multiple Countries (cr)',
 				name: 'cr',
 				description:
-					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE will only search French and German pages). Head to the Google cr countries page for a full list of supported countries.',
+					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter.',
 				default: '',
 				routing: {
 					request: {
@@ -225,10 +221,10 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`lr` Set Multiple Languages',
+				displayName: 'Set Multiple Languages (lr)',
 				name: 'lr',
 				description:
-					'Parameter defines one or multiple languages to limit the search to. It uses lang_{two-letter language code} to specify languages and | as a delimiter. (e.g., lang_fr|lang_de will only search French and German pages). Head to the Google lr languages page for a full list of supported languages.',
+					'Parameter defines one or multiple languages to limit the search to. It uses lang_{two-letter language code} to specify languages and | as a delimiter.',
 				default: '',
 				routing: {
 					request: {
@@ -240,7 +236,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_dt',
+				displayName: 'Include/Exclude Site (as_dt)',
 				name: 'as_dt',
 				description:
 					'Parameter controls whether to include or exclude results from the site named in the as_sitesearch parameter',
@@ -255,7 +251,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_epq',
+				displayName: 'Required Phrase (as_epq)',
 				name: 'as_epq',
 				description:
 					'Parameter identifies a phrase that all documents in the search results must contain. You can also use the phrase search query term to search for a phrase.',
@@ -270,7 +266,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_eq',
+				displayName: 'Excluded Word/Phrase (as_eq)',
 				name: 'as_eq',
 				description:
 					'Parameter identifies a word or phrase that should not appear in any documents in the search results. You can also use the exclude query term to ensure that a particular word or phrase will not appear in the documents in a set of search results.',
@@ -285,7 +281,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_lq',
+				displayName: 'Link to URL (as_lq)',
 				name: 'as_lq',
 				description:
 					'Parameter specifies that all search results should contain a link to a particular URL. You can also use the link: query term for this type of query.',
@@ -300,7 +296,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_nlo',
+				displayName: 'Search Range Start (as_nlo)',
 				name: 'as_nlo',
 				description:
 					'Parameter specifies the starting value for a search range. Use as_nlo and as_nhi to append an inclusive search range.',
@@ -315,7 +311,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_nhi',
+				displayName: 'Search Range End (as_nhi)',
 				name: 'as_nhi',
 				description:
 					'Parameter specifies the ending value for a search range. Use as_nlo and as_nhi to append an inclusive search range.',
@@ -330,7 +326,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_oq',
+				displayName: 'Additional Search Terms (as_oq)',
 				name: 'as_oq',
 				description:
 					'Parameter provides additional search terms to check for in a document, where each document in the search results must contain at least one of the additional search terms. You can also use the Boolean OR query term for this type of query.',
@@ -345,7 +341,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_q',
+				displayName: 'Search Terms (as_q)',
 				name: 'as_q',
 				description:
 					'Parameter provides search terms to check for in a document. This parameter is also commonly used to allow users to specify additional terms to search for within a set of search results.',
@@ -360,10 +356,10 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_qdr',
+				displayName: 'Time Period (as_qdr)',
 				name: 'as_qdr',
 				description:
-					'Parameter requests search results from a specified time period (quick date range). The following values are supported:d[number]: requests results from the specified number of past days. Example for the past 10 days: as_qdr=d10w[number]: requests results from the specified number of past weeks.m[number]: requests results from the specified number of past months.y[number]: requests results from the specified number of past years. Example for the past year: as_qdr=y',
+					'Parameter requests search results from a specified time period (quick date range). See docs for more information: https://serpapi.com/advanced-google-query-parameters#api-parameters-advanced-search-query-parameters-as-qdr.',
 				default: '',
 				routing: {
 					request: {
@@ -375,10 +371,10 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_rq',
+				displayName: 'Related URL (as_rq)',
 				name: 'as_rq',
 				description:
-					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL. You can also use the related: query term for this type of query.',
+					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL.',
 				default: '',
 				routing: {
 					request: {
@@ -390,10 +386,10 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: 'as_sitesearch',
+				displayName: 'Site Search (as_sitesearch)',
 				name: 'as_sitesearch',
 				description:
-					'Parameter allows you to specify that all search results should be pages from a given site. By setting the as_dt parameter, you can also use it to exclude pages from a given site from your search resutls.',
+					'Parameter allows you to specify that all search results should be pages from a given site. By setting the as_dt parameter, you can also use it to exclude pages from a given site from your search results.',
 				default: '',
 				routing: {
 					request: {
@@ -405,7 +401,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`tbs` Advanced Search Parameters',
+				displayName: 'Advanced Search Parameters (tbs)',
 				name: 'tbs',
 				description:
 					"(to be searched) parameter defines advanced search parameters that aren't possible in the regular query field. (e.g., advanced search for patents, dates, news, videos, images, apps, or text contents).",
@@ -420,7 +416,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`safe` Adult Content Filtering',
+				displayName: 'Adult Content Filtering (safe)',
 				name: 'safe',
 				description:
 					'Parameter defines the level of filtering for adult content. It can be set to active or off, by default Google will blur explicit content.',
@@ -445,10 +441,10 @@ export const googleSearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`nfpr` Exclude Auto-corrected Results',
+				displayName: 'Exclude Auto-corrected Results (nfpr)',
 				name: 'nfpr',
 				description:
-					'Whether to exclude the results from an auto-corrected query when the original query is spelled wrong. It can be set to true to exclude these results, or false to include them (default). Note that this parameter may not prevent Google from returning results for an auto-corrected query if no other results are available.',
+					'Whether to exclude the results from an auto-corrected query when the original query is spelled wrong',
 				default: false,
 				routing: {
 					request: {
@@ -460,10 +456,10 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`filter` Results Filtering',
+				displayName: 'Results Filtering (filter)',
 				name: 'filter',
 				description:
-					"Whether the filters for 'Similar Results' and 'Omitted Results' are on or off. It can be set to true (default) to enable these filters, or false to disable these filters.",
+					"Whether the filters for 'Similar Results' and 'Omitted Results' are on or off",
 				default: true,
 				routing: {
 					request: {
@@ -475,7 +471,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'boolean',
 			},
 			{
-				displayName: '`tbm` Search Type',
+				displayName: 'Search Type (tbm)',
 				name: 'tbm',
 				description: '(to be matched) parameter defines the type of search you want to do',
 				default: 'isch',
@@ -497,10 +493,9 @@ export const googleSearchFields: INodeProperties[] = [
 				],
 			},
 			{
-				displayName: '`start` Result Offset',
+				displayName: 'Result Offset (start)',
 				name: 'start',
-				description:
-					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.).Google Local Results only accepts multiples of 20(e.g. 20 for the second page results, 40 for the third page results, etc.) as the start value.",
+				description: 'Parameter defines the result offset. It skips the given number of results.',
 				default: '',
 				routing: {
 					request: {
@@ -512,11 +507,10 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`num` Number of Results',
+				displayName: 'Number of Results (num)',
 				name: 'num',
-				description:
-					'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).The use of num may introduce latency, and/or prevent the inclusion of specialized result types. It is better to omit this parameter unless it is strictly necessary to increase the number of results per page. Results are not guaranteed to have the number of results specified in num.',
-				default: '',
+				description: 'Parameter defines the maximum number of results to return',
+				default: '10',
 				routing: {
 					request: {
 						qs: {
@@ -527,7 +521,7 @@ export const googleSearchFields: INodeProperties[] = [
 				type: 'string',
 			},
 			{
-				displayName: '`device` Device',
+				displayName: 'Device (device)',
 				name: 'device',
 				description:
 					'Parameter defines the device to use to get the results. It can be set to desktop (default) to use a regular browser, tablet to use a tablet browser (currently using iPads), or mobile to use a mobile browser (currently using iPhones).',
