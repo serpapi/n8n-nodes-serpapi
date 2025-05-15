@@ -27,7 +27,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		displayName: 'Place ID (place_id)',
 		name: 'place_id',
 		description:
-			'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using the Google Maps API. Either data_id or place_id should be set.',
+			'Parameter defines the unique reference to a place on a Google Map. You can find the place_id using the Google Maps API. Either data_id or place_id should be set.',
 		default: '',
 		routing: {
 			request: {
@@ -121,7 +121,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 				displayName: 'Number of Results (num)',
 				name: 'num',
 				description:
-					'Parameter defines the maximum number of results to returs, ranging from 1 to 20. Parameter cannot be used on the initial page when neither next_page_topic nor topic_id is set.',
+					'Parameter defines the maximum number of results to return, ranging from 1 to 20. Parameter cannot be used on the initial page when neither next_page_token nor topic_id is set.',
 				default: '10',
 				routing: {
 					request: {

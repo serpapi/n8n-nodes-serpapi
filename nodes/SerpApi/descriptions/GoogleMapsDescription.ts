@@ -148,7 +148,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: 'Place ID (place_id)',
 				name: 'place_id',
 				description:
-					'Parameter defines the unique reference to a place on a Google Map. Place IDs are available for most locations, including businesses, landmarks, parks, and intersections. You can find the place_id using the Google Maps API.',
+					'Parameter defines the unique reference to a place on a Google Map.',
 				default: '',
 				routing: {
 					request: {

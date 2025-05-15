@@ -268,7 +268,7 @@ export const googleLightFields: INodeProperties[] = [
 				displayName: 'Related URL (as_rq)',
 				name: 'as_rq',
 				description:
-					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL.',
+					'Parameter specifies that all search results should be pages that are related to the specified URL.',
 				default: '',
 				routing: {
 					request: {

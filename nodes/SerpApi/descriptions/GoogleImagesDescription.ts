@@ -114,7 +114,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: 'Set Multiple Countries (cr)',
 				name: 'cr',
 				description:
-					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE will only search French and German pages).',
+					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE).',
 				default: '',
 				routing: {
 					request: {
