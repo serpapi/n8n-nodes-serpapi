@@ -73,7 +73,7 @@ export const googleLocalFields: INodeProperties[] = [
 			{
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description: 'Parameter defines the Google domain to use. It defaults to google.com.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -88,8 +88,7 @@ export const googleLocalFields: INodeProperties[] = [
 			{
 				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					"Parameter defines the country to use for the Google Local search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries for a full list of supported Google countries.",
+				description: 'Parameter defines the country to use for the Google Local search',
 				default: 'us',
 				routing: {
 					request: {
@@ -120,7 +119,7 @@ export const googleLocalFields: INodeProperties[] = [
 				displayName: 'Google Place ID (ludocid)',
 				name: 'ludocid',
 				description:
-					'Parameter defines the ID (CID) of the Google My Business listing you want to scrape. Also known as Google Place ID. To aquire the ludocid you can either use Google\'s CID converter, or data_cid from SerpApi\'s Google Maps API. Example CID for "New York, NY, USA": 14414772292044717666.',
+					'Parameter defines the ID (CID) of the Google My Business listing you want to scrape. Also known as Google Place ID. See docs for more information: https://serpapi.com/google-local-api#api-parameters-advanced-google-local-parameters',
 				default: '',
 				routing: {
 					request: {
@@ -149,8 +148,7 @@ export const googleLocalFields: INodeProperties[] = [
 			{
 				displayName: 'Result Offset (start)',
 				name: 'start',
-				description:
-					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. On desktop, parameter only accepts multiples of 20 (e.g. 20 for the second page results, 40 for the third page results, etc.). On mobile, parameter only accepts multiples of 10 (e.g. 10 for the second page results, 20 for the third page results, etc.).",
+				description: 'Parameter defines the result offset. It skips the given number of results.',
 				default: '',
 				routing: {
 					request: {

@@ -6,7 +6,7 @@ export const ebaySearchFields: INodeProperties[] = [
 		displayName: 'Search Query (_nkw)',
 		name: '_nkw',
 		description:
-			'Parameter defines the search query. You can use anything that you would use in a regular Ebay search._nkw parameter is optional when category_id parameter is specified.',
+			'Parameter defines the search query. You can use anything that you would use in a regular Ebay search. _nkw parameter is optional when category_id parameter is specified.',
 		default: 'coffee',
 		routing: {
 			request: {
@@ -26,8 +26,7 @@ export const ebaySearchFields: INodeProperties[] = [
 	{
 		displayName: 'Domain (ebay_domain)',
 		name: 'ebay_domain',
-		description:
-			'Parameter defines the Ebay domain to use. It defaults to ebay.com. Head to the Ebay domains for a full list of supported Ebay domains.',
+		description: 'Parameter defines the Ebay domain to use',
 		default: 'ebay.com',
 		routing: {
 			request: {
@@ -128,8 +127,7 @@ export const ebaySearchFields: INodeProperties[] = [
 			{
 				displayName: 'Location (_salic)',
 				name: '_salic',
-				description:
-					'Parameter defines the location based on country. Head to the Ebay location options for a full list of supported countries.',
+				description: 'Parameter defines the location based on country',
 				default: '1',
 				routing: {
 					request: {
@@ -997,9 +995,8 @@ export const ebaySearchFields: INodeProperties[] = [
 			{
 				displayName: 'Page Number (_pgn)',
 				name: '_pgn',
-				description:
-					"Parameter defines the page number. It's used for pagination. (e.g., 1 (default) is the first page of results, 2 is the 2nd page of results, 3 is the 3rd page of results, etc.).",
-				default: '',
+				description: 'Parameter defines the page number, used for pagination',
+				default: 1,
 				routing: {
 					request: {
 						qs: {
@@ -1012,8 +1009,7 @@ export const ebaySearchFields: INodeProperties[] = [
 			{
 				displayName: 'Number of Results (_ipg)',
 				name: '_ipg',
-				description:
-					'Parameter defines the maximum number of results to return. There are total of four options: 25, 50 (default), 100 and 200 results.',
+				description: 'Parameter defines the maximum number of results to return',
 				default: 50,
 				routing: {
 					request: {
@@ -1025,19 +1021,19 @@ export const ebaySearchFields: INodeProperties[] = [
 				type: 'options',
 				options: [
 					{
-						name: '50 - Items Per Page',
+						name: '50 Items Per Page',
 						value: 50,
 					},
 					{
-						name: '25 - Items Per Page',
+						name: '25 Items Per Page',
 						value: 25,
 					},
 					{
-						name: '100 - Items Per Page',
+						name: '100 Items Per Page',
 						value: 100,
 					},
 					{
-						name: '200 - Items Per Page',
+						name: '200 Items Per Page',
 						value: 200,
 					},
 				],
@@ -1074,8 +1070,7 @@ export const ebaySearchFields: INodeProperties[] = [
 			{
 				displayName: 'Buying Format (buying_format)',
 				name: 'buying_format',
-				description:
-					'Parameter defines the buying format you can apply to the results. Available options (case-sensitive): Auction, Buy It Now, Accepts Offers.',
+				description: 'Parameter defines the buying format you can apply to the results',
 				default: 'Auction',
 				routing: {
 					request: {
@@ -1133,8 +1128,7 @@ export const ebaySearchFields: INodeProperties[] = [
 			{
 				displayName: 'Sorting (_sop)',
 				name: '_sop',
-				description:
-					"Parameter defines results sorted by different options in the Ebay. The default option is 'Best Match'. Head to the Ebay sort options for a full list of supported sort options.",
+				description: 'Parameter defines results sorted by different options in the Ebay',
 				default: '12',
 				routing: {
 					request: {
@@ -1190,8 +1184,7 @@ export const ebaySearchFields: INodeProperties[] = [
 			{
 				displayName: 'View Option (_dmd)',
 				name: '_dmd',
-				description:
-					"Parameter defines the visual layout for displaying results. The available options are 'Grid' and 'List'.",
+				description: 'Parameter defines the visual layout for displaying results',
 				default: '1',
 				routing: {
 					request: {
@@ -1216,7 +1209,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: 'Category ID (category_id)',
 				name: 'category_id',
 				description:
-					'Parameter defines the ID of a category where you want your search to be concentrated',
+					'Parameter defines the ID of a category where you want your search to be concentrated. See docs for more information: https://serpapi.com/ebay-search-api#api-parameters-advanced-ebay-parameters-category-id.',
 				default: '',
 				routing: {
 					request: {

@@ -7,7 +7,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 		displayName: 'Starting Point Address (start_addr)',
 		name: 'start_addr',
 		description:
-			'Parameter defines the address of the starting point for the direction you want to search. You can use anything that you would use in a regular Google Maps Directions search. Alternatively, you can use start_data_id or start_coords.',
+			'Parameter defines the address of the starting point for the direction you want to search. Alternatively, you can use start_data_id or start_coords.',
 		default: '',
 		routing: {
 			request: {
@@ -27,7 +27,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 		displayName: 'Ending Point Address (end_addr)',
 		name: 'end_addr',
 		description:
-			'Parameter defines the address of the ending point for the direction you want to search. You can use anything that you would use in a regular Google Maps Directions search. Alternatively, you can use end_data_id or end_coords.',
+			'Parameter defines the address of the ending point for the direction you want to search. Alternatively, you can use end_data_id or end_coords.',
 		default: '',
 		routing: {
 			request: {
@@ -58,7 +58,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 			{
 				displayName: 'Country (gl)',
 				name: 'gl',
-				description: 'Parameter defines the country to use for the Google search',
+				description: 'Parameter defines the country to use for the Google Maps Directions search',
 				default: 'us',
 				routing: {
 					request: {
@@ -163,7 +163,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				displayName: 'Starting Point GPS Coordinates (start_coords)',
 				name: 'start_coords',
 				description:
-					'Parameter defines the GPS coordinates of the starting point for the direction you want to search. The format is latitude,longitude. E.g. 30.197471099,-97.66635289. Alternatively, you can use start_addr or start_data_id.',
+					'Parameter defines the GPS coordinates of the starting point for the direction you want to search. The format is latitude,longitude. Alternatively, you can use end_addr or end_data_id.',
 				default: '',
 				routing: {
 					request: {
@@ -178,7 +178,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				displayName: 'Ending Point GPS Coordinates (end_coords)',
 				name: 'end_coords',
 				description:
-					'Parameter defines the GPS coordinates of the ending point for the direction you want to search. The format is latitude,longitude. E.g. 30.197471099,-97.66635289. Alternatively, you can use end_addr or end_data_id.',
+					'Parameter defines the GPS coordinates of the ending point for the direction you want to search. The format is latitude,longitude. Alternatively, you can use end_addr or end_data_id.',
 				default: '',
 				routing: {
 					request: {
@@ -275,7 +275,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 				displayName: 'Travel Time (time)',
 				name: 'time',
 				description:
-					'Parameter defines the time to travel. Available options: depart_at:xxxxxx - Specifies the departure time where xxxxxx is the timestamp. E.g. depart_at:1698229538 specifies the departure time to 2023-10-25 10:25:38 GMT+0000. arrive_by:xxxxxx - Specifies the arrival time, where xxxxxx is the timestamp. E.g. arrive_by:1698229538 specifies the arrival time to 2023-10-25 10:25:38 GMT+0000. last_available - Takes the last available transit. This option works only if travel_mode parameter is set to: 3 (Transit)',
+					'Parameter defines the time to travel. See docs for more information: https://serpapi.com/google-maps-directions-api#api-parameters-advanced-options-time.',
 				default: '',
 				routing: {
 					request: {

@@ -7,7 +7,7 @@ export const googleTrendsFields: INodeProperties[] = [
 		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
-			'Parameter defines the query or queries you want to search. You can use anything that you would use in a regular Google Trends search. The maximum number of queries per search is 5 (this only applies to "Interest over time" and "Compared breakdown by region" data_type, other types of data will only accept 1 query per search).When passing multiple queries you need to use a comma (,) to separate them (e.g. coffee,pizza,dark chocolate,/m/027lnzs,bread).Query can be a "Search term" (e.g. World Cup, Eminem, iPhone, etc.) or a "Topic" (e.g. /m/0663v, /m/027lnzs, /g/11mw8j71m4, etc.). Queries that are "Topics" are encoded. To retrieve these values you can use the Google Trends Autocomplete API. Maximum length for each query is 100 characters.',
+			'Parameter defines the query or queries you want to search. See docs for more information: https://serpapi.com/google-trends-api#api-parameters-search-query-q.',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -65,215 +65,182 @@ export const googleTrendsFields: INodeProperties[] = [
 					},
 				},
 				type: 'options',
-				// eslint-disable-next-line n8n-nodes-base/node-param-options-type-unsorted-items
 				options: [
 					{
-						name: 'Worldwide',
-						value: '',
+						name: "'Amran",
+						value: 'YE-AM',
+					},
+					{
+						name: "'Eua",
+						value: 'TO-01',
+					},
+					{
+						name: "A'ana",
+						value: 'WS-AA',
+					},
+					{
+						name: 'Aargau',
+						value: 'CH-AG',
+					},
+					{
+						name: 'Abia',
+						value: 'NG-AB',
+					},
+					{
+						name: 'Abilene-Sweetwater TX',
+						value: '662',
+					},
+					{
+						name: 'Abkhazia',
+						value: 'GE-AB',
+					},
+					{
+						name: 'Abruzzo',
+						value: 'IT-65',
+					},
+					{
+						name: 'Abu Dhabi',
+						value: 'AE-AZ',
+					},
+					{
+						name: 'Abyan',
+						value: 'YE-AB',
+					},
+					{
+						name: 'Aceh',
+						value: 'ID-AC',
+					},
+					{
+						name: 'Acklins',
+						value: 'BS-AK',
+					},
+					{
+						name: 'Acquaviva',
+						value: 'SM-01',
+					},
+					{
+						name: 'Ad Dakhiliyah ‍Governorate',
+						value: 'OM-DA',
+					},
+					{
+						name: "Ad Dali'",
+						value: 'YE-DA',
+					},
+					{
+						name: 'Ad Dhahirah Governorate',
+						value: 'OM-ZA',
+					},
+					{
+						name: 'Adamawa',
+						value: 'NG-AD',
+					},
+					{
+						name: 'Adamawa Region',
+						value: 'CM-AD',
+					},
+					{
+						name: 'Adana',
+						value: 'TR-01',
+					},
+					{
+						name: 'Ādaži Municipality',
+						value: 'LV-011',
+					},
+					{
+						name: 'Addis Ababa',
+						value: 'ET-AA',
+					},
+					{
+						name: 'Aden',
+						value: 'YE-AD',
+					},
+					{
+						name: 'Adıyaman Province',
+						value: 'TR-02',
+					},
+					{
+						name: 'Adjara',
+						value: 'GE-AJ',
+					},
+					{
+						name: 'Adrar',
+						value: 'MR-07',
+					},
+					{
+						name: 'Adrar Province',
+						value: 'DZ-01',
+					},
+					{
+						name: 'Adygea',
+						value: 'RU-AD',
+					},
+					{
+						name: 'Afar',
+						value: 'ET-AF',
 					},
 					{
 						name: 'Afghanistan',
 						value: 'AF',
 					},
 					{
-						name: 'Badakhshan',
-						value: 'AF-BDS',
+						name: 'Afyonkarahisar Province',
+						value: 'TR-03',
 					},
 					{
-						name: 'Badghis',
-						value: 'AF-BDG',
+						name: 'Agadez',
+						value: 'NE-1',
 					},
 					{
-						name: 'Baghlan',
-						value: 'AF-BGL',
+						name: 'Agalega Islands',
+						value: 'MU-AG',
 					},
 					{
-						name: 'Balkh',
-						value: 'AF-BAL',
+						name: 'Aglona Municipality',
+						value: 'LV-001',
 					},
 					{
-						name: 'Bamiyan',
-						value: 'AF-BAM',
+						name: 'Agnebi',
+						value: 'CI-16',
 					},
 					{
-						name: 'Daykundi',
-						value: 'AF-DAY',
+						name: 'Ağrı',
+						value: 'TR-04',
 					},
 					{
-						name: 'Farah',
-						value: 'AF-FRA',
+						name: 'Aguascalientes',
+						value: 'MX-AGU',
 					},
 					{
-						name: 'Faryab',
-						value: 'AF-FYB',
+						name: 'Ahal',
+						value: 'TM-A',
 					},
 					{
-						name: 'Ghazni',
-						value: 'AF-GHA',
+						name: 'Ahuachapan',
+						value: 'SV-AH',
 					},
 					{
-						name: 'Ghor',
-						value: 'AF-GHO',
+						name: 'Aichi Prefecture',
+						value: 'JP-23',
 					},
 					{
-						name: 'Helmand',
-						value: 'AF-HEL',
+						name: 'Aiga-i-le-Tai',
+						value: 'WS-AL',
 					},
 					{
-						name: 'Herat',
-						value: 'AF-HER',
+						name: 'Aileu',
+						value: 'TL-AL',
 					},
 					{
-						name: 'Jowzjan',
-						value: 'AF-JOW',
+						name: 'Ailinglaplap Atoll',
+						value: 'MH-ALL',
 					},
 					{
-						name: 'Kabul',
-						value: 'AF-KAB',
+						name: 'Ailuk Atoll',
+						value: 'MH-ALK',
 					},
 					{
-						name: 'Kandahar',
-						value: 'AF-KAN',
-					},
-					{
-						name: 'Kapisa',
-						value: 'AF-KAP',
-					},
-					{
-						name: 'Khost',
-						value: 'AF-KHO',
-					},
-					{
-						name: 'Kunar',
-						value: 'AF-KNR',
-					},
-					{
-						name: 'Kunduz',
-						value: 'AF-KDZ',
-					},
-					{
-						name: 'Laghman',
-						value: 'AF-LAG',
-					},
-					{
-						name: 'Logar',
-						value: 'AF-LOG',
-					},
-					{
-						name: 'Nangarhar',
-						value: 'AF-NAN',
-					},
-					{
-						name: 'Nimruz',
-						value: 'AF-NIM',
-					},
-					{
-						name: 'Nuristan',
-						value: 'AF-NUR',
-					},
-					{
-						name: 'Oruzgan',
-						value: 'AF-URU',
-					},
-					{
-						name: 'Paktia',
-						value: 'AF-PIA',
-					},
-					{
-						name: 'Paktika',
-						value: 'AF-PKA',
-					},
-					{
-						name: 'Panjshir',
-						value: 'AF-PAN',
-					},
-					{
-						name: 'Parvan',
-						value: 'AF-PAR',
-					},
-					{
-						name: 'Samangan',
-						value: 'AF-SAM',
-					},
-					{
-						name: 'Sare Pol',
-						value: 'AF-SAR',
-					},
-					{
-						name: 'Takhar',
-						value: 'AF-TAK',
-					},
-					{
-						name: 'Wardak',
-						value: 'AF-WAR',
-					},
-					{
-						name: 'Zabul',
-						value: 'AF-ZAB',
-					},
-					{
-						name: 'Åland Islands',
-						value: 'AX',
-					},
-					{
-						name: 'Albania',
-						value: 'AL',
-					},
-					{
-						name: 'Berat',
-						value: 'AL-01',
-					},
-					{
-						name: 'Dibër County',
-						value: 'AL-09',
-					},
-					{
-						name: 'Durrës',
-						value: 'AL-02',
-					},
-					{
-						name: 'Elbasan',
-						value: 'AL-03',
-					},
-					{
-						name: 'Fier',
-						value: 'AL-04',
-					},
-					{
-						name: 'Gjirokastra',
-						value: 'AL-05',
-					},
-					{
-						name: 'Korca',
-						value: 'AL-06',
-					},
-					{
-						name: 'Kukës County',
-						value: 'AL-07',
-					},
-					{
-						name: 'Lezhë County',
-						value: 'AL-08',
-					},
-					{
-						name: 'Shkodër County',
-						value: 'AL-10',
-					},
-					{
-						name: 'Tirana',
-						value: 'AL-11',
-					},
-					{
-						name: 'Vlora',
-						value: 'AL-12',
-					},
-					{
-						name: 'Algeria',
-						value: 'DZ',
-					},
-					{
-						name: 'Adrar Province',
-						value: 'DZ-01',
+						name: 'Aimeliik',
+						value: 'PW-002',
 					},
 					{
 						name: 'Aïn Defla Province',
@@ -284,188 +251,436 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'DZ-46',
 					},
 					{
+						name: 'Ainaro',
+						value: 'TL-AN',
+					},
+					{
+						name: 'Airai',
+						value: 'PW-004',
+					},
+					{
+						name: 'Aiwo',
+						value: 'NR-01',
+					},
+					{
+						name: 'Aizkraukle Municipality',
+						value: 'LV-002',
+					},
+					{
+						name: 'Aizpute Municipality',
+						value: 'LV-003',
+					},
+					{
+						name: 'Ajloun Governorate',
+						value: 'JO-AJ',
+					},
+					{
+						name: 'Ajman',
+						value: 'AE-AJ',
+					},
+					{
+						name: 'Akershus',
+						value: 'NO-02',
+					},
+					{
+						name: 'Akita Prefecture',
+						value: 'JP-05',
+					},
+					{
+						name: 'Akmola Region',
+						value: 'KZ-AKM',
+					},
+					{
+						name: 'Aknīste Municipality',
+						value: 'LV-004',
+					},
+					{
+						name: 'Aksaray',
+						value: 'TR-68',
+					},
+					{
+						name: 'Aktobe Region',
+						value: 'KZ-AKT',
+					},
+					{
+						name: 'Akwa Ibom',
+						value: 'NG-AK',
+					},
+					{
+						name: 'Al Ahmadi Governorate',
+						value: 'KW-AH',
+					},
+					{
+						name: 'Al Anbar',
+						value: 'IQ-AN',
+					},
+					{
+						name: 'Al Asimah Governate',
+						value: 'KW-KU',
+					},
+					{
+						name: 'Al Bahah Province',
+						value: 'SA-11',
+					},
+					{
+						name: 'Al Batinah North Governorate',
+						value: 'OM-BS',
+					},
+					{
+						name: 'Al Batinah South Governorate',
+						value: 'OM-BJ',
+					},
+					{
+						name: "Al Bayda'",
+						value: 'YE-BA',
+					},
+					{
+						name: 'Al Buraymi Governorate',
+						value: 'OM-BU',
+					},
+					{
+						name: 'Al Butnan',
+						value: 'LY-BU',
+					},
+					{
+						name: 'Al Daayen',
+						value: 'QA-ZA',
+					},
+					{
+						name: 'Al Farwaniyah Governorate',
+						value: 'KW-FA',
+					},
+					{
+						name: 'Al Hasakah',
+						value: 'SY-HA',
+					},
+					{
+						name: 'Al Hudaydah',
+						value: 'YE-HU',
+					},
+					{
+						name: 'Al Jabal al Akhdar',
+						value: 'LY-JA',
+					},
+					{
+						name: 'Al Jabal al Gharbi',
+						value: 'LY-JG',
+					},
+					{
+						name: 'Al Jafara',
+						value: 'LY-JI',
+					},
+					{
+						name: 'Al Jahra Governorate',
+						value: 'KW-JA',
+					},
+					{
+						name: 'Al Jawf',
+						value: 'YE-JA',
+					},
+					{
+						name: 'Al Jazirah',
+						value: 'SD-GZ',
+					},
+					{
+						name: 'Al Jowf',
+						value: 'SA-12',
+					},
+					{
+						name: 'Al Jufrah',
+						value: 'LY-JU',
+					},
+					{
+						name: 'Al Khor',
+						value: 'QA-KH',
+					},
+					{
+						name: 'Al Kufrah',
+						value: 'LY-KF',
+					},
+					{
+						name: 'Al Madinah Province',
+						value: 'SA-03',
+					},
+					{
+						name: 'Al Mahrah',
+						value: 'YE-MR',
+					},
+					{
+						name: 'Al Mahwit',
+						value: 'YE-MW',
+					},
+					{
+						name: 'Al Marj',
+						value: 'LY-MJ',
+					},
+					{
+						name: 'Al Murqub',
+						value: 'LY-MB',
+					},
+					{
+						name: 'Al Muthanna',
+						value: 'IQ-MU',
+					},
+					{
+						name: 'Al Qadarif',
+						value: 'SD-GD',
+					},
+					{
+						name: 'Al Qalyubia Governorate',
+						value: 'EG-KB',
+					},
+					{
+						name: 'Al Qassim',
+						value: 'SA-05',
+					},
+					{
+						name: 'Al Rayyan Municipality',
+						value: 'QA-RA',
+					},
+					{
+						name: 'Al Wahat',
+						value: 'LY-WA',
+					},
+					{
+						name: 'Al Wahdah',
+						value: 'SS-UY',
+					},
+					{
+						name: 'Al Wakrah Municipality',
+						value: 'QA-WA',
+					},
+					{
+						name: 'Al Wusta Governorate',
+						value: 'OM-WU',
+					},
+					{
+						name: 'Al-Buhayrat',
+						value: 'SS-LK',
+					},
+					{
+						name: 'Al-Qadisiyyah',
+						value: 'IQ-QA',
+					},
+					{
+						name: 'Alabama',
+						value: 'US-AL',
+					},
+					{
+						name: 'Alajuela',
+						value: 'CR-A',
+					},
+					{
+						name: 'Åland Islands',
+						value: 'AX',
+					},
+					{
+						name: 'Alaska',
+						value: 'US-AK',
+					},
+					{
+						name: 'Alba County',
+						value: 'RO-AB',
+					},
+					{
+						name: 'Albania',
+						value: 'AL',
+					},
+					{
+						name: 'Albany GA',
+						value: '525',
+					},
+					{
+						name: 'Albany-Schenectady-Troy NY',
+						value: '532',
+					},
+					{
+						name: 'Alberta',
+						value: 'CA-AB',
+					},
+					{
+						name: 'Alborz',
+						value: 'IR-32',
+					},
+					{
+						name: 'Albuquerque-Santa Fe NM',
+						value: '790',
+					},
+					{
+						name: 'Aleppo Governorate',
+						value: 'SY-HL',
+					},
+					{
+						name: 'Alexandria Governorate',
+						value: 'EG-ALX',
+					},
+					{
+						name: 'Alexandria LA',
+						value: '644',
+					},
+					{
+						name: 'Algeria',
+						value: 'DZ',
+					},
+					{
 						name: 'Algiers Province',
 						value: 'DZ-16',
 					},
 					{
-						name: 'Annaba Province',
-						value: 'DZ-23',
+						name: 'Ali Sabieh',
+						value: 'DJ-AS',
 					},
 					{
-						name: 'Batna Province',
-						value: 'DZ-05',
+						name: 'Alibori',
+						value: 'BJ-AL',
 					},
 					{
-						name: 'Béchar',
-						value: 'DZ-08',
+						name: 'Almaty Region',
+						value: 'KZ-ALM',
 					},
 					{
-						name: 'Béjaïa',
-						value: 'DZ-06',
+						name: 'Alo',
+						value: 'WF-ALO',
 					},
 					{
-						name: 'Biskra',
-						value: 'DZ-07',
+						name: 'Aloja Municipality',
+						value: 'LV-005',
 					},
 					{
-						name: 'Blida Province',
-						value: 'DZ-09',
+						name: 'Alpena MI',
+						value: '583',
 					},
 					{
-						name: 'Bordj Bou Arreridj',
-						value: 'DZ-34',
+						name: 'Alsace',
+						value: 'FR-A',
 					},
 					{
-						name: 'Bouïra Province',
-						value: 'DZ-10',
+						name: 'Alsunga Municipality',
+						value: 'LV-006',
 					},
 					{
-						name: 'Boumerdès Province',
-						value: 'DZ-35',
+						name: 'Alta Verapaz',
+						value: 'GT-AV',
 					},
 					{
-						name: 'Chlef Province',
-						value: 'DZ-02',
+						name: 'Altai Krai',
+						value: 'RU-ALT',
 					},
 					{
-						name: 'Constantine',
-						value: 'DZ-25',
+						name: 'Altai Republic',
+						value: 'RU-AL',
 					},
 					{
-						name: 'Djelfa Province',
-						value: 'DZ-17',
+						name: 'Alto Paraguay',
+						value: 'PY-16',
 					},
 					{
-						name: 'El Bayadh Province',
-						value: 'DZ-32',
+						name: 'Alto Parana',
+						value: 'PY-10',
 					},
 					{
-						name: 'El Oued Province',
-						value: 'DZ-39',
+						name: 'Alūksne Municipality',
+						value: 'LV-007',
 					},
 					{
-						name: 'El Taref Province',
-						value: 'DZ-36',
+						name: 'Alytus County',
+						value: 'LT-AL',
 					},
 					{
-						name: 'Ghardaia Province',
-						value: 'DZ-47',
+						name: 'Amambay Department',
+						value: 'PY-13',
 					},
 					{
-						name: 'Guelma Province',
-						value: 'DZ-24',
+						name: 'Amanat Al Asimah',
+						value: 'YE-SA',
 					},
 					{
-						name: 'Illizi Province',
-						value: 'DZ-33',
+						name: 'Amarillo TX',
+						value: '634',
 					},
 					{
-						name: 'Jijel Province',
-						value: 'DZ-18',
+						name: 'Amasya Province',
+						value: 'TR-05',
 					},
 					{
-						name: 'Khenchela Province',
-						value: 'DZ-40',
+						name: 'Amata Municipality',
+						value: 'LV-008',
 					},
 					{
-						name: 'Laghouat Province',
-						value: 'DZ-03',
+						name: 'Amazonas (Peru)',
+						value: 'PE-AMA',
 					},
 					{
-						name: "M'Sila Province",
-						value: 'DZ-28',
+						name: 'Amazonas (Venezuelan state)',
+						value: 'VE-Z',
 					},
 					{
-						name: 'Mascara Province',
-						value: 'DZ-29',
-					},
-					{
-						name: 'Médéa Province',
-						value: 'DZ-26',
-					},
-					{
-						name: 'Mila Province',
-						value: 'DZ-43',
-					},
-					{
-						name: 'Mostaganem Province',
-						value: 'DZ-27',
-					},
-					{
-						name: 'Naâma Province',
-						value: 'DZ-45',
-					},
-					{
-						name: 'Oran Province',
-						value: 'DZ-31',
-					},
-					{
-						name: 'Ouargla Province',
-						value: 'DZ-30',
-					},
-					{
-						name: 'Oum El Bouaghi Province',
-						value: 'DZ-04',
-					},
-					{
-						name: 'Province of Tamanrasset',
-						value: 'DZ-11',
-					},
-					{
-						name: 'Relizane Province',
-						value: 'DZ-48',
-					},
-					{
-						name: 'Saïda Province',
-						value: 'DZ-20',
-					},
-					{
-						name: 'Setif',
-						value: 'DZ-19',
-					},
-					{
-						name: 'Sidi-Bel-Abbes',
-						value: 'DZ-22',
-					},
-					{
-						name: 'Skikda Province',
-						value: 'DZ-21',
-					},
-					{
-						name: 'Souk Ahras Province',
-						value: 'DZ-41',
-					},
-					{
-						name: 'Tebessa',
-						value: 'DZ-12',
-					},
-					{
-						name: 'Tiaret Province',
-						value: 'DZ-14',
-					},
-					{
-						name: 'Tindouf Province',
-						value: 'DZ-37',
-					},
-					{
-						name: 'Tipaza Province',
-						value: 'DZ-42',
-					},
-					{
-						name: 'Tissemsilt',
-						value: 'DZ-38',
-					},
-					{
-						name: 'Tizi Ouzou Province',
-						value: 'DZ-15',
-					},
-					{
-						name: 'Tlemcen Province',
-						value: 'DZ-13',
+						name: 'Amazonas Department',
+						value: 'CO-AMA',
 					},
 					{
 						name: 'American Samoa',
 						value: 'AS',
+					},
+					{
+						name: 'Amhara',
+						value: 'ET-AM',
+					},
+					{
+						name: 'Amman Governorate',
+						value: 'JO-AM',
+					},
+					{
+						name: 'Amnat Charoen',
+						value: 'TH-37',
+					},
+					{
+						name: 'Amur Oblast',
+						value: 'RU-AMU',
+					},
+					{
+						name: 'An Giang Province',
+						value: 'VN-44',
+					},
+					{
+						name: 'An Nuqat al Khams',
+						value: 'LY-NQ',
+					},
+					{
+						name: 'An-Najaf',
+						value: 'IQ-NA',
+					},
+					{
+						name: 'Anabar',
+						value: 'NR-02',
+					},
+					{
+						name: 'Anambra',
+						value: 'NG-AN',
+					},
+					{
+						name: 'Ancash',
+						value: 'PE-ANC',
+					},
+					{
+						name: 'Anchorage AK',
+						value: '743',
+					},
+					{
+						name: 'Andalusia',
+						value: 'ES-AN',
+					},
+					{
+						name: 'Andaman and Nicobar Islands',
+						value: 'IN-AN',
+					},
+					{
+						name: 'Andhra Pradesh',
+						value: 'IN-AP',
+					},
+					{
+						name: 'Andijan Province',
+						value: 'UZ-AN',
 					},
 					{
 						name: 'Andorra',
@@ -476,108 +691,84 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'AD-07',
 					},
 					{
-						name: 'Canillo',
-						value: 'AD-02',
+						name: 'Andrijevica',
+						value: 'ME-01',
 					},
 					{
-						name: 'Encamp',
-						value: 'AD-03',
+						name: 'Anenii Noi',
+						value: 'MD-AN',
 					},
 					{
-						name: 'Escaldes-Engordany',
-						value: 'AD-08',
+						name: 'Anetan',
+						value: 'NR-03',
 					},
 					{
-						name: 'La Massana',
-						value: 'AD-04',
+						name: 'Ang Thong',
+						value: 'TH-15',
 					},
 					{
-						name: 'Ordino',
-						value: 'AD-05',
-					},
-					{
-						name: 'Sant Julià de Lòria',
-						value: 'AD-06',
+						name: 'Angaur',
+						value: 'PW-010',
 					},
 					{
 						name: 'Angola',
 						value: 'AO',
 					},
 					{
-						name: 'Bengo Province',
-						value: 'AO-BGO',
-					},
-					{
-						name: 'Benguela Province',
-						value: 'AO-BGU',
-					},
-					{
-						name: 'Bié Province',
-						value: 'AO-BIE',
-					},
-					{
-						name: 'Cabinda Province',
-						value: 'AO-CAB',
-					},
-					{
-						name: 'Cuando Cubango Province',
-						value: 'AO-CCU',
-					},
-					{
-						name: 'Cuanza Norte Province',
-						value: 'AO-CNO',
-					},
-					{
-						name: 'Cuanza Sul',
-						value: 'AO-CUS',
-					},
-					{
-						name: 'Cunene',
-						value: 'AO-CNN',
-					},
-					{
-						name: 'Huambo Province',
-						value: 'AO-HUA',
-					},
-					{
-						name: 'Huila Province',
-						value: 'AO-HUI',
-					},
-					{
-						name: 'Luanda Province',
-						value: 'AO-LUA',
-					},
-					{
-						name: 'Lunda Norte',
-						value: 'AO-LNO',
-					},
-					{
-						name: 'Lunda Sul Province',
-						value: 'AO-LSU',
-					},
-					{
-						name: 'Malanje Province',
-						value: 'AO-MAL',
-					},
-					{
-						name: 'Moxico Province',
-						value: 'AO-MOX',
-					},
-					{
-						name: 'Namibe Province',
-						value: 'AO-NAM',
-					},
-					{
-						name: 'Uíge Province',
-						value: 'AO-UIG',
-					},
-					{
-						name: 'Zaire Province',
-						value: 'AO-ZAI',
-					},
-					{
 						name: 'Anguilla',
 						value: 'AI',
+					},
+					{
+						name: 'Anhui',
+						value: 'CN-34',
+					},
+					{
+						name: 'Anibare',
+						value: 'NR-04',
+					},
+					{
+						name: 'Ankara',
+						value: 'TR-06',
+					},
+					{
+						name: 'Annaba Province',
+						value: 'DZ-23',
+					},
+					{
+						name: 'Annobón',
+						value: 'GQ-AN',
+					},
+					{
+						name: 'Anse Aux Pins',
+						value: 'SC-01',
+					},
+					{
+						name: 'Anse Boileau',
+						value: 'SC-02',
+					},
+					{
+						name: 'Anse Etoile',
+						value: 'SC-03',
+					},
+					{
+						name: 'Anse La Raye',
+						value: 'LC-01',
+					},
+					{
+						name: 'Anse Royale',
+						value: 'SC-05',
+					},
+					{
+						name: 'Anseba',
+						value: 'ER-AN',
+					},
+					{
+						name: 'Antalya',
+						value: 'TR-07',
+					},
+					{
+						name: 'Antananarivo',
+						value: 'MG-T',
 					},
 					{
 						name: 'Antarctica',
@@ -588,188 +779,308 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'AG',
 					},
 					{
-						name: 'Barbuda',
-						value: 'AG-10',
+						name: 'Antioquia',
+						value: 'CO-ANT',
 					},
 					{
-						name: 'Redonda',
-						value: 'AG-11',
+						name: 'Antofagasta Region',
+						value: 'CL-AN',
 					},
 					{
-						name: 'Saint George',
-						value: 'AG-03',
+						name: 'Antsiranana',
+						value: 'MG-D',
 					},
 					{
-						name: 'Saint John',
-						value: 'AG-04',
+						name: 'Anzoategui',
+						value: 'VE-B',
 					},
 					{
-						name: 'Saint Mary',
-						value: 'AG-05',
+						name: 'Aomori Prefecture',
+						value: 'JP-02',
 					},
 					{
-						name: 'Saint Paul',
-						value: 'AG-06',
+						name: 'Aosta',
+						value: 'IT-23',
 					},
 					{
-						name: 'Saint Peter',
-						value: 'AG-07',
+						name: 'Ape Municipality',
+						value: 'LV-009',
 					},
 					{
-						name: 'Saint Philip',
-						value: 'AG-08',
+						name: 'Appenzell Innerrhoden',
+						value: 'CH-AI',
 					},
 					{
-						name: 'Argentina',
-						value: 'AR',
+						name: 'Appenzell Outer Rhodes',
+						value: 'CH-AR',
 					},
 					{
-						name: 'Autonomous City of Buenos Aires',
-						value: 'AR-C',
+						name: 'Apulia',
+						value: 'IT-75',
 					},
 					{
-						name: 'Buenos Aires Province',
-						value: 'AR-B',
+						name: 'Apure',
+						value: 'VE-C',
 					},
 					{
-						name: 'Catamarca Province',
-						value: 'AR-K',
+						name: 'Apurimac',
+						value: 'PE-APU',
 					},
 					{
-						name: 'Chaco Province',
-						value: 'AR-H',
+						name: 'Aqaba Governorate',
+						value: 'JO-AQ',
 					},
 					{
-						name: 'Chubut Province',
-						value: 'AR-U',
+						name: 'Aquitaine',
+						value: 'FR-B',
 					},
 					{
-						name: 'Cordoba',
-						value: 'AR-X',
+						name: 'Ar-Raqqah Governorate',
+						value: 'SY-RA',
 					},
 					{
-						name: 'Corrientes Province',
-						value: 'AR-W',
-					},
-					{
-						name: 'Entre Rios',
-						value: 'AR-E',
-					},
-					{
-						name: 'Formosa Province',
-						value: 'AR-P',
-					},
-					{
-						name: 'Jujuy',
-						value: 'AR-Y',
-					},
-					{
-						name: 'La Pampa Province',
-						value: 'AR-L',
-					},
-					{
-						name: 'La Rioja Province',
-						value: 'AR-F',
-					},
-					{
-						name: 'Mendoza Province',
-						value: 'AR-M',
-					},
-					{
-						name: 'Misiones Province',
-						value: 'AR-N',
-					},
-					{
-						name: 'Neuquen',
-						value: 'AR-Q',
-					},
-					{
-						name: 'Río Negro',
-						value: 'AR-R',
-					},
-					{
-						name: 'Salta Province',
-						value: 'AR-A',
-					},
-					{
-						name: 'San Juan Province',
-						value: 'AR-J',
-					},
-					{
-						name: 'San Luis Province',
-						value: 'AR-D',
-					},
-					{
-						name: 'Santa Cruz Province',
-						value: 'AR-Z',
-					},
-					{
-						name: 'Santa Fe Province',
-						value: 'AR-S',
-					},
-					{
-						name: 'Santiago del Estero Province',
-						value: 'AR-G',
-					},
-					{
-						name: 'Tierra del Fuego Province',
-						value: 'AR-V',
-					},
-					{
-						name: 'Tucumán',
-						value: 'AR-T',
-					},
-					{
-						name: 'Armenia',
-						value: 'AM',
+						name: 'Arad County',
+						value: 'RO-AR',
 					},
 					{
 						name: 'Aragatsotn Province',
 						value: 'AM-AG',
 					},
 					{
+						name: 'Aragon',
+						value: 'ES-AR',
+					},
+					{
+						name: 'Aragua',
+						value: 'VE-D',
+					},
+					{
 						name: 'Ararat Province',
 						value: 'AM-AR',
+					},
+					{
+						name: 'Arauca',
+						value: 'CO-ARA',
+					},
+					{
+						name: 'Araucania',
+						value: 'CL-AR',
+					},
+					{
+						name: 'Ardabil',
+						value: 'IR-03',
+					},
+					{
+						name: 'Ardahan Province',
+						value: 'TR-75',
+					},
+					{
+						name: 'Arequipa',
+						value: 'PE-ARE',
+					},
+					{
+						name: 'Argentina',
+						value: 'AR',
+					},
+					{
+						name: 'Argeș County',
+						value: 'RO-AG',
+					},
+					{
+						name: 'Ariana',
+						value: 'TN-12',
+					},
+					{
+						name: 'Arica y Parinacota Region',
+						value: 'CL-AP',
+					},
+					{
+						name: 'Arima',
+						value: 'TT-ARI',
+					},
+					{
+						name: 'Arizona',
+						value: 'US-AZ',
+					},
+					{
+						name: 'Arkansas',
+						value: 'US-AR',
+					},
+					{
+						name: 'Arkhangai',
+						value: 'MN-073',
+					},
+					{
+						name: 'Arkhangelsk Oblast',
+						value: 'RU-ARK',
 					},
 					{
 						name: 'Armavir Province',
 						value: 'AM-AV',
 					},
 					{
-						name: 'Gegharkunik Province',
-						value: 'AM-GR',
+						name: 'Armenia',
+						value: 'AM',
 					},
 					{
-						name: 'Kotayk Province',
-						value: 'AM-KT',
+						name: 'Arno Atoll',
+						value: 'MH-ARN',
 					},
 					{
-						name: 'Lori Province',
-						value: 'AM-LO',
+						name: 'Arta',
+						value: 'DJ-AR',
 					},
 					{
-						name: 'Shirak Province',
-						value: 'AM-SH',
+						name: 'Artemisa Province',
+						value: 'CU-15',
 					},
 					{
-						name: 'Syunik Province',
-						value: 'AM-SU',
+						name: 'Artibonite',
+						value: 'HT-AR',
 					},
 					{
-						name: 'Tavush Province',
-						value: 'AM-TV',
+						name: 'Artigas Department',
+						value: 'UY-AR',
 					},
 					{
-						name: 'Vayots Dzor Province',
-						value: 'AM-VD',
-					},
-					{
-						name: 'Yerevan',
-						value: 'AM-ER',
+						name: 'Artvin',
+						value: 'TR-08',
 					},
 					{
 						name: 'Aruba',
 						value: 'AW',
+					},
+					{
+						name: 'Arunachal Pradesh',
+						value: 'IN-AR',
+					},
+					{
+						name: 'Arusha',
+						value: 'TZ-01',
+					},
+					{
+						name: 'As-Suwayda Governorate',
+						value: 'SY-SU',
+					},
+					{
+						name: 'Ascension',
+						value: 'SH-AC',
+					},
+					{
+						name: 'Aseer Province',
+						value: 'SA-14',
+					},
+					{
+						name: 'Ash Sharqia Governorate',
+						value: 'EG-SHR',
+					},
+					{
+						name: 'Ash Sharqiyah North Governorate',
+						value: 'OM-SS',
+					},
+					{
+						name: 'Ash Sharqiyah South Governorate',
+						value: 'OM-SJ',
+					},
+					{
+						name: 'Ashanti Region',
+						value: 'GH-AH',
+					},
+					{
+						name: 'Ashgabat',
+						value: 'TM-S',
+					},
+					{
+						name: 'Assaba',
+						value: 'MR-03',
+					},
+					{
+						name: 'Assam',
+						value: 'IN-AS',
+					},
+					{
+						name: 'Assiut Governorate',
+						value: 'EG-AST',
+					},
+					{
+						name: 'Astrakhan Oblast',
+						value: 'RU-AST',
+					},
+					{
+						name: 'Asturias',
+						value: 'ES-AS',
+					},
+					{
+						name: 'Asunción',
+						value: 'PY-ASU',
+					},
+					{
+						name: 'Aswan Governorate',
+						value: 'EG-ASN',
+					},
+					{
+						name: 'Atacama Region',
+						value: 'CL-AT',
+					},
+					{
+						name: 'Atakora',
+						value: 'BJ-AK',
+					},
+					{
+						name: 'Atlanta GA',
+						value: '524',
+					},
+					{
+						name: 'Atlantico',
+						value: 'CO-ATL',
+					},
+					{
+						name: 'Atlantida',
+						value: 'HN-AT',
+					},
+					{
+						name: 'Atlantique',
+						value: 'BJ-AQ',
+					},
+					{
+						name: 'Attapeu',
+						value: 'LA-AT',
+					},
+					{
+						name: 'Atua',
+						value: 'WS-AT',
+					},
+					{
+						name: 'Atyrau Province',
+						value: 'KZ-ATY',
+					},
+					{
+						name: 'Au Cap',
+						value: 'SC-04',
+					},
+					{
+						name: 'Auce Municipality',
+						value: 'LV-010',
+					},
+					{
+						name: 'Auckland',
+						value: 'NZ-AUK',
+					},
+					{
+						name: 'Augusta GA',
+						value: '520',
+					},
+					{
+						name: 'Aur Atoll',
+						value: 'MH-AUR',
+					},
+					{
+						name: 'Aust-Agder',
+						value: 'NO-09',
+					},
+					{
+						name: 'Austin TX',
+						value: '635',
 					},
 					{
 						name: 'Australia',
@@ -780,716 +1091,940 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'AU-ACT',
 					},
 					{
-						name: 'New South Wales',
-						value: 'AU-NSW',
-					},
-					{
-						name: 'Northern Territory',
-						value: 'AU-NT',
-					},
-					{
-						name: 'Queensland',
-						value: 'AU-QLD',
-					},
-					{
-						name: 'South Australia',
-						value: 'AU-SA',
-					},
-					{
-						name: 'Tasmania',
-						value: 'AU-TAS',
-					},
-					{
-						name: 'Victoria',
-						value: 'AU-VIC',
-					},
-					{
-						name: 'Western Australia',
-						value: 'AU-WA',
-					},
-					{
 						name: 'Austria',
 						value: 'AT',
 					},
 					{
-						name: 'Burgenland',
-						value: 'AT-1',
+						name: 'Autonomous City of Buenos Aires',
+						value: 'AR-C',
 					},
 					{
-						name: 'Carinthia',
-						value: 'AT-2',
+						name: 'Autonomous Region in Muslim Mindanao',
+						value: 'PH-14',
 					},
 					{
-						name: 'Lower Austria',
-						value: 'AT-3',
+						name: 'Autonomous Region of Bougainville',
+						value: 'PG-NSB',
 					},
 					{
-						name: 'Salzburg',
-						value: 'AT-5',
+						name: 'Autonomous Region of the Northern Atlantic',
+						value: 'NI-AN',
 					},
 					{
-						name: 'Styria',
-						value: 'AT-6',
+						name: 'Autonomous Region of the Southern Atlantic',
+						value: 'NI-AS',
 					},
 					{
-						name: 'Tyrol',
-						value: 'AT-7',
+						name: 'Auvergne',
+						value: 'FR-C',
 					},
 					{
-						name: 'Upper Austria',
-						value: 'AT-4',
+						name: 'Aveiro District',
+						value: 'PT-01',
 					},
 					{
-						name: 'Vienna',
-						value: 'AT-9',
+						name: 'Awdal',
+						value: 'SO-AW',
 					},
 					{
-						name: 'Vorarlberg',
-						value: 'AT-8',
+						name: 'Ayacucho',
+						value: 'PE-AYA',
+					},
+					{
+						name: 'Aydın Province',
+						value: 'TR-09',
+					},
+					{
+						name: 'Ayeyarwady',
+						value: 'MM-07',
+					},
+					{
+						name: 'Az Zawiyah',
+						value: 'LY-ZA',
+					},
+					{
+						name: 'Azad Jammu and Kashmir',
+						value: 'PK-JK',
 					},
 					{
 						name: 'Azerbaijan',
 						value: 'AZ',
 					},
 					{
-						name: 'Nakhchivan Autonomous Republic',
-						value: 'AZ-NX',
+						name: 'Azores',
+						value: 'PT-20',
+					},
+					{
+						name: 'Azua Province',
+						value: 'DO-02',
+					},
+					{
+						name: 'Azuay',
+						value: 'EC-A',
+					},
+					{
+						name: 'Ba Ria - Vung Tau',
+						value: 'VN-43',
+					},
+					{
+						name: 'Babil',
+						value: 'IQ-BB',
+					},
+					{
+						name: 'Babīte Municipality',
+						value: 'LV-012',
+					},
+					{
+						name: 'Bac Giang',
+						value: 'VN-54',
+					},
+					{
+						name: 'Bắc Kạn Province',
+						value: 'VN-53',
+					},
+					{
+						name: 'Bac Lieu',
+						value: 'VN-55',
+					},
+					{
+						name: 'Bac Ninh Province',
+						value: 'VN-56',
+					},
+					{
+						name: 'Bacău County',
+						value: 'RO-BC',
+					},
+					{
+						name: 'Bács-Kiskun',
+						value: 'HU-BK',
+					},
+					{
+						name: 'Badakhshan',
+						value: 'AF-BDS',
+					},
+					{
+						name: 'Baden-Württemberg',
+						value: 'DE-BW',
+					},
+					{
+						name: 'Badghis',
+						value: 'AF-BDG',
+					},
+					{
+						name: 'Bafata',
+						value: 'GW-BA',
+					},
+					{
+						name: 'Bafing',
+						value: 'CI-17',
+					},
+					{
+						name: 'Baghdad',
+						value: 'IQ-BG',
+					},
+					{
+						name: 'Baghlan',
+						value: 'AF-BGL',
+					},
+					{
+						name: 'Bago Region',
+						value: 'MM-02',
 					},
 					{
 						name: 'Bahamas',
 						value: 'BS',
 					},
 					{
-						name: 'Acklins',
-						value: 'BS-AK',
-					},
-					{
-						name: 'Berry Islands',
-						value: 'BS-BY',
-					},
-					{
-						name: 'Bimini',
-						value: 'BS-BI',
-					},
-					{
-						name: 'Black Point',
-						value: 'BS-BP',
-					},
-					{
-						name: 'Cat Island',
-						value: 'BS-CI',
-					},
-					{
-						name: 'Central Abaco',
-						value: 'BS-CO',
-					},
-					{
-						name: 'Central Andros',
-						value: 'BS-CS',
-					},
-					{
-						name: 'Central Eleuthera',
-						value: 'BS-CE',
-					},
-					{
-						name: 'Crooked Island and Long Cay',
-						value: 'BS-CK',
-					},
-					{
-						name: 'East Grand Bahama',
-						value: 'BS-EG',
-					},
-					{
-						name: 'Exuma',
-						value: 'BS-EX',
-					},
-					{
-						name: 'Freeport',
-						value: 'BS-FP',
-					},
-					{
-						name: 'Grand Cay',
-						value: 'BS-GC',
-					},
-					{
-						name: 'Harbour Island',
-						value: 'BS-HI',
-					},
-					{
-						name: 'Hope Town',
-						value: 'BS-HT',
-					},
-					{
-						name: 'Inagua',
-						value: 'BS-IN',
-					},
-					{
-						name: 'Long Island',
-						value: 'BS-LI',
-					},
-					{
-						name: 'Mangrove Cay',
-						value: 'BS-MC',
-					},
-					{
-						name: 'Mayaguana',
-						value: 'BS-MG',
-					},
-					{
-						name: "Moore's Island",
-						value: 'BS-MI',
-					},
-					{
-						name: 'North Abaco',
-						value: 'BS-NO',
-					},
-					{
-						name: 'North Andros',
-						value: 'BS-NS',
-					},
-					{
-						name: 'North Eleuthera',
-						value: 'BS-NE',
-					},
-					{
-						name: 'Ragged Island',
-						value: 'BS-RI',
-					},
-					{
-						name: 'Rum Cay',
-						value: 'BS-RC',
-					},
-					{
-						name: 'San Salvador',
-						value: 'BS-SS',
-					},
-					{
-						name: 'South Abaco',
-						value: 'BS-SO',
-					},
-					{
-						name: 'South Andros',
-						value: 'BS-SA',
-					},
-					{
-						name: 'South Eleuthera',
-						value: 'BS-SE',
-					},
-					{
-						name: 'Spanish Wells',
-						value: 'BS-SW',
-					},
-					{
-						name: 'West Grand Bahama',
-						value: 'BS-WG',
+						name: 'Bahr El Gazel',
+						value: 'TD-BG',
 					},
 					{
 						name: 'Bahrain',
 						value: 'BH',
 					},
 					{
-						name: 'Capital Governorate',
-						value: 'BH-13',
+						name: 'Baie Lazare',
+						value: 'SC-06',
 					},
 					{
-						name: 'Central Governorate',
-						value: 'BH-16',
+						name: 'Baie Sainte Anne',
+						value: 'SC-07',
 					},
 					{
-						name: 'Muharraq Governorate',
-						value: 'BH-15',
+						name: 'Baiti',
+						value: 'NR-05',
 					},
 					{
-						name: 'Northern Governorate',
-						value: 'BH-17',
+						name: 'Baja California',
+						value: 'MX-BCN',
 					},
 					{
-						name: 'Southern Governorate',
-						value: 'BH-14',
+						name: 'Baja California Sur',
+						value: 'MX-BCS',
+					},
+					{
+						name: 'Baja Verapaz Department',
+						value: 'GT-BV',
+					},
+					{
+						name: 'Bakersfield CA',
+						value: '800',
+					},
+					{
+						name: 'Bakool',
+						value: 'SO-BK',
+					},
+					{
+						name: 'Baldone Municipality',
+						value: 'LV-013',
+					},
+					{
+						name: 'Balearic Islands',
+						value: 'ES-IB',
+					},
+					{
+						name: 'Bali',
+						value: 'ID-BA',
+					},
+					{
+						name: 'Balıkesir Province',
+						value: 'TR-10',
+					},
+					{
+						name: 'Balkan',
+						value: 'TM-B',
+					},
+					{
+						name: 'Balkh',
+						value: 'AF-BAL',
+					},
+					{
+						name: 'Balochistan',
+						value: 'PK-BA',
+					},
+					{
+						name: 'Balqa Governorate',
+						value: 'JO-BA',
+					},
+					{
+						name: 'Balti',
+						value: 'MD-BA',
+					},
+					{
+						name: 'Baltimore MD',
+						value: '512',
+					},
+					{
+						name: 'Baltinava Municipality',
+						value: 'LV-014',
+					},
+					{
+						name: 'Balvi Municipality',
+						value: 'LV-015',
+					},
+					{
+						name: 'Balzers',
+						value: 'LI-01',
+					},
+					{
+						name: 'Bamako',
+						value: 'ML-BKO',
+					},
+					{
+						name: 'Bamingui-Bangoran',
+						value: 'CF-BB',
+					},
+					{
+						name: 'Bamiyan',
+						value: 'AF-BAM',
+					},
+					{
+						name: 'Banaadir',
+						value: 'SO-BN',
+					},
+					{
+						name: 'Bandundu',
+						value: 'CD-BN',
+					},
+					{
+						name: 'Banghazi',
+						value: 'LY-BA',
+					},
+					{
+						name: 'Bangka Belitung Islands',
+						value: 'ID-BB',
+					},
+					{
+						name: 'Bangkok',
+						value: 'TH-10',
 					},
 					{
 						name: 'Bangladesh',
 						value: 'BD',
 					},
 					{
-						name: 'Barisal Division',
-						value: 'BD-A',
+						name: 'Bangor ME',
+						value: '537',
 					},
 					{
-						name: 'Chittagong Division',
-						value: 'BD-B',
+						name: 'Bangui',
+						value: 'CF-BGF',
 					},
 					{
-						name: 'Dhaka Division',
-						value: 'BD-C',
+						name: 'Banjul',
+						value: 'GM-B',
 					},
 					{
-						name: 'Khulna Division',
-						value: 'BD-D',
+						name: 'Banská Bystrica Region',
+						value: 'SK-BC',
 					},
 					{
-						name: 'Rajshahi Division',
-						value: 'BD-E',
+						name: 'Banteay Meanchey',
+						value: 'KH-1',
 					},
 					{
-						name: 'Rangpur Division',
-						value: 'BD-F',
+						name: 'Banten',
+						value: 'ID-BT',
 					},
 					{
-						name: 'Sylhet Division',
-						value: 'BD-G',
+						name: 'Baoruco Province',
+						value: 'DO-03',
+					},
+					{
+						name: 'Bar',
+						value: 'ME-02',
+					},
+					{
+						name: 'Barahona Province',
+						value: 'DO-04',
+					},
+					{
+						name: 'Baranya',
+						value: 'HU-BA',
 					},
 					{
 						name: 'Barbados',
 						value: 'BB',
 					},
 					{
-						name: 'Christ Church',
-						value: 'BB-01',
+						name: 'Barbuda',
+						value: 'AG-10',
 					},
 					{
-						name: 'Saint Andrew',
-						value: 'BB-02',
+						name: 'Bari',
+						value: 'SO-BR',
 					},
 					{
-						name: 'Saint James',
-						value: 'BB-04',
+						name: 'Barima-Waini',
+						value: 'GY-BA',
 					},
 					{
-						name: 'Saint Joseph',
-						value: 'BB-06',
+						name: 'Barinas',
+						value: 'VE-E',
 					},
 					{
-						name: 'Saint Lucy',
-						value: 'BB-07',
+						name: 'Barisal Division',
+						value: 'BD-A',
 					},
 					{
-						name: 'Saint Michael',
-						value: 'BB-08',
+						name: 'Bartın Province',
+						value: 'TR-74',
 					},
 					{
-						name: 'Saint Thomas Parish',
-						value: 'BB-11',
+						name: 'Bas Congo',
+						value: 'CD-BC',
+					},
+					{
+						name: 'Bas-Sassandra',
+						value: 'CI-09',
+					},
+					{
+						name: 'Basarabeasca District',
+						value: 'MD-BS',
+					},
+					{
+						name: 'Basel-Landschaft',
+						value: 'CH-BL',
+					},
+					{
+						name: 'Basel-Stadt',
+						value: 'CH-BS',
+					},
+					{
+						name: 'Basilicata',
+						value: 'IT-77',
+					},
+					{
+						name: 'Basque Country',
+						value: 'ES-PV',
+					},
+					{
+						name: 'Basrah',
+						value: 'IQ-BA',
+					},
+					{
+						name: 'Basse-Kotto',
+						value: 'CF-BK',
+					},
+					{
+						name: 'Batha',
+						value: 'TD-BA',
+					},
+					{
+						name: 'Batken Province',
+						value: 'KG-B',
+					},
+					{
+						name: 'Batman',
+						value: 'TR-72',
+					},
+					{
+						name: 'Batna Province',
+						value: 'DZ-05',
+					},
+					{
+						name: 'Baton Rouge LA',
+						value: '716',
+					},
+					{
+						name: 'Battambang',
+						value: 'KH-2',
+					},
+					{
+						name: 'Baucau',
+						value: 'TL-BA',
+					},
+					{
+						name: 'Bauchi',
+						value: 'NG-BA',
+					},
+					{
+						name: 'Bauska Municipality',
+						value: 'LV-016',
+					},
+					{
+						name: 'Bavaria',
+						value: 'DE-BY',
+					},
+					{
+						name: 'Bay',
+						value: 'SO-BY',
+					},
+					{
+						name: 'Bay Islands',
+						value: 'HN-IB',
+					},
+					{
+						name: 'Bay Of Plenty',
+						value: 'NZ-BOP',
+					},
+					{
+						name: 'Bayan-Ulgii',
+						value: 'MN-071',
+					},
+					{
+						name: 'Bayankhongor',
+						value: 'MN-069',
+					},
+					{
+						name: 'Bayburt',
+						value: 'TR-69',
+					},
+					{
+						name: 'Bayelsa',
+						value: 'NG-BY',
+					},
+					{
+						name: 'Beau Vallon',
+						value: 'SC-08',
+					},
+					{
+						name: 'Beaumont-Port Arthur TX',
+						value: '692',
+					},
+					{
+						name: 'Béchar',
+						value: 'DZ-08',
+					},
+					{
+						name: 'Beijing',
+						value: 'CN-11',
+					},
+					{
+						name: 'Beirut',
+						value: 'LB-BA',
+					},
+					{
+						name: 'Beja',
+						value: 'TN-31',
+					},
+					{
+						name: 'Beja District',
+						value: 'PT-02',
+					},
+					{
+						name: 'Béjaïa',
+						value: 'DZ-06',
+					},
+					{
+						name: 'Békés County',
+						value: 'HU-BE',
+					},
+					{
+						name: 'Bel Air',
+						value: 'SC-09',
+					},
+					{
+						name: 'Bel Ombre',
+						value: 'SC-10',
+					},
+					{
+						name: 'Belait',
+						value: 'BN-BE',
 					},
 					{
 						name: 'Belarus',
 						value: 'BY',
 					},
 					{
-						name: 'Brest Region',
-						value: 'BY-BR',
-					},
-					{
-						name: 'Gomel Region',
-						value: 'BY-HO',
-					},
-					{
-						name: 'Hrodna Region',
-						value: 'BY-HR',
-					},
-					{
-						name: 'Minsk Region',
-						value: 'BY-MI',
-					},
-					{
-						name: 'Mogilev Region',
-						value: 'BY-MA',
-					},
-					{
-						name: 'Vitebsk Region',
-						value: 'BY-VI',
-					},
-					{
 						name: 'Belgium',
 						value: 'BE',
 					},
 					{
-						name: 'Brussels',
-						value: 'BE-BRU',
-					},
-					{
-						name: 'Flanders',
-						value: 'BE-VLG',
-					},
-					{
-						name: 'Walloon Region',
-						value: 'BE-WAL',
+						name: 'Belgorod Oblast',
+						value: 'RU-BEL',
 					},
 					{
 						name: 'Belize',
 						value: 'BZ',
 					},
 					{
-						name: 'Cayo',
-						value: 'BZ-CY',
+						name: 'Ben Arous',
+						value: 'TN-13',
 					},
 					{
-						name: 'Corozal',
-						value: 'BZ-CZL',
+						name: 'Ben Tre',
+						value: 'VN-50',
 					},
 					{
-						name: 'Orange Walk',
-						value: 'BZ-OW',
+						name: 'Bend OR',
+						value: '821',
 					},
 					{
-						name: 'Stann Creek',
-						value: 'BZ-SC',
+						name: 'Bender',
+						value: 'MD-BD',
 					},
 					{
-						name: 'Toledo',
-						value: 'BZ-TOL',
+						name: 'Bengkulu',
+						value: 'ID-BE',
 					},
 					{
-						name: 'Benin',
-						value: 'BJ',
+						name: 'Bengo Province',
+						value: 'AO-BGO',
 					},
 					{
-						name: 'Alibori',
-						value: 'BJ-AL',
-					},
-					{
-						name: 'Atakora',
-						value: 'BJ-AK',
-					},
-					{
-						name: 'Atlantique',
-						value: 'BJ-AQ',
-					},
-					{
-						name: 'Borgou',
-						value: 'BJ-BO',
-					},
-					{
-						name: 'Collines',
-						value: 'BJ-CO',
-					},
-					{
-						name: 'Donga',
-						value: 'BJ-DO',
-					},
-					{
-						name: 'Kouffo',
-						value: 'BJ-KO',
-					},
-					{
-						name: 'Littoral',
-						value: 'BJ-LI',
-					},
-					{
-						name: 'Mono',
-						value: 'BJ-MO',
-					},
-					{
-						name: 'Oueme',
-						value: 'BJ-OU',
-					},
-					{
-						name: 'Plateau',
-						value: 'BJ-PL',
-					},
-					{
-						name: 'Zou',
-						value: 'BJ-ZO',
-					},
-					{
-						name: 'Bermuda',
-						value: 'BM',
-					},
-					{
-						name: 'Bhutan',
-						value: 'BT',
-					},
-					{
-						name: 'Bumthang',
-						value: 'BT-33',
-					},
-					{
-						name: 'Chhukha',
-						value: 'BT-12',
-					},
-					{
-						name: 'Dagana',
-						value: 'BT-22',
-					},
-					{
-						name: 'Gasa',
-						value: 'BT-GA',
-					},
-					{
-						name: 'Haa',
-						value: 'BT-13',
-					},
-					{
-						name: 'Lhuntse',
-						value: 'BT-44',
-					},
-					{
-						name: 'Mongar',
-						value: 'BT-42',
-					},
-					{
-						name: 'Paro',
-						value: 'BT-11',
-					},
-					{
-						name: 'Pemagatshel',
-						value: 'BT-43',
-					},
-					{
-						name: 'Punakha',
-						value: 'BT-23',
-					},
-					{
-						name: 'Samdrup Jongkhar',
-						value: 'BT-45',
-					},
-					{
-						name: 'Samtse',
-						value: 'BT-14',
-					},
-					{
-						name: 'Sarpang',
-						value: 'BT-31',
-					},
-					{
-						name: 'Thimphu',
-						value: 'BT-15',
-					},
-					{
-						name: 'Trashigang',
-						value: 'BT-41',
-					},
-					{
-						name: 'Trashiyangtse',
-						value: 'BT-TY',
-					},
-					{
-						name: 'Trongsa',
-						value: 'BT-32',
-					},
-					{
-						name: 'Tsirang',
-						value: 'BT-21',
-					},
-					{
-						name: 'Wangdue Phodrang',
-						value: 'BT-24',
-					},
-					{
-						name: 'Zhemgang',
-						value: 'BT-34',
-					},
-					{
-						name: 'Bolivia',
-						value: 'BO',
+						name: 'Benguela Province',
+						value: 'AO-BGU',
 					},
 					{
 						name: 'Beni Department',
 						value: 'BO-B',
 					},
 					{
-						name: 'Chuquisaca Department',
-						value: 'BO-H',
+						name: 'Beni Suef Governorate',
+						value: 'EG-BNS',
 					},
 					{
-						name: 'Cochabamba Department',
-						value: 'BO-C',
+						name: 'Benin',
+						value: 'BJ',
 					},
 					{
-						name: 'La Paz Department',
-						value: 'BO-L',
+						name: 'Benishangul-Gumuz',
+						value: 'ET-BE',
 					},
 					{
-						name: 'Oruro Department',
-						value: 'BO-O',
+						name: 'Benue',
+						value: 'NG-BE',
 					},
 					{
-						name: 'Pando Department',
-						value: 'BO-N',
+						name: 'Beqaa',
+						value: 'LB-BI',
 					},
 					{
-						name: 'Potosi Department',
-						value: 'BO-P',
+						name: 'Berane',
+						value: 'ME-03',
 					},
 					{
-						name: 'Santa Cruz',
-						value: 'BO-S',
+						name: 'Berat',
+						value: 'AL-01',
 					},
 					{
-						name: 'Tarija Department',
-						value: 'BO-T',
+						name: 'Berea',
+						value: 'LS-D',
+					},
+					{
+						name: 'Berlin',
+						value: 'DE-BE',
+					},
+					{
+						name: 'Bermuda',
+						value: 'BM',
+					},
+					{
+						name: 'Berry Islands',
+						value: 'BS-BY',
+					},
+					{
+						name: 'Beverīna Municipality',
+						value: 'LV-017',
+					},
+					{
+						name: 'Bhutan',
+						value: 'BT',
+					},
+					{
+						name: 'Bicol',
+						value: 'PH-05',
+					},
+					{
+						name: 'Bié Province',
+						value: 'AO-BIE',
+					},
+					{
+						name: 'Bihar',
+						value: 'IN-BR',
+					},
+					{
+						name: 'Bihor County',
+						value: 'RO-BH',
+					},
+					{
+						name: 'Bijelo Polje',
+						value: 'ME-04',
+					},
+					{
+						name: 'Bilecik',
+						value: 'TR-11',
+					},
+					{
+						name: 'Billings, MT',
+						value: '756',
+					},
+					{
+						name: 'Biloxi-Gulfport MS',
+						value: '746',
+					},
+					{
+						name: 'Bimini',
+						value: 'BS-BI',
+					},
+					{
+						name: 'Binghamton NY',
+						value: '502',
+					},
+					{
+						name: 'Bingöl Province',
+						value: 'TR-12',
+					},
+					{
+						name: 'Binh Dinh Province',
+						value: 'VN-31',
+					},
+					{
+						name: 'Binh Duong',
+						value: 'VN-57',
+					},
+					{
+						name: 'Binh Phuoc',
+						value: 'VN-58',
+					},
+					{
+						name: 'Binh Thuan',
+						value: 'VN-40',
+					},
+					{
+						name: 'Bío Bío Region',
+						value: 'CL-BI',
+					},
+					{
+						name: 'Bioko Norte',
+						value: 'GQ-BN',
+					},
+					{
+						name: 'Bioko Sur',
+						value: 'GQ-BS',
+					},
+					{
+						name: 'Biombo',
+						value: 'GW-BM',
+					},
+					{
+						name: 'Birmingham AL',
+						value: '630',
+					},
+					{
+						name: 'Biskra',
+						value: 'DZ-07',
+					},
+					{
+						name: 'Bissau',
+						value: 'GW-BS',
+					},
+					{
+						name: 'Bistrița-Năsăud County',
+						value: 'RO-BN',
+					},
+					{
+						name: 'Bitlis',
+						value: 'TR-13',
+					},
+					{
+						name: 'Bizerte',
+						value: 'TN-23',
+					},
+					{
+						name: 'Bjelovar-Bilogora County',
+						value: 'HR-07',
+					},
+					{
+						name: 'Black Point',
+						value: 'BS-BP',
+					},
+					{
+						name: 'Black River',
+						value: 'MU-BL',
+					},
+					{
+						name: 'Blagoevgrad Province',
+						value: 'BG-01',
+					},
+					{
+						name: 'Blekinge County',
+						value: 'SE-K',
+					},
+					{
+						name: 'Blida Province',
+						value: 'DZ-09',
+					},
+					{
+						name: 'Blue Nile',
+						value: 'SD-NB',
+					},
+					{
+						name: 'Bluefield-Beckley-Oak Hill WV',
+						value: '559',
+					},
+					{
+						name: 'Boa Vista',
+						value: 'CV-BV',
+					},
+					{
+						name: 'Boaco',
+						value: 'NI-BO',
+					},
+					{
+						name: 'Bobonaro',
+						value: 'TL-BO',
+					},
+					{
+						name: 'Bocas del Toro Province',
+						value: 'PA-1',
+					},
+					{
+						name: 'Boe',
+						value: 'NR-06',
+					},
+					{
+						name: 'Bogota',
+						value: 'CO-DC',
+					},
+					{
+						name: 'Boise ID',
+						value: '757',
+					},
+					{
+						name: 'Boké',
+						value: 'GN-B',
+					},
+					{
+						name: 'Bokeo',
+						value: 'LA-BK',
+					},
+					{
+						name: 'Bolama',
+						value: 'GW-BL',
+					},
+					{
+						name: 'Bolikhamsai',
+						value: 'LA-BL',
+					},
+					{
+						name: 'Bolivar',
+						value: 'CO-BOL',
+					},
+					{
+						name: 'Bolívar',
+						value: 'VE-F',
+					},
+					{
+						name: 'Bolívar Province',
+						value: 'EC-B',
+					},
+					{
+						name: 'Bolivia',
+						value: 'BO',
+					},
+					{
+						name: 'Bolu',
+						value: 'TR-14',
+					},
+					{
+						name: 'Bomi',
+						value: 'LR-BM',
+					},
+					{
+						name: 'Bonaire',
+						value: 'BQ-BO',
+					},
+					{
+						name: 'Bong',
+						value: 'LR-BG',
+					},
+					{
+						name: 'Boqueron',
+						value: 'PY-19',
+					},
+					{
+						name: 'Bordj Bou Arreridj',
+						value: 'DZ-34',
+					},
+					{
+						name: 'Borgo Maggiore',
+						value: 'SM-06',
+					},
+					{
+						name: 'Borgou',
+						value: 'BJ-BO',
+					},
+					{
+						name: 'Borkou',
+						value: 'TD-BO',
+					},
+					{
+						name: 'Borno',
+						value: 'NG-BO',
+					},
+					{
+						name: 'Borsod-Abaúj-Zemplén',
+						value: 'HU-BZ',
+					},
+					{
+						name: 'Bosilovo',
+						value: 'MK-07',
 					},
 					{
 						name: 'Bosnia & Herzegovina',
 						value: 'BA',
 					},
 					{
-						name: 'Brčko Distrikt',
-						value: 'BA-BRC',
+						name: 'Boston MA-Manchester NH',
+						value: '506',
 					},
 					{
-						name: 'Federation of Bosnia and Herzegovina',
-						value: 'BA-BIH',
-					},
-					{
-						name: 'Republika Srpska',
-						value: 'BA-SRP',
+						name: 'Botoșani County',
+						value: 'RO-BT',
 					},
 					{
 						name: 'Botswana',
 						value: 'BW',
 					},
 					{
-						name: 'Central',
-						value: 'BW-CE',
+						name: 'Boucle du Mouhoun',
+						value: 'BF-01',
 					},
 					{
-						name: 'Ghanzi',
-						value: 'BW-GH',
+						name: 'Bouenza',
+						value: 'CG-11',
 					},
 					{
-						name: 'Kgalagadi',
-						value: 'BW-KG',
+						name: 'Bouïra Province',
+						value: 'DZ-10',
 					},
 					{
-						name: 'Kgatleng',
-						value: 'BW-KL',
-					},
-					{
-						name: 'Kweneng',
-						value: 'BW-KW',
-					},
-					{
-						name: 'North West',
-						value: 'BW-NW',
-					},
-					{
-						name: 'North-East',
-						value: 'BW-NE',
-					},
-					{
-						name: 'South-East',
-						value: 'BW-SE',
-					},
-					{
-						name: 'Southern',
-						value: 'BW-SO',
+						name: 'Boumerdès Province',
+						value: 'DZ-35',
 					},
 					{
 						name: 'Bouvet Island',
 						value: 'BV',
 					},
 					{
+						name: 'Bowling Green KY',
+						value: '736',
+					},
+					{
+						name: 'Boyaca',
+						value: 'CO-BOY',
+					},
+					{
+						name: 'Braga',
+						value: 'PT-03',
+					},
+					{
+						name: 'Bragança District',
+						value: 'PT-04',
+					},
+					{
+						name: 'Brăila County',
+						value: 'RO-BR',
+					},
+					{
+						name: 'Brakna',
+						value: 'MR-05',
+					},
+					{
+						name: 'Brandenburg',
+						value: 'DE-BB',
+					},
+					{
+						name: 'Brașov County',
+						value: 'RO-BV',
+					},
+					{
+						name: 'Bratislava Region',
+						value: 'SK-BL',
+					},
+					{
+						name: 'Brava',
+						value: 'CV-BR',
+					},
+					{
 						name: 'Brazil',
 						value: 'BR',
 					},
 					{
-						name: 'Federal District',
-						value: 'BR-DF',
+						name: 'Brazzaville',
+						value: 'CG-BZV',
 					},
 					{
-						name: 'State of Acre',
-						value: 'BR-AC',
+						name: 'Brčko Distrikt',
+						value: 'BA-BRC',
 					},
 					{
-						name: 'State of Alagoas',
-						value: 'BR-AL',
+						name: 'Bremen',
+						value: 'DE-HB',
 					},
 					{
-						name: 'State of Amapá',
-						value: 'BR-AP',
+						name: 'Brest Region',
+						value: 'BY-BR',
 					},
 					{
-						name: 'State of Amazonas',
-						value: 'BR-AM',
+						name: 'Briceni',
+						value: 'MD-BR',
 					},
 					{
-						name: 'State of Bahia',
-						value: 'BR-BA',
-					},
-					{
-						name: 'State of Ceará',
-						value: 'BR-CE',
-					},
-					{
-						name: 'State of Espírito Santo',
-						value: 'BR-ES',
-					},
-					{
-						name: 'State of Goiás',
-						value: 'BR-GO',
-					},
-					{
-						name: 'State of Maranhão',
-						value: 'BR-MA',
-					},
-					{
-						name: 'State of Mato Grosso',
-						value: 'BR-MT',
-					},
-					{
-						name: 'State of Mato Grosso do Sul',
-						value: 'BR-MS',
-					},
-					{
-						name: 'State of Minas Gerais',
-						value: 'BR-MG',
-					},
-					{
-						name: 'State of Pará',
-						value: 'BR-PA',
-					},
-					{
-						name: 'State of Paraíba',
-						value: 'BR-PB',
-					},
-					{
-						name: 'State of Paraná',
-						value: 'BR-PR',
-					},
-					{
-						name: 'State of Pernambuco',
-						value: 'BR-PE',
-					},
-					{
-						name: 'State of Piauí',
-						value: 'BR-PI',
-					},
-					{
-						name: 'State of Rio de Janeiro',
-						value: 'BR-RJ',
-					},
-					{
-						name: 'State of Rio Grande do Norte',
-						value: 'BR-RN',
-					},
-					{
-						name: 'State of Rio Grande do Sul',
-						value: 'BR-RS',
-					},
-					{
-						name: 'State of Rondônia',
-						value: 'BR-RO',
-					},
-					{
-						name: 'State of Roraima',
-						value: 'BR-RR',
-					},
-					{
-						name: 'State of Santa Catarina',
-						value: 'BR-SC',
-					},
-					{
-						name: 'State of São Paulo',
-						value: 'BR-SP',
-					},
-					{
-						name: 'State of Sergipe',
-						value: 'BR-SE',
-					},
-					{
-						name: 'State of Tocantins',
-						value: 'BR-TO',
+						name: 'British Columbia',
+						value: 'CA-BC',
 					},
 					{
 						name: 'British Indian Ocean Territory',
@@ -1500,156 +2035,636 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'VG',
 					},
 					{
-						name: 'Brunei',
-						value: 'BN',
+						name: 'Brittany',
+						value: 'FR-E',
 					},
 					{
-						name: 'Belait',
-						value: 'BN-BE',
+						name: 'Brocēni Municipality',
+						value: 'LV-018',
+					},
+					{
+						name: 'Brod-Posavina County',
+						value: 'HR-12',
+					},
+					{
+						name: 'Brokopondo',
+						value: 'SR-BR',
+					},
+					{
+						name: 'Brong-Ahafo Region',
+						value: 'GH-BA',
+					},
+					{
+						name: 'Brunei',
+						value: 'BN',
 					},
 					{
 						name: 'Brunei-Muara',
 						value: 'BN-BM',
 					},
 					{
-						name: 'Temburong',
-						value: 'BN-TE',
+						name: 'Brussels',
+						value: 'BE-BRU',
 					},
 					{
-						name: 'Tutong',
-						value: 'BN-TU',
+						name: 'Brvenitsa',
+						value: 'MK-08',
+					},
+					{
+						name: 'Bryansk Oblast',
+						value: 'RU-BRY',
+					},
+					{
+						name: 'Buada',
+						value: 'NR-07',
+					},
+					{
+						name: 'Bubanza',
+						value: 'BI-BB',
+					},
+					{
+						name: 'Bucharest',
+						value: 'RO-B',
+					},
+					{
+						name: 'Budapest',
+						value: 'HU-BU',
+					},
+					{
+						name: 'Budva',
+						value: 'ME-05',
+					},
+					{
+						name: 'Bueng Kan',
+						value: 'TH-38',
+					},
+					{
+						name: 'Buenos Aires Province',
+						value: 'AR-B',
+					},
+					{
+						name: 'Buffalo NY',
+						value: '514',
+					},
+					{
+						name: 'Bujumbura Mairie',
+						value: 'BI-BM',
+					},
+					{
+						name: 'Bujumbura Rural',
+						value: 'BI-BL',
+					},
+					{
+						name: 'Bukhara Province',
+						value: 'UZ-BU',
+					},
+					{
+						name: 'Bulawayo',
+						value: 'ZW-BU',
+					},
+					{
+						name: 'Bulgan',
+						value: 'MN-067',
 					},
 					{
 						name: 'Bulgaria',
 						value: 'BG',
 					},
 					{
-						name: 'Blagoevgrad Province',
-						value: 'BG-01',
+						name: 'Bumthang',
+						value: 'BT-33',
+					},
+					{
+						name: 'Burdur Province',
+						value: 'TR-15',
 					},
 					{
 						name: 'Burgas',
 						value: 'BG-02',
 					},
 					{
-						name: 'Dobrich Province',
-						value: 'BG-08',
+						name: 'Burgenland',
+						value: 'AT-1',
 					},
 					{
-						name: 'Gabrovo',
-						value: 'BG-07',
+						name: 'Burgundy',
+						value: 'FR-D',
 					},
 					{
-						name: 'Haskovo Province',
-						value: 'BG-26',
-					},
-					{
-						name: 'Jambol',
-						value: 'BG-28',
-					},
-					{
-						name: 'Kardzhali Province',
-						value: 'BG-09',
-					},
-					{
-						name: 'Kyustendil Province',
-						value: 'BG-10',
-					},
-					{
-						name: 'Lovec',
-						value: 'BG-11',
-					},
-					{
-						name: 'Montana Province',
-						value: 'BG-12',
-					},
-					{
-						name: 'Pazardzik',
-						value: 'BG-13',
-					},
-					{
-						name: 'Pernik',
-						value: 'BG-14',
-					},
-					{
-						name: 'Pleven Province',
-						value: 'BG-15',
-					},
-					{
-						name: 'Plovdiv Province',
-						value: 'BG-16',
-					},
-					{
-						name: 'Razgrad',
-						value: 'BG-17',
-					},
-					{
-						name: 'Ruse',
-						value: 'BG-18',
-					},
-					{
-						name: 'Shumen Province',
-						value: 'BG-27',
-					},
-					{
-						name: 'Silistra',
-						value: 'BG-19',
-					},
-					{
-						name: 'Sliven Province',
-						value: 'BG-20',
-					},
-					{
-						name: 'Smoljan',
-						value: 'BG-21',
-					},
-					{
-						name: 'Sofia City Province',
-						value: 'BG-22',
-					},
-					{
-						name: 'Sofia Province',
-						value: 'BG-23',
-					},
-					{
-						name: 'Stara Zagora',
-						value: 'BG-24',
-					},
-					{
-						name: 'Targovishte Province',
-						value: 'BG-25',
-					},
-					{
-						name: 'Varna',
-						value: 'BG-03',
-					},
-					{
-						name: 'Veliko Tarnovo Province',
-						value: 'BG-04',
-					},
-					{
-						name: 'Vidin',
-						value: 'BG-05',
-					},
-					{
-						name: 'Vraca',
-						value: 'BG-06',
+						name: 'Buri Ram',
+						value: 'TH-31',
 					},
 					{
 						name: 'Burkina Faso',
 						value: 'BF',
 					},
 					{
-						name: 'Boucle du Mouhoun',
-						value: 'BF-01',
+						name: 'Burlington VT-Plattsburgh NY',
+						value: '523',
+					},
+					{
+						name: 'Bursa',
+						value: 'TR-16',
+					},
+					{
+						name: 'Burtnieki Municipality',
+						value: 'LV-019',
+					},
+					{
+						name: 'Burundi',
+						value: 'BI',
+					},
+					{
+						name: 'Bururi',
+						value: 'BI-BR',
+					},
+					{
+						name: 'Buryatia',
+						value: 'RU-BU',
+					},
+					{
+						name: 'Busan',
+						value: 'KR-26',
+					},
+					{
+						name: 'Bushehr',
+						value: 'IR-06',
+					},
+					{
+						name: 'Buskerud',
+						value: 'NO-06',
+					},
+					{
+						name: 'Butha-Buthe',
+						value: 'LS-B',
+					},
+					{
+						name: 'Butte-Bozeman MT',
+						value: '754',
+					},
+					{
+						name: 'Buzău County',
+						value: 'RO-BZ',
+					},
+					{
+						name: 'Ca Mau',
+						value: 'VN-59',
+					},
+					{
+						name: 'Caaguazu',
+						value: 'PY-5',
+					},
+					{
+						name: 'Caazapa',
+						value: 'PY-6',
+					},
+					{
+						name: 'Cabanas',
+						value: 'SV-CA',
+					},
+					{
+						name: 'Cabinda Province',
+						value: 'AO-CAB',
+					},
+					{
+						name: 'Cabo Delgado Province',
+						value: 'MZ-P',
+					},
+					{
+						name: 'Cacheu',
+						value: 'GW-CA',
+					},
+					{
+						name: 'Cagayan Valley',
+						value: 'PH-02',
+					},
+					{
+						name: 'Cahul',
+						value: 'MD-CA',
+					},
+					{
+						name: 'Cairo Governorate',
+						value: 'EG-C',
+					},
+					{
+						name: 'Cajamarca',
+						value: 'PE-CAJ',
+					},
+					{
+						name: 'Calabarzon',
+						value: 'PH-40',
+					},
+					{
+						name: 'Calabria',
+						value: 'IT-78',
+					},
+					{
+						name: 'Calarasi',
+						value: 'MD-CL',
+					},
+					{
+						name: 'Călărași County',
+						value: 'RO-CL',
+					},
+					{
+						name: 'Caldas',
+						value: 'CO-CAL',
+					},
+					{
+						name: 'California',
+						value: 'US-CA',
+					},
+					{
+						name: 'Callao',
+						value: 'PE-CAL',
+					},
+					{
+						name: 'Camaguey',
+						value: 'CU-09',
+					},
+					{
+						name: 'Cambodia',
+						value: 'KH',
+					},
+					{
+						name: 'Cameroon',
+						value: 'CM',
+					},
+					{
+						name: 'Campania',
+						value: 'IT-72',
+					},
+					{
+						name: 'Campeche',
+						value: 'MX-CAM',
+					},
+					{
+						name: 'Can Tho',
+						value: 'VN-CT',
+					},
+					{
+						name: 'Canada',
+						value: 'CA',
+					},
+					{
+						name: 'Çanakkale Province',
+						value: 'TR-17',
+					},
+					{
+						name: 'Cañar Province',
+						value: 'EC-F',
+					},
+					{
+						name: 'Canary Islands',
+						value: 'ES-CN',
+					},
+					{
+						name: 'Canelones Department',
+						value: 'UY-CA',
+					},
+					{
+						name: 'Canillo',
+						value: 'AD-02',
+					},
+					{
+						name: 'Canindeyu',
+						value: 'PY-14',
+					},
+					{
+						name: 'Çankırı',
+						value: 'TR-18',
+					},
+					{
+						name: 'Cankuzo',
+						value: 'BI-CA',
+					},
+					{
+						name: 'Cantabria',
+						value: 'ES-CB',
+					},
+					{
+						name: 'Cantemir',
+						value: 'MD-CT',
+					},
+					{
+						name: 'Canterbury',
+						value: 'NZ-CAN',
+					},
+					{
+						name: 'Canton of Bern',
+						value: 'CH-BE',
+					},
+					{
+						name: 'Canton of Fribourg',
+						value: 'CH-FR',
+					},
+					{
+						name: 'Canton of Glarus',
+						value: 'CH-GL',
+					},
+					{
+						name: 'Canton of Jura',
+						value: 'CH-JU',
+					},
+					{
+						name: 'Canton of Neuchâtel',
+						value: 'CH-NE',
+					},
+					{
+						name: 'Canton of Obwalden',
+						value: 'CH-OW',
+					},
+					{
+						name: 'Canton of Schaffhausen',
+						value: 'CH-SH',
+					},
+					{
+						name: 'Canton of Schwyz',
+						value: 'CH-SZ',
+					},
+					{
+						name: 'Canton of Solothurn',
+						value: 'CH-SO',
+					},
+					{
+						name: 'Canton of Uri',
+						value: 'CH-UR',
+					},
+					{
+						name: 'Canton of Zug',
+						value: 'CH-ZG',
+					},
+					{
+						name: 'Cao Bang',
+						value: 'VN-04',
+					},
+					{
+						name: 'Cape Verde',
+						value: 'CV',
+					},
+					{
+						name: 'Capital District',
+						value: 'VE-A',
+					},
+					{
+						name: 'Capital Governorate',
+						value: 'BH-13',
+					},
+					{
+						name: 'Capital Region',
+						value: 'IS-1',
+					},
+					{
+						name: 'Capital Region of Denmark',
+						value: 'DK-84',
+					},
+					{
+						name: 'Capital Territory',
+						value: 'SB-CT',
+					},
+					{
+						name: 'Caquetá',
+						value: 'CO-CAQ',
+					},
+					{
+						name: 'Carabobo',
+						value: 'VE-G',
+					},
+					{
+						name: 'Caraga',
+						value: 'PH-13',
+					},
+					{
+						name: 'Caraș-Severin County',
+						value: 'RO-CS',
+					},
+					{
+						name: 'Carazo',
+						value: 'NI-CA',
+					},
+					{
+						name: 'Carchi Province',
+						value: 'EC-C',
+					},
+					{
+						name: 'Cargados Carajos',
+						value: 'MU-CC',
+					},
+					{
+						name: 'Caribbean Netherlands',
+						value: 'BQ',
+					},
+					{
+						name: 'Carinthia',
+						value: 'AT-2',
+					},
+					{
+						name: 'Carnikava Municipality',
+						value: 'LV-020',
+					},
+					{
+						name: 'Carriacou and Petite Martinique',
+						value: 'GD-10',
+					},
+					{
+						name: 'Casanare',
+						value: 'CO-CAS',
+					},
+					{
+						name: 'Cascade',
+						value: 'SC-11',
 					},
 					{
 						name: 'Cascades',
 						value: 'BF-02',
 					},
 					{
-						name: 'Centre',
+						name: 'Casper-Riverton WY',
+						value: '767',
+					},
+					{
+						name: 'Castelo Branco District',
+						value: 'PT-05',
+					},
+					{
+						name: 'Castile and León',
+						value: 'ES-CL',
+					},
+					{
+						name: 'Castile-La Mancha',
+						value: 'ES-CM',
+					},
+					{
+						name: 'Castries',
+						value: 'LC-02',
+					},
+					{
+						name: 'Cat Island',
+						value: 'BS-CI',
+					},
+					{
+						name: 'Catalonia',
+						value: 'ES-CT',
+					},
+					{
+						name: 'Catamarca Province',
+						value: 'AR-K',
+					},
+					{
+						name: 'Cauca Department',
+						value: 'CO-CAU',
+					},
+					{
+						name: 'Causeni',
+						value: 'MD-CS',
+					},
+					{
+						name: 'Cayman Islands',
+						value: 'KY',
+					},
+					{
+						name: 'Cayo',
+						value: 'BZ-CY',
+					},
+					{
+						name: 'Cedar Rapids-Waterloo-Iowa City & Dubuque IA',
+						value: '637',
+					},
+					{
+						name: 'Centar Zhupa',
+						value: 'MK-78',
+					},
+					{
+						name: 'Center District',
+						value: 'IL-M',
+					},
+					{
+						name: 'Central (BW-CE)',
+						value: 'BW-CE',
+					},
+					{
+						name: 'Central (ER-MA)',
+						value: 'ER-MA',
+					},
+					{
+						name: 'Central (GH-CP)',
+						value: 'GH-CP',
+					},
+					{
+						name: 'Central (PY-11)',
+						value: 'PY-11',
+					},
+					{
+						name: 'Central (ZM-02)',
+						value: 'ZM-02',
+					},
+					{
+						name: 'Central Abaco',
+						value: 'BS-CO',
+					},
+					{
+						name: 'Central African Republic',
+						value: 'CF',
+					},
+					{
+						name: 'Central Andros',
+						value: 'BS-CS',
+					},
+					{
+						name: 'Central Bohemian Region',
+						value: 'CZ-ST',
+					},
+					{
+						name: 'Central Denmark Region',
+						value: 'DK-82',
+					},
+					{
+						name: 'Central Division',
+						value: 'FJ-C',
+					},
+					{
+						name: 'Central Eleuthera',
+						value: 'BS-CE',
+					},
+					{
+						name: 'Central Equatoria',
+						value: 'SS-EC',
+					},
+					{
+						name: 'Central Finland',
+						value: 'FI-08',
+					},
+					{
+						name: 'Central Governorate',
+						value: 'BH-16',
+					},
+					{
+						name: 'Central Java',
+						value: 'ID-JT',
+					},
+					{
+						name: 'Central Kalimantan',
+						value: 'ID-KT',
+					},
+					{
+						name: 'Central Luzon',
+						value: 'PH-03',
+					},
+					{
+						name: 'Central Ostrobothnia',
+						value: 'FI-07',
+					},
+					{
+						name: 'Central Province (LK-2)',
+						value: 'LK-2',
+					},
+					{
+						name: 'Central Province (MV-CE)',
+						value: 'MV-CE',
+					},
+					{
+						name: 'Central Province (PG-CPM)',
+						value: 'PG-CPM',
+					},
+					{
+						name: 'Central Province (SB-CE)',
+						value: 'SB-CE',
+					},
+					{
+						name: 'Central Region (MW-C)',
+						value: 'MW-C',
+					},
+					{
+						name: 'Central Region (NP-1)',
+						value: 'NP-1',
+					},
+					{
+						name: 'Central Region (UG-C)',
+						value: 'UG-C',
+					},
+					{
+						name: 'Central River',
+						value: 'GM-M',
+					},
+					{
+						name: 'Central Sulawesi',
+						value: 'ID-ST',
+					},
+					{
+						name: 'Central Visayas',
+						value: 'PH-07',
+					},
+					{
+						name: 'Centrale',
+						value: 'TG-C',
+					},
+					{
+						name: 'Centre (BF-03)',
 						value: 'BF-03',
+					},
+					{
+						name: 'Centre (HT-CE)',
+						value: 'HT-CE',
 					},
 					{
 						name: 'Centre Est',
@@ -1668,112 +2683,3192 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'BF-07',
 					},
 					{
-						name: 'Est',
-						value: 'BF-08',
+						name: 'Centre-Val de Loire',
+						value: 'FR-F',
 					},
 					{
-						name: 'Hauts-Bassins',
-						value: 'BF-09',
+						name: 'Centro Sur',
+						value: 'GQ-CS',
 					},
 					{
-						name: 'Nord',
-						value: 'BF-10',
+						name: 'Cerro Largo Department',
+						value: 'UY-CL',
 					},
 					{
-						name: 'Plateau-Central Region',
-						value: 'BF-11',
+						name: 'Cesar',
+						value: 'CO-CES',
 					},
 					{
-						name: 'Sahel',
-						value: 'BF-12',
+						name: 'Cēsis Municipality',
+						value: 'LV-022',
 					},
 					{
-						name: 'Sud-Ouest',
-						value: 'BF-13',
+						name: 'Cesvaine Municipality',
+						value: 'LV-021',
 					},
 					{
-						name: 'Burundi',
-						value: 'BI',
+						name: 'Cetinje',
+						value: 'ME-06',
 					},
 					{
-						name: 'Bubanza',
-						value: 'BI-BB',
+						name: 'Ceuta',
+						value: 'ES-CE',
 					},
 					{
-						name: 'Bujumbura Mairie',
-						value: 'BI-BM',
+						name: 'Chachoengsao',
+						value: 'TH-24',
 					},
 					{
-						name: 'Bujumbura Rural',
-						value: 'BI-BL',
+						name: 'Chaco Province',
+						value: 'AR-H',
 					},
 					{
-						name: 'Bururi',
-						value: 'BI-BR',
+						name: 'Chad',
+						value: 'TD',
 					},
 					{
-						name: 'Cankuzo',
-						value: 'BI-CA',
+						name: 'Chagang',
+						value: 'KP-04',
+					},
+					{
+						name: 'Chaguanas',
+						value: 'TT-CHA',
+					},
+					{
+						name: 'Chaharmahal and Bakhtiari',
+						value: 'IR-08',
+					},
+					{
+						name: 'Chai Nat',
+						value: 'TH-18',
+					},
+					{
+						name: 'Chaiyaphum',
+						value: 'TH-36',
+					},
+					{
+						name: 'Chalatenango',
+						value: 'SV-CH',
+					},
+					{
+						name: 'Champagne-Ardenne',
+						value: 'FR-G',
+					},
+					{
+						name: 'Champaign & Springfield-Decatur IL',
+						value: '648',
+					},
+					{
+						name: 'Champasak',
+						value: 'LA-CH',
+					},
+					{
+						name: 'Chandigarh',
+						value: 'IN-CH',
+					},
+					{
+						name: 'Chanthaburi',
+						value: 'TH-22',
+					},
+					{
+						name: 'Chaouia-Ouardigha',
+						value: 'MA-09',
+					},
+					{
+						name: 'Chari-Baguirmi',
+						value: 'TD-CB',
+					},
+					{
+						name: 'Charleston SC',
+						value: '519',
+					},
+					{
+						name: 'Charleston-Huntington WV',
+						value: '564',
+					},
+					{
+						name: 'Charlotte',
+						value: 'VC-01',
+					},
+					{
+						name: 'Charlotte NC',
+						value: '517',
+					},
+					{
+						name: 'Charlottesville VA',
+						value: '584',
+					},
+					{
+						name: 'Chashka',
+						value: 'MK-80',
+					},
+					{
+						name: 'Chatham Islands',
+						value: 'NZ-CIT',
+					},
+					{
+						name: 'Chattanooga TN',
+						value: '575',
+					},
+					{
+						name: 'Chechnya',
+						value: 'RU-CE',
+					},
+					{
+						name: 'Chelyabinsk Oblast',
+						value: 'RU-CHE',
+					},
+					{
+						name: "Cherkas'ka oblast",
+						value: 'UA-71',
+					},
+					{
+						name: "Chernihivs'ka oblast",
+						value: 'UA-74',
+					},
+					{
+						name: "Chernivets'ka oblast",
+						value: 'UA-77',
+					},
+					{
+						name: 'Cheyenne WY-Scottsbluff NE',
+						value: '759',
+					},
+					{
+						name: 'Chhattisgarh',
+						value: 'IN-CT',
+					},
+					{
+						name: 'Chhukha',
+						value: 'BT-12',
+					},
+					{
+						name: 'Chiang Mai',
+						value: 'TH-50',
+					},
+					{
+						name: 'Chiang Rai',
+						value: 'TH-57',
+					},
+					{
+						name: 'Chiapas',
+						value: 'MX-CHP',
+					},
+					{
+						name: 'Chiba Prefecture',
+						value: 'JP-12',
+					},
+					{
+						name: 'Chicago IL',
+						value: '602',
+					},
+					{
+						name: 'Chico-Redding CA',
+						value: '868',
+					},
+					{
+						name: 'Chiesanuova',
+						value: 'SM-02',
+					},
+					{
+						name: 'Chihuahua',
+						value: 'MX-CHH',
+					},
+					{
+						name: 'Chile',
+						value: 'CL',
+					},
+					{
+						name: 'Chimaltenango Department',
+						value: 'GT-CM',
+					},
+					{
+						name: 'Chimborazo Province',
+						value: 'EC-H',
+					},
+					{
+						name: 'Chimbu Province',
+						value: 'PG-CPK',
+					},
+					{
+						name: 'Chin State',
+						value: 'MM-14',
+					},
+					{
+						name: 'China',
+						value: 'CN',
+					},
+					{
+						name: 'Chinandega',
+						value: 'NI-CI',
+					},
+					{
+						name: 'Chiquimula Department',
+						value: 'GT-CQ',
+					},
+					{
+						name: 'Chiriquí Province',
+						value: 'PA-4',
+					},
+					{
+						name: 'Chisinau',
+						value: 'MD-CU',
+					},
+					{
+						name: 'Chittagong Division',
+						value: 'BD-B',
+					},
+					{
+						name: 'Chlef Province',
+						value: 'DZ-02',
+					},
+					{
+						name: 'Choco',
+						value: 'CO-CHO',
+					},
+					{
+						name: 'Choiseul',
+						value: 'LC-03',
+					},
+					{
+						name: 'Choiseul Province',
+						value: 'SB-CH',
+					},
+					{
+						name: 'Choluteca',
+						value: 'HN-CH',
+					},
+					{
+						name: 'Chon Buri',
+						value: 'TH-20',
+					},
+					{
+						name: 'Chongqing',
+						value: 'CN-50',
+					},
+					{
+						name: 'Chontales',
+						value: 'NI-CO',
+					},
+					{
+						name: 'Christ Church',
+						value: 'BB-01',
+					},
+					{
+						name: 'Christ Church Nichola Town Parish',
+						value: 'KN-01',
+					},
+					{
+						name: 'Christmas Island',
+						value: 'CX',
+					},
+					{
+						name: 'Chubut Province',
+						value: 'AR-U',
+					},
+					{
+						name: 'Chukotka Autonomous Okrug',
+						value: 'RU-CHU',
+					},
+					{
+						name: 'Chumphon',
+						value: 'TH-86',
+					},
+					{
+						name: 'Chungcheongbuk-do',
+						value: 'KR-43',
+					},
+					{
+						name: 'Chungcheongnam-do',
+						value: 'KR-44',
+					},
+					{
+						name: 'Chuquisaca Department',
+						value: 'BO-H',
+					},
+					{
+						name: 'Chuuk',
+						value: 'FM-TRK',
+					},
+					{
+						name: 'Chuvashia Republic',
+						value: 'RU-CU',
+					},
+					{
+						name: 'Chuy Province',
+						value: 'KG-C',
 					},
 					{
 						name: 'Cibitoke',
 						value: 'BI-CI',
 					},
 					{
+						name: 'Cibla Municipality',
+						value: 'LV-023',
+					},
+					{
+						name: 'Ciego de Avila',
+						value: 'CU-08',
+					},
+					{
+						name: 'Cienfuegos',
+						value: 'CU-06',
+					},
+					{
+						name: 'Cimișlia',
+						value: 'MD-CM',
+					},
+					{
+						name: 'Cincinnati OH',
+						value: '515',
+					},
+					{
+						name: 'City of Zagreb',
+						value: 'HR-21',
+					},
+					{
+						name: 'Clarendon Parish',
+						value: 'JM-13',
+					},
+					{
+						name: 'Clarksburg-Weston WV',
+						value: '598',
+					},
+					{
+						name: 'Cleveland-Akron (Canton) OH',
+						value: '510',
+					},
+					{
+						name: 'Cluj County',
+						value: 'RO-CJ',
+					},
+					{
+						name: 'Coahuila',
+						value: 'MX-COA',
+					},
+					{
+						name: 'Cochabamba Department',
+						value: 'BO-C',
+					},
+					{
+						name: 'Coclé Province',
+						value: 'PA-2',
+					},
+					{
+						name: 'Cocos (Keeling) Islands',
+						value: 'CC',
+					},
+					{
+						name: 'Coimbra District',
+						value: 'PT-06',
+					},
+					{
+						name: 'Cojedes',
+						value: 'VE-H',
+					},
+					{
+						name: 'Colima',
+						value: 'MX-COL',
+					},
+					{
+						name: 'Collines',
+						value: 'BJ-CO',
+					},
+					{
+						name: 'Colombia',
+						value: 'CO',
+					},
+					{
+						name: 'Colon',
+						value: 'HN-CL',
+					},
+					{
+						name: 'Colón Province',
+						value: 'PA-3',
+					},
+					{
+						name: 'Colonia',
+						value: 'UY-CO',
+					},
+					{
+						name: 'Colorado',
+						value: 'US-CO',
+					},
+					{
+						name: 'Colorado Springs-Pueblo CO',
+						value: '752',
+					},
+					{
+						name: 'Columbia SC',
+						value: '546',
+					},
+					{
+						name: 'Columbia-Jefferson City MO',
+						value: '604',
+					},
+					{
+						name: 'Columbus GA',
+						value: '522',
+					},
+					{
+						name: 'Columbus OH',
+						value: '535',
+					},
+					{
+						name: 'Columbus-Tupelo-West Point MS',
+						value: '673',
+					},
+					{
+						name: 'Comayagua',
+						value: 'HN-CM',
+					},
+					{
+						name: 'Commewijne',
+						value: 'SR-CM',
+					},
+					{
+						name: 'Community of Madrid',
+						value: 'ES-MD',
+					},
+					{
+						name: 'Comoros',
+						value: 'KM',
+					},
+					{
+						name: 'Conakry',
+						value: 'GN-C',
+					},
+					{
+						name: 'Concepcion',
+						value: 'PY-1',
+					},
+					{
+						name: 'Congo - Brazzaville',
+						value: 'CG',
+					},
+					{
+						name: 'Congo - Kinshasa',
+						value: 'CD',
+					},
+					{
+						name: 'Connecticut',
+						value: 'US-CT',
+					},
+					{
+						name: 'Constanța County',
+						value: 'RO-CT',
+					},
+					{
+						name: 'Constantine',
+						value: 'DZ-25',
+					},
+					{
+						name: 'Cook Islands',
+						value: 'CK',
+					},
+					{
+						name: 'Copan',
+						value: 'HN-CP',
+					},
+					{
+						name: 'Copperbelt',
+						value: 'ZM-08',
+					},
+					{
+						name: 'Coquimbo Region',
+						value: 'CL-CO',
+					},
+					{
+						name: 'Cordillera',
+						value: 'PY-3',
+					},
+					{
+						name: 'Cordillera Administrative Region',
+						value: 'PH-15',
+					},
+					{
+						name: 'Cordoba',
+						value: 'AR-X',
+					},
+					{
+						name: 'Coronie',
+						value: 'SR-CR',
+					},
+					{
+						name: 'Corozal',
+						value: 'BZ-CZL',
+					},
+					{
+						name: 'Corpus Christi TX',
+						value: '600',
+					},
+					{
+						name: 'Corrientes Province',
+						value: 'AR-W',
+					},
+					{
+						name: 'Corsica',
+						value: 'FR-H',
+					},
+					{
+						name: 'Cortés',
+						value: 'HN-CR',
+					},
+					{
+						name: 'Çorum Province',
+						value: 'TR-19',
+					},
+					{
+						name: 'Costa Rica',
+						value: 'CR',
+					},
+					{
+						name: 'Côte d’Ivoire',
+						value: 'CI',
+					},
+					{
+						name: 'Cotopaxi Province',
+						value: 'EC-X',
+					},
+					{
+						name: 'Couva-Tabaquite-Talparo',
+						value: 'TT-CTT',
+					},
+					{
+						name: 'Cova-Lima',
+						value: 'TL-CO',
+					},
+					{
+						name: 'Covasna County',
+						value: 'RO-CV',
+					},
+					{
+						name: 'Crimea',
+						value: 'UA-43',
+					},
+					{
+						name: 'Criuleni',
+						value: 'MD-CR',
+					},
+					{
+						name: 'Croatia',
+						value: 'HR',
+					},
+					{
+						name: 'Crooked Island and Long Cay',
+						value: 'BS-CK',
+					},
+					{
+						name: 'Cross River',
+						value: 'NG-CR',
+					},
+					{
+						name: 'Csongrád',
+						value: 'HU-CS',
+					},
+					{
+						name: 'Cuando Cubango Province',
+						value: 'AO-CCU',
+					},
+					{
+						name: 'Cuanza Norte Province',
+						value: 'AO-CNO',
+					},
+					{
+						name: 'Cuanza Sul',
+						value: 'AO-CUS',
+					},
+					{
+						name: 'Cuba',
+						value: 'CU',
+					},
+					{
+						name: 'Cundinamarca',
+						value: 'CO-CUN',
+					},
+					{
+						name: 'Cunene',
+						value: 'AO-CNN',
+					},
+					{
+						name: 'Curaçao',
+						value: 'CW',
+					},
+					{
+						name: 'Cuscatlan',
+						value: 'SV-CU',
+					},
+					{
+						name: 'Cusco',
+						value: 'PE-CUS',
+					},
+					{
+						name: 'Cuvette',
+						value: 'CG-8',
+					},
+					{
+						name: 'Cuvette-Ouest',
+						value: 'CG-15',
+					},
+					{
+						name: 'Cuyuni-Mazaruni',
+						value: 'GY-CU',
+					},
+					{
+						name: 'Cyprus',
+						value: 'CY',
+					},
+					{
+						name: 'Czechia',
+						value: 'CZ',
+					},
+					{
+						name: 'Da Nang',
+						value: 'VN-DN',
+					},
+					{
+						name: 'Dadra and Nagar Haveli',
+						value: 'IN-DN',
+					},
+					{
+						name: 'Daegu',
+						value: 'KR-27',
+					},
+					{
+						name: 'Daejeon',
+						value: 'KR-30',
+					},
+					{
+						name: 'Dagana',
+						value: 'BT-22',
+					},
+					{
+						name: 'Dagdas novads',
+						value: 'LV-024',
+					},
+					{
+						name: 'Dagestan Republic',
+						value: 'RU-DA',
+					},
+					{
+						name: 'Dajabón Province',
+						value: 'DO-05',
+					},
+					{
+						name: 'Đắk Lắk Province',
+						value: 'VN-33',
+					},
+					{
+						name: 'Dak Nong',
+						value: 'VN-72',
+					},
+					{
+						name: 'Dakahlia Governorate',
+						value: 'EG-DK',
+					},
+					{
+						name: 'Dakar',
+						value: 'SN-DK',
+					},
+					{
+						name: 'Dakhlet Nouadhibou',
+						value: 'MR-08',
+					},
+					{
+						name: 'Dalarna County',
+						value: 'SE-W',
+					},
+					{
+						name: 'Dallas-Ft. Worth TX',
+						value: '623',
+					},
+					{
+						name: 'Daman and Diu',
+						value: 'IN-DD',
+					},
+					{
+						name: 'Damascus Governorate',
+						value: 'SY-DI',
+					},
+					{
+						name: 'Dâmbovița County',
+						value: 'RO-DB',
+					},
+					{
+						name: 'Damietta Governorate',
+						value: 'EG-DT',
+					},
+					{
+						name: 'Danilovgrad',
+						value: 'ME-07',
+					},
+					{
+						name: 'Daraa Governorate',
+						value: 'SY-DR',
+					},
+					{
+						name: 'Darién Province',
+						value: 'PA-5',
+					},
+					{
+						name: 'Darkhan-Uul',
+						value: 'MN-037',
+					},
+					{
+						name: 'Darnah',
+						value: 'LY-DR',
+					},
+					{
+						name: 'Dashoguz Province',
+						value: 'TM-D',
+					},
+					{
+						name: 'Daugavpils',
+						value: 'LV-DGV',
+					},
+					{
+						name: 'Daugavpils Municipality',
+						value: 'LV-025',
+					},
+					{
+						name: 'Dauphin',
+						value: 'LC-04',
+					},
+					{
+						name: 'Davao Region',
+						value: 'PH-11',
+					},
+					{
+						name: 'Davenport IA-Rock Island-Moline IL',
+						value: '682',
+					},
+					{
+						name: 'Daykundi',
+						value: 'AF-DAY',
+					},
+					{
+						name: 'Dayton OH',
+						value: '542',
+					},
+					{
+						name: 'Deir Ez-Zor Governorate',
+						value: 'SY-DY',
+					},
+					{
+						name: 'Delaware',
+						value: 'US-DE',
+					},
+					{
+						name: 'Delchevo',
+						value: 'MK-23',
+					},
+					{
+						name: 'Delhi',
+						value: 'IN-DL',
+					},
+					{
+						name: 'Delta',
+						value: 'NG-DE',
+					},
+					{
+						name: 'Delta Amacuro',
+						value: 'VE-Y',
+					},
+					{
+						name: 'Demerara-Mahaica',
+						value: 'GY-DE',
+					},
+					{
+						name: 'Denguele',
+						value: 'CI-10',
+					},
+					{
+						name: 'Denigomodu',
+						value: 'NR-08',
+					},
+					{
+						name: 'Denizli',
+						value: 'TR-20',
+					},
+					{
+						name: 'Denmark',
+						value: 'DK',
+					},
+					{
+						name: 'Dennery',
+						value: 'LC-05',
+					},
+					{
+						name: 'Denver CO',
+						value: '751',
+					},
+					{
+						name: 'Des Moines-Ames IA',
+						value: '679',
+					},
+					{
+						name: 'Detroit MI',
+						value: '505',
+					},
+					{
+						name: 'Dhaka Division',
+						value: 'BD-C',
+					},
+					{
+						name: 'Dhamar',
+						value: 'YE-DH',
+					},
+					{
+						name: 'Dhi Qar',
+						value: 'IQ-DQ',
+					},
+					{
+						name: 'Dhofar Governorate',
+						value: 'OM-ZU',
+					},
+					{
+						name: 'Dibër County',
+						value: 'AL-09',
+					},
+					{
+						name: 'Diego Martin',
+						value: 'TT-DMN',
+					},
+					{
+						name: 'Diekirch',
+						value: 'LU-D',
+					},
+					{
+						name: 'Dien Bien',
+						value: 'VN-71',
+					},
+					{
+						name: 'Diffa',
+						value: 'NE-2',
+					},
+					{
+						name: 'Dikhil',
+						value: 'DJ-DI',
+					},
+					{
+						name: 'Dili',
+						value: 'TL-DI',
+					},
+					{
+						name: 'Diourbel Region',
+						value: 'SN-DB',
+					},
+					{
+						name: 'Dire Dawa',
+						value: 'ET-DD',
+					},
+					{
+						name: 'District of Columbia',
+						value: 'US-DC',
+					},
+					{
+						name: 'Districts of Republican Subordination',
+						value: 'TJ-RR',
+					},
+					{
+						name: 'Distrito Nacional',
+						value: 'DO-01',
+					},
+					{
+						name: 'Dix-Huit Montagnes',
+						value: 'CI-06',
+					},
+					{
+						name: 'Diyala',
+						value: 'IQ-DI',
+					},
+					{
+						name: 'Diyarbakır',
+						value: 'TR-21',
+					},
+					{
+						name: 'Djelfa Province',
+						value: 'DZ-17',
+					},
+					{
+						name: 'Djibouti',
+						value: 'DJ',
+					},
+					{
+						name: 'Dnipropetrovsk Oblast',
+						value: 'UA-12',
+					},
+					{
+						name: 'Dobele Municipality',
+						value: 'LV-026',
+					},
+					{
+						name: 'Dobrich Province',
+						value: 'BG-08',
+					},
+					{
+						name: 'Dodoma',
+						value: 'TZ-03',
+					},
+					{
+						name: 'Doha',
+						value: 'QA-DA',
+					},
+					{
+						name: 'Dojran',
+						value: 'MK-26',
+					},
+					{
+						name: 'Dolj County',
+						value: 'RO-DJ',
+					},
+					{
+						name: 'Domagnano',
+						value: 'SM-03',
+					},
+					{
+						name: 'Dominica',
+						value: 'DM',
+					},
+					{
+						name: 'Dominican Republic',
+						value: 'DO',
+					},
+					{
+						name: 'Donduseni',
+						value: 'MD-DO',
+					},
+					{
+						name: 'Donetsk Oblast',
+						value: 'UA-14',
+					},
+					{
+						name: 'Dong Nai',
+						value: 'VN-39',
+					},
+					{
+						name: 'Đồng Tháp Province',
+						value: 'VN-45',
+					},
+					{
+						name: 'Donga',
+						value: 'BJ-DO',
+					},
+					{
+						name: 'Dornod',
+						value: 'MN-061',
+					},
+					{
+						name: 'Dornogovi',
+						value: 'MN-063',
+					},
+					{
+						name: 'Dosso',
+						value: 'NE-3',
+					},
+					{
+						name: 'Dothan AL',
+						value: '606',
+					},
+					{
+						name: 'Doukkala-Abda',
+						value: 'MA-10',
+					},
+					{
+						name: 'Drenthe',
+						value: 'NL-DR',
+					},
+					{
+						name: 'Drochia',
+						value: 'MD-DR',
+					},
+					{
+						name: 'Duarte Province',
+						value: 'DO-06',
+					},
+					{
+						name: 'Dubai',
+						value: 'AE-DU',
+					},
+					{
+						name: 'Dubasari',
+						value: 'MD-DU',
+					},
+					{
+						name: 'Dubrovnik-Neretva County',
+						value: 'HR-19',
+					},
+					{
+						name: 'Duhok',
+						value: 'IQ-DA',
+					},
+					{
+						name: 'Duluth MN-Superior WI',
+						value: '676',
+					},
+					{
+						name: 'Dundaga Municipality',
+						value: 'LV-027',
+					},
+					{
+						name: 'Dundgovi',
+						value: 'MN-059',
+					},
+					{
+						name: 'Durango',
+						value: 'MX-DUR',
+					},
+					{
+						name: 'Durazno Department',
+						value: 'UY-DU',
+					},
+					{
+						name: 'Durbe Municipality',
+						value: 'LV-028',
+					},
+					{
+						name: 'Durrës',
+						value: 'AL-02',
+					},
+					{
+						name: 'Düzce Province',
+						value: 'TR-81',
+					},
+					{
+						name: 'Dzhalal-Abadskaya',
+						value: 'KG-J',
+					},
+					{
+						name: 'East',
+						value: 'CM-ES',
+					},
+					{
+						name: 'East Azerbaijan',
+						value: 'IR-01',
+					},
+					{
+						name: 'East Berbice-Corentyne',
+						value: 'GY-EB',
+					},
+					{
+						name: 'East Grand Bahama',
+						value: 'BS-EG',
+					},
+					{
+						name: 'East Java',
+						value: 'ID-JI',
+					},
+					{
+						name: 'East Kalimantan',
+						value: 'ID-KI',
+					},
+					{
+						name: 'East Kazakhstan Region',
+						value: 'KZ-VOS',
+					},
+					{
+						name: 'East New Britain Province',
+						value: 'PG-EBR',
+					},
+					{
+						name: 'East Nusa Tenggara',
+						value: 'ID-NT',
+					},
+					{
+						name: 'East Sepik Province',
+						value: 'PG-ESW',
+					},
+					{
+						name: 'Eastern',
+						value: 'ZM-03',
+					},
+					{
+						name: 'Eastern Cape',
+						value: 'ZA-EC',
+					},
+					{
+						name: 'Eastern Division',
+						value: 'FJ-E',
+					},
+					{
+						name: 'Eastern Equatoria',
+						value: 'SS-EE',
+					},
+					{
+						name: 'Eastern Highlands Province',
+						value: 'PG-EHG',
+					},
+					{
+						name: 'Eastern Province (LK-5)',
+						value: 'LK-5',
+					},
+					{
+						name: 'Eastern Province (RW-02)',
+						value: 'RW-02',
+					},
+					{
+						name: 'Eastern Province (SA-04)',
+						value: 'SA-04',
+					},
+					{
+						name: 'Eastern Province (SL-E)',
+						value: 'SL-E',
+					},
+					{
+						name: 'Eastern Region',
+						value: 'GH-EP',
+					},
+					{
+						name: 'Eastern Region (IS-7)',
+						value: 'IS-7',
+					},
+					{
+						name: 'Eastern Region (NP-4)',
+						value: 'NP-4',
+					},
+					{
+						name: 'Eastern Region (UG-E)',
+						value: 'UG-E',
+					},
+					{
+						name: 'Eastern Tobago',
+						value: 'TT-ETO',
+					},
+					{
+						name: 'Eastern Visayas',
+						value: 'PH-08',
+					},
+					{
+						name: 'Ebon',
+						value: 'MH-EBO',
+					},
+					{
+						name: 'Ebonyi',
+						value: 'NG-EB',
+					},
+					{
+						name: 'Ecuador',
+						value: 'EC',
+					},
+					{
+						name: 'Edineţ District',
+						value: 'MD-ED',
+					},
+					{
+						name: 'Edirne',
+						value: 'TR-22',
+					},
+					{
+						name: 'Edo',
+						value: 'NG-ED',
+					},
+					{
+						name: 'Egypt',
+						value: 'EG',
+					},
+					{
+						name: 'Ehime Prefecture',
+						value: 'JP-38',
+					},
+					{
+						name: 'Ekiti',
+						value: 'NG-EK',
+					},
+					{
+						name: 'El Bayadh Province',
+						value: 'DZ-32',
+					},
+					{
+						name: 'El Beheira Governorate',
+						value: 'EG-BH',
+					},
+					{
+						name: 'El Oro',
+						value: 'EC-O',
+					},
+					{
+						name: 'El Oued Province',
+						value: 'DZ-39',
+					},
+					{
+						name: 'El Paraiso',
+						value: 'HN-EP',
+					},
+					{
+						name: 'El Paso TX',
+						value: '765',
+					},
+					{
+						name: 'El Progreso Department',
+						value: 'GT-PR',
+					},
+					{
+						name: 'El Salvador',
+						value: 'SV',
+					},
+					{
+						name: 'El Seibo Province',
+						value: 'DO-08',
+					},
+					{
+						name: 'El Taref Province',
+						value: 'DZ-36',
+					},
+					{
+						name: 'Elazığ',
+						value: 'TR-23',
+					},
+					{
+						name: 'Elbasan',
+						value: 'AL-03',
+					},
+					{
+						name: 'Elías Piña Province',
+						value: 'DO-07',
+					},
+					{
+						name: 'Elmira NY',
+						value: '565',
+					},
+					{
+						name: 'Emberá-Wounaan Comarca',
+						value: 'PA-EM',
+					},
+					{
+						name: 'Emilia-Romagna',
+						value: 'IT-45',
+					},
+					{
+						name: 'Encamp',
+						value: 'AD-03',
+					},
+					{
+						name: 'Enewetak Atoll',
+						value: 'MH-ENI',
+					},
+					{
+						name: 'Enga Province',
+						value: 'PG-EPW',
+					},
+					{
+						name: 'England',
+						value: 'GB-ENG',
+					},
+					{
+						name: 'Engure Municipality',
+						value: 'LV-029',
+					},
+					{
+						name: 'Ennedi',
+						value: 'TD-EN',
+					},
+					{
+						name: 'Entre Rios',
+						value: 'AR-E',
+					},
+					{
+						name: 'Enugu',
+						value: 'NG-EN',
+					},
+					{
+						name: 'Equator',
+						value: 'CD-EQ',
+					},
+					{
+						name: 'Equatorial Guinea',
+						value: 'GQ',
+					},
+					{
+						name: 'Erbil',
+						value: 'IQ-AR',
+					},
+					{
+						name: 'Ērgļi Municipality',
+						value: 'LV-030',
+					},
+					{
+						name: 'Erie PA',
+						value: '516',
+					},
+					{
+						name: 'Eritrea',
+						value: 'ER',
+					},
+					{
+						name: 'Ermera',
+						value: 'TL-ER',
+					},
+					{
+						name: 'Erongo',
+						value: 'NA-ER',
+					},
+					{
+						name: 'Erzincan',
+						value: 'TR-24',
+					},
+					{
+						name: 'Erzurum',
+						value: 'TR-25',
+					},
+					{
+						name: 'Escaldes-Engordany',
+						value: 'AD-08',
+					},
+					{
+						name: 'Eschen',
+						value: 'LI-02',
+					},
+					{
+						name: 'Escuintla',
+						value: 'GT-ES',
+					},
+					{
+						name: 'Eskişehir Province',
+						value: 'TR-26',
+					},
+					{
+						name: 'Esmeraldas Province',
+						value: 'EC-E',
+					},
+					{
+						name: 'Espaillat Province',
+						value: 'DO-09',
+					},
+					{
+						name: 'Essequibo Islands-West Demerara',
+						value: 'GY-ES',
+					},
+					{
+						name: 'Est',
+						value: 'BF-08',
+					},
+					{
+						name: 'Esteli',
+						value: 'NI-ES',
+					},
+					{
+						name: 'Estonia',
+						value: 'EE',
+					},
+					{
+						name: 'Estuaire',
+						value: 'GA-1',
+					},
+					{
+						name: 'Eswatini',
+						value: 'SZ',
+					},
+					{
+						name: 'Ethiopia',
+						value: 'ET',
+					},
+					{
+						name: 'Eugene OR',
+						value: '801',
+					},
+					{
+						name: 'Eureka CA',
+						value: '802',
+					},
+					{
+						name: 'Evansville IN',
+						value: '649',
+					},
+					{
+						name: 'Évora District',
+						value: 'PT-07',
+					},
+					{
+						name: 'Ewa',
+						value: 'NR-09',
+					},
+					{
+						name: 'Extremadura',
+						value: 'ES-EX',
+					},
+					{
+						name: 'Extreme North',
+						value: 'CM-EN',
+					},
+					{
+						name: 'Exuma',
+						value: 'BS-EX',
+					},
+					{
+						name: "Fa'asaleleaga",
+						value: 'WS-FA',
+					},
+					{
+						name: 'Faetano',
+						value: 'SM-04',
+					},
+					{
+						name: 'Fairbanks AK',
+						value: '745',
+					},
+					{
+						name: 'Faiyum Governorate',
+						value: 'EG-FYM',
+					},
+					{
+						name: 'Falcón',
+						value: 'VE-I',
+					},
+					{
+						name: 'Falesti',
+						value: 'MD-FA',
+					},
+					{
+						name: 'Falkland Islands (Islas Malvinas)',
+						value: 'FK',
+					},
+					{
+						name: 'Famagusta',
+						value: 'CY-04',
+					},
+					{
+						name: 'Far-Western Region',
+						value: 'NP-5',
+					},
+					{
+						name: 'Farah',
+						value: 'AF-FRA',
+					},
+					{
+						name: 'Faranah',
+						value: 'GN-F',
+					},
+					{
+						name: 'Fargo-Valley City ND',
+						value: '724',
+					},
+					{
+						name: 'Faro District',
+						value: 'PT-08',
+					},
+					{
+						name: 'Faroe Islands',
+						value: 'FO',
+					},
+					{
+						name: 'Fars',
+						value: 'IR-14',
+					},
+					{
+						name: 'Faryab',
+						value: 'AF-FYB',
+					},
+					{
+						name: 'Fatick Region',
+						value: 'SN-FK',
+					},
+					{
+						name: 'Federal Capital Territory',
+						value: 'NG-FC',
+					},
+					{
+						name: 'Federal Dependencies',
+						value: 'VE-W',
+					},
+					{
+						name: 'Federal District',
+						value: 'BR-DF',
+					},
+					{
+						name: 'Federal Territory of Kuala Lumpur',
+						value: 'MY-14',
+					},
+					{
+						name: 'Federally Administered Tribal Areas',
+						value: 'PK-TA',
+					},
+					{
+						name: 'Federation of Bosnia and Herzegovina',
+						value: 'BA-BIH',
+					},
+					{
+						name: 'Fejér',
+						value: 'HU-FE',
+					},
+					{
+						name: 'Ferghana Province',
+						value: 'UZ-FA',
+					},
+					{
+						name: 'Fes-Boulemane',
+						value: 'MA-05',
+					},
+					{
+						name: 'Fianarantsoa',
+						value: 'MG-F',
+					},
+					{
+						name: 'Fier',
+						value: 'AL-04',
+					},
+					{
+						name: 'Fiji',
+						value: 'FJ',
+					},
+					{
+						name: 'Finland',
+						value: 'FI',
+					},
+					{
+						name: 'Finnmark',
+						value: 'NO-20',
+					},
+					{
+						name: 'Fiorentino',
+						value: 'SM-05',
+					},
+					{
+						name: 'Flacq',
+						value: 'MU-FL',
+					},
+					{
+						name: 'Flanders',
+						value: 'BE-VLG',
+					},
+					{
+						name: 'Flevoland',
+						value: 'NL-FL',
+					},
+					{
+						name: 'Flint-Saginaw-Bay City MI',
+						value: '513',
+					},
+					{
+						name: 'Florence-Myrtle Beach SC',
+						value: '570',
+					},
+					{
+						name: 'Flores Department',
+						value: 'UY-FS',
+					},
+					{
+						name: 'Floresti',
+						value: 'MD-FL',
+					},
+					{
+						name: 'Florida',
+						value: 'US-FL',
+					},
+					{
+						name: 'Florida Department',
+						value: 'UY-FD',
+					},
+					{
+						name: 'Formosa Province',
+						value: 'AR-P',
+					},
+					{
+						name: 'France',
+						value: 'FR',
+					},
+					{
+						name: 'Franche-Comté',
+						value: 'FR-I',
+					},
+					{
+						name: 'Francisco Morazan',
+						value: 'HN-FM',
+					},
+					{
+						name: 'Free State',
+						value: 'ZA-FS',
+					},
+					{
+						name: 'Freeport',
+						value: 'BS-FP',
+					},
+					{
+						name: 'French Guiana',
+						value: 'GF',
+					},
+					{
+						name: 'French Polynesia',
+						value: 'PF',
+					},
+					{
+						name: 'French Southern Territories',
+						value: 'TF',
+					},
+					{
+						name: 'Fresno-Visalia CA',
+						value: '866',
+					},
+					{
+						name: 'Friesland',
+						value: 'NL-FR',
+					},
+					{
+						name: 'Friuli-Venezia Giulia',
+						value: 'IT-36',
+					},
+					{
+						name: 'Fromager',
+						value: 'CI-18',
+					},
+					{
+						name: 'Ft. Myers-Naples FL',
+						value: '571',
+					},
+					{
+						name: 'Ft. Smith-Fayetteville-Springdale-Rogers AR',
+						value: '670',
+					},
+					{
+						name: 'Ft. Wayne IN',
+						value: '509',
+					},
+					{
+						name: 'Fujairah',
+						value: 'AE-FU',
+					},
+					{
+						name: 'Fujian',
+						value: 'CN-35',
+					},
+					{
+						name: 'Fukui Prefecture',
+						value: 'JP-18',
+					},
+					{
+						name: 'Fukuoka Prefecture',
+						value: 'JP-40',
+					},
+					{
+						name: 'Fukushima Prefecture',
+						value: 'JP-07',
+					},
+					{
+						name: 'Funafuti',
+						value: 'TV-FUN',
+					},
+					{
+						name: 'Gabes',
+						value: 'TN-81',
+					},
+					{
+						name: 'Gabon',
+						value: 'GA',
+					},
+					{
+						name: 'Gabrovo',
+						value: 'BG-07',
+					},
+					{
+						name: 'Gabu',
+						value: 'GW-GA',
+					},
+					{
+						name: 'Gafsa',
+						value: 'TN-71',
+					},
+					{
+						name: "Gaga'emauga",
+						value: 'WS-GE',
+					},
+					{
+						name: "Gaga'ifomauga",
+						value: 'WS-GI',
+					},
+					{
+						name: 'Gagauzia',
+						value: 'MD-GA',
+					},
+					{
+						name: 'Gainesville FL',
+						value: '592',
+					},
+					{
+						name: 'Galápagos Islands',
+						value: 'EC-W',
+					},
+					{
+						name: 'Galați',
+						value: 'RO-GL',
+					},
+					{
+						name: 'Galguduud',
+						value: 'SO-GA',
+					},
+					{
+						name: 'Galicia',
+						value: 'ES-GA',
+					},
+					{
+						name: 'Gambella',
+						value: 'ET-GA',
+					},
+					{
+						name: 'Gambia',
+						value: 'GM',
+					},
+					{
+						name: 'Gamprin',
+						value: 'LI-03',
+					},
+					{
+						name: 'Gangwon-do',
+						value: 'KR-42',
+					},
+					{
+						name: 'Gansu',
+						value: 'CN-62',
+					},
+					{
+						name: 'Gao',
+						value: 'ML-7',
+					},
+					{
+						name: 'Garkalne Municipality',
+						value: 'LV-031',
+					},
+					{
+						name: 'Gasa',
+						value: 'BT-GA',
+					},
+					{
+						name: 'Gash-Barka',
+						value: 'ER-GB',
+					},
+					{
+						name: 'Gauteng',
+						value: 'ZA-GT',
+					},
+					{
+						name: 'Gavleborg County',
+						value: 'SE-X',
+					},
+					{
+						name: 'Gaza Province',
+						value: 'MZ-G',
+					},
+					{
+						name: 'Gaziantep',
+						value: 'TR-27',
+					},
+					{
+						name: 'Gbarpolu',
+						value: 'LR-GP',
+					},
+					{
+						name: 'Gedo',
+						value: 'SO-GE',
+					},
+					{
+						name: 'Gegharkunik Province',
+						value: 'AM-GR',
+					},
+					{
+						name: 'Gelderland',
+						value: 'NL-GE',
+					},
+					{
+						name: 'Geneva',
+						value: 'CH-GE',
+					},
+					{
+						name: 'Georgia',
+						value: 'GE',
+					},
+					{
+						name: 'Georgia (US)',
+						value: 'US-GA',
+					},
+					{
+						name: 'Germany',
+						value: 'DE',
+					},
+					{
+						name: 'Ghana',
+						value: 'GH',
+					},
+					{
+						name: 'Ghanzi',
+						value: 'BW-GH',
+					},
+					{
+						name: 'Gharb Darfur',
+						value: 'SD-DW',
+					},
+					{
+						name: 'Gharb-Chrarda-Beni Hssen',
+						value: 'MA-02',
+					},
+					{
+						name: 'Gharbia Governorate',
+						value: 'EG-GH',
+					},
+					{
+						name: 'Ghardaia Province',
+						value: 'DZ-47',
+					},
+					{
+						name: 'Ghat',
+						value: 'LY-GT',
+					},
+					{
+						name: 'Ghazni',
+						value: 'AF-GHA',
+					},
+					{
+						name: 'Ghor',
+						value: 'AF-GHO',
+					},
+					{
+						name: 'Gia Lai Province',
+						value: 'VN-30',
+					},
+					{
+						name: 'Gibraltar',
+						value: 'GI',
+					},
+					{
+						name: 'Gifu Prefecture',
+						value: 'JP-21',
+					},
+					{
+						name: 'Gilan',
+						value: 'IR-19',
+					},
+					{
+						name: 'Gilbert Islands',
+						value: 'KI-G',
+					},
+					{
+						name: 'Gilgit-Baltistan',
+						value: 'PK-GB',
+					},
+					{
+						name: 'Giresun',
+						value: 'TR-28',
+					},
+					{
+						name: 'Girne',
+						value: 'CY-06',
+					},
+					{
+						name: 'Gisborne',
+						value: 'NZ-GIS',
+					},
+					{
 						name: 'Gitega',
 						value: 'BI-GI',
 					},
 					{
-						name: 'Karuzi',
-						value: 'BI-KR',
+						name: 'Giurgiu County',
+						value: 'RO-GR',
 					},
 					{
-						name: 'Kayanza',
-						value: 'BI-KY',
+						name: 'Giza Governorate',
+						value: 'EG-GZ',
 					},
 					{
-						name: 'Kirundo',
-						value: 'BI-KI',
+						name: 'Gjirokastra',
+						value: 'AL-05',
 					},
 					{
-						name: 'Makamba',
-						value: 'BI-MA',
+						name: 'Glacis',
+						value: 'SC-12',
 					},
 					{
-						name: 'Muramvya',
-						value: 'BI-MU',
+						name: 'Glendive MT',
+						value: '798',
 					},
 					{
-						name: 'Muyinga',
-						value: 'BI-MY',
+						name: 'Glodeni',
+						value: 'MD-GL',
 					},
 					{
-						name: 'Mwaro',
-						value: 'BI-MW',
+						name: 'Goa',
+						value: 'IN-GA',
 					},
 					{
-						name: 'Ngozi',
-						value: 'BI-NG',
+						name: 'Golestan',
+						value: 'IR-27',
 					},
 					{
-						name: 'Rutana',
-						value: 'BI-RT',
+						name: 'Gombe',
+						value: 'NG-GO',
 					},
 					{
-						name: 'Ruyigi',
-						value: 'BI-RY',
+						name: 'Gomel Region',
+						value: 'BY-HO',
 					},
 					{
-						name: 'Cambodia',
-						value: 'KH',
+						name: 'Gorgol',
+						value: 'MR-04',
 					},
 					{
-						name: 'Banteay Meanchey',
-						value: 'KH-1',
+						name: 'Gorj County',
+						value: 'RO-GJ',
 					},
 					{
-						name: 'Battambang',
-						value: 'KH-2',
+						name: 'Gorno-Badakhshan Autonomous Province',
+						value: 'TJ-GB',
+					},
+					{
+						name: 'Gorontalo',
+						value: 'ID-GO',
+					},
+					{
+						name: 'Gostivar',
+						value: 'MK-19',
+					},
+					{
+						name: 'Gotland County',
+						value: 'SE-I',
+					},
+					{
+						name: 'Govi-Altai',
+						value: 'MN-065',
+					},
+					{
+						name: 'Govisumber',
+						value: 'MN-064',
+					},
+					{
+						name: 'Gracias a Dios',
+						value: 'HN-GD',
+					},
+					{
+						name: 'Granada',
+						value: 'NI-GR',
+					},
+					{
+						name: 'Grand Anse Mahe',
+						value: 'SC-13',
+					},
+					{
+						name: 'Grand Anse Praslin',
+						value: 'SC-14',
+					},
+					{
+						name: 'Grand Bassa',
+						value: 'LR-GB',
+					},
+					{
+						name: 'Grand Cape Mount',
+						value: 'LR-CM',
+					},
+					{
+						name: 'Grand Casablanca',
+						value: 'MA-08',
+					},
+					{
+						name: 'Grand Cay',
+						value: 'BS-GC',
+					},
+					{
+						name: 'Grand Gedeh',
+						value: 'LR-GG',
+					},
+					{
+						name: 'Grand Junction-Montrose CO',
+						value: '773',
+					},
+					{
+						name: 'Grand Kru',
+						value: 'LR-GK',
+					},
+					{
+						name: 'Grand Port',
+						value: 'MU-GP',
+					},
+					{
+						name: 'Grand Rapids-Kalamazoo-Battle Creek MI',
+						value: '563',
+					},
+					{
+						name: "Grand'Anse",
+						value: 'HT-GA',
+					},
+					{
+						name: 'Granma',
+						value: 'CU-12',
+					},
+					{
+						name: 'Great Falls MT',
+						value: '755',
+					},
+					{
+						name: 'Greater Accra Region',
+						value: 'GH-AA',
+					},
+					{
+						name: 'Greater Poland Voivodeship',
+						value: 'PL-WP',
+					},
+					{
+						name: 'Greece',
+						value: 'GR',
+					},
+					{
+						name: 'Green Bay-Appleton WI',
+						value: '658',
+					},
+					{
+						name: 'Greenland',
+						value: 'GL',
+					},
+					{
+						name: 'Greensboro-High Point-Winston Salem NC',
+						value: '518',
+					},
+					{
+						name: 'Greenville-New Bern-Washington NC',
+						value: '545',
+					},
+					{
+						name: 'Greenville-Spartanburg SC-Asheville NC-Anderson SC',
+						value: '567',
+					},
+					{
+						name: 'Greenwood-Greenville MS',
+						value: '647',
+					},
+					{
+						name: 'Grenada',
+						value: 'GD',
+					},
+					{
+						name: 'Grenadines',
+						value: 'VC-06',
+					},
+					{
+						name: 'Grevenmacher',
+						value: 'LU-G',
+					},
+					{
+						name: 'Grisons',
+						value: 'CH-GR',
+					},
+					{
+						name: 'Grobiņa Municipality',
+						value: 'LV-032',
+					},
+					{
+						name: 'Groningen',
+						value: 'NL-GR',
+					},
+					{
+						name: 'Gros Islet',
+						value: 'LC-06',
+					},
+					{
+						name: 'Guadalcanal Province',
+						value: 'SB-GU',
+					},
+					{
+						name: 'Guadeloupe',
+						value: 'GP',
+					},
+					{
+						name: 'Guainia',
+						value: 'CO-GUA',
+					},
+					{
+						name: 'Guaira',
+						value: 'PY-4',
+					},
+					{
+						name: 'Guam',
+						value: 'GU',
+					},
+					{
+						name: 'Guanacaste Province',
+						value: 'CR-G',
+					},
+					{
+						name: 'Guanajuato',
+						value: 'MX-GUA',
+					},
+					{
+						name: 'Guangdong',
+						value: 'CN-44',
+					},
+					{
+						name: 'Guangxi',
+						value: 'CN-45',
+					},
+					{
+						name: 'Guantanamo',
+						value: 'CU-14',
+					},
+					{
+						name: 'Guarda District',
+						value: 'PT-09',
+					},
+					{
+						name: 'Guárico',
+						value: 'VE-J',
+					},
+					{
+						name: 'Guatemala',
+						value: 'GT',
+					},
+					{
+						name: 'Guatemala Department',
+						value: 'GT-GU',
+					},
+					{
+						name: 'Guaviare',
+						value: 'CO-GUV',
+					},
+					{
+						name: 'Guayas',
+						value: 'EC-G',
+					},
+					{
+						name: 'Guelma Province',
+						value: 'DZ-24',
+					},
+					{
+						name: 'Guelmim-Es Semara',
+						value: 'MA-14',
+					},
+					{
+						name: 'Guera',
+						value: 'TD-GR',
+					},
+					{
+						name: 'Guernsey',
+						value: 'GG',
+					},
+					{
+						name: 'Guerrero',
+						value: 'MX-GRO',
+					},
+					{
+						name: 'Guidimaka',
+						value: 'MR-10',
+					},
+					{
+						name: 'Guinea',
+						value: 'GN',
+					},
+					{
+						name: 'Guinea-Bissau',
+						value: 'GW',
+					},
+					{
+						name: 'Guizhou',
+						value: 'CN-52',
+					},
+					{
+						name: 'Gujarat',
+						value: 'IN-GJ',
+					},
+					{
+						name: 'Gulbene Municipality',
+						value: 'LV-033',
+					},
+					{
+						name: 'Gulf Province',
+						value: 'PG-GPK',
+					},
+					{
+						name: 'Gümüşhane',
+						value: 'TR-29',
+					},
+					{
+						name: 'Guna Yala',
+						value: 'PA-KY',
+					},
+					{
+						name: 'Gunma Prefecture',
+						value: 'JP-10',
+					},
+					{
+						name: 'Guria',
+						value: 'GE-GU',
+					},
+					{
+						name: 'Guyana',
+						value: 'GY',
+					},
+					{
+						name: 'Gwangju',
+						value: 'KR-29',
+					},
+					{
+						name: 'Gyeonggi-do',
+						value: 'KR-41',
+					},
+					{
+						name: 'Gyeongsangbuk-do',
+						value: 'KR-47',
+					},
+					{
+						name: 'Gyeongsangnam-do',
+						value: 'KR-48',
+					},
+					{
+						name: 'Gyor-Moson-Sopron',
+						value: 'HU-GS',
+					},
+					{
+						name: 'Ha Giang',
+						value: 'VN-03',
+					},
+					{
+						name: 'Hà Nam Province',
+						value: 'VN-63',
+					},
+					{
+						name: 'Ha Tinh Province',
+						value: 'VN-23',
+					},
+					{
+						name: "Ha'apai",
+						value: 'TO-02',
+					},
+					{
+						name: 'Haa',
+						value: 'BT-13',
+					},
+					{
+						name: 'Hadjer-Lamis',
+						value: 'TD-HL',
+					},
+					{
+						name: 'Hadramaut',
+						value: 'YE-HD',
+					},
+					{
+						name: 'Hai Duong',
+						value: 'VN-61',
+					},
+					{
+						name: 'Haifa District',
+						value: 'IL-HA',
+					},
+					{
+						name: 'Hail Province',
+						value: 'SA-06',
+					},
+					{
+						name: 'Hainan',
+						value: 'CN-46',
+					},
+					{
+						name: 'Haiphong',
+						value: 'VN-HP',
+					},
+					{
+						name: 'Haiti',
+						value: 'HT',
+					},
+					{
+						name: 'Hajdú-Bihar',
+						value: 'HU-HB',
+					},
+					{
+						name: 'Hajjah',
+						value: 'YE-HJ',
+					},
+					{
+						name: 'Hakkâri',
+						value: 'TR-30',
+					},
+					{
+						name: 'Halland County',
+						value: 'SE-N',
+					},
+					{
+						name: 'Hama Governorate',
+						value: 'SY-HM',
+					},
+					{
+						name: 'Hamadan',
+						value: 'IR-24',
+					},
+					{
+						name: 'Hamburg',
+						value: 'DE-HH',
+					},
+					{
+						name: 'Hanoi',
+						value: 'VN-HN',
+					},
+					{
+						name: 'Hanover Parish',
+						value: 'JM-09',
+					},
+					{
+						name: 'Harare',
+						value: 'ZW-HA',
+					},
+					{
+						name: 'Harari',
+						value: 'ET-HA',
+					},
+					{
+						name: 'Harbour Island',
+						value: 'BS-HI',
+					},
+					{
+						name: 'Hardap Region',
+						value: 'NA-HA',
+					},
+					{
+						name: 'Harghita County',
+						value: 'RO-HR',
+					},
+					{
+						name: 'Harju County',
+						value: 'EE-37',
+					},
+					{
+						name: 'Harlingen-Weslaco-Brownsville-McAllen TX',
+						value: '636',
+					},
+					{
+						name: 'Harrisburg-Lancaster-Lebanon-York PA',
+						value: '566',
+					},
+					{
+						name: 'Harrisonburg VA',
+						value: '569',
+					},
+					{
+						name: 'Hartford & New Haven CT',
+						value: '533',
+					},
+					{
+						name: 'Haryana',
+						value: 'IN-HR',
+					},
+					{
+						name: 'Haskovo Province',
+						value: 'BG-26',
+					},
+					{
+						name: 'Hatay',
+						value: 'TR-31',
+					},
+					{
+						name: 'Hato Mayor Province',
+						value: 'DO-30',
+					},
+					{
+						name: 'Hatohobei',
+						value: 'PW-050',
+					},
+					{
+						name: 'Hattiesburg-Laurel MS',
+						value: '710',
+					},
+					{
+						name: 'Hau Giang',
+						value: 'VN-73',
+					},
+					{
+						name: 'Haut-Mbomou',
+						value: 'CF-HM',
+					},
+					{
+						name: 'Haut-Ogooue',
+						value: 'GA-2',
+					},
+					{
+						name: 'Haut-Sassandra',
+						value: 'CI-02',
+					},
+					{
+						name: 'Haute-Kotto',
+						value: 'CF-HK',
+					},
+					{
+						name: 'Hauts-Bassins',
+						value: 'BF-09',
+					},
+					{
+						name: 'Havana',
+						value: 'CU-03',
+					},
+					{
+						name: 'Hawaii',
+						value: 'US-HI',
+					},
+					{
+						name: 'Hawalli Governorate',
+						value: 'KW-HA',
+					},
+					{
+						name: "Hawke's Bay",
+						value: 'NZ-HKB',
+					},
+					{
+						name: 'Heard & McDonald Islands',
+						value: 'HM',
+					},
+					{
+						name: 'Hebei',
+						value: 'CN-13',
+					},
+					{
+						name: 'Hedmark',
+						value: 'NO-04',
+					},
+					{
+						name: 'Heilongjiang',
+						value: 'CN-23',
+					},
+					{
+						name: 'Helena MT',
+						value: '766',
+					},
+					{
+						name: 'Helmand',
+						value: 'AF-HEL',
+					},
+					{
+						name: 'Henan',
+						value: 'CN-41',
+					},
+					{
+						name: 'Herat',
+						value: 'AF-HER',
+					},
+					{
+						name: 'Herceg Novi',
+						value: 'ME-08',
+					},
+					{
+						name: 'Heredia Province',
+						value: 'CR-H',
+					},
+					{
+						name: 'Hermanas Mirabal Province',
+						value: 'DO-19',
+					},
+					{
+						name: 'Herrera Province',
+						value: 'PA-6',
+					},
+					{
+						name: 'Hesse',
+						value: 'DE-HE',
+					},
+					{
+						name: 'Heves County',
+						value: 'HU-HE',
+					},
+					{
+						name: 'Hhohho',
+						value: 'SZ-HH',
+					},
+					{
+						name: 'Hidalgo',
+						value: 'MX-HID',
+					},
+					{
+						name: 'Hiiu County',
+						value: 'EE-39',
+					},
+					{
+						name: 'Himachal Pradesh',
+						value: 'IN-HP',
+					},
+					{
+						name: 'Hincesti',
+						value: 'MD-HI',
+					},
+					{
+						name: 'Hiran',
+						value: 'SO-HI',
+					},
+					{
+						name: 'Hiroshima Prefecture',
+						value: 'JP-34',
+					},
+					{
+						name: 'Ho Chi Minh',
+						value: 'VN-SG',
+					},
+					{
+						name: 'Hoa Binh',
+						value: 'VN-14',
+					},
+					{
+						name: 'Hodh Ech Chargui',
+						value: 'MR-01',
+					},
+					{
+						name: 'Hodh El Gharbi',
+						value: 'MR-02',
+					},
+					{
+						name: 'Hokkaido Prefecture',
+						value: 'JP-01',
+					},
+					{
+						name: 'Holguin',
+						value: 'CU-11',
+					},
+					{
+						name: 'Homs Governorate',
+						value: 'SY-HI',
+					},
+					{
+						name: 'Honduras',
+						value: 'HN',
+					},
+					{
+						name: 'Hong Kong',
+						value: 'HK',
+					},
+					{
+						name: 'Honolulu HI',
+						value: '744',
+					},
+					{
+						name: 'Hope Town',
+						value: 'BS-HT',
+					},
+					{
+						name: 'Hordaland',
+						value: 'NO-12',
+					},
+					{
+						name: 'Hormozgan',
+						value: 'IR-23',
+					},
+					{
+						name: 'Houaphan',
+						value: 'LA-HO',
+					},
+					{
+						name: 'Houston TX',
+						value: '618',
+					},
+					{
+						name: 'Hradec Králové Region',
+						value: 'CZ-KR',
+					},
+					{
+						name: 'Hrodna Region',
+						value: 'BY-HR',
+					},
+					{
+						name: 'Huambo Province',
+						value: 'AO-HUA',
+					},
+					{
+						name: 'Huancavelica',
+						value: 'PE-HUV',
+					},
+					{
+						name: 'Huanuco',
+						value: 'PE-HUC',
+					},
+					{
+						name: 'Hubei',
+						value: 'CN-42',
+					},
+					{
+						name: 'Huehuetenango Department',
+						value: 'GT-HU',
+					},
+					{
+						name: 'Huila',
+						value: 'CO-HUI',
+					},
+					{
+						name: 'Huila Province',
+						value: 'AO-HUI',
+					},
+					{
+						name: 'Hunan',
+						value: 'CN-43',
+					},
+					{
+						name: 'Hunedoara County',
+						value: 'RO-HD',
+					},
+					{
+						name: 'Hung Yen Province',
+						value: 'VN-66',
+					},
+					{
+						name: 'Hungary',
+						value: 'HU',
+					},
+					{
+						name: 'Huntsville-Decatur (Florence) AL',
+						value: '691',
+					},
+					{
+						name: 'Hyogo Prefecture',
+						value: 'JP-28',
+					},
+					{
+						name: 'Ialomița County',
+						value: 'RO-IL',
+					},
+					{
+						name: 'Ialoveni',
+						value: 'MD-IA',
+					},
+					{
+						name: 'Iași County',
+						value: 'RO-IS',
+					},
+					{
+						name: 'Ibaraki Prefecture',
+						value: 'JP-08',
+					},
+					{
+						name: 'Ibb',
+						value: 'YE-IB',
+					},
+					{
+						name: 'Ica',
+						value: 'PE-ICA',
+					},
+					{
+						name: 'Iceland',
+						value: 'IS',
+					},
+					{
+						name: 'Ida-Viru County',
+						value: 'EE-44',
+					},
+					{
+						name: 'Idaho',
+						value: 'US-ID',
+					},
+					{
+						name: 'Idaho Falls-Pocatello ID',
+						value: '758',
+					},
+					{
+						name: 'Idlib Governorate',
+						value: 'SY-ID',
+					},
+					{
+						name: 'Iecava Municipality',
+						value: 'LV-034',
+					},
+					{
+						name: 'Iğdır',
+						value: 'TR-76',
+					},
+					{
+						name: 'Ijuw',
+						value: 'NR-10',
+					},
+					{
+						name: 'Ikšķile Municipality',
+						value: 'LV-035',
+					},
+					{
+						name: 'Ilam',
+						value: 'IR-05',
+					},
+					{
+						name: 'Île-de-France',
+						value: 'FR-J',
+					},
+					{
+						name: 'Ilfov County',
+						value: 'RO-IF',
+					},
+					{
+						name: 'Illinois',
+						value: 'US-IL',
+					},
+					{
+						name: 'Illizi Province',
+						value: 'DZ-33',
+					},
+					{
+						name: 'Ilocos Region',
+						value: 'PH-01',
+					},
+					{
+						name: 'Ilūkste Municipality',
+						value: 'LV-036',
+					},
+					{
+						name: 'Imbabura Province',
+						value: 'EC-I',
+					},
+					{
+						name: 'Imereti',
+						value: 'GE-IM',
+					},
+					{
+						name: 'Imo',
+						value: 'NG-IM',
+					},
+					{
+						name: 'Inagua',
+						value: 'BS-IN',
+					},
+					{
+						name: 'Incheon',
+						value: 'KR-28',
+					},
+					{
+						name: 'Inchiri',
+						value: 'MR-12',
+					},
+					{
+						name: 'Inčukalna novads',
+						value: 'LV-037',
+					},
+					{
+						name: 'Independencia Province',
+						value: 'DO-10',
+					},
+					{
+						name: 'India',
+						value: 'IN',
+					},
+					{
+						name: 'Indiana',
+						value: 'US-IN',
+					},
+					{
+						name: 'Indianapolis IN',
+						value: '527',
+					},
+					{
+						name: 'Indonesia',
+						value: 'ID',
+					},
+					{
+						name: 'Ingushetia',
+						value: 'RU-IN',
+					},
+					{
+						name: 'Inhambane Province',
+						value: 'MZ-I',
+					},
+					{
+						name: 'Inner Mongolia',
+						value: 'CN-15',
+					},
+					{
+						name: 'Intibuca',
+						value: 'HN-IN',
+					},
+					{
+						name: 'Iowa',
+						value: 'US-IA',
+					},
+					{
+						name: 'Iran',
+						value: 'IR',
+					},
+					{
+						name: 'Iraq',
+						value: 'IQ',
+					},
+					{
+						name: 'Irbid Governorate',
+						value: 'JO-IR',
+					},
+					{
+						name: 'Ireland',
+						value: 'IE',
+					},
+					{
+						name: 'Iringa',
+						value: 'TZ-04',
+					},
+					{
+						name: 'Irkutsk Oblast',
+						value: 'RU-IRK',
+					},
+					{
+						name: 'Isabel Province',
+						value: 'SB-IS',
+					},
+					{
+						name: 'Isfahan',
+						value: 'IR-04',
+					},
+					{
+						name: 'Ishikawa Prefecture',
+						value: 'JP-17',
+					},
+					{
+						name: 'Isla de la Juventud',
+						value: 'CU-99',
+					},
+					{
+						name: 'Islamabad Capital Territory',
+						value: 'PK-IS',
+					},
+					{
+						name: 'Isle of Man',
+						value: 'IM',
+					},
+					{
+						name: 'Ismailia Governorate',
+						value: 'EG-IS',
+					},
+					{
+						name: 'Isparta Province',
+						value: 'TR-32',
+					},
+					{
+						name: 'Israel',
+						value: 'IL',
+					},
+					{
+						name: 'İstanbul',
+						value: 'TR-34',
+					},
+					{
+						name: 'Istria County',
+						value: 'HR-18',
+					},
+					{
+						name: 'Italy',
+						value: 'IT',
+					},
+					{
+						name: 'Itapua',
+						value: 'PY-7',
+					},
+					{
+						name: "Ivano-Frankivs'ka oblast",
+						value: 'UA-26',
+					},
+					{
+						name: 'Ivanovo Oblast',
+						value: 'RU-IVA',
+					},
+					{
+						name: 'Iwate Prefecture',
+						value: 'JP-03',
+					},
+					{
+						name: 'Izabal Department',
+						value: 'GT-IZ',
+					},
+					{
+						name: 'İzmir',
+						value: 'TR-35',
+					},
+					{
+						name: 'Jabat Island',
+						value: 'MH-JAB',
+					},
+					{
+						name: 'Jackson MS',
+						value: '718',
+					},
+					{
+						name: 'Jackson TN',
+						value: '639',
+					},
+					{
+						name: 'Jacksonville FL',
+						value: '561',
+					},
+					{
+						name: 'Jalapa Department',
+						value: 'GT-JA',
+					},
+					{
+						name: 'Jalisco',
+						value: 'MX-JAL',
+					},
+					{
+						name: 'Jaluit Atoll',
+						value: 'MH-JAL',
+					},
+					{
+						name: 'Jamaica',
+						value: 'JM',
+					},
+					{
+						name: 'Jambi',
+						value: 'ID-JA',
+					},
+					{
+						name: 'Jambol',
+						value: 'BG-28',
+					},
+					{
+						name: 'Jambyl Province',
+						value: 'KZ-ZHA',
+					},
+					{
+						name: 'Jammu and Kashmir',
+						value: 'IN-JK',
+					},
+					{
+						name: 'Jamtland County',
+						value: 'SE-Z',
+					},
+					{
+						name: 'Janub Darfur',
+						value: 'SD-DS',
+					},
+					{
+						name: 'Japan',
+						value: 'JP',
+					},
+					{
+						name: 'Järva County',
+						value: 'EE-51',
+					},
+					{
+						name: 'Jász-Nagykun-Szolnok',
+						value: 'HU-JN',
+					},
+					{
+						name: 'Jaunjelgava Municipality',
+						value: 'LV-038',
+					},
+					{
+						name: 'Jaunpiebalga Municipality',
+						value: 'LV-039',
+					},
+					{
+						name: 'Jaunpils Municipality',
+						value: 'LV-040',
+					},
+					{
+						name: 'Jazan',
+						value: 'SA-09',
+					},
+					{
+						name: 'Jeju-do',
+						value: 'KR-49',
+					},
+					{
+						name: 'Jēkabpils',
+						value: 'LV-JKB',
+					},
+					{
+						name: 'Jēkabpils Municipality',
+						value: 'LV-042',
+					},
+					{
+						name: 'Jelgava',
+						value: 'LV-JEL',
+					},
+					{
+						name: 'Jelgava Municipality',
+						value: 'LV-041',
+					},
+					{
+						name: 'Jendouba',
+						value: 'TN-32',
+					},
+					{
+						name: 'Jeollabuk-do',
+						value: 'KR-45',
+					},
+					{
+						name: 'Jeollanam-do',
+						value: 'KR-46',
+					},
+					{
+						name: 'Jerash Governorate',
+						value: 'JO-JA',
+					},
+					{
+						name: 'Jersey',
+						value: 'JE',
+					},
+					{
+						name: 'Jerusalem District',
+						value: 'IL-JM',
+					},
+					{
+						name: 'Jewish Autonomous Oblast',
+						value: 'RU-YEV',
+					},
+					{
+						name: 'Jharkhand',
+						value: 'IN-JH',
+					},
+					{
+						name: 'Jiangsu',
+						value: 'CN-32',
+					},
+					{
+						name: 'Jiangxi',
+						value: 'CN-36',
+					},
+					{
+						name: 'Jigawa',
+						value: 'NG-JI',
+					},
+					{
+						name: 'Jijel Province',
+						value: 'DZ-18',
+					},
+					{
+						name: 'Jilin',
+						value: 'CN-22',
+					},
+					{
+						name: 'Jinotega',
+						value: 'NI-JI',
+					},
+					{
+						name: 'Jiwaka Province',
+						value: 'PG-JWK',
+					},
+					{
+						name: 'Jizzakh Province',
+						value: 'UZ-JI',
+					},
+					{
+						name: 'Jõgeva County',
+						value: 'EE-49',
+					},
+					{
+						name: 'Johnstown-Altoona PA',
+						value: '574',
+					},
+					{
+						name: 'Johor',
+						value: 'MY-01',
+					},
+					{
+						name: 'Jonesboro AR',
+						value: '734',
+					},
+					{
+						name: 'Jonglei',
+						value: 'SS-JG',
+					},
+					{
+						name: 'Jonkoping County',
+						value: 'SE-F',
+					},
+					{
+						name: 'Joplin MO-Pittsburg KS',
+						value: '603',
+					},
+					{
+						name: 'Jordan',
+						value: 'JO',
+					},
+					{
+						name: 'Jowzjan',
+						value: 'AF-JOW',
+					},
+					{
+						name: 'Jubbada Dhexe',
+						value: 'SO-JD',
+					},
+					{
+						name: 'Jubbada Hoose',
+						value: 'SO-JH',
+					},
+					{
+						name: 'Jujuy',
+						value: 'AR-Y',
+					},
+					{
+						name: 'Juneau AK',
+						value: '747',
+					},
+					{
+						name: 'Junin',
+						value: 'PE-JUN',
+					},
+					{
+						name: 'Jūrmala',
+						value: 'LV-JUR',
+					},
+					{
+						name: 'Jutiapa Department',
+						value: 'GT-JU',
+					},
+					{
+						name: 'Kabardino-Balkaria',
+						value: 'RU-KB',
+					},
+					{
+						name: 'Kabul',
+						value: 'AF-KAB',
+					},
+					{
+						name: 'Kachin',
+						value: 'MM-11',
+					},
+					{
+						name: 'Kaduna',
+						value: 'NG-KD',
+					},
+					{
+						name: 'Kaffrine Region',
+						value: 'SN-KA',
+					},
+					{
+						name: 'Kafr El Sheikh Governorate',
+						value: 'EG-KFS',
+					},
+					{
+						name: 'Kagawa Prefecture',
+						value: 'JP-37',
+					},
+					{
+						name: 'Kagera',
+						value: 'TZ-05',
+					},
+					{
+						name: 'Kagoshima Prefecture',
+						value: 'JP-46',
+					},
+					{
+						name: 'Kahramanmaraş Province',
+						value: 'TR-46',
+					},
+					{
+						name: 'Kainuu',
+						value: 'FI-05',
+					},
+					{
+						name: 'Kairouan',
+						value: 'TN-41',
+					},
+					{
+						name: 'Kakheti',
+						value: 'GE-KA',
+					},
+					{
+						name: 'Kalasin',
+						value: 'TH-46',
+					},
+					{
+						name: 'Kaliningrad Oblast',
+						value: 'RU-KGD',
+					},
+					{
+						name: 'Kalmar County',
+						value: 'SE-H',
+					},
+					{
+						name: 'Kalmykia',
+						value: 'RU-KL',
+					},
+					{
+						name: 'Kaluga Oblast',
+						value: 'RU-KLU',
+					},
+					{
+						name: 'Kamchatka Krai',
+						value: 'RU-KAM',
+					},
+					{
+						name: 'Kamphaeng Phet',
+						value: 'TH-62',
 					},
 					{
 						name: 'Kampong Cham',
@@ -1796,856 +5891,120 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'KH-7',
 					},
 					{
+						name: 'Kanagawa Prefecture',
+						value: 'JP-14',
+					},
+					{
+						name: 'Kanchanaburi',
+						value: 'TH-71',
+					},
+					{
+						name: 'Kandahar',
+						value: 'AF-KAN',
+					},
+					{
 						name: 'Kandal',
 						value: 'KH-8',
 					},
 					{
-						name: 'Kep',
-						value: 'KH-23',
-					},
-					{
-						name: 'Koh Kong',
-						value: 'KH-9',
-					},
-					{
-						name: 'Kratie',
-						value: 'KH-10',
-					},
-					{
-						name: 'Mondulkiri',
-						value: 'KH-11',
-					},
-					{
-						name: 'Oddar Meancheay',
-						value: 'KH-22',
-					},
-					{
-						name: 'Pailin',
-						value: 'KH-24',
-					},
-					{
-						name: 'Phnom Penh',
-						value: 'KH-12',
-					},
-					{
-						name: 'Preah Sihanouk',
-						value: 'KH-18',
-					},
-					{
-						name: 'Preah Vihear',
-						value: 'KH-13',
-					},
-					{
-						name: 'Prey Veng',
-						value: 'KH-14',
-					},
-					{
-						name: 'Pursat',
-						value: 'KH-15',
-					},
-					{
-						name: 'Ratanakiri',
-						value: 'KH-16',
-					},
-					{
-						name: 'Siem Reap',
-						value: 'KH-17',
-					},
-					{
-						name: 'Stung Treng',
-						value: 'KH-19',
-					},
-					{
-						name: 'Svay Rieng',
-						value: 'KH-20',
-					},
-					{
-						name: 'Takeo',
-						value: 'KH-21',
-					},
-					{
-						name: 'Tbong Khmum',
-						value: 'KH-25',
-					},
-					{
-						name: 'Cameroon',
-						value: 'CM',
-					},
-					{
-						name: 'Adamawa Region',
-						value: 'CM-AD',
-					},
-					{
-						name: 'East',
-						value: 'CM-ES',
-					},
-					{
-						name: 'Extreme North',
-						value: 'CM-EN',
-					},
-					{
-						name: 'North',
-						value: 'CM-NO',
-					},
-					{
-						name: 'Northwest',
-						value: 'CM-NW',
-					},
-					{
-						name: 'South',
-						value: 'CM-SU',
-					},
-					{
-						name: 'Southwest',
-						value: 'CM-SW',
-					},
-					{
-						name: 'West',
-						value: 'CM-OU',
-					},
-					{
-						name: 'Canada',
-						value: 'CA',
-					},
-					{
-						name: 'Alberta',
-						value: 'CA-AB',
-					},
-					{
-						name: 'British Columbia',
-						value: 'CA-BC',
-					},
-					{
-						name: 'Manitoba',
-						value: 'CA-MB',
-					},
-					{
-						name: 'New Brunswick',
-						value: 'CA-NB',
-					},
-					{
-						name: 'Newfoundland and Labrador',
-						value: 'CA-NL',
-					},
-					{
-						name: 'Northwest Territories',
-						value: 'CA-NT',
-					},
-					{
-						name: 'Nova Scotia',
-						value: 'CA-NS',
-					},
-					{
-						name: 'Nunavut',
-						value: 'CA-NU',
-					},
-					{
-						name: 'Ontario',
-						value: 'CA-ON',
-					},
-					{
-						name: 'Prince Edward Island',
-						value: 'CA-PE',
-					},
-					{
-						name: 'Québec',
-						value: 'CA-QC',
-					},
-					{
-						name: 'Saskatchewan',
-						value: 'CA-SK',
-					},
-					{
-						name: 'Yukon Territory',
-						value: 'CA-YT',
-					},
-					{
-						name: 'Cape Verde',
-						value: 'CV',
-					},
-					{
-						name: 'Boa Vista',
-						value: 'CV-BV',
-					},
-					{
-						name: 'Brava',
-						value: 'CV-BR',
-					},
-					{
-						name: 'Maio',
-						value: 'CV-MA',
-					},
-					{
-						name: 'Mosteiros',
-						value: 'CV-MO',
-					},
-					{
-						name: 'Paul',
-						value: 'CV-PA',
-					},
-					{
-						name: 'Porto Novo',
-						value: 'CV-PN',
-					},
-					{
-						name: 'Praia',
-						value: 'CV-PR',
-					},
-					{
-						name: 'Ribeira Brava',
-						value: 'CV-RB',
-					},
-					{
-						name: 'Ribeira Grande',
-						value: 'CV-RG',
-					},
-					{
-						name: 'Ribeira Grande de Santiago',
-						value: 'CV-RS',
-					},
-					{
-						name: 'Sal',
-						value: 'CV-SL',
-					},
-					{
-						name: 'Santa Catarina',
-						value: 'CV-CA',
-					},
-					{
-						name: 'Santa Catarina do Fogo',
-						value: 'CV-CF',
-					},
-					{
-						name: 'Sao Domingos',
-						value: 'CV-SD',
-					},
-					{
-						name: 'Sao Filipe',
-						value: 'CV-SF',
-					},
-					{
-						name: 'Sao Lourenco dos Orgaos',
-						value: 'CV-SO',
-					},
-					{
-						name: 'Sao Miguel',
-						value: 'CV-SM',
-					},
-					{
-						name: 'Sao Salvador do Mundo',
-						value: 'CV-SS',
-					},
-					{
-						name: 'Sao Vicente',
-						value: 'CV-SV',
-					},
-					{
-						name: 'Tarrafal',
-						value: 'CV-TA',
-					},
-					{
-						name: 'Tarrafal de Sao Nicolau',
-						value: 'CV-TS',
-					},
-					{
-						name: 'Caribbean Netherlands',
-						value: 'BQ',
-					},
-					{
-						name: 'Bonaire',
-						value: 'BQ-BO',
-					},
-					{
-						name: 'Saba',
-						value: 'BQ-SA',
-					},
-					{
-						name: 'Sint Eustatius',
-						value: 'BQ-SE',
-					},
-					{
-						name: 'Cayman Islands',
-						value: 'KY',
-					},
-					{
-						name: 'Central African Republic',
-						value: 'CF',
-					},
-					{
-						name: 'Bamingui-Bangoran',
-						value: 'CF-BB',
-					},
-					{
-						name: 'Bangui',
-						value: 'CF-BGF',
-					},
-					{
-						name: 'Basse-Kotto',
-						value: 'CF-BK',
-					},
-					{
-						name: 'Haut-Mbomou',
-						value: 'CF-HM',
-					},
-					{
-						name: 'Haute-Kotto',
-						value: 'CF-HK',
-					},
-					{
-						name: 'Kemo',
-						value: 'CF-KG',
-					},
-					{
-						name: 'Lobaye',
-						value: 'CF-LB',
-					},
-					{
-						name: 'Mambere-Kadei',
-						value: 'CF-HS',
-					},
-					{
-						name: 'Mbomou',
-						value: 'CF-MB',
-					},
-					{
-						name: 'Nana-Grebizi',
-						value: 'CF-KB',
-					},
-					{
-						name: 'Nana-Mambéré',
-						value: 'CF-NM',
-					},
-					{
-						name: "Ombella-M'Poko",
-						value: 'CF-MP',
-					},
-					{
-						name: 'Ouaka',
-						value: 'CF-UK',
-					},
-					{
-						name: 'Ouham',
-						value: 'CF-AC',
-					},
-					{
-						name: 'Ouham-Pendé',
-						value: 'CF-OP',
-					},
-					{
-						name: 'Sangha-Mbare',
-						value: 'CF-SE',
-					},
-					{
-						name: 'Vakaga',
-						value: 'CF-VK',
-					},
-					{
-						name: 'Chad',
-						value: 'TD',
-					},
-					{
-						name: 'Bahr El Gazel',
-						value: 'TD-BG',
-					},
-					{
-						name: 'Batha',
-						value: 'TD-BA',
-					},
-					{
-						name: 'Borkou',
-						value: 'TD-BO',
-					},
-					{
-						name: 'Chari-Baguirmi',
-						value: 'TD-CB',
-					},
-					{
-						name: 'Ennedi',
-						value: 'TD-EN',
-					},
-					{
-						name: 'Guera',
-						value: 'TD-GR',
-					},
-					{
-						name: 'Hadjer-Lamis',
-						value: 'TD-HL',
+						name: 'Kandava Municipality',
+						value: 'LV-043',
 					},
 					{
 						name: 'Kanem',
 						value: 'TD-KA',
 					},
 					{
-						name: 'Lac',
-						value: 'TD-LC',
+						name: 'Kangwon',
+						value: 'KP-07',
 					},
 					{
-						name: 'Logone Occidental',
-						value: 'TD-LO',
+						name: 'Kankan',
+						value: 'GN-K',
 					},
 					{
-						name: 'Logone Oriental',
-						value: 'TD-LR',
+						name: 'Kano',
+						value: 'NG-KN',
 					},
 					{
-						name: 'Mandoul',
-						value: 'TD-MA',
+						name: 'Kansas',
+						value: 'US-KS',
 					},
 					{
-						name: 'Mayo-Kebbi Est',
-						value: 'TD-ME',
+						name: 'Kansas City MO',
+						value: '616',
 					},
 					{
-						name: 'Mayo-Kebbi Ouest',
-						value: 'TD-MO',
+						name: 'Kaohsiung City',
+						value: 'TW-KHH',
 					},
 					{
-						name: 'Moyen-Chari',
-						value: 'TD-MC',
+						name: 'Kaolack Region',
+						value: 'SN-KL',
 					},
 					{
-						name: "N'Djamena",
-						value: 'TD-ND',
+						name: 'Kapisa',
+						value: 'AF-KAP',
 					},
 					{
-						name: 'Ouaddai',
-						value: 'TD-OD',
+						name: 'Kara',
+						value: 'TG-K',
 					},
 					{
-						name: 'Sila',
-						value: 'TD-SI',
+						name: 'Karabük',
+						value: 'TR-78',
 					},
 					{
-						name: 'Tandjile',
-						value: 'TD-TA',
+						name: 'Karachay-Cherkessia',
+						value: 'RU-KC',
 					},
 					{
-						name: 'Tibesti',
-						value: 'TD-TI',
+						name: 'Karagandy Region',
+						value: 'KZ-KAR',
 					},
 					{
-						name: 'Wadi Fira',
-						value: 'TD-WF',
+						name: 'Karak Governorate',
+						value: 'JO-KA',
 					},
 					{
-						name: 'سلمات',
-						value: 'TD-SA',
+						name: 'Karaman',
+						value: 'TR-70',
 					},
 					{
-						name: 'Chile',
-						value: 'CL',
+						name: 'Karas Region',
+						value: 'NA-KA',
 					},
 					{
-						name: 'Antofagasta Region',
-						value: 'CL-AN',
+						name: 'Karbala',
+						value: 'IQ-KA',
 					},
 					{
-						name: 'Araucania',
-						value: 'CL-AR',
+						name: 'Kardzhali Province',
+						value: 'BG-09',
 					},
 					{
-						name: 'Arica y Parinacota Region',
-						value: 'CL-AP',
+						name: 'Karlovac County',
+						value: 'HR-04',
 					},
 					{
-						name: 'Atacama Region',
-						value: 'CL-AT',
+						name: 'Karlovy Vary Region',
+						value: 'CZ-KA',
 					},
 					{
-						name: 'Bío Bío Region',
-						value: 'CL-BI',
+						name: 'Karnataka',
+						value: 'IN-KA',
 					},
 					{
-						name: 'Coquimbo Region',
-						value: 'CL-CO',
+						name: 'Kars',
+						value: 'TR-36',
 					},
 					{
-						name: 'Los Lagos Region',
-						value: 'CL-LL',
+						name: 'Kārsava Municipality',
+						value: 'LV-044',
 					},
 					{
-						name: 'Los Ríos Region',
-						value: 'CL-LR',
-					},
-					{
-						name: 'Magallanes y la Antártica Chilena Region',
-						value: 'CL-MA',
-					},
-					{
-						name: 'Maule Region',
-						value: 'CL-ML',
-					},
-					{
-						name: "O'Higgins Region",
-						value: 'CL-LI',
-					},
-					{
-						name: 'Santiago Metropolitan Region',
-						value: 'CL-RM',
-					},
-					{
-						name: 'Tarapacá Region',
-						value: 'CL-TA',
-					},
-					{
-						name: 'Valparaiso Region',
-						value: 'CL-VS',
-					},
-					{
-						name: 'XI Región',
-						value: 'CL-AI',
-					},
-					{
-						name: 'China',
-						value: 'CN',
-					},
-					{
-						name: 'Anhui',
-						value: 'CN-34',
-					},
-					{
-						name: 'Beijing',
-						value: 'CN-11',
-					},
-					{
-						name: 'Chongqing',
-						value: 'CN-50',
-					},
-					{
-						name: 'Fujian',
-						value: 'CN-35',
-					},
-					{
-						name: 'Gansu',
-						value: 'CN-62',
-					},
-					{
-						name: 'Guangdong',
-						value: 'CN-44',
-					},
-					{
-						name: 'Guangxi',
-						value: 'CN-45',
-					},
-					{
-						name: 'Guizhou',
-						value: 'CN-52',
-					},
-					{
-						name: 'Hainan',
-						value: 'CN-46',
-					},
-					{
-						name: 'Hebei',
-						value: 'CN-13',
-					},
-					{
-						name: 'Heilongjiang',
-						value: 'CN-23',
-					},
-					{
-						name: 'Henan',
-						value: 'CN-41',
-					},
-					{
-						name: 'Hubei',
-						value: 'CN-42',
-					},
-					{
-						name: 'Hunan',
-						value: 'CN-43',
-					},
-					{
-						name: 'Inner Mongolia',
-						value: 'CN-15',
-					},
-					{
-						name: 'Jiangsu',
-						value: 'CN-32',
-					},
-					{
-						name: 'Jiangxi',
-						value: 'CN-36',
-					},
-					{
-						name: 'Jilin',
-						value: 'CN-22',
-					},
-					{
-						name: 'Liaoning',
-						value: 'CN-21',
-					},
-					{
-						name: 'Ningxia',
-						value: 'CN-64',
-					},
-					{
-						name: 'Qinghai',
-						value: 'CN-63',
-					},
-					{
-						name: 'Shaanxi',
-						value: 'CN-61',
-					},
-					{
-						name: 'Shandong',
-						value: 'CN-37',
-					},
-					{
-						name: 'Shanghai',
-						value: 'CN-31',
-					},
-					{
-						name: 'Shanxi',
-						value: 'CN-14',
-					},
-					{
-						name: 'Sichuan',
-						value: 'CN-51',
-					},
-					{
-						name: 'Tianjin',
-						value: 'CN-12',
-					},
-					{
-						name: 'Tibet',
-						value: 'CN-54',
-					},
-					{
-						name: 'Xinjiang',
-						value: 'CN-65',
-					},
-					{
-						name: 'Yunnan',
-						value: 'CN-53',
-					},
-					{
-						name: 'Zhejiang',
-						value: 'CN-33',
-					},
-					{
-						name: 'Christmas Island',
-						value: 'CX',
-					},
-					{
-						name: 'Cocos (Keeling) Islands',
-						value: 'CC',
-					},
-					{
-						name: 'Colombia',
-						value: 'CO',
-					},
-					{
-						name: 'Amazonas Department',
-						value: 'CO-AMA',
-					},
-					{
-						name: 'Antioquia',
-						value: 'CO-ANT',
-					},
-					{
-						name: 'Arauca',
-						value: 'CO-ARA',
-					},
-					{
-						name: 'Atlantico',
-						value: 'CO-ATL',
-					},
-					{
-						name: 'Bogota',
-						value: 'CO-DC',
-					},
-					{
-						name: 'Bolivar',
-						value: 'CO-BOL',
-					},
-					{
-						name: 'Boyaca',
-						value: 'CO-BOY',
-					},
-					{
-						name: 'Caldas',
-						value: 'CO-CAL',
-					},
-					{
-						name: 'Caquetá',
-						value: 'CO-CAQ',
-					},
-					{
-						name: 'Casanare',
-						value: 'CO-CAS',
-					},
-					{
-						name: 'Cauca Department',
-						value: 'CO-CAU',
-					},
-					{
-						name: 'Cesar',
-						value: 'CO-CES',
-					},
-					{
-						name: 'Choco',
-						value: 'CO-CHO',
-					},
-					{
-						name: 'Cundinamarca',
-						value: 'CO-CUN',
-					},
-					{
-						name: 'Guainia',
-						value: 'CO-GUA',
-					},
-					{
-						name: 'Guaviare',
-						value: 'CO-GUV',
-					},
-					{
-						name: 'Huila',
-						value: 'CO-HUI',
-					},
-					{
-						name: 'La Guajira',
-						value: 'CO-LAG',
-					},
-					{
-						name: 'Magdalena',
-						value: 'CO-MAG',
-					},
-					{
-						name: 'Meta',
-						value: 'CO-MET',
-					},
-					{
-						name: 'Narino',
-						value: 'CO-NAR',
-					},
-					{
-						name: 'North Santander',
-						value: 'CO-NSA',
-					},
-					{
-						name: 'Putumayo',
-						value: 'CO-PUT',
-					},
-					{
-						name: 'Quindio',
-						value: 'CO-QUI',
-					},
-					{
-						name: 'Risaralda',
-						value: 'CO-RIS',
-					},
-					{
-						name: 'San Andrés and Providencia',
-						value: 'CO-SAP',
-					},
-					{
-						name: 'Santander Department',
-						value: 'CO-SAN',
-					},
-					{
-						name: 'Sucre',
-						value: 'CO-SUC',
-					},
-					{
-						name: 'Tolima',
-						value: 'CO-TOL',
-					},
-					{
-						name: 'Valle del Cauca',
-						value: 'CO-VAC',
-					},
-					{
-						name: 'Vaupes',
-						value: 'CO-VAU',
-					},
-					{
-						name: 'Vichada',
-						value: 'CO-VID',
-					},
-					{
-						name: 'Comoros',
-						value: 'KM',
-					},
-					{
-						name: 'Mwali',
-						value: 'KM-M',
-					},
-					{
-						name: 'Ngazidja',
-						value: 'KM-G',
-					},
-					{
-						name: 'Nzwani',
-						value: 'KM-A',
-					},
-					{
-						name: 'Congo - Brazzaville',
-						value: 'CG',
-					},
-					{
-						name: 'Bouenza',
-						value: 'CG-11',
-					},
-					{
-						name: 'Brazzaville',
-						value: 'CG-BZV',
-					},
-					{
-						name: 'Cuvette',
-						value: 'CG-8',
-					},
-					{
-						name: 'Cuvette-Ouest',
-						value: 'CG-15',
-					},
-					{
-						name: 'Kouilou',
-						value: 'CG-5',
-					},
-					{
-						name: 'Lekoumou',
-						value: 'CG-2',
-					},
-					{
-						name: 'Likouala',
-						value: 'CG-7',
-					},
-					{
-						name: 'Niari',
-						value: 'CG-9',
-					},
-					{
-						name: 'Plateaux',
-						value: 'CG-14',
-					},
-					{
-						name: 'Pointe Noire',
-						value: 'CG-16',
-					},
-					{
-						name: 'Pool',
-						value: 'CG-12',
-					},
-					{
-						name: 'Sangha',
-						value: 'CG-13',
-					},
-					{
-						name: 'Congo - Kinshasa',
-						value: 'CD',
-					},
-					{
-						name: 'Bandundu',
-						value: 'CD-BN',
-					},
-					{
-						name: 'Bas Congo',
-						value: 'CD-BC',
-					},
-					{
-						name: 'Equator',
-						value: 'CD-EQ',
+						name: 'Karuzi',
+						value: 'BI-KR',
 					},
 					{
 						name: 'Kasai Occidental',
@@ -2656,3389 +6015,84 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'CD-KE',
 					},
 					{
+						name: 'Kashkadarya Province',
+						value: 'UZ-QA',
+					},
+					{
+						name: 'Kassala',
+						value: 'SD-KA',
+					},
+					{
+						name: 'Kasserine',
+						value: 'TN-42',
+					},
+					{
+						name: 'Kastamonu',
+						value: 'TR-37',
+					},
+					{
 						name: 'Katanga',
 						value: 'CD-KA',
 					},
 					{
-						name: 'Kinshasa',
-						value: 'CD-KN',
+						name: 'Katsina',
+						value: 'NG-KT',
 					},
 					{
-						name: 'Maniema',
-						value: 'CD-MA',
+						name: 'Kaunas County',
+						value: 'LT-KU',
 					},
 					{
-						name: 'North-Kivu',
-						value: 'CD-NK',
+						name: 'Kavango Region',
+						value: 'NA-OK',
 					},
 					{
-						name: 'Orientale',
-						value: 'CD-OR',
+						name: 'Kayah',
+						value: 'MM-12',
 					},
 					{
-						name: 'South-Kivu',
-						value: 'CD-SK',
+						name: 'Kayangel',
+						value: 'PW-100',
 					},
 					{
-						name: 'Cook Islands',
-						value: 'CK',
+						name: 'Kayanza',
+						value: 'BI-KY',
 					},
 					{
-						name: 'Costa Rica',
-						value: 'CR',
+						name: 'Kayes',
+						value: 'ML-1',
 					},
 					{
-						name: 'Alajuela',
-						value: 'CR-A',
+						name: 'Kayin State',
+						value: 'MM-13',
 					},
 					{
-						name: 'Guanacaste Province',
-						value: 'CR-G',
-					},
-					{
-						name: 'Heredia Province',
-						value: 'CR-H',
-					},
-					{
-						name: 'Limón Province',
-						value: 'CR-L',
-					},
-					{
-						name: 'Provincia de Cartago',
-						value: 'CR-C',
-					},
-					{
-						name: 'Puntarenas Province',
-						value: 'CR-P',
-					},
-					{
-						name: 'San José Province',
-						value: 'CR-SJ',
-					},
-					{
-						name: 'Côte d’Ivoire',
-						value: 'CI',
-					},
-					{
-						name: 'Agnebi',
-						value: 'CI-16',
-					},
-					{
-						name: 'Bafing',
-						value: 'CI-17',
-					},
-					{
-						name: 'Bas-Sassandra',
-						value: 'CI-09',
-					},
-					{
-						name: 'Denguele',
-						value: 'CI-10',
-					},
-					{
-						name: 'Dix-Huit Montagnes',
-						value: 'CI-06',
-					},
-					{
-						name: 'Fromager',
-						value: 'CI-18',
-					},
-					{
-						name: 'Haut-Sassandra',
-						value: 'CI-02',
-					},
-					{
-						name: 'Lacs',
-						value: 'CI-07',
-					},
-					{
-						name: 'Lagunes',
-						value: 'CI-01',
-					},
-					{
-						name: 'Marahoue',
-						value: 'CI-12',
-					},
-					{
-						name: 'Moyen-Cavally',
-						value: 'CI-19',
-					},
-					{
-						name: 'Moyen-Comoe',
-						value: 'CI-05',
-					},
-					{
-						name: 'Nzi-Comoe',
-						value: 'CI-11',
-					},
-					{
-						name: 'Savanes',
-						value: 'CI-03',
-					},
-					{
-						name: 'Sud-Bandama',
-						value: 'CI-15',
-					},
-					{
-						name: 'Sud-Comoe',
-						value: 'CI-13',
-					},
-					{
-						name: 'Vallee du Bandama',
-						value: 'CI-04',
-					},
-					{
-						name: 'Worodougou',
-						value: 'CI-14',
-					},
-					{
-						name: 'Zanzan',
-						value: 'CI-08',
-					},
-					{
-						name: 'Croatia',
-						value: 'HR',
-					},
-					{
-						name: 'Bjelovar-Bilogora County',
-						value: 'HR-07',
-					},
-					{
-						name: 'Brod-Posavina County',
-						value: 'HR-12',
-					},
-					{
-						name: 'City of Zagreb',
-						value: 'HR-21',
-					},
-					{
-						name: 'Dubrovnik-Neretva County',
-						value: 'HR-19',
-					},
-					{
-						name: 'Istria County',
-						value: 'HR-18',
-					},
-					{
-						name: 'Karlovac County',
-						value: 'HR-04',
-					},
-					{
-						name: 'Koprivnica-Križevci County',
-						value: 'HR-06',
-					},
-					{
-						name: 'Krapina-Zagorje County',
-						value: 'HR-02',
-					},
-					{
-						name: 'Lika-Senj County',
-						value: 'HR-09',
-					},
-					{
-						name: 'Međimurje County',
-						value: 'HR-20',
-					},
-					{
-						name: 'Osijek-Baranja County',
-						value: 'HR-14',
-					},
-					{
-						name: 'Požega-Slavonia County',
-						value: 'HR-11',
-					},
-					{
-						name: 'Primorje-Gorski Kotar County',
-						value: 'HR-08',
-					},
-					{
-						name: 'Šibenik-Knin County',
-						value: 'HR-15',
-					},
-					{
-						name: 'Sisak-Moslavina County',
-						value: 'HR-03',
-					},
-					{
-						name: 'Split-Dalmatia County',
-						value: 'HR-17',
-					},
-					{
-						name: 'Varaždin County',
-						value: 'HR-05',
-					},
-					{
-						name: 'Virovitica-Podravina County',
-						value: 'HR-10',
-					},
-					{
-						name: 'Vukovar-Srijem County',
-						value: 'HR-16',
-					},
-					{
-						name: 'Zadar County',
-						value: 'HR-13',
-					},
-					{
-						name: 'Zagreb County',
-						value: 'HR-01',
-					},
-					{
-						name: 'Cuba',
-						value: 'CU',
-					},
-					{
-						name: 'Artemisa Province',
-						value: 'CU-15',
-					},
-					{
-						name: 'Camaguey',
-						value: 'CU-09',
-					},
-					{
-						name: 'Ciego de Avila',
-						value: 'CU-08',
-					},
-					{
-						name: 'Cienfuegos',
-						value: 'CU-06',
-					},
-					{
-						name: 'Granma',
-						value: 'CU-12',
-					},
-					{
-						name: 'Guantanamo',
-						value: 'CU-14',
-					},
-					{
-						name: 'Havana',
-						value: 'CU-03',
-					},
-					{
-						name: 'Holguin',
-						value: 'CU-11',
-					},
-					{
-						name: 'Isla de la Juventud',
-						value: 'CU-99',
-					},
-					{
-						name: 'Las Tunas',
-						value: 'CU-10',
-					},
-					{
-						name: 'Matanzas',
-						value: 'CU-04',
-					},
-					{
-						name: 'Mayabeque',
-						value: 'CU-16',
-					},
-					{
-						name: 'Pinar del Rio',
-						value: 'CU-01',
-					},
-					{
-						name: 'Sancti Spiritus',
-						value: 'CU-07',
-					},
-					{
-						name: 'Santiago de Cuba',
-						value: 'CU-13',
-					},
-					{
-						name: 'Villa Clara',
-						value: 'CU-05',
-					},
-					{
-						name: 'Curaçao',
-						value: 'CW',
-					},
-					{
-						name: 'Cyprus',
-						value: 'CY',
-					},
-					{
-						name: 'Famagusta',
-						value: 'CY-04',
-					},
-					{
-						name: 'Girne',
-						value: 'CY-06',
-					},
-					{
-						name: 'Larnaca',
-						value: 'CY-03',
-					},
-					{
-						name: 'Limassol',
-						value: 'CY-02',
-					},
-					{
-						name: 'Nicosia District',
-						value: 'CY-01',
-					},
-					{
-						name: 'Paphos',
-						value: 'CY-05',
-					},
-					{
-						name: 'Czechia',
-						value: 'CZ',
-					},
-					{
-						name: 'Central Bohemian Region',
-						value: 'CZ-ST',
-					},
-					{
-						name: 'Hradec Králové Region',
-						value: 'CZ-KR',
-					},
-					{
-						name: 'Karlovy Vary Region',
-						value: 'CZ-KA',
-					},
-					{
-						name: 'Liberec Region',
-						value: 'CZ-LI',
-					},
-					{
-						name: 'Moravian-Silesian Region',
-						value: 'CZ-MO',
-					},
-					{
-						name: 'Olomouc Region',
-						value: 'CZ-OL',
-					},
-					{
-						name: 'Pardubice Region',
-						value: 'CZ-PA',
-					},
-					{
-						name: 'Plzeň Region',
-						value: 'CZ-PL',
-					},
-					{
-						name: 'Prague',
-						value: 'CZ-PR',
-					},
-					{
-						name: 'South Bohemian Region',
-						value: 'CZ-JC',
-					},
-					{
-						name: 'South Moravian Region',
-						value: 'CZ-JM',
-					},
-					{
-						name: 'Ústí nad Labem Region',
-						value: 'CZ-US',
-					},
-					{
-						name: 'Vysocina Region',
-						value: 'CZ-VY',
-					},
-					{
-						name: 'Zlin Region',
-						value: 'CZ-ZL',
-					},
-					{
-						name: 'Denmark',
-						value: 'DK',
-					},
-					{
-						name: 'Capital Region of Denmark',
-						value: 'DK-84',
-					},
-					{
-						name: 'Central Denmark Region',
-						value: 'DK-82',
-					},
-					{
-						name: 'North Denmark Region',
-						value: 'DK-81',
-					},
-					{
-						name: 'Region Syddanmark',
-						value: 'DK-83',
-					},
-					{
-						name: 'Region Zealand',
-						value: 'DK-85',
-					},
-					{
-						name: 'Djibouti',
-						value: 'DJ',
-					},
-					{
-						name: 'Ali Sabieh',
-						value: 'DJ-AS',
-					},
-					{
-						name: 'Arta',
-						value: 'DJ-AR',
-					},
-					{
-						name: 'Dikhil',
-						value: 'DJ-DI',
-					},
-					{
-						name: 'Obock',
-						value: 'DJ-OB',
-					},
-					{
-						name: 'Tadjourah',
-						value: 'DJ-TA',
-					},
-					{
-						name: 'Dominica',
-						value: 'DM',
-					},
-					{
-						name: 'Saint Andrew Parish',
-						value: 'DM-02',
-					},
-					{
-						name: 'Saint David Parish',
-						value: 'DM-03',
-					},
-					{
-						name: 'Saint George Parish',
-						value: 'DM-04',
-					},
-					{
-						name: 'Saint John Parish',
-						value: 'DM-05',
-					},
-					{
-						name: 'Saint Joseph Parish',
-						value: 'DM-06',
-					},
-					{
-						name: 'Saint Luke Parish',
-						value: 'DM-07',
-					},
-					{
-						name: 'Saint Mark Parish',
-						value: 'DM-08',
-					},
-					{
-						name: 'Saint Patrick Parish',
-						value: 'DM-09',
-					},
-					{
-						name: 'Saint Paul Parish',
-						value: 'DM-10',
-					},
-					{
-						name: 'Saint Peter Parish',
-						value: 'DM-11',
-					},
-					{
-						name: 'Dominican Republic',
-						value: 'DO',
-					},
-					{
-						name: 'Azua Province',
-						value: 'DO-02',
-					},
-					{
-						name: 'Baoruco Province',
-						value: 'DO-03',
-					},
-					{
-						name: 'Barahona Province',
-						value: 'DO-04',
-					},
-					{
-						name: 'Dajabón Province',
-						value: 'DO-05',
-					},
-					{
-						name: 'Distrito Nacional',
-						value: 'DO-01',
-					},
-					{
-						name: 'Duarte Province',
-						value: 'DO-06',
-					},
-					{
-						name: 'El Seibo Province',
-						value: 'DO-08',
-					},
-					{
-						name: 'Elías Piña Province',
-						value: 'DO-07',
-					},
-					{
-						name: 'Espaillat Province',
-						value: 'DO-09',
-					},
-					{
-						name: 'Hato Mayor Province',
-						value: 'DO-30',
-					},
-					{
-						name: 'Hermanas Mirabal Province',
-						value: 'DO-19',
-					},
-					{
-						name: 'Independencia Province',
-						value: 'DO-10',
-					},
-					{
-						name: 'La Altagracia Province',
-						value: 'DO-11',
-					},
-					{
-						name: 'La Romana Province',
-						value: 'DO-12',
-					},
-					{
-						name: 'La Vega Province',
-						value: 'DO-13',
-					},
-					{
-						name: 'María Trinidad Sánchez Province',
-						value: 'DO-14',
-					},
-					{
-						name: 'Monseñor Nouel Province',
-						value: 'DO-28',
-					},
-					{
-						name: 'Monte Cristi Province',
-						value: 'DO-15',
-					},
-					{
-						name: 'Monte Plata Province',
-						value: 'DO-29',
-					},
-					{
-						name: 'Pedernales Province',
-						value: 'DO-16',
-					},
-					{
-						name: 'Peravia Province',
-						value: 'DO-17',
-					},
-					{
-						name: 'Puerto Plata Province',
-						value: 'DO-18',
-					},
-					{
-						name: 'Samaná Province',
-						value: 'DO-20',
-					},
-					{
-						name: 'San Cristóbal Province',
-						value: 'DO-21',
-					},
-					{
-						name: 'San José de Ocoa Province',
-						value: 'DO-31',
-					},
-					// eslint-disable-next-line n8n-nodes-base/node-param-option-name-duplicate
-					{
-						name: 'San Juan Province',
-						value: 'DO-22',
-					},
-					{
-						name: 'San Pedro de Macorís Province',
-						value: 'DO-23',
-					},
-					{
-						name: 'Sánchez Ramírez Province',
-						value: 'DO-24',
-					},
-					{
-						name: 'Santiago Province',
-						value: 'DO-25',
-					},
-					{
-						name: 'Santiago Rodríguez Province',
-						value: 'DO-26',
-					},
-					{
-						name: 'Santo Domingo Province',
-						value: 'DO-32',
-					},
-					{
-						name: 'Valverde Province',
-						value: 'DO-27',
-					},
-					{
-						name: 'Ecuador',
-						value: 'EC',
-					},
-					{
-						name: 'Azuay',
-						value: 'EC-A',
-					},
-					{
-						name: 'Bolívar Province',
-						value: 'EC-B',
-					},
-					{
-						name: 'Cañar Province',
-						value: 'EC-F',
-					},
-					{
-						name: 'Carchi Province',
-						value: 'EC-C',
-					},
-					{
-						name: 'Chimborazo Province',
-						value: 'EC-H',
-					},
-					{
-						name: 'Cotopaxi Province',
-						value: 'EC-X',
-					},
-					{
-						name: 'El Oro',
-						value: 'EC-O',
-					},
-					{
-						name: 'Esmeraldas Province',
-						value: 'EC-E',
-					},
-					{
-						name: 'Galápagos Islands',
-						value: 'EC-W',
-					},
-					{
-						name: 'Guayas',
-						value: 'EC-G',
-					},
-					{
-						name: 'Imbabura Province',
-						value: 'EC-I',
-					},
-					{
-						name: 'Loja',
-						value: 'EC-L',
-					},
-					{
-						name: 'Los Ríos Province',
-						value: 'EC-R',
-					},
-					{
-						name: 'Manabí Province',
-						value: 'EC-M',
-					},
-					{
-						name: 'Morona-Santiago Province',
-						value: 'EC-S',
-					},
-					{
-						name: 'Orellana Province',
-						value: 'EC-D',
-					},
-					{
-						name: 'Pastaza Province',
-						value: 'EC-Y',
-					},
-					{
-						name: 'Pichincha',
-						value: 'EC-P',
-					},
-					{
-						name: 'Provincia de Napo',
-						value: 'EC-N',
-					},
-					{
-						name: 'Santa Elena Province',
-						value: 'EC-SE',
-					},
-					{
-						name: 'Santo Domingo de los Tsáchilas Province',
-						value: 'EC-SD',
-					},
-					{
-						name: 'Sucumbíos Province',
-						value: 'EC-U',
-					},
-					{
-						name: 'Tungurahua',
-						value: 'EC-T',
-					},
-					{
-						name: 'Zamora-Chinchipe Province',
-						value: 'EC-Z',
-					},
-					{
-						name: 'Egypt',
-						value: 'EG',
-					},
-					{
-						name: 'Al Qalyubia Governorate',
-						value: 'EG-KB',
-					},
-					{
-						name: 'Alexandria Governorate',
-						value: 'EG-ALX',
-					},
-					{
-						name: 'Ash Sharqia Governorate',
-						value: 'EG-SHR',
-					},
-					{
-						name: 'Assiut Governorate',
-						value: 'EG-AST',
-					},
-					{
-						name: 'Aswan Governorate',
-						value: 'EG-ASN',
-					},
-					{
-						name: 'Beni Suef Governorate',
-						value: 'EG-BNS',
-					},
-					{
-						name: 'Cairo Governorate',
-						value: 'EG-C',
-					},
-					{
-						name: 'Dakahlia Governorate',
-						value: 'EG-DK',
-					},
-					{
-						name: 'Damietta Governorate',
-						value: 'EG-DT',
-					},
-					{
-						name: 'El Beheira Governorate',
-						value: 'EG-BH',
-					},
-					{
-						name: 'Faiyum Governorate',
-						value: 'EG-FYM',
-					},
-					{
-						name: 'Gharbia Governorate',
-						value: 'EG-GH',
-					},
-					{
-						name: 'Giza Governorate',
-						value: 'EG-GZ',
-					},
-					{
-						name: 'Ismailia Governorate',
-						value: 'EG-IS',
-					},
-					{
-						name: 'Kafr El Sheikh Governorate',
-						value: 'EG-KFS',
-					},
-					{
-						name: 'Luxor Governorate',
-						value: 'EG-LX',
-					},
-					{
-						name: 'Matrouh Governorate',
-						value: 'EG-MT',
-					},
-					{
-						name: 'Menia Governorate',
-						value: 'EG-MN',
-					},
-					{
-						name: 'Menofia Governorate',
-						value: 'EG-MNF',
-					},
-					{
-						name: 'New Valley Governorate',
-						value: 'EG-WAD',
-					},
-					{
-						name: 'North Sinai Governorate',
-						value: 'EG-SIN',
-					},
-					{
-						name: 'Port Said Governorate',
-						value: 'EG-PTS',
-					},
-					{
-						name: 'Qena Governorate',
-						value: 'EG-KN',
-					},
-					{
-						name: 'Red Sea Governorate',
-						value: 'EG-BA',
-					},
-					{
-						name: 'Sohag Governorate',
-						value: 'EG-SHG',
-					},
-					{
-						name: 'South Sinai Governorate',
-						value: 'EG-JS',
-					},
-					{
-						name: 'Suez Governorate',
-						value: 'EG-SUZ',
-					},
-					{
-						name: 'El Salvador',
-						value: 'SV',
-					},
-					{
-						name: 'Ahuachapan',
-						value: 'SV-AH',
-					},
-					{
-						name: 'Cabanas',
-						value: 'SV-CA',
-					},
-					{
-						name: 'Chalatenango',
-						value: 'SV-CH',
-					},
-					{
-						name: 'Cuscatlan',
-						value: 'SV-CU',
-					},
-					{
-						name: 'La Libertad',
-						value: 'SV-LI',
-					},
-					{
-						name: 'La Paz',
-						value: 'SV-PA',
-					},
-					{
-						name: 'La Union',
-						value: 'SV-UN',
-					},
-					{
-						name: 'Morazan',
-						value: 'SV-MO',
-					},
-					{
-						name: 'San Miguel',
-						value: 'SV-SM',
-					},
-					{
-						name: 'San Salvador',
-						value: 'SV-SS',
-					},
-					{
-						name: 'San Vicente',
-						value: 'SV-SV',
-					},
-					{
-						name: 'Santa Ana',
-						value: 'SV-SA',
-					},
-					{
-						name: 'Sonsonate',
-						value: 'SV-SO',
-					},
-					{
-						name: 'Usulutan',
-						value: 'SV-US',
-					},
-					{
-						name: 'Equatorial Guinea',
-						value: 'GQ',
-					},
-					{
-						name: 'Annobón',
-						value: 'GQ-AN',
-					},
-					{
-						name: 'Bioko Norte',
-						value: 'GQ-BN',
-					},
-					{
-						name: 'Bioko Sur',
-						value: 'GQ-BS',
-					},
-					{
-						name: 'Centro Sur',
-						value: 'GQ-CS',
-					},
-					{
-						name: 'Kie-Ntem',
-						value: 'GQ-KN',
-					},
-					{
-						name: 'Litoral',
-						value: 'GQ-LI',
-					},
-					{
-						name: 'Wele-Nzas',
-						value: 'GQ-WN',
-					},
-					{
-						name: 'Eritrea',
-						value: 'ER',
-					},
-					{
-						name: 'Anseba',
-						value: 'ER-AN',
-					},
-					{
-						name: 'Central',
-						value: 'ER-MA',
-					},
-					{
-						name: 'Gash-Barka',
-						value: 'ER-GB',
-					},
-					{
-						name: 'Northern Red Sea',
-						value: 'ER-SK',
-					},
-					{
-						name: 'Southern',
-						value: 'ER-DU',
-					},
-					{
-						name: 'Southern Red Sea',
-						value: 'ER-DK',
-					},
-					{
-						name: 'Estonia',
-						value: 'EE',
-					},
-					{
-						name: 'Harju County',
-						value: 'EE-37',
-					},
-					{
-						name: 'Hiiu County',
-						value: 'EE-39',
-					},
-					{
-						name: 'Ida-Viru County',
-						value: 'EE-44',
-					},
-					{
-						name: 'Järva County',
-						value: 'EE-51',
-					},
-					{
-						name: 'Jõgeva County',
-						value: 'EE-49',
-					},
-					{
-						name: 'Lääne County',
-						value: 'EE-57',
-					},
-					{
-						name: 'Lääne-Viru County',
-						value: 'EE-59',
-					},
-					{
-						name: 'Pärnu County',
-						value: 'EE-67',
-					},
-					{
-						name: 'Põlva County',
-						value: 'EE-65',
-					},
-					{
-						name: 'Rapla County',
-						value: 'EE-70',
-					},
-					{
-						name: 'Saare County',
-						value: 'EE-74',
-					},
-					{
-						name: 'Tartu County',
-						value: 'EE-78',
-					},
-					{
-						name: 'Valga County',
-						value: 'EE-82',
-					},
-					{
-						name: 'Viljandi County',
-						value: 'EE-84',
-					},
-					{
-						name: 'Võru County',
-						value: 'EE-86',
-					},
-					{
-						name: 'Eswatini',
-						value: 'SZ',
-					},
-					{
-						name: 'Hhohho',
-						value: 'SZ-HH',
-					},
-					{
-						name: 'Lubombo',
-						value: 'SZ-LU',
-					},
-					{
-						name: 'Manzini',
-						value: 'SZ-MA',
-					},
-					{
-						name: 'Shiselweni',
-						value: 'SZ-SH',
-					},
-					{
-						name: 'Ethiopia',
-						value: 'ET',
-					},
-					{
-						name: 'Addis Ababa',
-						value: 'ET-AA',
-					},
-					{
-						name: 'Afar',
-						value: 'ET-AF',
-					},
-					{
-						name: 'Amhara',
-						value: 'ET-AM',
-					},
-					{
-						name: 'Benishangul-Gumuz',
-						value: 'ET-BE',
-					},
-					{
-						name: 'Dire Dawa',
-						value: 'ET-DD',
-					},
-					{
-						name: 'Gambella',
-						value: 'ET-GA',
-					},
-					{
-						name: 'Harari',
-						value: 'ET-HA',
-					},
-					{
-						name: 'Oromia',
-						value: 'ET-OR',
-					},
-					{
-						name: 'Somali',
-						value: 'ET-SO',
-					},
-					{
-						name: "Southern Nations, Nationalities, and People's Region",
-						value: 'ET-SN',
-					},
-					{
-						name: 'Tigray',
-						value: 'ET-TI',
-					},
-					{
-						name: 'Falkland Islands (Islas Malvinas)',
-						value: 'FK',
-					},
-					{
-						name: 'Faroe Islands',
-						value: 'FO',
-					},
-					{
-						name: 'Fiji',
-						value: 'FJ',
-					},
-					{
-						name: 'Central Division',
-						value: 'FJ-C',
-					},
-					{
-						name: 'Eastern Division',
-						value: 'FJ-E',
-					},
-					{
-						name: 'Northern Division',
-						value: 'FJ-N',
-					},
-					{
-						name: 'Rotuma',
-						value: 'FJ-R',
-					},
-					{
-						name: 'Western Division',
-						value: 'FJ-W',
-					},
-					{
-						name: 'Finland',
-						value: 'FI',
-					},
-					{
-						name: 'Central Finland',
-						value: 'FI-08',
-					},
-					{
-						name: 'Central Ostrobothnia',
-						value: 'FI-07',
-					},
-					{
-						name: 'Kainuu',
-						value: 'FI-05',
-					},
-					{
-						name: 'Kymenlaakso',
-						value: 'FI-09',
-					},
-					{
-						name: 'Lapland',
-						value: 'FI-10',
-					},
-					{
-						name: 'North Karelia',
-						value: 'FI-13',
-					},
-					{
-						name: 'Northern Ostrobothnia',
-						value: 'FI-14',
-					},
-					{
-						name: 'Northern Savonia',
-						value: 'FI-15',
-					},
-					{
-						name: 'Ostrobothnia',
-						value: 'FI-12',
-					},
-					{
-						name: 'Päijänne Tavastia',
-						value: 'FI-16',
-					},
-					{
-						name: 'Pirkanmaa',
-						value: 'FI-11',
-					},
-					{
-						name: 'Satakunta',
-						value: 'FI-17',
-					},
-					{
-						name: 'South Karelia',
-						value: 'FI-02',
-					},
-					{
-						name: 'Southern Ostrobothnia',
-						value: 'FI-03',
-					},
-					{
-						name: 'Southern Savonia',
-						value: 'FI-04',
-					},
-					{
-						name: 'Southwest Finland',
-						value: 'FI-19',
-					},
-					{
-						name: 'Tavastia Proper',
-						value: 'FI-06',
-					},
-					{
-						name: 'Uusimaa',
-						value: 'FI-18',
-					},
-					{
-						name: 'France',
-						value: 'FR',
-					},
-					{
-						name: 'Alsace',
-						value: 'FR-A',
-					},
-					{
-						name: 'Aquitaine',
-						value: 'FR-B',
-					},
-					{
-						name: 'Auvergne',
-						value: 'FR-C',
-					},
-					{
-						name: 'Brittany',
-						value: 'FR-E',
-					},
-					{
-						name: 'Burgundy',
-						value: 'FR-D',
-					},
-					{
-						name: 'Centre-Val de Loire',
-						value: 'FR-F',
-					},
-					{
-						name: 'Champagne-Ardenne',
-						value: 'FR-G',
-					},
-					{
-						name: 'Corsica',
-						value: 'FR-H',
-					},
-					{
-						name: 'Franche-Comté',
-						value: 'FR-I',
-					},
-					{
-						name: 'Île-de-France',
-						value: 'FR-J',
-					},
-					{
-						name: 'Languedoc-Roussillon',
-						value: 'FR-K',
-					},
-					{
-						name: 'Limousin',
-						value: 'FR-L',
-					},
-					{
-						name: 'Lorraine',
-						value: 'FR-M',
-					},
-					{
-						name: 'Lower Normandy',
-						value: 'FR-P',
-					},
-					{
-						name: 'Midi-Pyrénées',
-						value: 'FR-N',
-					},
-					{
-						name: 'Nord-Pas-de-Calais',
-						value: 'FR-O',
-					},
-					{
-						name: 'Pays de la Loire',
-						value: 'FR-R',
-					},
-					{
-						name: 'Picardy',
-						value: 'FR-S',
-					},
-					{
-						name: 'Poitou-Charentes',
-						value: 'FR-T',
-					},
-					{
-						name: "Provence-Alpes-Côte d'Azur",
-						value: 'FR-U',
-					},
-					{
-						name: 'Rhone-Alpes',
-						value: 'FR-V',
-					},
-					{
-						name: 'Upper Normandy',
-						value: 'FR-Q',
-					},
-					{
-						name: 'French Guiana',
-						value: 'GF',
-					},
-					{
-						name: 'French Polynesia',
-						value: 'PF',
-					},
-					{
-						name: 'French Southern Territories',
-						value: 'TF',
-					},
-					{
-						name: 'Gabon',
-						value: 'GA',
-					},
-					{
-						name: 'Estuaire',
-						value: 'GA-1',
-					},
-					{
-						name: 'Haut-Ogooue',
-						value: 'GA-2',
-					},
-					{
-						name: 'Moyen-Ogooue',
-						value: 'GA-3',
-					},
-					{
-						name: 'Ngounie',
-						value: 'GA-4',
-					},
-					{
-						name: 'Nyanga',
-						value: 'GA-5',
-					},
-					{
-						name: 'Ogooue-Ivindo',
-						value: 'GA-6',
-					},
-					{
-						name: 'Ogooue-Lolo',
-						value: 'GA-7',
-					},
-					{
-						name: 'Ogooue-Maritime',
-						value: 'GA-8',
-					},
-					{
-						name: 'Woleu-Ntem',
-						value: 'GA-9',
-					},
-					{
-						name: 'Gambia',
-						value: 'GM',
-					},
-					{
-						name: 'Banjul',
-						value: 'GM-B',
-					},
-					{
-						name: 'Central River',
-						value: 'GM-M',
-					},
-					{
-						name: 'Lower River',
-						value: 'GM-L',
-					},
-					{
-						name: 'North Bank Division',
-						value: 'GM-N',
-					},
-					{
-						name: 'Upper River',
-						value: 'GM-U',
-					},
-					{
-						name: 'West Coast Region',
-						value: 'GM-W',
-					},
-					{
-						name: 'Georgia',
-						value: 'GE',
-					},
-					{
-						name: 'Abkhazia',
-						value: 'GE-AB',
-					},
-					{
-						name: 'Adjara',
-						value: 'GE-AJ',
-					},
-					{
-						name: 'Guria',
-						value: 'GE-GU',
-					},
-					{
-						name: 'Imereti',
-						value: 'GE-IM',
-					},
-					{
-						name: 'Kakheti',
-						value: 'GE-KA',
-					},
-					{
-						name: 'Kvemo Kartli',
-						value: 'GE-KK',
-					},
-					{
-						name: 'Mtskheta-Mtianeti',
-						value: 'GE-MM',
-					},
-					{
-						name: 'Racha-Lechkhumi and Lower Svaneti',
-						value: 'GE-RL',
-					},
-					{
-						name: 'Samegrelo-Upper Svaneti',
-						value: 'GE-SZ',
-					},
-					{
-						name: 'Samtskhe-Javakheti',
-						value: 'GE-SJ',
-					},
-					{
-						name: 'Shida Kartli',
-						value: 'GE-SK',
-					},
-					{
-						name: 'Tbilisi',
-						value: 'GE-TB',
-					},
-					{
-						name: 'Germany',
-						value: 'DE',
-					},
-					{
-						name: 'Baden-Württemberg',
-						value: 'DE-BW',
-					},
-					{
-						name: 'Bavaria',
-						value: 'DE-BY',
-					},
-					{
-						name: 'Berlin',
-						value: 'DE-BE',
-					},
-					{
-						name: 'Brandenburg',
-						value: 'DE-BB',
-					},
-					{
-						name: 'Bremen',
-						value: 'DE-HB',
-					},
-					{
-						name: 'Hamburg',
-						value: 'DE-HH',
-					},
-					{
-						name: 'Hesse',
-						value: 'DE-HE',
-					},
-					{
-						name: 'Lower Saxony',
-						value: 'DE-NI',
-					},
-					{
-						name: 'Mecklenburg-Vorpommern',
-						value: 'DE-MV',
-					},
-					{
-						name: 'North Rhine-Westphalia',
-						value: 'DE-NW',
-					},
-					{
-						name: 'Rhineland-Palatinate',
-						value: 'DE-RP',
-					},
-					{
-						name: 'Saarland',
-						value: 'DE-SL',
-					},
-					{
-						name: 'Saxony',
-						value: 'DE-SN',
-					},
-					{
-						name: 'Saxony-Anhalt',
-						value: 'DE-ST',
-					},
-					{
-						name: 'Schleswig-Holstein',
-						value: 'DE-SH',
-					},
-					{
-						name: 'Thuringia',
-						value: 'DE-TH',
-					},
-					{
-						name: 'Ghana',
-						value: 'GH',
-					},
-					{
-						name: 'Ashanti Region',
-						value: 'GH-AH',
-					},
-					{
-						name: 'Brong-Ahafo Region',
-						value: 'GH-BA',
-					},
-					{
-						name: 'Central',
-						value: 'GH-CP',
-					},
-					{
-						name: 'Eastern Region',
-						value: 'GH-EP',
-					},
-					{
-						name: 'Greater Accra Region',
-						value: 'GH-AA',
-					},
-					{
-						name: 'Northern Region',
-						value: 'GH-NP',
-					},
-					{
-						name: 'Upper East Region',
-						value: 'GH-UE',
-					},
-					{
-						name: 'Upper West Region',
-						value: 'GH-UW',
-					},
-					{
-						name: 'Volta Region',
-						value: 'GH-TV',
-					},
-					{
-						name: 'Western Region',
-						value: 'GH-WP',
-					},
-					{
-						name: 'Gibraltar',
-						value: 'GI',
-					},
-					{
-						name: 'Greece',
-						value: 'GR',
-					},
-					{
-						name: 'Greenland',
-						value: 'GL',
-					},
-					{
-						name: 'Kujalleq',
-						value: 'GL-KU',
-					},
-					{
-						name: 'Qaasuitsup',
-						value: 'GL-QA',
-					},
-					{
-						name: 'Qeqqata',
-						value: 'GL-QE',
-					},
-					{
-						name: 'Sermersooq',
-						value: 'GL-SM',
-					},
-					{
-						name: 'Grenada',
-						value: 'GD',
-					},
-					{
-						name: 'Carriacou and Petite Martinique',
-						value: 'GD-10',
-					},
-					{
-						name: 'Saint Andrew',
-						value: 'GD-01',
-					},
-					{
-						name: 'Saint David',
-						value: 'GD-02',
-					},
-					{
-						name: 'Saint George',
-						value: 'GD-03',
-					},
-					{
-						name: 'Saint John',
-						value: 'GD-04',
-					},
-					{
-						name: 'Saint Mark',
-						value: 'GD-05',
-					},
-					{
-						name: 'Saint Patrick',
-						value: 'GD-06',
-					},
-					{
-						name: 'Guadeloupe',
-						value: 'GP',
-					},
-					{
-						name: 'Guam',
-						value: 'GU',
-					},
-					{
-						name: 'Guatemala',
-						value: 'GT',
-					},
-					{
-						name: 'Alta Verapaz',
-						value: 'GT-AV',
-					},
-					{
-						name: 'Baja Verapaz Department',
-						value: 'GT-BV',
-					},
-					{
-						name: 'Chimaltenango Department',
-						value: 'GT-CM',
-					},
-					{
-						name: 'Chiquimula Department',
-						value: 'GT-CQ',
-					},
-					{
-						name: 'El Progreso Department',
-						value: 'GT-PR',
-					},
-					{
-						name: 'Escuintla',
-						value: 'GT-ES',
-					},
-					{
-						name: 'Guatemala Department',
-						value: 'GT-GU',
-					},
-					{
-						name: 'Huehuetenango Department',
-						value: 'GT-HU',
-					},
-					{
-						name: 'Izabal Department',
-						value: 'GT-IZ',
-					},
-					{
-						name: 'Jalapa Department',
-						value: 'GT-JA',
-					},
-					{
-						name: 'Jutiapa Department',
-						value: 'GT-JU',
-					},
-					{
-						name: 'Petén Department',
-						value: 'GT-PE',
-					},
-					{
-						name: 'Quetzaltenango Department',
-						value: 'GT-QZ',
-					},
-					{
-						name: 'Quiché Department',
-						value: 'GT-QC',
-					},
-					{
-						name: 'Retalhuleu Department',
-						value: 'GT-RE',
-					},
-					{
-						name: 'Sacatepequez',
-						value: 'GT-SA',
-					},
-					{
-						name: 'San Marcos Department',
-						value: 'GT-SM',
-					},
-					{
-						name: 'Santa Rosa Department',
-						value: 'GT-SR',
-					},
-					{
-						name: 'Sololá Department',
-						value: 'GT-SO',
-					},
-					{
-						name: 'Suchitepequez',
-						value: 'GT-SU',
-					},
-					{
-						name: 'Totonicapán Department',
-						value: 'GT-TO',
-					},
-					{
-						name: 'Zacapa Department',
-						value: 'GT-ZA',
-					},
-					{
-						name: 'Guernsey',
-						value: 'GG',
-					},
-					{
-						name: 'Guinea',
-						value: 'GN',
-					},
-					{
-						name: 'Boké',
-						value: 'GN-B',
-					},
-					{
-						name: 'Conakry',
-						value: 'GN-C',
-					},
-					{
-						name: 'Faranah',
-						value: 'GN-F',
-					},
-					{
-						name: 'Kankan',
-						value: 'GN-K',
-					},
-					{
-						name: 'Kindia',
-						value: 'GN-D',
-					},
-					{
-						name: 'Labé',
-						value: 'GN-L',
-					},
-					{
-						name: 'Mamou',
-						value: 'GN-M',
-					},
-					{
-						name: 'Nzérékoré',
-						value: 'GN-N',
-					},
-					{
-						name: 'Guinea-Bissau',
-						value: 'GW',
-					},
-					{
-						name: 'Bafata',
-						value: 'GW-BA',
-					},
-					{
-						name: 'Biombo',
-						value: 'GW-BM',
-					},
-					{
-						name: 'Bissau',
-						value: 'GW-BS',
-					},
-					{
-						name: 'Bolama',
-						value: 'GW-BL',
-					},
-					{
-						name: 'Cacheu',
-						value: 'GW-CA',
-					},
-					{
-						name: 'Gabu',
-						value: 'GW-GA',
-					},
-					{
-						name: 'Oio',
-						value: 'GW-OI',
-					},
-					{
-						name: 'Quinara',
-						value: 'GW-QU',
-					},
-					{
-						name: 'Tombali Region',
-						value: 'GW-TO',
-					},
-					{
-						name: 'Guyana',
-						value: 'GY',
-					},
-					{
-						name: 'Barima-Waini',
-						value: 'GY-BA',
-					},
-					{
-						name: 'Cuyuni-Mazaruni',
-						value: 'GY-CU',
-					},
-					{
-						name: 'Demerara-Mahaica',
-						value: 'GY-DE',
-					},
-					{
-						name: 'East Berbice-Corentyne',
-						value: 'GY-EB',
-					},
-					{
-						name: 'Essequibo Islands-West Demerara',
-						value: 'GY-ES',
-					},
-					{
-						name: 'Mahaica-Berbice',
-						value: 'GY-MA',
-					},
-					{
-						name: 'Pomeroon-Supenaam',
-						value: 'GY-PM',
-					},
-					{
-						name: 'Potaro-Siparuni',
-						value: 'GY-PT',
-					},
-					{
-						name: 'Upper Demerara-Berbice',
-						value: 'GY-UD',
-					},
-					{
-						name: 'Upper Takutu-Upper Essequibo',
-						value: 'GY-UT',
-					},
-					{
-						name: 'Haiti',
-						value: 'HT',
-					},
-					{
-						name: 'Artibonite',
-						value: 'HT-AR',
-					},
-					{
-						name: 'Centre',
-						value: 'HT-CE',
-					},
-					{
-						name: "Grand'Anse",
-						value: 'HT-GA',
-					},
-					{
-						name: 'Nippes',
-						value: 'HT-NI',
-					},
-					{
-						name: 'Nord',
-						value: 'HT-ND',
-					},
-					{
-						name: 'Nord-Est',
-						value: 'HT-NE',
-					},
-					{
-						name: 'Nord-Ouest',
-						value: 'HT-NO',
-					},
-					{
-						name: 'Ouest',
-						value: 'HT-OU',
-					},
-					{
-						name: 'Sud',
-						value: 'HT-SD',
-					},
-					{
-						name: 'Sud-Est',
-						value: 'HT-SE',
-					},
-					{
-						name: 'Heard & McDonald Islands',
-						value: 'HM',
-					},
-					{
-						name: 'Honduras',
-						value: 'HN',
-					},
-					{
-						name: 'Atlantida',
-						value: 'HN-AT',
-					},
-					{
-						name: 'Bay Islands',
-						value: 'HN-IB',
-					},
-					{
-						name: 'Choluteca',
-						value: 'HN-CH',
-					},
-					{
-						name: 'Colon',
-						value: 'HN-CL',
-					},
-					{
-						name: 'Comayagua',
-						value: 'HN-CM',
-					},
-					{
-						name: 'Copan',
-						value: 'HN-CP',
-					},
-					{
-						name: 'Cortés',
-						value: 'HN-CR',
-					},
-					{
-						name: 'El Paraiso',
-						value: 'HN-EP',
-					},
-					{
-						name: 'Francisco Morazan',
-						value: 'HN-FM',
-					},
-					{
-						name: 'Gracias a Dios',
-						value: 'HN-GD',
-					},
-					{
-						name: 'Intibuca',
-						value: 'HN-IN',
-					},
-					{
-						name: 'La Paz',
-						value: 'HN-LP',
-					},
-					{
-						name: 'Lempira',
-						value: 'HN-LE',
-					},
-					{
-						name: 'Ocotepeque',
-						value: 'HN-OC',
-					},
-					{
-						name: 'Olancho',
-						value: 'HN-OL',
-					},
-					{
-						name: 'Santa Barbara',
-						value: 'HN-SB',
-					},
-					{
-						name: 'Valle',
-						value: 'HN-VA',
-					},
-					{
-						name: 'Yoro',
-						value: 'HN-YO',
-					},
-					{
-						name: 'Hong Kong',
-						value: 'HK',
-					},
-					{
-						name: 'Hungary',
-						value: 'HU',
-					},
-					{
-						name: 'Bács-Kiskun',
-						value: 'HU-BK',
-					},
-					{
-						name: 'Baranya',
-						value: 'HU-BA',
-					},
-					{
-						name: 'Békés County',
-						value: 'HU-BE',
-					},
-					{
-						name: 'Borsod-Abaúj-Zemplén',
-						value: 'HU-BZ',
-					},
-					{
-						name: 'Budapest',
-						value: 'HU-BU',
-					},
-					{
-						name: 'Csongrád',
-						value: 'HU-CS',
-					},
-					{
-						name: 'Fejér',
-						value: 'HU-FE',
-					},
-					{
-						name: 'Gyor-Moson-Sopron',
-						value: 'HU-GS',
-					},
-					{
-						name: 'Hajdú-Bihar',
-						value: 'HU-HB',
-					},
-					{
-						name: 'Heves County',
-						value: 'HU-HE',
-					},
-					{
-						name: 'Jász-Nagykun-Szolnok',
-						value: 'HU-JN',
-					},
-					{
-						name: 'Komárom-Esztergom',
-						value: 'HU-KE',
-					},
-					{
-						name: 'Nógrád County',
-						value: 'HU-NO',
-					},
-					{
-						name: 'Pest County',
-						value: 'HU-PE',
-					},
-					{
-						name: 'Somogy County',
-						value: 'HU-SO',
-					},
-					{
-						name: 'Szabolcs-Szatmár-Bereg',
-						value: 'HU-SZ',
-					},
-					{
-						name: 'Tolna County',
-						value: 'HU-TO',
-					},
-					{
-						name: 'Vas County',
-						value: 'HU-VA',
-					},
-					{
-						name: 'Veszprém',
-						value: 'HU-VE',
-					},
-					{
-						name: 'Zala County',
-						value: 'HU-ZA',
-					},
-					{
-						name: 'Iceland',
-						value: 'IS',
-					},
-					{
-						name: 'Capital Region',
-						value: 'IS-1',
-					},
-					{
-						name: 'Eastern Region',
-						value: 'IS-7',
-					},
-					{
-						name: 'Northeast',
-						value: 'IS-6',
-					},
-					{
-						name: 'Northwestern Region',
-						value: 'IS-5',
-					},
-					{
-						name: 'South',
-						value: 'IS-8',
-					},
-					{
-						name: 'Southern Peninsula Region',
-						value: 'IS-2',
-					},
-					{
-						name: 'Western Region',
-						value: 'IS-3',
-					},
-					{
-						name: 'Westfjords Region',
-						value: 'IS-4',
-					},
-					{
-						name: 'India',
-						value: 'IN',
-					},
-					{
-						name: 'Andaman and Nicobar Islands',
-						value: 'IN-AN',
-					},
-					{
-						name: 'Andhra Pradesh',
-						value: 'IN-AP',
-					},
-					{
-						name: 'Arunachal Pradesh',
-						value: 'IN-AR',
-					},
-					{
-						name: 'Assam',
-						value: 'IN-AS',
-					},
-					{
-						name: 'Bihar',
-						value: 'IN-BR',
-					},
-					{
-						name: 'Chandigarh',
-						value: 'IN-CH',
-					},
-					{
-						name: 'Chhattisgarh',
-						value: 'IN-CT',
-					},
-					{
-						name: 'Dadra and Nagar Haveli',
-						value: 'IN-DN',
-					},
-					{
-						name: 'Daman and Diu',
-						value: 'IN-DD',
-					},
-					{
-						name: 'Delhi',
-						value: 'IN-DL',
-					},
-					{
-						name: 'Goa',
-						value: 'IN-GA',
-					},
-					{
-						name: 'Gujarat',
-						value: 'IN-GJ',
-					},
-					{
-						name: 'Haryana',
-						value: 'IN-HR',
-					},
-					{
-						name: 'Himachal Pradesh',
-						value: 'IN-HP',
-					},
-					{
-						name: 'Jammu and Kashmir',
-						value: 'IN-JK',
-					},
-					{
-						name: 'Jharkhand',
-						value: 'IN-JH',
-					},
-					{
-						name: 'Karnataka',
-						value: 'IN-KA',
-					},
-					{
-						name: 'Kerala',
-						value: 'IN-KL',
-					},
-					{
-						name: 'Lakshadweep',
-						value: 'IN-LD',
-					},
-					{
-						name: 'Madhya Pradesh',
-						value: 'IN-MP',
-					},
-					{
-						name: 'Maharashtra',
-						value: 'IN-MH',
-					},
-					{
-						name: 'Manipur',
-						value: 'IN-MN',
-					},
-					{
-						name: 'Meghalaya',
-						value: 'IN-ML',
-					},
-					{
-						name: 'Mizoram',
-						value: 'IN-MZ',
-					},
-					{
-						name: 'Nagaland',
-						value: 'IN-NL',
-					},
-					{
-						name: 'Odisha',
-						value: 'IN-OR',
-					},
-					{
-						name: 'Puducherry',
-						value: 'IN-PY',
-					},
-					{
-						name: 'Punjab',
-						value: 'IN-PB',
-					},
-					{
-						name: 'Rajasthan',
-						value: 'IN-RJ',
-					},
-					{
-						name: 'Sikkim',
-						value: 'IN-SK',
-					},
-					{
-						name: 'Tamil Nadu',
-						value: 'IN-TN',
-					},
-					{
-						name: 'Telangana',
-						value: 'IN-TG',
-					},
-					{
-						name: 'Tripura',
-						value: 'IN-TR',
-					},
-					{
-						name: 'Uttar Pradesh',
-						value: 'IN-UP',
-					},
-					{
-						name: 'Uttarakhand',
-						value: 'IN-UT',
-					},
-					{
-						name: 'West Bengal',
-						value: 'IN-WB',
-					},
-					{
-						name: 'Indonesia',
-						value: 'ID',
-					},
-					{
-						name: 'Aceh',
-						value: 'ID-AC',
-					},
-					{
-						name: 'Bali',
-						value: 'ID-BA',
-					},
-					{
-						name: 'Bangka Belitung Islands',
-						value: 'ID-BB',
-					},
-					{
-						name: 'Banten',
-						value: 'ID-BT',
-					},
-					{
-						name: 'Bengkulu',
-						value: 'ID-BE',
-					},
-					{
-						name: 'Central Java',
-						value: 'ID-JT',
-					},
-					{
-						name: 'Central Kalimantan',
-						value: 'ID-KT',
-					},
-					{
-						name: 'Central Sulawesi',
-						value: 'ID-ST',
-					},
-					{
-						name: 'East Java',
-						value: 'ID-JI',
-					},
-					{
-						name: 'East Kalimantan',
-						value: 'ID-KI',
-					},
-					{
-						name: 'East Nusa Tenggara',
-						value: 'ID-NT',
-					},
-					{
-						name: 'Gorontalo',
-						value: 'ID-GO',
-					},
-					{
-						name: 'Jambi',
-						value: 'ID-JA',
-					},
-					{
-						name: 'Lampung',
-						value: 'ID-LA',
-					},
-					{
-						name: 'Maluku',
-						value: 'ID-MA',
-					},
-					{
-						name: 'North Kalimantan',
-						value: 'ID-KU',
-					},
-					{
-						name: 'North Maluku',
-						value: 'ID-MU',
-					},
-					{
-						name: 'North Sulawesi',
-						value: 'ID-SA',
-					},
-					{
-						name: 'North Sumatra',
-						value: 'ID-SU',
-					},
-					{
-						name: 'Papua',
-						value: 'ID-PA',
-					},
-					{
-						name: 'Riau',
-						value: 'ID-RI',
-					},
-					{
-						name: 'Riau Islands',
-						value: 'ID-KR',
-					},
-					{
-						name: 'South East Sulawesi',
-						value: 'ID-SG',
-					},
-					{
-						name: 'South Kalimantan',
-						value: 'ID-KS',
-					},
-					{
-						name: 'South Sulawesi',
-						value: 'ID-SN',
-					},
-					{
-						name: 'South Sumatra',
-						value: 'ID-SS',
-					},
-					{
-						name: 'Special Capital Region of Jakarta',
-						value: 'ID-JK',
-					},
-					{
-						name: 'Special Region of Yogyakarta',
-						value: 'ID-YO',
-					},
-					{
-						name: 'West Java',
-						value: 'ID-JB',
-					},
-					{
-						name: 'West Kalimantan',
-						value: 'ID-KB',
-					},
-					{
-						name: 'West Nusa Tenggara',
-						value: 'ID-NB',
-					},
-					{
-						name: 'West Papua',
-						value: 'ID-PB',
-					},
-					{
-						name: 'West Sulawesi',
-						value: 'ID-SR',
-					},
-					{
-						name: 'West Sumatra',
-						value: 'ID-SB',
-					},
-					{
-						name: 'Iran',
-						value: 'IR',
-					},
-					{
-						name: 'Alborz',
-						value: 'IR-32',
-					},
-					{
-						name: 'Ardabil',
-						value: 'IR-03',
-					},
-					{
-						name: 'Bushehr',
-						value: 'IR-06',
-					},
-					{
-						name: 'Chaharmahal and Bakhtiari',
-						value: 'IR-08',
-					},
-					{
-						name: 'East Azerbaijan',
-						value: 'IR-01',
-					},
-					{
-						name: 'Fars',
-						value: 'IR-14',
-					},
-					{
-						name: 'Gilan',
-						value: 'IR-19',
-					},
-					{
-						name: 'Golestan',
-						value: 'IR-27',
-					},
-					{
-						name: 'Hamadan',
-						value: 'IR-24',
-					},
-					{
-						name: 'Hormozgan',
-						value: 'IR-23',
-					},
-					{
-						name: 'Ilam',
-						value: 'IR-05',
-					},
-					{
-						name: 'Isfahan',
-						value: 'IR-04',
-					},
-					{
-						name: 'Kerman',
-						value: 'IR-15',
-					},
-					{
-						name: 'Kermanshah',
-						value: 'IR-17',
-					},
-					{
-						name: 'Khorasan Razavi',
-						value: 'IR-30',
-					},
-					{
-						name: 'Khuzestan',
-						value: 'IR-10',
-					},
-					{
-						name: 'Kohgiluyeh Va Boyer Ahmad',
-						value: 'IR-18',
-					},
-					{
-						name: 'Kurdistan',
-						value: 'IR-16',
-					},
-					{
-						name: 'Lorestan',
-						value: 'IR-20',
-					},
-					{
-						name: 'Markazi',
-						value: 'IR-22',
-					},
-					{
-						name: 'Mazandaran',
-						value: 'IR-21',
-					},
-					{
-						name: 'North Khorasan',
-						value: 'IR-31',
-					},
-					{
-						name: 'Qazvin',
-						value: 'IR-28',
-					},
-					{
-						name: 'Qom',
-						value: 'IR-26',
-					},
-					{
-						name: 'Semnan',
-						value: 'IR-12',
-					},
-					{
-						name: 'Sistan and Baluchestan',
-						value: 'IR-13',
-					},
-					{
-						name: 'South Khorasan',
-						value: 'IR-29',
-					},
-					{
-						name: 'Tehran',
-						value: 'IR-07',
-					},
-					{
-						name: 'West Azerbaijan',
-						value: 'IR-02',
-					},
-					{
-						name: 'Yazd',
-						value: 'IR-25',
-					},
-					{
-						name: 'Zanjan',
-						value: 'IR-11',
-					},
-					{
-						name: 'Iraq',
-						value: 'IQ',
-					},
-					{
-						name: 'Al Anbar',
-						value: 'IQ-AN',
-					},
-					{
-						name: 'Al Muthanna',
-						value: 'IQ-MU',
-					},
-					{
-						name: 'Al-Qadisiyyah',
-						value: 'IQ-QA',
-					},
-					{
-						name: 'An-Najaf',
-						value: 'IQ-NA',
-					},
-					{
-						name: 'Babil',
-						value: 'IQ-BB',
-					},
-					{
-						name: 'Baghdad',
-						value: 'IQ-BG',
-					},
-					{
-						name: 'Basrah',
-						value: 'IQ-BA',
-					},
-					{
-						name: 'Dhi Qar',
-						value: 'IQ-DQ',
-					},
-					{
-						name: 'Diyala',
-						value: 'IQ-DI',
-					},
-					{
-						name: 'Duhok',
-						value: 'IQ-DA',
-					},
-					{
-						name: 'Erbil',
-						value: 'IQ-AR',
-					},
-					{
-						name: 'Karbala',
-						value: 'IQ-KA',
-					},
-					{
-						name: 'Kirkuk',
-						value: 'IQ-TS',
-					},
-					{
-						name: 'Maysan',
-						value: 'IQ-MA',
-					},
-					{
-						name: 'Ninawa',
-						value: 'IQ-NI',
-					},
-					{
-						name: 'Salah Al-Din',
-						value: 'IQ-SD',
-					},
-					{
-						name: 'Sulaymaniyah',
-						value: 'IQ-SU',
-					},
-					{
-						name: 'Wasit',
-						value: 'IQ-WA',
-					},
-					{
-						name: 'Ireland',
-						value: 'IE',
-					},
-					{
-						name: 'Isle of Man',
-						value: 'IM',
-					},
-					{
-						name: 'Israel',
-						value: 'IL',
-					},
-					{
-						name: 'Center District',
-						value: 'IL-M',
-					},
-					{
-						name: 'Haifa District',
-						value: 'IL-HA',
-					},
-					{
-						name: 'Jerusalem District',
-						value: 'IL-JM',
-					},
-					{
-						name: 'North District',
-						value: 'IL-Z',
-					},
-					{
-						name: 'South District',
-						value: 'IL-D',
-					},
-					{
-						name: 'Tel Aviv District',
-						value: 'IL-TA',
-					},
-					{
-						name: 'Italy',
-						value: 'IT',
-					},
-					{
-						name: 'Abruzzo',
-						value: 'IT-65',
-					},
-					{
-						name: 'Aosta',
-						value: 'IT-23',
-					},
-					{
-						name: 'Apulia',
-						value: 'IT-75',
-					},
-					{
-						name: 'Basilicata',
-						value: 'IT-77',
-					},
-					{
-						name: 'Calabria',
-						value: 'IT-78',
-					},
-					{
-						name: 'Campania',
-						value: 'IT-72',
-					},
-					{
-						name: 'Emilia-Romagna',
-						value: 'IT-45',
-					},
-					{
-						name: 'Friuli-Venezia Giulia',
-						value: 'IT-36',
-					},
-					{
-						name: 'Lazio',
-						value: 'IT-62',
-					},
-					{
-						name: 'Liguria',
-						value: 'IT-42',
-					},
-					{
-						name: 'Lombardy',
-						value: 'IT-25',
-					},
-					{
-						name: 'Marche',
-						value: 'IT-57',
-					},
-					{
-						name: 'Molise',
-						value: 'IT-67',
-					},
-					{
-						name: 'Piedmont',
-						value: 'IT-21',
-					},
-					{
-						name: 'Sardinia',
-						value: 'IT-88',
-					},
-					{
-						name: 'Sicily',
-						value: 'IT-82',
-					},
-					{
-						name: 'Trentino-Alto Adige/South Tyrol',
-						value: 'IT-32',
-					},
-					{
-						name: 'Tuscany',
-						value: 'IT-52',
-					},
-					{
-						name: 'Umbria',
-						value: 'IT-55',
-					},
-					{
-						name: 'Veneto',
-						value: 'IT-34',
-					},
-					{
-						name: 'Jamaica',
-						value: 'JM',
-					},
-					{
-						name: 'Clarendon Parish',
-						value: 'JM-13',
-					},
-					{
-						name: 'Hanover Parish',
-						value: 'JM-09',
-					},
-					{
-						name: 'Kingston Parish',
-						value: 'JM-01',
-					},
-					{
-						name: 'Manchester Parish',
-						value: 'JM-12',
-					},
-					{
-						name: 'Portland Parish',
-						value: 'JM-04',
-					},
-					{
-						name: 'Saint Andrew Parish',
-						value: 'JM-02',
-					},
-					{
-						name: 'Saint Ann Parish',
-						value: 'JM-06',
-					},
-					{
-						name: 'Saint Catherine Parish',
-						value: 'JM-14',
-					},
-					{
-						name: 'Saint Elizabeth Parish',
-						value: 'JM-11',
-					},
-					{
-						name: 'Saint James Parish',
-						value: 'JM-08',
-					},
-					{
-						name: 'Saint Mary Parish',
-						value: 'JM-05',
-					},
-					{
-						name: 'Saint Thomas Parish',
-						value: 'JM-03',
-					},
-					{
-						name: 'Trelawny Parish',
-						value: 'JM-07',
-					},
-					{
-						name: 'Westmoreland Parish',
-						value: 'JM-10',
-					},
-					{
-						name: 'Japan',
-						value: 'JP',
-					},
-					{
-						name: 'Aichi Prefecture',
-						value: 'JP-23',
-					},
-					{
-						name: 'Akita Prefecture',
-						value: 'JP-05',
-					},
-					{
-						name: 'Aomori Prefecture',
-						value: 'JP-02',
-					},
-					{
-						name: 'Chiba Prefecture',
-						value: 'JP-12',
-					},
-					{
-						name: 'Ehime Prefecture',
-						value: 'JP-38',
-					},
-					{
-						name: 'Fukui Prefecture',
-						value: 'JP-18',
-					},
-					{
-						name: 'Fukuoka Prefecture',
-						value: 'JP-40',
-					},
-					{
-						name: 'Fukushima Prefecture',
-						value: 'JP-07',
-					},
-					{
-						name: 'Gifu Prefecture',
-						value: 'JP-21',
-					},
-					{
-						name: 'Gunma Prefecture',
-						value: 'JP-10',
-					},
-					{
-						name: 'Hiroshima Prefecture',
-						value: 'JP-34',
-					},
-					{
-						name: 'Hokkaido Prefecture',
-						value: 'JP-01',
-					},
-					{
-						name: 'Hyogo Prefecture',
-						value: 'JP-28',
-					},
-					{
-						name: 'Ibaraki Prefecture',
-						value: 'JP-08',
-					},
-					{
-						name: 'Ishikawa Prefecture',
-						value: 'JP-17',
-					},
-					{
-						name: 'Iwate Prefecture',
-						value: 'JP-03',
-					},
-					{
-						name: 'Kagawa Prefecture',
-						value: 'JP-37',
-					},
-					{
-						name: 'Kagoshima Prefecture',
-						value: 'JP-46',
-					},
-					{
-						name: 'Kanagawa Prefecture',
-						value: 'JP-14',
-					},
-					{
-						name: 'Kochi Prefecture',
-						value: 'JP-39',
-					},
-					{
-						name: 'Kumamoto Prefecture',
-						value: 'JP-43',
-					},
-					{
-						name: 'Kyoto Prefecture',
-						value: 'JP-26',
-					},
-					{
-						name: 'Mie Prefecture',
-						value: 'JP-24',
-					},
-					{
-						name: 'Miyagi Prefecture',
-						value: 'JP-04',
-					},
-					{
-						name: 'Miyazaki Prefecture',
-						value: 'JP-45',
-					},
-					{
-						name: 'Nagano Prefecture',
-						value: 'JP-20',
-					},
-					{
-						name: 'Nagasaki Prefecture',
-						value: 'JP-42',
-					},
-					{
-						name: 'Nara Prefecture',
-						value: 'JP-29',
-					},
-					{
-						name: 'Niigata Prefecture',
-						value: 'JP-15',
-					},
-					{
-						name: 'Oita Prefecture',
-						value: 'JP-44',
-					},
-					{
-						name: 'Okayama Prefecture',
-						value: 'JP-33',
-					},
-					{
-						name: 'Okinawa Prefecture',
-						value: 'JP-47',
-					},
-					{
-						name: 'Osaka Prefecture',
-						value: 'JP-27',
-					},
-					{
-						name: 'Saga Prefecture',
-						value: 'JP-41',
-					},
-					{
-						name: 'Saitama Prefecture',
-						value: 'JP-11',
-					},
-					{
-						name: 'Shiga Prefecture',
-						value: 'JP-25',
-					},
-					{
-						name: 'Shimane Prefecture',
-						value: 'JP-32',
-					},
-					{
-						name: 'Shizuoka Prefecture',
-						value: 'JP-22',
-					},
-					{
-						name: 'Tochigi Prefecture',
-						value: 'JP-09',
-					},
-					{
-						name: 'Tokushima Prefecture',
-						value: 'JP-36',
-					},
-					{
-						name: 'Tokyo',
-						value: 'JP-13',
-					},
-					{
-						name: 'Tottori Prefecture',
-						value: 'JP-31',
-					},
-					{
-						name: 'Toyama Prefecture',
-						value: 'JP-16',
-					},
-					{
-						name: 'Wakayama Prefecture',
-						value: 'JP-30',
-					},
-					{
-						name: 'Yamagata Prefecture',
-						value: 'JP-06',
-					},
-					{
-						name: 'Yamaguchi Prefecture',
-						value: 'JP-35',
-					},
-					{
-						name: 'Yamanashi Prefecture',
-						value: 'JP-19',
-					},
-					{
-						name: 'Jersey',
-						value: 'JE',
-					},
-					{
-						name: 'Jordan',
-						value: 'JO',
-					},
-					{
-						name: 'Ajloun Governorate',
-						value: 'JO-AJ',
-					},
-					{
-						name: 'Amman Governorate',
-						value: 'JO-AM',
-					},
-					{
-						name: 'Aqaba Governorate',
-						value: 'JO-AQ',
-					},
-					{
-						name: 'Balqa Governorate',
-						value: 'JO-BA',
-					},
-					{
-						name: 'Irbid Governorate',
-						value: 'JO-IR',
-					},
-					{
-						name: 'Jerash Governorate',
-						value: 'JO-JA',
-					},
-					{
-						name: 'Karak Governorate',
-						value: 'JO-KA',
-					},
-					{
-						name: "Ma'an Governorate",
-						value: 'JO-MN',
-					},
-					{
-						name: 'Madaba Governorate',
-						value: 'JO-MD',
-					},
-					{
-						name: 'Mafraq Governorate',
-						value: 'JO-MA',
-					},
-					{
-						name: 'Tafilah Governorate',
-						value: 'JO-AT',
-					},
-					{
-						name: 'Zarqa Governorate',
-						value: 'JO-AZ',
+						name: 'Kayseri Province',
+						value: 'TR-38',
 					},
 					{
 						name: 'Kazakhstan',
 						value: 'KZ',
 					},
 					{
-						name: 'Akmola Region',
-						value: 'KZ-AKM',
+						name: 'Kebbi',
+						value: 'NG-KE',
 					},
 					{
-						name: 'Aktobe Region',
-						value: 'KZ-AKT',
+						name: 'Kebili',
+						value: 'TN-73',
 					},
 					{
-						name: 'Almaty Region',
-						value: 'KZ-ALM',
+						name: 'Kedah',
+						value: 'MY-02',
 					},
 					{
-						name: 'Atyrau Province',
-						value: 'KZ-ATY',
+						name: 'Kédougou Region',
+						value: 'SN-KE',
 					},
 					{
-						name: 'East Kazakhstan Region',
-						value: 'KZ-VOS',
-					},
-					{
-						name: 'Jambyl Province',
-						value: 'KZ-ZHA',
-					},
-					{
-						name: 'Karagandy Region',
-						value: 'KZ-KAR',
-					},
-					{
-						name: 'Kostanay Region',
-						value: 'KZ-KUS',
-					},
-					{
-						name: 'Kyzylorda Province',
-						value: 'KZ-KZY',
-					},
-					{
-						name: 'Mangystau Region',
-						value: 'KZ-MAN',
-					},
-					{
-						name: 'North Kazakhstan Province',
-						value: 'KZ-SEV',
-					},
-					{
-						name: 'Pavlodar Province',
-						value: 'KZ-PAV',
-					},
-					{
-						name: 'South Kazakhstan Region',
-						value: 'KZ-YUZ',
-					},
-					{
-						name: 'West Kazakhstan Province',
-						value: 'KZ-ZAP',
-					},
-					{
-						name: 'Kenya',
-						value: 'KE',
-					},
-					{
-						name: 'Kiribati',
-						value: 'KI',
-					},
-					{
-						name: 'Gilbert Islands',
-						value: 'KI-G',
-					},
-					{
-						name: 'Line Islands',
-						value: 'KI-L',
-					},
-					{
-						name: 'Phoenix Islands',
-						value: 'KI-P',
-					},
-					{
-						name: 'Kosovo',
-						value: 'XK',
-					},
-					{
-						name: 'Kuwait',
-						value: 'KW',
-					},
-					{
-						name: 'Al Ahmadi Governorate',
-						value: 'KW-AH',
-					},
-					{
-						name: 'Al Asimah Governate',
-						value: 'KW-KU',
-					},
-					{
-						name: 'Al Farwaniyah Governorate',
-						value: 'KW-FA',
-					},
-					{
-						name: 'Al Jahra Governorate',
-						value: 'KW-JA',
-					},
-					{
-						name: 'Hawalli Governorate',
-						value: 'KW-HA',
-					},
-					{
-						name: 'Mubarak Al-Kabeer Governorate',
-						value: 'KW-MU',
-					},
-					{
-						name: 'Kyrgyzstan',
-						value: 'KG',
-					},
-					{
-						name: 'Batken Province',
-						value: 'KG-B',
-					},
-					{
-						name: 'Chuy Province',
-						value: 'KG-C',
-					},
-					{
-						name: 'Dzhalal-Abadskaya',
-						value: 'KG-J',
-					},
-					{
-						name: 'Naryn Province',
-						value: 'KG-N',
-					},
-					{
-						name: 'Osh Province',
-						value: 'KG-O',
-					},
-					{
-						name: 'Talas',
-						value: 'KG-T',
-					},
-					{
-						name: 'Ysyk Kol Province',
-						value: 'KG-Y',
-					},
-					{
-						name: 'Laos',
-						value: 'LA',
-					},
-					{
-						name: 'Attapeu',
-						value: 'LA-AT',
-					},
-					{
-						name: 'Bokeo',
-						value: 'LA-BK',
-					},
-					{
-						name: 'Bolikhamsai',
-						value: 'LA-BL',
-					},
-					{
-						name: 'Champasak',
-						value: 'LA-CH',
-					},
-					{
-						name: 'Houaphan',
-						value: 'LA-HO',
-					},
-					{
-						name: 'Khammouane',
-						value: 'LA-KH',
-					},
-					{
-						name: 'Louangphabang',
-						value: 'LA-LP',
-					},
-					{
-						name: 'Luang Namtha',
-						value: 'LA-LM',
-					},
-					{
-						name: 'Oudomxay',
-						value: 'LA-OU',
-					},
-					{
-						name: 'Phongsaly',
-						value: 'LA-PH',
-					},
-					{
-						name: 'Salavan',
-						value: 'LA-SL',
-					},
-					{
-						name: 'Savannakhet',
-						value: 'LA-SV',
-					},
-					{
-						name: 'Sayabouly',
-						value: 'LA-XA',
-					},
-					{
-						name: 'Vientiane',
-						value: 'LA-VI',
-					},
-					{
-						name: 'Vientiane Prefecture',
-						value: 'LA-VT',
-					},
-					{
-						name: 'Xekong',
-						value: 'LA-XE',
-					},
-					{
-						name: 'Xiangkhouang',
-						value: 'LA-XI',
-					},
-					{
-						name: 'Latvia',
-						value: 'LV',
-					},
-					{
-						name: 'Ādaži Municipality',
-						value: 'LV-011',
-					},
-					{
-						name: 'Aglona Municipality',
-						value: 'LV-001',
-					},
-					{
-						name: 'Aizkraukle Municipality',
-						value: 'LV-002',
-					},
-					{
-						name: 'Aizpute Municipality',
-						value: 'LV-003',
-					},
-					{
-						name: 'Aknīste Municipality',
-						value: 'LV-004',
-					},
-					{
-						name: 'Aloja Municipality',
-						value: 'LV-005',
-					},
-					{
-						name: 'Alsunga Municipality',
-						value: 'LV-006',
-					},
-					{
-						name: 'Alūksne Municipality',
-						value: 'LV-007',
-					},
-					{
-						name: 'Amata Municipality',
-						value: 'LV-008',
-					},
-					{
-						name: 'Ape Municipality',
-						value: 'LV-009',
-					},
-					{
-						name: 'Auce Municipality',
-						value: 'LV-010',
-					},
-					{
-						name: 'Babīte Municipality',
-						value: 'LV-012',
-					},
-					{
-						name: 'Baldone Municipality',
-						value: 'LV-013',
-					},
-					{
-						name: 'Baltinava Municipality',
-						value: 'LV-014',
-					},
-					{
-						name: 'Balvi Municipality',
-						value: 'LV-015',
-					},
-					{
-						name: 'Bauska Municipality',
-						value: 'LV-016',
-					},
-					{
-						name: 'Beverīna Municipality',
-						value: 'LV-017',
-					},
-					{
-						name: 'Brocēni Municipality',
-						value: 'LV-018',
-					},
-					{
-						name: 'Burtnieki Municipality',
-						value: 'LV-019',
-					},
-					{
-						name: 'Carnikava Municipality',
-						value: 'LV-020',
-					},
-					{
-						name: 'Cēsis Municipality',
-						value: 'LV-022',
-					},
-					{
-						name: 'Cesvaine Municipality',
-						value: 'LV-021',
-					},
-					{
-						name: 'Cibla Municipality',
-						value: 'LV-023',
-					},
-					{
-						name: 'Dagdas novads',
-						value: 'LV-024',
-					},
-					{
-						name: 'Daugavpils',
-						value: 'LV-DGV',
-					},
-					{
-						name: 'Daugavpils Municipality',
-						value: 'LV-025',
-					},
-					{
-						name: 'Dobele Municipality',
-						value: 'LV-026',
-					},
-					{
-						name: 'Dundaga Municipality',
-						value: 'LV-027',
-					},
-					{
-						name: 'Durbe Municipality',
-						value: 'LV-028',
-					},
-					{
-						name: 'Engure Municipality',
-						value: 'LV-029',
-					},
-					{
-						name: 'Ērgļi Municipality',
-						value: 'LV-030',
-					},
-					{
-						name: 'Garkalne Municipality',
-						value: 'LV-031',
-					},
-					{
-						name: 'Grobiņa Municipality',
-						value: 'LV-032',
-					},
-					{
-						name: 'Gulbene Municipality',
-						value: 'LV-033',
-					},
-					{
-						name: 'Iecava Municipality',
-						value: 'LV-034',
-					},
-					{
-						name: 'Ikšķile Municipality',
-						value: 'LV-035',
-					},
-					{
-						name: 'Ilūkste Municipality',
-						value: 'LV-036',
-					},
-					{
-						name: 'Inčukalna novads',
-						value: 'LV-037',
-					},
-					{
-						name: 'Jaunjelgava Municipality',
-						value: 'LV-038',
-					},
-					{
-						name: 'Jaunpiebalga Municipality',
-						value: 'LV-039',
-					},
-					{
-						name: 'Jaunpils Municipality',
-						value: 'LV-040',
-					},
-					{
-						name: 'Jēkabpils',
-						value: 'LV-JKB',
-					},
-					{
-						name: 'Jēkabpils Municipality',
-						value: 'LV-042',
-					},
-					{
-						name: 'Jelgava',
-						value: 'LV-JEL',
-					},
-					{
-						name: 'Jelgava Municipality',
-						value: 'LV-041',
-					},
-					{
-						name: 'Jūrmala',
-						value: 'LV-JUR',
-					},
-					{
-						name: 'Kandava Municipality',
-						value: 'LV-043',
-					},
-					{
-						name: 'Kārsava Municipality',
-						value: 'LV-044',
+						name: 'Kef',
+						value: 'TN-33',
 					},
 					{
 						name: 'Ķegums Municipality',
@@ -6049,28 +6103,772 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'LV-052',
 					},
 					{
+						name: 'Kelantan',
+						value: 'MY-03',
+					},
+					{
+						name: 'Kemerovo Oblast',
+						value: 'RU-KEM',
+					},
+					{
+						name: 'Kemo',
+						value: 'CF-KG',
+					},
+					{
+						name: 'Kentucky',
+						value: 'US-KY',
+					},
+					{
+						name: 'Kenya',
+						value: 'KE',
+					},
+					{
+						name: 'Kep',
+						value: 'KH-23',
+					},
+					{
+						name: 'Kerala',
+						value: 'IN-KL',
+					},
+					{
+						name: 'Kerman',
+						value: 'IR-15',
+					},
+					{
+						name: 'Kermanshah',
+						value: 'IR-17',
+					},
+					{
+						name: 'Kgalagadi',
+						value: 'BW-KG',
+					},
+					{
+						name: 'Kgatleng',
+						value: 'BW-KL',
+					},
+					{
+						name: 'Khabarovsk Krai',
+						value: 'RU-KHA',
+					},
+					{
+						name: 'Khammouane',
+						value: 'LA-KH',
+					},
+					{
+						name: 'Khanh Hoa Province',
+						value: 'VN-34',
+					},
+					{
+						name: 'Khanty-Mansi Autonomous Okrug',
+						value: 'RU-KHM',
+					},
+					{
+						name: 'Kharkiv Oblast',
+						value: 'UA-63',
+					},
+					{
+						name: 'Khartoum',
+						value: 'SD-KH',
+					},
+					{
+						name: 'Khatlon',
+						value: 'TJ-KT',
+					},
+					{
+						name: 'Khenchela Province',
+						value: 'DZ-40',
+					},
+					{
+						name: 'Khentii',
+						value: 'MN-039',
+					},
+					{
+						name: "Khersons'ka oblast",
+						value: 'UA-65',
+					},
+					{
+						name: "Khmel'nyts'ka oblast",
+						value: 'UA-68',
+					},
+					{
+						name: 'Khomas Region',
+						value: 'NA-KH',
+					},
+					{
+						name: 'Khon Kaen',
+						value: 'TH-40',
+					},
+					{
+						name: 'Khorasan Razavi',
+						value: 'IR-30',
+					},
+					{
+						name: 'Khorezm Province',
+						value: 'UZ-XO',
+					},
+					{
+						name: 'Khost',
+						value: 'AF-KHO',
+					},
+					{
+						name: 'Khovd',
+						value: 'MN-043',
+					},
+					{
+						name: 'Khulna Division',
+						value: 'BD-D',
+					},
+					{
+						name: 'Khuvsgul',
+						value: 'MN-041',
+					},
+					{
+						name: 'Khuzestan',
+						value: 'IR-10',
+					},
+					{
+						name: 'Khyber Pakhtunkhwa',
+						value: 'PK-KP',
+					},
+					{
+						name: 'Kidal',
+						value: 'ML-8',
+					},
+					{
+						name: 'Kie-Ntem',
+						value: 'GQ-KN',
+					},
+					{
+						name: 'Kien Giang',
+						value: 'VN-47',
+					},
+					{
+						name: 'Kigali',
+						value: 'RW-01',
+					},
+					{
+						name: 'Kigoma',
+						value: 'TZ-08',
+					},
+					{
+						name: 'Kili Island',
+						value: 'MH-KIL',
+					},
+					{
+						name: 'Kilimanjaro',
+						value: 'TZ-09',
+					},
+					{
+						name: 'Kilis',
+						value: 'TR-79',
+					},
+					{
+						name: 'Kindia',
+						value: 'GN-D',
+					},
+					{
+						name: 'Kingston Parish',
+						value: 'JM-01',
+					},
+					{
+						name: 'Kinshasa',
+						value: 'CD-KN',
+					},
+					{
+						name: 'Kiribati',
+						value: 'KI',
+					},
+					{
+						name: 'Kirkuk',
+						value: 'IQ-TS',
+					},
+					{
+						name: 'Kirov Oblast',
+						value: 'RU-KIR',
+					},
+					{
+						name: "Kirovohrads'ka oblast",
+						value: 'UA-35',
+					},
+					{
+						name: 'Kirundo',
+						value: 'BI-KI',
+					},
+					{
+						name: 'Kırıkkale',
+						value: 'TR-71',
+					},
+					{
+						name: 'Kırklareli',
+						value: 'TR-39',
+					},
+					{
+						name: 'Kırşehir',
+						value: 'TR-40',
+					},
+					{
+						name: 'Klaipėda County',
+						value: 'LT-KL',
+					},
+					{
+						name: 'Knoxville TN',
+						value: '557',
+					},
+					{
+						name: 'Kocaeli',
+						value: 'TR-41',
+					},
+					{
 						name: 'Kocēni Municipality',
 						value: 'LV-045',
+					},
+					{
+						name: 'Kochi Prefecture',
+						value: 'JP-39',
+					},
+					{
+						name: 'Kogi',
+						value: 'NG-KO',
+					},
+					{
+						name: 'Koh Kong',
+						value: 'KH-9',
+					},
+					{
+						name: 'Kohgiluyeh Va Boyer Ahmad',
+						value: 'IR-18',
 					},
 					{
 						name: 'Koknese Municipality',
 						value: 'LV-046',
 					},
 					{
+						name: 'Kolasin',
+						value: 'ME-09',
+					},
+					{
+						name: 'Kolda Region',
+						value: 'SN-KD',
+					},
+					{
+						name: 'Komárom-Esztergom',
+						value: 'HU-KE',
+					},
+					{
+						name: 'Komi Republic',
+						value: 'RU-KO',
+					},
+					{
+						name: 'Kon Tum Province',
+						value: 'VN-28',
+					},
+					{
+						name: 'Konya',
+						value: 'TR-42',
+					},
+					{
+						name: 'Koprivnica-Križevci County',
+						value: 'HR-06',
+					},
+					{
+						name: 'Korca',
+						value: 'AL-06',
+					},
+					{
+						name: 'Koror',
+						value: 'PW-150',
+					},
+					{
+						name: 'Košice Region',
+						value: 'SK-KI',
+					},
+					{
+						name: 'Kosovo',
+						value: 'XK',
+					},
+					{
+						name: 'Kosrae',
+						value: 'FM-KSA',
+					},
+					{
+						name: 'Kostanay Region',
+						value: 'KZ-KUS',
+					},
+					{
+						name: 'Kostroma Oblast',
+						value: 'RU-KOS',
+					},
+					{
+						name: 'Kotayk Province',
+						value: 'AM-KT',
+					},
+					{
+						name: 'Kotor',
+						value: 'ME-10',
+					},
+					{
+						name: 'Kouffo',
+						value: 'BJ-KO',
+					},
+					{
+						name: 'Kouilou',
+						value: 'CG-5',
+					},
+					{
+						name: 'Koulikoro',
+						value: 'ML-2',
+					},
+					{
+						name: 'Krabi',
+						value: 'TH-81',
+					},
+					{
+						name: 'Krapina-Zagorje County',
+						value: 'HR-02',
+					},
+					{
 						name: 'Krāslava Municipality',
 						value: 'LV-047',
+					},
+					{
+						name: 'Krasnodar Krai',
+						value: 'RU-KDA',
+					},
+					{
+						name: 'Krasnoyarsk Krai',
+						value: 'RU-KYA',
+					},
+					{
+						name: 'Kratie',
+						value: 'KH-10',
 					},
 					{
 						name: 'Krimulda Municipality',
 						value: 'LV-048',
 					},
 					{
+						name: 'Kronoberg County',
+						value: 'SE-G',
+					},
+					{
 						name: 'Krustpils Municipality',
 						value: 'LV-049',
 					},
 					{
+						name: 'Kujalleq',
+						value: 'GL-KU',
+					},
+					{
+						name: 'Kukës County',
+						value: 'AL-07',
+					},
+					{
 						name: 'Kuldīga Municipality',
 						value: 'LV-050',
+					},
+					{
+						name: 'Kumamoto Prefecture',
+						value: 'JP-43',
+					},
+					{
+						name: 'Kunar',
+						value: 'AF-KNR',
+					},
+					{
+						name: 'Kunduz',
+						value: 'AF-KDZ',
+					},
+					{
+						name: 'Kunene Region',
+						value: 'NA-KU',
+					},
+					{
+						name: 'Kurdistan',
+						value: 'IR-16',
+					},
+					{
+						name: 'Kurgan Oblast',
+						value: 'RU-KGN',
+					},
+					{
+						name: 'Kursk Oblast',
+						value: 'RU-KRS',
+					},
+					{
+						name: 'Kütahya',
+						value: 'TR-43',
+					},
+					{
+						name: 'Kuwait',
+						value: 'KW',
+					},
+					{
+						name: 'Kuyavian-Pomeranian Voivodeship',
+						value: 'PL-KP',
+					},
+					{
+						name: 'Kvemo Kartli',
+						value: 'GE-KK',
+					},
+					{
+						name: 'Kwajalein Atoll',
+						value: 'MH-KWA',
+					},
+					{
+						name: 'Kwara',
+						value: 'NG-KW',
+					},
+					{
+						name: 'KwaZulu-Natal',
+						value: 'ZA-NL',
+					},
+					{
+						name: 'Kweneng',
+						value: 'BW-KW',
+					},
+					{
+						name: 'Kyiv city',
+						value: 'UA-30',
+					},
+					{
+						name: "Kyivs'ka oblast",
+						value: 'UA-32',
+					},
+					{
+						name: 'Kymenlaakso',
+						value: 'FI-09',
+					},
+					{
+						name: 'Kyoto Prefecture',
+						value: 'JP-26',
+					},
+					{
+						name: 'Kyrgyzstan',
+						value: 'KG',
+					},
+					{
+						name: 'Kyustendil Province',
+						value: 'BG-10',
+					},
+					{
+						name: 'Kyzylorda Province',
+						value: 'KZ-KZY',
+					},
+					{
+						name: 'La Altagracia Province',
+						value: 'DO-11',
+					},
+					{
+						name: 'La Crosse-Eau Claire WI',
+						value: '702',
+					},
+					{
+						name: 'La Digue',
+						value: 'SC-15',
+					},
+					{
+						name: 'La Guajira',
+						value: 'CO-LAG',
+					},
+					{
+						name: 'La Libertad (PE-LAL)',
+						value: 'PE-LAL',
+					},
+					{
+						name: 'La Libertad (SV-LI)',
+						value: 'SV-LI',
+					},
+					{
+						name: 'La Manouba',
+						value: 'TN-14',
+					},
+					{
+						name: 'La Massana',
+						value: 'AD-04',
+					},
+					{
+						name: 'La Pampa Province',
+						value: 'AR-L',
+					},
+					{
+						name: 'La Paz (HN-LP)',
+						value: 'HN-LP',
+					},
+					{
+						name: 'La Paz (SV-PA)',
+						value: 'SV-PA',
+					},
+					{
+						name: 'La Paz Department',
+						value: 'BO-L',
+					},
+					{
+						name: 'La Rioja',
+						value: 'ES-RI',
+					},
+					{
+						name: 'La Rioja Province',
+						value: 'AR-F',
+					},
+					{
+						name: 'La Riviere Anglaise',
+						value: 'SC-16',
+					},
+					{
+						name: 'La Romana Province',
+						value: 'DO-12',
+					},
+					{
+						name: 'La Union',
+						value: 'SV-UN',
+					},
+					{
+						name: 'La Vega Province',
+						value: 'DO-13',
+					},
+					{
+						name: 'Lääne County',
+						value: 'EE-57',
+					},
+					{
+						name: 'Lääne-Viru County',
+						value: 'EE-59',
+					},
+					{
+						name: 'Laayoune-Boujdour-Sakia El Hamra',
+						value: 'MA-15',
+					},
+					{
+						name: 'Labé',
+						value: 'GN-L',
+					},
+					{
+						name: 'Laborie',
+						value: 'LC-07',
+					},
+					{
+						name: 'Labuan Federal Territory',
+						value: 'MY-15',
+					},
+					{
+						name: 'Lac',
+						value: 'TD-LC',
+					},
+					{
+						name: 'Lacs',
+						value: 'CI-07',
+					},
+					{
+						name: 'Lae Atoll',
+						value: 'MH-LAE',
+					},
+					{
+						name: 'Lafayette IN',
+						value: '582',
+					},
+					{
+						name: 'Lafayette LA',
+						value: '642',
+					},
+					{
+						name: 'Laghman',
+						value: 'AF-LAG',
+					},
+					{
+						name: 'Laghouat Province',
+						value: 'DZ-03',
+					},
+					{
+						name: 'Lagos',
+						value: 'NG-LA',
+					},
+					{
+						name: 'Lagunes',
+						value: 'CI-01',
+					},
+					{
+						name: 'Lahij',
+						value: 'YE-LA',
+					},
+					{
+						name: 'Lai Chau',
+						value: 'VN-01',
+					},
+					{
+						name: 'Lake Charles LA',
+						value: '643',
+					},
+					{
+						name: 'Lakshadweep',
+						value: 'IN-LD',
+					},
+					{
+						name: 'Lâm Đồng',
+						value: 'VN-35',
+					},
+					{
+						name: 'Lambayeque',
+						value: 'PE-LAM',
+					},
+					{
+						name: 'Lampang',
+						value: 'TH-52',
+					},
+					{
+						name: 'Lamphun',
+						value: 'TH-51',
+					},
+					{
+						name: 'Lampung',
+						value: 'ID-LA',
+					},
+					{
+						name: 'Lang Son Province',
+						value: 'VN-09',
+					},
+					{
+						name: 'Languedoc-Roussillon',
+						value: 'FR-K',
+					},
+					{
+						name: 'Lansing MI',
+						value: '551',
+					},
+					{
+						name: 'Lao Cai',
+						value: 'VN-02',
+					},
+					{
+						name: 'Laos',
+						value: 'LA',
+					},
+					{
+						name: 'Lapland',
+						value: 'FI-10',
+					},
+					{
+						name: 'Lara',
+						value: 'VE-K',
+					},
+					{
+						name: 'Laredo TX',
+						value: '749',
+					},
+					{
+						name: 'Larnaca',
+						value: 'CY-03',
+					},
+					{
+						name: 'Las Tunas',
+						value: 'CU-10',
+					},
+					{
+						name: 'Las Vegas NV',
+						value: '839',
+					},
+					{
+						name: 'Latakia Governorate',
+						value: 'SY-LA',
+					},
+					{
+						name: 'Latvia',
+						value: 'LV',
+					},
+					{
+						name: 'Lautem',
+						value: 'TL-LA',
+					},
+					{
+						name: 'Lavalleja Department',
+						value: 'UY-LA',
+					},
+					{
+						name: 'Lazio',
+						value: 'IT-62',
+					},
+					{
+						name: 'Lebanon',
+						value: 'LB',
+					},
+					{
+						name: 'Lebap',
+						value: 'TM-L',
+					},
+					{
+						name: 'Leiria District',
+						value: 'PT-10',
+					},
+					{
+						name: 'Lekoumou',
+						value: 'CG-2',
+					},
+					{
+						name: 'Lempira',
+						value: 'HN-LE',
+					},
+					{
+						name: 'Leningrad Oblast',
+						value: 'RU-LEN',
+					},
+					{
+						name: 'Leon',
+						value: 'NI-LE',
+					},
+					{
+						name: 'Leova',
+						value: 'MD-LE',
+					},
+					{
+						name: 'Leribe',
+						value: 'LS-C',
+					},
+					{
+						name: 'Les Mamelles',
+						value: 'SC-24',
+					},
+					{
+						name: 'Lesotho',
+						value: 'LS',
+					},
+					{
+						name: 'Lesser Poland Voivodeship',
+						value: 'PL-MA',
+					},
+					{
+						name: 'Lexington KY',
+						value: '541',
+					},
+					{
+						name: 'Lezhë County',
+						value: 'AL-08',
+					},
+					{
+						name: 'Lhuntse',
+						value: 'BT-44',
+					},
+					{
+						name: 'Liaoning',
+						value: 'CN-21',
+					},
+					{
+						name: 'Lib Island',
+						value: 'MH-LIB',
+					},
+					{
+						name: 'Liberec Region',
+						value: 'CZ-LI',
+					},
+					{
+						name: 'Liberia',
+						value: 'LR',
+					},
+					{
+						name: 'Libya',
+						value: 'LY',
+					},
+					{
+						name: 'Liechtenstein',
+						value: 'LI',
 					},
 					{
 						name: 'Lielvārde Municipality',
@@ -6085,1568 +6883,576 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'LV-055',
 					},
 					{
-						name: 'Limbaži Municipality',
-						value: 'LV-054',
+						name: 'Liguria',
+						value: 'IT-42',
 					},
 					{
-						name: 'Līvāni Municipality',
-						value: 'LV-056',
-					},
-					{
-						name: 'Lubāna Municipality',
-						value: 'LV-057',
-					},
-					{
-						name: 'Ludza Municipality',
-						value: 'LV-058',
-					},
-					{
-						name: 'Madona Municipality',
-						value: 'LV-059',
-					},
-					{
-						name: 'Mālpils Municipality',
-						value: 'LV-061',
-					},
-					{
-						name: 'Mārupe Municipality',
-						value: 'LV-062',
-					},
-					{
-						name: 'Mazsalaca Municipality',
-						value: 'LV-060',
-					},
-					{
-						name: 'Mērsrags Municipality',
-						value: 'LV-063',
-					},
-					{
-						name: 'Naukšēni Municipality',
-						value: 'LV-064',
-					},
-					{
-						name: 'Nereta Municipality',
-						value: 'LV-065',
-					},
-					{
-						name: 'Nīca Municipality',
-						value: 'LV-066',
-					},
-					{
-						name: 'Ogre Municipality',
-						value: 'LV-067',
-					},
-					{
-						name: 'Olaines novads',
-						value: 'LV-068',
-					},
-					{
-						name: 'Ozolnieki Municipality',
-						value: 'LV-069',
-					},
-					{
-						name: 'Pārgauja Municipality',
-						value: 'LV-070',
-					},
-					{
-						name: 'Pāvilosta Municipality',
-						value: 'LV-071',
-					},
-					{
-						name: 'Pļaviņas Municipality',
-						value: 'LV-072',
-					},
-					{
-						name: 'Preiļi Municipality',
-						value: 'LV-073',
-					},
-					{
-						name: 'Priekule Municipality',
-						value: 'LV-074',
-					},
-					{
-						name: 'Priekuļi Municipality',
-						value: 'LV-075',
-					},
-					{
-						name: 'Rauna Municipality',
-						value: 'LV-076',
-					},
-					{
-						name: 'Rēzekne Municipality',
-						value: 'LV-077',
-					},
-					{
-						name: 'Rēzekne Municipality',
-						value: 'LV-REZ',
-					},
-					{
-						name: 'Riebiņi Municipality',
-						value: 'LV-078',
-					},
-					{
-						name: 'Riga',
-						value: 'LV-RIX',
-					},
-					{
-						name: 'Roja Municipality',
-						value: 'LV-079',
-					},
-					{
-						name: 'Ropaži Municipality',
-						value: 'LV-080',
-					},
-					{
-						name: 'Rucava Municipality',
-						value: 'LV-081',
-					},
-					{
-						name: 'Rugāji Municipality',
-						value: 'LV-082',
-					},
-					{
-						name: 'Rūjiena Municipality',
-						value: 'LV-084',
-					},
-					{
-						name: 'Rundāle Municipality',
-						value: 'LV-083',
-					},
-					{
-						name: 'Sala Municipality',
-						value: 'LV-085',
-					},
-					{
-						name: 'Salacgrīva Municipality',
-						value: 'LV-086',
-					},
-					{
-						name: 'Salaspils Municipality',
-						value: 'LV-087',
-					},
-					{
-						name: 'Saldus Municipality',
-						value: 'LV-088',
-					},
-					{
-						name: 'Saulkrasti Municipality',
-						value: 'LV-089',
-					},
-					{
-						name: 'Sēja Municipality',
-						value: 'LV-090',
-					},
-					{
-						name: 'Sigulda Municipality',
-						value: 'LV-091',
-					},
-					{
-						name: 'Skrīveri Municipality',
-						value: 'LV-092',
-					},
-					{
-						name: 'Skrunda Municipality',
-						value: 'LV-093',
-					},
-					{
-						name: 'Smiltene Municipality',
-						value: 'LV-094',
-					},
-					{
-						name: 'Stopiņi Municipality',
-						value: 'LV-095',
-					},
-					{
-						name: 'Strenči Municipality',
-						value: 'LV-096',
-					},
-					{
-						name: 'Talsi Municipality',
-						value: 'LV-097',
-					},
-					{
-						name: 'Tērvete Municipality',
-						value: 'LV-098',
-					},
-					{
-						name: 'Tukums Municipality',
-						value: 'LV-099',
-					},
-					{
-						name: 'Vaiņode Municipality',
-						value: 'LV-100',
-					},
-					{
-						name: 'Valka Municipality',
-						value: 'LV-101',
-					},
-					{
-						name: 'Valmiera',
-						value: 'LV-VMR',
-					},
-					{
-						name: 'Varakļāni Municipality',
-						value: 'LV-102',
-					},
-					{
-						name: 'Vārkava Municipality',
-						value: 'LV-103',
-					},
-					{
-						name: 'Vecpiebalga Municipality',
-						value: 'LV-104',
-					},
-					{
-						name: 'Vecumnieki Municipality',
-						value: 'LV-105',
-					},
-					{
-						name: 'Ventspils',
-						value: 'LV-VEN',
-					},
-					{
-						name: 'Ventspils Municipality',
-						value: 'LV-106',
-					},
-					{
-						name: 'Viesīte Municipality',
-						value: 'LV-107',
-					},
-					{
-						name: 'Viļaka Municipality',
-						value: 'LV-108',
-					},
-					{
-						name: 'Viļāni Municipality',
-						value: 'LV-109',
-					},
-					{
-						name: 'Zilupe Municipality',
-						value: 'LV-110',
-					},
-					{
-						name: 'Lebanon',
-						value: 'LB',
-					},
-					{
-						name: 'Beirut',
-						value: 'LB-BA',
-					},
-					{
-						name: 'Beqaa',
-						value: 'LB-BI',
-					},
-					{
-						name: 'Mount Lebanon',
-						value: 'LB-JL',
-					},
-					{
-						name: 'Nabatiyeh',
-						value: 'LB-NA',
-					},
-					{
-						name: 'North',
-						value: 'LB-AS',
-					},
-					{
-						name: 'South',
-						value: 'LB-JA',
-					},
-					{
-						name: 'Lesotho',
-						value: 'LS',
-					},
-					{
-						name: 'Berea',
-						value: 'LS-D',
-					},
-					{
-						name: 'Butha-Buthe',
-						value: 'LS-B',
-					},
-					{
-						name: 'Leribe',
-						value: 'LS-C',
-					},
-					{
-						name: 'Mafeteng',
-						value: 'LS-E',
-					},
-					{
-						name: 'Maseru',
-						value: 'LS-A',
-					},
-					{
-						name: "Mohale's Hoek",
-						value: 'LS-F',
-					},
-					{
-						name: 'Mokhotlong',
-						value: 'LS-J',
-					},
-					{
-						name: "Qacha's Nek",
-						value: 'LS-H',
-					},
-					{
-						name: 'Quthing',
-						value: 'LS-G',
-					},
-					{
-						name: 'Thaba-Tseka',
-						value: 'LS-K',
-					},
-					{
-						name: 'Liberia',
-						value: 'LR',
-					},
-					{
-						name: 'Bomi',
-						value: 'LR-BM',
-					},
-					{
-						name: 'Bong',
-						value: 'LR-BG',
-					},
-					{
-						name: 'Gbarpolu',
-						value: 'LR-GP',
-					},
-					{
-						name: 'Grand Bassa',
-						value: 'LR-GB',
-					},
-					{
-						name: 'Grand Cape Mount',
-						value: 'LR-CM',
-					},
-					{
-						name: 'Grand Gedeh',
-						value: 'LR-GG',
-					},
-					{
-						name: 'Grand Kru',
-						value: 'LR-GK',
-					},
-					{
-						name: 'Lofa',
-						value: 'LR-LO',
-					},
-					{
-						name: 'Margibi',
-						value: 'LR-MG',
-					},
-					{
-						name: 'Maryland',
-						value: 'LR-MY',
-					},
-					{
-						name: 'Montserrado',
-						value: 'LR-MO',
-					},
-					{
-						name: 'Nimba',
-						value: 'LR-NI',
-					},
-					{
-						name: 'River Cess',
-						value: 'LR-RI',
-					},
-					{
-						name: 'River Gee',
-						value: 'LR-RG',
-					},
-					{
-						name: 'Sinoe',
-						value: 'LR-SI',
-					},
-					{
-						name: 'Libya',
-						value: 'LY',
-					},
-					{
-						name: 'Al Butnan',
-						value: 'LY-BU',
-					},
-					{
-						name: 'Al Jabal al Akhdar',
-						value: 'LY-JA',
-					},
-					{
-						name: 'Al Jabal al Gharbi',
-						value: 'LY-JG',
-					},
-					{
-						name: 'Al Jafara',
-						value: 'LY-JI',
-					},
-					{
-						name: 'Al Jufrah',
-						value: 'LY-JU',
-					},
-					{
-						name: 'Al Kufrah',
-						value: 'LY-KF',
-					},
-					{
-						name: 'Al Marj',
-						value: 'LY-MJ',
-					},
-					{
-						name: 'Al Murqub',
-						value: 'LY-MB',
-					},
-					{
-						name: 'Al Wahat',
-						value: 'LY-WA',
-					},
-					{
-						name: 'An Nuqat al Khams',
-						value: 'LY-NQ',
-					},
-					{
-						name: 'Az Zawiyah',
-						value: 'LY-ZA',
-					},
-					{
-						name: 'Banghazi',
-						value: 'LY-BA',
-					},
-					{
-						name: 'Darnah',
-						value: 'LY-DR',
-					},
-					{
-						name: 'Ghat',
-						value: 'LY-GT',
-					},
-					{
-						name: 'Misratah',
-						value: 'LY-MI',
-					},
-					{
-						name: 'Murzuq',
-						value: 'LY-MQ',
-					},
-					{
-						name: 'Nalut',
-						value: 'LY-NL',
-					},
-					{
-						name: 'Sabha',
-						value: 'LY-SB',
-					},
-					{
-						name: 'Surt',
-						value: 'LY-SR',
-					},
-					{
-						name: 'Tripoli',
-						value: 'LY-TB',
-					},
-					{
-						name: 'Wadi Al Hayaa',
-						value: 'LY-WD',
-					},
-					{
-						name: 'Wadi Ash-Shati',
-						value: 'LY-WS',
-					},
-					{
-						name: 'Liechtenstein',
-						value: 'LI',
-					},
-					{
-						name: 'Balzers',
-						value: 'LI-01',
-					},
-					{
-						name: 'Eschen',
-						value: 'LI-02',
-					},
-					{
-						name: 'Gamprin',
-						value: 'LI-03',
-					},
-					{
-						name: 'Mauren',
-						value: 'LI-04',
-					},
-					{
-						name: 'Planken',
-						value: 'LI-05',
-					},
-					{
-						name: 'Ruggell',
-						value: 'LI-06',
-					},
-					{
-						name: 'Schaan',
-						value: 'LI-07',
-					},
-					{
-						name: 'Schellenberg',
-						value: 'LI-08',
-					},
-					{
-						name: 'Triesen',
-						value: 'LI-09',
-					},
-					{
-						name: 'Triesenberg',
-						value: 'LI-10',
-					},
-					{
-						name: 'Vaduz',
-						value: 'LI-11',
-					},
-					{
-						name: 'Lithuania',
-						value: 'LT',
-					},
-					{
-						name: 'Alytus County',
-						value: 'LT-AL',
-					},
-					{
-						name: 'Kaunas County',
-						value: 'LT-KU',
-					},
-					{
-						name: 'Klaipėda County',
-						value: 'LT-KL',
-					},
-					{
-						name: 'Marijampolė County',
-						value: 'LT-MR',
-					},
-					{
-						name: 'Panevėžys County',
-						value: 'LT-PN',
-					},
-					{
-						name: 'Šiauliai County',
-						value: 'LT-SA',
-					},
-					{
-						name: 'Tauragė County',
-						value: 'LT-TA',
-					},
-					{
-						name: 'Telšiai County',
-						value: 'LT-TE',
-					},
-					{
-						name: 'Utena County',
-						value: 'LT-UT',
-					},
-					{
-						name: 'Vilnius County',
-						value: 'LT-VL',
-					},
-					{
-						name: 'Luxembourg',
-						value: 'LU',
-					},
-					{
-						name: 'Diekirch',
-						value: 'LU-D',
-					},
-					{
-						name: 'Grevenmacher',
-						value: 'LU-G',
-					},
-					{
-						name: 'Luxembourg District',
-						value: 'LU-L',
-					},
-					{
-						name: 'Macao',
-						value: 'MO',
-					},
-					{
-						name: 'Madagascar',
-						value: 'MG',
-					},
-					{
-						name: 'Antananarivo',
-						value: 'MG-T',
-					},
-					{
-						name: 'Antsiranana',
-						value: 'MG-D',
-					},
-					{
-						name: 'Fianarantsoa',
-						value: 'MG-F',
-					},
-					{
-						name: 'Mahajanga',
-						value: 'MG-M',
-					},
-					{
-						name: 'Toamasina',
-						value: 'MG-A',
-					},
-					{
-						name: 'Toliara',
-						value: 'MG-U',
-					},
-					{
-						name: 'Malawi',
-						value: 'MW',
-					},
-					{
-						name: 'Central Region',
-						value: 'MW-C',
-					},
-					{
-						name: 'Northern Region',
-						value: 'MW-N',
-					},
-					{
-						name: 'Southern Region',
-						value: 'MW-S',
-					},
-					{
-						name: 'Malaysia',
-						value: 'MY',
-					},
-					{
-						name: 'Federal Territory of Kuala Lumpur',
-						value: 'MY-14',
-					},
-					{
-						name: 'Johor',
-						value: 'MY-01',
-					},
-					{
-						name: 'Kedah',
-						value: 'MY-02',
-					},
-					{
-						name: 'Kelantan',
-						value: 'MY-03',
-					},
-					{
-						name: 'Labuan Federal Territory',
-						value: 'MY-15',
-					},
-					{
-						name: 'Malacca',
-						value: 'MY-04',
-					},
-					{
-						name: 'Negeri Sembilan',
-						value: 'MY-05',
-					},
-					{
-						name: 'Pahang',
-						value: 'MY-06',
-					},
-					{
-						name: 'Penang',
-						value: 'MY-07',
-					},
-					{
-						name: 'Perak',
-						value: 'MY-08',
-					},
-					{
-						name: 'Perlis',
-						value: 'MY-09',
-					},
-					{
-						name: 'Putrajaya',
-						value: 'MY-16',
-					},
-					{
-						name: 'Sabah',
-						value: 'MY-12',
-					},
-					{
-						name: 'Sarawak',
-						value: 'MY-13',
-					},
-					{
-						name: 'Selangor',
-						value: 'MY-10',
-					},
-					{
-						name: 'Terengganu',
-						value: 'MY-11',
-					},
-					{
-						name: 'Maldives',
-						value: 'MV',
-					},
-					{
-						name: 'Central Province',
-						value: 'MV-CE',
-					},
-					{
-						name: 'Male',
-						value: 'MV-MLE',
-					},
-					{
-						name: 'North Central Province',
-						value: 'MV-NC',
-					},
-					{
-						name: 'North Province',
-						value: 'MV-NO',
-					},
-					{
-						name: 'South Central Province',
-						value: 'MV-SC',
-					},
-					{
-						name: 'South Province',
-						value: 'MV-SU',
-					},
-					{
-						name: 'Upper North Province',
-						value: 'MV-UN',
-					},
-					{
-						name: 'Upper South Province',
-						value: 'MV-US',
-					},
-					{
-						name: 'Mali',
-						value: 'ML',
-					},
-					{
-						name: 'Bamako',
-						value: 'ML-BKO',
-					},
-					{
-						name: 'Gao',
-						value: 'ML-7',
-					},
-					{
-						name: 'Kayes',
-						value: 'ML-1',
-					},
-					{
-						name: 'Kidal',
-						value: 'ML-8',
-					},
-					{
-						name: 'Koulikoro',
-						value: 'ML-2',
-					},
-					{
-						name: 'Mopti',
-						value: 'ML-5',
-					},
-					{
-						name: 'Segou',
-						value: 'ML-4',
-					},
-					{
-						name: 'Sikasso',
-						value: 'ML-3',
-					},
-					{
-						name: 'Tombouctou',
-						value: 'ML-6',
-					},
-					{
-						name: 'Malta',
-						value: 'MT',
-					},
-					{
-						name: 'Marshall Islands',
-						value: 'MH',
-					},
-					{
-						name: 'Ailinglaplap Atoll',
-						value: 'MH-ALL',
-					},
-					{
-						name: 'Ailuk Atoll',
-						value: 'MH-ALK',
-					},
-					{
-						name: 'Arno Atoll',
-						value: 'MH-ARN',
-					},
-					{
-						name: 'Aur Atoll',
-						value: 'MH-AUR',
-					},
-					{
-						name: 'Ebon',
-						value: 'MH-EBO',
-					},
-					{
-						name: 'Enewetak Atoll',
-						value: 'MH-ENI',
-					},
-					{
-						name: 'Jabat Island',
-						value: 'MH-JAB',
-					},
-					{
-						name: 'Jaluit Atoll',
-						value: 'MH-JAL',
-					},
-					{
-						name: 'Kili Island',
-						value: 'MH-KIL',
-					},
-					{
-						name: 'Kwajalein Atoll',
-						value: 'MH-KWA',
-					},
-					{
-						name: 'Lae Atoll',
-						value: 'MH-LAE',
-					},
-					{
-						name: 'Lib Island',
-						value: 'MH-LIB',
+						name: 'Lika-Senj County',
+						value: 'HR-09',
 					},
 					{
 						name: 'Likiep Atoll',
 						value: 'MH-LIK',
 					},
 					{
+						name: 'Likouala',
+						value: 'CG-7',
+					},
+					{
+						name: 'Lima OH',
+						value: '558',
+					},
+					{
+						name: 'Lima Region',
+						value: 'PE-LIM',
+					},
+					{
+						name: 'Limassol',
+						value: 'CY-02',
+					},
+					{
+						name: 'Limbaži Municipality',
+						value: 'LV-054',
+					},
+					{
+						name: 'Limburg',
+						value: 'NL-LI',
+					},
+					{
+						name: 'Limón Province',
+						value: 'CR-L',
+					},
+					{
+						name: 'Limousin',
+						value: 'FR-L',
+					},
+					{
+						name: 'Limpopo',
+						value: 'ZA-LP',
+					},
+					{
+						name: 'Lincoln & Hastings-Kearney NE',
+						value: '722',
+					},
+					{
+						name: 'Lindi',
+						value: 'TZ-12',
+					},
+					{
+						name: 'Line Islands',
+						value: 'KI-L',
+					},
+					{
+						name: 'Lipetsk Oblast',
+						value: 'RU-LIP',
+					},
+					{
+						name: 'Liquica',
+						value: 'TL-LI',
+					},
+					{
+						name: 'Lisbon',
+						value: 'PT-11',
+					},
+					{
+						name: 'Lithuania',
+						value: 'LT',
+					},
+					{
+						name: 'Litoral',
+						value: 'GQ-LI',
+					},
+					{
+						name: 'Little Rock-Pine Bluff AR',
+						value: '693',
+					},
+					{
+						name: 'Littoral',
+						value: 'BJ-LI',
+					},
+					{
+						name: 'Līvāni Municipality',
+						value: 'LV-056',
+					},
+					{
+						name: 'Lobaye',
+						value: 'CF-LB',
+					},
+					{
+						name: 'Łódź Voivodeship',
+						value: 'PL-LD',
+					},
+					{
+						name: 'Loei',
+						value: 'TH-42',
+					},
+					{
+						name: 'Lofa',
+						value: 'LR-LO',
+					},
+					{
+						name: 'Logar',
+						value: 'AF-LOG',
+					},
+					{
+						name: 'Logone Occidental',
+						value: 'TD-LO',
+					},
+					{
+						name: 'Logone Oriental',
+						value: 'TD-LR',
+					},
+					{
+						name: 'Loja',
+						value: 'EC-L',
+					},
+					{
+						name: 'Lombardy',
+						value: 'IT-25',
+					},
+					{
+						name: 'Long An Province',
+						value: 'VN-41',
+					},
+					{
+						name: 'Long Island',
+						value: 'BS-LI',
+					},
+					{
+						name: 'Lopburi',
+						value: 'TH-16',
+					},
+					{
+						name: 'Lorestan',
+						value: 'IR-20',
+					},
+					{
+						name: 'Loreto',
+						value: 'PE-LOR',
+					},
+					{
+						name: 'Lori Province',
+						value: 'AM-LO',
+					},
+					{
+						name: 'Lorraine',
+						value: 'FR-M',
+					},
+					{
+						name: 'Los Angeles CA',
+						value: '803',
+					},
+					{
+						name: 'Los Lagos Region',
+						value: 'CL-LL',
+					},
+					{
+						name: 'Los Ríos Province',
+						value: 'EC-R',
+					},
+					{
+						name: 'Los Ríos Region',
+						value: 'CL-LR',
+					},
+					{
+						name: 'Los Santos Province',
+						value: 'PA-7',
+					},
+					{
+						name: 'Louangphabang',
+						value: 'LA-LP',
+					},
+					{
+						name: 'Louga Region',
+						value: 'SN-LG',
+					},
+					{
+						name: 'Louisiana',
+						value: 'US-LA',
+					},
+					{
+						name: 'Louisville KY',
+						value: '529',
+					},
+					{
+						name: 'Lovec',
+						value: 'BG-11',
+					},
+					{
+						name: 'Lower Austria',
+						value: 'AT-3',
+					},
+					{
+						name: 'Lower Normandy',
+						value: 'FR-P',
+					},
+					{
+						name: 'Lower River',
+						value: 'GM-L',
+					},
+					{
+						name: 'Lower Saxony',
+						value: 'DE-NI',
+					},
+					{
+						name: 'Lower Silesian Voivodeship',
+						value: 'PL-DS',
+					},
+					{
+						name: 'Luanda Province',
+						value: 'AO-LUA',
+					},
+					{
+						name: 'Luang Namtha',
+						value: 'LA-LM',
+					},
+					{
+						name: 'Luapula',
+						value: 'ZM-04',
+					},
+					{
+						name: 'Lubāna Municipality',
+						value: 'LV-057',
+					},
+					{
+						name: 'Lubbock TX',
+						value: '651',
+					},
+					{
+						name: 'Lublin Voivodeship',
+						value: 'PL-LU',
+					},
+					{
+						name: 'Lubombo',
+						value: 'SZ-LU',
+					},
+					{
+						name: 'Lubusz Voivodeship',
+						value: 'PL-LB',
+					},
+					{
+						name: 'Lucerne',
+						value: 'CH-LU',
+					},
+					{
+						name: 'Ludza Municipality',
+						value: 'LV-058',
+					},
+					{
+						name: "Luhans'ka oblast",
+						value: 'UA-09',
+					},
+					{
+						name: 'Lunda Norte',
+						value: 'AO-LNO',
+					},
+					{
+						name: 'Lunda Sul Province',
+						value: 'AO-LSU',
+					},
+					{
+						name: 'Lusaka',
+						value: 'ZM-09',
+					},
+					{
+						name: 'Luxembourg',
+						value: 'LU',
+					},
+					{
+						name: 'Luxembourg District',
+						value: 'LU-L',
+					},
+					{
+						name: 'Luxor Governorate',
+						value: 'EG-LX',
+					},
+					{
+						name: 'Lviv Oblast',
+						value: 'UA-46',
+					},
+					{
+						name: "M'Sila Province",
+						value: 'DZ-28',
+					},
+					{
+						name: "Ma'an Governorate",
+						value: 'JO-MN',
+					},
+					{
+						name: "Ma'rib",
+						value: 'YE-MA',
+					},
+					{
+						name: 'Macao',
+						value: 'MO',
+					},
+					{
+						name: 'Macon GA',
+						value: '503',
+					},
+					{
+						name: 'Madaba Governorate',
+						value: 'JO-MD',
+					},
+					{
+						name: 'Madagascar',
+						value: 'MG',
+					},
+					{
+						name: 'Madang Province',
+						value: 'PG-MPM',
+					},
+					{
+						name: 'Madeira',
+						value: 'PT-30',
+					},
+					{
+						name: 'Madhya Pradesh',
+						value: 'IN-MP',
+					},
+					{
+						name: 'Madinat ash Shamal',
+						value: 'QA-MS',
+					},
+					{
+						name: 'Madison WI',
+						value: '669',
+					},
+					{
+						name: 'Madona Municipality',
+						value: 'LV-059',
+					},
+					{
+						name: 'Madre de Dios',
+						value: 'PE-MDD',
+					},
+					{
+						name: 'Madriz',
+						value: 'NI-MD',
+					},
+					{
+						name: 'Mae Hong Son',
+						value: 'TH-58',
+					},
+					{
+						name: 'Mafeteng',
+						value: 'LS-E',
+					},
+					{
+						name: 'Mafraq Governorate',
+						value: 'JO-MA',
+					},
+					{
+						name: 'Magadan Oblast',
+						value: 'RU-MAG',
+					},
+					{
+						name: 'Magallanes y la Antártica Chilena Region',
+						value: 'CL-MA',
+					},
+					{
+						name: 'Magdalena',
+						value: 'CO-MAG',
+					},
+					{
+						name: 'Magway Region',
+						value: 'MM-03',
+					},
+					{
+						name: 'Maha Sarakham',
+						value: 'TH-44',
+					},
+					{
+						name: 'Mahaica-Berbice',
+						value: 'GY-MA',
+					},
+					{
+						name: 'Mahajanga',
+						value: 'MG-M',
+					},
+					{
+						name: 'Maharashtra',
+						value: 'IN-MH',
+					},
+					{
+						name: 'Mahdia',
+						value: 'TN-53',
+					},
+					{
+						name: 'Maine',
+						value: 'US-ME',
+					},
+					{
+						name: 'Maio',
+						value: 'CV-MA',
+					},
+					{
 						name: 'Majuro Atoll',
 						value: 'MH-MAJ',
+					},
+					{
+						name: 'Makamba',
+						value: 'BI-MA',
+					},
+					{
+						name: 'Makedonska Kamenitsa',
+						value: 'MK-51',
+					},
+					{
+						name: 'Makira-Ulawa',
+						value: 'SB-MK',
+					},
+					{
+						name: 'Makkah Province',
+						value: 'SA-02',
+					},
+					{
+						name: 'Malacca',
+						value: 'MY-04',
+					},
+					{
+						name: 'Malaita Province',
+						value: 'SB-ML',
+					},
+					{
+						name: 'Malampa Province',
+						value: 'VU-MAP',
+					},
+					{
+						name: 'Malanje Province',
+						value: 'AO-MAL',
+					},
+					{
+						name: 'Malatya',
+						value: 'TR-44',
+					},
+					{
+						name: 'Malawi',
+						value: 'MW',
+					},
+					{
+						name: 'Malaysia',
+						value: 'MY',
+					},
+					{
+						name: 'Maldives',
+						value: 'MV',
+					},
+					{
+						name: 'Maldonado Department',
+						value: 'UY-MA',
+					},
+					{
+						name: 'Male',
+						value: 'MV-MLE',
+					},
+					{
+						name: 'Mali',
+						value: 'ML',
 					},
 					{
 						name: 'Maloelap Atoll',
 						value: 'MH-MAL',
 					},
 					{
-						name: 'Mejit Island',
-						value: 'MH-MEJ',
+						name: 'Mālpils Municipality',
+						value: 'LV-061',
 					},
 					{
-						name: 'Mili Atoll',
-						value: 'MH-MIL',
+						name: 'Malta',
+						value: 'MT',
 					},
 					{
-						name: 'Namorik Atoll',
-						value: 'MH-NMK',
+						name: 'Maluku',
+						value: 'ID-MA',
 					},
 					{
-						name: 'Namu Atoll',
-						value: 'MH-NMU',
+						name: 'Mambere-Kadei',
+						value: 'CF-HS',
 					},
 					{
-						name: 'Rongelap Atoll',
-						value: 'MH-RON',
+						name: 'Mamou',
+						value: 'GN-M',
 					},
 					{
-						name: 'Ujae Atoll',
-						value: 'MH-UJA',
+						name: 'Manabí Province',
+						value: 'EC-M',
 					},
 					{
-						name: 'Utirik Atoll',
-						value: 'MH-UTI',
+						name: 'Managua',
+						value: 'NI-MN',
 					},
 					{
-						name: 'Wotho Atoll',
-						value: 'MH-WTH',
+						name: 'Manatuto',
+						value: 'TL-MT',
 					},
 					{
-						name: 'Wotje Atoll',
-						value: 'MH-WTJ',
+						name: 'Manawatu-Wanganui',
+						value: 'NZ-MWT',
 					},
 					{
-						name: 'Martinique',
-						value: 'MQ',
+						name: 'Manchester Parish',
+						value: 'JM-12',
 					},
 					{
-						name: 'Mauritania',
-						value: 'MR',
+						name: 'Mandalay Region',
+						value: 'MM-04',
 					},
 					{
-						name: 'Adrar',
-						value: 'MR-07',
+						name: 'Mandoul',
+						value: 'TD-MA',
 					},
 					{
-						name: 'Assaba',
-						value: 'MR-03',
+						name: 'Mangrove Cay',
+						value: 'BS-MC',
 					},
 					{
-						name: 'Brakna',
-						value: 'MR-05',
-					},
-					{
-						name: 'Dakhlet Nouadhibou',
-						value: 'MR-08',
-					},
-					{
-						name: 'Gorgol',
-						value: 'MR-04',
-					},
-					{
-						name: 'Guidimaka',
-						value: 'MR-10',
-					},
-					{
-						name: 'Hodh Ech Chargui',
-						value: 'MR-01',
-					},
-					{
-						name: 'Hodh El Gharbi',
-						value: 'MR-02',
-					},
-					{
-						name: 'Inchiri',
-						value: 'MR-12',
-					},
-					{
-						name: 'Nouakchott',
-						value: 'MR-NKC',
-					},
-					{
-						name: 'Tagant',
-						value: 'MR-09',
-					},
-					{
-						name: 'Tiris Zemmour',
-						value: 'MR-11',
-					},
-					{
-						name: 'Trarza',
-						value: 'MR-06',
-					},
-					{
-						name: 'Mauritius',
-						value: 'MU',
-					},
-					{
-						name: 'Agalega Islands',
-						value: 'MU-AG',
-					},
-					{
-						name: 'Black River',
-						value: 'MU-BL',
-					},
-					{
-						name: 'Cargados Carajos',
-						value: 'MU-CC',
-					},
-					{
-						name: 'Flacq',
-						value: 'MU-FL',
-					},
-					{
-						name: 'Grand Port',
-						value: 'MU-GP',
-					},
-					{
-						name: 'Moka',
-						value: 'MU-MO',
-					},
-					{
-						name: 'Pamplemousses',
-						value: 'MU-PA',
-					},
-					{
-						name: 'Plaines Wilhems',
-						value: 'MU-PW',
-					},
-					{
-						name: 'Port Louis',
-						value: 'MU-PL',
-					},
-					{
-						name: 'Rivière du Rempart',
-						value: 'MU-RR',
-					},
-					{
-						name: 'Rodrigues',
-						value: 'MU-RO',
-					},
-					{
-						name: 'Savanne',
-						value: 'MU-SA',
-					},
-					{
-						name: 'Mayotte',
-						value: 'YT',
-					},
-					{
-						name: 'Mexico',
-						value: 'MX',
-					},
-					{
-						name: 'Aguascalientes',
-						value: 'MX-AGU',
-					},
-					{
-						name: 'Baja California',
-						value: 'MX-BCN',
-					},
-					{
-						name: 'Baja California Sur',
-						value: 'MX-BCS',
-					},
-					{
-						name: 'Campeche',
-						value: 'MX-CAM',
-					},
-					{
-						name: 'Chiapas',
-						value: 'MX-CHP',
-					},
-					{
-						name: 'Chihuahua',
-						value: 'MX-CHH',
-					},
-					{
-						name: 'Coahuila',
-						value: 'MX-COA',
-					},
-					{
-						name: 'Colima',
-						value: 'MX-COL',
-					},
-					{
-						name: 'Durango',
-						value: 'MX-DUR',
-					},
-					{
-						name: 'Guanajuato',
-						value: 'MX-GUA',
-					},
-					{
-						name: 'Guerrero',
-						value: 'MX-GRO',
-					},
-					{
-						name: 'Hidalgo',
-						value: 'MX-HID',
-					},
-					{
-						name: 'Jalisco',
-						value: 'MX-JAL',
-					},
-					{
-						name: 'Mexico City',
-						value: 'MX-DIF',
-					},
-					{
-						name: 'Michoacán',
-						value: 'MX-MIC',
-					},
-					{
-						name: 'Morelos',
-						value: 'MX-MOR',
-					},
-					{
-						name: 'Nayarit',
-						value: 'MX-NAY',
-					},
-					{
-						name: 'Nuevo Leon',
-						value: 'MX-NLE',
-					},
-					{
-						name: 'Oaxaca',
-						value: 'MX-OAX',
-					},
-					{
-						name: 'Puebla',
-						value: 'MX-PUE',
-					},
-					{
-						name: 'Querétaro',
-						value: 'MX-QUE',
-					},
-					{
-						name: 'Quintana Roo',
-						value: 'MX-ROO',
-					},
-					{
-						name: 'San Luis Potosi',
-						value: 'MX-SLP',
-					},
-					{
-						name: 'Sinaloa',
-						value: 'MX-SIN',
-					},
-					{
-						name: 'Sonora',
-						value: 'MX-SON',
-					},
-					{
-						name: 'State of Mexico',
-						value: 'MX-MEX',
-					},
-					{
-						name: 'Tabasco',
-						value: 'MX-TAB',
-					},
-					{
-						name: 'Tamaulipas',
-						value: 'MX-TAM',
-					},
-					{
-						name: 'Tlaxcala',
-						value: 'MX-TLA',
-					},
-					{
-						name: 'Veracruz',
-						value: 'MX-VER',
-					},
-					{
-						name: 'Yucatan',
-						value: 'MX-YUC',
-					},
-					{
-						name: 'Zacatecas',
-						value: 'MX-ZAC',
-					},
-					{
-						name: 'Micronesia',
-						value: 'FM',
-					},
-					{
-						name: 'Chuuk',
-						value: 'FM-TRK',
-					},
-					{
-						name: 'Kosrae',
-						value: 'FM-KSA',
-					},
-					{
-						name: 'Pohnpei',
-						value: 'FM-PNI',
-					},
-					{
-						name: 'Yap',
-						value: 'FM-YAP',
-					},
-					{
-						name: 'Moldova',
-						value: 'MD',
-					},
-					{
-						name: 'Anenii Noi',
-						value: 'MD-AN',
-					},
-					{
-						name: 'Balti',
-						value: 'MD-BA',
-					},
-					{
-						name: 'Basarabeasca District',
-						value: 'MD-BS',
-					},
-					{
-						name: 'Bender',
-						value: 'MD-BD',
-					},
-					{
-						name: 'Briceni',
-						value: 'MD-BR',
-					},
-					{
-						name: 'Cahul',
-						value: 'MD-CA',
-					},
-					{
-						name: 'Calarasi',
-						value: 'MD-CL',
-					},
-					{
-						name: 'Cantemir',
-						value: 'MD-CT',
-					},
-					{
-						name: 'Causeni',
-						value: 'MD-CS',
-					},
-					{
-						name: 'Chisinau',
-						value: 'MD-CU',
-					},
-					{
-						name: 'Cimișlia',
-						value: 'MD-CM',
-					},
-					{
-						name: 'Criuleni',
-						value: 'MD-CR',
-					},
-					{
-						name: 'Donduseni',
-						value: 'MD-DO',
-					},
-					{
-						name: 'Drochia',
-						value: 'MD-DR',
-					},
-					{
-						name: 'Dubasari',
-						value: 'MD-DU',
-					},
-					{
-						name: 'Edineţ District',
-						value: 'MD-ED',
-					},
-					{
-						name: 'Falesti',
-						value: 'MD-FA',
-					},
-					{
-						name: 'Floresti',
-						value: 'MD-FL',
-					},
-					{
-						name: 'Gagauzia',
-						value: 'MD-GA',
-					},
-					{
-						name: 'Glodeni',
-						value: 'MD-GL',
-					},
-					{
-						name: 'Hincesti',
-						value: 'MD-HI',
-					},
-					{
-						name: 'Ialoveni',
-						value: 'MD-IA',
-					},
-					{
-						name: 'Leova',
-						value: 'MD-LE',
-					},
-					{
-						name: 'Nisporeni',
-						value: 'MD-NI',
-					},
-					{
-						name: 'Ocnita',
-						value: 'MD-OC',
-					},
-					{
-						name: 'Orhei',
-						value: 'MD-OR',
-					},
-					{
-						name: 'Rezina',
-						value: 'MD-RE',
-					},
-					{
-						name: 'Riscani',
-						value: 'MD-RI',
-					},
-					{
-						name: 'Singerei',
-						value: 'MD-SI',
-					},
-					{
-						name: 'Soldanesti',
-						value: 'MD-SD',
-					},
-					{
-						name: 'Soroca',
-						value: 'MD-SO',
-					},
-					{
-						name: 'Stefan Voda',
-						value: 'MD-SV',
-					},
-					{
-						name: 'Straseni',
-						value: 'MD-ST',
-					},
-					{
-						name: 'Taraclia',
-						value: 'MD-TA',
-					},
-					{
-						name: 'Telenești District',
-						value: 'MD-TE',
-					},
-					{
-						name: 'Transnistria',
-						value: 'MD-SN',
-					},
-					{
-						name: 'Ungheni',
-						value: 'MD-UN',
-					},
-					{
-						name: 'Monaco',
-						value: 'MC',
-					},
-					{
-						name: 'Mongolia',
-						value: 'MN',
-					},
-					{
-						name: 'Arkhangai',
-						value: 'MN-073',
-					},
-					{
-						name: 'Bayan-Ulgii',
-						value: 'MN-071',
-					},
-					{
-						name: 'Bayankhongor',
-						value: 'MN-069',
-					},
-					{
-						name: 'Bulgan',
-						value: 'MN-067',
-					},
-					{
-						name: 'Darkhan-Uul',
-						value: 'MN-037',
-					},
-					{
-						name: 'Dornod',
-						value: 'MN-061',
-					},
-					{
-						name: 'Dornogovi',
-						value: 'MN-063',
-					},
-					{
-						name: 'Dundgovi',
-						value: 'MN-059',
-					},
-					{
-						name: 'Govi-Altai',
-						value: 'MN-065',
-					},
-					{
-						name: 'Govisumber',
-						value: 'MN-064',
-					},
-					{
-						name: 'Khentii',
-						value: 'MN-039',
-					},
-					{
-						name: 'Khovd',
-						value: 'MN-043',
-					},
-					{
-						name: 'Khuvsgul',
-						value: 'MN-041',
-					},
-					{
-						name: 'Orkhon',
-						value: 'MN-035',
-					},
-					{
-						name: 'Selenge',
-						value: 'MN-049',
-					},
-					{
-						name: 'Sukhbaatar',
-						value: 'MN-051',
-					},
-					{
-						name: 'Tov',
-						value: 'MN-047',
-					},
-					{
-						name: 'Ulaanbaatar',
-						value: 'MN-1',
-					},
-					{
-						name: 'Umnugovi',
-						value: 'MN-053',
-					},
-					{
-						name: 'Uvs',
-						value: 'MN-046',
-					},
-					{
-						name: 'Uvurkhangai',
-						value: 'MN-055',
-					},
-					{
-						name: 'Zavkhan',
-						value: 'MN-057',
-					},
-					{
-						name: 'Montenegro',
-						value: 'ME',
-					},
-					{
-						name: 'Andrijevica',
-						value: 'ME-01',
-					},
-					{
-						name: 'Bar',
-						value: 'ME-02',
-					},
-					{
-						name: 'Berane',
-						value: 'ME-03',
-					},
-					{
-						name: 'Bijelo Polje',
-						value: 'ME-04',
-					},
-					{
-						name: 'Budva',
-						value: 'ME-05',
-					},
-					{
-						name: 'Cetinje',
-						value: 'ME-06',
-					},
-					{
-						name: 'Danilovgrad',
-						value: 'ME-07',
-					},
-					{
-						name: 'Herceg Novi',
-						value: 'ME-08',
-					},
-					{
-						name: 'Kolasin',
-						value: 'ME-09',
-					},
-					{
-						name: 'Kotor',
-						value: 'ME-10',
-					},
-					{
-						name: 'Mojkovac',
-						value: 'ME-11',
-					},
-					{
-						name: 'Niksic',
-						value: 'ME-12',
-					},
-					{
-						name: 'Plav',
-						value: 'ME-13',
-					},
-					{
-						name: 'Pljevlja',
-						value: 'ME-14',
-					},
-					{
-						name: 'Pluzine',
-						value: 'ME-15',
-					},
-					{
-						name: 'Podgorica',
-						value: 'ME-16',
-					},
-					{
-						name: 'Rozaje',
-						value: 'ME-17',
-					},
-					{
-						name: 'Savnik',
-						value: 'ME-18',
-					},
-					{
-						name: 'Tivat',
-						value: 'ME-19',
-					},
-					{
-						name: 'Ulcinj',
-						value: 'ME-20',
-					},
-					{
-						name: 'Zabljak',
-						value: 'ME-21',
-					},
-					{
-						name: 'Montserrat',
-						value: 'MS',
-					},
-					{
-						name: 'Morocco',
-						value: 'MA',
-					},
-					{
-						name: 'Chaouia-Ouardigha',
-						value: 'MA-09',
-					},
-					{
-						name: 'Doukkala-Abda',
-						value: 'MA-10',
-					},
-					{
-						name: 'Fes-Boulemane',
-						value: 'MA-05',
-					},
-					{
-						name: 'Gharb-Chrarda-Beni Hssen',
-						value: 'MA-02',
-					},
-					{
-						name: 'Grand Casablanca',
-						value: 'MA-08',
-					},
-					{
-						name: 'Guelmim-Es Semara',
-						value: 'MA-14',
-					},
-					{
-						name: 'Laayoune-Boujdour-Sakia El Hamra',
-						value: 'MA-15',
-					},
-					{
-						name: 'Marrakesh-Tensift-El Haouz',
-						value: 'MA-11',
-					},
-					{
-						name: 'Meknes-Tafilalet',
-						value: 'MA-06',
-					},
-					{
-						name: 'Oriental',
-						value: 'MA-04',
-					},
-					{
-						name: 'Rabat-Sale-Zemmour-Zaer',
-						value: 'MA-07',
-					},
-					{
-						name: 'Souss-Massa-Draa',
-						value: 'MA-13',
-					},
-					{
-						name: 'Tadla-Azilal',
-						value: 'MA-12',
-					},
-					{
-						name: 'Tangier-Tetouan',
-						value: 'MA-01',
-					},
-					{
-						name: 'Taza-Al Hoceima-Taounate',
-						value: 'MA-03',
-					},
-					{
-						name: 'Mozambique',
-						value: 'MZ',
-					},
-					{
-						name: 'Cabo Delgado Province',
-						value: 'MZ-P',
-					},
-					{
-						name: 'Gaza Province',
-						value: 'MZ-G',
-					},
-					{
-						name: 'Inhambane Province',
-						value: 'MZ-I',
+						name: 'Mangystau Region',
+						value: 'KZ-MAN',
 					},
 					{
 						name: 'Manica Province',
 						value: 'MZ-B',
+					},
+					{
+						name: 'Manicaland',
+						value: 'ZW-MA',
+					},
+					{
+						name: 'Maniema',
+						value: 'CD-MA',
+					},
+					{
+						name: 'Manipur',
+						value: 'IN-MN',
+					},
+					{
+						name: 'Manisa',
+						value: 'TR-45',
+					},
+					{
+						name: 'Manitoba',
+						value: 'CA-MB',
+					},
+					{
+						name: 'Mankato MN',
+						value: '737',
+					},
+					{
+						name: 'Manufahi',
+						value: 'TL-MF',
+					},
+					{
+						name: 'Manus Province',
+						value: 'PG-MRL',
+					},
+					{
+						name: 'Manyara',
+						value: 'TZ-26',
+					},
+					{
+						name: 'Manzini',
+						value: 'SZ-MA',
 					},
 					{
 						name: 'Maputo City',
@@ -7657,716 +7463,668 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'MZ-L',
 					},
 					{
-						name: 'Nampula Province',
-						value: 'MZ-N',
-					},
-					{
-						name: 'Niassa Province',
-						value: 'MZ-A',
-					},
-					{
-						name: 'Sofala Province',
-						value: 'MZ-S',
-					},
-					{
-						name: 'Tete Province',
-						value: 'MZ-T',
-					},
-					{
-						name: 'Zambezia Province',
-						value: 'MZ-Q',
-					},
-					{
-						name: 'Myanmar (Burma)',
-						value: 'MM',
-					},
-					{
-						name: 'Ayeyarwady',
-						value: 'MM-07',
-					},
-					{
-						name: 'Bago Region',
-						value: 'MM-02',
-					},
-					{
-						name: 'Chin State',
-						value: 'MM-14',
-					},
-					{
-						name: 'Kachin',
-						value: 'MM-11',
-					},
-					{
-						name: 'Kayah',
-						value: 'MM-12',
-					},
-					{
-						name: 'Kayin State',
-						value: 'MM-13',
-					},
-					{
-						name: 'Magway Region',
-						value: 'MM-03',
-					},
-					{
-						name: 'Mandalay Region',
-						value: 'MM-04',
-					},
-					{
-						name: 'Mon State',
-						value: 'MM-15',
-					},
-					{
-						name: 'Naypyidaw Union Territory',
-						value: 'MM-18',
-					},
-					{
-						name: 'Rakhine',
-						value: 'MM-16',
-					},
-					{
-						name: 'Sagaing Region',
-						value: 'MM-01',
-					},
-					{
-						name: 'Shan',
-						value: 'MM-17',
-					},
-					{
-						name: 'Tanintharyi Region',
-						value: 'MM-05',
-					},
-					{
-						name: 'Yangon Region',
-						value: 'MM-06',
-					},
-					{
-						name: 'Namibia',
-						value: 'NA',
-					},
-					{
-						name: 'Erongo',
-						value: 'NA-ER',
-					},
-					{
-						name: 'Hardap Region',
-						value: 'NA-HA',
-					},
-					{
-						name: 'Karas Region',
-						value: 'NA-KA',
-					},
-					{
-						name: 'Kavango Region',
-						value: 'NA-OK',
-					},
-					{
-						name: 'Khomas Region',
-						value: 'NA-KH',
-					},
-					{
-						name: 'Kunene Region',
-						value: 'NA-KU',
-					},
-					{
-						name: 'Ohangwena',
-						value: 'NA-OW',
-					},
-					{
-						name: 'Omaheke Region',
-						value: 'NA-OH',
-					},
-					{
-						name: 'Omusati Region',
-						value: 'NA-OS',
-					},
-					{
-						name: 'Oshana Region',
-						value: 'NA-ON',
-					},
-					{
-						name: 'Oshikoto Region',
-						value: 'NA-OT',
-					},
-					{
-						name: 'Otjozondjupa Region',
-						value: 'NA-OD',
-					},
-					{
-						name: 'Zambezi Region',
-						value: 'NA-CA',
-					},
-					{
-						name: 'Nauru',
-						value: 'NR',
-					},
-					{
-						name: 'Aiwo',
-						value: 'NR-01',
-					},
-					{
-						name: 'Anabar',
-						value: 'NR-02',
-					},
-					{
-						name: 'Anetan',
-						value: 'NR-03',
-					},
-					{
-						name: 'Anibare',
-						value: 'NR-04',
-					},
-					{
-						name: 'Baiti',
-						value: 'NR-05',
-					},
-					{
-						name: 'Boe',
-						value: 'NR-06',
-					},
-					{
-						name: 'Buada',
-						value: 'NR-07',
-					},
-					{
-						name: 'Denigomodu',
-						value: 'NR-08',
-					},
-					{
-						name: 'Ewa',
-						value: 'NR-09',
-					},
-					{
-						name: 'Ijuw',
-						value: 'NR-10',
-					},
-					{
-						name: 'Meneng',
-						value: 'NR-11',
-					},
-					{
-						name: 'Nibok',
-						value: 'NR-12',
-					},
-					{
-						name: 'Uaboe',
-						value: 'NR-13',
-					},
-					{
-						name: 'Yaren',
-						value: 'NR-14',
-					},
-					{
-						name: 'Nepal',
-						value: 'NP',
-					},
-					{
-						name: 'Central Region',
-						value: 'NP-1',
-					},
-					{
-						name: 'Eastern Region',
-						value: 'NP-4',
-					},
-					{
-						name: 'Far-Western Region',
-						value: 'NP-5',
-					},
-					{
-						name: 'Mid-Western Region',
-						value: 'NP-2',
-					},
-					{
-						name: 'Western Region',
-						value: 'NP-3',
-					},
-					{
-						name: 'Netherlands',
-						value: 'NL',
-					},
-					{
-						name: 'Drenthe',
-						value: 'NL-DR',
-					},
-					{
-						name: 'Flevoland',
-						value: 'NL-FL',
-					},
-					{
-						name: 'Friesland',
-						value: 'NL-FR',
-					},
-					{
-						name: 'Gelderland',
-						value: 'NL-GE',
-					},
-					{
-						name: 'Groningen',
-						value: 'NL-GR',
-					},
-					{
-						name: 'Limburg',
-						value: 'NL-LI',
-					},
-					{
-						name: 'North Brabant',
-						value: 'NL-NB',
-					},
-					{
-						name: 'North Holland',
-						value: 'NL-NH',
-					},
-					{
-						name: 'Overijssel',
-						value: 'NL-OV',
-					},
-					{
-						name: 'South Holland',
-						value: 'NL-ZH',
-					},
-					{
-						name: 'Utrecht',
-						value: 'NL-UT',
-					},
-					{
-						name: 'Zeeland',
-						value: 'NL-ZE',
-					},
-					{
-						name: 'New Caledonia',
-						value: 'NC',
-					},
-					{
-						name: 'New Zealand',
-						value: 'NZ',
-					},
-					{
-						name: 'Auckland',
-						value: 'NZ-AUK',
-					},
-					{
-						name: 'Bay Of Plenty',
-						value: 'NZ-BOP',
-					},
-					{
-						name: 'Canterbury',
-						value: 'NZ-CAN',
-					},
-					{
-						name: 'Chatham Islands',
-						value: 'NZ-CIT',
-					},
-					{
-						name: 'Gisborne',
-						value: 'NZ-GIS',
-					},
-					{
-						name: "Hawke's Bay",
-						value: 'NZ-HKB',
-					},
-					{
-						name: 'Manawatu-Wanganui',
-						value: 'NZ-MWT',
-					},
-					{
-						name: 'Marlborough',
-						value: 'NZ-MBH',
-					},
-					{
-						name: 'Nelson',
-						value: 'NZ-NSN',
-					},
-					{
-						name: 'Northland',
-						value: 'NZ-NTL',
-					},
-					{
-						name: 'Otago',
-						value: 'NZ-OTA',
-					},
-					{
-						name: 'Southland',
-						value: 'NZ-STL',
-					},
-					{
-						name: 'Taranaki',
-						value: 'NZ-TKI',
-					},
-					{
-						name: 'Tasman',
-						value: 'NZ-TAS',
-					},
-					{
-						name: 'Waikato',
-						value: 'NZ-WKO',
-					},
-					{
-						name: 'Wellington',
-						value: 'NZ-WGN',
-					},
-					{
-						name: 'West Coast',
-						value: 'NZ-WTC',
-					},
-					{
-						name: 'Nicaragua',
-						value: 'NI',
-					},
-					{
-						name: 'Autonomous Region of the Northern Atlantic',
-						value: 'NI-AN',
-					},
-					{
-						name: 'Autonomous Region of the Southern Atlantic',
-						value: 'NI-AS',
-					},
-					{
-						name: 'Boaco',
-						value: 'NI-BO',
-					},
-					{
-						name: 'Carazo',
-						value: 'NI-CA',
-					},
-					{
-						name: 'Chinandega',
-						value: 'NI-CI',
-					},
-					{
-						name: 'Chontales',
-						value: 'NI-CO',
-					},
-					{
-						name: 'Esteli',
-						value: 'NI-ES',
-					},
-					{
-						name: 'Granada',
-						value: 'NI-GR',
-					},
-					{
-						name: 'Jinotega',
-						value: 'NI-JI',
-					},
-					{
-						name: 'Leon',
-						value: 'NI-LE',
-					},
-					{
-						name: 'Madriz',
-						value: 'NI-MD',
-					},
-					{
-						name: 'Managua',
-						value: 'NI-MN',
-					},
-					{
-						name: 'Masaya',
-						value: 'NI-MS',
-					},
-					{
-						name: 'Matagalpa',
-						value: 'NI-MT',
-					},
-					{
-						name: 'Nueva Segovia',
-						value: 'NI-NS',
-					},
-					{
-						name: 'Rio San Juan',
-						value: 'NI-SJ',
-					},
-					{
-						name: 'Rivas',
-						value: 'NI-RI',
-					},
-					{
-						name: 'Niger',
-						value: 'NE',
-					},
-					{
-						name: 'Agadez',
-						value: 'NE-1',
-					},
-					{
-						name: 'Diffa',
-						value: 'NE-2',
-					},
-					{
-						name: 'Dosso',
-						value: 'NE-3',
+						name: 'Mara',
+						value: 'TZ-13',
 					},
 					{
 						name: 'Maradi',
 						value: 'NE-4',
 					},
 					{
-						name: 'Niamey',
-						value: 'NE-8',
+						name: 'Marahoue',
+						value: 'CI-12',
 					},
 					{
-						name: 'Tahoua',
-						value: 'NE-5',
+						name: 'Maramureș County',
+						value: 'RO-MM',
 					},
 					{
-						name: 'Tillaberi',
-						value: 'NE-6',
+						name: 'Marche',
+						value: 'IT-57',
 					},
 					{
-						name: 'Zinder',
-						value: 'NE-7',
+						name: 'Mardin',
+						value: 'TR-47',
 					},
 					{
-						name: 'Nigeria',
-						value: 'NG',
+						name: 'Margibi',
+						value: 'LR-MG',
 					},
 					{
-						name: 'Abia',
-						value: 'NG-AB',
+						name: 'Mari El Republic',
+						value: 'RU-ME',
 					},
 					{
-						name: 'Adamawa',
-						value: 'NG-AD',
+						name: 'María Trinidad Sánchez Province',
+						value: 'DO-14',
 					},
 					{
-						name: 'Akwa Ibom',
-						value: 'NG-AK',
+						name: 'Marijampolė County',
+						value: 'LT-MR',
 					},
 					{
-						name: 'Anambra',
-						value: 'NG-AN',
+						name: 'Maritime',
+						value: 'TG-M',
 					},
 					{
-						name: 'Bauchi',
-						value: 'NG-BA',
+						name: 'Markazi',
+						value: 'IR-22',
 					},
 					{
-						name: 'Bayelsa',
-						value: 'NG-BY',
+						name: 'Marlborough',
+						value: 'NZ-MBH',
 					},
 					{
-						name: 'Benue',
-						value: 'NG-BE',
+						name: 'Marowijne',
+						value: 'SR-MA',
 					},
 					{
-						name: 'Borno',
-						value: 'NG-BO',
+						name: 'Marquette MI',
+						value: '553',
 					},
 					{
-						name: 'Cross River',
-						value: 'NG-CR',
+						name: 'Marrakesh-Tensift-El Haouz',
+						value: 'MA-11',
 					},
 					{
-						name: 'Delta',
-						value: 'NG-DE',
+						name: 'Marshall Islands',
+						value: 'MH',
 					},
 					{
-						name: 'Ebonyi',
-						value: 'NG-EB',
+						name: 'Martinique',
+						value: 'MQ',
 					},
 					{
-						name: 'Edo',
-						value: 'NG-ED',
+						name: 'Mārupe Municipality',
+						value: 'LV-062',
 					},
 					{
-						name: 'Ekiti',
-						value: 'NG-EK',
+						name: 'Mary',
+						value: 'TM-M',
 					},
 					{
-						name: 'Enugu',
-						value: 'NG-EN',
+						name: 'Maryland (LR)',
+						value: 'LR-MY',
 					},
 					{
-						name: 'Federal Capital Territory',
-						value: 'NG-FC',
+						name: 'Maryland (US)',
+						value: 'US-MD',
 					},
 					{
-						name: 'Gombe',
-						value: 'NG-GO',
+						name: 'Masaya',
+						value: 'NI-MS',
 					},
 					{
-						name: 'Imo',
-						value: 'NG-IM',
+						name: 'Mascara Province',
+						value: 'DZ-29',
 					},
 					{
-						name: 'Jigawa',
-						value: 'NG-JI',
+						name: 'Maseru',
+						value: 'LS-A',
 					},
 					{
-						name: 'Kaduna',
-						value: 'NG-KD',
+						name: 'Mashonaland Central',
+						value: 'ZW-MC',
 					},
 					{
-						name: 'Kano',
-						value: 'NG-KN',
+						name: 'Mashonaland East',
+						value: 'ZW-ME',
 					},
 					{
-						name: 'Katsina',
-						value: 'NG-KT',
+						name: 'Mashonaland West',
+						value: 'ZW-MW',
 					},
 					{
-						name: 'Kebbi',
-						value: 'NG-KE',
+						name: 'Masovian Voivodeship',
+						value: 'PL-MZ',
 					},
 					{
-						name: 'Kogi',
-						value: 'NG-KO',
+						name: 'Massachusetts',
+						value: 'US-MA',
 					},
 					{
-						name: 'Kwara',
-						value: 'NG-KW',
+						name: 'Masvingo',
+						value: 'ZW-MV',
 					},
 					{
-						name: 'Lagos',
-						value: 'NG-LA',
+						name: 'Matabeleland North',
+						value: 'ZW-MN',
 					},
 					{
-						name: 'Nasarawa',
-						value: 'NG-NA',
+						name: 'Matabeleland South',
+						value: 'ZW-MS',
 					},
 					{
-						name: 'Niger',
-						value: 'NG-NI',
+						name: 'Matagalpa',
+						value: 'NI-MT',
 					},
 					{
-						name: 'Ogun State',
-						value: 'NG-OG',
+						name: 'Matam Region',
+						value: 'SN-MT',
 					},
 					{
-						name: 'Ondo',
-						value: 'NG-ON',
+						name: 'Matanzas',
+						value: 'CU-04',
 					},
 					{
-						name: 'Osun',
-						value: 'NG-OS',
+						name: 'Matrouh Governorate',
+						value: 'EG-MT',
 					},
 					{
-						name: 'Oyo',
-						value: 'NG-OY',
+						name: 'Maule Region',
+						value: 'CL-ML',
 					},
 					{
-						name: 'Plateau',
-						value: 'NG-PL',
+						name: 'Mauren',
+						value: 'LI-04',
 					},
 					{
-						name: 'Rivers',
-						value: 'NG-RI',
+						name: 'Mauritania',
+						value: 'MR',
 					},
 					{
-						name: 'Sokoto',
-						value: 'NG-SO',
+						name: 'Mauritius',
+						value: 'MU',
 					},
 					{
-						name: 'Taraba',
-						value: 'NG-TA',
+						name: 'Mayabeque',
+						value: 'CU-16',
 					},
 					{
-						name: 'Yobe',
-						value: 'NG-YO',
+						name: 'Mayaguana',
+						value: 'BS-MG',
 					},
 					{
-						name: 'Zamfara',
-						value: 'NG-ZA',
+						name: 'Mayo-Kebbi Est',
+						value: 'TD-ME',
 					},
 					{
-						name: 'Niue',
-						value: 'NU',
+						name: 'Mayo-Kebbi Ouest',
+						value: 'TD-MO',
 					},
 					{
-						name: 'Toi',
-						value: 'NU-TOI',
+						name: 'Mayotte',
+						value: 'YT',
 					},
 					{
-						name: 'Norfolk Island',
-						value: 'NF',
+						name: 'Maysan',
+						value: 'IQ-MA',
 					},
 					{
-						name: 'North Korea',
-						value: 'KP',
+						name: 'Mazandaran',
+						value: 'IR-21',
 					},
 					{
-						name: 'Chagang',
-						value: 'KP-04',
+						name: 'Mazsalaca Municipality',
+						value: 'LV-060',
 					},
 					{
-						name: 'Kangwon',
-						value: 'KP-07',
+						name: 'Mbeya',
+						value: 'TZ-14',
 					},
 					{
-						name: 'North Hamgyong',
-						value: 'KP-09',
+						name: 'Mbomou',
+						value: 'CF-MB',
 					},
 					{
-						name: 'North Hwanghae',
-						value: 'KP-06',
+						name: 'Mecklenburg-Vorpommern',
+						value: 'DE-MV',
 					},
 					{
-						name: 'North Pyongan',
-						value: 'KP-03',
+						name: 'Médéa Province',
+						value: 'DZ-26',
 					},
 					{
-						name: 'Pyongyang',
-						value: 'KP-01',
+						name: 'Medenine',
+						value: 'TN-82',
 					},
 					{
-						name: 'Rason',
-						value: 'KP-13',
+						name: 'Medford-Klamath Falls OR',
+						value: '813',
 					},
 					{
-						name: 'Ryanggang',
-						value: 'KP-10',
+						name: 'Međimurje County',
+						value: 'HR-20',
 					},
 					{
-						name: 'South Hamgyong',
-						value: 'KP-08',
+						name: 'Meghalaya',
+						value: 'IN-ML',
 					},
 					{
-						name: 'South Hwanghae',
-						value: 'KP-05',
+						name: 'Mehedinți County',
+						value: 'RO-MH',
 					},
 					{
-						name: 'South Pyongan',
-						value: 'KP-02',
+						name: 'Mejit Island',
+						value: 'MH-MEJ',
 					},
 					{
-						name: 'North Macedonia',
-						value: 'MK',
+						name: 'Meknes-Tafilalet',
+						value: 'MA-06',
 					},
 					{
-						name: 'Bosilovo',
-						value: 'MK-07',
+						name: 'Melekeok',
+						value: 'PW-212',
 					},
 					{
-						name: 'Brvenitsa',
-						value: 'MK-08',
+						name: 'Melilla',
+						value: 'ES-ML',
 					},
 					{
-						name: 'Centar Zhupa',
-						value: 'MK-78',
+						name: 'Memphis TN',
+						value: '640',
 					},
 					{
-						name: 'Chashka',
-						value: 'MK-80',
+						name: 'Mendoza Province',
+						value: 'AR-M',
 					},
 					{
-						name: 'Delchevo',
-						value: 'MK-23',
+						name: 'Meneng',
+						value: 'NR-11',
 					},
 					{
-						name: 'Dojran',
-						value: 'MK-26',
+						name: 'Menia Governorate',
+						value: 'EG-MN',
 					},
 					{
-						name: 'Gostivar',
-						value: 'MK-19',
+						name: 'Menofia Governorate',
+						value: 'EG-MNF',
 					},
 					{
-						name: 'Makedonska Kamenitsa',
-						value: 'MK-51',
+						name: 'Mérida',
+						value: 'VE-L',
+					},
+					{
+						name: 'Meridian MS',
+						value: '711',
+					},
+					{
+						name: 'Mersin Province',
+						value: 'TR-33',
+					},
+					{
+						name: 'Mērsrags Municipality',
+						value: 'LV-063',
+					},
+					{
+						name: 'Meta',
+						value: 'CO-MET',
+					},
+					{
+						name: 'Metro Manila',
+						value: 'PH-00',
+					},
+					{
+						name: 'Mexico',
+						value: 'MX',
+					},
+					{
+						name: 'Mexico City',
+						value: 'MX-DIF',
+					},
+					{
+						name: 'Miami-Ft. Lauderdale FL',
+						value: '528',
+					},
+					{
+						name: 'Michigan',
+						value: 'US-MI',
+					},
+					{
+						name: 'Michoacán',
+						value: 'MX-MIC',
+					},
+					{
+						name: 'Micoud',
+						value: 'LC-08',
+					},
+					{
+						name: 'Micronesia',
+						value: 'FM',
+					},
+					{
+						name: 'Mid-Western Region',
+						value: 'NP-2',
+					},
+					{
+						name: 'Midi-Pyrénées',
+						value: 'FR-N',
+					},
+					{
+						name: 'Midlands',
+						value: 'ZW-MI',
+					},
+					{
+						name: 'Mie Prefecture',
+						value: 'JP-24',
+					},
+					{
+						name: 'Mila Province',
+						value: 'DZ-43',
+					},
+					{
+						name: 'Mili Atoll',
+						value: 'MH-MIL',
+					},
+					{
+						name: 'Milne Bay Province',
+						value: 'PG-MBA',
+					},
+					{
+						name: 'Milwaukee WI',
+						value: '617',
+					},
+					{
+						name: 'MIMAROPA',
+						value: 'PH-41',
+					},
+					{
+						name: 'Minneapolis-St. Paul MN',
+						value: '613',
+					},
+					{
+						name: 'Minnesota',
+						value: 'US-MN',
+					},
+					{
+						name: 'Minot-Bismarck-Dickinson(Williston) ND',
+						value: '687',
+					},
+					{
+						name: 'Minsk Region',
+						value: 'BY-MI',
+					},
+					{
+						name: 'Miranda',
+						value: 'VE-M',
+					},
+					{
+						name: 'Misiones',
+						value: 'PY-8',
+					},
+					{
+						name: 'Misiones Province',
+						value: 'AR-N',
+					},
+					{
+						name: 'Misratah',
+						value: 'LY-MI',
+					},
+					{
+						name: 'Mississippi',
+						value: 'US-MS',
+					},
+					{
+						name: 'Missoula MT',
+						value: '762',
+					},
+					{
+						name: 'Missouri',
+						value: 'US-MO',
+					},
+					{
+						name: 'Miyagi Prefecture',
+						value: 'JP-04',
+					},
+					{
+						name: 'Miyazaki Prefecture',
+						value: 'JP-45',
+					},
+					{
+						name: 'Mizoram',
+						value: 'IN-MZ',
+					},
+					{
+						name: 'Mobile AL-Pensacola (Ft. Walton Beach) FL',
+						value: '686',
 					},
 					{
 						name: 'Mogila',
 						value: 'MK-53',
+					},
+					{
+						name: 'Mogilev Region',
+						value: 'BY-MA',
+					},
+					{
+						name: "Mohale's Hoek",
+						value: 'LS-F',
+					},
+					{
+						name: 'Mojkovac',
+						value: 'ME-11',
+					},
+					{
+						name: 'Moka',
+						value: 'MU-MO',
+					},
+					{
+						name: 'Mokhotlong',
+						value: 'LS-J',
+					},
+					{
+						name: 'Moldova',
+						value: 'MD',
+					},
+					{
+						name: 'Molise',
+						value: 'IT-67',
+					},
+					{
+						name: 'Mon State',
+						value: 'MM-15',
+					},
+					{
+						name: 'Monaco',
+						value: 'MC',
+					},
+					{
+						name: 'Monagas',
+						value: 'VE-N',
+					},
+					{
+						name: 'Monastir',
+						value: 'TN-52',
+					},
+					{
+						name: 'Mondulkiri',
+						value: 'KH-11',
+					},
+					{
+						name: 'Mongar',
+						value: 'BT-42',
+					},
+					{
+						name: 'Mongolia',
+						value: 'MN',
+					},
+					{
+						name: 'Mono',
+						value: 'BJ-MO',
+					},
+					{
+						name: 'Monroe LA-El Dorado AR',
+						value: '628',
+					},
+					{
+						name: 'Monseñor Nouel Province',
+						value: 'DO-28',
+					},
+					{
+						name: 'Mont Buxton',
+						value: 'SC-17',
+					},
+					{
+						name: 'Mont Fleuri',
+						value: 'SC-18',
+					},
+					{
+						name: 'Montana',
+						value: 'US-MT',
+					},
+					{
+						name: 'Montana Province',
+						value: 'BG-12',
+					},
+					{
+						name: 'Monte Cristi Province',
+						value: 'DO-15',
+					},
+					{
+						name: 'Monte Plata Province',
+						value: 'DO-29',
+					},
+					{
+						name: 'Montegiardino',
+						value: 'SM-08',
+					},
+					{
+						name: 'Montenegro',
+						value: 'ME',
+					},
+					{
+						name: 'Monterey-Salinas CA',
+						value: '828',
+					},
+					{
+						name: 'Montevideo Department',
+						value: 'UY-MO',
+					},
+					{
+						name: 'Montgomery (Selma) AL',
+						value: '698',
+					},
+					{
+						name: 'Montserrado',
+						value: 'LR-MO',
+					},
+					{
+						name: 'Montserrat',
+						value: 'MS',
+					},
+					{
+						name: "Moore's Island",
+						value: 'BS-MI',
+					},
+					{
+						name: 'Mopti',
+						value: 'ML-5',
+					},
+					{
+						name: 'Moquegua',
+						value: 'PE-MOQ',
+					},
+					{
+						name: 'Moravian-Silesian Region',
+						value: 'CZ-MO',
+					},
+					{
+						name: 'Morazan',
+						value: 'SV-MO',
+					},
+					{
+						name: 'Mordovia',
+						value: 'RU-MO',
+					},
+					{
+						name: 'Møre og Romsdal',
+						value: 'NO-15',
+					},
+					{
+						name: 'Morelos',
+						value: 'MX-MOR',
+					},
+					{
+						name: 'Morobe Province',
+						value: 'PG-MPL',
+					},
+					{
+						name: 'Morocco',
+						value: 'MA',
+					},
+					{
+						name: 'Morogoro',
+						value: 'TZ-16',
+					},
+					{
+						name: 'Morona-Santiago Province',
+						value: 'EC-S',
+					},
+					{
+						name: 'Moscow',
+						value: 'RU-MOW',
+					},
+					{
+						name: 'Moscow Oblast',
+						value: 'RU-MOS',
+					},
+					{
+						name: 'Mostaganem Province',
+						value: 'DZ-27',
+					},
+					{
+						name: 'Mosteiros',
+						value: 'CV-MO',
+					},
+					{
+						name: 'Mount Lebanon',
+						value: 'LB-JL',
+					},
+					{
+						name: 'Moxico Province',
+						value: 'AO-MOX',
+					},
+					{
+						name: 'Moyen-Cavally',
+						value: 'CI-19',
+					},
+					{
+						name: 'Moyen-Chari',
+						value: 'TD-MC',
+					},
+					{
+						name: 'Moyen-Comoe',
+						value: 'CI-05',
+					},
+					{
+						name: 'Moyen-Ogooue',
+						value: 'GA-3',
+					},
+					{
+						name: 'Mozambique',
+						value: 'MZ',
+					},
+					{
+						name: 'Mpumalanga',
+						value: 'ZA-MP',
+					},
+					{
+						name: 'Mtskheta-Mtianeti',
+						value: 'GE-MM',
+					},
+					{
+						name: 'Mtwara',
+						value: 'TZ-17',
+					},
+					{
+						name: 'Mubarak Al-Kabeer Governorate',
+						value: 'KW-MU',
+					},
+					{
+						name: 'Mudug',
+						value: 'SO-MU',
+					},
+					{
+						name: 'Muğla Province',
+						value: 'TR-48',
+					},
+					{
+						name: 'Muharraq Governorate',
+						value: 'BH-15',
+					},
+					{
+						name: 'Mukdahan',
+						value: 'TH-49',
 					},
 					{
 						name: 'Municipality of Arachinovo',
@@ -8569,180 +8327,24 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'MK-33',
 					},
 					{
-						name: 'Ohrid',
-						value: 'MK-58',
+						name: 'Muramvya',
+						value: 'BI-MU',
 					},
 					{
-						name: 'Probishtip',
-						value: 'MK-63',
+						name: 'Mureș County',
+						value: 'RO-MS',
 					},
 					{
-						name: 'Radovish',
-						value: 'MK-64',
+						name: 'Murmansk Oblast',
+						value: 'RU-MUR',
 					},
 					{
-						name: 'Skopje',
-						value: 'MK-85',
+						name: 'Murzuq',
+						value: 'LY-MQ',
 					},
 					{
-						name: 'Staro Nagorichane',
-						value: 'MK-71',
-					},
-					{
-						name: 'Strumitsa',
-						value: 'MK-73',
-					},
-					{
-						name: 'Studenichani',
-						value: 'MK-74',
-					},
-					{
-						name: 'Sveti Nikole',
-						value: 'MK-69',
-					},
-					{
-						name: 'Tearce',
-						value: 'MK-75',
-					},
-					{
-						name: 'Tetovo',
-						value: 'MK-76',
-					},
-					{
-						name: 'Valandovo',
-						value: 'MK-10',
-					},
-					{
-						name: 'Vrapchishte',
-						value: 'MK-16',
-					},
-					{
-						name: 'Zelenikovo',
-						value: 'MK-32',
-					},
-					{
-						name: 'Northern Mariana Islands',
-						value: 'MP',
-					},
-					{
-						name: 'Norway',
-						value: 'NO',
-					},
-					{
-						name: 'Akershus',
-						value: 'NO-02',
-					},
-					{
-						name: 'Aust-Agder',
-						value: 'NO-09',
-					},
-					{
-						name: 'Buskerud',
-						value: 'NO-06',
-					},
-					{
-						name: 'Finnmark',
-						value: 'NO-20',
-					},
-					{
-						name: 'Hedmark',
-						value: 'NO-04',
-					},
-					{
-						name: 'Hordaland',
-						value: 'NO-12',
-					},
-					{
-						name: 'Møre og Romsdal',
-						value: 'NO-15',
-					},
-					{
-						name: 'Nord-Trondelag',
-						value: 'NO-17',
-					},
-					{
-						name: 'Nordland',
-						value: 'NO-18',
-					},
-					{
-						name: 'Oppland',
-						value: 'NO-05',
-					},
-					{
-						name: 'Oslo',
-						value: 'NO-03',
-					},
-					{
-						name: 'Ostfold',
-						value: 'NO-01',
-					},
-					{
-						name: 'Rogaland',
-						value: 'NO-11',
-					},
-					{
-						name: 'Sogn og Fjordane',
-						value: 'NO-14',
-					},
-					{
-						name: 'Sor-Trondelag',
-						value: 'NO-16',
-					},
-					{
-						name: 'Telemark',
-						value: 'NO-08',
-					},
-					{
-						name: 'Troms',
-						value: 'NO-19',
-					},
-					{
-						name: 'Vest-Agder',
-						value: 'NO-10',
-					},
-					{
-						name: 'Vestfold',
-						value: 'NO-07',
-					},
-					{
-						name: 'Oman',
-						value: 'OM',
-					},
-					{
-						name: 'Ad Dakhiliyah ‍Governorate',
-						value: 'OM-DA',
-					},
-					{
-						name: 'Ad Dhahirah Governorate',
-						value: 'OM-ZA',
-					},
-					{
-						name: 'Al Batinah North Governorate',
-						value: 'OM-BS',
-					},
-					{
-						name: 'Al Batinah South Governorate',
-						value: 'OM-BJ',
-					},
-					{
-						name: 'Al Buraymi Governorate',
-						value: 'OM-BU',
-					},
-					{
-						name: 'Al Wusta Governorate',
-						value: 'OM-WU',
-					},
-					{
-						name: 'Ash Sharqiyah North Governorate',
-						value: 'OM-SS',
-					},
-					{
-						name: 'Ash Sharqiyah South Governorate',
-						value: 'OM-SJ',
-					},
-					{
-						name: 'Dhofar Governorate',
-						value: 'OM-ZU',
+						name: 'Muş',
+						value: 'TR-49',
 					},
 					{
 						name: 'Musandam Governorate',
@@ -8753,2812 +8355,64 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'OM-MA',
 					},
 					{
-						name: 'Pakistan',
-						value: 'PK',
+						name: 'Muyinga',
+						value: 'BI-MY',
 					},
 					{
-						name: 'Azad Jammu and Kashmir',
-						value: 'PK-JK',
-					},
-					{
-						name: 'Balochistan',
-						value: 'PK-BA',
-					},
-					{
-						name: 'Federally Administered Tribal Areas',
-						value: 'PK-TA',
-					},
-					{
-						name: 'Gilgit-Baltistan',
-						value: 'PK-GB',
-					},
-					{
-						name: 'Islamabad Capital Territory',
-						value: 'PK-IS',
-					},
-					{
-						name: 'Khyber Pakhtunkhwa',
-						value: 'PK-KP',
-					},
-					{
-						name: 'Punjab',
-						value: 'PK-PB',
-					},
-					{
-						name: 'Sindh',
-						value: 'PK-SD',
-					},
-					{
-						name: 'Palau',
-						value: 'PW',
-					},
-					{
-						name: 'Aimeliik',
-						value: 'PW-002',
-					},
-					{
-						name: 'Airai',
-						value: 'PW-004',
-					},
-					{
-						name: 'Angaur',
-						value: 'PW-010',
-					},
-					{
-						name: 'Hatohobei',
-						value: 'PW-050',
-					},
-					{
-						name: 'Kayangel',
-						value: 'PW-100',
-					},
-					{
-						name: 'Koror',
-						value: 'PW-150',
-					},
-					{
-						name: 'Melekeok',
-						value: 'PW-212',
-					},
-					{
-						name: 'Ngaraard',
-						value: 'PW-214',
-					},
-					{
-						name: 'Ngarchelong',
-						value: 'PW-218',
-					},
-					{
-						name: 'Ngardmau',
-						value: 'PW-222',
-					},
-					{
-						name: 'Ngaremlengui',
-						value: 'PW-227',
-					},
-					{
-						name: 'Ngatpang',
-						value: 'PW-224',
-					},
-					{
-						name: 'Ngchesar',
-						value: 'PW-226',
-					},
-					{
-						name: 'Ngiwal',
-						value: 'PW-228',
-					},
-					{
-						name: 'Peleliu',
-						value: 'PW-350',
-					},
-					{
-						name: 'Sonsorol',
-						value: 'PW-370',
-					},
-					{
-						name: 'Palestine',
-						value: 'PS',
-					},
-					{
-						name: 'Panama',
-						value: 'PA',
-					},
-					{
-						name: 'Bocas del Toro Province',
-						value: 'PA-1',
-					},
-					{
-						name: 'Chiriquí Province',
-						value: 'PA-4',
-					},
-					{
-						name: 'Coclé Province',
-						value: 'PA-2',
-					},
-					{
-						name: 'Colón Province',
-						value: 'PA-3',
-					},
-					{
-						name: 'Darién Province',
-						value: 'PA-5',
-					},
-					{
-						name: 'Emberá-Wounaan Comarca',
-						value: 'PA-EM',
-					},
-					{
-						name: 'Guna Yala',
-						value: 'PA-KY',
-					},
-					{
-						name: 'Herrera Province',
-						value: 'PA-6',
-					},
-					{
-						name: 'Los Santos Province',
-						value: 'PA-7',
-					},
-					{
-						name: 'Ngäbe-Buglé Comarca',
-						value: 'PA-NB',
-					},
-					{
-						name: 'Panama',
-						value: 'PA-8',
-					},
-					{
-						name: 'Veraguas Province',
-						value: 'PA-9',
-					},
-					{
-						name: 'Papua New Guinea',
-						value: 'PG',
-					},
-					{
-						name: 'Autonomous Region of Bougainville',
-						value: 'PG-NSB',
-					},
-					{
-						name: 'Central Province',
-						value: 'PG-CPM',
-					},
-					{
-						name: 'Chimbu Province',
-						value: 'PG-CPK',
-					},
-					{
-						name: 'East New Britain Province',
-						value: 'PG-EBR',
-					},
-					{
-						name: 'East Sepik Province',
-						value: 'PG-ESW',
-					},
-					{
-						name: 'Eastern Highlands Province',
-						value: 'PG-EHG',
-					},
-					{
-						name: 'Enga Province',
-						value: 'PG-EPW',
-					},
-					{
-						name: 'Gulf Province',
-						value: 'PG-GPK',
-					},
-					{
-						name: 'Jiwaka Province',
-						value: 'PG-JWK',
-					},
-					{
-						name: 'Madang Province',
-						value: 'PG-MPM',
-					},
-					{
-						name: 'Manus Province',
-						value: 'PG-MRL',
-					},
-					{
-						name: 'Milne Bay Province',
-						value: 'PG-MBA',
-					},
-					{
-						name: 'Morobe Province',
-						value: 'PG-MPL',
-					},
-					{
-						name: 'National Capital District',
-						value: 'PG-NCD',
-					},
-					{
-						name: 'New Ireland Province',
-						value: 'PG-NIK',
-					},
-					{
-						name: 'Northern Province',
-						value: 'PG-NPP',
-					},
-					{
-						name: 'Southern Highlands Province',
-						value: 'PG-SHM',
-					},
-					{
-						name: 'West New Britain Province',
-						value: 'PG-WBK',
-					},
-					{
-						name: 'West Sepik Province',
-						value: 'PG-SAN',
-					},
-					{
-						name: 'Western Highlands Province',
-						value: 'PG-WHM',
-					},
-					{
-						name: 'Western Province',
-						value: 'PG-WPD',
-					},
-					{
-						name: 'Paraguay',
-						value: 'PY',
-					},
-					{
-						name: 'Alto Paraguay',
-						value: 'PY-16',
-					},
-					{
-						name: 'Alto Parana',
-						value: 'PY-10',
-					},
-					{
-						name: 'Amambay Department',
-						value: 'PY-13',
-					},
-					{
-						name: 'Asunción',
-						value: 'PY-ASU',
-					},
-					{
-						name: 'Boqueron',
-						value: 'PY-19',
-					},
-					{
-						name: 'Caaguazu',
-						value: 'PY-5',
-					},
-					{
-						name: 'Caazapa',
-						value: 'PY-6',
-					},
-					{
-						name: 'Canindeyu',
-						value: 'PY-14',
-					},
-					{
-						name: 'Central',
-						value: 'PY-11',
-					},
-					{
-						name: 'Concepcion',
-						value: 'PY-1',
-					},
-					{
-						name: 'Cordillera',
-						value: 'PY-3',
-					},
-					{
-						name: 'Guaira',
-						value: 'PY-4',
-					},
-					{
-						name: 'Itapua',
-						value: 'PY-7',
-					},
-					{
-						name: 'Misiones',
-						value: 'PY-8',
-					},
-					{
-						name: 'Neembucu',
-						value: 'PY-12',
-					},
-					{
-						name: 'Paraguari',
-						value: 'PY-9',
-					},
-					{
-						name: 'Presidente Hayes Department',
-						value: 'PY-15',
-					},
-					{
-						name: 'San Pedro',
-						value: 'PY-2',
-					},
-					{
-						name: 'Peru',
-						value: 'PE',
-					},
-					{
-						name: 'Amazonas',
-						value: 'PE-AMA',
-					},
-					{
-						name: 'Ancash',
-						value: 'PE-ANC',
-					},
-					{
-						name: 'Apurimac',
-						value: 'PE-APU',
-					},
-					{
-						name: 'Arequipa',
-						value: 'PE-ARE',
-					},
-					{
-						name: 'Ayacucho',
-						value: 'PE-AYA',
-					},
-					{
-						name: 'Cajamarca',
-						value: 'PE-CAJ',
-					},
-					{
-						name: 'Callao',
-						value: 'PE-CAL',
-					},
-					{
-						name: 'Cusco',
-						value: 'PE-CUS',
-					},
-					{
-						name: 'Huancavelica',
-						value: 'PE-HUV',
-					},
-					{
-						name: 'Huanuco',
-						value: 'PE-HUC',
-					},
-					{
-						name: 'Ica',
-						value: 'PE-ICA',
-					},
-					{
-						name: 'Junin',
-						value: 'PE-JUN',
-					},
-					{
-						name: 'La Libertad',
-						value: 'PE-LAL',
-					},
-					{
-						name: 'Lambayeque',
-						value: 'PE-LAM',
-					},
-					{
-						name: 'Lima Region',
-						value: 'PE-LIM',
-					},
-					{
-						name: 'Loreto',
-						value: 'PE-LOR',
-					},
-					{
-						name: 'Madre de Dios',
-						value: 'PE-MDD',
-					},
-					{
-						name: 'Moquegua',
-						value: 'PE-MOQ',
-					},
-					{
-						name: 'Pasco',
-						value: 'PE-PAS',
-					},
-					{
-						name: 'Piura',
-						value: 'PE-PIU',
-					},
-					{
-						name: 'Puno',
-						value: 'PE-PUN',
-					},
-					{
-						name: 'San Martin',
-						value: 'PE-SAM',
-					},
-					{
-						name: 'Tacna',
-						value: 'PE-TAC',
-					},
-					{
-						name: 'Tumbes',
-						value: 'PE-TUM',
-					},
-					{
-						name: 'Ucayali',
-						value: 'PE-UCA',
-					},
-					{
-						name: 'Philippines',
-						value: 'PH',
-					},
-					{
-						name: 'Autonomous Region in Muslim Mindanao',
-						value: 'PH-14',
-					},
-					{
-						name: 'Bicol',
-						value: 'PH-05',
-					},
-					{
-						name: 'Cagayan Valley',
-						value: 'PH-02',
-					},
-					{
-						name: 'Calabarzon',
-						value: 'PH-40',
-					},
-					{
-						name: 'Caraga',
-						value: 'PH-13',
-					},
-					{
-						name: 'Central Luzon',
-						value: 'PH-03',
-					},
-					{
-						name: 'Central Visayas',
-						value: 'PH-07',
-					},
-					{
-						name: 'Cordillera Administrative Region',
-						value: 'PH-15',
-					},
-					{
-						name: 'Davao Region',
-						value: 'PH-11',
-					},
-					{
-						name: 'Eastern Visayas',
-						value: 'PH-08',
-					},
-					{
-						name: 'Ilocos Region',
-						value: 'PH-01',
-					},
-					{
-						name: 'Metro Manila',
-						value: 'PH-00',
-					},
-					{
-						name: 'MIMAROPA',
-						value: 'PH-41',
-					},
-					{
-						name: 'Northern Mindanao',
-						value: 'PH-10',
-					},
-					{
-						name: 'Region XII',
-						value: 'PH-12',
-					},
-					{
-						name: 'Western Visayas',
-						value: 'PH-06',
-					},
-					{
-						name: 'Zamboanga Peninsula',
-						value: 'PH-09',
-					},
-					{
-						name: 'Pitcairn Islands',
-						value: 'PN',
-					},
-					{
-						name: 'Poland',
-						value: 'PL',
-					},
-					{
-						name: 'Greater Poland Voivodeship',
-						value: 'PL-WP',
-					},
-					{
-						name: 'Kuyavian-Pomeranian Voivodeship',
-						value: 'PL-KP',
-					},
-					{
-						name: 'Lesser Poland Voivodeship',
-						value: 'PL-MA',
-					},
-					{
-						name: 'Łódź Voivodeship',
-						value: 'PL-LD',
-					},
-					{
-						name: 'Lower Silesian Voivodeship',
-						value: 'PL-DS',
-					},
-					{
-						name: 'Lublin Voivodeship',
-						value: 'PL-LU',
-					},
-					{
-						name: 'Lubusz Voivodeship',
-						value: 'PL-LB',
-					},
-					{
-						name: 'Masovian Voivodeship',
-						value: 'PL-MZ',
-					},
-					{
-						name: 'Opole Voivodeship',
-						value: 'PL-OP',
-					},
-					{
-						name: 'Podkarpackie Voivodeship',
-						value: 'PL-PK',
-					},
-					{
-						name: 'Podlaskie Voivodeship',
-						value: 'PL-PD',
-					},
-					{
-						name: 'Pomeranian Voivodeship',
-						value: 'PL-PM',
-					},
-					{
-						name: 'Silesian Voivodeship',
-						value: 'PL-SL',
-					},
-					{
-						name: 'Swietokrzyskie',
-						value: 'PL-SK',
-					},
-					{
-						name: 'Warmian-Masurian Voivodeship',
-						value: 'PL-WN',
-					},
-					{
-						name: 'West Pomeranian Voivodeship',
-						value: 'PL-ZP',
-					},
-					{
-						name: 'Portugal',
-						value: 'PT',
-					},
-					{
-						name: 'Aveiro District',
-						value: 'PT-01',
-					},
-					{
-						name: 'Azores',
-						value: 'PT-20',
-					},
-					{
-						name: 'Beja District',
-						value: 'PT-02',
-					},
-					{
-						name: 'Braga',
-						value: 'PT-03',
-					},
-					{
-						name: 'Bragança District',
-						value: 'PT-04',
-					},
-					{
-						name: 'Castelo Branco District',
-						value: 'PT-05',
-					},
-					{
-						name: 'Coimbra District',
-						value: 'PT-06',
-					},
-					{
-						name: 'Évora District',
-						value: 'PT-07',
-					},
-					{
-						name: 'Faro District',
-						value: 'PT-08',
-					},
-					{
-						name: 'Guarda District',
-						value: 'PT-09',
-					},
-					{
-						name: 'Leiria District',
-						value: 'PT-10',
-					},
-					{
-						name: 'Lisbon',
-						value: 'PT-11',
-					},
-					{
-						name: 'Madeira',
-						value: 'PT-30',
-					},
-					{
-						name: 'Portalegre District',
-						value: 'PT-12',
-					},
-					{
-						name: 'Porto District',
-						value: 'PT-13',
-					},
-					{
-						name: 'Santarém District',
-						value: 'PT-14',
-					},
-					{
-						name: 'Setubal',
-						value: 'PT-15',
-					},
-					{
-						name: 'Viana do Castelo District',
-						value: 'PT-16',
-					},
-					{
-						name: 'Vila Real District',
-						value: 'PT-17',
-					},
-					{
-						name: 'Viseu District',
-						value: 'PT-18',
-					},
-					{
-						name: 'Puerto Rico',
-						value: 'PR',
-					},
-					{
-						name: 'Qatar',
-						value: 'QA',
-					},
-					{
-						name: 'Al Daayen',
-						value: 'QA-ZA',
-					},
-					{
-						name: 'Al Khor',
-						value: 'QA-KH',
-					},
-					{
-						name: 'Al Rayyan Municipality',
-						value: 'QA-RA',
-					},
-					{
-						name: 'Al Wakrah Municipality',
-						value: 'QA-WA',
-					},
-					{
-						name: 'Doha',
-						value: 'QA-DA',
-					},
-					{
-						name: 'Madinat ash Shamal',
-						value: 'QA-MS',
-					},
-					{
-						name: 'Umm Salal Municipality',
-						value: 'QA-US',
-					},
-					{
-						name: 'Réunion',
-						value: 'RE',
-					},
-					{
-						name: 'Romania',
-						value: 'RO',
-					},
-					{
-						name: 'Alba County',
-						value: 'RO-AB',
-					},
-					{
-						name: 'Arad County',
-						value: 'RO-AR',
-					},
-					{
-						name: 'Argeș County',
-						value: 'RO-AG',
-					},
-					{
-						name: 'Bacău County',
-						value: 'RO-BC',
-					},
-					{
-						name: 'Bihor County',
-						value: 'RO-BH',
-					},
-					{
-						name: 'Bistrița-Năsăud County',
-						value: 'RO-BN',
-					},
-					{
-						name: 'Botoșani County',
-						value: 'RO-BT',
-					},
-					{
-						name: 'Brăila County',
-						value: 'RO-BR',
-					},
-					{
-						name: 'Brașov County',
-						value: 'RO-BV',
-					},
-					{
-						name: 'Bucharest',
-						value: 'RO-B',
-					},
-					{
-						name: 'Buzău County',
-						value: 'RO-BZ',
-					},
-					{
-						name: 'Călărași County',
-						value: 'RO-CL',
-					},
-					{
-						name: 'Caraș-Severin County',
-						value: 'RO-CS',
-					},
-					{
-						name: 'Cluj County',
-						value: 'RO-CJ',
-					},
-					{
-						name: 'Constanța County',
-						value: 'RO-CT',
-					},
-					{
-						name: 'Covasna County',
-						value: 'RO-CV',
-					},
-					{
-						name: 'Dâmbovița County',
-						value: 'RO-DB',
-					},
-					{
-						name: 'Dolj County',
-						value: 'RO-DJ',
-					},
-					{
-						name: 'Galați',
-						value: 'RO-GL',
-					},
-					{
-						name: 'Giurgiu County',
-						value: 'RO-GR',
-					},
-					{
-						name: 'Gorj County',
-						value: 'RO-GJ',
-					},
-					{
-						name: 'Harghita County',
-						value: 'RO-HR',
-					},
-					{
-						name: 'Hunedoara County',
-						value: 'RO-HD',
-					},
-					{
-						name: 'Ialomița County',
-						value: 'RO-IL',
-					},
-					{
-						name: 'Iași County',
-						value: 'RO-IS',
-					},
-					{
-						name: 'Ilfov County',
-						value: 'RO-IF',
-					},
-					{
-						name: 'Maramureș County',
-						value: 'RO-MM',
-					},
-					{
-						name: 'Mehedinți County',
-						value: 'RO-MH',
-					},
-					{
-						name: 'Mureș County',
-						value: 'RO-MS',
-					},
-					{
-						name: 'Neamț County',
-						value: 'RO-NT',
-					},
-					{
-						name: 'Olt County',
-						value: 'RO-OT',
-					},
-					{
-						name: 'Prahova',
-						value: 'RO-PH',
-					},
-					{
-						name: 'Sălaj',
-						value: 'RO-SJ',
-					},
-					{
-						name: 'Satu Mare County',
-						value: 'RO-SM',
-					},
-					{
-						name: 'Sibiu',
-						value: 'RO-SB',
-					},
-					{
-						name: 'Suceava County',
-						value: 'RO-SV',
-					},
-					{
-						name: 'Teleorman County',
-						value: 'RO-TR',
-					},
-					{
-						name: 'Timiș County',
-						value: 'RO-TM',
-					},
-					{
-						name: 'Tulcea County',
-						value: 'RO-TL',
-					},
-					{
-						name: 'Vâlcea County',
-						value: 'RO-VL',
-					},
-					{
-						name: 'Vaslui County',
-						value: 'RO-VS',
-					},
-					{
-						name: 'Vrancea County',
-						value: 'RO-VN',
-					},
-					{
-						name: 'Russia',
-						value: 'RU',
-					},
-					{
-						name: 'Adygea',
-						value: 'RU-AD',
-					},
-					{
-						name: 'Altai Krai',
-						value: 'RU-ALT',
-					},
-					{
-						name: 'Altai Republic',
-						value: 'RU-AL',
-					},
-					{
-						name: 'Amur Oblast',
-						value: 'RU-AMU',
-					},
-					{
-						name: 'Arkhangelsk Oblast',
-						value: 'RU-ARK',
-					},
-					{
-						name: 'Astrakhan Oblast',
-						value: 'RU-AST',
-					},
-					{
-						name: 'Belgorod Oblast',
-						value: 'RU-BEL',
-					},
-					{
-						name: 'Bryansk Oblast',
-						value: 'RU-BRY',
-					},
-					{
-						name: 'Buryatia',
-						value: 'RU-BU',
-					},
-					{
-						name: 'Chechnya',
-						value: 'RU-CE',
-					},
-					{
-						name: 'Chelyabinsk Oblast',
-						value: 'RU-CHE',
-					},
-					{
-						name: 'Chukotka Autonomous Okrug',
-						value: 'RU-CHU',
-					},
-					{
-						name: 'Chuvashia Republic',
-						value: 'RU-CU',
-					},
-					{
-						name: 'Dagestan Republic',
-						value: 'RU-DA',
-					},
-					{
-						name: 'Ingushetia',
-						value: 'RU-IN',
-					},
-					{
-						name: 'Irkutsk Oblast',
-						value: 'RU-IRK',
-					},
-					{
-						name: 'Ivanovo Oblast',
-						value: 'RU-IVA',
-					},
-					{
-						name: 'Jewish Autonomous Oblast',
-						value: 'RU-YEV',
-					},
-					{
-						name: 'Kabardino-Balkaria',
-						value: 'RU-KB',
-					},
-					{
-						name: 'Kaliningrad Oblast',
-						value: 'RU-KGD',
-					},
-					{
-						name: 'Kalmykia',
-						value: 'RU-KL',
-					},
-					{
-						name: 'Kaluga Oblast',
-						value: 'RU-KLU',
-					},
-					{
-						name: 'Kamchatka Krai',
-						value: 'RU-KAM',
-					},
-					{
-						name: 'Karachay-Cherkessia',
-						value: 'RU-KC',
-					},
-					{
-						name: 'Kemerovo Oblast',
-						value: 'RU-KEM',
-					},
-					{
-						name: 'Khabarovsk Krai',
-						value: 'RU-KHA',
-					},
-					{
-						name: 'Khanty-Mansi Autonomous Okrug',
-						value: 'RU-KHM',
-					},
-					{
-						name: 'Kirov Oblast',
-						value: 'RU-KIR',
-					},
-					{
-						name: 'Komi Republic',
-						value: 'RU-KO',
-					},
-					{
-						name: 'Kostroma Oblast',
-						value: 'RU-KOS',
-					},
-					{
-						name: 'Krasnodar Krai',
-						value: 'RU-KDA',
-					},
-					{
-						name: 'Krasnoyarsk Krai',
-						value: 'RU-KYA',
-					},
-					{
-						name: 'Kurgan Oblast',
-						value: 'RU-KGN',
-					},
-					{
-						name: 'Kursk Oblast',
-						value: 'RU-KRS',
-					},
-					{
-						name: 'Leningrad Oblast',
-						value: 'RU-LEN',
-					},
-					{
-						name: 'Lipetsk Oblast',
-						value: 'RU-LIP',
-					},
-					{
-						name: 'Magadan Oblast',
-						value: 'RU-MAG',
-					},
-					{
-						name: 'Mari El Republic',
-						value: 'RU-ME',
-					},
-					{
-						name: 'Mordovia',
-						value: 'RU-MO',
-					},
-					{
-						name: 'Moscow',
-						value: 'RU-MOW',
-					},
-					{
-						name: 'Moscow Oblast',
-						value: 'RU-MOS',
-					},
-					{
-						name: 'Murmansk Oblast',
-						value: 'RU-MUR',
-					},
-					{
-						name: 'Nenets Autonomous Okrug',
-						value: 'RU-NEN',
-					},
-					{
-						name: 'Nizhny Novgorod Oblast',
-						value: 'RU-NIZ',
-					},
-					{
-						name: 'North Ossetia–Alania',
-						value: 'RU-SE',
-					},
-					{
-						name: 'Novgorod Oblast',
-						value: 'RU-NGR',
-					},
-					{
-						name: 'Novosibirsk Oblast',
-						value: 'RU-NVS',
-					},
-					{
-						name: 'Omsk Oblast',
-						value: 'RU-OMS',
-					},
-					{
-						name: 'Orenburg Oblast',
-						value: 'RU-ORE',
-					},
-					{
-						name: 'Oryol Oblast',
-						value: 'RU-ORL',
-					},
-					{
-						name: 'Penza Oblast',
-						value: 'RU-PNZ',
-					},
-					{
-						name: 'Perm Krai',
-						value: 'RU-PER',
-					},
-					{
-						name: 'Primorsky Krai',
-						value: 'RU-PRI',
-					},
-					{
-						name: 'Pskov Oblast',
-						value: 'RU-PSK',
-					},
-					{
-						name: 'Republic of Bashkortostan',
-						value: 'RU-BA',
-					},
-					{
-						name: 'Republic of Karelia',
-						value: 'RU-KR',
-					},
-					{
-						name: 'Republic of Khakassia',
-						value: 'RU-KK',
-					},
-					{
-						name: 'Rostov Oblast',
-						value: 'RU-ROS',
-					},
-					{
-						name: 'Ryazan Oblast',
-						value: 'RU-RYA',
-					},
-					{
-						name: 'Saint Petersburg',
-						value: 'RU-SPE',
-					},
-					{
-						name: 'Sakha Republic',
-						value: 'RU-SA',
-					},
-					{
-						name: 'Sakhalin Oblast',
-						value: 'RU-SAK',
-					},
-					{
-						name: 'Samara Oblast',
-						value: 'RU-SAM',
-					},
-					{
-						name: 'Saratov Oblast',
-						value: 'RU-SAR',
-					},
-					{
-						name: 'Smolensk Oblast',
-						value: 'RU-SMO',
-					},
-					{
-						name: 'Stavropol Krai',
-						value: 'RU-STA',
-					},
-					{
-						name: 'Sverdlovsk Oblast',
-						value: 'RU-SVE',
-					},
-					{
-						name: 'Tambov Oblast',
-						value: 'RU-TAM',
-					},
-					{
-						name: 'Tatarstan',
-						value: 'RU-TA',
-					},
-					{
-						name: 'Tomsk Oblast',
-						value: 'RU-TOM',
-					},
-					{
-						name: 'Tula Oblast',
-						value: 'RU-TUL',
-					},
-					{
-						name: 'Tuva',
-						value: 'RU-TY',
-					},
-					{
-						name: 'Tver Oblast',
-						value: 'RU-TVE',
-					},
-					{
-						name: 'Tyumen Oblast',
-						value: 'RU-TYU',
-					},
-					{
-						name: 'Udmurt Republic',
-						value: 'RU-UD',
-					},
-					{
-						name: 'Ulyanovsk Oblast',
-						value: 'RU-ULY',
-					},
-					{
-						name: 'Vladimir Oblast',
-						value: 'RU-VLA',
-					},
-					{
-						name: 'Volgograd Oblast',
-						value: 'RU-VGG',
-					},
-					{
-						name: 'Vologda Oblast',
-						value: 'RU-VLG',
-					},
-					{
-						name: 'Voronezh Oblast',
-						value: 'RU-VOR',
-					},
-					{
-						name: 'Yamalo-Nenets Autonomous Okrug',
-						value: 'RU-YAN',
-					},
-					{
-						name: 'Yaroslavl Oblast',
-						value: 'RU-YAR',
-					},
-					{
-						name: 'Zabaykalsky Krai',
-						value: 'RU-ZAB',
-					},
-					{
-						name: 'Rwanda',
-						value: 'RW',
-					},
-					{
-						name: 'Eastern Province',
-						value: 'RW-02',
-					},
-					{
-						name: 'Kigali',
-						value: 'RW-01',
-					},
-					{
-						name: 'Northern Province',
-						value: 'RW-03',
-					},
-					{
-						name: 'Southern Province',
-						value: 'RW-05',
-					},
-					{
-						name: 'Western Province',
-						value: 'RW-04',
-					},
-					{
-						name: 'Samoa',
-						value: 'WS',
-					},
-					{
-						name: "A'ana",
-						value: 'WS-AA',
-					},
-					{
-						name: 'Aiga-i-le-Tai',
-						value: 'WS-AL',
-					},
-					{
-						name: 'Atua',
-						value: 'WS-AT',
-					},
-					{
-						name: "Fa'asaleleaga",
-						value: 'WS-FA',
-					},
-					{
-						name: "Gaga'emauga",
-						value: 'WS-GE',
-					},
-					{
-						name: "Gaga'ifomauga",
-						value: 'WS-GI',
-					},
-					{
-						name: 'Palauli',
-						value: 'WS-PA',
-					},
-					{
-						name: "Satupa'itea",
-						value: 'WS-SA',
-					},
-					{
-						name: 'Tuamasaga',
-						value: 'WS-TU',
-					},
-					{
-						name: "Va'a-o-Fonoti",
-						value: 'WS-VF',
-					},
-					{
-						name: 'Vaisigano',
-						value: 'WS-VS',
-					},
-					{
-						name: 'San Marino',
-						value: 'SM',
-					},
-					{
-						name: 'Acquaviva',
-						value: 'SM-01',
-					},
-					{
-						name: 'Borgo Maggiore',
-						value: 'SM-06',
-					},
-					{
-						name: 'Chiesanuova',
-						value: 'SM-02',
-					},
-					{
-						name: 'Domagnano',
-						value: 'SM-03',
-					},
-					{
-						name: 'Faetano',
-						value: 'SM-04',
-					},
-					{
-						name: 'Fiorentino',
-						value: 'SM-05',
-					},
-					{
-						name: 'Montegiardino',
-						value: 'SM-08',
-					},
-					{
-						name: 'San Marino',
-						value: 'SM-07',
-					},
-					{
-						name: 'Serravalle',
-						value: 'SM-09',
-					},
-					{
-						name: 'São Tomé & Príncipe',
-						value: 'ST',
-					},
-					{
-						name: 'Principe',
-						value: 'ST-P',
-					},
-					{
-						name: 'Sao Tome',
-						value: 'ST-S',
-					},
-					{
-						name: 'Saudi Arabia',
-						value: 'SA',
-					},
-					{
-						name: 'Al Bahah Province',
-						value: 'SA-11',
-					},
-					{
-						name: 'Al Jowf',
-						value: 'SA-12',
-					},
-					{
-						name: 'Al Madinah Province',
-						value: 'SA-03',
-					},
-					{
-						name: 'Al Qassim',
-						value: 'SA-05',
-					},
-					{
-						name: 'Aseer Province',
-						value: 'SA-14',
-					},
-					{
-						name: 'Eastern Province',
-						value: 'SA-04',
-					},
-					{
-						name: 'Hail Province',
-						value: 'SA-06',
-					},
-					{
-						name: 'Jazan',
-						value: 'SA-09',
-					},
-					{
-						name: 'Makkah Province',
-						value: 'SA-02',
-					},
-					{
-						name: 'Najran',
-						value: 'SA-10',
-					},
-					{
-						name: 'Northern Borders Province',
-						value: 'SA-08',
-					},
-					{
-						name: 'Riyadh Province',
-						value: 'SA-01',
-					},
-					{
-						name: 'Tabuk Province',
-						value: 'SA-07',
-					},
-					{
-						name: 'Senegal',
-						value: 'SN',
-					},
-					{
-						name: 'Dakar',
-						value: 'SN-DK',
-					},
-					{
-						name: 'Diourbel Region',
-						value: 'SN-DB',
-					},
-					{
-						name: 'Fatick Region',
-						value: 'SN-FK',
-					},
-					{
-						name: 'Kaffrine Region',
-						value: 'SN-KA',
-					},
-					{
-						name: 'Kaolack Region',
-						value: 'SN-KL',
-					},
-					{
-						name: 'Kédougou Region',
-						value: 'SN-KE',
-					},
-					{
-						name: 'Kolda Region',
-						value: 'SN-KD',
-					},
-					{
-						name: 'Louga Region',
-						value: 'SN-LG',
-					},
-					{
-						name: 'Matam Region',
-						value: 'SN-MT',
-					},
-					{
-						name: 'Saint-Louis Region',
-						value: 'SN-SL',
-					},
-					{
-						name: 'Sédhiou Region',
-						value: 'SN-SE',
-					},
-					{
-						name: 'Tambacounda Region',
-						value: 'SN-TC',
-					},
-					{
-						name: 'Thiès Region',
-						value: 'SN-TH',
-					},
-					{
-						name: 'Ziguinchor',
-						value: 'SN-ZG',
-					},
-					{
-						name: 'Serbia',
-						value: 'RS',
-					},
-					{
-						name: 'Vojvodina',
-						value: 'RS-VO',
-					},
-					{
-						name: 'Seychelles',
-						value: 'SC',
-					},
-					{
-						name: 'Anse Aux Pins',
-						value: 'SC-01',
-					},
-					{
-						name: 'Anse Boileau',
-						value: 'SC-02',
-					},
-					{
-						name: 'Anse Etoile',
-						value: 'SC-03',
-					},
-					{
-						name: 'Anse Royale',
-						value: 'SC-05',
-					},
-					{
-						name: 'Au Cap',
-						value: 'SC-04',
-					},
-					{
-						name: 'Baie Lazare',
-						value: 'SC-06',
-					},
-					{
-						name: 'Baie Sainte Anne',
-						value: 'SC-07',
-					},
-					{
-						name: 'Beau Vallon',
-						value: 'SC-08',
-					},
-					{
-						name: 'Bel Air',
-						value: 'SC-09',
-					},
-					{
-						name: 'Bel Ombre',
-						value: 'SC-10',
-					},
-					{
-						name: 'Cascade',
-						value: 'SC-11',
-					},
-					{
-						name: 'Glacis',
-						value: 'SC-12',
-					},
-					{
-						name: 'Grand Anse Mahe',
-						value: 'SC-13',
-					},
-					{
-						name: 'Grand Anse Praslin',
-						value: 'SC-14',
-					},
-					{
-						name: 'La Digue',
-						value: 'SC-15',
-					},
-					{
-						name: 'La Riviere Anglaise',
-						value: 'SC-16',
-					},
-					{
-						name: 'Les Mamelles',
-						value: 'SC-24',
-					},
-					{
-						name: 'Mont Buxton',
-						value: 'SC-17',
-					},
-					{
-						name: 'Mont Fleuri',
-						value: 'SC-18',
-					},
-					{
-						name: 'Plaisance',
-						value: 'SC-19',
-					},
-					{
-						name: 'Pointe La Rue',
-						value: 'SC-20',
-					},
-					{
-						name: 'Port Glaud',
-						value: 'SC-21',
-					},
-					{
-						name: 'Roche Caiman',
-						value: 'SC-25',
-					},
-					{
-						name: 'Saint Louis',
-						value: 'SC-22',
-					},
-					{
-						name: 'Takamaka',
-						value: 'SC-23',
-					},
-					{
-						name: 'Sierra Leone',
-						value: 'SL',
-					},
-					{
-						name: 'Eastern Province',
-						value: 'SL-E',
-					},
-					{
-						name: 'Northern Province',
-						value: 'SL-N',
-					},
-					{
-						name: 'Southern Province',
-						value: 'SL-S',
-					},
-					{
-						name: 'Western Area',
-						value: 'SL-W',
-					},
-					{
-						name: 'Singapore',
-						value: 'SG',
-					},
-					{
-						name: 'Sint Maarten',
-						value: 'SX',
-					},
-					{
-						name: 'Slovakia',
-						value: 'SK',
-					},
-					{
-						name: 'Banská Bystrica Region',
-						value: 'SK-BC',
-					},
-					{
-						name: 'Bratislava Region',
-						value: 'SK-BL',
-					},
-					{
-						name: 'Košice Region',
-						value: 'SK-KI',
-					},
-					{
-						name: 'Nitra Region',
-						value: 'SK-NI',
-					},
-					{
-						name: 'Prešov Region',
-						value: 'SK-PV',
-					},
-					{
-						name: 'Trenčín Region',
-						value: 'SK-TC',
-					},
-					{
-						name: 'Trnava Region',
-						value: 'SK-TA',
-					},
-					{
-						name: 'Žilina Region',
-						value: 'SK-ZI',
-					},
-					{
-						name: 'Slovenia',
-						value: 'SI',
-					},
-					{
-						name: 'Solomon Islands',
-						value: 'SB',
-					},
-					{
-						name: 'Capital Territory',
-						value: 'SB-CT',
-					},
-					{
-						name: 'Central Province',
-						value: 'SB-CE',
-					},
-					{
-						name: 'Choiseul Province',
-						value: 'SB-CH',
-					},
-					{
-						name: 'Guadalcanal Province',
-						value: 'SB-GU',
-					},
-					{
-						name: 'Isabel Province',
-						value: 'SB-IS',
-					},
-					{
-						name: 'Makira-Ulawa',
-						value: 'SB-MK',
-					},
-					{
-						name: 'Malaita Province',
-						value: 'SB-ML',
-					},
-					{
-						name: 'Rennell and Bellona Province',
-						value: 'SB-RB',
-					},
-					{
-						name: 'Temotu Province',
-						value: 'SB-TE',
-					},
-					{
-						name: 'Western Province',
-						value: 'SB-WE',
-					},
-					{
-						name: 'Somalia',
-						value: 'SO',
-					},
-					{
-						name: 'Awdal',
-						value: 'SO-AW',
-					},
-					{
-						name: 'Bakool',
-						value: 'SO-BK',
-					},
-					{
-						name: 'Banaadir',
-						value: 'SO-BN',
-					},
-					{
-						name: 'Bari',
-						value: 'SO-BR',
-					},
-					{
-						name: 'Bay',
-						value: 'SO-BY',
-					},
-					{
-						name: 'Galguduud',
-						value: 'SO-GA',
-					},
-					{
-						name: 'Gedo',
-						value: 'SO-GE',
-					},
-					{
-						name: 'Hiran',
-						value: 'SO-HI',
-					},
-					{
-						name: 'Jubbada Dhexe',
-						value: 'SO-JD',
-					},
-					{
-						name: 'Jubbada Hoose',
-						value: 'SO-JH',
-					},
-					{
-						name: 'Mudug',
-						value: 'SO-MU',
-					},
-					{
-						name: 'Nugaal',
-						value: 'SO-NU',
-					},
-					{
-						name: 'Sanaag',
-						value: 'SO-SA',
-					},
-					{
-						name: 'Shabeellaha Dhexe',
-						value: 'SO-SD',
-					},
-					{
-						name: 'Shabeellaha Hoose',
-						value: 'SO-SH',
-					},
-					{
-						name: 'Sool',
-						value: 'SO-SO',
-					},
-					{
-						name: 'Togdheer',
-						value: 'SO-TO',
-					},
-					{
-						name: 'Woqooyi Galbeed',
-						value: 'SO-WO',
-					},
-					{
-						name: 'South Africa',
-						value: 'ZA',
-					},
-					{
-						name: 'Eastern Cape',
-						value: 'ZA-EC',
-					},
-					{
-						name: 'Free State',
-						value: 'ZA-FS',
-					},
-					{
-						name: 'Gauteng',
-						value: 'ZA-GT',
-					},
-					{
-						name: 'KwaZulu-Natal',
-						value: 'ZA-NL',
-					},
-					{
-						name: 'Limpopo',
-						value: 'ZA-LP',
-					},
-					{
-						name: 'Mpumalanga',
-						value: 'ZA-MP',
-					},
-					{
-						name: 'North West',
-						value: 'ZA-NW',
-					},
-					{
-						name: 'Northern Cape',
-						value: 'ZA-NC',
-					},
-					{
-						name: 'Western Cape',
-						value: 'ZA-WC',
-					},
-					{
-						name: 'South Georgia & South Sandwich Islands',
-						value: 'GS',
-					},
-					{
-						name: 'South Korea',
-						value: 'KR',
-					},
-					{
-						name: 'Busan',
-						value: 'KR-26',
-					},
-					{
-						name: 'Chungcheongbuk-do',
-						value: 'KR-43',
-					},
-					{
-						name: 'Chungcheongnam-do',
-						value: 'KR-44',
-					},
-					{
-						name: 'Daegu',
-						value: 'KR-27',
-					},
-					{
-						name: 'Daejeon',
-						value: 'KR-30',
-					},
-					{
-						name: 'Gangwon-do',
-						value: 'KR-42',
-					},
-					{
-						name: 'Gwangju',
-						value: 'KR-29',
-					},
-					{
-						name: 'Gyeonggi-do',
-						value: 'KR-41',
-					},
-					{
-						name: 'Gyeongsangbuk-do',
-						value: 'KR-47',
-					},
-					{
-						name: 'Gyeongsangnam-do',
-						value: 'KR-48',
-					},
-					{
-						name: 'Incheon',
-						value: 'KR-28',
-					},
-					{
-						name: 'Jeju-do',
-						value: 'KR-49',
-					},
-					{
-						name: 'Jeollabuk-do',
-						value: 'KR-45',
-					},
-					{
-						name: 'Jeollanam-do',
-						value: 'KR-46',
-					},
-					{
-						name: 'Seoul',
-						value: 'KR-11',
-					},
-					{
-						name: 'Ulsan',
-						value: 'KR-31',
-					},
-					{
-						name: 'South Sudan',
-						value: 'SS',
-					},
-					{
-						name: 'Al Wahdah',
-						value: 'SS-UY',
-					},
-					{
-						name: 'Al-Buhayrat',
-						value: 'SS-LK',
-					},
-					{
-						name: 'Central Equatoria',
-						value: 'SS-EC',
-					},
-					{
-						name: 'Eastern Equatoria',
-						value: 'SS-EE',
-					},
-					{
-						name: 'Jonglei',
-						value: 'SS-JG',
-					},
-					{
-						name: 'Northern Bahr el Ghazal',
-						value: 'SS-BN',
-					},
-					{
-						name: 'Upper Nile',
-						value: 'SS-NU',
-					},
-					{
-						name: 'Warrap',
-						value: 'SS-WR',
-					},
-					{
-						name: 'Western Bahr el Ghazal',
-						value: 'SS-BW',
-					},
-					{
-						name: 'Western Equatoria',
-						value: 'SS-EW',
-					},
-					{
-						name: 'Spain',
-						value: 'ES',
-					},
-					{
-						name: 'Andalusia',
-						value: 'ES-AN',
-					},
-					{
-						name: 'Aragon',
-						value: 'ES-AR',
-					},
-					{
-						name: 'Asturias',
-						value: 'ES-AS',
-					},
-					{
-						name: 'Balearic Islands',
-						value: 'ES-IB',
-					},
-					{
-						name: 'Basque Country',
-						value: 'ES-PV',
-					},
-					{
-						name: 'Canary Islands',
-						value: 'ES-CN',
-					},
-					{
-						name: 'Cantabria',
-						value: 'ES-CB',
-					},
-					{
-						name: 'Castile and León',
-						value: 'ES-CL',
-					},
-					{
-						name: 'Castile-La Mancha',
-						value: 'ES-CM',
-					},
-					{
-						name: 'Catalonia',
-						value: 'ES-CT',
-					},
-					{
-						name: 'Ceuta',
-						value: 'ES-CE',
-					},
-					{
-						name: 'Community of Madrid',
-						value: 'ES-MD',
-					},
-					{
-						name: 'Extremadura',
-						value: 'ES-EX',
-					},
-					{
-						name: 'Galicia',
-						value: 'ES-GA',
-					},
-					{
-						name: 'La Rioja',
-						value: 'ES-RI',
-					},
-					{
-						name: 'Melilla',
-						value: 'ES-ML',
-					},
-					{
-						name: 'Navarre',
-						value: 'ES-NC',
-					},
-					{
-						name: 'Region of Murcia',
-						value: 'ES-MC',
-					},
-					{
-						name: 'Valencian Community',
-						value: 'ES-VC',
-					},
-					{
-						name: 'Sri Lanka',
-						value: 'LK',
-					},
-					{
-						name: 'Central Province',
-						value: 'LK-2',
-					},
-					{
-						name: 'Eastern Province',
-						value: 'LK-5',
-					},
-					{
-						name: 'North Central Province',
-						value: 'LK-7',
-					},
-					{
-						name: 'North Western Province',
-						value: 'LK-6',
-					},
-					{
-						name: 'Northern Province',
-						value: 'LK-4',
-					},
-					{
-						name: 'Sabaragamuwa Province',
-						value: 'LK-9',
-					},
-					{
-						name: 'Southern Province',
-						value: 'LK-3',
-					},
-					{
-						name: 'Uva Province',
-						value: 'LK-8',
-					},
-					{
-						name: 'Western Province',
-						value: 'LK-1',
-					},
-					{
-						name: 'St. Barthélemy',
-						value: 'BL',
-					},
-					{
-						name: 'St. Helena',
-						value: 'SH',
-					},
-					{
-						name: 'Ascension',
-						value: 'SH-AC',
-					},
-					{
-						name: 'Saint Helena',
-						value: 'SH-HL',
-					},
-					{
-						name: 'Tristan da Cunha',
-						value: 'SH-TA',
-					},
-					{
-						name: 'St. Kitts & Nevis',
-						value: 'KN',
-					},
-					{
-						name: 'Christ Church Nichola Town Parish',
-						value: 'KN-01',
-					},
-					{
-						name: 'Saint Anne Sandy Point Parish',
-						value: 'KN-02',
-					},
-					{
-						name: 'Saint George Basseterre Parish',
-						value: 'KN-03',
-					},
-					{
-						name: 'Saint George Gingerland Parish',
-						value: 'KN-04',
-					},
-					{
-						name: 'Saint James Windward Parish',
-						value: 'KN-05',
-					},
-					{
-						name: 'Saint John Capisterre',
-						value: 'KN-06',
-					},
-					{
-						name: 'Saint John Figtree Parish',
-						value: 'KN-07',
-					},
-					{
-						name: 'Saint Mary Cayon Parish',
-						value: 'KN-08',
-					},
-					{
-						name: 'Saint Paul Capisterre Parish',
-						value: 'KN-09',
-					},
-					{
-						name: 'Saint Paul Charlestown Parish',
-						value: 'KN-10',
-					},
-					{
-						name: 'Saint Peter Basseterre Parish',
-						value: 'KN-11',
-					},
-					{
-						name: 'Saint Thomas Lowland Parish',
-						value: 'KN-12',
-					},
-					{
-						name: 'Saint Thomas Middle Island Parish',
-						value: 'KN-13',
-					},
-					{
-						name: 'Trinity Palmetto Point Parish',
-						value: 'KN-15',
-					},
-					{
-						name: 'St. Lucia',
-						value: 'LC',
-					},
-					{
-						name: 'Anse La Raye',
-						value: 'LC-01',
-					},
-					{
-						name: 'Castries',
-						value: 'LC-02',
-					},
-					{
-						name: 'Choiseul',
-						value: 'LC-03',
-					},
-					{
-						name: 'Dauphin',
-						value: 'LC-04',
-					},
-					{
-						name: 'Dennery',
-						value: 'LC-05',
-					},
-					{
-						name: 'Gros Islet',
-						value: 'LC-06',
-					},
-					{
-						name: 'Laborie',
-						value: 'LC-07',
-					},
-					{
-						name: 'Micoud',
-						value: 'LC-08',
-					},
-					{
-						name: 'Praslin',
-						value: 'LC-09',
-					},
-					{
-						name: 'Soufriere',
-						value: 'LC-10',
-					},
-					{
-						name: 'Vieux Fort',
-						value: 'LC-11',
-					},
-					{
-						name: 'St. Martin',
-						value: 'MF',
-					},
-					{
-						name: 'St. Pierre & Miquelon',
-						value: 'PM',
-					},
-					{
-						name: 'St. Vincent & Grenadines',
-						value: 'VC',
-					},
-					{
-						name: 'Charlotte',
-						value: 'VC-01',
-					},
-					{
-						name: 'Grenadines',
-						value: 'VC-06',
-					},
-					{
-						name: 'Saint Andrew',
-						value: 'VC-02',
-					},
-					{
-						name: 'Saint David',
-						value: 'VC-03',
-					},
-					{
-						name: 'Saint George',
-						value: 'VC-04',
-					},
-					{
-						name: 'Saint Patrick',
-						value: 'VC-05',
-					},
-					{
-						name: 'Sudan',
-						value: 'SD',
-					},
-					{
-						name: 'Al Jazirah',
-						value: 'SD-GZ',
-					},
-					{
-						name: 'Al Qadarif',
-						value: 'SD-GD',
-					},
-					{
-						name: 'Blue Nile',
-						value: 'SD-NB',
-					},
-					{
-						name: 'Gharb Darfur',
-						value: 'SD-DW',
-					},
-					{
-						name: 'Janub Darfur',
-						value: 'SD-DS',
-					},
-					{
-						name: 'Kassala',
-						value: 'SD-KA',
-					},
-					{
-						name: 'Khartoum',
-						value: 'SD-KH',
-					},
-					{
-						name: 'North Kurdufan',
-						value: 'SD-KN',
-					},
-					{
-						name: 'Northern',
-						value: 'SD-NO',
-					},
-					{
-						name: 'Red Sea',
-						value: 'SD-RS',
-					},
-					{
-						name: 'River Nile',
-						value: 'SD-NR',
-					},
-					{
-						name: 'Sennar',
-						value: 'SD-SI',
-					},
-					{
-						name: 'Shamal Darfur',
-						value: 'SD-DN',
-					},
-					{
-						name: 'South Kordofan',
-						value: 'SD-KS',
-					},
-					{
-						name: 'White Nile',
-						value: 'SD-NW',
-					},
-					{
-						name: 'Suriname',
-						value: 'SR',
-					},
-					{
-						name: 'Brokopondo',
-						value: 'SR-BR',
-					},
-					{
-						name: 'Commewijne',
-						value: 'SR-CM',
-					},
-					{
-						name: 'Coronie',
-						value: 'SR-CR',
-					},
-					{
-						name: 'Marowijne',
-						value: 'SR-MA',
-					},
-					{
-						name: 'Nickerie District',
-						value: 'SR-NI',
-					},
-					{
-						name: 'Para',
-						value: 'SR-PR',
-					},
-					{
-						name: 'Paramaribo District',
-						value: 'SR-PM',
-					},
-					{
-						name: 'Saramacca',
-						value: 'SR-SA',
-					},
-					{
-						name: 'Sipaliwini',
-						value: 'SR-SI',
-					},
-					{
-						name: 'Wanica',
-						value: 'SR-WA',
-					},
-					{
-						name: 'Svalbard & Jan Mayen',
-						value: 'SJ',
-					},
-					{
-						name: 'Sweden',
-						value: 'SE',
-					},
-					{
-						name: 'Blekinge County',
-						value: 'SE-K',
-					},
-					{
-						name: 'Dalarna County',
-						value: 'SE-W',
-					},
-					{
-						name: 'Gavleborg County',
-						value: 'SE-X',
-					},
-					{
-						name: 'Gotland County',
-						value: 'SE-I',
-					},
-					{
-						name: 'Halland County',
-						value: 'SE-N',
-					},
-					{
-						name: 'Jamtland County',
-						value: 'SE-Z',
-					},
-					{
-						name: 'Jonkoping County',
-						value: 'SE-F',
-					},
-					{
-						name: 'Kalmar County',
-						value: 'SE-H',
-					},
-					{
-						name: 'Kronoberg County',
-						value: 'SE-G',
-					},
-					{
-						name: 'Norrbotten County',
-						value: 'SE-BD',
-					},
-					{
-						name: 'Örebro County',
-						value: 'SE-T',
-					},
-					{
-						name: 'Östergötland County',
-						value: 'SE-E',
-					},
-					{
-						name: 'Skåne County',
-						value: 'SE-M',
-					},
-					{
-						name: 'Södermanland County',
-						value: 'SE-D',
-					},
-					{
-						name: 'Stockholm County',
-						value: 'SE-AB',
-					},
-					{
-						name: 'Uppsala County',
-						value: 'SE-C',
-					},
-					{
-						name: 'Varmland County',
-						value: 'SE-S',
-					},
-					{
-						name: 'Västerbotten County',
-						value: 'SE-AC',
-					},
-					{
-						name: 'Västernorrland County',
-						value: 'SE-Y',
-					},
-					{
-						name: 'Västmanland County',
-						value: 'SE-U',
-					},
-					{
-						name: 'Västra Götaland County',
-						value: 'SE-O',
-					},
-					{
-						name: 'Switzerland',
-						value: 'CH',
-					},
-					{
-						name: 'Aargau',
-						value: 'CH-AG',
-					},
-					{
-						name: 'Appenzell Innerrhoden',
-						value: 'CH-AI',
-					},
-					{
-						name: 'Appenzell Outer Rhodes',
-						value: 'CH-AR',
-					},
-					{
-						name: 'Basel-Landschaft',
-						value: 'CH-BL',
-					},
-					{
-						name: 'Basel-Stadt',
-						value: 'CH-BS',
-					},
-					{
-						name: 'Canton of Bern',
-						value: 'CH-BE',
-					},
-					{
-						name: 'Canton of Fribourg',
-						value: 'CH-FR',
-					},
-					{
-						name: 'Canton of Glarus',
-						value: 'CH-GL',
-					},
-					{
-						name: 'Canton of Jura',
-						value: 'CH-JU',
-					},
-					{
-						name: 'Canton of Neuchâtel',
-						value: 'CH-NE',
-					},
-					{
-						name: 'Canton of Obwalden',
-						value: 'CH-OW',
-					},
-					{
-						name: 'Canton of Schaffhausen',
-						value: 'CH-SH',
-					},
-					{
-						name: 'Canton of Schwyz',
-						value: 'CH-SZ',
-					},
-					{
-						name: 'Canton of Solothurn',
-						value: 'CH-SO',
-					},
-					{
-						name: 'Canton of Uri',
-						value: 'CH-UR',
-					},
-					{
-						name: 'Canton of Zug',
-						value: 'CH-ZG',
-					},
-					{
-						name: 'Geneva',
-						value: 'CH-GE',
-					},
-					{
-						name: 'Grisons',
-						value: 'CH-GR',
-					},
-					{
-						name: 'Lucerne',
-						value: 'CH-LU',
-					},
-					{
-						name: 'Nidwalden',
-						value: 'CH-NW',
-					},
-					{
-						name: 'St. Gallen',
-						value: 'CH-SG',
-					},
-					{
-						name: 'Thurgau',
-						value: 'CH-TG',
-					},
-					{
-						name: 'Ticino',
-						value: 'CH-TI',
-					},
-					{
-						name: 'Valais',
-						value: 'CH-VS',
-					},
-					{
-						name: 'Vaud',
-						value: 'CH-VD',
-					},
-					{
-						name: 'Zurich',
-						value: 'CH-ZH',
-					},
-					{
-						name: 'Syria',
-						value: 'SY',
-					},
-					{
-						name: 'Al Hasakah',
-						value: 'SY-HA',
-					},
-					{
-						name: 'Aleppo Governorate',
-						value: 'SY-HL',
-					},
-					{
-						name: 'Ar-Raqqah Governorate',
-						value: 'SY-RA',
-					},
-					{
-						name: 'As-Suwayda Governorate',
-						value: 'SY-SU',
-					},
-					{
-						name: 'Damascus Governorate',
-						value: 'SY-DI',
-					},
-					{
-						name: 'Daraa Governorate',
-						value: 'SY-DR',
-					},
-					{
-						name: 'Deir Ez-Zor Governorate',
-						value: 'SY-DY',
-					},
-					{
-						name: 'Hama Governorate',
-						value: 'SY-HM',
-					},
-					{
-						name: 'Homs Governorate',
-						value: 'SY-HI',
-					},
-					{
-						name: 'Idlib Governorate',
-						value: 'SY-ID',
-					},
-					{
-						name: 'Latakia Governorate',
-						value: 'SY-LA',
-					},
-					{
-						name: 'Quneitra Governorate',
-						value: 'SY-QU',
-					},
-					{
-						name: 'Rif-Dimashq Governorate',
-						value: 'SY-RD',
-					},
-					{
-						name: 'Tartus Governorate',
-						value: 'SY-TA',
-					},
-					{
-						name: 'Taiwan',
-						value: 'TW',
-					},
-					{
-						name: 'Kaohsiung City',
-						value: 'TW-KHH',
-					},
-					{
-						name: 'New Taipei City',
-						value: 'TW-TPQ',
-					},
-					{
-						name: 'Taichung City',
-						value: 'TW-TXG',
-					},
-					{
-						name: 'Tainan City',
-						value: 'TW-TNN',
-					},
-					{
-						name: 'Taipei City',
-						value: 'TW-TPE',
-					},
-					{
-						name: 'Taoyuan City',
-						value: 'TW-TAO',
-					},
-					{
-						name: 'Tajikistan',
-						value: 'TJ',
-					},
-					{
-						name: 'Districts of Republican Subordination',
-						value: 'TJ-RR',
-					},
-					{
-						name: 'Gorno-Badakhshan Autonomous Province',
-						value: 'TJ-GB',
-					},
-					{
-						name: 'Khatlon',
-						value: 'TJ-KT',
-					},
-					{
-						name: 'Sughd Province',
-						value: 'TJ-SU',
-					},
-					{
-						name: 'Tanzania',
-						value: 'TZ',
-					},
-					{
-						name: 'Arusha',
-						value: 'TZ-01',
-					},
-					{
-						name: 'Dodoma',
-						value: 'TZ-03',
-					},
-					{
-						name: 'Iringa',
-						value: 'TZ-04',
-					},
-					{
-						name: 'Kagera',
-						value: 'TZ-05',
-					},
-					{
-						name: 'Kigoma',
-						value: 'TZ-08',
-					},
-					{
-						name: 'Kilimanjaro',
-						value: 'TZ-09',
-					},
-					{
-						name: 'Lindi',
-						value: 'TZ-12',
-					},
-					{
-						name: 'Manyara',
-						value: 'TZ-26',
-					},
-					{
-						name: 'Mara',
-						value: 'TZ-13',
-					},
-					{
-						name: 'Mbeya',
-						value: 'TZ-14',
-					},
-					{
-						name: 'Morogoro',
-						value: 'TZ-16',
-					},
-					{
-						name: 'Mtwara',
-						value: 'TZ-17',
+						name: 'Mwali',
+						value: 'KM-M',
 					},
 					{
 						name: 'Mwanza',
 						value: 'TZ-18',
 					},
 					{
-						name: 'Pemba North',
-						value: 'TZ-06',
+						name: 'Mwaro',
+						value: 'BI-MW',
 					},
 					{
-						name: 'Pemba South',
-						value: 'TZ-10',
+						name: 'Myanmar (Burma)',
+						value: 'MM',
 					},
 					{
-						name: 'Pwani',
-						value: 'TZ-19',
+						name: "Mykolaivs'ka oblast",
+						value: 'UA-48',
 					},
 					{
-						name: 'Rukwa',
-						value: 'TZ-20',
+						name: "N'Djamena",
+						value: 'TD-ND',
 					},
 					{
-						name: 'Ruvuma',
-						value: 'TZ-21',
+						name: 'Naâma Province',
+						value: 'DZ-45',
 					},
 					{
-						name: 'Shinyanga',
-						value: 'TZ-22',
+						name: 'Nabatiyeh',
+						value: 'LB-NA',
 					},
 					{
-						name: 'Singida',
-						value: 'TZ-23',
+						name: 'Nabeul',
+						value: 'TN-21',
 					},
 					{
-						name: 'Tabora',
-						value: 'TZ-24',
+						name: 'Nagaland',
+						value: 'IN-NL',
 					},
 					{
-						name: 'Tanga',
-						value: 'TZ-25',
+						name: 'Nagano Prefecture',
+						value: 'JP-20',
 					},
 					{
-						name: 'Zanzibar Central/South',
-						value: 'TZ-11',
+						name: 'Nagasaki Prefecture',
+						value: 'JP-42',
 					},
 					{
-						name: 'Zanzibar North',
-						value: 'TZ-07',
+						name: 'Najran',
+						value: 'SA-10',
 					},
 					{
-						name: 'Zanzibar Urban/West',
-						value: 'TZ-15',
-					},
-					{
-						name: 'Thailand',
-						value: 'TH',
-					},
-					{
-						name: 'Amnat Charoen',
-						value: 'TH-37',
-					},
-					{
-						name: 'Ang Thong',
-						value: 'TH-15',
-					},
-					{
-						name: 'Bangkok',
-						value: 'TH-10',
-					},
-					{
-						name: 'Bueng Kan',
-						value: 'TH-38',
-					},
-					{
-						name: 'Buri Ram',
-						value: 'TH-31',
-					},
-					{
-						name: 'Chachoengsao',
-						value: 'TH-24',
-					},
-					{
-						name: 'Chai Nat',
-						value: 'TH-18',
-					},
-					{
-						name: 'Chaiyaphum',
-						value: 'TH-36',
-					},
-					{
-						name: 'Chanthaburi',
-						value: 'TH-22',
-					},
-					{
-						name: 'Chiang Mai',
-						value: 'TH-50',
-					},
-					{
-						name: 'Chiang Rai',
-						value: 'TH-57',
-					},
-					{
-						name: 'Chon Buri',
-						value: 'TH-20',
-					},
-					{
-						name: 'Chumphon',
-						value: 'TH-86',
-					},
-					{
-						name: 'Kalasin',
-						value: 'TH-46',
-					},
-					{
-						name: 'Kamphaeng Phet',
-						value: 'TH-62',
-					},
-					{
-						name: 'Kanchanaburi',
-						value: 'TH-71',
-					},
-					{
-						name: 'Khon Kaen',
-						value: 'TH-40',
-					},
-					{
-						name: 'Krabi',
-						value: 'TH-81',
-					},
-					{
-						name: 'Lampang',
-						value: 'TH-52',
-					},
-					{
-						name: 'Lamphun',
-						value: 'TH-51',
-					},
-					{
-						name: 'Loei',
-						value: 'TH-42',
-					},
-					{
-						name: 'Lopburi',
-						value: 'TH-16',
-					},
-					{
-						name: 'Mae Hong Son',
-						value: 'TH-58',
-					},
-					{
-						name: 'Maha Sarakham',
-						value: 'TH-44',
-					},
-					{
-						name: 'Mukdahan',
-						value: 'TH-49',
+						name: 'Nakhchivan Autonomous Republic',
+						value: 'AZ-NX',
 					},
 					{
 						name: 'Nakhon Nayok',
@@ -11585,12 +8439,380 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'TH-80',
 					},
 					{
+						name: 'Nalut',
+						value: 'LY-NL',
+					},
+					{
+						name: 'Nam Dinh',
+						value: 'VN-67',
+					},
+					{
+						name: 'Namangan Province',
+						value: 'UZ-NG',
+					},
+					{
+						name: 'Namibe Province',
+						value: 'AO-NAM',
+					},
+					{
+						name: 'Namibia',
+						value: 'NA',
+					},
+					{
+						name: 'Namorik Atoll',
+						value: 'MH-NMK',
+					},
+					{
+						name: 'Nampula Province',
+						value: 'MZ-N',
+					},
+					{
+						name: 'Namu Atoll',
+						value: 'MH-NMU',
+					},
+					{
 						name: 'Nan',
 						value: 'TH-55',
 					},
 					{
+						name: 'Nana-Grebizi',
+						value: 'CF-KB',
+					},
+					{
+						name: 'Nana-Mambéré',
+						value: 'CF-NM',
+					},
+					{
+						name: 'Nangarhar',
+						value: 'AF-NAN',
+					},
+					{
+						name: 'Nanumanga',
+						value: 'TV-NMG',
+					},
+					{
+						name: 'Nanumea',
+						value: 'TV-NMA',
+					},
+					{
+						name: 'Nara Prefecture',
+						value: 'JP-29',
+					},
+					{
 						name: 'Narathiwat',
 						value: 'TH-96',
+					},
+					{
+						name: 'Narino',
+						value: 'CO-NAR',
+					},
+					{
+						name: 'Naryn Province',
+						value: 'KG-N',
+					},
+					{
+						name: 'Nasarawa',
+						value: 'NG-NA',
+					},
+					{
+						name: 'Nashville TN',
+						value: '659',
+					},
+					{
+						name: 'National Capital District',
+						value: 'PG-NCD',
+					},
+					{
+						name: 'Naukšēni Municipality',
+						value: 'LV-064',
+					},
+					{
+						name: 'Nauru',
+						value: 'NR',
+					},
+					{
+						name: 'Navarre',
+						value: 'ES-NC',
+					},
+					{
+						name: 'Navoiy Province',
+						value: 'UZ-NW',
+					},
+					{
+						name: 'Nayarit',
+						value: 'MX-NAY',
+					},
+					{
+						name: 'Naypyidaw Union Territory',
+						value: 'MM-18',
+					},
+					{
+						name: 'Neamț County',
+						value: 'RO-NT',
+					},
+					{
+						name: 'Nebraska',
+						value: 'US-NE',
+					},
+					{
+						name: 'Neembucu',
+						value: 'PY-12',
+					},
+					{
+						name: 'Negeri Sembilan',
+						value: 'MY-05',
+					},
+					{
+						name: 'Nelson',
+						value: 'NZ-NSN',
+					},
+					{
+						name: 'Nenets Autonomous Okrug',
+						value: 'RU-NEN',
+					},
+					{
+						name: 'Nepal',
+						value: 'NP',
+					},
+					{
+						name: 'Nereta Municipality',
+						value: 'LV-065',
+					},
+					{
+						name: 'Netherlands',
+						value: 'NL',
+					},
+					{
+						name: 'Neuquen',
+						value: 'AR-Q',
+					},
+					{
+						name: 'Nevada',
+						value: 'US-NV',
+					},
+					{
+						name: 'Nevşehir',
+						value: 'TR-50',
+					},
+					{
+						name: 'New Brunswick',
+						value: 'CA-NB',
+					},
+					{
+						name: 'New Caledonia',
+						value: 'NC',
+					},
+					{
+						name: 'New Hampshire',
+						value: 'US-NH',
+					},
+					{
+						name: 'New Ireland Province',
+						value: 'PG-NIK',
+					},
+					{
+						name: 'New Jersey',
+						value: 'US-NJ',
+					},
+					{
+						name: 'New Mexico',
+						value: 'US-NM',
+					},
+					{
+						name: 'New Orleans LA',
+						value: '622',
+					},
+					{
+						name: 'New South Wales',
+						value: 'AU-NSW',
+					},
+					{
+						name: 'New Taipei City',
+						value: 'TW-TPQ',
+					},
+					{
+						name: 'New Valley Governorate',
+						value: 'EG-WAD',
+					},
+					{
+						name: 'New York',
+						value: 'US-NY',
+					},
+					{
+						name: 'New York NY',
+						value: '501',
+					},
+					{
+						name: 'New Zealand',
+						value: 'NZ',
+					},
+					{
+						name: 'Newfoundland and Labrador',
+						value: 'CA-NL',
+					},
+					{
+						name: 'Ngäbe-Buglé Comarca',
+						value: 'PA-NB',
+					},
+					{
+						name: 'Ngaraard',
+						value: 'PW-214',
+					},
+					{
+						name: 'Ngarchelong',
+						value: 'PW-218',
+					},
+					{
+						name: 'Ngardmau',
+						value: 'PW-222',
+					},
+					{
+						name: 'Ngaremlengui',
+						value: 'PW-227',
+					},
+					{
+						name: 'Ngatpang',
+						value: 'PW-224',
+					},
+					{
+						name: 'Ngazidja',
+						value: 'KM-G',
+					},
+					{
+						name: 'Ngchesar',
+						value: 'PW-226',
+					},
+					{
+						name: 'Nghe An',
+						value: 'VN-22',
+					},
+					{
+						name: 'Ngiwal',
+						value: 'PW-228',
+					},
+					{
+						name: 'Ngounie',
+						value: 'GA-4',
+					},
+					{
+						name: 'Ngozi',
+						value: 'BI-NG',
+					},
+					{
+						name: 'Niamey',
+						value: 'NE-8',
+					},
+					{
+						name: 'Niari',
+						value: 'CG-9',
+					},
+					{
+						name: 'Niassa Province',
+						value: 'MZ-A',
+					},
+					{
+						name: 'Nibok',
+						value: 'NR-12',
+					},
+					{
+						name: 'Nīca Municipality',
+						value: 'LV-066',
+					},
+					{
+						name: 'Nicaragua',
+						value: 'NI',
+					},
+					{
+						name: 'Nickerie District',
+						value: 'SR-NI',
+					},
+					{
+						name: 'Nicosia District',
+						value: 'CY-01',
+					},
+					{
+						name: 'Nidwalden',
+						value: 'CH-NW',
+					},
+					{
+						name: 'Niğde',
+						value: 'TR-51',
+					},
+					{
+						name: 'Niger (NE)',
+						value: 'NE',
+					},
+					{
+						name: 'Niger (NG-NI)',
+						value: 'NG-NI',
+					},
+					{
+						name: 'Nigeria',
+						value: 'NG',
+					},
+					{
+						name: 'Niigata Prefecture',
+						value: 'JP-15',
+					},
+					{
+						name: 'Niksic',
+						value: 'ME-12',
+					},
+					{
+						name: 'Nimba',
+						value: 'LR-NI',
+					},
+					{
+						name: 'Nimruz',
+						value: 'AF-NIM',
+					},
+					{
+						name: 'Ninawa',
+						value: 'IQ-NI',
+					},
+					{
+						name: 'Ningxia',
+						value: 'CN-64',
+					},
+					{
+						name: 'Ninh Bình Province',
+						value: 'VN-18',
+					},
+					{
+						name: 'Ninh Thuan Province',
+						value: 'VN-36',
+					},
+					{
+						name: 'Nippes',
+						value: 'HT-NI',
+					},
+					{
+						name: 'Nisporeni',
+						value: 'MD-NI',
+					},
+					{
+						name: 'Nitra Region',
+						value: 'SK-NI',
+					},
+					{
+						name: 'Niuas',
+						value: 'TO-03',
+					},
+					{
+						name: 'Niue',
+						value: 'NU',
+					},
+					{
+						name: 'Niutao',
+						value: 'TV-NIT',
+					},
+					{
+						name: 'Nizhny Novgorod Oblast',
+						value: 'RU-NIZ',
+					},
+					{
+						name: 'Nógrád County',
+						value: 'HU-NO',
 					},
 					{
 						name: 'Nong Bua Lam Phu',
@@ -11605,12 +8827,940 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'TH-12',
 					},
 					{
+						name: 'Nord (BF)',
+						value: 'BF-10',
+					},
+					{
+						name: 'Nord (HT)',
+						value: 'HT-ND',
+					},
+					{
+						name: 'Nord-Est',
+						value: 'HT-NE',
+					},
+					{
+						name: 'Nord-Ouest',
+						value: 'HT-NO',
+					},
+					{
+						name: 'Nord-Pas-de-Calais',
+						value: 'FR-O',
+					},
+					{
+						name: 'Nord-Trondelag',
+						value: 'NO-17',
+					},
+					{
+						name: 'Nordland',
+						value: 'NO-18',
+					},
+					{
+						name: 'Norfolk Island',
+						value: 'NF',
+					},
+					{
+						name: 'Norfolk-Portsmouth-Newport News VA',
+						value: '544',
+					},
+					{
+						name: 'Norrbotten County',
+						value: 'SE-BD',
+					},
+					{
+						name: 'North (CM)',
+						value: 'CM-NO',
+					},
+					{
+						name: 'North (LB)',
+						value: 'LB-AS',
+					},
+					{
+						name: 'North Abaco',
+						value: 'BS-NO',
+					},
+					{
+						name: 'North Andros',
+						value: 'BS-NS',
+					},
+					{
+						name: 'North Bank Division',
+						value: 'GM-N',
+					},
+					{
+						name: 'North Brabant',
+						value: 'NL-NB',
+					},
+					{
+						name: 'North Carolina',
+						value: 'US-NC',
+					},
+					{
+						name: 'North Central Province (LK)',
+						value: 'LK-7',
+					},
+					{
+						name: 'North Central Province (MV)',
+						value: 'MV-NC',
+					},
+					{
+						name: 'North Dakota',
+						value: 'US-ND',
+					},
+					{
+						name: 'North Denmark Region',
+						value: 'DK-81',
+					},
+					{
+						name: 'North District',
+						value: 'IL-Z',
+					},
+					{
+						name: 'North Eleuthera',
+						value: 'BS-NE',
+					},
+					{
+						name: 'North Hamgyong',
+						value: 'KP-09',
+					},
+					{
+						name: 'North Holland',
+						value: 'NL-NH',
+					},
+					{
+						name: 'North Hwanghae',
+						value: 'KP-06',
+					},
+					{
+						name: 'North Kalimantan',
+						value: 'ID-KU',
+					},
+					{
+						name: 'North Karelia',
+						value: 'FI-13',
+					},
+					{
+						name: 'North Kazakhstan Province',
+						value: 'KZ-SEV',
+					},
+					{
+						name: 'North Khorasan',
+						value: 'IR-31',
+					},
+					{
+						name: 'North Korea',
+						value: 'KP',
+					},
+					{
+						name: 'North Kurdufan',
+						value: 'SD-KN',
+					},
+					{
+						name: 'North Macedonia',
+						value: 'MK',
+					},
+					{
+						name: 'North Maluku',
+						value: 'ID-MU',
+					},
+					{
+						name: 'North Ossetia–Alania',
+						value: 'RU-SE',
+					},
+					{
+						name: 'North Platte NE',
+						value: '740',
+					},
+					{
+						name: 'North Province',
+						value: 'MV-NO',
+					},
+					{
+						name: 'North Pyongan',
+						value: 'KP-03',
+					},
+					{
+						name: 'North Rhine-Westphalia',
+						value: 'DE-NW',
+					},
+					{
+						name: 'North Santander',
+						value: 'CO-NSA',
+					},
+					{
+						name: 'North Sinai Governorate',
+						value: 'EG-SIN',
+					},
+					{
+						name: 'North Sulawesi',
+						value: 'ID-SA',
+					},
+					{
+						name: 'North Sumatra',
+						value: 'ID-SU',
+					},
+					{
+						name: 'North West',
+						value: 'BW-NW',
+					},
+					{
+						name: 'North West (ZA)',
+						value: 'ZA-NW',
+					},
+					{
+						name: 'North Western Province',
+						value: 'LK-6',
+					},
+					{
+						name: 'North-East',
+						value: 'BW-NE',
+					},
+					{
+						name: 'North-Kivu',
+						value: 'CD-NK',
+					},
+					{
+						name: 'North-Western',
+						value: 'ZM-06',
+					},
+					{
+						name: 'Northeast',
+						value: 'IS-6',
+					},
+					{
+						name: 'Northern',
+						value: 'SD-NO',
+					},
+					{
+						name: 'Northern (ZM)',
+						value: 'ZM-05',
+					},
+					{
+						name: 'Northern Bahr el Ghazal',
+						value: 'SS-BN',
+					},
+					{
+						name: 'Northern Borders Province',
+						value: 'SA-08',
+					},
+					{
+						name: 'Northern Cape',
+						value: 'ZA-NC',
+					},
+					{
+						name: 'Northern Division',
+						value: 'FJ-N',
+					},
+					{
+						name: 'Northern Governorate',
+						value: 'BH-17',
+					},
+					{
+						name: 'Northern Ireland',
+						value: 'GB-NIR',
+					},
+					{
+						name: 'Northern Mariana Islands',
+						value: 'MP',
+					},
+					{
+						name: 'Northern Mindanao',
+						value: 'PH-10',
+					},
+					{
+						name: 'Northern Ostrobothnia',
+						value: 'FI-14',
+					},
+					{
+						name: 'Northern Province (LK)',
+						value: 'LK-4',
+					},
+					{
+						name: 'Northern Province (PG)',
+						value: 'PG-NPP',
+					},
+					{
+						name: 'Northern Province (RW)',
+						value: 'RW-03',
+					},
+					{
+						name: 'Northern Province (SL)',
+						value: 'SL-N',
+					},
+					{
+						name: 'Northern Red Sea',
+						value: 'ER-SK',
+					},
+					{
+						name: 'Northern Region (GH)',
+						value: 'GH-NP',
+					},
+					{
+						name: 'Northern Region (MW)',
+						value: 'MW-N',
+					},
+					{
+						name: 'Northern Region (UG)',
+						value: 'UG-N',
+					},
+					{
+						name: 'Northern Savonia',
+						value: 'FI-15',
+					},
+					{
+						name: 'Northern Territory',
+						value: 'AU-NT',
+					},
+					{
+						name: 'Northland',
+						value: 'NZ-NTL',
+					},
+					{
+						name: 'Northwest',
+						value: 'CM-NW',
+					},
+					{
+						name: 'Northwest Territories',
+						value: 'CA-NT',
+					},
+					{
+						name: 'Northwestern Region',
+						value: 'IS-5',
+					},
+					{
+						name: 'Norway',
+						value: 'NO',
+					},
+					{
+						name: 'Nouakchott',
+						value: 'MR-NKC',
+					},
+					{
+						name: 'Nova Scotia',
+						value: 'CA-NS',
+					},
+					{
+						name: 'Novgorod Oblast',
+						value: 'RU-NGR',
+					},
+					{
+						name: 'Novosibirsk Oblast',
+						value: 'RU-NVS',
+					},
+					{
+						name: 'Nueva Esparta',
+						value: 'VE-O',
+					},
+					{
+						name: 'Nueva Segovia',
+						value: 'NI-NS',
+					},
+					{
+						name: 'Nuevo Leon',
+						value: 'MX-NLE',
+					},
+					{
+						name: 'Nugaal',
+						value: 'SO-NU',
+					},
+					{
+						name: 'Nui',
+						value: 'TV-NIU',
+					},
+					{
+						name: 'Nukufetau',
+						value: 'TV-NKF',
+					},
+					{
+						name: 'Nukulaelae',
+						value: 'TV-NKL',
+					},
+					{
+						name: 'Nunavut',
+						value: 'CA-NU',
+					},
+					{
+						name: 'Nuristan',
+						value: 'AF-NUR',
+					},
+					{
+						name: 'Nyanga',
+						value: 'GA-5',
+					},
+					{
+						name: 'Nzérékoré',
+						value: 'GN-N',
+					},
+					{
+						name: 'Nzi-Comoe',
+						value: 'CI-11',
+					},
+					{
+						name: 'Nzwani',
+						value: 'KM-A',
+					},
+					{
+						name: "O'Higgins Region",
+						value: 'CL-LI',
+					},
+					{
+						name: 'Oaxaca',
+						value: 'MX-OAX',
+					},
+					{
+						name: 'Obock',
+						value: 'DJ-OB',
+					},
+					{
+						name: 'Ocnita',
+						value: 'MD-OC',
+					},
+					{
+						name: 'Ocotepeque',
+						value: 'HN-OC',
+					},
+					{
+						name: 'Oddar Meancheay',
+						value: 'KH-22',
+					},
+					{
+						name: 'Odessa Oblast',
+						value: 'UA-51',
+					},
+					{
+						name: 'Odessa-Midland TX',
+						value: '633',
+					},
+					{
+						name: 'Odisha',
+						value: 'IN-OR',
+					},
+					{
+						name: 'Oecussi-Ambeno',
+						value: 'TL-OE',
+					},
+					{
+						name: 'Ogooue-Ivindo',
+						value: 'GA-6',
+					},
+					{
+						name: 'Ogooue-Lolo',
+						value: 'GA-7',
+					},
+					{
+						name: 'Ogooue-Maritime',
+						value: 'GA-8',
+					},
+					{
+						name: 'Ogre Municipality',
+						value: 'LV-067',
+					},
+					{
+						name: 'Ogun State',
+						value: 'NG-OG',
+					},
+					{
+						name: 'Ohangwena',
+						value: 'NA-OW',
+					},
+					{
+						name: 'Ohio',
+						value: 'US-OH',
+					},
+					{
+						name: 'Ohrid',
+						value: 'MK-58',
+					},
+					{
+						name: 'Oio',
+						value: 'GW-OI',
+					},
+					{
+						name: 'Oita Prefecture',
+						value: 'JP-44',
+					},
+					{
+						name: 'Okayama Prefecture',
+						value: 'JP-33',
+					},
+					{
+						name: 'Okinawa Prefecture',
+						value: 'JP-47',
+					},
+					{
+						name: 'Oklahoma',
+						value: 'US-OK',
+					},
+					{
+						name: 'Oklahoma City OK',
+						value: '650',
+					},
+					{
+						name: 'Olaines novads',
+						value: 'LV-068',
+					},
+					{
+						name: 'Olancho',
+						value: 'HN-OL',
+					},
+					{
+						name: 'Olomouc Region',
+						value: 'CZ-OL',
+					},
+					{
+						name: 'Olt County',
+						value: 'RO-OT',
+					},
+					{
+						name: 'Omaha NE',
+						value: '652',
+					},
+					{
+						name: 'Omaheke Region',
+						value: 'NA-OH',
+					},
+					{
+						name: 'Oman',
+						value: 'OM',
+					},
+					{
+						name: "Ombella-M'Poko",
+						value: 'CF-MP',
+					},
+					{
+						name: 'Omsk Oblast',
+						value: 'RU-OMS',
+					},
+					{
+						name: 'Omusati Region',
+						value: 'NA-OS',
+					},
+					{
+						name: 'Ondo',
+						value: 'NG-ON',
+					},
+					{
+						name: 'Ontario',
+						value: 'CA-ON',
+					},
+					{
+						name: 'Opole Voivodeship',
+						value: 'PL-OP',
+					},
+					{
+						name: 'Oppland',
+						value: 'NO-05',
+					},
+					{
+						name: 'Oran Province',
+						value: 'DZ-31',
+					},
+					{
+						name: 'Orange Walk',
+						value: 'BZ-OW',
+					},
+					{
+						name: 'Ordino',
+						value: 'AD-05',
+					},
+					{
+						name: 'Ordu',
+						value: 'TR-52',
+					},
+					{
+						name: 'Örebro County',
+						value: 'SE-T',
+					},
+					{
+						name: 'Oregon',
+						value: 'US-OR',
+					},
+					{
+						name: 'Orellana Province',
+						value: 'EC-D',
+					},
+					{
+						name: 'Orenburg Oblast',
+						value: 'RU-ORE',
+					},
+					{
+						name: 'Orhei',
+						value: 'MD-OR',
+					},
+					{
+						name: 'Oriental',
+						value: 'MA-04',
+					},
+					{
+						name: 'Orientale',
+						value: 'CD-OR',
+					},
+					{
+						name: 'Orkhon',
+						value: 'MN-035',
+					},
+					{
+						name: 'Orlando-Daytona Beach-Melbourne FL',
+						value: '534',
+					},
+					{
+						name: 'Oromia',
+						value: 'ET-OR',
+					},
+					{
+						name: 'Oruro Department',
+						value: 'BO-O',
+					},
+					{
+						name: 'Oruzgan',
+						value: 'AF-URU',
+					},
+					{
+						name: 'Oryol Oblast',
+						value: 'RU-ORL',
+					},
+					{
+						name: 'Osaka Prefecture',
+						value: 'JP-27',
+					},
+					{
+						name: 'Osh Province',
+						value: 'KG-O',
+					},
+					{
+						name: 'Oshana Region',
+						value: 'NA-ON',
+					},
+					{
+						name: 'Oshikoto Region',
+						value: 'NA-OT',
+					},
+					{
+						name: 'Osijek-Baranja County',
+						value: 'HR-14',
+					},
+					{
+						name: 'Oslo',
+						value: 'NO-03',
+					},
+					{
+						name: 'Osmaniye',
+						value: 'TR-80',
+					},
+					{
+						name: 'Östergötland County',
+						value: 'SE-E',
+					},
+					{
+						name: 'Ostfold',
+						value: 'NO-01',
+					},
+					{
+						name: 'Ostrobothnia',
+						value: 'FI-12',
+					},
+					{
+						name: 'Osun',
+						value: 'NG-OS',
+					},
+					{
+						name: 'Otago',
+						value: 'NZ-OTA',
+					},
+					{
+						name: 'Otjozondjupa Region',
+						value: 'NA-OD',
+					},
+					{
+						name: 'Ottumwa IA-Kirksville MO',
+						value: '631',
+					},
+					{
+						name: 'Ouaddai',
+						value: 'TD-OD',
+					},
+					{
+						name: 'Ouaka',
+						value: 'CF-UK',
+					},
+					{
+						name: 'Ouargla Province',
+						value: 'DZ-30',
+					},
+					{
+						name: 'Oudomxay',
+						value: 'LA-OU',
+					},
+					{
+						name: 'Oueme',
+						value: 'BJ-OU',
+					},
+					{
+						name: 'Ouest',
+						value: 'HT-OU',
+					},
+					{
+						name: 'Ouham',
+						value: 'CF-AC',
+					},
+					{
+						name: 'Ouham-Pendé',
+						value: 'CF-OP',
+					},
+					{
+						name: 'Oum El Bouaghi Province',
+						value: 'DZ-04',
+					},
+					{
+						name: 'Overijssel',
+						value: 'NL-OV',
+					},
+					{
+						name: 'Oyo',
+						value: 'NG-OY',
+					},
+					{
+						name: 'Ozolnieki Municipality',
+						value: 'LV-069',
+					},
+					{
+						name: 'Paducah KY-Cape Girardeau MO-Harrisburg-Mount Vernon IL',
+						value: '632',
+					},
+					{
+						name: 'Pahang',
+						value: 'MY-06',
+					},
+					{
+						name: 'Päijänne Tavastia',
+						value: 'FI-16',
+					},
+					{
+						name: 'Pailin',
+						value: 'KH-24',
+					},
+					{
+						name: 'Pakistan',
+						value: 'PK',
+					},
+					{
+						name: 'Paktia',
+						value: 'AF-PIA',
+					},
+					{
+						name: 'Paktika',
+						value: 'AF-PKA',
+					},
+					{
+						name: 'Palau',
+						value: 'PW',
+					},
+					{
+						name: 'Palauli',
+						value: 'WS-PA',
+					},
+					{
+						name: 'Palestine',
+						value: 'PS',
+					},
+					{
+						name: 'Palm Springs CA',
+						value: '804',
+					},
+					{
+						name: 'Pamplemousses',
+						value: 'MU-PA',
+					},
+					{
+						name: 'Panama',
+						value: 'PA',
+					},
+					{
+						name: 'Panama (PA)',
+						value: 'PA-8',
+					},
+					{
+						name: 'Panama City FL',
+						value: '656',
+					},
+					{
+						name: 'Pando Department',
+						value: 'BO-N',
+					},
+					{
+						name: 'Panevėžys County',
+						value: 'LT-PN',
+					},
+					{
+						name: 'Panjshir',
+						value: 'AF-PAN',
+					},
+					{
+						name: 'Paphos',
+						value: 'CY-05',
+					},
+					{
+						name: 'Papua',
+						value: 'ID-PA',
+					},
+					{
+						name: 'Papua New Guinea',
+						value: 'PG',
+					},
+					{
+						name: 'Para',
+						value: 'SR-PR',
+					},
+					{
+						name: 'Paraguari',
+						value: 'PY-9',
+					},
+					{
+						name: 'Paraguay',
+						value: 'PY',
+					},
+					{
+						name: 'Paramaribo District',
+						value: 'SR-PM',
+					},
+					{
+						name: 'Pardubice Region',
+						value: 'CZ-PA',
+					},
+					{
+						name: 'Pārgauja Municipality',
+						value: 'LV-070',
+					},
+					{
+						name: 'Parkersburg WV',
+						value: '597',
+					},
+					{
+						name: 'Pärnu County',
+						value: 'EE-67',
+					},
+					{
+						name: 'Paro',
+						value: 'BT-11',
+					},
+					{
+						name: 'Parvan',
+						value: 'AF-PAR',
+					},
+					{
+						name: 'Pasco',
+						value: 'PE-PAS',
+					},
+					{
+						name: 'Pastaza Province',
+						value: 'EC-Y',
+					},
+					{
 						name: 'Pathum Thani',
 						value: 'TH-13',
 					},
 					{
 						name: 'Pattani',
 						value: 'TH-94',
+					},
+					{
+						name: 'Paul',
+						value: 'CV-PA',
+					},
+					{
+						name: 'Pāvilosta Municipality',
+						value: 'LV-071',
+					},
+					{
+						name: 'Pavlodar Province',
+						value: 'KZ-PAV',
+					},
+					{
+						name: 'Pays de la Loire',
+						value: 'FR-R',
+					},
+					{
+						name: 'Paysandú Department',
+						value: 'UY-PA',
+					},
+					{
+						name: 'Pazardzik',
+						value: 'BG-13',
+					},
+					{
+						name: 'Pedernales Province',
+						value: 'DO-16',
+					},
+					{
+						name: 'Peleliu',
+						value: 'PW-350',
+					},
+					{
+						name: 'Pemagatshel',
+						value: 'BT-43',
+					},
+					{
+						name: 'Pemba North',
+						value: 'TZ-06',
+					},
+					{
+						name: 'Pemba South',
+						value: 'TZ-10',
+					},
+					{
+						name: 'Penal-Debe',
+						value: 'TT-PED',
+					},
+					{
+						name: 'Penama Province',
+						value: 'VU-PAM',
+					},
+					{
+						name: 'Penang',
+						value: 'MY-07',
+					},
+					{
+						name: 'Pennsylvania',
+						value: 'US-PA',
+					},
+					{
+						name: 'Penza Oblast',
+						value: 'RU-PNZ',
+					},
+					{
+						name: 'Peoria-Bloomington IL',
+						value: '675',
+					},
+					{
+						name: 'Perak',
+						value: 'MY-08',
+					},
+					{
+						name: 'Peravia Province',
+						value: 'DO-17',
+					},
+					{
+						name: 'Perlis',
+						value: 'MY-09',
+					},
+					{
+						name: 'Perm Krai',
+						value: 'RU-PER',
+					},
+					{
+						name: 'Pernik',
+						value: 'BG-14',
+					},
+					{
+						name: 'Peru',
+						value: 'PE',
+					},
+					{
+						name: 'Pest County',
+						value: 'HU-PE',
+					},
+					{
+						name: 'Petén Department',
+						value: 'GT-PE',
 					},
 					{
 						name: 'Phang-nga',
@@ -11637,8 +9787,32 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'TH-66',
 					},
 					{
+						name: 'Philadelphia PA',
+						value: '504',
+					},
+					{
+						name: 'Philippines',
+						value: 'PH',
+					},
+					{
 						name: 'Phitsanulok',
 						value: 'TH-65',
+					},
+					{
+						name: 'Phnom Penh',
+						value: 'KH-12',
+					},
+					{
+						name: 'Phoenix AZ',
+						value: '753',
+					},
+					{
+						name: 'Phoenix Islands',
+						value: 'KI-P',
+					},
+					{
+						name: 'Phongsaly',
+						value: 'LA-PH',
 					},
 					{
 						name: 'Phra Nakhon Si Ayutthaya',
@@ -11649,8 +9823,224 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'TH-54',
 					},
 					{
+						name: 'Phu Tho Province',
+						value: 'VN-68',
+					},
+					{
+						name: 'Phú Yên Province',
+						value: 'VN-32',
+					},
+					{
 						name: 'Phuket',
 						value: 'TH-83',
+					},
+					{
+						name: 'Picardy',
+						value: 'FR-S',
+					},
+					{
+						name: 'Pichincha',
+						value: 'EC-P',
+					},
+					{
+						name: 'Piedmont',
+						value: 'IT-21',
+					},
+					{
+						name: 'Pinar del Rio',
+						value: 'CU-01',
+					},
+					{
+						name: 'Pirkanmaa',
+						value: 'FI-11',
+					},
+					{
+						name: 'Pitcairn Islands',
+						value: 'PN',
+					},
+					{
+						name: 'Pittsburgh PA',
+						value: '508',
+					},
+					{
+						name: 'Piura',
+						value: 'PE-PIU',
+					},
+					{
+						name: 'Plaines Wilhems',
+						value: 'MU-PW',
+					},
+					{
+						name: 'Plaisance',
+						value: 'SC-19',
+					},
+					{
+						name: 'Planken',
+						value: 'LI-05',
+					},
+					{
+						name: 'Plateau (BJ)',
+						value: 'BJ-PL',
+					},
+					{
+						name: 'Plateau (NG)',
+						value: 'NG-PL',
+					},
+					{
+						name: 'Plateau-Central Region',
+						value: 'BF-11',
+					},
+					{
+						name: 'Plateaux (CG)',
+						value: 'CG-14',
+					},
+					{
+						name: 'Plateaux (TG)',
+						value: 'TG-P',
+					},
+					{
+						name: 'Plav',
+						value: 'ME-13',
+					},
+					{
+						name: 'Pļaviņas Municipality',
+						value: 'LV-072',
+					},
+					{
+						name: 'Pleven Province',
+						value: 'BG-15',
+					},
+					{
+						name: 'Pljevlja',
+						value: 'ME-14',
+					},
+					{
+						name: 'Plovdiv Province',
+						value: 'BG-16',
+					},
+					{
+						name: 'Pluzine',
+						value: 'ME-15',
+					},
+					{
+						name: 'Plzeň Region',
+						value: 'CZ-PL',
+					},
+					{
+						name: 'Podgorica',
+						value: 'ME-16',
+					},
+					{
+						name: 'Podkarpackie Voivodeship',
+						value: 'PL-PK',
+					},
+					{
+						name: 'Podlaskie Voivodeship',
+						value: 'PL-PD',
+					},
+					{
+						name: 'Pohnpei',
+						value: 'FM-PNI',
+					},
+					{
+						name: 'Point Fortin',
+						value: 'TT-PTF',
+					},
+					{
+						name: 'Pointe La Rue',
+						value: 'SC-20',
+					},
+					{
+						name: 'Pointe Noire',
+						value: 'CG-16',
+					},
+					{
+						name: 'Poitou-Charentes',
+						value: 'FR-T',
+					},
+					{
+						name: 'Poland',
+						value: 'PL',
+					},
+					{
+						name: "Poltavs'ka oblast",
+						value: 'UA-53',
+					},
+					{
+						name: 'Põlva County',
+						value: 'EE-65',
+					},
+					{
+						name: 'Pomeranian Voivodeship',
+						value: 'PL-PM',
+					},
+					{
+						name: 'Pomeroon-Supenaam',
+						value: 'GY-PM',
+					},
+					{
+						name: 'Pool',
+						value: 'CG-12',
+					},
+					{
+						name: 'Port Glaud',
+						value: 'SC-21',
+					},
+					{
+						name: 'Port Louis',
+						value: 'MU-PL',
+					},
+					{
+						name: 'Port of Spain',
+						value: 'TT-POS',
+					},
+					{
+						name: 'Port Said Governorate',
+						value: 'EG-PTS',
+					},
+					{
+						name: 'Portalegre District',
+						value: 'PT-12',
+					},
+					{
+						name: 'Portland OR',
+						value: '820',
+					},
+					{
+						name: 'Portland Parish',
+						value: 'JM-04',
+					},
+					{
+						name: 'Portland-Auburn ME',
+						value: '500',
+					},
+					{
+						name: 'Porto District',
+						value: 'PT-13',
+					},
+					{
+						name: 'Porto Novo',
+						value: 'CV-PN',
+					},
+					{
+						name: 'Portugal',
+						value: 'PT',
+					},
+					{
+						name: 'Portuguesa',
+						value: 'VE-P',
+					},
+					{
+						name: 'Potaro-Siparuni',
+						value: 'GY-PT',
+					},
+					{
+						name: 'Potosi Department',
+						value: 'BO-P',
+					},
+					{
+						name: 'Požega-Slavonia County',
+						value: 'HR-11',
 					},
 					{
 						name: 'Prachin Buri',
@@ -11661,2480 +10051,192 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'TH-77',
 					},
 					{
-						name: 'Ranong',
-						value: 'TH-85',
+						name: 'Prague',
+						value: 'CZ-PR',
 					},
 					{
-						name: 'Ratchaburi',
-						value: 'TH-70',
+						name: 'Prahova',
+						value: 'RO-PH',
 					},
 					{
-						name: 'Rayong',
-						value: 'TH-21',
+						name: 'Praia',
+						value: 'CV-PR',
 					},
 					{
-						name: 'Roi Et',
-						value: 'TH-45',
+						name: 'Praslin',
+						value: 'LC-09',
 					},
 					{
-						name: 'Sa Kaeo',
-						value: 'TH-27',
+						name: 'Preah Sihanouk',
+						value: 'KH-18',
 					},
 					{
-						name: 'Sakon Nakhon',
-						value: 'TH-47',
+						name: 'Preah Vihear',
+						value: 'KH-13',
 					},
 					{
-						name: 'Samut Prakan',
-						value: 'TH-11',
+						name: 'Preiļi Municipality',
+						value: 'LV-073',
 					},
 					{
-						name: 'Samut Sakhon',
-						value: 'TH-74',
+						name: 'Presidente Hayes Department',
+						value: 'PY-15',
 					},
 					{
-						name: 'Samut Songkhram',
-						value: 'TH-75',
-					},
-					{
-						name: 'Saraburi',
-						value: 'TH-19',
-					},
-					{
-						name: 'Satun',
-						value: 'TH-91',
-					},
-					{
-						name: 'Si Sa Ket',
-						value: 'TH-33',
-					},
-					{
-						name: 'Sing Buri',
-						value: 'TH-17',
-					},
-					{
-						name: 'Songkhla',
-						value: 'TH-90',
-					},
-					{
-						name: 'Sukhothai',
-						value: 'TH-64',
-					},
-					{
-						name: 'Suphan Buri',
-						value: 'TH-72',
-					},
-					{
-						name: 'Surat Thani',
-						value: 'TH-84',
-					},
-					{
-						name: 'Surin',
-						value: 'TH-32',
-					},
-					{
-						name: 'Tak',
-						value: 'TH-63',
-					},
-					{
-						name: 'Trang',
-						value: 'TH-92',
-					},
-					{
-						name: 'Trat',
-						value: 'TH-23',
-					},
-					{
-						name: 'Ubon Ratchathani',
-						value: 'TH-34',
-					},
-					{
-						name: 'Udon Thani',
-						value: 'TH-41',
-					},
-					{
-						name: 'Uthai Thani',
-						value: 'TH-61',
-					},
-					{
-						name: 'Uttaradit',
-						value: 'TH-53',
-					},
-					{
-						name: 'Yala',
-						value: 'TH-95',
-					},
-					{
-						name: 'Yasothon',
-						value: 'TH-35',
-					},
-					{
-						name: 'Timor-Leste',
-						value: 'TL',
-					},
-					{
-						name: 'Aileu',
-						value: 'TL-AL',
-					},
-					{
-						name: 'Ainaro',
-						value: 'TL-AN',
-					},
-					{
-						name: 'Baucau',
-						value: 'TL-BA',
-					},
-					{
-						name: 'Bobonaro',
-						value: 'TL-BO',
-					},
-					{
-						name: 'Cova-Lima',
-						value: 'TL-CO',
-					},
-					{
-						name: 'Dili',
-						value: 'TL-DI',
-					},
-					{
-						name: 'Ermera',
-						value: 'TL-ER',
-					},
-					{
-						name: 'Lautem',
-						value: 'TL-LA',
-					},
-					{
-						name: 'Liquica',
-						value: 'TL-LI',
-					},
-					{
-						name: 'Manatuto',
-						value: 'TL-MT',
-					},
-					{
-						name: 'Manufahi',
-						value: 'TL-MF',
-					},
-					{
-						name: 'Oecussi-Ambeno',
-						value: 'TL-OE',
-					},
-					{
-						name: 'Viqueque',
-						value: 'TL-VI',
-					},
-					{
-						name: 'Togo',
-						value: 'TG',
-					},
-					{
-						name: 'Centrale',
-						value: 'TG-C',
-					},
-					{
-						name: 'Kara',
-						value: 'TG-K',
-					},
-					{
-						name: 'Maritime',
-						value: 'TG-M',
-					},
-					{
-						name: 'Plateaux',
-						value: 'TG-P',
-					},
-					{
-						name: 'Savanes',
-						value: 'TG-S',
-					},
-					{
-						name: 'Tokelau',
-						value: 'TK',
-					},
-					{
-						name: 'Tonga',
-						value: 'TO',
-					},
-					{
-						name: "'Eua",
-						value: 'TO-01',
-					},
-					{
-						name: "Ha'apai",
-						value: 'TO-02',
-					},
-					{
-						name: 'Niuas',
-						value: 'TO-03',
-					},
-					{
-						name: 'Tongatapu',
-						value: 'TO-04',
-					},
-					{
-						name: "Vava'u",
-						value: 'TO-05',
-					},
-					{
-						name: 'Trinidad & Tobago',
-						value: 'TT',
-					},
-					{
-						name: 'Arima',
-						value: 'TT-ARI',
-					},
-					{
-						name: 'Chaguanas',
-						value: 'TT-CHA',
-					},
-					{
-						name: 'Couva-Tabaquite-Talparo',
-						value: 'TT-CTT',
-					},
-					{
-						name: 'Diego Martin',
-						value: 'TT-DMN',
-					},
-					{
-						name: 'Eastern Tobago',
-						value: 'TT-ETO',
-					},
-					{
-						name: 'Penal-Debe',
-						value: 'TT-PED',
-					},
-					{
-						name: 'Point Fortin',
-						value: 'TT-PTF',
-					},
-					{
-						name: 'Port of Spain',
-						value: 'TT-POS',
-					},
-					{
-						name: 'Princes Town',
-						value: 'TT-PRT',
-					},
-					{
-						name: 'Rio Claro-Mayaro',
-						value: 'TT-RCM',
-					},
-					{
-						name: 'San Fernando',
-						value: 'TT-SFO',
-					},
-					{
-						name: 'San Juan-Laventille',
-						value: 'TT-SJL',
-					},
-					{
-						name: 'Sangre Grande',
-						value: 'TT-SGE',
-					},
-					{
-						name: 'Siparia',
-						value: 'TT-SIP',
-					},
-					{
-						name: 'Tunapuna-Piarco',
-						value: 'TT-TUP',
-					},
-					{
-						name: 'Western Tobago',
-						value: 'TT-WTO',
-					},
-					{
-						name: 'Tunisia',
-						value: 'TN',
-					},
-					{
-						name: 'Ariana',
-						value: 'TN-12',
-					},
-					{
-						name: 'Beja',
-						value: 'TN-31',
-					},
-					{
-						name: 'Ben Arous',
-						value: 'TN-13',
-					},
-					{
-						name: 'Bizerte',
-						value: 'TN-23',
-					},
-					{
-						name: 'Gabes',
-						value: 'TN-81',
-					},
-					{
-						name: 'Gafsa',
-						value: 'TN-71',
-					},
-					{
-						name: 'Jendouba',
-						value: 'TN-32',
-					},
-					{
-						name: 'Kairouan',
-						value: 'TN-41',
-					},
-					{
-						name: 'Kasserine',
-						value: 'TN-42',
-					},
-					{
-						name: 'Kebili',
-						value: 'TN-73',
-					},
-					{
-						name: 'Kef',
-						value: 'TN-33',
-					},
-					{
-						name: 'La Manouba',
-						value: 'TN-14',
-					},
-					{
-						name: 'Mahdia',
-						value: 'TN-53',
-					},
-					{
-						name: 'Medenine',
-						value: 'TN-82',
-					},
-					{
-						name: 'Monastir',
-						value: 'TN-52',
-					},
-					{
-						name: 'Nabeul',
-						value: 'TN-21',
-					},
-					{
-						name: 'Sfax',
-						value: 'TN-61',
-					},
-					{
-						name: 'Sidi Bou Zid',
-						value: 'TN-43',
-					},
-					{
-						name: 'Siliana',
-						value: 'TN-34',
-					},
-					{
-						name: 'Sousse',
-						value: 'TN-51',
-					},
-					{
-						name: 'Tataouine',
-						value: 'TN-83',
-					},
-					{
-						name: 'Tozeur',
-						value: 'TN-72',
-					},
-					{
-						name: 'Tunis',
-						value: 'TN-11',
-					},
-					{
-						name: 'Zaghouan',
-						value: 'TN-22',
-					},
-					{
-						name: 'Türkiye',
-						value: 'TR',
-					},
-					{
-						name: 'Adana',
-						value: 'TR-01',
-					},
-					{
-						name: 'Adıyaman Province',
-						value: 'TR-02',
-					},
-					{
-						name: 'Afyonkarahisar Province',
-						value: 'TR-03',
-					},
-					{
-						name: 'Ağrı',
-						value: 'TR-04',
-					},
-					{
-						name: 'Aksaray',
-						value: 'TR-68',
-					},
-					{
-						name: 'Amasya Province',
-						value: 'TR-05',
-					},
-					{
-						name: 'Ankara',
-						value: 'TR-06',
-					},
-					{
-						name: 'Antalya',
-						value: 'TR-07',
-					},
-					{
-						name: 'Ardahan Province',
-						value: 'TR-75',
-					},
-					{
-						name: 'Artvin',
-						value: 'TR-08',
-					},
-					{
-						name: 'Aydın Province',
-						value: 'TR-09',
-					},
-					{
-						name: 'Balıkesir Province',
-						value: 'TR-10',
-					},
-					{
-						name: 'Bartın Province',
-						value: 'TR-74',
-					},
-					{
-						name: 'Batman',
-						value: 'TR-72',
-					},
-					{
-						name: 'Bayburt',
-						value: 'TR-69',
-					},
-					{
-						name: 'Bilecik',
-						value: 'TR-11',
-					},
-					{
-						name: 'Bingöl Province',
-						value: 'TR-12',
-					},
-					{
-						name: 'Bitlis',
-						value: 'TR-13',
-					},
-					{
-						name: 'Bolu',
-						value: 'TR-14',
-					},
-					{
-						name: 'Burdur Province',
-						value: 'TR-15',
-					},
-					{
-						name: 'Bursa',
-						value: 'TR-16',
-					},
-					{
-						name: 'Çanakkale Province',
-						value: 'TR-17',
-					},
-					{
-						name: 'Çankırı',
-						value: 'TR-18',
-					},
-					{
-						name: 'Çorum Province',
-						value: 'TR-19',
-					},
-					{
-						name: 'Denizli',
-						value: 'TR-20',
-					},
-					{
-						name: 'Diyarbakır',
-						value: 'TR-21',
-					},
-					{
-						name: 'Düzce Province',
-						value: 'TR-81',
-					},
-					{
-						name: 'Edirne',
-						value: 'TR-22',
-					},
-					{
-						name: 'Elazığ',
-						value: 'TR-23',
-					},
-					{
-						name: 'Erzincan',
-						value: 'TR-24',
-					},
-					{
-						name: 'Erzurum',
-						value: 'TR-25',
-					},
-					{
-						name: 'Eskişehir Province',
-						value: 'TR-26',
-					},
-					{
-						name: 'Gaziantep',
-						value: 'TR-27',
-					},
-					{
-						name: 'Giresun',
-						value: 'TR-28',
-					},
-					{
-						name: 'Gümüşhane',
-						value: 'TR-29',
-					},
-					{
-						name: 'Hakkâri',
-						value: 'TR-30',
-					},
-					{
-						name: 'Hatay',
-						value: 'TR-31',
-					},
-					{
-						name: 'Iğdır',
-						value: 'TR-76',
-					},
-					{
-						name: 'Isparta Province',
-						value: 'TR-32',
-					},
-					{
-						name: 'İstanbul',
-						value: 'TR-34',
-					},
-					{
-						name: 'İzmir',
-						value: 'TR-35',
-					},
-					{
-						name: 'Kahramanmaraş Province',
-						value: 'TR-46',
-					},
-					{
-						name: 'Karabük',
-						value: 'TR-78',
-					},
-					{
-						name: 'Karaman',
-						value: 'TR-70',
-					},
-					{
-						name: 'Kars',
-						value: 'TR-36',
-					},
-					{
-						name: 'Kastamonu',
-						value: 'TR-37',
-					},
-					{
-						name: 'Kayseri Province',
-						value: 'TR-38',
-					},
-					{
-						name: 'Kilis',
-						value: 'TR-79',
-					},
-					{
-						name: 'Kırıkkale',
-						value: 'TR-71',
-					},
-					{
-						name: 'Kırklareli',
-						value: 'TR-39',
-					},
-					{
-						name: 'Kırşehir',
-						value: 'TR-40',
-					},
-					{
-						name: 'Kocaeli',
-						value: 'TR-41',
-					},
-					{
-						name: 'Konya',
-						value: 'TR-42',
-					},
-					{
-						name: 'Kütahya',
-						value: 'TR-43',
-					},
-					{
-						name: 'Malatya',
-						value: 'TR-44',
-					},
-					{
-						name: 'Manisa',
-						value: 'TR-45',
-					},
-					{
-						name: 'Mardin',
-						value: 'TR-47',
-					},
-					{
-						name: 'Mersin Province',
-						value: 'TR-33',
-					},
-					{
-						name: 'Muğla Province',
-						value: 'TR-48',
-					},
-					{
-						name: 'Muş',
-						value: 'TR-49',
-					},
-					{
-						name: 'Nevşehir',
-						value: 'TR-50',
-					},
-					{
-						name: 'Niğde',
-						value: 'TR-51',
-					},
-					{
-						name: 'Ordu',
-						value: 'TR-52',
-					},
-					{
-						name: 'Osmaniye',
-						value: 'TR-80',
-					},
-					{
-						name: 'Rize',
-						value: 'TR-53',
-					},
-					{
-						name: 'Sakarya',
-						value: 'TR-54',
-					},
-					{
-						name: 'Samsun',
-						value: 'TR-55',
-					},
-					{
-						name: 'Şanlıurfa Province',
-						value: 'TR-63',
-					},
-					{
-						name: 'Siirt Province',
-						value: 'TR-56',
-					},
-					{
-						name: 'Sinop Province',
-						value: 'TR-57',
-					},
-					{
-						name: 'Sivas',
-						value: 'TR-58',
-					},
-					{
-						name: 'Şırnak',
-						value: 'TR-73',
-					},
-					{
-						name: 'Tekirdağ',
-						value: 'TR-59',
-					},
-					{
-						name: 'Tokat',
-						value: 'TR-60',
-					},
-					{
-						name: 'Trabzon',
-						value: 'TR-61',
-					},
-					{
-						name: 'Tunceli',
-						value: 'TR-62',
-					},
-					{
-						name: 'Uşak',
-						value: 'TR-64',
-					},
-					{
-						name: 'Van',
-						value: 'TR-65',
-					},
-					{
-						name: 'Yalova Province',
-						value: 'TR-77',
-					},
-					{
-						name: 'Yozgat',
-						value: 'TR-66',
-					},
-					{
-						name: 'Zonguldak',
-						value: 'TR-67',
-					},
-					{
-						name: 'Turkmenistan',
-						value: 'TM',
-					},
-					{
-						name: 'Ahal',
-						value: 'TM-A',
-					},
-					{
-						name: 'Ashgabat',
-						value: 'TM-S',
-					},
-					{
-						name: 'Balkan',
-						value: 'TM-B',
-					},
-					{
-						name: 'Dashoguz Province',
-						value: 'TM-D',
-					},
-					{
-						name: 'Lebap',
-						value: 'TM-L',
-					},
-					{
-						name: 'Mary',
-						value: 'TM-M',
-					},
-					{
-						name: 'Turks & Caicos Islands',
-						value: 'TC',
-					},
-					{
-						name: 'Tuvalu',
-						value: 'TV',
-					},
-					{
-						name: 'Funafuti',
-						value: 'TV-FUN',
-					},
-					{
-						name: 'Nanumanga',
-						value: 'TV-NMG',
-					},
-					{
-						name: 'Nanumea',
-						value: 'TV-NMA',
-					},
-					{
-						name: 'Niutao',
-						value: 'TV-NIT',
-					},
-					{
-						name: 'Nui',
-						value: 'TV-NIU',
-					},
-					{
-						name: 'Nukufetau',
-						value: 'TV-NKF',
-					},
-					{
-						name: 'Nukulaelae',
-						value: 'TV-NKL',
-					},
-					{
-						name: 'Vaitupu',
-						value: 'TV-VAI',
-					},
-					{
-						name: 'U.S. Outlying Islands',
-						value: 'UM',
-					},
-					{
-						name: 'U.S. Virgin Islands',
-						value: 'VI',
-					},
-					{
-						name: 'Uganda',
-						value: 'UG',
-					},
-					{
-						name: 'Central Region',
-						value: 'UG-C',
-					},
-					{
-						name: 'Eastern Region',
-						value: 'UG-E',
-					},
-					{
-						name: 'Northern Region',
-						value: 'UG-N',
-					},
-					{
-						name: 'Western Region',
-						value: 'UG-W',
-					},
-					{
-						name: 'Ukraine',
-						value: 'UA',
-					},
-					{
-						name: "Cherkas'ka oblast",
-						value: 'UA-71',
-					},
-					{
-						name: "Chernihivs'ka oblast",
-						value: 'UA-74',
-					},
-					{
-						name: "Chernivets'ka oblast",
-						value: 'UA-77',
-					},
-					{
-						name: 'Crimea',
-						value: 'UA-43',
-					},
-					{
-						name: 'Dnipropetrovsk Oblast',
-						value: 'UA-12',
-					},
-					{
-						name: 'Donetsk Oblast',
-						value: 'UA-14',
-					},
-					{
-						name: "Ivano-Frankivs'ka oblast",
-						value: 'UA-26',
-					},
-					{
-						name: 'Kharkiv Oblast',
-						value: 'UA-63',
-					},
-					{
-						name: "Khersons'ka oblast",
-						value: 'UA-65',
-					},
-					{
-						name: "Khmel'nyts'ka oblast",
-						value: 'UA-68',
-					},
-					{
-						name: "Kirovohrads'ka oblast",
-						value: 'UA-35',
-					},
-					{
-						name: 'Kyiv city',
-						value: 'UA-30',
-					},
-					{
-						name: "Kyivs'ka oblast",
-						value: 'UA-32',
-					},
-					{
-						name: "Luhans'ka oblast",
-						value: 'UA-09',
-					},
-					{
-						name: 'Lviv Oblast',
-						value: 'UA-46',
-					},
-					{
-						name: "Mykolaivs'ka oblast",
-						value: 'UA-48',
-					},
-					{
-						name: 'Odessa Oblast',
-						value: 'UA-51',
-					},
-					{
-						name: "Poltavs'ka oblast",
-						value: 'UA-53',
-					},
-					{
-						name: "Rivnens'ka oblast",
-						value: 'UA-56',
-					},
-					{
-						name: "Sevastopol' city",
-						value: 'UA-40',
-					},
-					{
-						name: "Sums'ka oblast",
-						value: 'UA-59',
-					},
-					{
-						name: "Ternopil's'ka oblast",
-						value: 'UA-61',
-					},
-					{
-						name: "Vinnyts'ka oblast",
-						value: 'UA-05',
-					},
-					{
-						name: "Volyns'ka oblast",
-						value: 'UA-07',
-					},
-					{
-						name: "Zakarpats'ka oblast",
-						value: 'UA-21',
-					},
-					{
-						name: "Zaporiz'ka oblast",
-						value: 'UA-23',
-					},
-					{
-						name: "Zhytomyrs'ka oblast",
-						value: 'UA-18',
-					},
-					{
-						name: 'United Arab Emirates',
-						value: 'AE',
-					},
-					{
-						name: 'Abu Dhabi',
-						value: 'AE-AZ',
-					},
-					{
-						name: 'Ajman',
-						value: 'AE-AJ',
-					},
-					{
-						name: 'Dubai',
-						value: 'AE-DU',
-					},
-					{
-						name: 'Fujairah',
-						value: 'AE-FU',
-					},
-					{
-						name: 'Ras al Khaimah',
-						value: 'AE-RK',
-					},
-					{
-						name: 'Sharjah',
-						value: 'AE-SH',
-					},
-					{
-						name: 'Umm Al Quwain',
-						value: 'AE-UQ',
-					},
-					{
-						name: 'United Kingdom',
-						value: 'GB',
-					},
-					{
-						name: 'England',
-						value: 'GB-ENG',
-					},
-					{
-						name: 'Northern Ireland',
-						value: 'GB-NIR',
-					},
-					{
-						name: 'Scotland',
-						value: 'GB-SCT',
-					},
-					{
-						name: 'Wales',
-						value: 'GB-WLS',
-					},
-					{
-						name: 'United States',
-						value: 'US',
-					},
-					{
-						name: 'Alabama',
-						value: 'US-AL',
-					},
-					{
-						name: 'Birmingham AL',
-						value: '630',
-					},
-					{
-						name: 'Columbus GA',
-						value: '522',
-					},
-					{
-						name: 'Dothan AL',
-						value: '606',
-					},
-					{
-						name: 'Huntsville-Decatur (Florence) AL',
-						value: '691',
-					},
-					{
-						name: 'Meridian MS',
-						value: '711',
-					},
-					{
-						name: 'Mobile AL-Pensacola (Ft. Walton Beach) FL',
-						value: '686',
-					},
-					{
-						name: 'Montgomery (Selma) AL',
-						value: '698',
-					},
-					{
-						name: 'Alaska',
-						value: 'US-AK',
-					},
-					{
-						name: 'Anchorage AK',
-						value: '743',
-					},
-					{
-						name: 'Fairbanks AK',
-						value: '745',
-					},
-					{
-						name: 'Juneau AK',
-						value: '747',
-					},
-					{
-						name: 'Arizona',
-						value: 'US-AZ',
-					},
-					{
-						name: 'Phoenix AZ',
-						value: '753',
-					},
-					{
-						name: 'Tucson (Sierra Vista) AZ',
-						value: '789',
-					},
-					{
-						name: 'Yuma AZ-El Centro CA',
-						value: '771',
-					},
-					{
-						name: 'Arkansas',
-						value: 'US-AR',
-					},
-					{
-						name: 'Ft. Smith-Fayetteville-Springdale-Rogers AR',
-						value: '670',
-					},
-					{
-						name: 'Jonesboro AR',
-						value: '734',
-					},
-					{
-						name: 'Little Rock-Pine Bluff AR',
-						value: '693',
-					},
-					{
-						name: 'Memphis TN',
-						value: '640',
-					},
-					{
-						name: 'Monroe LA-El Dorado AR',
-						value: '628',
-					},
-					{
-						name: 'Shreveport LA',
-						value: '612',
-					},
-					{
-						name: 'Springfield MO',
-						value: '619',
-					},
-					{
-						name: 'California',
-						value: 'US-CA',
-					},
-					{
-						name: 'Bakersfield CA',
-						value: '800',
-					},
-					{
-						name: 'Chico-Redding CA',
-						value: '868',
-					},
-					{
-						name: 'Eureka CA',
-						value: '802',
-					},
-					{
-						name: 'Fresno-Visalia CA',
-						value: '866',
-					},
-					{
-						name: 'Los Angeles CA',
-						value: '803',
-					},
-					{
-						name: 'Medford-Klamath Falls OR',
-						value: '813',
-					},
-					{
-						name: 'Monterey-Salinas CA',
-						value: '828',
-					},
-					{
-						name: 'Palm Springs CA',
-						value: '804',
-					},
-					{
-						name: 'Reno NV',
-						value: '811',
-					},
-					{
-						name: 'Sacramento-Stockton-Modesto CA',
-						value: '862',
-					},
-					{
-						name: 'San Diego CA',
-						value: '825',
-					},
-					{
-						name: 'San Francisco-Oakland-San Jose CA',
-						value: '807',
-					},
-					{
-						name: 'Santa Barbara-Santa Maria-San Luis Obispo CA',
-						value: '855',
-					},
-					{
-						name: 'Colorado',
-						value: 'US-CO',
-					},
-					{
-						name: 'Colorado Springs-Pueblo CO',
-						value: '752',
-					},
-					{
-						name: 'Denver CO',
-						value: '751',
-					},
-					{
-						name: 'Grand Junction-Montrose CO',
-						value: '773',
-					},
-					{
-						name: 'Connecticut',
-						value: 'US-CT',
-					},
-					{
-						name: 'Hartford & New Haven CT',
-						value: '533',
-					},
-					{
-						name: 'Delaware',
-						value: 'US-DE',
-					},
-					{
-						name: 'Philadelphia PA',
-						value: '504',
-					},
-					{
-						name: 'Salisbury MD',
-						value: '576',
-					},
-					{
-						name: 'District of Columbia',
-						value: 'US-DC',
-					},
-					{
-						name: 'Florida',
-						value: 'US-FL',
-					},
-					{
-						name: 'Ft. Myers-Naples FL',
-						value: '571',
-					},
-					{
-						name: 'Gainesville FL',
-						value: '592',
-					},
-					{
-						name: 'Jacksonville FL',
-						value: '561',
-					},
-					{
-						name: 'Miami-Ft. Lauderdale FL',
-						value: '528',
-					},
-					{
-						name: 'Orlando-Daytona Beach-Melbourne FL',
-						value: '534',
-					},
-					{
-						name: 'Panama City FL',
-						value: '656',
-					},
-					{
-						name: 'Tallahassee FL-Thomasville GA',
-						value: '530',
-					},
-					{
-						name: 'Tampa-St. Petersburg (Sarasota) FL',
-						value: '539',
-					},
-					{
-						name: 'West Palm Beach-Ft. Pierce FL',
-						value: '548',
-					},
-					{
-						name: 'Georgia',
-						value: 'US-GA',
-					},
-					{
-						name: 'Albany GA',
-						value: '525',
-					},
-					{
-						name: 'Atlanta GA',
-						value: '524',
-					},
-					{
-						name: 'Augusta GA',
-						value: '520',
-					},
-					{
-						name: 'Chattanooga TN',
-						value: '575',
-					},
-					{
-						name: 'Macon GA',
-						value: '503',
-					},
-					{
-						name: 'Savannah GA',
-						value: '507',
-					},
-					{
-						name: 'Hawaii',
-						value: 'US-HI',
-					},
-					{
-						name: 'Honolulu HI',
-						value: '744',
-					},
-					{
-						name: 'Idaho',
-						value: 'US-ID',
-					},
-					{
-						name: 'Boise ID',
-						value: '757',
-					},
-					{
-						name: 'Idaho Falls-Pocatello ID',
-						value: '758',
-					},
-					{
-						name: 'Spokane WA',
-						value: '881',
-					},
-					{
-						name: 'Twin Falls ID',
-						value: '760',
-					},
-					{
-						name: 'Illinois',
-						value: 'US-IL',
-					},
-					{
-						name: 'Champaign & Springfield-Decatur IL',
-						value: '648',
-					},
-					{
-						name: 'Chicago IL',
-						value: '602',
-					},
-					{
-						name: 'Davenport IA-Rock Island-Moline IL',
-						value: '682',
-					},
-					{
-						name: 'Evansville IN',
-						value: '649',
-					},
-					{
-						name: 'Paducah KY-Cape Girardeau MO-Harrisburg-Mount Vernon IL',
-						value: '632',
-					},
-					{
-						name: 'Peoria-Bloomington IL',
-						value: '675',
-					},
-					{
-						name: 'Quincy IL-Hannibal MO-Keokuk IA',
-						value: '717',
-					},
-					{
-						name: 'Rockford IL',
-						value: '610',
-					},
-					{
-						name: 'St. Louis MO',
-						value: '609',
-					},
-					{
-						name: 'Terre Haute IN',
-						value: '581',
-					},
-					{
-						name: 'Indiana',
-						value: 'US-IN',
-					},
-					{
-						name: 'Cincinnati OH',
-						value: '515',
-					},
-					{
-						name: 'Ft. Wayne IN',
-						value: '509',
-					},
-					{
-						name: 'Indianapolis IN',
-						value: '527',
-					},
-					{
-						name: 'Lafayette IN',
-						value: '582',
-					},
-					{
-						name: 'Louisville KY',
-						value: '529',
-					},
-					{
-						name: 'South Bend-Elkhart IN',
-						value: '588',
-					},
-					{
-						name: 'Iowa',
-						value: 'US-IA',
-					},
-					{
-						name: 'Cedar Rapids-Waterloo-Iowa City & Dubuque IA',
-						value: '637',
-					},
-					{
-						name: 'Des Moines-Ames IA',
-						value: '679',
-					},
-					{
-						name: 'Omaha NE',
-						value: '652',
-					},
-					{
-						name: 'Ottumwa IA-Kirksville MO',
-						value: '631',
-					},
-					{
-						name: 'Rochester MN-Mason City IA-Austin MN',
-						value: '611',
-					},
-					{
-						name: 'Sioux City IA',
-						value: '624',
-					},
-					{
-						name: 'Kansas',
-						value: 'US-KS',
-					},
-					{
-						name: 'Joplin MO-Pittsburg KS',
-						value: '603',
-					},
-					{
-						name: 'Kansas City MO',
-						value: '616',
-					},
-					{
-						name: 'St. Joseph MO',
-						value: '638',
-					},
-					{
-						name: 'Topeka KS',
-						value: '605',
-					},
-					{
-						name: 'Wichita-Hutchinson KS',
-						value: '678',
-					},
-					{
-						name: 'Kentucky',
-						value: 'US-KY',
-					},
-					{
-						name: 'Bowling Green KY',
-						value: '736',
-					},
-					{
-						name: 'Charleston-Huntington WV',
-						value: '564',
-					},
-					{
-						name: 'Knoxville TN',
-						value: '557',
-					},
-					{
-						name: 'Lexington KY',
-						value: '541',
-					},
-					{
-						name: 'Nashville TN',
-						value: '659',
-					},
-					{
-						name: 'Tri-Cities TN-VA',
-						value: '531',
-					},
-					{
-						name: 'Louisiana',
-						value: 'US-LA',
-					},
-					{
-						name: 'Alexandria LA',
-						value: '644',
-					},
-					{
-						name: 'Baton Rouge LA',
-						value: '716',
-					},
-					{
-						name: 'Lafayette LA',
-						value: '642',
-					},
-					{
-						name: 'Lake Charles LA',
-						value: '643',
-					},
-					{
-						name: 'New Orleans LA',
-						value: '622',
-					},
-					{
-						name: 'Maine',
-						value: 'US-ME',
-					},
-					{
-						name: 'Bangor ME',
-						value: '537',
-					},
-					{
-						name: 'Portland-Auburn ME',
-						value: '500',
+						name: 'Prešov Region',
+						value: 'SK-PV',
 					},
 					{
 						name: 'Presque Isle ME',
 						value: '552',
 					},
 					{
-						name: 'Maryland',
-						value: 'US-MD',
+						name: 'Prey Veng',
+						value: 'KH-14',
 					},
 					{
-						name: 'Baltimore MD',
-						value: '512',
+						name: 'Priekule Municipality',
+						value: 'LV-074',
 					},
 					{
-						name: 'Washington DC (Hagerstown MD)',
-						value: '511',
+						name: 'Priekuļi Municipality',
+						value: 'LV-075',
 					},
 					{
-						name: 'Massachusetts',
-						value: 'US-MA',
+						name: 'Primorje-Gorski Kotar County',
+						value: 'HR-08',
 					},
 					{
-						name: 'Boston MA-Manchester NH',
-						value: '506',
+						name: 'Primorsky Krai',
+						value: 'RU-PRI',
+					},
+					{
+						name: 'Prince Edward Island',
+						value: 'CA-PE',
+					},
+					{
+						name: 'Princes Town',
+						value: 'TT-PRT',
+					},
+					{
+						name: 'Principe',
+						value: 'ST-P',
+					},
+					{
+						name: 'Probishtip',
+						value: 'MK-63',
+					},
+					{
+						name: "Provence-Alpes-Côte d'Azur",
+						value: 'FR-U',
 					},
 					{
 						name: 'Providence RI-New Bedford MA',
 						value: '521',
 					},
 					{
-						name: 'Springfield-Holyoke MA',
-						value: '543',
+						name: 'Province of Tamanrasset',
+						value: 'DZ-11',
 					},
 					{
-						name: 'Michigan',
-						value: 'US-MI',
+						name: 'Provincia de Cartago',
+						value: 'CR-C',
 					},
 					{
-						name: 'Alpena MI',
-						value: '583',
+						name: 'Provincia de Napo',
+						value: 'EC-N',
 					},
 					{
-						name: 'Detroit MI',
-						value: '505',
+						name: 'Pskov Oblast',
+						value: 'RU-PSK',
 					},
 					{
-						name: 'Flint-Saginaw-Bay City MI',
-						value: '513',
+						name: 'Puducherry',
+						value: 'IN-PY',
 					},
 					{
-						name: 'Grand Rapids-Kalamazoo-Battle Creek MI',
-						value: '563',
+						name: 'Puebla',
+						value: 'MX-PUE',
 					},
 					{
-						name: 'Lansing MI',
-						value: '551',
+						name: 'Puerto Plata Province',
+						value: 'DO-18',
 					},
 					{
-						name: 'Marquette MI',
-						value: '553',
+						name: 'Puerto Rico',
+						value: 'PR',
 					},
 					{
-						name: 'Toledo OH',
-						value: '547',
+						name: 'Punakha',
+						value: 'BT-23',
 					},
 					{
-						name: 'Traverse City-Cadillac MI',
-						value: '540',
+						name: 'Punjab (IN)',
+						value: 'IN-PB',
 					},
 					{
-						name: 'Minnesota',
-						value: 'US-MN',
+						name: 'Punjab (PK)',
+						value: 'PK-PB',
 					},
 					{
-						name: 'Duluth MN-Superior WI',
-						value: '676',
+						name: 'Puno',
+						value: 'PE-PUN',
 					},
 					{
-						name: 'Fargo-Valley City ND',
-						value: '724',
+						name: 'Puntarenas Province',
+						value: 'CR-P',
 					},
 					{
-						name: 'La Crosse-Eau Claire WI',
-						value: '702',
+						name: 'Pursat',
+						value: 'KH-15',
 					},
 					{
-						name: 'Mankato MN',
-						value: '737',
+						name: 'Putrajaya',
+						value: 'MY-16',
 					},
 					{
-						name: 'Minneapolis-St. Paul MN',
-						value: '613',
+						name: 'Putumayo',
+						value: 'CO-PUT',
 					},
 					{
-						name: 'Mississippi',
-						value: 'US-MS',
+						name: 'Pwani',
+						value: 'TZ-19',
 					},
 					{
-						name: 'Biloxi-Gulfport MS',
-						value: '746',
+						name: 'Pyongyang',
+						value: 'KP-01',
 					},
 					{
-						name: 'Columbus-Tupelo-West Point MS',
-						value: '673',
+						name: 'Qaasuitsup',
+						value: 'GL-QA',
 					},
 					{
-						name: 'Greenwood-Greenville MS',
-						value: '647',
+						name: "Qacha's Nek",
+						value: 'LS-H',
 					},
 					{
-						name: 'Hattiesburg-Laurel MS',
-						value: '710',
+						name: 'Qatar',
+						value: 'QA',
 					},
 					{
-						name: 'Jackson MS',
-						value: '718',
+						name: 'Qazvin',
+						value: 'IR-28',
 					},
 					{
-						name: 'Missouri',
-						value: 'US-MO',
+						name: 'Qena Governorate',
+						value: 'EG-KN',
 					},
 					{
-						name: 'Columbia-Jefferson City MO',
-						value: '604',
+						name: 'Qeqqata',
+						value: 'GL-QE',
 					},
 					{
-						name: 'Montana',
-						value: 'US-MT',
+						name: 'Qinghai',
+						value: 'CN-63',
 					},
 					{
-						name: 'Billings, MT',
-						value: '756',
-					},
-					{
-						name: 'Butte-Bozeman MT',
-						value: '754',
-					},
-					{
-						name: 'Glendive MT',
-						value: '798',
-					},
-					{
-						name: 'Great Falls MT',
-						value: '755',
-					},
-					{
-						name: 'Helena MT',
-						value: '766',
-					},
-					{
-						name: 'Minot-Bismarck-Dickinson(Williston) ND',
-						value: '687',
-					},
-					{
-						name: 'Missoula MT',
-						value: '762',
-					},
-					{
-						name: 'Nebraska',
-						value: 'US-NE',
-					},
-					{
-						name: 'Cheyenne WY-Scottsbluff NE',
-						value: '759',
-					},
-					{
-						name: 'Lincoln & Hastings-Kearney NE',
-						value: '722',
-					},
-					{
-						name: 'North Platte NE',
-						value: '740',
-					},
-					{
-						name: 'Sioux Falls(Mitchell) SD',
-						value: '725',
-					},
-					{
-						name: 'Nevada',
-						value: 'US-NV',
-					},
-					{
-						name: 'Las Vegas NV',
-						value: '839',
-					},
-					{
-						name: 'Salt Lake City UT',
-						value: '770',
-					},
-					{
-						name: 'New Hampshire',
-						value: 'US-NH',
-					},
-					{
-						name: 'Burlington VT-Plattsburgh NY',
-						value: '523',
-					},
-					{
-						name: 'New Jersey',
-						value: 'US-NJ',
-					},
-					{
-						name: 'New York NY',
-						value: '501',
-					},
-					{
-						name: 'New Mexico',
-						value: 'US-NM',
-					},
-					{
-						name: 'Albuquerque-Santa Fe NM',
-						value: '790',
-					},
-					{
-						name: 'Amarillo TX',
-						value: '634',
-					},
-					{
-						name: 'El Paso TX',
-						value: '765',
-					},
-					{
-						name: 'New York',
-						value: 'US-NY',
-					},
-					{
-						name: 'Albany-Schenectady-Troy NY',
-						value: '532',
-					},
-					{
-						name: 'Binghamton NY',
-						value: '502',
-					},
-					{
-						name: 'Buffalo NY',
-						value: '514',
-					},
-					{
-						name: 'Elmira NY',
-						value: '565',
-					},
-					{
-						name: 'Rochester NY',
-						value: '538',
-					},
-					{
-						name: 'Syracuse NY',
-						value: '555',
-					},
-					{
-						name: 'Utica NY',
-						value: '526',
-					},
-					{
-						name: 'Watertown NY',
-						value: '549',
-					},
-					{
-						name: 'North Carolina',
-						value: 'US-NC',
-					},
-					{
-						name: 'Charlotte NC',
-						value: '517',
-					},
-					{
-						name: 'Florence-Myrtle Beach SC',
-						value: '570',
-					},
-					{
-						name: 'Greensboro-High Point-Winston Salem NC',
-						value: '518',
-					},
-					{
-						name: 'Greenville-New Bern-Washington NC',
-						value: '545',
-					},
-					{
-						name: 'Greenville-Spartanburg SC-Asheville NC-Anderson SC',
-						value: '567',
-					},
-					{
-						name: 'Norfolk-Portsmouth-Newport News VA',
-						value: '544',
-					},
-					{
-						name: 'Raleigh-Durham (Fayetteville) NC',
-						value: '560',
-					},
-					{
-						name: 'Wilmington NC',
-						value: '550',
-					},
-					{
-						name: 'North Dakota',
-						value: 'US-ND',
-					},
-					{
-						name: 'Ohio',
-						value: 'US-OH',
-					},
-					{
-						name: 'Cleveland-Akron (Canton) OH',
-						value: '510',
-					},
-					{
-						name: 'Columbus OH',
-						value: '535',
-					},
-					{
-						name: 'Dayton OH',
-						value: '542',
-					},
-					{
-						name: 'Lima OH',
-						value: '558',
-					},
-					{
-						name: 'Parkersburg WV',
-						value: '597',
-					},
-					{
-						name: 'Wheeling WV-Steubenville OH',
-						value: '554',
-					},
-					{
-						name: 'Youngstown OH',
-						value: '536',
-					},
-					{
-						name: 'Zanesville OH',
-						value: '596',
-					},
-					{
-						name: 'Oklahoma',
-						value: 'US-OK',
-					},
-					{
-						name: 'Oklahoma City OK',
-						value: '650',
-					},
-					{
-						name: 'Sherman TX-Ada OK',
-						value: '657',
-					},
-					{
-						name: 'Tulsa OK',
-						value: '671',
-					},
-					{
-						name: 'Wichita Falls TX & Lawton OK',
-						value: '627',
-					},
-					{
-						name: 'Oregon',
-						value: 'US-OR',
-					},
-					{
-						name: 'Bend OR',
-						value: '821',
-					},
-					{
-						name: 'Eugene OR',
-						value: '801',
-					},
-					{
-						name: 'Portland OR',
-						value: '820',
-					},
-					{
-						name: 'Yakima-Pasco-Richland-Kennewick WA',
-						value: '810',
-					},
-					{
-						name: 'Pennsylvania',
-						value: 'US-PA',
-					},
-					{
-						name: 'Erie PA',
-						value: '516',
-					},
-					{
-						name: 'Harrisburg-Lancaster-Lebanon-York PA',
-						value: '566',
-					},
-					{
-						name: 'Johnstown-Altoona PA',
-						value: '574',
-					},
-					{
-						name: 'Pittsburgh PA',
-						value: '508',
-					},
-					{
-						name: 'Wilkes Barre-Scranton PA',
-						value: '577',
-					},
-					{
-						name: 'Rhode Island',
-						value: 'US-RI',
-					},
-					{
-						name: 'South Carolina',
-						value: 'US-SC',
-					},
-					{
-						name: 'Charleston SC',
-						value: '519',
-					},
-					{
-						name: 'Columbia SC',
-						value: '546',
-					},
-					{
-						name: 'South Dakota',
-						value: 'US-SD',
-					},
-					{
-						name: 'Rapid City SD',
-						value: '764',
-					},
-					{
-						name: 'Tennessee',
-						value: 'US-TN',
-					},
-					{
-						name: 'Jackson TN',
-						value: '639',
-					},
-					{
-						name: 'Texas',
-						value: 'US-TX',
-					},
-					{
-						name: 'Abilene-Sweetwater TX',
-						value: '662',
-					},
-					{
-						name: 'Austin TX',
-						value: '635',
-					},
-					{
-						name: 'Beaumont-Port Arthur TX',
-						value: '692',
-					},
-					{
-						name: 'Corpus Christi TX',
-						value: '600',
-					},
-					{
-						name: 'Dallas-Ft. Worth TX',
-						value: '623',
-					},
-					{
-						name: 'Harlingen-Weslaco-Brownsville-McAllen TX',
-						value: '636',
-					},
-					{
-						name: 'Houston TX',
-						value: '618',
-					},
-					{
-						name: 'Laredo TX',
-						value: '749',
-					},
-					{
-						name: 'Lubbock TX',
-						value: '651',
-					},
-					{
-						name: 'Odessa-Midland TX',
-						value: '633',
-					},
-					{
-						name: 'San Angelo TX',
-						value: '661',
-					},
-					{
-						name: 'San Antonio TX',
-						value: '641',
-					},
-					{
-						name: 'Tyler-Longview(Lufkin & Nacogdoches) TX',
-						value: '709',
-					},
-					{
-						name: 'Victoria TX',
-						value: '626',
-					},
-					{
-						name: 'Waco-Temple-Bryan TX',
-						value: '625',
-					},
-					{
-						name: 'Utah',
-						value: 'US-UT',
-					},
-					{
-						name: 'Vermont',
-						value: 'US-VT',
-					},
-					{
-						name: 'Virginia',
-						value: 'US-VA',
-					},
-					{
-						name: 'Bluefield-Beckley-Oak Hill WV',
-						value: '559',
-					},
-					{
-						name: 'Charlottesville VA',
-						value: '584',
-					},
-					{
-						name: 'Harrisonburg VA',
-						value: '569',
-					},
-					{
-						name: 'Richmond-Petersburg VA',
-						value: '556',
-					},
-					{
-						name: 'Roanoke-Lynchburg VA',
-						value: '573',
-					},
-					{
-						name: 'Washington',
-						value: 'US-WA',
-					},
-					{
-						name: 'Seattle-Tacoma WA',
-						value: '819',
-					},
-					{
-						name: 'West Virginia',
-						value: 'US-WV',
-					},
-					{
-						name: 'Clarksburg-Weston WV',
-						value: '598',
-					},
-					{
-						name: 'Wisconsin',
-						value: 'US-WI',
-					},
-					{
-						name: 'Green Bay-Appleton WI',
-						value: '658',
-					},
-					{
-						name: 'Madison WI',
-						value: '669',
-					},
-					{
-						name: 'Milwaukee WI',
-						value: '617',
-					},
-					{
-						name: 'Wausau-Rhinelander WI',
-						value: '705',
-					},
-					{
-						name: 'Wyoming',
-						value: 'US-WY',
-					},
-					{
-						name: 'Casper-Riverton WY',
-						value: '767',
-					},
-					{
-						name: 'Uruguay',
-						value: 'UY',
-					},
-					{
-						name: 'Artigas Department',
-						value: 'UY-AR',
-					},
-					{
-						name: 'Canelones Department',
-						value: 'UY-CA',
-					},
-					{
-						name: 'Cerro Largo Department',
-						value: 'UY-CL',
-					},
-					{
-						name: 'Colonia',
-						value: 'UY-CO',
-					},
-					{
-						name: 'Durazno Department',
-						value: 'UY-DU',
-					},
-					{
-						name: 'Flores Department',
-						value: 'UY-FS',
-					},
-					{
-						name: 'Florida Department',
-						value: 'UY-FD',
-					},
-					{
-						name: 'Lavalleja Department',
-						value: 'UY-LA',
-					},
-					{
-						name: 'Maldonado Department',
-						value: 'UY-MA',
-					},
-					{
-						name: 'Montevideo Department',
-						value: 'UY-MO',
-					},
-					{
-						name: 'Paysandú Department',
-						value: 'UY-PA',
-					},
-					{
-						name: 'Río Negro Department',
-						value: 'UY-RN',
-					},
-					{
-						name: 'Rivera Department',
-						value: 'UY-RV',
-					},
-					{
-						name: 'Rocha Department',
-						value: 'UY-RO',
-					},
-					{
-						name: 'Salto',
-						value: 'UY-SA',
-					},
-					{
-						name: 'San José Department',
-						value: 'UY-SJ',
-					},
-					{
-						name: 'Soriano Department',
-						value: 'UY-SO',
-					},
-					{
-						name: 'Tacuarembó Department',
-						value: 'UY-TA',
-					},
-					{
-						name: 'Treinta y Tres Department',
-						value: 'UY-TT',
-					},
-					{
-						name: 'Uzbekistan',
-						value: 'UZ',
-					},
-					{
-						name: 'Andijan Province',
-						value: 'UZ-AN',
-					},
-					{
-						name: 'Bukhara Province',
-						value: 'UZ-BU',
-					},
-					{
-						name: 'Ferghana Province',
-						value: 'UZ-FA',
-					},
-					{
-						name: 'Jizzakh Province',
-						value: 'UZ-JI',
-					},
-					{
-						name: 'Kashkadarya Province',
-						value: 'UZ-QA',
-					},
-					{
-						name: 'Khorezm Province',
-						value: 'UZ-XO',
-					},
-					{
-						name: 'Namangan Province',
-						value: 'UZ-NG',
-					},
-					{
-						name: 'Navoiy Province',
-						value: 'UZ-NW',
-					},
-					{
-						name: 'Republic of Karakalpakstan',
-						value: 'UZ-QR',
-					},
-					{
-						name: 'Samarkand Province',
-						value: 'UZ-SA',
-					},
-					{
-						name: 'Sirdarya Province',
-						value: 'UZ-SI',
-					},
-					{
-						name: 'Surkhandarya Province',
-						value: 'UZ-SU',
-					},
-					{
-						name: 'Tashkent Province',
-						value: 'UZ-TO',
-					},
-					{
-						name: 'Vanuatu',
-						value: 'VU',
-					},
-					{
-						name: 'Malampa Province',
-						value: 'VU-MAP',
-					},
-					{
-						name: 'Penama Province',
-						value: 'VU-PAM',
-					},
-					{
-						name: 'Sanma Province',
-						value: 'VU-SAM',
-					},
-					{
-						name: 'Shefa Province',
-						value: 'VU-SEE',
-					},
-					{
-						name: 'Tafea Province',
-						value: 'VU-TAE',
-					},
-					{
-						name: 'Torba Province',
-						value: 'VU-TOB',
-					},
-					{
-						name: 'Vatican City',
-						value: 'VA',
-					},
-					{
-						name: 'Venezuela',
-						value: 'VE',
-					},
-					{
-						name: 'Amazonas',
-						value: 'VE-Z',
-					},
-					{
-						name: 'Anzoategui',
-						value: 'VE-B',
-					},
-					{
-						name: 'Apure',
-						value: 'VE-C',
-					},
-					{
-						name: 'Aragua',
-						value: 'VE-D',
-					},
-					{
-						name: 'Barinas',
-						value: 'VE-E',
-					},
-					{
-						name: 'Bolívar',
-						value: 'VE-F',
-					},
-					{
-						name: 'Capital District',
-						value: 'VE-A',
-					},
-					{
-						name: 'Carabobo',
-						value: 'VE-G',
-					},
-					{
-						name: 'Cojedes',
-						value: 'VE-H',
-					},
-					{
-						name: 'Delta Amacuro',
-						value: 'VE-Y',
-					},
-					{
-						name: 'Falcón',
-						value: 'VE-I',
-					},
-					{
-						name: 'Federal Dependencies',
-						value: 'VE-W',
-					},
-					{
-						name: 'Guárico',
-						value: 'VE-J',
-					},
-					{
-						name: 'Lara',
-						value: 'VE-K',
-					},
-					{
-						name: 'Mérida',
-						value: 'VE-L',
-					},
-					{
-						name: 'Miranda',
-						value: 'VE-M',
-					},
-					{
-						name: 'Monagas',
-						value: 'VE-N',
-					},
-					{
-						name: 'Nueva Esparta',
-						value: 'VE-O',
-					},
-					{
-						name: 'Portuguesa',
-						value: 'VE-P',
-					},
-					{
-						name: 'Sucre',
-						value: 'VE-R',
-					},
-					{
-						name: 'Táchira',
-						value: 'VE-S',
-					},
-					{
-						name: 'Trujillo',
-						value: 'VE-T',
-					},
-					{
-						name: 'Vargas',
-						value: 'VE-X',
-					},
-					{
-						name: 'Yaracuy',
-						value: 'VE-U',
-					},
-					{
-						name: 'Zulia',
-						value: 'VE-V',
-					},
-					{
-						name: 'Vietnam',
-						value: 'VN',
-					},
-					{
-						name: 'An Giang Province',
-						value: 'VN-44',
-					},
-					{
-						name: 'Ba Ria - Vung Tau',
-						value: 'VN-43',
-					},
-					{
-						name: 'Bac Giang',
-						value: 'VN-54',
-					},
-					{
-						name: 'Bắc Kạn Province',
-						value: 'VN-53',
-					},
-					{
-						name: 'Bac Lieu',
-						value: 'VN-55',
-					},
-					{
-						name: 'Bac Ninh Province',
-						value: 'VN-56',
-					},
-					{
-						name: 'Ben Tre',
-						value: 'VN-50',
-					},
-					{
-						name: 'Binh Dinh Province',
-						value: 'VN-31',
-					},
-					{
-						name: 'Binh Duong',
-						value: 'VN-57',
-					},
-					{
-						name: 'Binh Phuoc',
-						value: 'VN-58',
-					},
-					{
-						name: 'Binh Thuan',
-						value: 'VN-40',
-					},
-					{
-						name: 'Ca Mau',
-						value: 'VN-59',
-					},
-					{
-						name: 'Can Tho',
-						value: 'VN-CT',
-					},
-					{
-						name: 'Cao Bang',
-						value: 'VN-04',
-					},
-					{
-						name: 'Da Nang',
-						value: 'VN-DN',
-					},
-					{
-						name: 'Đắk Lắk Province',
-						value: 'VN-33',
-					},
-					{
-						name: 'Dak Nong',
-						value: 'VN-72',
-					},
-					{
-						name: 'Dien Bien',
-						value: 'VN-71',
-					},
-					{
-						name: 'Dong Nai',
-						value: 'VN-39',
-					},
-					{
-						name: 'Đồng Tháp Province',
-						value: 'VN-45',
-					},
-					{
-						name: 'Gia Lai Province',
-						value: 'VN-30',
-					},
-					{
-						name: 'Ha Giang',
-						value: 'VN-03',
-					},
-					{
-						name: 'Hà Nam Province',
-						value: 'VN-63',
-					},
-					{
-						name: 'Ha Tinh Province',
-						value: 'VN-23',
-					},
-					{
-						name: 'Hai Duong',
-						value: 'VN-61',
-					},
-					{
-						name: 'Haiphong',
-						value: 'VN-HP',
-					},
-					{
-						name: 'Hanoi',
-						value: 'VN-HN',
-					},
-					{
-						name: 'Hau Giang',
-						value: 'VN-73',
-					},
-					{
-						name: 'Ho Chi Minh',
-						value: 'VN-SG',
-					},
-					{
-						name: 'Hoa Binh',
-						value: 'VN-14',
-					},
-					{
-						name: 'Hung Yen Province',
-						value: 'VN-66',
-					},
-					{
-						name: 'Khanh Hoa Province',
-						value: 'VN-34',
-					},
-					{
-						name: 'Kien Giang',
-						value: 'VN-47',
-					},
-					{
-						name: 'Kon Tum Province',
-						value: 'VN-28',
-					},
-					{
-						name: 'Lai Chau',
-						value: 'VN-01',
-					},
-					{
-						name: 'Lâm Đồng',
-						value: 'VN-35',
-					},
-					{
-						name: 'Lang Son Province',
-						value: 'VN-09',
-					},
-					{
-						name: 'Lao Cai',
-						value: 'VN-02',
-					},
-					{
-						name: 'Long An Province',
-						value: 'VN-41',
-					},
-					{
-						name: 'Nam Dinh',
-						value: 'VN-67',
-					},
-					{
-						name: 'Nghe An',
-						value: 'VN-22',
-					},
-					{
-						name: 'Ninh Bình Province',
-						value: 'VN-18',
-					},
-					{
-						name: 'Ninh Thuan Province',
-						value: 'VN-36',
-					},
-					{
-						name: 'Phu Tho Province',
-						value: 'VN-68',
-					},
-					{
-						name: 'Phú Yên Province',
-						value: 'VN-32',
+						name: 'Qom',
+						value: 'IR-26',
 					},
 					{
 						name: 'Quang Binh Province',
@@ -14157,16 +10259,2556 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'VN-25',
 					},
 					{
+						name: 'Québec',
+						value: 'CA-QC',
+					},
+					{
+						name: 'Queensland',
+						value: 'AU-QLD',
+					},
+					{
+						name: 'Querétaro',
+						value: 'MX-QUE',
+					},
+					{
+						name: 'Quetzaltenango Department',
+						value: 'GT-QZ',
+					},
+					{
+						name: 'Quiché Department',
+						value: 'GT-QC',
+					},
+					{
+						name: 'Quinara',
+						value: 'GW-QU',
+					},
+					{
+						name: 'Quincy IL-Hannibal MO-Keokuk IA',
+						value: '717',
+					},
+					{
+						name: 'Quindio',
+						value: 'CO-QUI',
+					},
+					{
+						name: 'Quintana Roo',
+						value: 'MX-ROO',
+					},
+					{
+						name: 'Quneitra Governorate',
+						value: 'SY-QU',
+					},
+					{
+						name: 'Quthing',
+						value: 'LS-G',
+					},
+					{
+						name: 'Rabat-Sale-Zemmour-Zaer',
+						value: 'MA-07',
+					},
+					{
+						name: 'Racha-Lechkhumi and Lower Svaneti',
+						value: 'GE-RL',
+					},
+					{
+						name: 'Radovish',
+						value: 'MK-64',
+					},
+					{
+						name: 'Ragged Island',
+						value: 'BS-RI',
+					},
+					{
+						name: 'Rajasthan',
+						value: 'IN-RJ',
+					},
+					{
+						name: 'Rajshahi Division',
+						value: 'BD-E',
+					},
+					{
+						name: 'Rakhine',
+						value: 'MM-16',
+					},
+					{
+						name: 'Raleigh-Durham (Fayetteville) NC',
+						value: '560',
+					},
+					{
+						name: 'Rangpur Division',
+						value: 'BD-F',
+					},
+					{
+						name: 'Ranong',
+						value: 'TH-85',
+					},
+					{
+						name: 'Rapid City SD',
+						value: '764',
+					},
+					{
+						name: 'Rapla County',
+						value: 'EE-70',
+					},
+					{
+						name: 'Ras al Khaimah',
+						value: 'AE-RK',
+					},
+					{
+						name: 'Rason',
+						value: 'KP-13',
+					},
+					{
+						name: 'Ratanakiri',
+						value: 'KH-16',
+					},
+					{
+						name: 'Ratchaburi',
+						value: 'TH-70',
+					},
+					{
+						name: 'Rauna Municipality',
+						value: 'LV-076',
+					},
+					{
+						name: 'Raymah',
+						value: 'YE-RA',
+					},
+					{
+						name: 'Rayong',
+						value: 'TH-21',
+					},
+					{
+						name: 'Razgrad',
+						value: 'BG-17',
+					},
+					{
+						name: 'Red Sea',
+						value: 'SD-RS',
+					},
+					{
+						name: 'Red Sea Governorate',
+						value: 'EG-BA',
+					},
+					{
+						name: 'Redonda',
+						value: 'AG-11',
+					},
+					{
+						name: 'Region of Murcia',
+						value: 'ES-MC',
+					},
+					{
+						name: 'Region Syddanmark',
+						value: 'DK-83',
+					},
+					{
+						name: 'Region XII',
+						value: 'PH-12',
+					},
+					{
+						name: 'Region Zealand',
+						value: 'DK-85',
+					},
+					{
+						name: 'Relizane Province',
+						value: 'DZ-48',
+					},
+					{
+						name: 'Rennell and Bellona Province',
+						value: 'SB-RB',
+					},
+					{
+						name: 'Reno NV',
+						value: '811',
+					},
+					{
+						name: 'Republic of Bashkortostan',
+						value: 'RU-BA',
+					},
+					{
+						name: 'Republic of Karakalpakstan',
+						value: 'UZ-QR',
+					},
+					{
+						name: 'Republic of Karelia',
+						value: 'RU-KR',
+					},
+					{
+						name: 'Republic of Khakassia',
+						value: 'RU-KK',
+					},
+					{
+						name: 'Republika Srpska',
+						value: 'BA-SRP',
+					},
+					{
+						name: 'Retalhuleu Department',
+						value: 'GT-RE',
+					},
+					{
+						name: 'Réunion',
+						value: 'RE',
+					},
+					{
+						name: 'Rēzekne Municipality',
+						value: 'LV-077',
+					},
+					{
+						name: 'Rēzekne Municipality (LV-REZ)',
+						value: 'LV-REZ',
+					},
+					{
+						name: 'Rezina',
+						value: 'MD-RE',
+					},
+					{
+						name: 'Rhineland-Palatinate',
+						value: 'DE-RP',
+					},
+					{
+						name: 'Rhode Island',
+						value: 'US-RI',
+					},
+					{
+						name: 'Rhone-Alpes',
+						value: 'FR-V',
+					},
+					{
+						name: 'Riau',
+						value: 'ID-RI',
+					},
+					{
+						name: 'Riau Islands',
+						value: 'ID-KR',
+					},
+					{
+						name: 'Ribeira Brava',
+						value: 'CV-RB',
+					},
+					{
+						name: 'Ribeira Grande',
+						value: 'CV-RG',
+					},
+					{
+						name: 'Ribeira Grande de Santiago',
+						value: 'CV-RS',
+					},
+					{
+						name: 'Richmond-Petersburg VA',
+						value: '556',
+					},
+					{
+						name: 'Riebiņi Municipality',
+						value: 'LV-078',
+					},
+					{
+						name: 'Rif-Dimashq Governorate',
+						value: 'SY-RD',
+					},
+					{
+						name: 'Riga',
+						value: 'LV-RIX',
+					},
+					{
+						name: 'Rio Claro-Mayaro',
+						value: 'TT-RCM',
+					},
+					{
+						name: 'Río Negro',
+						value: 'AR-R',
+					},
+					{
+						name: 'Río Negro Department',
+						value: 'UY-RN',
+					},
+					{
+						name: 'Rio San Juan',
+						value: 'NI-SJ',
+					},
+					{
+						name: 'Risaralda',
+						value: 'CO-RIS',
+					},
+					{
+						name: 'Riscani',
+						value: 'MD-RI',
+					},
+					{
+						name: 'Rivas',
+						value: 'NI-RI',
+					},
+					{
+						name: 'River Cess',
+						value: 'LR-RI',
+					},
+					{
+						name: 'River Gee',
+						value: 'LR-RG',
+					},
+					{
+						name: 'River Nile',
+						value: 'SD-NR',
+					},
+					{
+						name: 'Rivera Department',
+						value: 'UY-RV',
+					},
+					{
+						name: 'Rivers',
+						value: 'NG-RI',
+					},
+					{
+						name: 'Rivière du Rempart',
+						value: 'MU-RR',
+					},
+					{
+						name: "Rivnens'ka oblast",
+						value: 'UA-56',
+					},
+					{
+						name: 'Riyadh Province',
+						value: 'SA-01',
+					},
+					{
+						name: 'Rize',
+						value: 'TR-53',
+					},
+					{
+						name: 'Roanoke-Lynchburg VA',
+						value: '573',
+					},
+					{
+						name: 'Rocha Department',
+						value: 'UY-RO',
+					},
+					{
+						name: 'Roche Caiman',
+						value: 'SC-25',
+					},
+					{
+						name: 'Rochester MN-Mason City IA-Austin MN',
+						value: '611',
+					},
+					{
+						name: 'Rochester NY',
+						value: '538',
+					},
+					{
+						name: 'Rockford IL',
+						value: '610',
+					},
+					{
+						name: 'Rodrigues',
+						value: 'MU-RO',
+					},
+					{
+						name: 'Rogaland',
+						value: 'NO-11',
+					},
+					{
+						name: 'Roi Et',
+						value: 'TH-45',
+					},
+					{
+						name: 'Roja Municipality',
+						value: 'LV-079',
+					},
+					{
+						name: 'Romania',
+						value: 'RO',
+					},
+					{
+						name: 'Rongelap Atoll',
+						value: 'MH-RON',
+					},
+					{
+						name: 'Ropaži Municipality',
+						value: 'LV-080',
+					},
+					{
+						name: 'Rostov Oblast',
+						value: 'RU-ROS',
+					},
+					{
+						name: 'Rotuma',
+						value: 'FJ-R',
+					},
+					{
+						name: 'Rozaje',
+						value: 'ME-17',
+					},
+					{
+						name: 'Rucava Municipality',
+						value: 'LV-081',
+					},
+					{
+						name: 'Rugāji Municipality',
+						value: 'LV-082',
+					},
+					{
+						name: 'Ruggell',
+						value: 'LI-06',
+					},
+					{
+						name: 'Rūjiena Municipality',
+						value: 'LV-084',
+					},
+					{
+						name: 'Rukwa',
+						value: 'TZ-20',
+					},
+					{
+						name: 'Rum Cay',
+						value: 'BS-RC',
+					},
+					{
+						name: 'Rundāle Municipality',
+						value: 'LV-083',
+					},
+					{
+						name: 'Ruse',
+						value: 'BG-18',
+					},
+					{
+						name: 'Russia',
+						value: 'RU',
+					},
+					{
+						name: 'Rutana',
+						value: 'BI-RT',
+					},
+					{
+						name: 'Ruvuma',
+						value: 'TZ-21',
+					},
+					{
+						name: 'Ruyigi',
+						value: 'BI-RY',
+					},
+					{
+						name: 'Rwanda',
+						value: 'RW',
+					},
+					{
+						name: 'Ryanggang',
+						value: 'KP-10',
+					},
+					{
+						name: 'Ryazan Oblast',
+						value: 'RU-RYA',
+					},
+					{
+						name: 'Sa Kaeo',
+						value: 'TH-27',
+					},
+					{
+						name: "Sa'dah",
+						value: 'YE-SD',
+					},
+					{
+						name: 'Saare County',
+						value: 'EE-74',
+					},
+					{
+						name: 'Saarland',
+						value: 'DE-SL',
+					},
+					{
+						name: 'Saba',
+						value: 'BQ-SA',
+					},
+					{
+						name: 'Sabah',
+						value: 'MY-12',
+					},
+					{
+						name: 'Sabaragamuwa Province',
+						value: 'LK-9',
+					},
+					{
+						name: 'Sabha',
+						value: 'LY-SB',
+					},
+					{
+						name: 'Sacatepequez',
+						value: 'GT-SA',
+					},
+					{
+						name: 'Sacramento-Stockton-Modesto CA',
+						value: '862',
+					},
+					{
+						name: 'Saga Prefecture',
+						value: 'JP-41',
+					},
+					{
+						name: 'Sagaing Region',
+						value: 'MM-01',
+					},
+					{
+						name: 'Sahel',
+						value: 'BF-12',
+					},
+					{
+						name: 'Saïda Province',
+						value: 'DZ-20',
+					},
+					{
+						name: 'Saint Andrew (BB)',
+						value: 'BB-02',
+					},
+					{
+						name: 'Saint Andrew (GD)',
+						value: 'GD-01',
+					},
+					{
+						name: 'Saint Andrew (VC)',
+						value: 'VC-02',
+					},
+					{
+						name: 'Saint Andrew Parish (DM)',
+						value: 'DM-02',
+					},
+					{
+						name: 'Saint Andrew Parish (JM)',
+						value: 'JM-02',
+					},
+					{
+						name: 'Saint Ann Parish',
+						value: 'JM-06',
+					},
+					{
+						name: 'Saint Anne Sandy Point Parish',
+						value: 'KN-02',
+					},
+					{
+						name: 'Saint Catherine Parish',
+						value: 'JM-14',
+					},
+					{
+						name: 'Saint David (GD)',
+						value: 'GD-02',
+					},
+					{
+						name: 'Saint David (VC)',
+						value: 'VC-03',
+					},
+					{
+						name: 'Saint David Parish',
+						value: 'DM-03',
+					},
+					{
+						name: 'Saint Elizabeth Parish',
+						value: 'JM-11',
+					},
+					{
+						name: 'Saint George (AG)',
+						value: 'AG-03',
+					},
+					{
+						name: 'Saint George (GD)',
+						value: 'GD-03',
+					},
+					{
+						name: 'Saint George (VC)',
+						value: 'VC-04',
+					},
+					{
+						name: 'Saint George Basseterre Parish',
+						value: 'KN-03',
+					},
+					{
+						name: 'Saint George Gingerland Parish',
+						value: 'KN-04',
+					},
+					{
+						name: 'Saint George Parish',
+						value: 'DM-04',
+					},
+					{
+						name: 'Saint Helena',
+						value: 'SH-HL',
+					},
+					{
+						name: 'Saint James',
+						value: 'BB-04',
+					},
+					{
+						name: 'Saint James Parish',
+						value: 'JM-08',
+					},
+					{
+						name: 'Saint James Windward Parish',
+						value: 'KN-05',
+					},
+					{
+						name: 'Saint John (AG)',
+						value: 'AG-04',
+					},
+					{
+						name: 'Saint John (GD)',
+						value: 'GD-04',
+					},
+					{
+						name: 'Saint John Capisterre',
+						value: 'KN-06',
+					},
+					{
+						name: 'Saint John Figtree Parish',
+						value: 'KN-07',
+					},
+					{
+						name: 'Saint John Parish',
+						value: 'DM-05',
+					},
+					{
+						name: 'Saint Joseph',
+						value: 'BB-06',
+					},
+					{
+						name: 'Saint Joseph Parish',
+						value: 'DM-06',
+					},
+					{
+						name: 'Saint Louis',
+						value: 'SC-22',
+					},
+					{
+						name: 'Saint Lucy',
+						value: 'BB-07',
+					},
+					{
+						name: 'Saint Luke Parish',
+						value: 'DM-07',
+					},
+					{
+						name: 'Saint Mark',
+						value: 'GD-05',
+					},
+					{
+						name: 'Saint Mark Parish',
+						value: 'DM-08',
+					},
+					{
+						name: 'Saint Mary',
+						value: 'AG-05',
+					},
+					{
+						name: 'Saint Mary Cayon Parish',
+						value: 'KN-08',
+					},
+					{
+						name: 'Saint Mary Parish',
+						value: 'JM-05',
+					},
+					{
+						name: 'Saint Michael',
+						value: 'BB-08',
+					},
+					{
+						name: 'Saint Patrick (GD)',
+						value: 'GD-06',
+					},
+					{
+						name: 'Saint Patrick (VC)',
+						value: 'VC-05',
+					},
+					{
+						name: 'Saint Patrick Parish',
+						value: 'DM-09',
+					},
+					{
+						name: 'Saint Paul',
+						value: 'AG-06',
+					},
+					{
+						name: 'Saint Paul Capisterre Parish',
+						value: 'KN-09',
+					},
+					{
+						name: 'Saint Paul Charlestown Parish',
+						value: 'KN-10',
+					},
+					{
+						name: 'Saint Paul Parish',
+						value: 'DM-10',
+					},
+					{
+						name: 'Saint Peter',
+						value: 'AG-07',
+					},
+					{
+						name: 'Saint Peter Basseterre Parish',
+						value: 'KN-11',
+					},
+					{
+						name: 'Saint Peter Parish',
+						value: 'DM-11',
+					},
+					{
+						name: 'Saint Petersburg',
+						value: 'RU-SPE',
+					},
+					{
+						name: 'Saint Philip',
+						value: 'AG-08',
+					},
+					{
+						name: 'Saint Thomas Lowland Parish',
+						value: 'KN-12',
+					},
+					{
+						name: 'Saint Thomas Middle Island Parish',
+						value: 'KN-13',
+					},
+					{
+						name: 'Saint Thomas Parish (BB)',
+						value: 'BB-11',
+					},
+					{
+						name: 'Saint Thomas Parish (JM)',
+						value: 'JM-03',
+					},
+					{
+						name: 'Saint-Louis Region',
+						value: 'SN-SL',
+					},
+					{
+						name: 'Saitama Prefecture',
+						value: 'JP-11',
+					},
+					{
+						name: 'Sakarya',
+						value: 'TR-54',
+					},
+					{
+						name: 'Sakha Republic',
+						value: 'RU-SA',
+					},
+					{
+						name: 'Sakhalin Oblast',
+						value: 'RU-SAK',
+					},
+					{
+						name: 'Sakon Nakhon',
+						value: 'TH-47',
+					},
+					{
+						name: 'Sal',
+						value: 'CV-SL',
+					},
+					{
+						name: 'Sala Municipality',
+						value: 'LV-085',
+					},
+					{
+						name: 'Salacgrīva Municipality',
+						value: 'LV-086',
+					},
+					{
+						name: 'Salah Al-Din',
+						value: 'IQ-SD',
+					},
+					{
+						name: 'Sălaj',
+						value: 'RO-SJ',
+					},
+					{
+						name: 'Salaspils Municipality',
+						value: 'LV-087',
+					},
+					{
+						name: 'Salavan',
+						value: 'LA-SL',
+					},
+					{
+						name: 'Saldus Municipality',
+						value: 'LV-088',
+					},
+					{
+						name: 'Salisbury MD',
+						value: '576',
+					},
+					{
+						name: 'Salt Lake City UT',
+						value: '770',
+					},
+					{
+						name: 'Salta Province',
+						value: 'AR-A',
+					},
+					{
+						name: 'Salto',
+						value: 'UY-SA',
+					},
+					{
+						name: 'Salzburg',
+						value: 'AT-5',
+					},
+					{
+						name: 'Samaná Province',
+						value: 'DO-20',
+					},
+					{
+						name: 'Samangan',
+						value: 'AF-SAM',
+					},
+					{
+						name: 'Samara Oblast',
+						value: 'RU-SAM',
+					},
+					{
+						name: 'Samarkand Province',
+						value: 'UZ-SA',
+					},
+					{
+						name: 'Samdrup Jongkhar',
+						value: 'BT-45',
+					},
+					{
+						name: 'Samegrelo-Upper Svaneti',
+						value: 'GE-SZ',
+					},
+					{
+						name: 'Samoa',
+						value: 'WS',
+					},
+					{
+						name: 'Samsun',
+						value: 'TR-55',
+					},
+					{
+						name: 'Samtse',
+						value: 'BT-14',
+					},
+					{
+						name: 'Samtskhe-Javakheti',
+						value: 'GE-SJ',
+					},
+					{
+						name: 'Samut Prakan',
+						value: 'TH-11',
+					},
+					{
+						name: 'Samut Sakhon',
+						value: 'TH-74',
+					},
+					{
+						name: 'Samut Songkhram',
+						value: 'TH-75',
+					},
+					{
+						name: 'San Andrés and Providencia',
+						value: 'CO-SAP',
+					},
+					{
+						name: 'San Angelo TX',
+						value: '661',
+					},
+					{
+						name: 'San Antonio TX',
+						value: '641',
+					},
+					{
+						name: 'San Cristóbal Province',
+						value: 'DO-21',
+					},
+					{
+						name: 'San Diego CA',
+						value: '825',
+					},
+					{
+						name: 'San Fernando',
+						value: 'TT-SFO',
+					},
+					{
+						name: 'San Francisco-Oakland-San Jose CA',
+						value: '807',
+					},
+					{
+						name: 'San José de Ocoa Province',
+						value: 'DO-31',
+					},
+					{
+						name: 'San José Department',
+						value: 'UY-SJ',
+					},
+					{
+						name: 'San José Province',
+						value: 'CR-SJ',
+					},
+					{
+						name: 'San Juan Province (AR)',
+						value: 'AR-J',
+					},
+					{
+						name: 'San Juan Province (DO)',
+						value: 'DO-22',
+					},
+					{
+						name: 'San Juan-Laventille',
+						value: 'TT-SJL',
+					},
+					{
+						name: 'San Luis Potosi',
+						value: 'MX-SLP',
+					},
+					{
+						name: 'San Luis Province',
+						value: 'AR-D',
+					},
+					{
+						name: 'San Marcos Department',
+						value: 'GT-SM',
+					},
+					{
+						name: 'San Marino',
+						value: 'SM',
+					},
+					{
+						name: 'San Marino (SM-07_',
+						value: 'SM-07',
+					},
+					{
+						name: 'San Martin',
+						value: 'PE-SAM',
+					},
+					{
+						name: 'San Miguel',
+						value: 'SV-SM',
+					},
+					{
+						name: 'San Pedro',
+						value: 'PY-2',
+					},
+					{
+						name: 'San Pedro de Macorís Province',
+						value: 'DO-23',
+					},
+					{
+						name: 'San Salvador (BS)',
+						value: 'BS-SS',
+					},
+					{
+						name: 'San Salvador (SV)',
+						value: 'SV-SS',
+					},
+					{
+						name: 'San Vicente',
+						value: 'SV-SV',
+					},
+					{
+						name: "Sana'a",
+						value: 'YE-SN',
+					},
+					{
+						name: 'Sanaag',
+						value: 'SO-SA',
+					},
+					{
+						name: 'Sánchez Ramírez Province',
+						value: 'DO-24',
+					},
+					{
+						name: 'Sancti Spiritus',
+						value: 'CU-07',
+					},
+					{
+						name: 'Sangha',
+						value: 'CG-13',
+					},
+					{
+						name: 'Sangha-Mbare',
+						value: 'CF-SE',
+					},
+					{
+						name: 'Sangre Grande',
+						value: 'TT-SGE',
+					},
+					{
+						name: 'Şanlıurfa Province',
+						value: 'TR-63',
+					},
+					{
+						name: 'Sanma Province',
+						value: 'VU-SAM',
+					},
+					{
+						name: 'Sant Julià de Lòria',
+						value: 'AD-06',
+					},
+					{
+						name: 'Santa Ana',
+						value: 'SV-SA',
+					},
+					{
+						name: 'Santa Barbara',
+						value: 'HN-SB',
+					},
+					{
+						name: 'Santa Barbara-Santa Maria-San Luis Obispo CA',
+						value: '855',
+					},
+					{
+						name: 'Santa Catarina',
+						value: 'CV-CA',
+					},
+					{
+						name: 'Santa Catarina do Fogo',
+						value: 'CV-CF',
+					},
+					{
+						name: 'Santa Cruz',
+						value: 'BO-S',
+					},
+					{
+						name: 'Santa Cruz Province',
+						value: 'AR-Z',
+					},
+					{
+						name: 'Santa Elena Province',
+						value: 'EC-SE',
+					},
+					{
+						name: 'Santa Fe Province',
+						value: 'AR-S',
+					},
+					{
+						name: 'Santa Rosa Department',
+						value: 'GT-SR',
+					},
+					{
+						name: 'Santander Department',
+						value: 'CO-SAN',
+					},
+					{
+						name: 'Santarém District',
+						value: 'PT-14',
+					},
+					{
+						name: 'Santiago de Cuba',
+						value: 'CU-13',
+					},
+					{
+						name: 'Santiago del Estero Province',
+						value: 'AR-G',
+					},
+					{
+						name: 'Santiago Metropolitan Region',
+						value: 'CL-RM',
+					},
+					{
+						name: 'Santiago Province',
+						value: 'DO-25',
+					},
+					{
+						name: 'Santiago Rodríguez Province',
+						value: 'DO-26',
+					},
+					{
+						name: 'Santo Domingo de los Tsáchilas Province',
+						value: 'EC-SD',
+					},
+					{
+						name: 'Santo Domingo Province',
+						value: 'DO-32',
+					},
+					{
+						name: 'Sao Domingos',
+						value: 'CV-SD',
+					},
+					{
+						name: 'Sao Filipe',
+						value: 'CV-SF',
+					},
+					{
+						name: 'Sao Lourenco dos Orgaos',
+						value: 'CV-SO',
+					},
+					{
+						name: 'Sao Miguel',
+						value: 'CV-SM',
+					},
+					{
+						name: 'Sao Salvador do Mundo',
+						value: 'CV-SS',
+					},
+					{
+						name: 'Sao Tome',
+						value: 'ST-S',
+					},
+					{
+						name: 'São Tomé & Príncipe',
+						value: 'ST',
+					},
+					{
+						name: 'Sao Vicente',
+						value: 'CV-SV',
+					},
+					{
+						name: 'Saraburi',
+						value: 'TH-19',
+					},
+					{
+						name: 'Saramacca',
+						value: 'SR-SA',
+					},
+					{
+						name: 'Saratov Oblast',
+						value: 'RU-SAR',
+					},
+					{
+						name: 'Sarawak',
+						value: 'MY-13',
+					},
+					{
+						name: 'Sardinia',
+						value: 'IT-88',
+					},
+					{
+						name: 'Sare Pol',
+						value: 'AF-SAR',
+					},
+					{
+						name: 'Sarpang',
+						value: 'BT-31',
+					},
+					{
+						name: 'Saskatchewan',
+						value: 'CA-SK',
+					},
+					{
+						name: 'Satakunta',
+						value: 'FI-17',
+					},
+					{
+						name: 'Satu Mare County',
+						value: 'RO-SM',
+					},
+					{
+						name: 'Satun',
+						value: 'TH-91',
+					},
+					{
+						name: "Satupa'itea",
+						value: 'WS-SA',
+					},
+					{
+						name: 'Saudi Arabia',
+						value: 'SA',
+					},
+					{
+						name: 'Saulkrasti Municipality',
+						value: 'LV-089',
+					},
+					{
+						name: 'Savanes (CI)',
+						value: 'CI-03',
+					},
+					{
+						name: 'Savanes (TG)',
+						value: 'TG-S',
+					},
+					{
+						name: 'Savannah GA',
+						value: '507',
+					},
+					{
+						name: 'Savannakhet',
+						value: 'LA-SV',
+					},
+					{
+						name: 'Savanne',
+						value: 'MU-SA',
+					},
+					{
+						name: 'Savnik',
+						value: 'ME-18',
+					},
+					{
+						name: 'Saxony',
+						value: 'DE-SN',
+					},
+					{
+						name: 'Saxony-Anhalt',
+						value: 'DE-ST',
+					},
+					{
+						name: 'Sayabouly',
+						value: 'LA-XA',
+					},
+					{
+						name: 'Schaan',
+						value: 'LI-07',
+					},
+					{
+						name: 'Schellenberg',
+						value: 'LI-08',
+					},
+					{
+						name: 'Schleswig-Holstein',
+						value: 'DE-SH',
+					},
+					{
+						name: 'Scotland',
+						value: 'GB-SCT',
+					},
+					{
+						name: 'Seattle-Tacoma WA',
+						value: '819',
+					},
+					{
+						name: 'Sédhiou Region',
+						value: 'SN-SE',
+					},
+					{
+						name: 'Segou',
+						value: 'ML-4',
+					},
+					{
+						name: 'Sēja Municipality',
+						value: 'LV-090',
+					},
+					{
+						name: 'Selangor',
+						value: 'MY-10',
+					},
+					{
+						name: 'Selenge',
+						value: 'MN-049',
+					},
+					{
+						name: 'Semnan',
+						value: 'IR-12',
+					},
+					{
+						name: 'Senegal',
+						value: 'SN',
+					},
+					{
+						name: 'Sennar',
+						value: 'SD-SI',
+					},
+					{
+						name: 'Seoul',
+						value: 'KR-11',
+					},
+					{
+						name: 'Serbia',
+						value: 'RS',
+					},
+					{
+						name: 'Sermersooq',
+						value: 'GL-SM',
+					},
+					{
+						name: 'Serravalle',
+						value: 'SM-09',
+					},
+					{
+						name: 'Setif',
+						value: 'DZ-19',
+					},
+					{
+						name: 'Setubal',
+						value: 'PT-15',
+					},
+					{
+						name: "Sevastopol' city",
+						value: 'UA-40',
+					},
+					{
+						name: 'Seychelles',
+						value: 'SC',
+					},
+					{
+						name: 'Sfax',
+						value: 'TN-61',
+					},
+					{
+						name: 'Shaanxi',
+						value: 'CN-61',
+					},
+					{
+						name: 'Shabeellaha Dhexe',
+						value: 'SO-SD',
+					},
+					{
+						name: 'Shabeellaha Hoose',
+						value: 'SO-SH',
+					},
+					{
+						name: 'Shabwah',
+						value: 'YE-SH',
+					},
+					{
+						name: 'Shamal Darfur',
+						value: 'SD-DN',
+					},
+					{
+						name: 'Shan',
+						value: 'MM-17',
+					},
+					{
+						name: 'Shandong',
+						value: 'CN-37',
+					},
+					{
+						name: 'Shanghai',
+						value: 'CN-31',
+					},
+					{
+						name: 'Shanxi',
+						value: 'CN-14',
+					},
+					{
+						name: 'Sharjah',
+						value: 'AE-SH',
+					},
+					{
+						name: 'Shefa Province',
+						value: 'VU-SEE',
+					},
+					{
+						name: 'Sherman TX-Ada OK',
+						value: '657',
+					},
+					{
+						name: 'Shida Kartli',
+						value: 'GE-SK',
+					},
+					{
+						name: 'Shiga Prefecture',
+						value: 'JP-25',
+					},
+					{
+						name: 'Shimane Prefecture',
+						value: 'JP-32',
+					},
+					{
+						name: 'Shinyanga',
+						value: 'TZ-22',
+					},
+					{
+						name: 'Shirak Province',
+						value: 'AM-SH',
+					},
+					{
+						name: 'Shiselweni',
+						value: 'SZ-SH',
+					},
+					{
+						name: 'Shizuoka Prefecture',
+						value: 'JP-22',
+					},
+					{
+						name: 'Shkodër County',
+						value: 'AL-10',
+					},
+					{
+						name: 'Shreveport LA',
+						value: '612',
+					},
+					{
+						name: 'Shumen Province',
+						value: 'BG-27',
+					},
+					{
+						name: 'Si Sa Ket',
+						value: 'TH-33',
+					},
+					{
+						name: 'Šiauliai County',
+						value: 'LT-SA',
+					},
+					{
+						name: 'Šibenik-Knin County',
+						value: 'HR-15',
+					},
+					{
+						name: 'Sibiu',
+						value: 'RO-SB',
+					},
+					{
+						name: 'Sichuan',
+						value: 'CN-51',
+					},
+					{
+						name: 'Sicily',
+						value: 'IT-82',
+					},
+					{
+						name: 'Sidi Bou Zid',
+						value: 'TN-43',
+					},
+					{
+						name: 'Sidi-Bel-Abbes',
+						value: 'DZ-22',
+					},
+					{
+						name: 'Siem Reap',
+						value: 'KH-17',
+					},
+					{
+						name: 'Sierra Leone',
+						value: 'SL',
+					},
+					{
+						name: 'Sigulda Municipality',
+						value: 'LV-091',
+					},
+					{
+						name: 'Siirt Province',
+						value: 'TR-56',
+					},
+					{
+						name: 'Sikasso',
+						value: 'ML-3',
+					},
+					{
+						name: 'Sikkim',
+						value: 'IN-SK',
+					},
+					{
+						name: 'Sila',
+						value: 'TD-SI',
+					},
+					{
+						name: 'Silesian Voivodeship',
+						value: 'PL-SL',
+					},
+					{
+						name: 'Siliana',
+						value: 'TN-34',
+					},
+					{
+						name: 'Silistra',
+						value: 'BG-19',
+					},
+					{
+						name: 'Sinaloa',
+						value: 'MX-SIN',
+					},
+					{
+						name: 'Sindh',
+						value: 'PK-SD',
+					},
+					{
+						name: 'Sing Buri',
+						value: 'TH-17',
+					},
+					{
+						name: 'Singapore',
+						value: 'SG',
+					},
+					{
+						name: 'Singerei',
+						value: 'MD-SI',
+					},
+					{
+						name: 'Singida',
+						value: 'TZ-23',
+					},
+					{
+						name: 'Sinoe',
+						value: 'LR-SI',
+					},
+					{
+						name: 'Sinop Province',
+						value: 'TR-57',
+					},
+					{
+						name: 'Sint Eustatius',
+						value: 'BQ-SE',
+					},
+					{
+						name: 'Sint Maarten',
+						value: 'SX',
+					},
+					{
+						name: 'Sioux City IA',
+						value: '624',
+					},
+					{
+						name: 'Sioux Falls(Mitchell) SD',
+						value: '725',
+					},
+					{
+						name: 'Sipaliwini',
+						value: 'SR-SI',
+					},
+					{
+						name: 'Siparia',
+						value: 'TT-SIP',
+					},
+					{
+						name: 'Sirdarya Province',
+						value: 'UZ-SI',
+					},
+					{
+						name: 'Sisak-Moslavina County',
+						value: 'HR-03',
+					},
+					{
+						name: 'Sistan and Baluchestan',
+						value: 'IR-13',
+					},
+					{
+						name: 'Sivas',
+						value: 'TR-58',
+					},
+					{
+						name: 'Şırnak',
+						value: 'TR-73',
+					},
+					{
+						name: 'Skåne County',
+						value: 'SE-M',
+					},
+					{
+						name: 'Skikda Province',
+						value: 'DZ-21',
+					},
+					{
+						name: 'Skopje',
+						value: 'MK-85',
+					},
+					{
+						name: 'Skrīveri Municipality',
+						value: 'LV-092',
+					},
+					{
+						name: 'Skrunda Municipality',
+						value: 'LV-093',
+					},
+					{
+						name: 'Sliven Province',
+						value: 'BG-20',
+					},
+					{
+						name: 'Slovakia',
+						value: 'SK',
+					},
+					{
+						name: 'Slovenia',
+						value: 'SI',
+					},
+					{
+						name: 'Smiltene Municipality',
+						value: 'LV-094',
+					},
+					{
+						name: 'Smolensk Oblast',
+						value: 'RU-SMO',
+					},
+					{
+						name: 'Smoljan',
+						value: 'BG-21',
+					},
+					{
 						name: 'Soc Trang',
 						value: 'VN-52',
+					},
+					{
+						name: 'Södermanland County',
+						value: 'SE-D',
+					},
+					{
+						name: 'Sofala Province',
+						value: 'MZ-S',
+					},
+					{
+						name: 'Sofia City Province',
+						value: 'BG-22',
+					},
+					{
+						name: 'Sofia Province',
+						value: 'BG-23',
+					},
+					{
+						name: 'Sogn og Fjordane',
+						value: 'NO-14',
+					},
+					{
+						name: 'Sohag Governorate',
+						value: 'EG-SHG',
+					},
+					{
+						name: 'Sokoto',
+						value: 'NG-SO',
+					},
+					{
+						name: 'Soldanesti',
+						value: 'MD-SD',
+					},
+					{
+						name: 'Sololá Department',
+						value: 'GT-SO',
+					},
+					{
+						name: 'Solomon Islands',
+						value: 'SB',
+					},
+					{
+						name: 'Somali',
+						value: 'ET-SO',
+					},
+					{
+						name: 'Somalia',
+						value: 'SO',
+					},
+					{
+						name: 'Somogy County',
+						value: 'HU-SO',
 					},
 					{
 						name: 'Son La',
 						value: 'VN-05',
 					},
 					{
+						name: 'Songkhla',
+						value: 'TH-90',
+					},
+					{
+						name: 'Sonora',
+						value: 'MX-SON',
+					},
+					{
+						name: 'Sonsonate',
+						value: 'SV-SO',
+					},
+					{
+						name: 'Sonsorol',
+						value: 'PW-370',
+					},
+					{
+						name: 'Sool',
+						value: 'SO-SO',
+					},
+					{
+						name: 'Sor-Trondelag',
+						value: 'NO-16',
+					},
+					{
+						name: 'Soriano Department',
+						value: 'UY-SO',
+					},
+					{
+						name: 'Soroca',
+						value: 'MD-SO',
+					},
+					{
+						name: 'Soufriere',
+						value: 'LC-10',
+					},
+					{
+						name: 'Souk Ahras Province',
+						value: 'DZ-41',
+					},
+					{
+						name: 'Souss-Massa-Draa',
+						value: 'MA-13',
+					},
+					{
+						name: 'Sousse',
+						value: 'TN-51',
+					},
+					{
+						name: 'South (CM)',
+						value: 'CM-SU',
+					},
+					{
+						name: 'South (IS)',
+						value: 'IS-8',
+					},
+					{
+						name: 'South (LB)',
+						value: 'LB-JA',
+					},
+					{
+						name: 'South Abaco',
+						value: 'BS-SO',
+					},
+					{
+						name: 'South Africa',
+						value: 'ZA',
+					},
+					{
+						name: 'South Andros',
+						value: 'BS-SA',
+					},
+					{
+						name: 'South Australia',
+						value: 'AU-SA',
+					},
+					{
+						name: 'South Bend-Elkhart IN',
+						value: '588',
+					},
+					{
+						name: 'South Bohemian Region',
+						value: 'CZ-JC',
+					},
+					{
+						name: 'South Carolina',
+						value: 'US-SC',
+					},
+					{
+						name: 'South Central Province',
+						value: 'MV-SC',
+					},
+					{
+						name: 'South Dakota',
+						value: 'US-SD',
+					},
+					{
+						name: 'South District',
+						value: 'IL-D',
+					},
+					{
+						name: 'South East Sulawesi',
+						value: 'ID-SG',
+					},
+					{
+						name: 'South Eleuthera',
+						value: 'BS-SE',
+					},
+					{
+						name: 'South Georgia & South Sandwich Islands',
+						value: 'GS',
+					},
+					{
+						name: 'South Hamgyong',
+						value: 'KP-08',
+					},
+					{
+						name: 'South Holland',
+						value: 'NL-ZH',
+					},
+					{
+						name: 'South Hwanghae',
+						value: 'KP-05',
+					},
+					{
+						name: 'South Kalimantan',
+						value: 'ID-KS',
+					},
+					{
+						name: 'South Karelia',
+						value: 'FI-02',
+					},
+					{
+						name: 'South Kazakhstan Region',
+						value: 'KZ-YUZ',
+					},
+					{
+						name: 'South Khorasan',
+						value: 'IR-29',
+					},
+					{
+						name: 'South Kordofan',
+						value: 'SD-KS',
+					},
+					{
+						name: 'South Korea',
+						value: 'KR',
+					},
+					{
+						name: 'South Moravian Region',
+						value: 'CZ-JM',
+					},
+					{
+						name: 'South Province',
+						value: 'MV-SU',
+					},
+					{
+						name: 'South Pyongan',
+						value: 'KP-02',
+					},
+					{
+						name: 'South Sinai Governorate',
+						value: 'EG-JS',
+					},
+					{
+						name: 'South Sudan',
+						value: 'SS',
+					},
+					{
+						name: 'South Sulawesi',
+						value: 'ID-SN',
+					},
+					{
+						name: 'South Sumatra',
+						value: 'ID-SS',
+					},
+					{
+						name: 'South-East',
+						value: 'BW-SE',
+					},
+					{
+						name: 'South-Kivu',
+						value: 'CD-SK',
+					},
+					{
+						name: 'Southern (BW)',
+						value: 'BW-SO',
+					},
+					{
+						name: 'Southern (ER)',
+						value: 'ER-DU',
+					},
+					{
+						name: 'Southern (ZM)',
+						value: 'ZM-07',
+					},
+					{
+						name: 'Southern Governorate',
+						value: 'BH-14',
+					},
+					{
+						name: 'Southern Highlands Province',
+						value: 'PG-SHM',
+					},
+					{
+						name: "Southern Nations, Nationalities, and People's Region",
+						value: 'ET-SN',
+					},
+					{
+						name: 'Southern Ostrobothnia',
+						value: 'FI-03',
+					},
+					{
+						name: 'Southern Peninsula Region',
+						value: 'IS-2',
+					},
+					{
+						name: 'Southern Province (LK)',
+						value: 'LK-3',
+					},
+					{
+						name: 'Southern Province (RW)',
+						value: 'RW-05',
+					},
+					{
+						name: 'Southern Province (SL)',
+						value: 'SL-S',
+					},
+					{
+						name: 'Southern Red Sea',
+						value: 'ER-DK',
+					},
+					{
+						name: 'Southern Region',
+						value: 'MW-S',
+					},
+					{
+						name: 'Southern Savonia',
+						value: 'FI-04',
+					},
+					{
+						name: 'Southland',
+						value: 'NZ-STL',
+					},
+					{
+						name: 'Southwest',
+						value: 'CM-SW',
+					},
+					{
+						name: 'Southwest Finland',
+						value: 'FI-19',
+					},
+					{
+						name: 'Spain',
+						value: 'ES',
+					},
+					{
+						name: 'Spanish Wells',
+						value: 'BS-SW',
+					},
+					{
+						name: 'Special Capital Region of Jakarta',
+						value: 'ID-JK',
+					},
+					{
+						name: 'Special Region of Yogyakarta',
+						value: 'ID-YO',
+					},
+					{
+						name: 'Split-Dalmatia County',
+						value: 'HR-17',
+					},
+					{
+						name: 'Spokane WA',
+						value: '881',
+					},
+					{
+						name: 'Springfield MO',
+						value: '619',
+					},
+					{
+						name: 'Springfield-Holyoke MA',
+						value: '543',
+					},
+					{
+						name: 'Sri Lanka',
+						value: 'LK',
+					},
+					{
+						name: 'St. Barthélemy',
+						value: 'BL',
+					},
+					{
+						name: 'St. Gallen',
+						value: 'CH-SG',
+					},
+					{
+						name: 'St. Helena',
+						value: 'SH',
+					},
+					{
+						name: 'St. Joseph MO',
+						value: '638',
+					},
+					{
+						name: 'St. Kitts & Nevis',
+						value: 'KN',
+					},
+					{
+						name: 'St. Louis MO',
+						value: '609',
+					},
+					{
+						name: 'St. Lucia',
+						value: 'LC',
+					},
+					{
+						name: 'St. Martin',
+						value: 'MF',
+					},
+					{
+						name: 'St. Pierre & Miquelon',
+						value: 'PM',
+					},
+					{
+						name: 'St. Vincent & Grenadines',
+						value: 'VC',
+					},
+					{
+						name: 'Stann Creek',
+						value: 'BZ-SC',
+					},
+					{
+						name: 'Stara Zagora',
+						value: 'BG-24',
+					},
+					{
+						name: 'Staro Nagorichane',
+						value: 'MK-71',
+					},
+					{
+						name: 'State of Acre',
+						value: 'BR-AC',
+					},
+					{
+						name: 'State of Alagoas',
+						value: 'BR-AL',
+					},
+					{
+						name: 'State of Amapá',
+						value: 'BR-AP',
+					},
+					{
+						name: 'State of Amazonas',
+						value: 'BR-AM',
+					},
+					{
+						name: 'State of Bahia',
+						value: 'BR-BA',
+					},
+					{
+						name: 'State of Ceará',
+						value: 'BR-CE',
+					},
+					{
+						name: 'State of Espírito Santo',
+						value: 'BR-ES',
+					},
+					{
+						name: 'State of Goiás',
+						value: 'BR-GO',
+					},
+					{
+						name: 'State of Maranhão',
+						value: 'BR-MA',
+					},
+					{
+						name: 'State of Mato Grosso',
+						value: 'BR-MT',
+					},
+					{
+						name: 'State of Mato Grosso do Sul',
+						value: 'BR-MS',
+					},
+					{
+						name: 'State of Mexico',
+						value: 'MX-MEX',
+					},
+					{
+						name: 'State of Minas Gerais',
+						value: 'BR-MG',
+					},
+					{
+						name: 'State of Pará',
+						value: 'BR-PA',
+					},
+					{
+						name: 'State of Paraíba',
+						value: 'BR-PB',
+					},
+					{
+						name: 'State of Paraná',
+						value: 'BR-PR',
+					},
+					{
+						name: 'State of Pernambuco',
+						value: 'BR-PE',
+					},
+					{
+						name: 'State of Piauí',
+						value: 'BR-PI',
+					},
+					{
+						name: 'State of Rio de Janeiro',
+						value: 'BR-RJ',
+					},
+					{
+						name: 'State of Rio Grande do Norte',
+						value: 'BR-RN',
+					},
+					{
+						name: 'State of Rio Grande do Sul',
+						value: 'BR-RS',
+					},
+					{
+						name: 'State of Rondônia',
+						value: 'BR-RO',
+					},
+					{
+						name: 'State of Roraima',
+						value: 'BR-RR',
+					},
+					{
+						name: 'State of Santa Catarina',
+						value: 'BR-SC',
+					},
+					{
+						name: 'State of São Paulo',
+						value: 'BR-SP',
+					},
+					{
+						name: 'State of Sergipe',
+						value: 'BR-SE',
+					},
+					{
+						name: 'State of Tocantins',
+						value: 'BR-TO',
+					},
+					{
+						name: 'Stavropol Krai',
+						value: 'RU-STA',
+					},
+					{
+						name: 'Stefan Voda',
+						value: 'MD-SV',
+					},
+					{
+						name: 'Stockholm County',
+						value: 'SE-AB',
+					},
+					{
+						name: 'Stopiņi Municipality',
+						value: 'LV-095',
+					},
+					{
+						name: 'Straseni',
+						value: 'MD-ST',
+					},
+					{
+						name: 'Strenči Municipality',
+						value: 'LV-096',
+					},
+					{
+						name: 'Strumitsa',
+						value: 'MK-73',
+					},
+					{
+						name: 'Studenichani',
+						value: 'MK-74',
+					},
+					{
+						name: 'Stung Treng',
+						value: 'KH-19',
+					},
+					{
+						name: 'Styria',
+						value: 'AT-6',
+					},
+					{
+						name: 'Suceava County',
+						value: 'RO-SV',
+					},
+					{
+						name: 'Suchitepequez',
+						value: 'GT-SU',
+					},
+					{
+						name: 'Sucre (CO)',
+						value: 'CO-SUC',
+					},
+					{
+						name: 'Sucre (VE)',
+						value: 'VE-R',
+					},
+					{
+						name: 'Sucumbíos Province',
+						value: 'EC-U',
+					},
+					{
+						name: 'Sud',
+						value: 'HT-SD',
+					},
+					{
+						name: 'Sud-Bandama',
+						value: 'CI-15',
+					},
+					{
+						name: 'Sud-Comoe',
+						value: 'CI-13',
+					},
+					{
+						name: 'Sud-Est',
+						value: 'HT-SE',
+					},
+					{
+						name: 'Sud-Ouest',
+						value: 'BF-13',
+					},
+					{
+						name: 'Sudan',
+						value: 'SD',
+					},
+					{
+						name: 'Suez Governorate',
+						value: 'EG-SUZ',
+					},
+					{
+						name: 'Sughd Province',
+						value: 'TJ-SU',
+					},
+					{
+						name: 'Sukhbaatar',
+						value: 'MN-051',
+					},
+					{
+						name: 'Sukhothai',
+						value: 'TH-64',
+					},
+					{
+						name: 'Sulaymaniyah',
+						value: 'IQ-SU',
+					},
+					{
+						name: "Sums'ka oblast",
+						value: 'UA-59',
+					},
+					{
+						name: 'Suphan Buri',
+						value: 'TH-72',
+					},
+					{
+						name: 'Surat Thani',
+						value: 'TH-84',
+					},
+					{
+						name: 'Surin',
+						value: 'TH-32',
+					},
+					{
+						name: 'Suriname',
+						value: 'SR',
+					},
+					{
+						name: 'Surkhandarya Province',
+						value: 'UZ-SU',
+					},
+					{
+						name: 'Surt',
+						value: 'LY-SR',
+					},
+					{
+						name: 'Svalbard & Jan Mayen',
+						value: 'SJ',
+					},
+					{
+						name: 'Svay Rieng',
+						value: 'KH-20',
+					},
+					{
+						name: 'Sverdlovsk Oblast',
+						value: 'RU-SVE',
+					},
+					{
+						name: 'Sveti Nikole',
+						value: 'MK-69',
+					},
+					{
+						name: 'Sweden',
+						value: 'SE',
+					},
+					{
+						name: 'Swietokrzyskie',
+						value: 'PL-SK',
+					},
+					{
+						name: 'Switzerland',
+						value: 'CH',
+					},
+					{
+						name: 'Sylhet Division',
+						value: 'BD-G',
+					},
+					{
+						name: 'Syracuse NY',
+						value: '555',
+					},
+					{
+						name: 'Syria',
+						value: 'SY',
+					},
+					{
+						name: 'Syunik Province',
+						value: 'AM-SU',
+					},
+					{
+						name: 'Szabolcs-Szatmár-Bereg',
+						value: 'HU-SZ',
+					},
+					{
+						name: "Ta'izz",
+						value: 'YE-TA',
+					},
+					{
+						name: 'Tabasco',
+						value: 'MX-TAB',
+					},
+					{
+						name: 'Tabora',
+						value: 'TZ-24',
+					},
+					{
+						name: 'Tabuk Province',
+						value: 'SA-07',
+					},
+					{
+						name: 'Táchira',
+						value: 'VE-S',
+					},
+					{
+						name: 'Tacna',
+						value: 'PE-TAC',
+					},
+					{
+						name: 'Tacuarembó Department',
+						value: 'UY-TA',
+					},
+					{
+						name: 'Tadjourah',
+						value: 'DJ-TA',
+					},
+					{
+						name: 'Tadla-Azilal',
+						value: 'MA-12',
+					},
+					{
+						name: 'Tafea Province',
+						value: 'VU-TAE',
+					},
+					{
+						name: 'Tafilah Governorate',
+						value: 'JO-AT',
+					},
+					{
+						name: 'Tagant',
+						value: 'MR-09',
+					},
+					{
+						name: 'Tahoua',
+						value: 'NE-5',
+					},
+					{
+						name: 'Taichung City',
+						value: 'TW-TXG',
+					},
+					{
+						name: 'Tainan City',
+						value: 'TW-TNN',
+					},
+					{
+						name: 'Taipei City',
+						value: 'TW-TPE',
+					},
+					{
+						name: 'Taiwan',
+						value: 'TW',
+					},
+					{
+						name: 'Tajikistan',
+						value: 'TJ',
+					},
+					{
+						name: 'Tak',
+						value: 'TH-63',
+					},
+					{
+						name: 'Takamaka',
+						value: 'SC-23',
+					},
+					{
+						name: 'Takeo',
+						value: 'KH-21',
+					},
+					{
+						name: 'Takhar',
+						value: 'AF-TAK',
+					},
+					{
+						name: 'Talas',
+						value: 'KG-T',
+					},
+					{
+						name: 'Tallahassee FL-Thomasville GA',
+						value: '530',
+					},
+					{
+						name: 'Talsi Municipality',
+						value: 'LV-097',
+					},
+					{
+						name: 'Tamaulipas',
+						value: 'MX-TAM',
+					},
+					{
+						name: 'Tambacounda Region',
+						value: 'SN-TC',
+					},
+					{
+						name: 'Tambov Oblast',
+						value: 'RU-TAM',
+					},
+					{
+						name: 'Tamil Nadu',
+						value: 'IN-TN',
+					},
+					{
+						name: 'Tampa-St. Petersburg (Sarasota) FL',
+						value: '539',
+					},
+					{
+						name: 'Tandjile',
+						value: 'TD-TA',
+					},
+					{
+						name: 'Tanga',
+						value: 'TZ-25',
+					},
+					{
+						name: 'Tangier-Tetouan',
+						value: 'MA-01',
+					},
+					{
+						name: 'Tanintharyi Region',
+						value: 'MM-05',
+					},
+					{
+						name: 'Tanzania',
+						value: 'TZ',
+					},
+					{
+						name: 'Taoyuan City',
+						value: 'TW-TAO',
+					},
+					{
+						name: 'Taraba',
+						value: 'NG-TA',
+					},
+					{
+						name: 'Taraclia',
+						value: 'MD-TA',
+					},
+					{
+						name: 'Taranaki',
+						value: 'NZ-TKI',
+					},
+					{
+						name: 'Tarapacá Region',
+						value: 'CL-TA',
+					},
+					{
+						name: 'Targovishte Province',
+						value: 'BG-25',
+					},
+					{
+						name: 'Tarija Department',
+						value: 'BO-T',
+					},
+					{
+						name: 'Tarrafal',
+						value: 'CV-TA',
+					},
+					{
+						name: 'Tarrafal de Sao Nicolau',
+						value: 'CV-TS',
+					},
+					{
+						name: 'Tartu County',
+						value: 'EE-78',
+					},
+					{
+						name: 'Tartus Governorate',
+						value: 'SY-TA',
+					},
+					{
+						name: 'Tashkent Province',
+						value: 'UZ-TO',
+					},
+					{
+						name: 'Tasman',
+						value: 'NZ-TAS',
+					},
+					{
+						name: 'Tasmania',
+						value: 'AU-TAS',
+					},
+					{
+						name: 'Tataouine',
+						value: 'TN-83',
+					},
+					{
+						name: 'Tatarstan',
+						value: 'RU-TA',
+					},
+					{
+						name: 'Tauragė County',
+						value: 'LT-TA',
+					},
+					{
+						name: 'Tavastia Proper',
+						value: 'FI-06',
+					},
+					{
+						name: 'Tavush Province',
+						value: 'AM-TV',
+					},
+					{
 						name: 'Tây Ninh Province',
 						value: 'VN-37',
+					},
+					{
+						name: 'Taza-Al Hoceima-Taounate',
+						value: 'MA-03',
+					},
+					{
+						name: 'Tbilisi',
+						value: 'GE-TB',
+					},
+					{
+						name: 'Tbong Khmum',
+						value: 'KH-25',
+					},
+					{
+						name: 'Tearce',
+						value: 'MK-75',
+					},
+					{
+						name: 'Tebessa',
+						value: 'DZ-12',
+					},
+					{
+						name: 'Tehran',
+						value: 'IR-07',
+					},
+					{
+						name: 'Tekirdağ',
+						value: 'TR-59',
+					},
+					{
+						name: 'Tel Aviv District',
+						value: 'IL-TA',
+					},
+					{
+						name: 'Telangana',
+						value: 'IN-TG',
+					},
+					{
+						name: 'Telemark',
+						value: 'NO-08',
+					},
+					{
+						name: 'Telenești District',
+						value: 'MD-TE',
+					},
+					{
+						name: 'Teleorman County',
+						value: 'RO-TR',
+					},
+					{
+						name: 'Telšiai County',
+						value: 'LT-TE',
+					},
+					{
+						name: 'Temburong',
+						value: 'BN-TE',
+					},
+					{
+						name: 'Temotu Province',
+						value: 'SB-TE',
+					},
+					{
+						name: 'Tennessee',
+						value: 'US-TN',
+					},
+					{
+						name: 'Terengganu',
+						value: 'MY-11',
+					},
+					{
+						name: "Ternopil's'ka oblast",
+						value: 'UA-61',
+					},
+					{
+						name: 'Terre Haute IN',
+						value: '581',
+					},
+					{
+						name: 'Tērvete Municipality',
+						value: 'LV-098',
+					},
+					{
+						name: 'Tete Province',
+						value: 'MZ-T',
+					},
+					{
+						name: 'Tetovo',
+						value: 'MK-76',
+					},
+					{
+						name: 'Texas',
+						value: 'US-TX',
+					},
+					{
+						name: 'Thaba-Tseka',
+						value: 'LS-K',
 					},
 					{
 						name: 'Thai Binh',
@@ -14177,24 +12819,900 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'VN-69',
 					},
 					{
+						name: 'Thailand',
+						value: 'TH',
+					},
+					{
 						name: 'Thanh Hoa',
 						value: 'VN-21',
+					},
+					{
+						name: 'Thiès Region',
+						value: 'SN-TH',
+					},
+					{
+						name: 'Thimphu',
+						value: 'BT-15',
 					},
 					{
 						name: 'Thua Thien Hue',
 						value: 'VN-26',
 					},
 					{
+						name: 'Thurgau',
+						value: 'CH-TG',
+					},
+					{
+						name: 'Thuringia',
+						value: 'DE-TH',
+					},
+					{
+						name: 'Tianjin',
+						value: 'CN-12',
+					},
+					{
+						name: 'Tiaret Province',
+						value: 'DZ-14',
+					},
+					{
+						name: 'Tibesti',
+						value: 'TD-TI',
+					},
+					{
+						name: 'Tibet',
+						value: 'CN-54',
+					},
+					{
+						name: 'Ticino',
+						value: 'CH-TI',
+					},
+					{
 						name: 'Tien Giang',
 						value: 'VN-46',
+					},
+					{
+						name: 'Tierra del Fuego Province',
+						value: 'AR-V',
+					},
+					{
+						name: 'Tigray',
+						value: 'ET-TI',
+					},
+					{
+						name: 'Tillaberi',
+						value: 'NE-6',
+					},
+					{
+						name: 'Timiș County',
+						value: 'RO-TM',
+					},
+					{
+						name: 'Timor-Leste',
+						value: 'TL',
+					},
+					{
+						name: 'Tindouf Province',
+						value: 'DZ-37',
+					},
+					{
+						name: 'Tipaza Province',
+						value: 'DZ-42',
+					},
+					{
+						name: 'Tirana',
+						value: 'AL-11',
+					},
+					{
+						name: 'Tiris Zemmour',
+						value: 'MR-11',
+					},
+					{
+						name: 'Tissemsilt',
+						value: 'DZ-38',
+					},
+					{
+						name: 'Tivat',
+						value: 'ME-19',
+					},
+					{
+						name: 'Tizi Ouzou Province',
+						value: 'DZ-15',
+					},
+					{
+						name: 'Tlaxcala',
+						value: 'MX-TLA',
+					},
+					{
+						name: 'Tlemcen Province',
+						value: 'DZ-13',
+					},
+					{
+						name: 'Toamasina',
+						value: 'MG-A',
+					},
+					{
+						name: 'Tochigi Prefecture',
+						value: 'JP-09',
+					},
+					{
+						name: 'Togdheer',
+						value: 'SO-TO',
+					},
+					{
+						name: 'Togo',
+						value: 'TG',
+					},
+					{
+						name: 'Toi',
+						value: 'NU-TOI',
+					},
+					{
+						name: 'Tokat',
+						value: 'TR-60',
+					},
+					{
+						name: 'Tokelau',
+						value: 'TK',
+					},
+					{
+						name: 'Tokushima Prefecture',
+						value: 'JP-36',
+					},
+					{
+						name: 'Tokyo',
+						value: 'JP-13',
+					},
+					{
+						name: 'Toledo',
+						value: 'BZ-TOL',
+					},
+					{
+						name: 'Toledo OH',
+						value: '547',
+					},
+					{
+						name: 'Toliara',
+						value: 'MG-U',
+					},
+					{
+						name: 'Tolima',
+						value: 'CO-TOL',
+					},
+					{
+						name: 'Tolna County',
+						value: 'HU-TO',
+					},
+					{
+						name: 'Tombali Region',
+						value: 'GW-TO',
+					},
+					{
+						name: 'Tombouctou',
+						value: 'ML-6',
+					},
+					{
+						name: 'Tomsk Oblast',
+						value: 'RU-TOM',
+					},
+					{
+						name: 'Tonga',
+						value: 'TO',
+					},
+					{
+						name: 'Tongatapu',
+						value: 'TO-04',
+					},
+					{
+						name: 'Topeka KS',
+						value: '605',
+					},
+					{
+						name: 'Torba Province',
+						value: 'VU-TOB',
+					},
+					{
+						name: 'Totonicapán Department',
+						value: 'GT-TO',
+					},
+					{
+						name: 'Tottori Prefecture',
+						value: 'JP-31',
+					},
+					{
+						name: 'Tov',
+						value: 'MN-047',
+					},
+					{
+						name: 'Toyama Prefecture',
+						value: 'JP-16',
+					},
+					{
+						name: 'Tozeur',
+						value: 'TN-72',
 					},
 					{
 						name: 'Tra Vinh',
 						value: 'VN-51',
 					},
 					{
+						name: 'Trabzon',
+						value: 'TR-61',
+					},
+					{
+						name: 'Trang',
+						value: 'TH-92',
+					},
+					{
+						name: 'Transnistria',
+						value: 'MD-SN',
+					},
+					{
+						name: 'Trarza',
+						value: 'MR-06',
+					},
+					{
+						name: 'Trashigang',
+						value: 'BT-41',
+					},
+					{
+						name: 'Trashiyangtse',
+						value: 'BT-TY',
+					},
+					{
+						name: 'Trat',
+						value: 'TH-23',
+					},
+					{
+						name: 'Traverse City-Cadillac MI',
+						value: '540',
+					},
+					{
+						name: 'Treinta y Tres Department',
+						value: 'UY-TT',
+					},
+					{
+						name: 'Trelawny Parish',
+						value: 'JM-07',
+					},
+					{
+						name: 'Trenčín Region',
+						value: 'SK-TC',
+					},
+					{
+						name: 'Trentino-Alto Adige/South Tyrol',
+						value: 'IT-32',
+					},
+					{
+						name: 'Tri-Cities TN-VA',
+						value: '531',
+					},
+					{
+						name: 'Triesen',
+						value: 'LI-09',
+					},
+					{
+						name: 'Triesenberg',
+						value: 'LI-10',
+					},
+					{
+						name: 'Trinidad & Tobago',
+						value: 'TT',
+					},
+					{
+						name: 'Trinity Palmetto Point Parish',
+						value: 'KN-15',
+					},
+					{
+						name: 'Tripoli',
+						value: 'LY-TB',
+					},
+					{
+						name: 'Tripura',
+						value: 'IN-TR',
+					},
+					{
+						name: 'Tristan da Cunha',
+						value: 'SH-TA',
+					},
+					{
+						name: 'Trnava Region',
+						value: 'SK-TA',
+					},
+					{
+						name: 'Troms',
+						value: 'NO-19',
+					},
+					{
+						name: 'Trongsa',
+						value: 'BT-32',
+					},
+					{
+						name: 'Trujillo',
+						value: 'VE-T',
+					},
+					{
+						name: 'Tsirang',
+						value: 'BT-21',
+					},
+					{
+						name: 'Tuamasaga',
+						value: 'WS-TU',
+					},
+					{
+						name: 'Tucson (Sierra Vista) AZ',
+						value: '789',
+					},
+					{
+						name: 'Tucumán',
+						value: 'AR-T',
+					},
+					{
+						name: 'Tukums Municipality',
+						value: 'LV-099',
+					},
+					{
+						name: 'Tula Oblast',
+						value: 'RU-TUL',
+					},
+					{
+						name: 'Tulcea County',
+						value: 'RO-TL',
+					},
+					{
+						name: 'Tulsa OK',
+						value: '671',
+					},
+					{
+						name: 'Tumbes',
+						value: 'PE-TUM',
+					},
+					{
+						name: 'Tunapuna-Piarco',
+						value: 'TT-TUP',
+					},
+					{
+						name: 'Tunceli',
+						value: 'TR-62',
+					},
+					{
+						name: 'Tungurahua',
+						value: 'EC-T',
+					},
+					{
+						name: 'Tunis',
+						value: 'TN-11',
+					},
+					{
+						name: 'Tunisia',
+						value: 'TN',
+					},
+					{
+						name: 'Türkiye',
+						value: 'TR',
+					},
+					{
+						name: 'Turkmenistan',
+						value: 'TM',
+					},
+					{
+						name: 'Turks & Caicos Islands',
+						value: 'TC',
+					},
+					{
+						name: 'Tuscany',
+						value: 'IT-52',
+					},
+					{
+						name: 'Tutong',
+						value: 'BN-TU',
+					},
+					{
+						name: 'Tuva',
+						value: 'RU-TY',
+					},
+					{
+						name: 'Tuvalu',
+						value: 'TV',
+					},
+					{
 						name: 'Tuyên Quang Province',
 						value: 'VN-07',
+					},
+					{
+						name: 'Tver Oblast',
+						value: 'RU-TVE',
+					},
+					{
+						name: 'Twin Falls ID',
+						value: '760',
+					},
+					{
+						name: 'Tyler-Longview(Lufkin & Nacogdoches) TX',
+						value: '709',
+					},
+					{
+						name: 'Tyrol',
+						value: 'AT-7',
+					},
+					{
+						name: 'Tyumen Oblast',
+						value: 'RU-TYU',
+					},
+					{
+						name: 'U.S. Outlying Islands',
+						value: 'UM',
+					},
+					{
+						name: 'U.S. Virgin Islands',
+						value: 'VI',
+					},
+					{
+						name: 'Uaboe',
+						value: 'NR-13',
+					},
+					{
+						name: 'Ubon Ratchathani',
+						value: 'TH-34',
+					},
+					{
+						name: 'Ucayali',
+						value: 'PE-UCA',
+					},
+					{
+						name: 'Udmurt Republic',
+						value: 'RU-UD',
+					},
+					{
+						name: 'Udon Thani',
+						value: 'TH-41',
+					},
+					{
+						name: 'Uganda',
+						value: 'UG',
+					},
+					{
+						name: 'Uíge Province',
+						value: 'AO-UIG',
+					},
+					{
+						name: 'Ujae Atoll',
+						value: 'MH-UJA',
+					},
+					{
+						name: 'Ukraine',
+						value: 'UA',
+					},
+					{
+						name: 'Ulaanbaatar',
+						value: 'MN-1',
+					},
+					{
+						name: 'Ulcinj',
+						value: 'ME-20',
+					},
+					{
+						name: 'Ulsan',
+						value: 'KR-31',
+					},
+					{
+						name: 'Ulyanovsk Oblast',
+						value: 'RU-ULY',
+					},
+					{
+						name: 'Umbria',
+						value: 'IT-55',
+					},
+					{
+						name: 'Umm Al Quwain',
+						value: 'AE-UQ',
+					},
+					{
+						name: 'Umm Salal Municipality',
+						value: 'QA-US',
+					},
+					{
+						name: 'Umnugovi',
+						value: 'MN-053',
+					},
+					{
+						name: 'Ungheni',
+						value: 'MD-UN',
+					},
+					{
+						name: 'United Arab Emirates',
+						value: 'AE',
+					},
+					{
+						name: 'United Kingdom',
+						value: 'GB',
+					},
+					{
+						name: 'United States',
+						value: 'US',
+					},
+					{
+						name: 'Upper Austria',
+						value: 'AT-4',
+					},
+					{
+						name: 'Upper Demerara-Berbice',
+						value: 'GY-UD',
+					},
+					{
+						name: 'Upper East Region',
+						value: 'GH-UE',
+					},
+					{
+						name: 'Upper Nile',
+						value: 'SS-NU',
+					},
+					{
+						name: 'Upper Normandy',
+						value: 'FR-Q',
+					},
+					{
+						name: 'Upper North Province',
+						value: 'MV-UN',
+					},
+					{
+						name: 'Upper River',
+						value: 'GM-U',
+					},
+					{
+						name: 'Upper South Province',
+						value: 'MV-US',
+					},
+					{
+						name: 'Upper Takutu-Upper Essequibo',
+						value: 'GY-UT',
+					},
+					{
+						name: 'Upper West Region',
+						value: 'GH-UW',
+					},
+					{
+						name: 'Uppsala County',
+						value: 'SE-C',
+					},
+					{
+						name: 'Uruguay',
+						value: 'UY',
+					},
+					{
+						name: 'Uşak',
+						value: 'TR-64',
+					},
+					{
+						name: 'Ústí nad Labem Region',
+						value: 'CZ-US',
+					},
+					{
+						name: 'Usulutan',
+						value: 'SV-US',
+					},
+					{
+						name: 'Utah',
+						value: 'US-UT',
+					},
+					{
+						name: 'Utena County',
+						value: 'LT-UT',
+					},
+					{
+						name: 'Uthai Thani',
+						value: 'TH-61',
+					},
+					{
+						name: 'Utica NY',
+						value: '526',
+					},
+					{
+						name: 'Utirik Atoll',
+						value: 'MH-UTI',
+					},
+					{
+						name: 'Utrecht',
+						value: 'NL-UT',
+					},
+					{
+						name: 'Uttar Pradesh',
+						value: 'IN-UP',
+					},
+					{
+						name: 'Uttaradit',
+						value: 'TH-53',
+					},
+					{
+						name: 'Uttarakhand',
+						value: 'IN-UT',
+					},
+					{
+						name: 'Uusimaa',
+						value: 'FI-18',
+					},
+					{
+						name: 'Uva Province',
+						value: 'LK-8',
+					},
+					{
+						name: 'Uvs',
+						value: 'MN-046',
+					},
+					{
+						name: 'Uvurkhangai',
+						value: 'MN-055',
+					},
+					{
+						name: 'Uzbekistan',
+						value: 'UZ',
+					},
+					{
+						name: "Va'a-o-Fonoti",
+						value: 'WS-VF',
+					},
+					{
+						name: 'Vaduz',
+						value: 'LI-11',
+					},
+					{
+						name: 'Vaiņode Municipality',
+						value: 'LV-100',
+					},
+					{
+						name: 'Vaisigano',
+						value: 'WS-VS',
+					},
+					{
+						name: 'Vaitupu',
+						value: 'TV-VAI',
+					},
+					{
+						name: 'Vakaga',
+						value: 'CF-VK',
+					},
+					{
+						name: 'Valais',
+						value: 'CH-VS',
+					},
+					{
+						name: 'Valandovo',
+						value: 'MK-10',
+					},
+					{
+						name: 'Vâlcea County',
+						value: 'RO-VL',
+					},
+					{
+						name: 'Valencian Community',
+						value: 'ES-VC',
+					},
+					{
+						name: 'Valga County',
+						value: 'EE-82',
+					},
+					{
+						name: 'Valka Municipality',
+						value: 'LV-101',
+					},
+					{
+						name: 'Valle',
+						value: 'HN-VA',
+					},
+					{
+						name: 'Valle del Cauca',
+						value: 'CO-VAC',
+					},
+					{
+						name: 'Vallee du Bandama',
+						value: 'CI-04',
+					},
+					{
+						name: 'Valmiera',
+						value: 'LV-VMR',
+					},
+					{
+						name: 'Valparaiso Region',
+						value: 'CL-VS',
+					},
+					{
+						name: 'Valverde Province',
+						value: 'DO-27',
+					},
+					{
+						name: 'Van',
+						value: 'TR-65',
+					},
+					{
+						name: 'Vanuatu',
+						value: 'VU',
+					},
+					{
+						name: 'Varakļāni Municipality',
+						value: 'LV-102',
+					},
+					{
+						name: 'Varaždin County',
+						value: 'HR-05',
+					},
+					{
+						name: 'Vargas',
+						value: 'VE-X',
+					},
+					{
+						name: 'Vārkava Municipality',
+						value: 'LV-103',
+					},
+					{
+						name: 'Varmland County',
+						value: 'SE-S',
+					},
+					{
+						name: 'Varna',
+						value: 'BG-03',
+					},
+					{
+						name: 'Vas County',
+						value: 'HU-VA',
+					},
+					{
+						name: 'Vaslui County',
+						value: 'RO-VS',
+					},
+					{
+						name: 'Västerbotten County',
+						value: 'SE-AC',
+					},
+					{
+						name: 'Västernorrland County',
+						value: 'SE-Y',
+					},
+					{
+						name: 'Västmanland County',
+						value: 'SE-U',
+					},
+					{
+						name: 'Västra Götaland County',
+						value: 'SE-O',
+					},
+					{
+						name: 'Vatican City',
+						value: 'VA',
+					},
+					{
+						name: 'Vaud',
+						value: 'CH-VD',
+					},
+					{
+						name: 'Vaupes',
+						value: 'CO-VAU',
+					},
+					{
+						name: "Vava'u",
+						value: 'TO-05',
+					},
+					{
+						name: 'Vayots Dzor Province',
+						value: 'AM-VD',
+					},
+					{
+						name: 'Vecpiebalga Municipality',
+						value: 'LV-104',
+					},
+					{
+						name: 'Vecumnieki Municipality',
+						value: 'LV-105',
+					},
+					{
+						name: 'Veliko Tarnovo Province',
+						value: 'BG-04',
+					},
+					{
+						name: 'Veneto',
+						value: 'IT-34',
+					},
+					{
+						name: 'Venezuela',
+						value: 'VE',
+					},
+					{
+						name: 'Ventspils',
+						value: 'LV-VEN',
+					},
+					{
+						name: 'Ventspils Municipality',
+						value: 'LV-106',
+					},
+					{
+						name: 'Veracruz',
+						value: 'MX-VER',
+					},
+					{
+						name: 'Veraguas Province',
+						value: 'PA-9',
+					},
+					{
+						name: 'Vermont',
+						value: 'US-VT',
+					},
+					{
+						name: 'Vest-Agder',
+						value: 'NO-10',
+					},
+					{
+						name: 'Vestfold',
+						value: 'NO-07',
+					},
+					{
+						name: 'Veszprém',
+						value: 'HU-VE',
+					},
+					{
+						name: 'Viana do Castelo District',
+						value: 'PT-16',
+					},
+					{
+						name: 'Vichada',
+						value: 'CO-VID',
+					},
+					{
+						name: 'Victoria',
+						value: 'AU-VIC',
+					},
+					{
+						name: 'Victoria TX',
+						value: '626',
+					},
+					{
+						name: 'Vidin',
+						value: 'BG-05',
+					},
+					{
+						name: 'Vienna',
+						value: 'AT-9',
+					},
+					{
+						name: 'Vientiane',
+						value: 'LA-VI',
+					},
+					{
+						name: 'Vientiane Prefecture',
+						value: 'LA-VT',
+					},
+					{
+						name: 'Viesīte Municipality',
+						value: 'LV-107',
+					},
+					{
+						name: 'Vietnam',
+						value: 'VN',
+					},
+					{
+						name: 'Vieux Fort',
+						value: 'LC-11',
+					},
+					{
+						name: 'Vila Real District',
+						value: 'PT-17',
+					},
+					{
+						name: 'Viļaka Municipality',
+						value: 'LV-108',
+					},
+					{
+						name: 'Viļāni Municipality',
+						value: 'LV-109',
+					},
+					{
+						name: 'Viljandi County',
+						value: 'EE-84',
+					},
+					{
+						name: 'Villa Clara',
+						value: 'CU-05',
+					},
+					{
+						name: 'Vilnius County',
+						value: 'LT-VL',
 					},
 					{
 						name: 'Vinh Long',
@@ -14205,192 +13723,672 @@ export const googleTrendsFields: INodeProperties[] = [
 						value: 'VN-70',
 					},
 					{
-						name: 'Yen Bai Province',
-						value: 'VN-06',
+						name: "Vinnyts'ka oblast",
+						value: 'UA-05',
+					},
+					{
+						name: 'Viqueque',
+						value: 'TL-VI',
+					},
+					{
+						name: 'Virginia',
+						value: 'US-VA',
+					},
+					{
+						name: 'Virovitica-Podravina County',
+						value: 'HR-10',
+					},
+					{
+						name: 'Viseu District',
+						value: 'PT-18',
+					},
+					{
+						name: 'Vitebsk Region',
+						value: 'BY-VI',
+					},
+					{
+						name: 'Vladimir Oblast',
+						value: 'RU-VLA',
+					},
+					{
+						name: 'Vlora',
+						value: 'AL-12',
+					},
+					{
+						name: 'Vojvodina',
+						value: 'RS-VO',
+					},
+					{
+						name: 'Volgograd Oblast',
+						value: 'RU-VGG',
+					},
+					{
+						name: 'Vologda Oblast',
+						value: 'RU-VLG',
+					},
+					{
+						name: 'Volta Region',
+						value: 'GH-TV',
+					},
+					{
+						name: "Volyns'ka oblast",
+						value: 'UA-07',
+					},
+					{
+						name: 'Vorarlberg',
+						value: 'AT-8',
+					},
+					{
+						name: 'Voronezh Oblast',
+						value: 'RU-VOR',
+					},
+					{
+						name: 'Võru County',
+						value: 'EE-86',
+					},
+					{
+						name: 'Vraca',
+						value: 'BG-06',
+					},
+					{
+						name: 'Vrancea County',
+						value: 'RO-VN',
+					},
+					{
+						name: 'Vrapchishte',
+						value: 'MK-16',
+					},
+					{
+						name: 'Vukovar-Srijem County',
+						value: 'HR-16',
+					},
+					{
+						name: 'Vysocina Region',
+						value: 'CZ-VY',
+					},
+					{
+						name: 'Waco-Temple-Bryan TX',
+						value: '625',
+					},
+					{
+						name: 'Wadi Al Hayaa',
+						value: 'LY-WD',
+					},
+					{
+						name: 'Wadi Ash-Shati',
+						value: 'LY-WS',
+					},
+					{
+						name: 'Wadi Fira',
+						value: 'TD-WF',
+					},
+					{
+						name: 'Waikato',
+						value: 'NZ-WKO',
+					},
+					{
+						name: 'Wakayama Prefecture',
+						value: 'JP-30',
+					},
+					{
+						name: 'Wales',
+						value: 'GB-WLS',
 					},
 					{
 						name: 'Wallis & Futuna',
 						value: 'WF',
 					},
 					{
-						name: 'Alo',
-						value: 'WF-ALO',
+						name: 'Walloon Region',
+						value: 'BE-WAL',
 					},
 					{
-						name: 'Western Sahara',
-						value: 'EH',
+						name: 'Wangdue Phodrang',
+						value: 'BT-24',
 					},
 					{
-						name: 'Yemen',
-						value: 'YE',
+						name: 'Wanica',
+						value: 'SR-WA',
 					},
 					{
-						name: "'Amran",
-						value: 'YE-AM',
+						name: 'Wardak',
+						value: 'AF-WAR',
 					},
 					{
-						name: 'Abyan',
-						value: 'YE-AB',
+						name: 'Warmian-Masurian Voivodeship',
+						value: 'PL-WN',
 					},
 					{
-						name: "Ad Dali'",
-						value: 'YE-DA',
+						name: 'Warrap',
+						value: 'SS-WR',
 					},
 					{
-						name: 'Aden',
-						value: 'YE-AD',
+						name: 'Washington',
+						value: 'US-WA',
 					},
 					{
-						name: "Al Bayda'",
-						value: 'YE-BA',
+						name: 'Washington DC (Hagerstown MD)',
+						value: '511',
 					},
 					{
-						name: 'Al Hudaydah',
-						value: 'YE-HU',
+						name: 'Wasit',
+						value: 'IQ-WA',
 					},
 					{
-						name: 'Al Jawf',
-						value: 'YE-JA',
+						name: 'Watertown NY',
+						value: '549',
 					},
 					{
-						name: 'Al Mahrah',
-						value: 'YE-MR',
+						name: 'Wausau-Rhinelander WI',
+						value: '705',
 					},
 					{
-						name: 'Al Mahwit',
-						value: 'YE-MW',
+						name: 'Wele-Nzas',
+						value: 'GQ-WN',
 					},
 					{
-						name: 'Amanat Al Asimah',
-						value: 'YE-SA',
+						name: 'Wellington',
+						value: 'NZ-WGN',
 					},
 					{
-						name: 'Dhamar',
-						value: 'YE-DH',
+						name: 'West',
+						value: 'CM-OU',
 					},
 					{
-						name: 'Hadramaut',
-						value: 'YE-HD',
+						name: 'West Azerbaijan',
+						value: 'IR-02',
 					},
 					{
-						name: 'Hajjah',
-						value: 'YE-HJ',
+						name: 'West Bengal',
+						value: 'IN-WB',
 					},
 					{
-						name: 'Ibb',
-						value: 'YE-IB',
+						name: 'West Coast',
+						value: 'NZ-WTC',
 					},
 					{
-						name: 'Lahij',
-						value: 'YE-LA',
+						name: 'West Coast Region',
+						value: 'GM-W',
 					},
 					{
-						name: "Ma'rib",
-						value: 'YE-MA',
+						name: 'West Grand Bahama',
+						value: 'BS-WG',
 					},
 					{
-						name: 'Raymah',
-						value: 'YE-RA',
+						name: 'West Java',
+						value: 'ID-JB',
 					},
 					{
-						name: "Sa'dah",
-						value: 'YE-SD',
+						name: 'West Kalimantan',
+						value: 'ID-KB',
 					},
 					{
-						name: "Sana'a",
-						value: 'YE-SN',
+						name: 'West Kazakhstan Province',
+						value: 'KZ-ZAP',
 					},
 					{
-						name: 'Shabwah',
-						value: 'YE-SH',
+						name: 'West New Britain Province',
+						value: 'PG-WBK',
 					},
 					{
-						name: "Ta'izz",
-						value: 'YE-TA',
+						name: 'West Nusa Tenggara',
+						value: 'ID-NB',
 					},
 					{
-						name: 'Zambia',
-						value: 'ZM',
+						name: 'West Palm Beach-Ft. Pierce FL',
+						value: '548',
 					},
 					{
-						name: 'Central',
-						value: 'ZM-02',
+						name: 'West Papua',
+						value: 'ID-PB',
 					},
 					{
-						name: 'Copperbelt',
-						value: 'ZM-08',
+						name: 'West Pomeranian Voivodeship',
+						value: 'PL-ZP',
 					},
 					{
-						name: 'Eastern',
-						value: 'ZM-03',
+						name: 'West Sepik Province',
+						value: 'PG-SAN',
 					},
 					{
-						name: 'Luapula',
-						value: 'ZM-04',
+						name: 'West Sulawesi',
+						value: 'ID-SR',
 					},
 					{
-						name: 'Lusaka',
-						value: 'ZM-09',
+						name: 'West Sumatra',
+						value: 'ID-SB',
 					},
 					{
-						name: 'North-Western',
-						value: 'ZM-06',
-					},
-					{
-						name: 'Northern',
-						value: 'ZM-05',
-					},
-					{
-						name: 'Southern',
-						value: 'ZM-07',
+						name: 'West Virginia',
+						value: 'US-WV',
 					},
 					{
 						name: 'Western',
 						value: 'ZM-01',
 					},
 					{
+						name: 'Western Area',
+						value: 'SL-W',
+					},
+					{
+						name: 'Western Australia',
+						value: 'AU-WA',
+					},
+					{
+						name: 'Western Bahr el Ghazal',
+						value: 'SS-BW',
+					},
+					{
+						name: 'Western Cape',
+						value: 'ZA-WC',
+					},
+					{
+						name: 'Western Division',
+						value: 'FJ-W',
+					},
+					{
+						name: 'Western Equatoria',
+						value: 'SS-EW',
+					},
+					{
+						name: 'Western Highlands Province',
+						value: 'PG-WHM',
+					},
+					{
+						name: 'Western Province (LK)',
+						value: 'LK-1',
+					},
+					{
+						name: 'Western Province (PG)',
+						value: 'PG-WPD',
+					},
+					{
+						name: 'Western Province (RW)',
+						value: 'RW-04',
+					},
+					{
+						name: 'Western Province (SB)',
+						value: 'SB-WE',
+					},
+					{
+						name: 'Western Region (GP)',
+						value: 'GH-WP',
+					},
+					{
+						name: 'Western Region (IS)',
+						value: 'IS-3',
+					},
+					{
+						name: 'Western Region (NP)',
+						value: 'NP-3',
+					},
+					{
+						name: 'Western Region (UG)',
+						value: 'UG-W',
+					},
+					{
+						name: 'Western Sahara',
+						value: 'EH',
+					},
+					{
+						name: 'Western Tobago',
+						value: 'TT-WTO',
+					},
+					{
+						name: 'Western Visayas',
+						value: 'PH-06',
+					},
+					{
+						name: 'Westfjords Region',
+						value: 'IS-4',
+					},
+					{
+						name: 'Westmoreland Parish',
+						value: 'JM-10',
+					},
+					{
+						name: 'Wheeling WV-Steubenville OH',
+						value: '554',
+					},
+					{
+						name: 'White Nile',
+						value: 'SD-NW',
+					},
+					{
+						name: 'Wichita Falls TX & Lawton OK',
+						value: '627',
+					},
+					{
+						name: 'Wichita-Hutchinson KS',
+						value: '678',
+					},
+					{
+						name: 'Wilkes Barre-Scranton PA',
+						value: '577',
+					},
+					{
+						name: 'Wilmington NC',
+						value: '550',
+					},
+					{
+						name: 'Wisconsin',
+						value: 'US-WI',
+					},
+					{
+						name: 'Woleu-Ntem',
+						value: 'GA-9',
+					},
+					{
+						name: 'Woqooyi Galbeed',
+						value: 'SO-WO',
+					},
+					{
+						name: 'Worldwide',
+						value: '',
+					},
+					{
+						name: 'Worodougou',
+						value: 'CI-14',
+					},
+					{
+						name: 'Wotho Atoll',
+						value: 'MH-WTH',
+					},
+					{
+						name: 'Wotje Atoll',
+						value: 'MH-WTJ',
+					},
+					{
+						name: 'Wyoming',
+						value: 'US-WY',
+					},
+					{
+						name: 'Xekong',
+						value: 'LA-XE',
+					},
+					{
+						name: 'XI Región',
+						value: 'CL-AI',
+					},
+					{
+						name: 'Xiangkhouang',
+						value: 'LA-XI',
+					},
+					{
+						name: 'Xinjiang',
+						value: 'CN-65',
+					},
+					{
+						name: 'Yakima-Pasco-Richland-Kennewick WA',
+						value: '810',
+					},
+					{
+						name: 'Yala',
+						value: 'TH-95',
+					},
+					{
+						name: 'Yalova Province',
+						value: 'TR-77',
+					},
+					{
+						name: 'Yamagata Prefecture',
+						value: 'JP-06',
+					},
+					{
+						name: 'Yamaguchi Prefecture',
+						value: 'JP-35',
+					},
+					{
+						name: 'Yamalo-Nenets Autonomous Okrug',
+						value: 'RU-YAN',
+					},
+					{
+						name: 'Yamanashi Prefecture',
+						value: 'JP-19',
+					},
+					{
+						name: 'Yangon Region',
+						value: 'MM-06',
+					},
+					{
+						name: 'Yap',
+						value: 'FM-YAP',
+					},
+					{
+						name: 'Yaracuy',
+						value: 'VE-U',
+					},
+					{
+						name: 'Yaren',
+						value: 'NR-14',
+					},
+					{
+						name: 'Yaroslavl Oblast',
+						value: 'RU-YAR',
+					},
+					{
+						name: 'Yasothon',
+						value: 'TH-35',
+					},
+					{
+						name: 'Yazd',
+						value: 'IR-25',
+					},
+					{
+						name: 'Yemen',
+						value: 'YE',
+					},
+					{
+						name: 'Yen Bai Province',
+						value: 'VN-06',
+					},
+					{
+						name: 'Yerevan',
+						value: 'AM-ER',
+					},
+					{
+						name: 'Yobe',
+						value: 'NG-YO',
+					},
+					{
+						name: 'Yoro',
+						value: 'HN-YO',
+					},
+					{
+						name: 'Youngstown OH',
+						value: '536',
+					},
+					{
+						name: 'Yozgat',
+						value: 'TR-66',
+					},
+					{
+						name: 'Ysyk Kol Province',
+						value: 'KG-Y',
+					},
+					{
+						name: 'Yucatan',
+						value: 'MX-YUC',
+					},
+					{
+						name: 'Yukon Territory',
+						value: 'CA-YT',
+					},
+					{
+						name: 'Yuma AZ-El Centro CA',
+						value: '771',
+					},
+					{
+						name: 'Yunnan',
+						value: 'CN-53',
+					},
+					{
+						name: 'Zabaykalsky Krai',
+						value: 'RU-ZAB',
+					},
+					{
+						name: 'Zabljak',
+						value: 'ME-21',
+					},
+					{
+						name: 'Zabul',
+						value: 'AF-ZAB',
+					},
+					{
+						name: 'Zacapa Department',
+						value: 'GT-ZA',
+					},
+					{
+						name: 'Zacatecas',
+						value: 'MX-ZAC',
+					},
+					{
+						name: 'Zadar County',
+						value: 'HR-13',
+					},
+					{
+						name: 'Zaghouan',
+						value: 'TN-22',
+					},
+					{
+						name: 'Zagreb County',
+						value: 'HR-01',
+					},
+					{
+						name: 'Zaire Province',
+						value: 'AO-ZAI',
+					},
+					{
+						name: "Zakarpats'ka oblast",
+						value: 'UA-21',
+					},
+					{
+						name: 'Zala County',
+						value: 'HU-ZA',
+					},
+					{
+						name: 'Zambezi Region',
+						value: 'NA-CA',
+					},
+					{
+						name: 'Zambezia Province',
+						value: 'MZ-Q',
+					},
+					{
+						name: 'Zambia',
+						value: 'ZM',
+					},
+					{
+						name: 'Zamboanga Peninsula',
+						value: 'PH-09',
+					},
+					{
+						name: 'Zamfara',
+						value: 'NG-ZA',
+					},
+					{
+						name: 'Zamora-Chinchipe Province',
+						value: 'EC-Z',
+					},
+					{
+						name: 'Zanesville OH',
+						value: '596',
+					},
+					{
+						name: 'Zanjan',
+						value: 'IR-11',
+					},
+					{
+						name: 'Zanzan',
+						value: 'CI-08',
+					},
+					{
+						name: 'Zanzibar Central/South',
+						value: 'TZ-11',
+					},
+					{
+						name: 'Zanzibar North',
+						value: 'TZ-07',
+					},
+					{
+						name: 'Zanzibar Urban/West',
+						value: 'TZ-15',
+					},
+					{
+						name: "Zaporiz'ka oblast",
+						value: 'UA-23',
+					},
+					{
+						name: 'Zarqa Governorate',
+						value: 'JO-AZ',
+					},
+					{
+						name: 'Zavkhan',
+						value: 'MN-057',
+					},
+					{
+						name: 'Zeeland',
+						value: 'NL-ZE',
+					},
+					{
+						name: 'Zelenikovo',
+						value: 'MK-32',
+					},
+					{
+						name: 'Zhejiang',
+						value: 'CN-33',
+					},
+					{
+						name: 'Zhemgang',
+						value: 'BT-34',
+					},
+					{
+						name: "Zhytomyrs'ka oblast",
+						value: 'UA-18',
+					},
+					{
+						name: 'Ziguinchor',
+						value: 'SN-ZG',
+					},
+					{
+						name: 'Žilina Region',
+						value: 'SK-ZI',
+					},
+					{
+						name: 'Zilupe Municipality',
+						value: 'LV-110',
+					},
+					{
 						name: 'Zimbabwe',
 						value: 'ZW',
 					},
 					{
-						name: 'Bulawayo',
-						value: 'ZW-BU',
+						name: 'Zinder',
+						value: 'NE-7',
 					},
 					{
-						name: 'Harare',
-						value: 'ZW-HA',
+						name: 'Zlin Region',
+						value: 'CZ-ZL',
 					},
 					{
-						name: 'Manicaland',
-						value: 'ZW-MA',
+						name: 'Zonguldak',
+						value: 'TR-67',
 					},
 					{
-						name: 'Mashonaland Central',
-						value: 'ZW-MC',
+						name: 'Zou',
+						value: 'BJ-ZO',
 					},
 					{
-						name: 'Mashonaland East',
-						value: 'ZW-ME',
+						name: 'Zulia',
+						value: 'VE-V',
 					},
 					{
-						name: 'Mashonaland West',
-						value: 'ZW-MW',
+						name: 'Zurich',
+						value: 'CH-ZH',
 					},
 					{
-						name: 'Masvingo',
-						value: 'ZW-MV',
-					},
-					{
-						name: 'Matabeleland North',
-						value: 'ZW-MN',
-					},
-					{
-						name: 'Matabeleland South',
-						value: 'ZW-MS',
-					},
-					{
-						name: 'Midlands',
-						value: 'ZW-MI',
+						name: 'سلمات',
+						value: 'TD-SA',
 					},
 				],
 			},
@@ -14453,8 +14451,8 @@ export const googleTrendsFields: INodeProperties[] = [
 				displayName: 'Time Zone (tz)',
 				name: 'tz',
 				description:
-					'Parameter is used to define a time zone offset. The default value is set to 420 (Pacific Day Time(PDT): -07:00). Value is shown in minutes and can span from -1439 to 1439.tz can be calculated using the time difference between UTC +0 and desired timezone. Examples:420 - PDT600 - Pacific/Tahiti-540 - Asia/Tokyo-480 - Canada/Pacific. To make sure the value is correct, please refer to the time zone database and your programming language UTC offset calculation. You may visit the documentation to get more information.',
-				default: 0,
+					'Parameter is used to define a time zone offset. The default value is set to 420 (Pacific Day Time(PDT): -07:00). See docs for more information: https://serpapi.com/google-trends-api#api-parameters-advanced-google-trends-parameters-tz',
+				default: 420,
 				routing: {
 					request: {
 						qs: {
@@ -19038,7 +19036,7 @@ export const googleTrendsFields: INodeProperties[] = [
 				displayName: 'Date (date)',
 				name: 'date',
 				description:
-					'Parameter is used to define a date. Available options:now 1-H - Past hournow 4-H - Past 4 hoursnow 1-d - Past daynow 7-d - Past 7 daystoday 1-m - Past 30 daystoday 3-m - Past 90 daystoday 12-m - Past 12 monthstoday 5-y - Past 5 yearsall - 2004 - presentYou can also pass custom values:Dates from 2004 to present: yyyy-mm-dd yyyy-mm-dd (e.g. 2021-10-15 2022-05-25)Dates with hours within a week range: yyyy-mm-ddThh yyyy-mm-ddThh (e.g. 2022-05-19T10 2022-05-24T22). Hours will be calculated depending on the tz (time zone) parameter.',
+					'Parameter is used to define a date. See docs for available options: https://serpapi.com/google-trends-api#api-parameters-advanced-google-trends-parameters-date.',
 				default: 'today 12-m',
 				routing: {
 					request: {

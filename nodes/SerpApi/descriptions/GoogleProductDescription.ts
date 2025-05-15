@@ -8,7 +8,7 @@ export const googleProductFields: INodeProperties[] = [
 		name: 'product_id',
 		description:
 			'Parameter defines the product to get results for. Normally found from shopping results for supported products (e.g., https://www.google.com/shopping/product/{product_id}).',
-		default: '4887235756540435899',
+		default: '',
 		routing: {
 			request: {
 				qs: {
@@ -69,7 +69,7 @@ export const googleProductFields: INodeProperties[] = [
 			{
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description: 'Parameter defines the Google domain to use. It defaults to google.com.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -115,7 +115,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: 'Result Offset (start)',
 				name: 'start',
 				description:
-					"Parameter defines the result offset when offers is enabled. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.) This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filter instead to paginate through reviews.",
+					'Parameter defines the result offset when offers is enabled. It skips the given number of results.',
 				default: '',
 				routing: {
 					request: {
@@ -130,7 +130,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: 'Start From Page (page)',
 				name: 'page',
 				description:
-					'Parameter defines the page number for Google Online Sellers. There are 10 results per page. This parameter is equivalent to start (offset) = page * 10. This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews. Use the filter parameter with serpapi_pagination.next_page_filter instead to paginate through reviews.',
+					'Parameter defines the page number for Google Online Sellers. There are 10 results per page. This parameter is equivalent to start (offset) = page * 10. This parameter works only for Online Sellers. This parameter is deprecated for use with Reviews.',
 				default: '',
 				routing: {
 					request: {
@@ -145,7 +145,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: 'Offers Results (offers)',
 				name: 'offers',
 				description:
-					'Whether to fetch offers results. Replaces former sellers=online results. The offers parameter cannot be used with offer_id parameter.',
+					'Whether to fetch offers results. The offers parameter cannot be used with offer_id parameter.',
 				default: false,
 				routing: {
 					request: {
@@ -190,7 +190,7 @@ export const googleProductFields: INodeProperties[] = [
 				displayName: 'Advanced Filter Parameter (filter)',
 				name: 'filter',
 				description:
-					'Parameter defines filters, sorting, and pagination for reviews and offers results. Offers filters: freeship:1 Show only products with free shipping, ucond:1 Show only used products, scoring:p Sort by base price, scoring:tp Sort by total price, scoring:cpd Sort by current promotion deals (special offers), scoring:mrd Sort by sellers rating. Reviews filters: rnum:{number} Number of results (100 is max), rpt:{encoded value} Encoded pagination offset. You can get the value of rpt needed for the next page from the serpapi_pagination.next or serpapi_pagination.next_page_filter key in the JSON response to any Google Product API search with reviews enabled. It is recommended to use all filters provided in serpapi_pagination.next or serpapi_pagination.next_page_filter when paginating. Pagination examples: Online Sellers Pagination, Product Reviews Pagination.',
+					'Parameter defines filters, sorting, and pagination for reviews and offers results. See documentation for more information: https://serpapi.com/google-product-api#api-parameters-advanced-filters-filter.',
 				default: '',
 				routing: {
 					request: {

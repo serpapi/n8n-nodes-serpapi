@@ -68,7 +68,7 @@ export const googleJobsFields: INodeProperties[] = [
 			{
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description: 'Parameter defines the Google domain to use. It defaults to google.com.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -114,7 +114,7 @@ export const googleJobsFields: INodeProperties[] = [
 				displayName: 'Next Page Token (next_page_token)',
 				name: 'next_page_token',
 				description:
-					'Parameter defines the next page token. It is used for retrieving the next page of results. Up to 10 results are returned per page. The next page token can be found in the SerpApi JSON response: serpapi_pagination -> next_page_token.',
+					'Parameter defines the next page token. It is used for retrieving the next page of results. Up to 10 results are returned per page.',
 				default: '',
 				routing: {
 					request: {
@@ -130,7 +130,7 @@ export const googleJobsFields: INodeProperties[] = [
 				displayName: 'Chips (chips)',
 				name: 'chips',
 				description:
-					'This parameter has been deprecated by Google. Parameter defines additional query conditions. Top of a job search page contains elements called chips, its values are extracted in order to be passed to chips parameter. E.g. city:Owg_06VPwoli_nfhBo8LyA== will return results for New York.',
+					'This parameter has been deprecated by Google. Parameter defines additional query conditions. See docs for more information: https://serpapi.com/google-jobs-api#api-parameters-advanced-google-jobs-parameters-chips.',
 				default: '',
 				routing: {
 					request: {
@@ -173,7 +173,7 @@ export const googleJobsFields: INodeProperties[] = [
 				displayName: 'Filter Search (uds)',
 				name: 'uds',
 				description:
-					"Parameter enables to filter search. It's a string provided by Google as a filter. uds values are provided under the section: filters with uds, q and serpapi_link values provided for each filter.",
+					'Parameter enables to filter search. See docs for more information: https://serpapi.com/google-jobs-api#api-parameters-advanced-google-jobs-parameters-uds.',
 				default: '',
 				routing: {
 					request: {

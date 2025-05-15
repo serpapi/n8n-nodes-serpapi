@@ -134,7 +134,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: 'Google Element Rendering (ibp)',
 				name: 'ibp',
 				description:
-					'Parameter is responsible for rendering layouts and expansions for some elements (e.g., gwp;0,7 to expand searches with ludocid for expanded knowledge graph)',
+					'Parameter is responsible for rendering layouts and expansions for some elements',
 				default: '',
 				routing: {
 					request: {
@@ -163,7 +163,7 @@ export const googleSearchFields: INodeProperties[] = [
 			{
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description: 'Parameter defines the Google domain to use. It defaults to google.com.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -209,7 +209,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: 'Set Multiple Countries (cr)',
 				name: 'cr',
 				description:
-					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE will only search French and German pages). Head to the Google cr countries page for a full list of supported countries.',
+					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter.',
 				default: '',
 				routing: {
 					request: {
@@ -224,7 +224,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: 'Set Multiple Languages (lr)',
 				name: 'lr',
 				description:
-					'Parameter defines one or multiple languages to limit the search to. It uses lang_{two-letter language code} to specify languages and | as a delimiter. (e.g., lang_fr|lang_de will only search French and German pages). Head to the Google lr languages page for a full list of supported languages.',
+					'Parameter defines one or multiple languages to limit the search to. It uses lang_{two-letter language code} to specify languages and | as a delimiter.',
 				default: '',
 				routing: {
 					request: {
@@ -359,7 +359,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: 'Time Period (as_qdr)',
 				name: 'as_qdr',
 				description:
-					'Parameter requests search results from a specified time period (quick date range). The following values are supported: d[number]: requests results from the specified number of past days. Example for the past 10 days: as_qdr=d10; w[number]: requests results from the specified number of past weeks; m[number]: requests results from the specified number of past months; y[number]: requests results from the specified number of past years. Example for the past year: as_qdr=y',
+					'Parameter requests search results from a specified time period (quick date range). See docs for more information: https://serpapi.com/advanced-google-query-parameters#api-parameters-advanced-search-query-parameters-as-qdr.',
 				default: '',
 				routing: {
 					request: {
@@ -374,7 +374,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: 'Related URL (as_rq)',
 				name: 'as_rq',
 				description:
-					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL. You can also use the related: query term for this type of query.',
+					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL.',
 				default: '',
 				routing: {
 					request: {
@@ -444,7 +444,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: 'Exclude Auto-corrected Results (nfpr)',
 				name: 'nfpr',
 				description:
-					'Whether to exclude the results from an auto-corrected query when the original query is spelled wrong. It can be set to true to exclude these results, or false to include them (default). Note that this parameter may not prevent Google from returning results for an auto-corrected query if no other results are available.',
+					'Whether to exclude the results from an auto-corrected query when the original query is spelled wrong',
 				default: false,
 				routing: {
 					request: {
@@ -459,7 +459,7 @@ export const googleSearchFields: INodeProperties[] = [
 				displayName: 'Results Filtering (filter)',
 				name: 'filter',
 				description:
-					"Whether the filters for 'Similar Results' and 'Omitted Results' are on or off. It can be set to true (default) to enable these filters, or false to disable these filters.",
+					"Whether the filters for 'Similar Results' and 'Omitted Results' are on or off",
 				default: true,
 				routing: {
 					request: {
@@ -495,8 +495,7 @@ export const googleSearchFields: INodeProperties[] = [
 			{
 				displayName: 'Result Offset (start)',
 				name: 'start',
-				description:
-					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.). Google Local Results only accepts multiples of 20 (e.g. 20 for the second page results, 40 for the third page results, etc.) as the start value.",
+				description: 'Parameter defines the result offset. It skips the given number of results.',
 				default: '',
 				routing: {
 					request: {
@@ -510,9 +509,8 @@ export const googleSearchFields: INodeProperties[] = [
 			{
 				displayName: 'Number of Results (num)',
 				name: 'num',
-				description:
-					'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results). The use of num may introduce latency, and/or prevent the inclusion of specialized result types. It is better to omit this parameter unless it is strictly necessary to increase the number of results per page. Results are not guaranteed to have the number of results specified in num.',
-				default: '',
+				description: 'Parameter defines the maximum number of results to return',
+				default: '10',
 				routing: {
 					request: {
 						qs: {

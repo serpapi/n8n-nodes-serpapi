@@ -38,8 +38,7 @@ export const baiduSearchFields: INodeProperties[] = [
 			{
 				displayName: 'Choose Language (ct)',
 				name: 'ct',
-				description:
-					'Parameter defines which language to restrict results',
+				description: 'Parameter defines which language to restrict results',
 				default: '1',
 				routing: {
 					request: {
@@ -68,7 +67,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				displayName: 'Result Offset (pn)',
 				name: 'pn',
 				description:
-					"Parameter defines the result offset for pagination. It skips the given number of results. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, etc.)",
+					'Parameter defines the result offset for pagination. It skips the given number of results. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, etc.)',
 				default: '',
 				routing: {
 					request: {
@@ -83,7 +82,7 @@ export const baiduSearchFields: INodeProperties[] = [
 				displayName: 'Number of Results (rn)',
 				name: 'rn',
 				description:
-					'Parameter defines the maximum number of results to return, limited to 50. Default is 10. This parameter is only available for desktop and tablet searches.',
+					'Parameter defines the maximum number of results to return, limited to 50. Default is 10. Only available for desktop and tablet searches.',
 				default: '10',
 				routing: {
 					request: {

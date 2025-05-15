@@ -7,7 +7,7 @@ export const googleNewsFields: INodeProperties[] = [
 		displayName: 'Search Query (q)',
 		name: 'q',
 		description:
-			"Parameter defines the query you want to search. You can use anything that you would use in a regular Google News search. e.g. site:, when:. Parameter can't be used together with publication_token, story_token, and topic_token parameters.",
+			"Parameter defines the query you want to search. You can use anything that you would use in a regular Google News search. Parameter can't be used together with publication_token, story_token, and topic_token parameters.",
 		default: '',
 		routing: {
 			request: {
@@ -38,8 +38,7 @@ export const googleNewsFields: INodeProperties[] = [
 			{
 				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					"Parameter defines the country to use for the Google News search. It's a two-letter country code. (e.g., us for the United States (default), uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google News countries.",
+				description: 'Parameter defines the country to use for the Google News search',
 				default: 'us',
 				routing: {
 					request: {
@@ -129,8 +128,7 @@ export const googleNewsFields: INodeProperties[] = [
 			{
 				displayName: 'Sort By (so)',
 				name: 'so',
-				description:
-					'Parameter defines the sorting method. Results can be sorted by relevance or by date. By default, the results are sorted by relevance.',
+				description: 'Parameter defines the sorting method',
 				default: '0',
 				routing: {
 					request: {

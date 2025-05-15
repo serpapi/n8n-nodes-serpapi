@@ -73,7 +73,7 @@ export const googleVideosFields: INodeProperties[] = [
 			{
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description: 'Parameter defines the Google domain to use. It defaults to google.com.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -119,7 +119,7 @@ export const googleVideosFields: INodeProperties[] = [
 				displayName: 'Set Multiple Languages (lr)',
 				name: 'lr',
 				description:
-					'Parameter defines one or multiple languages to limit the search to. It uses lang_{two-letter language code} to specify languages and | as a delimiter. (e.g., lang_fr|lang_de will only search French and German pages). Head to the Google lr languages page for a full list of supported languages.',
+					'Parameter defines one or multiple languages to limit the search to. It uses lang_{two-letter language code} to specify languages and | as a delimiter.',
 				default: '',
 				routing: {
 					request: {
@@ -149,7 +149,7 @@ export const googleVideosFields: INodeProperties[] = [
 				displayName: 'as_epq',
 				name: 'as_epq',
 				description:
-					'Parameter identifies a phrase that all documents in the search results must contain. You can also use the phrase search query term to search for a phrase.',
+					'Parameter identifies a phrase that all documents in the search results must contain',
 				default: '',
 				routing: {
 					request: {
@@ -179,7 +179,7 @@ export const googleVideosFields: INodeProperties[] = [
 				displayName: 'as_lq',
 				name: 'as_lq',
 				description:
-					'Parameter specifies that all search results should contain a link to a particular URL. You can also use the link: query term for this type of query.',
+					'Parameter specifies that all search results should contain a link to a particular URL',
 				default: '',
 				routing: {
 					request: {
@@ -254,7 +254,7 @@ export const googleVideosFields: INodeProperties[] = [
 				displayName: 'as_qdr',
 				name: 'as_qdr',
 				description:
-					'Parameter requests search results from a specified time period (quick date range). The following values are supported:d[number]: requests results from the specified number of past days. Example for the past 10 days: as_qdr=d10w[number]: requests results from the specified number of past weeks.m[number]: requests results from the specified number of past months.y[number]: requests results from the specified number of past years. Example for the past year: as_qdr=y',
+					'Parameter requests search results from a specified time period (quick date range). See docs for more information: https://serpapi.com/advanced-google-query-parameters#api-parameters-advanced-search-query-parameters-as-qdr.',
 				default: '',
 				routing: {
 					request: {
@@ -269,7 +269,7 @@ export const googleVideosFields: INodeProperties[] = [
 				displayName: 'as_rq',
 				name: 'as_rq',
 				description:
-					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL. You can also use the related: query term for this type of query.',
+					'Parameter specifies that all search results should be pages that are related to the specified URL. The parameter value should be a URL.',
 				default: '',
 				routing: {
 					request: {
@@ -313,8 +313,7 @@ export const googleVideosFields: INodeProperties[] = [
 			{
 				displayName: 'Adult Content Filtering (safe)',
 				name: 'safe',
-				description:
-					'Parameter defines the level of filtering for adult content. By default Google will blur explicit content.',
+				description: 'Parameter defines the level of filtering for adult content',
 				default: 'active',
 				routing: {
 					request: {
@@ -339,7 +338,7 @@ export const googleVideosFields: INodeProperties[] = [
 				displayName: 'Exclude Auto-corrected Results (nfpr)',
 				name: 'nfpr',
 				description:
-					'Whether to exclude results from an auto-corrected query when the original query is spelled wrong. It can be set to true to exclude these results, or false to include them (default). Note that this parameter may not prevent Google from returning results for an auto-corrected query if no other results are available.',
+					'Whether to exclude results from an auto-corrected query when the original query is spelled wrong',
 				default: false,
 				routing: {
 					request: {
@@ -354,7 +353,7 @@ export const googleVideosFields: INodeProperties[] = [
 				displayName: 'Results Filtering (filter)',
 				name: 'filter',
 				description:
-					"Whether the filters for 'Similar Results' and 'Omitted Results' are on or off. It can be set to true (default) to enable these filters, or false to disable these filters.",
+					"Whether the filters for 'Similar Results' and 'Omitted Results' are on or off",
 				default: true,
 				routing: {
 					request: {
@@ -368,8 +367,7 @@ export const googleVideosFields: INodeProperties[] = [
 			{
 				displayName: 'Result Offset (start)',
 				name: 'start',
-				description:
-					"Parameter defines the result offset. It skips the given number of results. It's used for pagination. (e.g., 0 (default) is the first page of results, 10 is the 2nd page of results, 20 is the 3rd page of results, etc.).",
+				description: 'Parameter defines the result offset. It skips the given number of results.',
 				default: '0',
 				routing: {
 					request: {
@@ -383,8 +381,7 @@ export const googleVideosFields: INodeProperties[] = [
 			{
 				displayName: 'Number of Results (num)',
 				name: 'num',
-				description:
-					'Parameter defines the maximum number of results to return. (e.g., 10 (default) returns 10 results, 40 returns 40 results, and 100 returns 100 results).',
+				description: 'Parameter defines the maximum number of results to return',
 				default: '',
 				routing: {
 					request: {

@@ -68,7 +68,7 @@ export const googleImagesFields: INodeProperties[] = [
 			{
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description: 'Parameter defines the Google domain to use. It defaults to google.com.',
+				description: 'Parameter defines the Google domain to use',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -83,8 +83,7 @@ export const googleImagesFields: INodeProperties[] = [
 			{
 				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					"Parameter defines the country to use for the Google Images search. It's a two-letter country code. (e.g., us for the United States, uk for United Kingdom, or fr for France) Head to the Google countries for a full list of supported Google countries.",
+				description: 'Parameter defines the country to use for the Google Images search',
 				default: 'us',
 				routing: {
 					request: {
@@ -115,7 +114,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: 'Set Multiple Countries (cr)',
 				name: 'cr',
 				description:
-					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE will only search French and German pages). Head to the Google cr countries page for a full list of supported countries.',
+					'Parameter defines one or multiple countries to limit the search to. It uses country{two-letter upper-case country code} to specify countries and | as a delimiter. (e.g., countryFR|countryDE will only search French and German pages).',
 				default: '',
 				routing: {
 					request: {
@@ -250,7 +249,7 @@ export const googleImagesFields: INodeProperties[] = [
 				displayName: 'Time Period (as_qdr)',
 				name: 'as_qdr',
 				description:
-					'Parameter requests search results from a specified time period (quick date range). The following values are supported:d[number]: requests results from the specified number of past days. Example for the past 10 days: as_qdr=d10w[number]: requests results from the specified number of past weeks.m[number]: requests results from the specified number of past months.y[number]: requests results from the specified number of past years. Example for the past year: as_qdr=y',
+					'Parameter requests search results from a specified time period (quick date range). See documentation for supported values: https://serpapi.com/advanced-google-query-parameters#api-parameters-advanced-search-query-parameters-as-qdr.',
 				default: '',
 				routing: {
 					request: {
