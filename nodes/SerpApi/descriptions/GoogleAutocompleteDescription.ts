@@ -39,8 +39,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 			{
 				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					'Parameter defines the country to use for the Google search.',
+				description: 'Parameter defines the country to use for the Google search',
 				default: 'us',
 				routing: {
 					request: {
@@ -55,8 +54,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 			{
 				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					'Parameter defines the language to use for the search.',
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {
@@ -71,8 +69,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 			{
 				displayName: 'Cursor pointer (cp)',
 				name: 'cp',
-				description:
-					'Cursor pointer defines the position of cursor for the query provided.',
+				description: 'Cursor pointer defines the position of cursor for the query provided',
 				default: '',
 				routing: {
 					request: {

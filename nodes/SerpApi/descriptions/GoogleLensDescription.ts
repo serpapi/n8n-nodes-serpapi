@@ -38,8 +38,7 @@ export const googleLensFields: INodeProperties[] = [
 			{
 				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					'Parameter defines the language to use for the search.',
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {

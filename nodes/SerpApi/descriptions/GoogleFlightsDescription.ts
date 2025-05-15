@@ -147,8 +147,7 @@ export const googleFlightsFields: INodeProperties[] = [
 			{
 				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					'Parameter defines the language to use for the search.',
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {
@@ -284,7 +283,7 @@ export const googleFlightsFields: INodeProperties[] = [
 				displayName: 'Parameters for Multi-city (multi_city_json)',
 				name: 'multi_city_json',
 				description:
-					'Defines multi-city flight info as a JSON string of objects with required fields: departure_id, arrival_id, and date, plus optional times for time ranges.',
+					'Defines multi-city flight info as a JSON string of objects with required fields: departure_id, arrival_id, and date, plus optional times for time ranges',
 				default: '',
 				routing: {
 					request: {
@@ -456,7 +455,7 @@ export const googleFlightsFields: INodeProperties[] = [
 				displayName: 'Exclude airlines (exclude_airlines)',
 				name: 'exclude_airlines',
 				description:
-					"Defines airline codes to exclude, using 2-character IATA codes or alliance names (ONEWORLD, SKYTEAM, STAR_ALLIANCE). Comma-separated. Cannot be used with include_airlines.",
+					'Defines airline codes to exclude, using 2-character IATA codes or alliance names (ONEWORLD, SKYTEAM, STAR_ALLIANCE). Comma-separated. Cannot be used with include_airlines.',
 				default: '',
 				routing: {
 					request: {
@@ -471,7 +470,7 @@ export const googleFlightsFields: INodeProperties[] = [
 				displayName: 'Include airlines (include_airlines)',
 				name: 'include_airlines',
 				description:
-					"Defines airline codes to include, using 2-character IATA codes or alliance names (ONEWORLD, SKYTEAM, STAR_ALLIANCE). Comma-separated. Cannot be used with exclude_airlines.",
+					'Defines airline codes to include, using 2-character IATA codes or alliance names (ONEWORLD, SKYTEAM, STAR_ALLIANCE). Comma-separated. Cannot be used with exclude_airlines.',
 				default: '',
 				routing: {
 					request: {

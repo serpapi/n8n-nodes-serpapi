@@ -6,8 +6,7 @@ export const googleScholarFields: INodeProperties[] = [
 	{
 		displayName: 'Search Query (q)',
 		name: 'q',
-		description:
-			'Parameter defines the query you want to search.',
+		description: 'Parameter defines the query you want to search',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -124,8 +123,7 @@ export const googleScholarFields: INodeProperties[] = [
 			{
 				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					'Parameter defines the language to use for the search.',
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {

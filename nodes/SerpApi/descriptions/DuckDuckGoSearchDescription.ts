@@ -5,8 +5,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 	{
 		displayName: 'Search Query (q)',
 		name: 'q',
-		description:
-			'Parameter defines the query you want to search.',
+		description: 'Parameter defines the query you want to search',
 		default: 'Coffee',
 		routing: {
 			request: {
@@ -38,8 +37,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 			{
 				displayName: 'Region (kl)',
 				name: 'kl',
-				description:
-					'Parameter defines the region to use for the DuckDuckGo search.',
+				description: 'Parameter defines the region to use for the DuckDuckGo search',
 				default: 'us-en',
 				routing: {
 					request: {
@@ -151,8 +149,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 			{
 				displayName: 'Filter By Date (df)',
 				name: 'df',
-				description:
-					'Parameter defines results filtered by date.',
+				description: 'Parameter defines results filtered by date',
 				default: '',
 				routing: {
 					request: {
@@ -167,7 +164,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 				displayName: 'Result Offset (start)',
 				name: 'start',
 				description:
-					"Parameter defines the result offset for pagination. It skips the given number of results.",
+					'Parameter defines the result offset for pagination. It skips the given number of results.',
 				default: '',
 				routing: {
 					request: {

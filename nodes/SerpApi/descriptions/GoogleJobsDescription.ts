@@ -39,7 +39,7 @@ export const googleJobsFields: INodeProperties[] = [
 				displayName: 'Location (location)',
 				name: 'location',
 				description:
-					'Parameter defines from where you want the search to originate. See docs for supported locations: https://serpapi.com/locations-api',
+					'Parameter defines from where you want the search to originate. See docs for supported locations: https://serpapi.com/locations-api.',
 				default: '',
 				routing: {
 					request: {
@@ -68,8 +68,7 @@ export const googleJobsFields: INodeProperties[] = [
 			{
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description:
-					'Parameter defines the Google domain to use. It defaults to google.com',
+				description: 'Parameter defines the Google domain to use. It defaults to google.com.',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -84,8 +83,7 @@ export const googleJobsFields: INodeProperties[] = [
 			{
 				displayName: 'Country (gl)',
 				name: 'gl',
-				description:
-					'Parameter defines the country to use for the Google search.',
+				description: 'Parameter defines the country to use for the Google search',
 				default: 'us',
 				routing: {
 					request: {
@@ -100,8 +98,7 @@ export const googleJobsFields: INodeProperties[] = [
 			{
 				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					'Parameter defines the language to use for the search.',
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {

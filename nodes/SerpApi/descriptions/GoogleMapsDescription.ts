@@ -6,8 +6,7 @@ export const googleMapsFields: INodeProperties[] = [
 	{
 		displayName: 'Search Query (q)',
 		name: 'q',
-		description:
-			'Parameter defines the query you want to search.',
+		description: 'Parameter defines the query you want to search',
 		default: 'coffee',
 		routing: {
 			request: {
@@ -89,8 +88,7 @@ export const googleMapsFields: INodeProperties[] = [
 			{
 				displayName: 'Domain (google_domain)',
 				name: 'google_domain',
-				description:
-					'Parameter defines the Google domain to use. It defaults to google.com',
+				description: 'Parameter defines the Google domain to use. It defaults to google.com.',
 				default: 'google.com',
 				routing: {
 					request: {
@@ -105,8 +103,7 @@ export const googleMapsFields: INodeProperties[] = [
 			{
 				displayName: 'Language (hl)',
 				name: 'hl',
-				description:
-					'Parameter defines the language to use for the search.',
+				description: 'Parameter defines the language to use for the search',
 				default: 'en',
 				routing: {
 					request: {
@@ -122,7 +119,7 @@ export const googleMapsFields: INodeProperties[] = [
 				displayName: 'Country (gl)',
 				name: 'gl',
 				description:
-					"Parameter defines the(country code. (e.g., us for the United States, uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google countries. Parameter only affects Place Results API.",
+					'Parameter defines the(country code. (e.g., us for the United States, uk for United Kingdom, or fr for France). Head to the Google countries page for a full list of supported Google countries. Parameter only affects Place Results API.',
 				default: 'us',
 				routing: {
 					request: {

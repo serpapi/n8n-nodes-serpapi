@@ -1046,7 +1046,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: 'Exclude Auto-corrected Results (_blrs)',
 				name: '_blrs',
 				description:
-					'Whether to exclude results from an auto-corrected query when the original query is spelled wrong.',
+					'Whether to exclude results from an auto-corrected query when the original query is spelled wrong',
 				default: false,
 				routing: {
 					request: {
@@ -1060,8 +1060,7 @@ export const ebaySearchFields: INodeProperties[] = [
 			{
 				displayName: 'Results filter (show_only)',
 				name: 'show_only',
-				description:
-					'Parameter defines the list of filters you can apply to the results.',
+				description: 'Parameter defines the list of filters you can apply to the results',
 				default: '',
 				routing: {
 					request: {
@@ -1217,7 +1216,7 @@ export const ebaySearchFields: INodeProperties[] = [
 				displayName: 'Category ID (category_id)',
 				name: 'category_id',
 				description:
-					'Parameter defines the ID of a category where you want your search to be concentrated.',
+					'Parameter defines the ID of a category where you want your search to be concentrated',
 				default: '',
 				routing: {
 					request: {
@@ -1246,8 +1245,7 @@ export const ebaySearchFields: INodeProperties[] = [
 			{
 				displayName: 'Condition (LH_ItemCondition)',
 				name: 'LH_ItemCondition',
-				description:
-					'Parameter defines one or multiple product conditions to limit the search to.',
+				description: 'Parameter defines one or multiple product conditions to limit the search to',
 				default: '',
 				routing: {
 					request: {

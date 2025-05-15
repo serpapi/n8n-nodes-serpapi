@@ -50,7 +50,7 @@ export const serpApiFields: INodeProperties[] = [
 		displayName: 'Output (output)',
 		name: 'output',
 		description:
-			'Parameter defines the final output you want. It can be set to json (default) to get a structured JSON of the results, or html to get the raw html retrieved.',
+			'Parameter defines the final output you want. It can be set to JSON (default) to get a structured JSON of the results, or html to get the raw html retrieved.',
 		default: 'json',
 		routing: {
 			request: {
