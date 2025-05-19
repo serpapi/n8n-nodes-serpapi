@@ -20,7 +20,7 @@ export const googleTrendsFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_trends'],
+				operation: ['google_trends'],
 			},
 		},
 	},
@@ -32,7 +32,7 @@ export const googleTrendsFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_trends'],
+				operation: ['google_trends'],
 			},
 		},
 		options: [

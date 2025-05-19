@@ -20,7 +20,7 @@ export const googleProductFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_product'],
+				operation: ['google_product'],
 			},
 		},
 	},
@@ -32,7 +32,7 @@ export const googleProductFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_product'],
+				operation: ['google_product'],
 			},
 		},
 		options: [

@@ -19,7 +19,7 @@ export const googleShoppingFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_shopping'],
+				operation: ['google_shopping'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const googleShoppingFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_shopping'],
+				operation: ['google_shopping'],
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const googleShoppingFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_shopping'],
+				operation: ['google_shopping'],
 			},
 		},
 		options: [

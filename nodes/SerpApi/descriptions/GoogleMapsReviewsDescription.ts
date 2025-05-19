@@ -19,7 +19,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_maps_reviews'],
+				operation: ['google_maps_reviews'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_maps_reviews'],
+				operation: ['google_maps_reviews'],
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const googleMapsReviewsFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_maps_reviews'],
+				operation: ['google_maps_reviews'],
 			},
 		},
 		options: [

@@ -19,7 +19,7 @@ export const ebaySearchFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['ebay'],
+				operation: ['ebay'],
 			},
 		},
 	},
@@ -38,7 +38,7 @@ export const ebaySearchFields: INodeProperties[] = [
 		type: 'options',
 		displayOptions: {
 			show: {
-				resource: ['ebay'],
+				operation: ['ebay'],
 			},
 		},
 		options: [
@@ -120,7 +120,7 @@ export const ebaySearchFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['ebay'],
+				operation: ['ebay'],
 			},
 		},
 		options: [

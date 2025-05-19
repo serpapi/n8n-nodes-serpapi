@@ -19,7 +19,7 @@ export const googleImagesFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_images'],
+				operation: ['google_images'],
 			},
 		},
 	},
@@ -31,7 +31,7 @@ export const googleImagesFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_images'],
+				operation: ['google_images'],
 			},
 		},
 		options: [

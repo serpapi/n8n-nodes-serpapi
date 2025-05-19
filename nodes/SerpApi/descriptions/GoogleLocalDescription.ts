@@ -19,7 +19,7 @@ export const googleLocalFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_local'],
+				operation: ['google_local'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const googleLocalFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_local'],
+				operation: ['google_local'],
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const googleLocalFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_local'],
+				operation: ['google_local'],
 			},
 		},
 		options: [

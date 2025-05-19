@@ -1,3 +1,4 @@
+/* eslint-disable n8n-nodes-base/node-param-operation-option-action-miscased */
 import { INodeType, INodeTypeDescription, NodeConnectionType } from 'n8n-workflow';
 
 import {
@@ -36,7 +37,7 @@ export class SerpApi implements INodeType {
 		icon: 'file:serpapi.svg',
 		group: ['transform'],
 		version: 1,
-		subtitle: '={{$parameter["resource"]}}',
+		subtitle: '={{$parameter["operation"]}}',
 		description: "Get live Google Search data and more from SerpApi's official node",
 		defaults: {
 			name: 'SerpApi',
@@ -59,10 +60,22 @@ export class SerpApi implements INodeType {
 		},
 
 		properties: [
-			// Resources and operations will go here
 			{
 				displayName: 'Resource',
 				name: 'resource',
+				type: 'options',
+				noDataExpression: true,
+				options: [
+					{
+						name: 'Search',
+						value: 'search',
+					}
+				],
+				default: 'search',
+			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
 				type: 'options',
 				noDataExpression: true,
 				options: [

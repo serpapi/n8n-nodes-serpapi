@@ -19,7 +19,7 @@ export const bingImagesFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['bing_images'],
+				operation: ['bing_images'],
 			},
 		},
 	},
@@ -38,7 +38,7 @@ export const bingImagesFields: INodeProperties[] = [
 		},
 		displayOptions: {
 			show: {
-				resource: ['bing_images'],
+				operation: ['bing_images'],
 			},
 		},
 		type: 'options',
@@ -91,7 +91,7 @@ export const bingImagesFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['bing_images'],
+				operation: ['bing_images'],
 			},
 		},
 		options: [

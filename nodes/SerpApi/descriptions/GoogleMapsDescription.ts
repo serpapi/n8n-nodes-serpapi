@@ -18,7 +18,7 @@ export const googleMapsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_maps'],
+				operation: ['google_maps'],
 			},
 		},
 	},
@@ -48,7 +48,7 @@ export const googleMapsFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_maps'],
+				operation: ['google_maps'],
 			},
 		},
 	},
@@ -68,7 +68,7 @@ export const googleMapsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_maps'],
+				operation: ['google_maps'],
 			},
 		},
 	},
@@ -80,7 +80,7 @@ export const googleMapsFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_maps'],
+				operation: ['google_maps'],
 			},
 		},
 		options: [

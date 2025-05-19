@@ -19,7 +19,7 @@ export const baiduSearchFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['baidu'],
+				operation: ['baidu'],
 			},
 		},
 	},
@@ -31,7 +31,7 @@ export const baiduSearchFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['baidu'],
+				operation: ['baidu'],
 			},
 		},
 		options: [

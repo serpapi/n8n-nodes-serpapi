@@ -19,7 +19,7 @@ export const googleLightFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_light'],
+				operation: ['google_light'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const googleLightFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_light'],
+				operation: ['google_light'],
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const googleLightFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_light'],
+				operation: ['google_light'],
 			},
 		},
 		options: [
