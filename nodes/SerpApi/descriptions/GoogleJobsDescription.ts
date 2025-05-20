@@ -19,7 +19,7 @@ export const googleJobsFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_jobs'],
+				operation: ['google_jobs'],
 			},
 		},
 	},
@@ -31,7 +31,7 @@ export const googleJobsFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_jobs'],
+				operation: ['google_jobs'],
 			},
 		},
 		options: [

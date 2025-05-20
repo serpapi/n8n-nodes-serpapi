@@ -18,7 +18,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['duckduckgo'],
+				operation: ['duckduckgo'],
 			},
 		},
 	},
@@ -30,7 +30,7 @@ export const duckDuckGoSearchFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['duckduckgo'],
+				operation: ['duckduckgo'],
 			},
 		},
 		options: [

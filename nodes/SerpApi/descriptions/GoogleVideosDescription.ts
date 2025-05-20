@@ -19,7 +19,7 @@ export const googleVideosFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_videos'],
+				operation: ['google_videos'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const googleVideosFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_videos'],
+				operation: ['google_videos'],
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const googleVideosFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_videos'],
+				operation: ['google_videos'],
 			},
 		},
 		options: [

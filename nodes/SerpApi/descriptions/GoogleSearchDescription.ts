@@ -19,7 +19,7 @@ export const googleSearchFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google'],
+				operation: ['google'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const googleSearchFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google'],
+				operation: ['google'],
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const googleSearchFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google'],
+				operation: ['google'],
 			},
 		},
 		options: [

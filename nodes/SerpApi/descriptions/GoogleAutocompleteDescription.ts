@@ -20,7 +20,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_autocomplete'],
+				operation: ['google_autocomplete'],
 			},
 		},
 	},
@@ -32,7 +32,7 @@ export const googleAutocompleteFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_autocomplete'],
+				operation: ['google_autocomplete'],
 			},
 		},
 		options: [

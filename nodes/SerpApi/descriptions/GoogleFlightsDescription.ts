@@ -19,7 +19,7 @@ export const googleFlightsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_flights'],
+				operation: ['google_flights'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const googleFlightsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_flights'],
+				operation: ['google_flights'],
 			},
 		},
 	},
@@ -58,7 +58,7 @@ export const googleFlightsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_flights'],
+				operation: ['google_flights'],
 			},
 		},
 	},
@@ -78,7 +78,7 @@ export const googleFlightsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_flights'],
+				operation: ['google_flights'],
 			},
 		},
 	},
@@ -112,7 +112,7 @@ export const googleFlightsFields: INodeProperties[] = [
 		],
 		displayOptions: {
 			show: {
-				resource: ['google_flights'],
+				operation: ['google_flights'],
 			},
 		},
 	},
@@ -124,7 +124,7 @@ export const googleFlightsFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_flights'],
+				operation: ['google_flights'],
 			},
 		},
 		options: [

@@ -19,7 +19,7 @@ export const googleLensFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_lens'],
+				operation: ['google_lens'],
 			},
 		},
 	},
@@ -31,7 +31,7 @@ export const googleLensFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_lens'],
+				operation: ['google_lens'],
 			},
 		},
 		options: [

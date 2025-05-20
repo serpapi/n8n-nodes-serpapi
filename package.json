@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-serpapi",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Official n8n node for SerpApi",
   "keywords": [
     "n8n-community-node-package"

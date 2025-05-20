@@ -19,7 +19,7 @@ export const googleScholarFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['google_scholar'],
+				operation: ['google_scholar'],
 			},
 		},
 	},
@@ -31,7 +31,7 @@ export const googleScholarFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_scholar'],
+				operation: ['google_scholar'],
 			},
 		},
 		options: [

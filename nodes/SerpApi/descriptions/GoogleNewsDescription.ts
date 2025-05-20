@@ -19,7 +19,7 @@ export const googleNewsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_news'],
+				operation: ['google_news'],
 			},
 		},
 	},
@@ -31,7 +31,7 @@ export const googleNewsFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_news'],
+				operation: ['google_news'],
 			},
 		},
 		options: [

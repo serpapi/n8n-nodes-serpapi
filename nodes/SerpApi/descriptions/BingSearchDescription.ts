@@ -19,7 +19,7 @@ export const bingSearchFields: INodeProperties[] = [
 		required: true,
 		displayOptions: {
 			show: {
-				resource: ['bing'],
+				operation: ['bing'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const bingSearchFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['bing'],
+				operation: ['bing'],
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const bingSearchFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['bing'],
+				operation: ['bing'],
 			},
 		},
 		options: [

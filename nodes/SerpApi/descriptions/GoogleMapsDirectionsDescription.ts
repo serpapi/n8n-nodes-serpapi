@@ -19,7 +19,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_maps_directions'],
+				operation: ['google_maps_directions'],
 			},
 		},
 	},
@@ -39,7 +39,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 		type: 'string',
 		displayOptions: {
 			show: {
-				resource: ['google_maps_directions'],
+				operation: ['google_maps_directions'],
 			},
 		},
 	},
@@ -51,7 +51,7 @@ export const googleMapsDirectionsFields: INodeProperties[] = [
 		placeholder: 'Add Field',
 		displayOptions: {
 			show: {
-				resource: ['google_maps_directions'],
+				operation: ['google_maps_directions'],
 			},
 		},
 		options: [
