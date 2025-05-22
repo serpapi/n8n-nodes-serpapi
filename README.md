@@ -50,4 +50,4 @@ https://serpapi.com/blog/tag/n8n/
 
 ## License
 
-[MIT](https://github.com/alexbarron/n8n-nodes-serpapi/blob/master/LICENSE.md)
+[MIT](https://github.com/serpapi/n8n-nodes-serpapi/blob/master/LICENSE.md)
