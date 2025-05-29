@@ -202,7 +202,7 @@ export class SerpApi implements INodeType {
 					{
 						name: 'Google Light',
 						value: 'google_light',
-						action: 'Search Google',
+						action: 'Search Google Light',
 						routing: {
 							request: {
 								qs: {
