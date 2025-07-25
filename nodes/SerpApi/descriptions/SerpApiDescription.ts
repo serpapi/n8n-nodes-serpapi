@@ -61,4 +61,19 @@ export const serpApiFields: INodeProperties[] = [
 		},
 		type: 'string',
 	},
+	{
+		displayName: 'JSON Restrictor (json_restrictor)',
+		name: 'json_restrictor',
+		description:
+			'Parameter defines the fields you want to restrict in the response. For example, setting it to organic_results[0:3].{title,snippet} will only return the title and snippet of the first 3 organic results.',
+		default: '',
+		routing: {
+			request: {
+				qs: {
+					json_restrictor: '={{$value}}',
+				},
+			},
+		},
+		type: 'string',
+	},
 ];
