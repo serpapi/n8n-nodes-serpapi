@@ -25,6 +25,7 @@ import {
 	googleMapsDirectionsFields,
 	baiduSearchFields,
 	amazonSearchFields,
+	googleHotelsFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -172,6 +173,18 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_flights',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Hotels',
+						value: 'google_hotels',
+						action: 'Search Google Hotels',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_hotels',
 								},
 							},
 						},
@@ -382,6 +395,7 @@ export class SerpApi implements INodeType {
 			...googleMapsDirectionsFields,
 			...baiduSearchFields,
 			...amazonSearchFields,
+			...googleHotelsFields,
 		],
 	};
 }

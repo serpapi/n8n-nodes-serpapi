@@ -22,3 +22,4 @@ export * from './DuckDuckGoSearchDescription';
 export * from './GoogleMapsDirectionsDescription';
 export * from './BaiduSearchDescription';
 export * from './AmazonSearchDescription';
+export * from './GoogleHotelsDescription';
