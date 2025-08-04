@@ -24,6 +24,7 @@ import {
 	duckDuckGoSearchFields,
 	googleMapsDirectionsFields,
 	baiduSearchFields,
+	amazonSearchFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -79,6 +80,18 @@ export class SerpApi implements INodeType {
 				type: 'options',
 				noDataExpression: true,
 				options: [
+					{
+						name: 'Amazon Search',
+						value: 'amazon',
+						action: 'Search Amazon',
+						routing: {
+							request: {
+								qs: {
+									engine: 'amazon',
+								},
+							},
+						},
+					},
 					{
 						name: 'Baidu Search',
 						value: 'baidu',
@@ -368,6 +381,7 @@ export class SerpApi implements INodeType {
 			...duckDuckGoSearchFields,
 			...googleMapsDirectionsFields,
 			...baiduSearchFields,
+			...amazonSearchFields,
 		],
 	};
 }
