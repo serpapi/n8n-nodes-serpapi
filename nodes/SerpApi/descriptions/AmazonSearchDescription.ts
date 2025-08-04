@@ -14,7 +14,12 @@ export const amazonSearchFields: INodeProperties[] = [
         }
       }
     },
-    type: 'string'
+    type: 'string',
+    displayOptions: {
+      show: {
+        operation: ['amazon']
+      }
+    }
   },
   {
     displayName: 'Domain (amazon_domain)',
@@ -118,7 +123,12 @@ export const amazonSearchFields: INodeProperties[] = [
         name: 'amazon.com.mx',
         value: 'amazon.com.mx'
       }
-    ]
+    ],
+    displayOptions: {
+      show: {
+        operation: ['amazon']
+      }
+    }
   },
   {
     displayName: 'Additional Fields',
@@ -1404,7 +1414,7 @@ export const amazonSearchFields: INodeProperties[] = [
         displayName: 'Exclude Auto-corrected Results (dc)',
         name: 'dc',
         description: 'Activate spelling fix. true (default) includes spelling fix, false searches without spelling fix.',
-        default: 'true',
+        default: true,
         routing: {
           request: {
             qs: {
