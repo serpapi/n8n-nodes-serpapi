@@ -27,6 +27,7 @@ import {
 	amazonSearchFields,
 	googleHotelsFields,
 	youtubeSearchFields,
+	googleFinanceFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -162,6 +163,18 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_autocomplete',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Finance',
+						value: 'google_finance',
+						action: 'Search Google Finance',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_finance',
 								},
 							},
 						},
@@ -410,6 +423,7 @@ export class SerpApi implements INodeType {
 			...amazonSearchFields,
 			...googleHotelsFields,
 			...youtubeSearchFields,
+			...googleFinanceFields,
 
 		],
 	};
