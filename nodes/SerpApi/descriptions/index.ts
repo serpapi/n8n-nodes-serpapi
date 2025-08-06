@@ -24,4 +24,4 @@ export * from './BaiduSearchDescription';
 export * from './AmazonSearchDescription';
 export * from './GoogleHotelsDescription';
 export * from './YoutubeSearchDescription';
-
+export * from './GoogleFinanceDescription';
