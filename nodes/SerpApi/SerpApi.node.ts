@@ -26,6 +26,7 @@ import {
 	baiduSearchFields,
 	amazonSearchFields,
 	googleHotelsFields,
+	youtubeSearchFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -369,6 +370,18 @@ export class SerpApi implements INodeType {
 							},
 						},
 					},
+					{
+						name: 'YouTube Search',
+						value: 'youtube',
+						action: 'Search YouTube',
+						routing: {
+							request: {
+								qs: {
+									engine: 'youtube',
+								},
+							},
+						},
+					},
 				],
 				default: 'google',
 			},
@@ -396,6 +409,8 @@ export class SerpApi implements INodeType {
 			...baiduSearchFields,
 			...amazonSearchFields,
 			...googleHotelsFields,
+			...youtubeSearchFields,
+
 		],
 	};
 }
