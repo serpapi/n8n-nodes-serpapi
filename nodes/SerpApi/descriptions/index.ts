@@ -26,3 +26,4 @@ export * from './GoogleHotelsDescription';
 export * from './YoutubeSearchDescription';
 export * from './GoogleFinanceDescription';
 export * from './GoogleImagesLightDescription';
+export * from './GoogleNewsLightDescription';

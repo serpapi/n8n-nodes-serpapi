@@ -29,6 +29,7 @@ import {
 	youtubeSearchFields,
 	googleFinanceFields,
 	googleImagesLightFields,
+	googleNewsLightFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -325,6 +326,18 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google News Light',
+						value: 'google_news_light',
+						action: 'Search Google News Light',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_news_light',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Product',
 						value: 'google_product',
 						action: 'Search Google Product',
@@ -438,6 +451,7 @@ export class SerpApi implements INodeType {
 			...youtubeSearchFields,
 			...googleFinanceFields,
 			...googleImagesLightFields,
+			...googleNewsLightFields,
 		],
 	};
 }
