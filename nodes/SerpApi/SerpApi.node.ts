@@ -28,6 +28,7 @@ import {
 	googleHotelsFields,
 	youtubeSearchFields,
 	googleFinanceFields,
+	googleImagesLightFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -211,6 +212,18 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_images',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Images Light',
+						value: 'google_images_light',
+						action: 'Search Google Images Light',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_images_light',
 								},
 							},
 						},
@@ -424,7 +437,7 @@ export class SerpApi implements INodeType {
 			...googleHotelsFields,
 			...youtubeSearchFields,
 			...googleFinanceFields,
-
+			...googleImagesLightFields,
 		],
 	};
 }
