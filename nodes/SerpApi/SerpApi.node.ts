@@ -32,6 +32,7 @@ import {
 	googleNewsLightFields,
 	googlePlaySearchFields,
 	googlePlayProductFields,
+	googlePlayGamesFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -340,7 +341,19 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
-						name: 'Google Play Store Search',
+						name: 'Google Play Games',
+						value: 'google_play_games',
+						action: 'Search Google Play Games',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_play_games',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Play Store',
 						value: 'google_play',
 						action: 'Search Google Play Store',
 						routing: {
@@ -480,6 +493,7 @@ export class SerpApi implements INodeType {
 			...googleNewsLightFields,
 			...googlePlaySearchFields,
 			...googlePlayProductFields,
+			...googlePlayGamesFields,
 		],
 	};
 }

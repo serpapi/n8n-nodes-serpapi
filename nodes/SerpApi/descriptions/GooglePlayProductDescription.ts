@@ -41,9 +41,7 @@ export const googlePlayProductFields: INodeProperties[] = [
     required: true,
     displayOptions: {
       show: {
-        operation: [
-          'google_play_product'
-        ]
+        operation: ['google_play_product']
       }
     }
   },
@@ -63,9 +61,7 @@ export const googlePlayProductFields: INodeProperties[] = [
     required: true,
     displayOptions: {
       show: {
-        operation: [
-          'google_play_product'
-        ]
+        operation: ['google_play_product']
       }
     }
   },
@@ -77,9 +73,7 @@ export const googlePlayProductFields: INodeProperties[] = [
     placeholder: 'Add Field',
     displayOptions: {
       show: {
-        operation: [
-          'google_play_product'
-        ]
+        operation: ['google_play_product']
       }
     },
     options: [

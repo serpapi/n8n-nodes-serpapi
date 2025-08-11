@@ -2,11 +2,11 @@ import type { INodeProperties } from 'n8n-workflow';
 import { serpApiFields } from './SerpApiDescription';
 import { CountryOptions, LanguageOptions } from './GoogleOptions';
 
-export const googlePlaySearchFields: INodeProperties[] = [
+export const googlePlayGamesFields: INodeProperties[] = [
   {
     displayName: 'Search Query (q)',
     name: 'q',
-    description: 'Parameter defines the query you want to search in Google Play Apps Store.',
+    description: 'Parameter defines the query you want to search in Google Play Games Store.',
     default: '',
     routing: {
       request: {
@@ -18,7 +18,7 @@ export const googlePlaySearchFields: INodeProperties[] = [
     type: 'string',
     displayOptions: {
       show: {
-        operation: ['google_play']
+        operation: ['google_play_games']
       }
     }
   },
@@ -30,7 +30,7 @@ export const googlePlaySearchFields: INodeProperties[] = [
     placeholder: 'Add Field',
     displayOptions: {
       show: {
-        operation: ['google_play']
+        operation: ['google_play_games']
       }
     },
     options: [
@@ -65,165 +65,97 @@ export const googlePlaySearchFields: INodeProperties[] = [
         options: LanguageOptions,
       },
       {
-        displayName: 'Apps Category (apps_category)',
-        name: 'apps_category',
-        description: 'Parameter defines the apps store category.',
+        displayName: 'Games Category (games_category)',
+        name: 'games_category',
+        description: 'Parameter defines the games store category.',
         default: '',
         routing: {
           request: {
             qs: {
-              apps_category: '={{$value}}'
+              games_category: '={{$value}}'
             }
           }
         },
         type: 'options',
         options: [
           {
-            name: 'Apps - Art & Design',
-            value: 'ART_AND_DESIGN'
+            name: 'Games',
+            value: 'GAME'
           },
           {
-            name: 'Apps - Auto & Vehicles',
-            value: 'AUTO_AND_VEHICLES'
+            name: 'Games - Action',
+            value: 'GAME_ACTION'
           },
           {
-            name: 'Apps - Beauty',
-            value: 'BEAUTY'
+            name: 'Games - Adventure',
+            value: 'GAME_ADVENTURE'
           },
           {
-            name: 'Apps - Books & Reference',
-            value: 'BOOKS_AND_REFERENCE'
+            name: 'Games - Arcade',
+            value: 'GAME_ARCADE'
           },
           {
-            name: 'Apps - Business',
-            value: 'BUSINESS'
+            name: 'Games - Board',
+            value: 'GAME_BOARD'
           },
           {
-            name: 'Apps - Comics',
-            value: 'COMICS'
+            name: 'Games - Card',
+            value: 'GAME_CARD'
           },
           {
-            name: 'Apps - Communication',
-            value: 'COMMUNICATION'
+            name: 'Games - Casino',
+            value: 'GAME_CASINO'
           },
           {
-            name: 'Apps - Dating',
-            value: 'DATING'
+            name: 'Games - Casual',
+            value: 'GAME_CASUAL'
           },
           {
-            name: 'Apps - Education',
-            value: 'EDUCATION'
+            name: 'Games - Educational',
+            value: 'GAME_EDUCATIONAL'
           },
           {
-            name: 'Apps - Entertainment',
-            value: 'ENTERTAINMENT'
+            name: 'Games - Music',
+            value: 'GAME_MUSIC'
           },
           {
-            name: 'Apps - Events',
-            value: 'EVENTS'
+            name: 'Games - Puzzle',
+            value: 'GAME_PUZZLE'
           },
           {
-            name: 'Apps - Finance',
-            value: 'FINANCE'
+            name: 'Games - Racing',
+            value: 'GAME_RACING'
           },
           {
-            name: 'Apps - Food & Drink',
-            value: 'FOOD_AND_DRINK'
+            name: 'Games - Role Playing',
+            value: 'GAME_ROLE_PLAYING'
           },
           {
-            name: 'Apps - Health & Fitness',
-            value: 'HEALTH_AND_FITNESS'
+            name: 'Games - Simulation',
+            value: 'GAME_SIMULATION'
           },
           {
-            name: 'Apps - House & Home',
-            value: 'HOUSE_AND_HOME'
+            name: 'Games - Sports',
+            value: 'GAME_SPORTS'
           },
           {
-            name: 'Apps - Libraries & Demo',
-            value: 'LIBRARIES_AND_DEMO'
+            name: 'Games - Strategy',
+            value: 'GAME_STRATEGY'
           },
           {
-            name: 'Apps - Lifestyle',
-            value: 'LIFESTYLE'
+            name: 'Games - Trivia',
+            value: 'GAME_TRIVIA'
           },
           {
-            name: 'Apps - Maps & Navigation',
-            value: 'MAPS_AND_NAVIGATION'
-          },
-          {
-            name: 'Apps - Medical',
-            value: 'MEDICAL'
-          },
-          {
-            name: 'Apps - Music & Audio',
-            value: 'MUSIC_AND_AUDIO'
-          },
-          {
-            name: 'Apps - News & Magazines',
-            value: 'NEWS_AND_MAGAZINES'
-          },
-          {
-            name: 'Apps - Parenting',
-            value: 'PARENTING'
-          },
-          {
-            name: 'Apps - Personalization',
-            value: 'PERSONALIZATION'
-          },
-          {
-            name: 'Apps - Photography',
-            value: 'PHOTOGRAPHY'
-          },
-          {
-            name: 'Apps - Productivity',
-            value: 'PRODUCTIVITY'
-          },
-          {
-            name: 'Apps - Shopping',
-            value: 'SHOPPING'
-          },
-          {
-            name: 'Apps - Social',
-            value: 'SOCIAL'
-          },
-          {
-            name: 'Apps - Sports',
-            value: 'SPORTS'
-          },
-          {
-            name: 'Apps - Tools',
-            value: 'TOOLS'
-          },
-          {
-            name: 'Apps - Travel & Local',
-            value: 'TRAVEL_AND_LOCAL'
-          },
-          {
-            name: 'Apps - Video Players & Editors',
-            value: 'VIDEO_PLAYERS'
-          },
-          {
-            name: 'Apps - Wear OS by Google',
-            value: 'ANDROID_WEAR'
-          },
-          {
-            name: 'Apps - Watch faces',
-            value: 'WATCH_FACE'
-          },
-          {
-            name: 'Apps - Weather',
-            value: 'WEATHER'
-          },
-          {
-            name: 'Kids',
-            value: 'FAMILY'
+            name: 'Games - Word',
+            value: 'GAME_WORD'
           }
         ]
       },
       {
         displayName: 'Device (store_device)',
         name: 'store_device',
-        description: 'Parameter defines the device for sorting results. This parameter cannot be used with apps_category or q parameters.',
+        description: 'Parameter defines the device for sorting results.',
         default: 'phone',
         routing: {
           request: {
@@ -237,6 +169,10 @@ export const googlePlaySearchFields: INodeProperties[] = [
           {
             name: 'Phone',
             value: 'phone'
+          },
+          {
+            name: 'Windows',
+            value: 'windows'
           },
           {
             name: 'Tablet',
@@ -253,38 +189,6 @@ export const googlePlaySearchFields: INodeProperties[] = [
           {
             name: 'Watch',
             value: 'watch'
-          },
-          {
-            name: 'Car',
-            value: 'car'
-          }
-        ]
-      },
-      {
-        displayName: 'Age (age)',
-        name: 'age',
-        description: 'Parameter defines age subcategory.This should only be used when apps_category=FAMILY',
-        default: '',
-        routing: {
-          request: {
-            qs: {
-              age: '={{$value}}'
-            }
-          }
-        },
-        type: 'options',
-        options: [
-          {
-            name: 'Ages up to 5',
-            value: 'AGE_RANGE1'
-          },
-          {
-            name: 'Ages 6-8',
-            value: 'AGE_RANGE2'
-          },
-          {
-            name: 'Ages 9-12',
-            value: 'AGE_RANGE3'
           }
         ]
       },
@@ -319,7 +223,7 @@ export const googlePlaySearchFields: INodeProperties[] = [
       {
         displayName: 'Chart (chart)',
         name: 'chart',
-        description: 'Parameter is used for showing top charts. Each store contains different charts which require different values for retrieving results. To get a specific chart you can use our Google Play Apps Store API JSON output: chart_options[index].value (e.g. chart=topselling_free). It shouldn\'t be used with the section_page_token, see_more_token, and next_page_token parameters',
+        description: 'Parameter is used for showing top charts. Each store contains different charts which require different values for retrieving results. To get the value of a specific chart you can use our Google Play Games Store API JSON output: chart_options[index].value (e.g. chart=topselling_free). It shouldn\'t be used with the section_page_token, see_more_token, and next_page_token parameters',
         default: '',
         routing: {
           request: {
