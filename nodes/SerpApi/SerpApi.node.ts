@@ -31,6 +31,7 @@ import {
 	googleImagesLightFields,
 	googleNewsLightFields,
 	googlePlaySearchFields,
+	googlePlayProductFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -351,6 +352,18 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Play Product',
+						value: 'google_play_product',
+						action: 'Search Google Play Product',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_play_product',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Product',
 						value: 'google_product',
 						action: 'Search Google Product',
@@ -466,6 +479,7 @@ export class SerpApi implements INodeType {
 			...googleImagesLightFields,
 			...googleNewsLightFields,
 			...googlePlaySearchFields,
+			...googlePlayProductFields,
 		],
 	};
 }
