@@ -30,7 +30,7 @@ import {
 	googleFinanceFields,
 	googleImagesLightFields,
 	googleNewsLightFields,
-	googlePlaySearchFields,
+	googlePlayStoreFields,
 	googlePlayProductFields,
 	googlePlayGamesFields,
 } from './descriptions';
@@ -491,7 +491,7 @@ export class SerpApi implements INodeType {
 			...googleFinanceFields,
 			...googleImagesLightFields,
 			...googleNewsLightFields,
-			...googlePlaySearchFields,
+			...googlePlayStoreFields,
 			...googlePlayProductFields,
 			...googlePlayGamesFields,
 		],

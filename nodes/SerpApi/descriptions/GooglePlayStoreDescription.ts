@@ -2,7 +2,7 @@ import type { INodeProperties } from 'n8n-workflow';
 import { serpApiFields } from './SerpApiDescription';
 import { CountryOptions, LanguageOptions } from './GoogleOptions';
 
-export const googlePlaySearchFields: INodeProperties[] = [
+export const googlePlayStoreFields: INodeProperties[] = [
   {
     displayName: 'Search Query (q)',
     name: 'q',
