@@ -30,4 +30,4 @@ export * from './GoogleNewsLightDescription';
 export * from './GooglePlayStoreDescription';
 export * from './GooglePlayProductDescription';
 export * from './GooglePlayGamesDescription';
-
+export * from './GoogleTrendsTrendingNowDescription';
