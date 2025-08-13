@@ -33,6 +33,7 @@ import {
 	googlePlayStoreFields,
 	googlePlayProductFields,
 	googlePlayGamesFields,
+	googleTrendsTrendingNowFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -437,6 +438,18 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Trends Trending Now',
+						value: 'google_trends_trending_now',
+						action: 'Search Google Trends Trending Now',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_trends_trending_now',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Videos',
 						value: 'google_videos',
 						action: 'Search Google Videos',
@@ -494,6 +507,7 @@ export class SerpApi implements INodeType {
 			...googlePlayStoreFields,
 			...googlePlayProductFields,
 			...googlePlayGamesFields,
+			...googleTrendsTrendingNowFields,
 		],
 	};
 }
