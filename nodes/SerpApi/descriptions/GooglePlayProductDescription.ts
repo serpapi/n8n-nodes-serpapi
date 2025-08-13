@@ -17,26 +17,11 @@ export const googlePlayProductFields: INodeProperties[] = [
     },
     type: 'options',
     options: [
-      {
-        name: 'Apps',
-        value: 'apps'
-      },
-      {
-        name: 'Movies',
-        value: 'movies'
-      },
-      {
-        name: 'TV',
-        value: 'tv'
-      },
-      {
-        name: 'Books',
-        value: 'books'
-      },
-      {
-        name: 'Audiobooks',
-        value: 'audiobooks'
-      }
+      { name: 'Apps', value: 'apps' },
+      { name: 'Audiobooks', value: 'audiobooks' },
+      { name: 'Books', value: 'books' },
+      { name: 'Movies', value: 'movies' },
+      { name: 'TV', value: 'tv' }
     ],
     required: true,
     displayOptions: {
@@ -149,30 +134,12 @@ export const googlePlayProductFields: INodeProperties[] = [
         },
         type: 'options',
         options: [
-          {
-            name: 'Phone',
-            value: 'phone'
-          },
-          {
-            name: 'Tablet',
-            value: 'tablet'
-          },
-          {
-            name: 'Watch',
-            value: 'watch'
-          },
-          {
-            name: 'Chromebook',
-            value: 'chromebook'
-          },
-          {
-            name: 'TV',
-            value: 'tv'
-          },
-          {
-            name: 'Car',
-            value: 'car'
-          }
+          { name: 'Car', value: 'car' },
+          { name: 'Chromebook', value: 'chromebook' },
+          { name: 'Phone', value: 'phone' },
+          { name: 'Tablet', value: 'tablet' },
+          { name: 'TV', value: 'tv' },
+          { name: 'Watch', value: 'watch' }
         ]
       },
       {

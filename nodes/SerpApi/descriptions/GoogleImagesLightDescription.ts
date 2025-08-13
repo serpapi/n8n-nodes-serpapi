@@ -379,7 +379,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Aspect Ratio Filtering (imgar)',
         name: 'imgar',
-        description: 'Parameter defines the set aspect ratio of images.Options: s - Squaret - Tallw - Widexw - Panoramic',
+        description: 'Parameter defines the set aspect ratio of images.',
         default: '',
         routing: {
           request: {
@@ -391,6 +391,10 @@ export const googleImagesLightFields: INodeProperties[] = [
         type: 'options',
         options: [
           {
+            name: 'Panoramic',
+            value: 'xw'
+          },
+          {
             name: 'Square',
             value: 's'
           },
@@ -401,10 +405,6 @@ export const googleImagesLightFields: INodeProperties[] = [
           {
             name: 'Wide',
             value: 'w'
-          },
-          {
-            name: 'Panoramic',
-            value: 'xw'
           }
         ]
       },
@@ -423,16 +423,16 @@ export const googleImagesLightFields: INodeProperties[] = [
         type: 'options',
         options: [
           {
-            name: 'Large',
-            value: 'l'
+            name: 'Icon',
+            value: 'i'
           },
           {
             name: 'Medium',
             value: 'm'
           },
           {
-            name: 'Icon',
-            value: 'i'
+            name: 'Large',
+            value: 'l'
           },
           {
             name: 'Larger than 400x300',
@@ -506,62 +506,20 @@ export const googleImagesLightFields: INodeProperties[] = [
         },
         type: 'options',
         options: [
-          {
-            name: 'Black and white',
-            value: 'bw'
-          },
-          {
-            name: 'Transparent',
-            value: 'trans'
-          },
-          {
-            name: 'Red',
-            value: 'red'
-          },
-          {
-            name: 'Orange',
-            value: 'orange'
-          },
-          {
-            name: 'Yellow',
-            value: 'yellow'
-          },
-          {
-            name: 'Green',
-            value: 'green'
-          },
-          {
-            name: 'Teal',
-            value: 'teal'
-          },
-          {
-            name: 'Blue',
-            value: 'blue'
-          },
-          {
-            name: 'Purple',
-            value: 'purple'
-          },
-          {
-            name: 'Pink',
-            value: 'pink'
-          },
-          {
-            name: 'White',
-            value: 'white'
-          },
-          {
-            name: 'Gray',
-            value: 'gray'
-          },
-          {
-            name: 'Black',
-            value: 'black'
-          },
-          {
-            name: 'Brown',
-            value: 'brown'
-          }
+          { name: 'Black', value: 'black' },
+          { name: 'Black and white', value: 'bw' },
+          { name: 'Blue', value: 'blue' },
+          { name: 'Brown', value: 'brown' },
+          { name: 'Gray', value: 'gray' },
+          { name: 'Green', value: 'green' },
+          { name: 'Orange', value: 'orange' },
+          { name: 'Pink', value: 'pink' },
+          { name: 'Purple', value: 'purple' },
+          { name: 'Red', value: 'red' },
+          { name: 'Teal', value: 'teal' },
+          { name: 'Transparent', value: 'trans' },
+          { name: 'White', value: 'white' },
+          { name: 'Yellow', value: 'yellow' }
         ]
       },
       {
@@ -578,26 +536,11 @@ export const googleImagesLightFields: INodeProperties[] = [
         },
         type: 'options',
         options: [
-          {
-            name: 'Face',
-            value: 'face'
-          },
-          {
-            name: 'Photo',
-            value: 'photo'
-          },
-          {
-            name: 'Clip art',
-            value: 'clipart'
-          },
-          {
-            name: 'Line drawing',
-            value: 'lineart'
-          },
-          {
-            name: 'Animated',
-            value: 'animated'
-          }
+          { name: 'Animated', value: 'animated' },
+          { name: 'Clip art', value: 'clipart' },
+          { name: 'Face', value: 'face' },
+          { name: 'Line drawing', value: 'lineart' },
+          { name: 'Photo', value: 'photo' }
         ]
       },
       {
@@ -615,6 +558,14 @@ export const googleImagesLightFields: INodeProperties[] = [
         type: 'options',
         options: [
           {
+            name: 'Commercial and other licenses',
+            value: 'ol'
+          },
+          {
+            name: 'Creative Commons licenses',
+            value: 'cl'
+          },
+          {
             name: 'Free to use or share',
             value: 'f'
           },
@@ -629,14 +580,6 @@ export const googleImagesLightFields: INodeProperties[] = [
           {
             name: 'Free to use, share or modify, even commercially',
             value: 'fmc'
-          },
-          {
-            name: 'Creative Commons licenses',
-            value: 'cl'
-          },
-          {
-            name: 'Commercial and other licenses',
-            value: 'ol'
           }
         ]
       },
