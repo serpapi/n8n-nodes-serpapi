@@ -166,30 +166,12 @@ export const googlePlayGamesFields: INodeProperties[] = [
         },
         type: 'options',
         options: [
-          {
-            name: 'Phone',
-            value: 'phone'
-          },
-          {
-            name: 'Windows',
-            value: 'windows'
-          },
-          {
-            name: 'Tablet',
-            value: 'tablet'
-          },
-          {
-            name: 'TV',
-            value: 'tv'
-          },
-          {
-            name: 'Chromebook',
-            value: 'chromebook'
-          },
-          {
-            name: 'Watch',
-            value: 'watch'
-          }
+          { name: 'Chromebook', value: 'chromebook' },
+          { name: 'Phone', value: 'phone' },
+          { name: 'Tablet', value: 'tablet' },
+          { name: 'TV', value: 'tv' },
+          { name: 'Watch', value: 'watch' },
+          { name: 'Windows', value: 'windows' }
         ]
       },
       {

@@ -234,30 +234,12 @@ export const googlePlayStoreFields: INodeProperties[] = [
         },
         type: 'options',
         options: [
-          {
-            name: 'Phone',
-            value: 'phone'
-          },
-          {
-            name: 'Tablet',
-            value: 'tablet'
-          },
-          {
-            name: 'TV',
-            value: 'tv'
-          },
-          {
-            name: 'Chromebook',
-            value: 'chromebook'
-          },
-          {
-            name: 'Watch',
-            value: 'watch'
-          },
-          {
-            name: 'Car',
-            value: 'car'
-          }
+          { name: 'Car', value: 'car' },
+          { name: 'Chromebook', value: 'chromebook' },
+          { name: 'Phone', value: 'phone' },
+          { name: 'Tablet', value: 'tablet' },
+          { name: 'TV', value: 'tv' },
+          { name: 'Watch', value: 'watch' }
         ]
       },
       {
