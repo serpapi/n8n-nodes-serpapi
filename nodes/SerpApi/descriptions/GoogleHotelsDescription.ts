@@ -26,7 +26,7 @@ export const googleHotelsFields: INodeProperties[] = [
   {
     displayName: 'Check-in Date (check_in_date)',
     name: 'check_in_date',
-    description: 'Parameter defines the check-in date. The format is YYYY-MM-DD. e.g. 2025-08-05',
+    description: 'Parameter defines the check-in date. The format is YYYY-MM-DD. e.g. 2025-08-05.',
     default: '',
     routing: {
       request: {
@@ -46,7 +46,7 @@ export const googleHotelsFields: INodeProperties[] = [
   {
     displayName: 'Check-out Date (check_out_date)',
     name: 'check_out_date',
-    description: 'Parameter defines the check-out date. The format is YYYY-MM-DD. e.g. 2025-08-06',
+    description: 'Parameter defines the check-out date. The format is YYYY-MM-DD. e.g. 2025-08-06.',
     default: '',
     routing: {
       request: {
@@ -108,7 +108,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Currency (currency)',
         name: 'currency',
-        description: 'Parameter defines the currency of the returned prices.',
+        description: 'Parameter defines the currency of the returned prices',
         default: 'USD',
         routing: {
           request: {
@@ -237,7 +237,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Sort By (sort_by)',
         name: 'sort_by',
-        description: 'Parameter is used for sorting the results.',
+        description: 'Parameter is used for sorting the results',
         default: '',
         routing: {
           request: {
@@ -265,7 +265,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Min. Price (min_price)',
         name: 'min_price',
-        description: 'Parameter defines the lower bound of price range.',
+        description: 'Parameter defines the lower bound of price range',
         default: '',
         routing: {
           request: {
@@ -279,7 +279,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Max. Price (max_price)',
         name: 'max_price',
-        description: 'Parameter defines the upper bound of price range.',
+        description: 'Parameter defines the upper bound of price range',
         default: '',
         routing: {
           request: {
@@ -293,7 +293,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Property Types (property_types)',
         name: 'property_types',
-        description: 'Parameter defines to include only certain type of property in the results. Multiple property types supported by comma separation such as: 10,12,20',
+        description: 'Parameter defines to include only certain type of property in the results. Multiple property types supported by comma separation such as: 10,12,20.',
         default: '',
         routing: {
           request: {
@@ -307,7 +307,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Amenities (amenities)',
         name: 'amenities',
-        description: 'Parameter defines to include only results that offer specified amenities. Multiple amenities supported by comma separation such as: 5,13,21',
+        description: 'Parameter defines to include only results that offer specified amenities. Multiple amenities supported by comma separation such as: 5,13,21.',
         default: '',
         routing: {
           request: {
@@ -321,7 +321,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Guest Rating (rating)',
         name: 'rating',
-        description: 'Parameter is used for filtering the results to certain rating.',
+        description: 'Parameter is used for filtering the results to certain rating',
         default: '',
         routing: {
           request: {
@@ -349,7 +349,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Brands (brands)',
         name: 'brands',
-        description: 'Parameter defines the brands where you want your search to be concentrated. This parameter isn\'t available for Vacation Rentals. ID values are accessible inside brands array, located in our JSON output. Multiple brands supported by comma separation such as: 33,67,101',
+        description: 'Parameter defines the brands where you want your search to be concentrated. This parameter isn\'t available for Vacation Rentals. ID values are accessible inside brands array, located in our JSON output. Multiple brands supported by comma separation such as: 33,67,101.',
         default: '',
         routing: {
           request: {
@@ -363,7 +363,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Hotel Class (hotel_class)',
         name: 'hotel_class',
-        description: 'Parameter defines to include only certain hotel class in the results. This parameter isn\'t available for Vacation Rentals. Enter 2 for 2-star, 3 for 3-star, and so on. Multiple hotel classes supported by comma separation such as: 2,3,4',
+        description: 'Parameter defines to include only certain hotel class in the results. This parameter isn\'t available for Vacation Rentals. Enter 2 for 2-star, 3 for 3-star, and so on. Multiple hotel classes supported by comma separation such as: 2,3,4.',
         default: '',
         routing: {
           request: {

@@ -81,7 +81,7 @@ export const amazonSearchFields: INodeProperties[] = [
       {
         displayName: 'Language (language)',
         name: 'language',
-        description: 'Parameter defines the language to use for the Amazon search.',
+        description: 'Parameter defines the language to use for the Amazon search',
         default: 'amazon.com|en_US',
         routing: {
           request: {
@@ -469,7 +469,7 @@ export const amazonSearchFields: INodeProperties[] = [
       {
         displayName: 'Filters (rh)',
         name: 'rh',
-        description: 'Parameter defines items filtering based on their attributes.',
+        description: 'Parameter defines items filtering based on their attributes',
         default: '',
         routing: {
           request: {

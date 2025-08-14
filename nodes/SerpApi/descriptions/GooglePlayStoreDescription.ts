@@ -6,7 +6,7 @@ export const googlePlayStoreFields: INodeProperties[] = [
   {
     displayName: 'Search Query (q)',
     name: 'q',
-    description: 'Parameter defines the query you want to search in Google Play Apps Store.',
+    description: 'Parameter defines the query you want to search in Google Play Apps Store',
     default: '',
     routing: {
       request: {
@@ -67,7 +67,7 @@ export const googlePlayStoreFields: INodeProperties[] = [
       {
         displayName: 'Apps Category (apps_category)',
         name: 'apps_category',
-        description: 'Parameter defines the apps store category.',
+        description: 'Parameter defines the apps store category',
         default: '',
         routing: {
           request: {
@@ -245,7 +245,7 @@ export const googlePlayStoreFields: INodeProperties[] = [
       {
         displayName: 'Age (age)',
         name: 'age',
-        description: 'Parameter defines age subcategory.This should only be used when apps_category=FAMILY',
+        description: 'Parameter defines age subcategory. This should only be used when apps_category=FAMILY.',
         default: '',
         routing: {
           request: {
@@ -287,7 +287,7 @@ export const googlePlayStoreFields: INodeProperties[] = [
       {
         displayName: 'Section Page Token (section_page_token)',
         name: 'section_page_token',
-        description: 'Parameter defines the section page token used for retrieving the pagination results from individual sections. This parameter is a safer version of see_more_token, and is found in every row you can paginate into. It shouldn\'t be used with the next_page_token, see_more_token, and chart parameters',
+        description: 'Parameter defines the section page token used for retrieving the pagination results from individual sections. This parameter is a safer version of see_more_token, and is found in every row you can paginate into. It shouldn\'t be used with the next_page_token, see_more_token, and chart parameters.',
         default: '',
         routing: {
           request: {
@@ -301,7 +301,7 @@ export const googlePlayStoreFields: INodeProperties[] = [
       {
         displayName: 'Chart (chart)',
         name: 'chart',
-        description: 'Parameter is used for showing top charts. Each store contains different charts which require different values for retrieving results. To get a specific chart you can use our Google Play Apps Store API JSON output: chart_options[index].value (e.g. chart=topselling_free). It shouldn\'t be used with the section_page_token, see_more_token, and next_page_token parameters',
+        description: 'Parameter is used for showing top charts. Each store contains different charts which require different values for retrieving results. To get a specific chart you can use our Google Play Apps Store API JSON output: chart_options[index].value (e.g. chart=topselling_free). It shouldn\'t be used with the section_page_token, see_more_token, and next_page_token parameters.',
         default: '',
         routing: {
           request: {
@@ -315,7 +315,7 @@ export const googlePlayStoreFields: INodeProperties[] = [
       {
         displayName: 'See more token (see_more_token)',
         name: 'see_more_token',
-        description: 'Parameter defines the see more token used for retrieving the pagination results from individual sections It is usually found in next page results. It shouldn\'t be used with the section_page_token, next_page_token, and chart, parameters',
+        description: 'Parameter defines the see more token used for retrieving the pagination results from individual sections. It is usually found in next page results. It shouldn\'t be used with the section_page_token, next_page_token, and chart, parameters.',
         default: '',
         routing: {
           request: {

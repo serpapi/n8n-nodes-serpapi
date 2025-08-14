@@ -6,7 +6,7 @@ export const googlePlayGamesFields: INodeProperties[] = [
   {
     displayName: 'Search Query (q)',
     name: 'q',
-    description: 'Parameter defines the query you want to search in Google Play Games Store.',
+    description: 'Parameter defines the query you want to search in Google Play Games Store',
     default: '',
     routing: {
       request: {
@@ -67,7 +67,7 @@ export const googlePlayGamesFields: INodeProperties[] = [
       {
         displayName: 'Games Category (games_category)',
         name: 'games_category',
-        description: 'Parameter defines the games store category.',
+        description: 'Parameter defines the games store category',
         default: '',
         routing: {
           request: {
@@ -155,7 +155,7 @@ export const googlePlayGamesFields: INodeProperties[] = [
       {
         displayName: 'Device (store_device)',
         name: 'store_device',
-        description: 'Parameter defines the device for sorting results.',
+        description: 'Parameter defines the device for sorting results',
         default: 'phone',
         routing: {
           request: {
@@ -191,7 +191,7 @@ export const googlePlayGamesFields: INodeProperties[] = [
       {
         displayName: 'Section Page Token (section_page_token)',
         name: 'section_page_token',
-        description: 'Parameter defines the section page token used for retrieving the pagination results from individual sections. This parameter is a safer version of see_more_token, and is found in every row you can paginate into. It shouldn\'t be used with the next_page_token, see_more_token, and chart parameters',
+        description: 'Parameter defines the section page token used for retrieving the pagination results from individual sections. This parameter is a safer version of see_more_token, and is found in every row you can paginate into. It shouldn\'t be used with the next_page_token, see_more_token, and chart parameters.',
         default: '',
         routing: {
           request: {
@@ -205,7 +205,7 @@ export const googlePlayGamesFields: INodeProperties[] = [
       {
         displayName: 'Chart (chart)',
         name: 'chart',
-        description: 'Parameter is used for showing top charts. Each store contains different charts which require different values for retrieving results. To get the value of a specific chart you can use our Google Play Games Store API JSON output: chart_options[index].value (e.g. chart=topselling_free). It shouldn\'t be used with the section_page_token, see_more_token, and next_page_token parameters',
+        description: 'Parameter is used for showing top charts. Each store contains different charts which require different values for retrieving results. To get the value of a specific chart you can use our Google Play Games Store API JSON output: chart_options[index].value (e.g. chart=topselling_free). It shouldn\'t be used with the section_page_token, see_more_token, and next_page_token parameters.',
         default: '',
         routing: {
           request: {
@@ -219,7 +219,7 @@ export const googlePlayGamesFields: INodeProperties[] = [
       {
         displayName: 'See more token (see_more_token)',
         name: 'see_more_token',
-        description: 'Parameter defines the see more token used for retrieving the pagination results from individual sections It is usually found in next page results. It shouldn\'t be used with the section_page_token, next_page_token, and chart, parameters',
+        description: 'Parameter defines the see more token used for retrieving the pagination results from individual sections. It is usually found in next page results. It shouldn\'t be used with the section_page_token, next_page_token, and chart, parameters.',
         default: '',
         routing: {
           request: {

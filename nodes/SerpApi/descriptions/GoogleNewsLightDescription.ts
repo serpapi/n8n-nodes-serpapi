@@ -125,7 +125,7 @@ export const googleNewsLightFields: INodeProperties[] = [
       {
         displayName: 'Include/Exclude Site (as_dt)',
         name: 'as_dt',
-        description: 'Parameter controls whether to include or exclude results from the site named in the as_sitesearch parameter.',
+        description: 'Parameter controls whether to include or exclude results from the site named in the as_sitesearch parameter',
         default: '',
         routing: {
           request: {
@@ -265,7 +265,7 @@ export const googleNewsLightFields: INodeProperties[] = [
       {
         displayName: 'Site Search (as_sitesearch)',
         name: 'as_sitesearch',
-        description: 'Parameter allows you to specify that all search results should be pages from a given site. By setting the as_dt parameter, you can also use it to exclude pages from a given site from your search resutls.',
+        description: 'Parameter allows you to specify that all search results should be pages from a given site. By setting the as_dt parameter, you can also use it to exclude pages from a given site from your search results.',
         default: '',
         routing: {
           request: {

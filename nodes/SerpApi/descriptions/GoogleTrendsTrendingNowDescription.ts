@@ -38,7 +38,7 @@ export const googleTrendsTrendingNowFields: INodeProperties[] = [
       {
         displayName: 'Hours (hours)',
         name: 'hours',
-        description: 'Parameter defines the number of past hours to retrieve the results for.',
+        description: 'Parameter defines the number of past hours to retrieve the results for',
         default: '24',
         routing: {
           request: {
@@ -52,7 +52,7 @@ export const googleTrendsTrendingNowFields: INodeProperties[] = [
       {
         displayName: 'Category Id (category_id)',
         name: 'category_id',
-        description: 'Parameter allows results to be filtered by a specific category.',
+        description: 'Parameter allows results to be filtered by a specific category',
         default: '',
         routing: {
           request: {
@@ -144,7 +144,7 @@ export const googleTrendsTrendingNowFields: INodeProperties[] = [
       {
         displayName: 'Only Active (only_active)',
         name: 'only_active',
-        description: 'Parameter filters results to only include those that are currently active.',
+        description: 'Parameter filters results to only include those that are currently active',
         default: false,
         routing: {
           request: {

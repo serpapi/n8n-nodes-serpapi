@@ -6,7 +6,7 @@ export const googlePlayProductFields: INodeProperties[] = [
   {
     displayName: 'Store (store)',
     name: 'store',
-    description: 'Parameter defines the type of Google Play store.',
+    description: 'Parameter defines the type of Google Play store',
     default: 'apps',
     routing: {
       request: {
@@ -33,7 +33,7 @@ export const googlePlayProductFields: INodeProperties[] = [
   {
     displayName: 'Product ID (product_id)',
     name: 'product_id',
-    description: 'Parameter defines the ID of a product you want to get the results for.',
+    description: 'Parameter defines the ID of a product you want to get the results for',
     default: '',
     routing: {
       request: {

@@ -52,7 +52,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Encoded Location (uule)',
         name: 'uule',
-        description: 'Parameter is the Google encoded location you want to use for the search.uule and location parameters can\'t be used together.',
+        description: 'Parameter is the Google encoded location you want to use for the search.uule and location parameters can\'t be used together',
         default: '',
         routing: {
           request: {
@@ -125,7 +125,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Include/Exclude Site (as_dt)',
         name: 'as_dt',
-        description: 'Parameter controls whether to include or exclude results from the site named in the as_sitesearch parameter.',
+        description: 'Parameter controls whether to include or exclude results from the site named in the as_sitesearch parameter',
         default: '',
         routing: {
           request: {
@@ -365,7 +365,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Advanced Search Parameter (tbs)',
         name: 'tbs',
-        description: '(to be searched) parameter defines advanced search parameters that aren\'t possible in the regular query field.',
+        description: '(to be searched) parameter defines advanced search parameters that aren\'t possible in the regular query field',
         default: '',
         routing: {
           request: {
@@ -379,7 +379,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Aspect Ratio Filtering (imgar)',
         name: 'imgar',
-        description: 'Parameter defines the set aspect ratio of images.',
+        description: 'Parameter defines the set aspect ratio of images',
         default: '',
         routing: {
           request: {
@@ -411,7 +411,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Image Size Filtering (imgsz)',
         name: 'imgsz',
-        description: 'Parameter defines the size of images.',
+        description: 'Parameter defines the size of images',
         default: '',
         routing: {
           request: {
@@ -495,7 +495,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Image Color Filtering (image_color)',
         name: 'image_color',
-        description: 'Parameter defines the color of images.',
+        description: 'Parameter defines the color of images',
         default: '',
         routing: {
           request: {
@@ -525,7 +525,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Image Type Filtering (image_type)',
         name: 'image_type',
-        description: 'Parameter defines the type of images.',
+        description: 'Parameter defines the type of images',
         default: '',
         routing: {
           request: {
@@ -546,7 +546,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Usage Rights Filtering (licenses)',
         name: 'licenses',
-        description: 'Parameter defines the scope of licenses of images.',
+        description: 'Parameter defines the scope of licenses of images',
         default: '',
         routing: {
           request: {
