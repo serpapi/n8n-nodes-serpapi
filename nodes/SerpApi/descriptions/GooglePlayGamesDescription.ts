@@ -68,7 +68,7 @@ export const googlePlayGamesFields: INodeProperties[] = [
         displayName: 'Games Category (games_category)',
         name: 'games_category',
         description: 'Parameter defines the games store category',
-        default: '',
+        default: 'GAME',
         routing: {
           request: {
             qs: {

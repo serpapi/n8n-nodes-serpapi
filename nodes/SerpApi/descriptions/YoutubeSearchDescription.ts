@@ -69,7 +69,7 @@ export const youtubeSearchFields: INodeProperties[] = [
         displayName: 'Filter (sp)',
         name: 'sp',
         description: 'Parameter can be used for pagination and filtering results. For pagination, use `next_page_token` in the `serpapi_pagination` object of the JSON response. For filters, visit the YouTube website, set filters you want and copy the `sp` value from the URL.',
-        default: null,
+        default: '',
         routing: {
           request: {
             qs: {

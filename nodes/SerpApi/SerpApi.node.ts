@@ -354,18 +354,6 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
-						name: 'Google Play Store',
-						value: 'google_play',
-						action: 'Search Google Play Store',
-						routing: {
-							request: {
-								qs: {
-									engine: 'google_play',
-								},
-							},
-						},
-					},
-					{
 						name: 'Google Play Product',
 						value: 'google_play_product',
 						action: 'Search Google Play Product',
@@ -373,6 +361,18 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_play_product',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Play Store',
+						value: 'google_play',
+						action: 'Search Google Play Store',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_play',
 								},
 							},
 						},

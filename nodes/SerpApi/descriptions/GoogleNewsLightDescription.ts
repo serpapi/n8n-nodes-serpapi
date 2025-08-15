@@ -280,7 +280,7 @@ export const googleNewsLightFields: INodeProperties[] = [
         displayName: 'Adult Content Filtering (safe)',
         name: 'safe',
         description: 'Parameter defines the level of filtering for adult content. It can be set to active or off, by default Google will blur explicit content.',
-        default: '',
+        default: 'active',
         routing: {
           request: {
             qs: {
@@ -303,8 +303,8 @@ export const googleNewsLightFields: INodeProperties[] = [
       {
         displayName: 'Exclude Auto-corrected Results (nfpr)',
         name: 'nfpr',
-        description: 'Parameter defines the exclusion of results from an auto-corrected query when the original query is spelled wrong. It can be set to 1 to exclude these results, or 0 to include them (default).',
-        default: '',
+        description: 'Whether to exclude the results from an auto-corrected query when the original query is spelled wrong',
+        default: false,
         routing: {
           request: {
             qs: {
@@ -317,8 +317,8 @@ export const googleNewsLightFields: INodeProperties[] = [
       {
         displayName: 'Results Filtering (filter)',
         name: 'filter',
-        description: 'Parameter defines if the filters for \'Similar Results\' and \'Omitted Results\' are on or off. It can be set to 1 (default) to enable these filters, or 0 to disable these filters.',
-        default: '',
+        description: "Whether the filters for 'Similar Results' and 'Omitted Results' are on or off",
+        default: true,
         routing: {
           request: {
             qs: {

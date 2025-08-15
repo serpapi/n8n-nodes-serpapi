@@ -109,7 +109,7 @@ export const googlePlayProductFields: INodeProperties[] = [
       {
         displayName: 'Show All Reviews (all_reviews)',
         name: 'all_reviews',
-        description: 'Parameter is used for retriving all reviews of a product. It can be set to true or false (default).',
+        description: 'Whether to show all reviews of a product. It can be set to true or false (default).',
         default: false,
         routing: {
           request: {
@@ -146,7 +146,7 @@ export const googlePlayProductFields: INodeProperties[] = [
         displayName: 'Filter By Rating (rating)',
         name: 'rating',
         description: 'Parameter is used for filtering reviews by rating. It should be used only when all_reviews parameter is set to true.',
-        default: '',
+        default: '5',
         routing: {
           request: {
             qs: {
@@ -182,7 +182,7 @@ export const googlePlayProductFields: INodeProperties[] = [
         displayName: 'Sort By Relevance (sort_by)',
         name: 'sort_by',
         description: 'Parameter is used for sorting reviews by relevance. It should be used only when all_reviews parameter is set to true.',
-        default: 1,
+        default: '1',
         routing: {
           request: {
             qs: {
