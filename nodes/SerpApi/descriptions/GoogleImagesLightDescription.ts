@@ -1,3 +1,4 @@
+/* eslint-disable n8n-nodes-base/node-param-options-type-unsorted-items */
 import type { INodeProperties } from 'n8n-workflow';
 import { serpApiFields } from './SerpApiDescription';
 import { CountryOptions, DomainOptions, LanguageOptions } from './GoogleOptions';
@@ -280,7 +281,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Time Period Unit (period_unit)',
         name: 'period_unit',
         description: 'Parameter defines the time period unit to search for the recent images. This parameter overrides qdr component of tbs parameter.',
-        default: '',
+        default: 'h',
         routing: {
           request: {
             qs: {
@@ -289,6 +290,7 @@ export const googleImagesLightFields: INodeProperties[] = [
           }
         },
         type: 'options',
+        /* These shouldn't be alphabetized */
         options: [
           {
             name: 'Second',
@@ -323,7 +325,7 @@ export const googleImagesLightFields: INodeProperties[] = [
       {
         displayName: 'Time Period Value (period_value)',
         name: 'period_value',
-        description: 'Parameter defines an optional time period value that can be used with period_unit to describe time periods like 15 seconds, 42 hours, 178 days etc. Default value: 1',
+        description: 'Parameter defines an optional time period value that can be used with period_unit to describe time periods like 15 seconds, 42 hours, 178 days etc. Default value: 1.',
         default: '',
         routing: {
           request: {
@@ -380,7 +382,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Aspect Ratio Filtering (imgar)',
         name: 'imgar',
         description: 'Parameter defines the set aspect ratio of images',
-        default: '',
+        default: 's',
         routing: {
           request: {
             qs: {
@@ -412,7 +414,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Image Size Filtering (imgsz)',
         name: 'imgsz',
         description: 'Parameter defines the size of images',
-        default: '',
+        default: 'l',
         routing: {
           request: {
             qs: {
@@ -421,6 +423,7 @@ export const googleImagesLightFields: INodeProperties[] = [
           }
         },
         type: 'options',
+        /* These shouldn't be alphabetized */
         options: [
           {
             name: 'Icon',
@@ -496,7 +499,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Image Color Filtering (image_color)',
         name: 'image_color',
         description: 'Parameter defines the color of images',
-        default: '',
+        default: 'bw',
         routing: {
           request: {
             qs: {
@@ -526,7 +529,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Image Type Filtering (image_type)',
         name: 'image_type',
         description: 'Parameter defines the type of images',
-        default: '',
+        default: 'animated',
         routing: {
           request: {
             qs: {
@@ -547,7 +550,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Usage Rights Filtering (licenses)',
         name: 'licenses',
         description: 'Parameter defines the scope of licenses of images',
-        default: '',
+        default: 'f',
         routing: {
           request: {
             qs: {
@@ -587,7 +590,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Adult Content Filtering (safe)',
         name: 'safe',
         description: 'Parameter defines the level of filtering for adult content. It can be set to active or off, by default Google will blur explicit content.',
-        default: '',
+        default: 'active',
         routing: {
           request: {
             qs: {
@@ -611,7 +614,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Exclude Auto-corrected Results (nfpr)',
         name: 'nfpr',
         description: 'Whether to exclude the results from an auto-corrected query when the original query is spelled wrong',
-        default: '',
+        default: false,
         routing: {
           request: {
             qs: {
@@ -625,7 +628,7 @@ export const googleImagesLightFields: INodeProperties[] = [
         displayName: 'Results Filtering (filter)',
         name: 'filter',
         description: "Whether the filters for 'Similar Results' and 'Omitted Results' are on or off",
-        default: '',
+        default: true,
         routing: {
           request: {
             qs: {

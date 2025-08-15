@@ -53,7 +53,7 @@ export const googleTrendsTrendingNowFields: INodeProperties[] = [
         displayName: 'Category Id (category_id)',
         name: 'category_id',
         description: 'Parameter allows results to be filtered by a specific category',
-        default: '',
+        default: '1',
         routing: {
           request: {
             qs: {
@@ -144,7 +144,7 @@ export const googleTrendsTrendingNowFields: INodeProperties[] = [
       {
         displayName: 'Only Active (only_active)',
         name: 'only_active',
-        description: 'Parameter filters results to only include those that are currently active',
+        description: 'Whether to include only trends that are currently active',
         default: false,
         routing: {
           request: {

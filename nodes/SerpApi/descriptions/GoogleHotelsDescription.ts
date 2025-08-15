@@ -238,7 +238,7 @@ export const googleHotelsFields: INodeProperties[] = [
         displayName: 'Sort By (sort_by)',
         name: 'sort_by',
         description: 'Parameter is used for sorting the results',
-        default: '',
+        default: '8',
         routing: {
           request: {
             qs: {
@@ -322,7 +322,7 @@ export const googleHotelsFields: INodeProperties[] = [
         displayName: 'Guest Rating (rating)',
         name: 'rating',
         description: 'Parameter is used for filtering the results to certain rating',
-        default: '',
+        default: '9',
         routing: {
           request: {
             qs: {
@@ -333,15 +333,15 @@ export const googleHotelsFields: INodeProperties[] = [
         type: 'options',
         options: [
           {
-            name: '3.5+ - 7',
+            name: '3.5+',
             value: '7'
           },
           {
-            name: '4.0+ - 8',
+            name: '4.0+',
             value: '8'
           },
           {
-            name: '4.5+ - 9',
+            name: '4.5+',
             value: '9'
           }
         ]
@@ -377,7 +377,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Free Cancellation (free_cancellation)',
         name: 'free_cancellation',
-        description: 'Parameter defines to show results that offer free cancellation. This parameter isn\'t available for Vacation Rentals.',
+        description: 'Whether to show results that offer free cancellation. This parameter isn\'t available for Vacation Rentals.',
         default: false,
         routing: {
           request: {
@@ -391,7 +391,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Special Offers (special_offers)',
         name: 'special_offers',
-        description: 'Parameter defines to show results that have special offers. This parameter isn\'t available for Vacation Rentals.',
+        description: 'Whether to show results that have special offers. This parameter isn\'t available for Vacation Rentals.',
         default: false,
         routing: {
           request: {
@@ -405,7 +405,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Eco Certified (eco_certified)',
         name: 'eco_certified',
-        description: 'Parameter defines to show results that are eco certified. This parameter isn\'t available for Vacation Rentals.',
+        description: 'Whether to show results that are eco certified. This parameter isn\'t available for Vacation Rentals.',
         default: false,
         routing: {
           request: {
@@ -419,7 +419,7 @@ export const googleHotelsFields: INodeProperties[] = [
       {
         displayName: 'Vacation Rentals (vacation_rentals)',
         name: 'vacation_rentals',
-        description: 'Parameter defines to search for Vacation Rentals results. Default search is for Hotels.',
+        description: 'Whether to search for Vacation Rentals results',
         default: false,
         routing: {
           request: {

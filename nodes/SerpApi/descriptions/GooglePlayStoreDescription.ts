@@ -67,8 +67,8 @@ export const googlePlayStoreFields: INodeProperties[] = [
       {
         displayName: 'Apps Category (apps_category)',
         name: 'apps_category',
-        description: 'Parameter defines the apps store category',
-        default: '',
+        description: 'Parameter defines the apps store category. Cannot be used with a search query.',
+        default: 'ART_AND_DESIGN',
         routing: {
           request: {
             qs: {
@@ -78,146 +78,41 @@ export const googlePlayStoreFields: INodeProperties[] = [
         },
         type: 'options',
         options: [
-          {
-            name: 'Apps - Art & Design',
-            value: 'ART_AND_DESIGN'
-          },
-          {
-            name: 'Apps - Auto & Vehicles',
-            value: 'AUTO_AND_VEHICLES'
-          },
-          {
-            name: 'Apps - Beauty',
-            value: 'BEAUTY'
-          },
-          {
-            name: 'Apps - Books & Reference',
-            value: 'BOOKS_AND_REFERENCE'
-          },
-          {
-            name: 'Apps - Business',
-            value: 'BUSINESS'
-          },
-          {
-            name: 'Apps - Comics',
-            value: 'COMICS'
-          },
-          {
-            name: 'Apps - Communication',
-            value: 'COMMUNICATION'
-          },
-          {
-            name: 'Apps - Dating',
-            value: 'DATING'
-          },
-          {
-            name: 'Apps - Education',
-            value: 'EDUCATION'
-          },
-          {
-            name: 'Apps - Entertainment',
-            value: 'ENTERTAINMENT'
-          },
-          {
-            name: 'Apps - Events',
-            value: 'EVENTS'
-          },
-          {
-            name: 'Apps - Finance',
-            value: 'FINANCE'
-          },
-          {
-            name: 'Apps - Food & Drink',
-            value: 'FOOD_AND_DRINK'
-          },
-          {
-            name: 'Apps - Health & Fitness',
-            value: 'HEALTH_AND_FITNESS'
-          },
-          {
-            name: 'Apps - House & Home',
-            value: 'HOUSE_AND_HOME'
-          },
-          {
-            name: 'Apps - Libraries & Demo',
-            value: 'LIBRARIES_AND_DEMO'
-          },
-          {
-            name: 'Apps - Lifestyle',
-            value: 'LIFESTYLE'
-          },
-          {
-            name: 'Apps - Maps & Navigation',
-            value: 'MAPS_AND_NAVIGATION'
-          },
-          {
-            name: 'Apps - Medical',
-            value: 'MEDICAL'
-          },
-          {
-            name: 'Apps - Music & Audio',
-            value: 'MUSIC_AND_AUDIO'
-          },
-          {
-            name: 'Apps - News & Magazines',
-            value: 'NEWS_AND_MAGAZINES'
-          },
-          {
-            name: 'Apps - Parenting',
-            value: 'PARENTING'
-          },
-          {
-            name: 'Apps - Personalization',
-            value: 'PERSONALIZATION'
-          },
-          {
-            name: 'Apps - Photography',
-            value: 'PHOTOGRAPHY'
-          },
-          {
-            name: 'Apps - Productivity',
-            value: 'PRODUCTIVITY'
-          },
-          {
-            name: 'Apps - Shopping',
-            value: 'SHOPPING'
-          },
-          {
-            name: 'Apps - Social',
-            value: 'SOCIAL'
-          },
-          {
-            name: 'Apps - Sports',
-            value: 'SPORTS'
-          },
-          {
-            name: 'Apps - Tools',
-            value: 'TOOLS'
-          },
-          {
-            name: 'Apps - Travel & Local',
-            value: 'TRAVEL_AND_LOCAL'
-          },
-          {
-            name: 'Apps - Video Players & Editors',
-            value: 'VIDEO_PLAYERS'
-          },
-          {
-            name: 'Apps - Wear OS by Google',
-            value: 'ANDROID_WEAR'
-          },
-          {
-            name: 'Apps - Watch faces',
-            value: 'WATCH_FACE'
-          },
-          {
-            name: 'Apps - Weather',
-            value: 'WEATHER'
-          },
-          {
-            name: 'Kids',
-            value: 'FAMILY'
-          }
+          { name: 'Apps - Art & Design', value: 'ART_AND_DESIGN' },
+          { name: 'Apps - Auto & Vehicles', value: 'AUTO_AND_VEHICLES' },
+          { name: 'Apps - Beauty', value: 'BEAUTY' },
+          { name: 'Apps - Books & Reference', value: 'BOOKS_AND_REFERENCE' },
+          { name: 'Apps - Business', value: 'BUSINESS' },
+          { name: 'Apps - Comics', value: 'COMICS' },
+          { name: 'Apps - Communication', value: 'COMMUNICATION' },
+          { name: 'Apps - Dating', value: 'DATING' },
+          { name: 'Apps - Education', value: 'EDUCATION' },
+          { name: 'Apps - Entertainment', value: 'ENTERTAINMENT' },
+          { name: 'Apps - Events', value: 'EVENTS' },
+          { name: 'Apps - Finance', value: 'FINANCE' },
+          { name: 'Apps - Food & Drink', value: 'FOOD_AND_DRINK' },
+          { name: 'Apps - Health & Fitness', value: 'HEALTH_AND_FITNESS' },
+          { name: 'Apps - House & Home', value: 'HOUSE_AND_HOME' },
+          { name: 'Apps - Libraries & Demo', value: 'LIBRARIES_AND_DEMO' },
+          { name: 'Apps - Lifestyle', value: 'LIFESTYLE' },
+          { name: 'Apps - Maps & Navigation', value: 'MAPS_AND_NAVIGATION' },
+          { name: 'Apps - Medical', value: 'MEDICAL' },
+          { name: 'Apps - Music & Audio', value: 'MUSIC_AND_AUDIO' },
+          { name: 'Apps - News & Magazines', value: 'NEWS_AND_MAGAZINES' },
+          { name: 'Apps - Parenting', value: 'PARENTING' },
+          { name: 'Apps - Personalization', value: 'PERSONALIZATION' },
+          { name: 'Apps - Photography', value: 'PHOTOGRAPHY' },
+          { name: 'Apps - Productivity', value: 'PRODUCTIVITY' },
+          { name: 'Apps - Shopping', value: 'SHOPPING' },
+          { name: 'Apps - Social', value: 'SOCIAL' },
+          { name: 'Apps - Sports', value: 'SPORTS' },
+          { name: 'Apps - Tools', value: 'TOOLS' },
+          { name: 'Apps - Travel & Local', value: 'TRAVEL_AND_LOCAL' },
+          { name: 'Apps - Video Players & Editors', value: 'VIDEO_PLAYERS' },
+          { name: 'Apps - Watch faces', value: 'WATCH_FACE' },
+          { name: 'Apps - Wear OS by Google', value: 'ANDROID_WEAR' },
+          { name: 'Apps - Weather', value: 'WEATHER' },
+          { name: 'Kids', value: 'FAMILY' },
         ]
       },
       {
@@ -246,7 +141,7 @@ export const googlePlayStoreFields: INodeProperties[] = [
         displayName: 'Age (age)',
         name: 'age',
         description: 'Parameter defines age subcategory. This should only be used when apps_category=FAMILY.',
-        default: '',
+        default: 'AGE_RANGE1',
         routing: {
           request: {
             qs: {

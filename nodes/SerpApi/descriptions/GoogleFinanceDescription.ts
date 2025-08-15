@@ -1,3 +1,4 @@
+/* eslint-disable n8n-nodes-base/node-param-options-type-unsorted-items */
 import type { INodeProperties } from 'n8n-workflow';
 import { serpApiFields } from './SerpApiDescription';
 import { LanguageOptions } from './GoogleOptions';
@@ -53,7 +54,7 @@ export const googleFinanceFields: INodeProperties[] = [
       {
         displayName: 'Time Range (window)',
         name: 'window',
-        description: 'Parameter is used for setting time range for the graph.',
+        description: 'Parameter is used for setting time range for the graph',
         default: '1D',
         routing: {
           request: {
@@ -63,6 +64,7 @@ export const googleFinanceFields: INodeProperties[] = [
           }
         },
         type: 'options',
+        /* These shouldn't be alphabetized */
         options: [
           {
             name: '1 Day',

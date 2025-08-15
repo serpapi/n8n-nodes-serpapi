@@ -415,7 +415,7 @@ export const amazonSearchFields: INodeProperties[] = [
       {
         displayName: 'Sort By (s)',
         name: 's',
-        description: 'Parameter is used for sorting results.',
+        description: 'Parameter is used for sorting results',
         default: 'relevanceblender',
         routing: {
           request: {
@@ -483,7 +483,7 @@ export const amazonSearchFields: INodeProperties[] = [
       {
         displayName: 'Exclude Auto-corrected Results (dc)',
         name: 'dc',
-        description: 'Activate spelling fix. true (default) includes spelling fix, false searches without spelling fix.',
+        description: 'Whether to activate spelling fix. true (default) includes spelling fix, false searches without spelling fix.',
         default: true,
         routing: {
           request: {
