@@ -37,6 +37,7 @@ import {
   	googleAIModeFields,
 	googleAIOverviewFields,
 	facebookProfileFields,
+	googleImmersiveProductFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -268,6 +269,18 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_images_light',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google Immersive Product',
+						value: 'google_immersive_product',
+						action: 'Search Google Immersive Product',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_immersive_product',
 								},
 							},
 						},
@@ -549,7 +562,8 @@ export class SerpApi implements INodeType {
 			...googleTrendsTrendingNowFields,
       		...googleAIModeFields,
 			...googleAIOverviewFields,
-			...facebookProfileFields
+			...facebookProfileFields,
+			...googleImmersiveProductFields,
 		],
 	};
 }
