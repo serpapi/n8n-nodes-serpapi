@@ -34,4 +34,5 @@ export * from './GoogleTrendsTrendingNowDescription';
 export * from './GoogleAIModeDescription';
 export * from './GoogleAIOverviewDescription';
 export * from './FacebookProfileDescription';
+export * from './GoogleImmersiveProductDescription';
 
