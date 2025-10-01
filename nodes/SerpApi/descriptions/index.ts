@@ -33,3 +33,5 @@ export * from './GooglePlayGamesDescription';
 export * from './GoogleTrendsTrendingNowDescription';
 export * from './GoogleAIModeDescription';
 export * from './GoogleAIOverviewDescription';
+export * from './FacebookProfileDescription';
+
