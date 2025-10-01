@@ -34,6 +34,7 @@ import {
 	googlePlayProductFields,
 	googlePlayGamesFields,
 	googleTrendsTrendingNowFields,
+	googleAIOverviewFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -157,6 +158,18 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'ebay',
+								},
+							},
+						},
+					},
+					{
+						name: 'Google AI Overview',
+						value: 'google_ai_overview',
+						action: 'Search Google AI Overview',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_ai_overview',
 								},
 							},
 						},
@@ -508,6 +521,7 @@ export class SerpApi implements INodeType {
 			...googlePlayProductFields,
 			...googlePlayGamesFields,
 			...googleTrendsTrendingNowFields,
+			...googleAIOverviewFields,
 		],
 	};
 }
