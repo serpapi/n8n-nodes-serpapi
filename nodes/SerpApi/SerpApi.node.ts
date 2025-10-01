@@ -34,8 +34,9 @@ import {
 	googlePlayProductFields,
 	googlePlayGamesFields,
 	googleTrendsTrendingNowFields,
-  googleAIModeFields,
+  	googleAIModeFields,
 	googleAIOverviewFields,
+	facebookProfileFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -163,7 +164,19 @@ export class SerpApi implements INodeType {
 							},
 						},
 					},
-          {
+					{
+						name: 'Facebook Profile',
+						value: 'facebook_profile',
+						action: 'Search Facebook Profile',
+						routing: {
+							request: {
+								qs: {
+									engine: 'facebook_profile',
+								},
+							},
+						},
+					},
+         			{
 						name: 'Google AI Mode',
 						value: 'google_ai_mode',
 						action: 'Search Google AI Mode',
@@ -183,10 +196,10 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_ai_overview',
-                }
-              }
-            }
-          },
+								}
+							}
+						}
+					},
 					{
 						name: 'Google Autocomplete',
 						value: 'google_autocomplete',
@@ -534,8 +547,9 @@ export class SerpApi implements INodeType {
 			...googlePlayProductFields,
 			...googlePlayGamesFields,
 			...googleTrendsTrendingNowFields,
-      ...googleAIModeFields,
+      		...googleAIModeFields,
 			...googleAIOverviewFields,
+			...facebookProfileFields
 		],
 	};
 }
