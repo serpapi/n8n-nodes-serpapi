@@ -34,6 +34,7 @@ import {
 	googlePlayProductFields,
 	googlePlayGamesFields,
 	googleTrendsTrendingNowFields,
+  googleAIModeFields,
 	googleAIOverviewFields,
 } from './descriptions';
 
@@ -162,6 +163,18 @@ export class SerpApi implements INodeType {
 							},
 						},
 					},
+          {
+						name: 'Google AI Mode',
+						value: 'google_ai_mode',
+						action: 'Search Google AI Mode',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_ai_mode',
+								},
+							},
+						},
+					},
 					{
 						name: 'Google AI Overview',
 						value: 'google_ai_overview',
@@ -170,10 +183,10 @@ export class SerpApi implements INodeType {
 							request: {
 								qs: {
 									engine: 'google_ai_overview',
-								},
-							},
-						},
-					},
+                }
+              }
+            }
+          },
 					{
 						name: 'Google Autocomplete',
 						value: 'google_autocomplete',
@@ -521,6 +534,7 @@ export class SerpApi implements INodeType {
 			...googlePlayProductFields,
 			...googlePlayGamesFields,
 			...googleTrendsTrendingNowFields,
+      ...googleAIModeFields,
 			...googleAIOverviewFields,
 		],
 	};
