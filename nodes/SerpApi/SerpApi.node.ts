@@ -38,6 +38,7 @@ import {
 	googleAIOverviewFields,
 	facebookProfileFields,
 	googleImmersiveProductFields,
+	googleTravelExploreFields,
 } from './descriptions';
 
 const inputs = [NodeConnectionType.Main];
@@ -478,6 +479,18 @@ export class SerpApi implements INodeType {
 						},
 					},
 					{
+						name: 'Google Travel Explore',
+						value: 'google_travel_explore',
+						action: 'Search Google Travel Explore',
+						routing: {
+							request: {
+								qs: {
+									engine: 'google_travel_explore',
+								},
+							},
+						},
+					},
+					{
 						name: 'Google Trends',
 						value: 'google_trends',
 						action: 'Search Google Trends',
@@ -564,6 +577,7 @@ export class SerpApi implements INodeType {
 			...googleAIOverviewFields,
 			...facebookProfileFields,
 			...googleImmersiveProductFields,
+			...googleTravelExploreFields,
 		],
 	};
 }
