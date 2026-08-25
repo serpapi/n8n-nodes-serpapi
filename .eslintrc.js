@@ -53,6 +53,7 @@ module.exports = {
 				'n8n-nodes-base/node-param-display-name-miscased': 'off',
 				'n8n-nodes-base/node-param-description-miscased-id': 'off',
 				'n8n-nodes-base/node-param-resource-with-plural-option': 'off',
+				'n8n-nodes-base/node-param-description-miscased-json': 'off',
 			},
 		},
 	],
